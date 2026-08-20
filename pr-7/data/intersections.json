@@ -1,0 +1,20 @@
+[
+  {
+    "entity": "concept-fourier-series",
+    "story_count": 4,
+    "stories": [
+      "story-fourier-heat-representation",
+      "story-frequency",
+      "story-function",
+      "story-rigor"
+    ]
+  },
+  {
+    "entity": "q-heat-propagation",
+    "story_count": 2,
+    "stories": [
+      "story-fourier-heat-representation",
+      "story-frequency"
+    ]
+  }
+]

@@ -1,0 +1,427 @@
+{
+  "entities": [
+    {
+      "id": "person-euler",
+      "type": "Person",
+      "name": "Leonhard Euler",
+      "start_year": 1707,
+      "end_year": 1783,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-fourier",
+      "type": "Person",
+      "name": "Joseph Fourier",
+      "start_year": 1768,
+      "end_year": 1830,
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "person-cauchy",
+      "type": "Person",
+      "name": "Augustin-Louis Cauchy",
+      "start_year": 1789,
+      "end_year": 1857,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-riemann",
+      "type": "Person",
+      "name": "Bernhard Riemann",
+      "start_year": 1826,
+      "end_year": 1866,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-infinite-series",
+      "type": "Concept",
+      "name": "Infinite series",
+      "start_year": 1600,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-fourier-series",
+      "type": "Concept",
+      "name": "Fourier series",
+      "start_year": 1807,
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "concept-convergence",
+      "type": "Concept",
+      "name": "Convergence",
+      "start_year": 1700,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-continuity",
+      "type": "Concept",
+      "name": "Continuity",
+      "start_year": 1700,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-function",
+      "type": "Concept",
+      "name": "Function",
+      "start_year": 1700,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-uniform-convergence",
+      "type": "Concept",
+      "name": "Uniform convergence",
+      "start_year": 1840,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-fourier-theorie",
+      "type": "Work",
+      "name": "Théorie analytique de la chaleur",
+      "start_year": 1822,
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "work-cauchy-cours",
+      "type": "Work",
+      "name": "Cours d'Analyse",
+      "start_year": 1821,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-dirichlet",
+      "type": "Person",
+      "name": "Peter Gustav Lejeune Dirichlet",
+      "start_year": 1805,
+      "end_year": 1859,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "problem-heat-boundary-data",
+      "type": "Problem",
+      "name": "Heat equation with prescribed initial and boundary temperature data",
+      "start_year": 1807,
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "concept-arbitrary-function",
+      "type": "Concept",
+      "name": "Arbitrary function",
+      "start_year": 1750,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-discontinuous-function",
+      "type": "Concept",
+      "name": "Discontinuous function",
+      "start_year": 1800,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-dirichlet-1829",
+      "type": "Work",
+      "name": "Dirichlet's 1829 paper on convergence of trigonometric series",
+      "start_year": 1829,
+      "fields": [
+        "analysis"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-heat-propagation",
+      "question": "How does heat propagate?",
+      "period": {
+        "from": 1800,
+        "to": null
+      },
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "q-series-convergence",
+      "question": "When does an infinite series converge?",
+      "period": {
+        "from": 1800,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-what-is-function",
+      "question": "What kinds of objects should count as functions?",
+      "period": {
+        "from": 1750,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-rigorous-limit-continuity",
+      "question": "How can limits and continuity be defined rigorously?",
+      "period": {
+        "from": 1820,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-heat-prescribed-data",
+      "question": "How can a prescribed temperature distribution be matched by solutions of the heat equation?",
+      "period": {
+        "from": 1807,
+        "to": null
+      },
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "q-trig-representation-scope",
+      "question": "Which prescribed functions can be represented by trigonometric series?",
+      "period": {
+        "from": 1807,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-fourier-series-convergence",
+      "question": "Under what conditions does a trigonometric series converge to the intended function?",
+      "period": {
+        "from": 1820,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assertion-fourier-authored-heat",
+      "subject": "person-fourier",
+      "predicate": "authored",
+      "object": "work-fourier-theorie",
+      "period": {
+        "from": 1822,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "assertion-cauchy-authored-cours",
+      "subject": "person-cauchy",
+      "predicate": "authored",
+      "object": "work-cauchy-cours",
+      "period": {
+        "from": 1821,
+        "to": 1821
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "assertion-heat-to-convergence",
+      "subject": "q-heat-propagation",
+      "predicate": "spawned",
+      "object": "q-series-convergence",
+      "period": {
+        "from": 1807,
+        "to": 1830
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "candidate"
+    },
+    {
+      "id": "assertion-fourier-series-function",
+      "subject": "concept-fourier-series",
+      "predicate": "reframed",
+      "object": "q-what-is-function",
+      "period": {
+        "from": 1807,
+        "to": 1850
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "candidate"
+    },
+    {
+      "id": "assertion-r001-fourier-heat-problem",
+      "subject": "person-fourier",
+      "predicate": "contributed_to",
+      "object": "q-heat-propagation",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r001-heat-data-to-series",
+      "subject": "problem-heat-boundary-data",
+      "predicate": "motivated",
+      "object": "q-heat-prescribed-data",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r001-series-representation-question",
+      "subject": "concept-fourier-series",
+      "predicate": "raised_question",
+      "object": "q-trig-representation-scope",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r001-arbitrary-function",
+      "subject": "concept-fourier-series",
+      "predicate": "contributed_to",
+      "object": "concept-arbitrary-function",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r001-series-to-convergence",
+      "subject": "concept-fourier-series",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1822,
+        "to": 1829
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822",
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r001-dirichlet-convergence",
+      "subject": "person-dirichlet",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1829,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r001-function-concept",
+      "subject": "concept-fourier-series",
+      "predicate": "reframed",
+      "object": "q-what-is-function",
+      "period": {
+        "from": 1807,
+        "to": 1850
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822",
+        "source-kjeldsen-lutzen-2015"
+      ],
+      "status": "historically_reviewed"
+    }
+  ]
+}

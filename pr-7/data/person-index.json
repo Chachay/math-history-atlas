@@ -1,0 +1,39 @@
+[
+  {
+    "person": "person-euler",
+    "name": "Leonhard Euler",
+    "assertions": [],
+    "stories": []
+  },
+  {
+    "person": "person-fourier",
+    "name": "Joseph Fourier",
+    "assertions": [
+      "assertion-fourier-authored-heat",
+      "assertion-r001-fourier-heat-problem"
+    ],
+    "stories": []
+  },
+  {
+    "person": "person-cauchy",
+    "name": "Augustin-Louis Cauchy",
+    "assertions": [
+      "assertion-cauchy-authored-cours"
+    ],
+    "stories": []
+  },
+  {
+    "person": "person-riemann",
+    "name": "Bernhard Riemann",
+    "assertions": [],
+    "stories": []
+  },
+  {
+    "person": "person-dirichlet",
+    "name": "Peter Gustav Lejeune Dirichlet",
+    "assertions": [
+      "assertion-r001-dirichlet-convergence"
+    ],
+    "stories": []
+  }
+]
