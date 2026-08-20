@@ -1,0 +1,99 @@
+- id: story-rigor
+  title: How can infinity be trusted?
+  description: >
+    A reviewed editorial path through Cauchy's convergence program, the continuity-of-the-sum problem,
+    a Fourier-series intersection, and the later emergence of stronger convergence conditions.
+  question_phases:
+    - q-cauchy-rigor
+    - q-series-convergence
+    - q-continuity-under-limits
+    - q-fourier-series-convergence
+    - q-uniform-convergence-emergence
+  fields: [analysis]
+  steps:
+    - id: rigor-1
+      ref: q-cauchy-rigor
+      role: Question
+      narrative: >
+        In Cauchy's program, questions about infinite processes were tied to a broader effort to organize analysis around
+        limits, infinitesimal quantities, continuity, and convergence. The historical issue was not a single abstract
+        demand for "rigor" in the modern sense, but how limiting arguments could be controlled within Cauchy's own framework.
+      assertion_refs:
+        - assertion-r002-cauchy-rigor
+        - assertion-r002-cauchy-convergence
+      perspective: later_interpretation
+      temporal_anchor: {from: 1821, to: 1821}
+
+    - id: rigor-2
+      ref: concept-convergence
+      role: Response
+      narrative: >
+        Cauchy's 1821 Cours gave convergence a systematic role in the treatment of infinite series. This supplied one way
+        to distinguish acceptable limiting procedures from purely formal manipulation, without implying that nineteenth-century
+        convergence theory already had its later final form.
+      assertion_refs:
+        - assertion-r002-cauchy-convergence
+      perspective: historical
+      temporal_anchor: {from: 1821, to: 1821}
+
+    - id: rigor-3
+      ref: q-continuity-under-limits
+      role: Remaining gap
+      narrative: >
+        Convergence alone did not settle what properties survive an infinite limiting process. Cauchy's 1821 claim about
+        sums of continuous functions became a central test case: later work showed that continuity of each term does not by
+        itself guarantee continuity of the sum. Abel's 1826 example belongs to that historical problem, but the present
+        evidence does not support a stronger claim of direct influence on Cauchy.
+      assertion_refs:
+        - assertion-r002-sum-continuity-problem
+        - assertion-r002-abel-continuity
+      perspective: later_interpretation
+      temporal_anchor: {from: 1826, to: 1826}
+
+    - id: rigor-4
+      ref: concept-fourier-series
+      role: Intersection
+      narrative: >
+        The same convergence problem also appeared in Cauchy's work on periodic sine and cosine series connected with
+        mathematical physics. This is an intersection with the Fourier-series line, not evidence that Fourier's heat problem
+        caused Cauchy's general program for rigorous analysis.
+      assertion_refs:
+        - assertion-r002-periodic-fourier
+        - assertion-r002-periodic-convergence
+      perspective: later_interpretation
+      temporal_anchor: {from: 1827, to: 1827}
+
+    - id: rigor-5
+      ref: work-cauchy-series-1853
+      role: Response
+      narrative: >
+        In 1853 Cauchy revisited the continuity-of-the-sum problem and imposed stronger control on the remainder across the
+        variable range. The historical text gives the strengthened condition; identifying it with the later category of
+        uniform convergence is a retrospective interpretation.
+      assertion_refs:
+        - assertion-r002-cauchy-1853-continuity
+        - assertion-r002-cauchy-1853-uniform
+      perspective: later_interpretation
+      temporal_anchor: {from: 1853, to: 1853}
+
+    - id: rigor-6
+      ref: q-uniform-convergence-emergence
+      role: Next question
+      narrative: >
+        Stronger forms of control over convergence emerged through several nineteenth-century contributions rather than one
+        isolated invention. Cauchy, Stokes, and Seidel form part of the historical material later organized under uniform
+        convergence, while Weierstrass belongs to the later systematic development of the concept.
+      assertion_refs:
+        - assertion-r002-cauchy-1853-uniform
+        - assertion-r002-stokes-uniform
+        - assertion-r002-seidel-uniform
+        - assertion-r002-weierstrass-uniform
+      perspective: later_interpretation
+      temporal_anchor: {from: 1853, to: 1861}
+
+  links:
+    - {from: rigor-1, to: rigor-2, type: continues}
+    - {from: rigor-2, to: rigor-3, type: branches}
+    - {from: rigor-2, to: rigor-4, type: branches}
+    - {from: rigor-3, to: rigor-5, type: continues}
+    - {from: rigor-5, to: rigor-6, type: branches}

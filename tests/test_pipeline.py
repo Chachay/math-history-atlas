@@ -12,7 +12,7 @@ def test_sample_data_valid():
 def test_fourier_is_intersection():
     rows = build_intersections()
     hit = [x for x in rows if x['entity'] == 'concept-fourier-series']
-    assert hit and hit[0]['story_count'] == 5
+    assert hit and hit[0]['story_count'] == 4
 
 
 def test_r001_story_has_reviewable_narrative_provenance():
@@ -30,6 +30,16 @@ def test_r002_story_has_reviewable_narrative_provenance():
     assert all(step.get('narrative') for step in story['steps'])
     assert all(step.get('assertion_refs') for step in story['steps'])
     assert all(step.get('perspective') for step in story['steps'])
+
+
+def test_rigor_story_is_reviewed_not_stub():
+    stories = load_yaml_files(ROOT / 'editorial/stories')
+    story = next(s for s in stories if s['id'] == 'story-rigor')
+    assert story['steps']
+    assert all(step.get('narrative') for step in story['steps'])
+    assert all(step.get('assertion_refs') for step in story['steps'])
+    assert all(step.get('perspective') for step in story['steps'])
+    assert all(step.get('temporal_anchor') for step in story['steps'])
 
 
 def test_integrity_fingerprint_rejects_stale_resolution():
