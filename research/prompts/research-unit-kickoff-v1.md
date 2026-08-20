@@ -94,6 +94,16 @@ After the user decides, record the human resolution.
 
 Bind the resolution to the exact packet/review fingerprints using the repository tooling. Refuse stale or incomplete promotion.
 
+Run package-aware integrity tooling as modules from the repository root:
+
+```text
+python -m scripts.bind_resolution R00X
+python -m scripts.promote_verified R00X
+python -m scripts.promote_verified R00X --apply
+```
+
+Do not invoke `bind_resolution.py` or `promote_verified.py` by file path in CI runners; both import the `scripts` package and must retain the repository root on Python's module search path.
+
 Promote only human-accepted material to canonical data. Reuse existing canonical IDs when the historical object/question is genuinely the same; do not create duplicates simply because the research unit is new.
 
 Retain a machine-readable canonical provenance map under `research/promotions/`.
