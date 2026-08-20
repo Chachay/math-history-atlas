@@ -1,0 +1,21 @@
+id: story-frequency
+title: Seeing the world by frequency
+status: deferred
+former_location: editorial/stories/core.yaml
+preserve_story_id: true
+reason: >
+  The current three-step PoC path is too thin to justify presenting frequency decomposition as a reviewed historical Story.
+  Fourier's heat work and trigonometric representation are canonical, but a broader historical claim about "seeing the world
+  by frequency" needs a bounded future unit on modes, harmonic analysis, or Fourier analysis and must distinguish later
+  interpretation from Fourier's own motivations.
+future_scope:
+  candidate_topics:
+    - separated modes in mathematical physics
+    - harmonic decomposition and later Fourier analysis
+    - the historical transition from trigonometric representation to frequency-domain interpretation
+reactivation_gate:
+  - bounded Research Packet
+  - Historical Critic
+  - canonical promotion of any new factual claims
+  - Story Editor and Story Critic review
+  - explicit Story-local temporal anchors

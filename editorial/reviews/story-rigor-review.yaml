@@ -1,0 +1,93 @@
+review:
+  story_id: story-rigor
+  research_basis:
+    - R002
+  critic_prompt: research/prompts/story-critic-v1.md
+  status: reviewed
+  summary:
+    pass: 8
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+
+findings:
+  - id: sr-rigor-001
+    classification: PASS
+    target: {story_id: story-rigor, step_id: rigor-1, field: narrative}
+    reason: >
+      The opening frames rigor as an editorial question while explicitly avoiding a claim that Cauchy already possessed a
+      modern finished theory. The supporting Cauchy assertions are sufficient for this cautious synthesis.
+    assertion_refs: [assertion-r002-cauchy-rigor, assertion-r002-cauchy-convergence]
+
+  - id: sr-rigor-002
+    classification: PASS
+    target: {story_id: story-rigor, step_id: rigor-2, field: narrative}
+    reason: >
+      The step states only that convergence had a systematic role in Cauchy's 1821 treatment and avoids projecting later
+      convergence theory backward.
+    assertion_refs: [assertion-r002-cauchy-convergence]
+
+  - id: sr-rigor-003
+    classification: PASS
+    target: {story_id: story-rigor, step_id: rigor-3, field: narrative}
+    reason: >
+      The continuity-of-the-sum problem is presented through later historiography, and the Abel sentence explicitly refuses
+      to infer direct influence from chronological proximity.
+    assertion_refs: [assertion-r002-sum-continuity-problem, assertion-r002-abel-continuity]
+
+  - id: sr-rigor-004
+    classification: PASS
+    target: {story_id: story-rigor, step_id: rigor-4, field: narrative}
+    reason: >
+      The Fourier-series connection is correctly marked as an intersection and explicitly rejects a stronger Fourier-to-Cauchy
+      causal claim.
+    assertion_refs: [assertion-r002-periodic-fourier, assertion-r002-periodic-convergence]
+
+  - id: sr-rigor-005
+    classification: PASS
+    target: {story_id: story-rigor, step_id: rigor-5, field: narrative}
+    reason: >
+      The step separates Cauchy's historical 1853 strengthened remainder condition from the later label uniform convergence.
+    assertion_refs: [assertion-r002-cauchy-1853-continuity, assertion-r002-cauchy-1853-uniform]
+
+  - id: sr-rigor-006
+    classification: PASS
+    target: {story_id: story-rigor, step_id: rigor-6, field: narrative}
+    reason: >
+      The emergence of stronger convergence conditions is distributed across several contributors rather than compressed
+      into a single linear invention story.
+    assertion_refs:
+      - assertion-r002-cauchy-1853-uniform
+      - assertion-r002-stokes-uniform
+      - assertion-r002-seidel-uniform
+      - assertion-r002-weierstrass-uniform
+
+  - id: sr-rigor-007
+    classification: PASS
+    target: {story_id: story-rigor, field: links}
+    reason: >
+      The 1826 continuity problem and the 1827 periodic-series episode branch independently from the 1821 convergence step,
+      avoiding an unsupported claim that one directly produced the other.
+    assertion_refs: [assertion-r002-cauchy-convergence, assertion-r002-periodic-convergence, assertion-r002-sum-continuity-problem]
+
+  - id: sr-rigor-008
+    classification: PASS
+    target: {story_id: story-rigor, field: temporal_anchors}
+    reason: >
+      The Story-local anchors are nondecreasing along every non-retrospective edge and distinguish Story occurrence dates
+      from the earlier origin dates of reused concepts.
+    assertion_refs: [assertion-r002-cauchy-convergence, assertion-r002-cauchy-1853-continuity]
+
+research_gaps:
+  - id: gap-rigor-abel-primary
+    question: >
+      What exactly does Abel's 1826 primary text say about the counterexample episode, and does it explicitly identify Cauchy's theorem?
+    status: inherited_from_R002
+    effect_on_story: >
+      The current Story remains valid because it uses cautious specialist-historiography wording and makes no direct-influence claim.
+
+resolution:
+  status: no_material_findings
+  note: >
+    All Story Critic findings pass. No separate human editorial correction is required before visual review; the inherited Abel
+    primary-source gap remains explicit and does not justify stronger wording.
