@@ -1,0 +1,67 @@
+research_unit_id: R002
+packet: R002-cauchy-convergence-continuity.yaml
+review: R002-cauchy-convergence-continuity-review.yaml
+resolution: R002-cauchy-convergence-continuity-resolution.yaml
+summary:
+  proposed_changes: 4
+  skipped_items: 0
+changes:
+- finding_id: f-chronology-abel-1826
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: chronology
+    match:
+      date: '1826'
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-arsac-2013
+  status: proposed
+- finding_id: f-chronology-stokes-seidel
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: chronology
+    match:
+      date: 1847–1848
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-stokes-1847
+    - src-seidel-1848
+  status: proposed
+- finding_id: f-a006
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: assertions
+    id: r002-a006
+  proposed_change:
+    action: replace_fields
+    fields:
+      statement: 'Abel''s 1826 paper contains a trigonometric-series exception to the continuity-of-the-sum
+        claim associated with Cauchy''s 1821 theorem; specialist histories treat it as an early explicit
+        challenge to that result.
+
+        '
+      certainty: medium_high
+  status: proposed
+- finding_id: f-qt004
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: question_transitions
+    id: r002-qt004
+  proposed_change:
+    action: manual_review
+    reason: 'Keep as a candidate later-interpretation transition, but do not promote it to a strong historical-causal
+      Story link until Abel''s primary wording and reception are checked.
+
+      '
+  status: proposed
+skipped: []

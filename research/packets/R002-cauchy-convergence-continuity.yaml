@@ -1,611 +1,751 @@
 research_unit:
   id: R002
-  title: "Cauchy — convergence, continuity, and rigor in analysis"
+  title: Cauchy — convergence, continuity, and rigor in analysis
   period:
     approximate_start: 1815
     approximate_end: 1853
-    core_period: "1821–1853"
-  scope_summary: >
-    Investigation of Cauchy's program for analysis based on limits and infinitesimals,
-    his treatment of continuity and convergence, the 1821 theorem on sums of continuous
-    functions, the interaction with trigonometric/Fourier series, and the later emergence
-    of conditions now associated with uniform convergence. The packet treats modern
-    epsilon-delta and uniform-convergence language as retrospective unless a source
-    explicitly supports historical attribution.
+    core_period: 1821–1853
+  scope_summary: 'Investigation of Cauchy''s program for analysis based on limits and infinitesimals,
+    his treatment of continuity and convergence, the 1821 theorem on sums of continuous functions, the
+    interaction with trigonometric/Fourier series, and the later emergence of conditions now associated
+    with uniform convergence. The packet treats modern epsilon-delta and uniform-convergence language
+    as retrospective unless a source explicitly supports historical attribution.
+
+    '
   research_status: researched
   editorial_status: not_accepted
-  generated_date: "2026-08-20"
-
+  generated_date: '2026-08-20'
 research_questions:
-  - id: q001
-    question: "What did Cauchy mean by making analysis rigorous, and what mathematical practices was he trying to replace or control?"
-  - id: q002
-    question: "How did Cauchy define limit, infinitesimal quantity, continuity, and convergence in his own terminology?"
-  - id: q003
-    question: "What role did infinite series play in Cauchy's organization of analysis?"
-  - id: q004
-    question: "How did Fourier and trigonometric series intersect with Cauchy's work on convergence?"
-  - id: q005
-    question: "What exactly did Cauchy claim in 1821 about a convergent series of continuous functions, and why was the claim later restricted?"
-  - id: q006
-    question: "How did later work distinguish the stronger mode of convergence now called uniform convergence, and how directly should that development be credited to Cauchy?"
-  - id: q007
-    question: "Which apparent lines from Cauchy to later epsilon-delta analysis are historical continuities and which are modern reconstructions?"
-
+- id: q001
+  question: What did Cauchy mean by making analysis rigorous, and what mathematical practices was he trying
+    to replace or control?
+- id: q002
+  question: How did Cauchy define limit, infinitesimal quantity, continuity, and convergence in his own
+    terminology?
+- id: q003
+  question: What role did infinite series play in Cauchy's organization of analysis?
+- id: q004
+  question: How did Fourier and trigonometric series intersect with Cauchy's work on convergence?
+- id: q005
+  question: What exactly did Cauchy claim in 1821 about a convergent series of continuous functions, and
+    why was the claim later restricted?
+- id: q006
+  question: How did later work distinguish the stronger mode of convergence now called uniform convergence,
+    and how directly should that development be credited to Cauchy?
+- id: q007
+  question: Which apparent lines from Cauchy to later epsilon-delta analysis are historical continuities
+    and which are modern reconstructions?
 entities:
-  - id: person-cauchy
-    type: Person
-    canonical_name: Augustin-Louis Cauchy
-    birth_year: 1789
-    death_year: 1857
-  - id: person-fourier
-    type: Person
-    canonical_name: Joseph Fourier
-    birth_year: 1768
-    death_year: 1830
-  - id: person-abel
-    type: Person
-    canonical_name: Niels Henrik Abel
-    birth_year: 1802
-    death_year: 1829
-  - id: person-dirichlet
-    type: Person
-    canonical_name: Peter Gustav Lejeune Dirichlet
-    birth_year: 1805
-    death_year: 1859
-  - id: person-seidel
-    type: Person
-    canonical_name: Philipp Ludwig von Seidel
-    birth_year: 1821
-    death_year: 1896
-  - id: person-stokes
-    type: Person
-    canonical_name: George Gabriel Stokes
-    birth_year: 1819
-    death_year: 1903
-  - id: person-weierstrass
-    type: Person
-    canonical_name: Karl Weierstrass
-    birth_year: 1815
-    death_year: 1897
-  - id: concept-limit
-    type: Concept
-    canonical_name: Limit
-  - id: concept-infinitesimal
-    type: Concept
-    canonical_name: Infinitesimal quantity
-  - id: concept-continuity
-    type: Concept
-    canonical_name: Continuity
-  - id: concept-series-convergence
-    type: Concept
-    canonical_name: Convergence of infinite series
-  - id: concept-series-of-functions
-    type: Concept
-    canonical_name: Series of functions
-  - id: concept-uniform-convergence
-    type: Concept
-    canonical_name: Uniform convergence
-  - id: concept-fourier-series
-    type: Concept
-    canonical_name: Fourier series
-  - id: work-cauchy-cours-1821
-    type: Work
-    canonical_name: "Cours d'analyse de l'École royale polytechnique, I.re partie: Analyse algébrique"
-    year: 1821
-  - id: work-cauchy-calcul-1823
-    type: Work
-    canonical_name: "Résumé des leçons données à l'École royale polytechnique sur le calcul infinitésimal"
-    year: 1823
-  - id: work-cauchy-periodic-1827
-    type: Work
-    canonical_name: Mémoire sur les développements des fonctions en séries périodiques
-    read_date: "1826-02-27"
-    publication_year: 1827
-  - id: work-abel-binomial-1826
-    type: Work
-    canonical_name: "Recherches sur la série 1 + mx/1 + m(m-1)x²/(1·2) + ..."
-    year: 1826
-  - id: work-cauchy-series-1853
-    type: Work
-    canonical_name: "Note sur les séries convergentes dont les divers termes sont des fonctions continues d'une variable réelle ou imaginaire, entre des limites données"
-    year: 1853
-
+- id: person-cauchy
+  type: Person
+  canonical_name: Augustin-Louis Cauchy
+  birth_year: 1789
+  death_year: 1857
+- id: person-fourier
+  type: Person
+  canonical_name: Joseph Fourier
+  birth_year: 1768
+  death_year: 1830
+- id: person-abel
+  type: Person
+  canonical_name: Niels Henrik Abel
+  birth_year: 1802
+  death_year: 1829
+- id: person-dirichlet
+  type: Person
+  canonical_name: Peter Gustav Lejeune Dirichlet
+  birth_year: 1805
+  death_year: 1859
+- id: person-seidel
+  type: Person
+  canonical_name: Philipp Ludwig von Seidel
+  birth_year: 1821
+  death_year: 1896
+- id: person-stokes
+  type: Person
+  canonical_name: George Gabriel Stokes
+  birth_year: 1819
+  death_year: 1903
+- id: person-weierstrass
+  type: Person
+  canonical_name: Karl Weierstrass
+  birth_year: 1815
+  death_year: 1897
+- id: concept-limit
+  type: Concept
+  canonical_name: Limit
+- id: concept-infinitesimal
+  type: Concept
+  canonical_name: Infinitesimal quantity
+- id: concept-continuity
+  type: Concept
+  canonical_name: Continuity
+- id: concept-series-convergence
+  type: Concept
+  canonical_name: Convergence of infinite series
+- id: concept-series-of-functions
+  type: Concept
+  canonical_name: Series of functions
+- id: concept-uniform-convergence
+  type: Concept
+  canonical_name: Uniform convergence
+- id: concept-fourier-series
+  type: Concept
+  canonical_name: Fourier series
+- id: work-cauchy-cours-1821
+  type: Work
+  canonical_name: 'Cours d''analyse de l''École royale polytechnique, I.re partie: Analyse algébrique'
+  year: 1821
+- id: work-cauchy-calcul-1823
+  type: Work
+  canonical_name: Résumé des leçons données à l'École royale polytechnique sur le calcul infinitésimal
+  year: 1823
+- id: work-cauchy-periodic-1827
+  type: Work
+  canonical_name: Mémoire sur les développements des fonctions en séries périodiques
+  read_date: '1826-02-27'
+  publication_year: 1827
+- id: work-abel-binomial-1826
+  type: Work
+  canonical_name: Recherches sur la série 1 + mx/1 + m(m-1)x²/(1·2) + ...
+  year: 1826
+- id: work-cauchy-series-1853
+  type: Work
+  canonical_name: Note sur les séries convergentes dont les divers termes sont des fonctions continues
+    d'une variable réelle ou imaginaire, entre des limites données
+  year: 1853
 chronology:
-  - date: "1821"
-    event: >
-      Cauchy publishes the first part of the Cours d'analyse, organizing algebraic
-      analysis around limits, infinitesimal quantities, continuity, and convergence
-      of series, and stating a theorem about sums of convergent series of continuous
-      functions.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1821, src-bradley-sandifer-2009, src-arsac-2013]
-    uncertainty: >
-      The modern classification of Cauchy's definitions as epsilon-delta analysis or
-      as equivalent to specific twentieth-century formulations is interpretive and must
-      be kept separate from his own infinitesimal language.
-  - date: "1823"
-    event: >
-      Cauchy's calculus lectures develop differential and integral calculus using his
-      limit/infinitesimal framework.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1823]
-    uncertainty: null
-  - date: "1826-02-27"
-    publication_year: 1827
-    event: >
-      Cauchy reads a memoir on periodic series in which he explicitly connects periodic
-      expansions, including sine and cosine series, with mathematical physics and attempts
-      a general proof of convergence.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-periodic-1827]
-    uncertainty: >
-      The memoir appears in volume 6 nominally associated with 1823 but was read in 1826
-      and published in 1827; these date types must not be conflated.
-  - date: "1826"
-    event: >
-      Abel notes an exception to Cauchy's 1821 continuity-of-the-sum theorem in work on
-      the binomial series, using a trigonometric-series example to show that pointwise
-      convergence of continuous terms does not by itself preserve continuity of the sum.
-    perspective: historical
-    certainty: medium_high
-    sources: [src-abel-1826, src-arsac-2013]
-    uncertainty: >
-      The packet uses modern language such as pointwise convergence only to describe the
-      mathematical relation; Abel did not formulate the issue with the later terminology
-      of pointwise versus uniform convergence.
-  - date: "1829"
-    event: >
-      Dirichlet publishes a rigorous convergence theorem for trigonometric series under
-      explicit restrictions and criticizes Cauchy's attempted general proof.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829, src-riemann-trig-history]
-    uncertainty: >
-      This is an intersection with R001 rather than evidence that Fourier's physical heat
-      problem was the sole or direct motivation for Cauchy's broader program of rigor.
-  - date: "1847–1848"
-    event: >
-      Stokes and Seidel formulate stronger conditions controlling convergence across the
-      variable domain in work that later historians identify as part of the emergence of
-      uniform convergence.
-    perspective: later_interpretation
-    certainty: medium_high
-    sources: [src-weierstrass-uniform-history, src-arsac-2013]
-    uncertainty: >
-      Priority and exact dating vary across historical accounts, and the terminology
-      "uniform convergence" was not yet standardized in the modern sense.
-  - date: "1853-03-14"
-    event: >
-      Cauchy returns to his 1821 theorem, acknowledges exceptions for general series, and
-      states a strengthened condition requiring the remainder to become small for all
-      values of the variable between the given limits.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1853, src-arsac-2013]
-    uncertainty: >
-      Whether this should be described as Cauchy "discovering uniform convergence" is a
-      historiographical interpretation. His text does not use the later term.
+- date: '1821'
+  event: 'Cauchy publishes the first part of the Cours d''analyse, organizing algebraic analysis around
+    limits, infinitesimal quantities, continuity, and convergence of series, and stating a theorem about
+    sums of convergent series of continuous functions.
 
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1821
+  - src-bradley-sandifer-2009
+  - src-arsac-2013
+  uncertainty: 'The modern classification of Cauchy''s definitions as epsilon-delta analysis or as equivalent
+    to specific twentieth-century formulations is interpretive and must be kept separate from his own
+    infinitesimal language.
+
+    '
+- date: '1823'
+  event: 'Cauchy''s calculus lectures develop differential and integral calculus using his limit/infinitesimal
+    framework.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1823
+  uncertainty: null
+- date: '1826-02-27'
+  publication_year: 1827
+  event: 'Cauchy reads a memoir on periodic series in which he explicitly connects periodic expansions,
+    including sine and cosine series, with mathematical physics and attempts a general proof of convergence.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-periodic-1827
+  uncertainty: 'The memoir appears in volume 6 nominally associated with 1823 but was read in 1826 and
+    published in 1827; these date types must not be conflated.
+
+    '
+- date: '1826'
+  event: 'Abel notes an exception to Cauchy''s 1821 continuity-of-the-sum theorem in work on the binomial
+    series, using a trigonometric-series example to show that pointwise convergence of continuous terms
+    does not by itself preserve continuity of the sum.
+
+    '
+  perspective: historical
+  certainty: medium_high
+  sources:
+  - src-abel-1826
+  - src-arsac-2013
+  uncertainty: 'The packet uses modern language such as pointwise convergence only to describe the mathematical
+    relation; Abel did not formulate the issue with the later terminology of pointwise versus uniform
+    convergence.
+
+    '
+- date: '1829'
+  event: 'Dirichlet publishes a rigorous convergence theorem for trigonometric series under explicit restrictions
+    and criticizes Cauchy''s attempted general proof.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  - src-riemann-trig-history
+  uncertainty: 'This is an intersection with R001 rather than evidence that Fourier''s physical heat problem
+    was the sole or direct motivation for Cauchy''s broader program of rigor.
+
+    '
+- date: 1847–1848
+  event: 'Stokes and Seidel formulate stronger conditions controlling convergence across the variable
+    domain in work that later historians identify as part of the emergence of uniform convergence.
+
+    '
+  perspective: later_interpretation
+  certainty: medium_high
+  sources:
+  - src-weierstrass-uniform-history
+  - src-arsac-2013
+  - src-stokes-1847
+  - src-seidel-1848
+  uncertainty: 'Priority and exact dating vary across historical accounts, and the terminology "uniform
+    convergence" was not yet standardized in the modern sense.
+
+    '
+- date: '1853-03-14'
+  event: 'Cauchy returns to his 1821 theorem, acknowledges exceptions for general series, and states a
+    strengthened condition requiring the remainder to become small for all values of the variable between
+    the given limits.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1853
+  - src-arsac-2013
+  uncertainty: 'Whether this should be described as Cauchy "discovering uniform convergence" is a historiographical
+    interpretation. His text does not use the later term.
+
+    '
 assertions:
-  - id: r002-a001
-    subject: work-cauchy-cours-1821
-    predicate: organized_analysis_around
-    object: concept-limit
-    statement: >
-      Cauchy's 1821 Cours d'analyse made limits a basic organizing notion for analysis
-      rather than treating them as an incidental computational device.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1821, src-bradley-sandifer-2009]
-    uncertainty: >
-      This does not mean that Cauchy originated the mathematical idea of a limit or that
-      no earlier rigorous arguments existed.
-  - id: r002-a002
-    subject: person-cauchy
-    predicate: defined
-    object: concept-infinitesimal
-    statement: >
-      Cauchy defined an infinitesimal quantity through a variable whose successive values
-      decrease indefinitely so as to have zero as limit.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1821]
-    uncertainty: >
-      Modern ontological interpretations of Cauchy's infinitesimals are disputed and are
-      not resolved by this packet.
-  - id: r002-a003
-    subject: person-cauchy
-    predicate: defined
-    object: concept-continuity
-    statement: >
-      Cauchy characterized continuity by requiring an infinitely small increment of the
-      independent variable to produce an infinitely small increment of the function
-      within stated bounds.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1821, src-bradley-sandifer-2009]
-    uncertainty: >
-      Translating this directly into a modern pointwise or uniformly continuous epsilon-delta
-      definition can suppress differences in quantifier structure and historical language.
-  - id: r002-a004
-    subject: work-cauchy-cours-1821
-    predicate: developed
-    object: concept-series-convergence
-    statement: >
-      Cauchy's 1821 treatment gave systematic convergence criteria for infinite series,
-      including the condition now closely related to the Cauchy criterion for convergence.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1821, src-history-wrong-definitions-2026]
-    uncertainty: >
-      Naming the condition "the Cauchy criterion" is later terminology and does not imply
-      that no antecedent formulations existed.
-  - id: r002-a005
-    subject: work-cauchy-cours-1821
-    predicate: claimed
-    object: concept-series-of-functions
-    statement: >
-      Cauchy stated that when the terms of a convergent series are continuous functions
-      of the same variable in a neighborhood, the sum is also continuous there.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1821, src-arsac-2013]
-    uncertainty: >
-      Read with ordinary modern pointwise convergence, this statement is false without a
-      stronger convergence hypothesis.
-  - id: r002-a006
-    subject: work-abel-binomial-1826
-    predicate: exposed_exception_to
-    object: r002-a005
-    statement: >
-      Abel explicitly pointed out an exception to Cauchy's theorem, using a trigonometric
-      series whose continuous terms have a discontinuous limiting sum.
-    perspective: historical
-    certainty: medium_high
-    sources: [src-abel-1826, src-arsac-2013]
-    uncertainty: >
-      The description "discontinuous limiting sum" is modern mathematical wording; the
-      historical texts speak in terms of exceptions rather than the later taxonomy of
-      convergence modes.
-  - id: r002-a007
-    subject: work-cauchy-periodic-1827
-    predicate: connected
-    object: concept-fourier-series
-    statement: >
-      Cauchy's periodic-series memoir explicitly states that many problems of mathematical
-      physics require expansion of functions in periodic series, including sine and cosine
-      series, and seeks a general convergence argument.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-periodic-1827]
-    uncertainty: null
-  - id: r002-a008
-    subject: work-cauchy-periodic-1827
-    predicate: attempted_general_proof_of
-    object: concept-series-convergence
-    statement: >
-      Cauchy's 1826/1827 memoir attempted to establish convergence of periodic/trigonometric
-      expansions in generality beyond special cases where coefficients could be evaluated directly.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-periodic-1827, src-riemann-trig-history]
-    uncertainty: >
-      Dirichlet and later Riemann regarded Cauchy's proof as insufficient; the assertion
-      records the aim of the memoir, not the validity of its proof.
-  - id: r002-a009
-    subject: work-dirichlet-1829
-    predicate: corrected_or_replaced
-    object: r002-a008
-    statement: >
-      Dirichlet's 1829 paper supplied a rigorous convergence theorem under explicit
-      restrictions and identified defects in Cauchy's attempted proof.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829, src-riemann-trig-history]
-    uncertainty: >
-      "Corrected or replaced" refers to the convergence argument, not to every aspect of
-      Cauchy's method or to all special cases.
-  - id: r002-a010
-    subject: work-cauchy-series-1853
-    predicate: revised
-    object: r002-a005
-    statement: >
-      In 1853 Cauchy acknowledged that the 1821 theorem admits exceptions for general
-      series and strengthened the hypothesis by requiring the remainder to become
-      arbitrarily small for all values of the variable in the specified interval.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-1853, src-arsac-2013]
-    uncertainty: >
-      Cauchy did not use the later expression "uniform convergence" in this note.
-  - id: r002-a011
-    subject: concept-uniform-convergence
-    predicate: later_clarified
-    object: r002-a010
-    statement: >
-      Later historians identify Cauchy's 1853 strengthened condition as mathematically
-      corresponding closely to a uniform Cauchy condition, while emphasizing that the
-      terminology and conceptual packaging of uniform convergence developed through
-      several authors rather than one isolated act.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-arsac-2013, src-weierstrass-uniform-history]
-    uncertainty: >
-      Historiography differs on how much conceptual credit should be assigned to Cauchy,
-      Seidel, Stokes, and Weierstrass.
-  - id: r002-a012
-    subject: concept-fourier-series
-    predicate: intersected_with
-    object: concept-series-convergence
-    statement: >
-      Fourier/trigonometric series formed one historically important testing ground in
-      which general claims about convergence and continuity of infinite processes became
-      mathematically consequential.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-cauchy-periodic-1827, src-dirichlet-1829, src-arsac-2013]
-    uncertainty: >
-      This should not be rewritten as the stronger claim that Fourier's heat problem alone
-      caused Cauchy's foundational program in analysis.
-  - id: r002-a013
-    subject: person-weierstrass
-    predicate: developed
-    object: concept-uniform-convergence
-    statement: >
-      Weierstrass developed an explicit and systematic treatment of convergence at the
-      same rate in later lectures, but modern scholarship cautions against a simple linear
-      genealogy from Cauchy through Seidel and Stokes to Weierstrass.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-weierstrass-uniform-history]
-    uncertainty: >
-      The dating of Weierstrass's earliest use and the relation of unpublished 1840s work
-      to later lecture formulations require careful source-specific treatment.
+- id: r002-a001
+  subject: work-cauchy-cours-1821
+  predicate: organized_analysis_around
+  object: concept-limit
+  statement: 'Cauchy''s 1821 Cours d''analyse made limits a basic organizing notion for analysis rather
+    than treating them as an incidental computational device.
 
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1821
+  - src-bradley-sandifer-2009
+  uncertainty: 'This does not mean that Cauchy originated the mathematical idea of a limit or that no
+    earlier rigorous arguments existed.
+
+    '
+- id: r002-a002
+  subject: person-cauchy
+  predicate: defined
+  object: concept-infinitesimal
+  statement: 'Cauchy defined an infinitesimal quantity through a variable whose successive values decrease
+    indefinitely so as to have zero as limit.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1821
+  uncertainty: 'Modern ontological interpretations of Cauchy''s infinitesimals are disputed and are not
+    resolved by this packet.
+
+    '
+- id: r002-a003
+  subject: person-cauchy
+  predicate: defined
+  object: concept-continuity
+  statement: 'Cauchy characterized continuity by requiring an infinitely small increment of the independent
+    variable to produce an infinitely small increment of the function within stated bounds.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1821
+  - src-bradley-sandifer-2009
+  uncertainty: 'Translating this directly into a modern pointwise or uniformly continuous epsilon-delta
+    definition can suppress differences in quantifier structure and historical language.
+
+    '
+- id: r002-a004
+  subject: work-cauchy-cours-1821
+  predicate: developed
+  object: concept-series-convergence
+  statement: 'Cauchy''s 1821 treatment gave systematic convergence criteria for infinite series, including
+    the condition now closely related to the Cauchy criterion for convergence.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1821
+  - src-history-wrong-definitions-2026
+  uncertainty: 'Naming the condition "the Cauchy criterion" is later terminology and does not imply that
+    no antecedent formulations existed.
+
+    '
+- id: r002-a005
+  subject: work-cauchy-cours-1821
+  predicate: claimed
+  object: concept-series-of-functions
+  statement: 'Cauchy stated that when the terms of a convergent series are continuous functions of the
+    same variable in a neighborhood, the sum is also continuous there.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1821
+  - src-arsac-2013
+  uncertainty: 'Read with ordinary modern pointwise convergence, this statement is false without a stronger
+    convergence hypothesis.
+
+    '
+- id: r002-a006
+  subject: work-abel-binomial-1826
+  predicate: exposed_exception_to
+  object: r002-a005
+  statement: 'Abel''s 1826 paper contains a trigonometric-series exception to the continuity-of-the-sum
+    claim associated with Cauchy''s 1821 theorem; specialist histories treat it as an early explicit challenge
+    to that result.
+
+    '
+  perspective: historical
+  certainty: medium_high
+  sources:
+  - src-abel-1826
+  - src-arsac-2013
+  uncertainty: 'The description "discontinuous limiting sum" is modern mathematical wording; the historical
+    texts speak in terms of exceptions rather than the later taxonomy of convergence modes.
+
+    '
+- id: r002-a007
+  subject: work-cauchy-periodic-1827
+  predicate: connected
+  object: concept-fourier-series
+  statement: 'Cauchy''s periodic-series memoir explicitly states that many problems of mathematical physics
+    require expansion of functions in periodic series, including sine and cosine series, and seeks a general
+    convergence argument.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-periodic-1827
+  uncertainty: null
+- id: r002-a008
+  subject: work-cauchy-periodic-1827
+  predicate: attempted_general_proof_of
+  object: concept-series-convergence
+  statement: 'Cauchy''s 1826/1827 memoir attempted to establish convergence of periodic/trigonometric
+    expansions in generality beyond special cases where coefficients could be evaluated directly.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-periodic-1827
+  - src-riemann-trig-history
+  uncertainty: 'Dirichlet and later Riemann regarded Cauchy''s proof as insufficient; the assertion records
+    the aim of the memoir, not the validity of its proof.
+
+    '
+- id: r002-a009
+  subject: work-dirichlet-1829
+  predicate: corrected_or_replaced
+  object: r002-a008
+  statement: 'Dirichlet''s 1829 paper supplied a rigorous convergence theorem under explicit restrictions
+    and identified defects in Cauchy''s attempted proof.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  - src-riemann-trig-history
+  uncertainty: '"Corrected or replaced" refers to the convergence argument, not to every aspect of Cauchy''s
+    method or to all special cases.
+
+    '
+- id: r002-a010
+  subject: work-cauchy-series-1853
+  predicate: revised
+  object: r002-a005
+  statement: 'In 1853 Cauchy acknowledged that the 1821 theorem admits exceptions for general series and
+    strengthened the hypothesis by requiring the remainder to become arbitrarily small for all values
+    of the variable in the specified interval.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-1853
+  - src-arsac-2013
+  uncertainty: 'Cauchy did not use the later expression "uniform convergence" in this note.
+
+    '
+- id: r002-a011
+  subject: concept-uniform-convergence
+  predicate: later_clarified
+  object: r002-a010
+  statement: 'Later historians identify Cauchy''s 1853 strengthened condition as mathematically corresponding
+    closely to a uniform Cauchy condition, while emphasizing that the terminology and conceptual packaging
+    of uniform convergence developed through several authors rather than one isolated act.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-arsac-2013
+  - src-weierstrass-uniform-history
+  uncertainty: 'Historiography differs on how much conceptual credit should be assigned to Cauchy, Seidel,
+    Stokes, and Weierstrass.
+
+    '
+- id: r002-a012
+  subject: concept-fourier-series
+  predicate: intersected_with
+  object: concept-series-convergence
+  statement: 'Fourier/trigonometric series formed one historically important testing ground in which general
+    claims about convergence and continuity of infinite processes became mathematically consequential.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-cauchy-periodic-1827
+  - src-dirichlet-1829
+  - src-arsac-2013
+  uncertainty: 'This should not be rewritten as the stronger claim that Fourier''s heat problem alone
+    caused Cauchy''s foundational program in analysis.
+
+    '
+- id: r002-a013
+  subject: person-weierstrass
+  predicate: developed
+  object: concept-uniform-convergence
+  statement: 'Weierstrass developed an explicit and systematic treatment of convergence at the same rate
+    in later lectures, but modern scholarship cautions against a simple linear genealogy from Cauchy through
+    Seidel and Stokes to Weierstrass.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-weierstrass-uniform-history
+  uncertainty: 'The dating of Weierstrass''s earliest use and the relation of unpublished 1840s work to
+    later lecture formulations require careful source-specific treatment.
+
+    '
 question_transitions:
-  - id: r002-qt001
-    from_question: q001
-    to_question: q002
-    relation: reframed_as
-    statement: >
-      Understanding Cauchy's rigor program requires reconstructing his own definitions of
-      limit, infinitesimal, continuity, and convergence rather than importing later definitions.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-cauchy-1821, src-bradley-sandifer-2009]
-  - id: r002-qt002
-    from_question: q002
-    to_question: q003
-    relation: extends_to
-    statement: >
-      Once limits and infinitesimals organize analysis, infinite series become a major domain
-      in which limiting operations must be controlled.
-    perspective: later_interpretation
-    certainty: medium_high
-    sources: [src-cauchy-1821, src-bradley-sandifer-2009]
-  - id: r002-qt003
-    from_question: q003
-    to_question: q004
-    relation: intersects_with
-    statement: >
-      Cauchy's general study of series intersects directly with periodic and trigonometric
-      expansions in his 1826 memoir and with the convergence problem treated by Dirichlet.
-    perspective: historical
-    certainty: high
-    sources: [src-cauchy-periodic-1827, src-dirichlet-1829]
-  - id: r002-qt004
-    from_question: q004
-    to_question: q005
-    relation: exposes_problem_in
-    statement: >
-      Trigonometric-series examples made visible that convergence of continuous terms does
-      not automatically preserve continuity of the limiting sum, exposing a limitation of
-      Cauchy's 1821 theorem.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-abel-1826, src-arsac-2013]
-  - id: r002-qt005
-    from_question: q005
-    to_question: q006
-    relation: motivates_later_distinction
-    statement: >
-      Repairing the continuity-of-the-sum theorem requires control of convergence across the
-      variable domain, a problem later organized under the concept of uniform convergence.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-cauchy-1853, src-arsac-2013, src-weierstrass-uniform-history]
-  - id: r002-qt006
-    from_question: q006
-    to_question: q007
-    relation: requires_historiographical_check
-    statement: >
-      Because later epsilon-delta and uniform-convergence language can make the nineteenth-century
-      development look more linear than it was, the final question is which continuities are
-      genuinely historical and which are retrospective reconstruction.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-bradley-sandifer-2009, src-weierstrass-uniform-history]
+- id: r002-qt001
+  from_question: q001
+  to_question: q002
+  relation: reframed_as
+  statement: 'Understanding Cauchy''s rigor program requires reconstructing his own definitions of limit,
+    infinitesimal, continuity, and convergence rather than importing later definitions.
 
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-cauchy-1821
+  - src-bradley-sandifer-2009
+- id: r002-qt002
+  from_question: q002
+  to_question: q003
+  relation: extends_to
+  statement: 'Once limits and infinitesimals organize analysis, infinite series become a major domain
+    in which limiting operations must be controlled.
+
+    '
+  perspective: later_interpretation
+  certainty: medium_high
+  sources:
+  - src-cauchy-1821
+  - src-bradley-sandifer-2009
+- id: r002-qt003
+  from_question: q003
+  to_question: q004
+  relation: intersects_with
+  statement: 'Cauchy''s general study of series intersects directly with periodic and trigonometric expansions
+    in his 1826 memoir and with the convergence problem treated by Dirichlet.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-cauchy-periodic-1827
+  - src-dirichlet-1829
+- id: r002-qt004
+  from_question: q004
+  to_question: q005
+  relation: exposes_problem_in
+  statement: 'Trigonometric-series examples made visible that convergence of continuous terms does not
+    automatically preserve continuity of the limiting sum, exposing a limitation of Cauchy''s 1821 theorem.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-abel-1826
+  - src-arsac-2013
+- id: r002-qt005
+  from_question: q005
+  to_question: q006
+  relation: motivates_later_distinction
+  statement: 'Repairing the continuity-of-the-sum theorem requires control of convergence across the variable
+    domain, a problem later organized under the concept of uniform convergence.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-cauchy-1853
+  - src-arsac-2013
+  - src-weierstrass-uniform-history
+- id: r002-qt006
+  from_question: q006
+  to_question: q007
+  relation: requires_historiographical_check
+  statement: 'Because later epsilon-delta and uniform-convergence language can make the nineteenth-century
+    development look more linear than it was, the final question is which continuities are genuinely historical
+    and which are retrospective reconstruction.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-bradley-sandifer-2009
+  - src-weierstrass-uniform-history
 intersection_candidates:
-  - id: r002-i001
-    entity: concept-fourier-series
-    with_research_unit: R001
-    reason: >
-      R001 reaches convergence through Fourier's representational method; R002 reaches the
-      same object from the foundations and control of infinite processes.
-  - id: r002-i002
-    entity: concept-series-convergence
-    with_research_unit: R001
-    reason: >
-      Convergence is a downstream question in R001 and a central organizing problem in R002.
-  - id: r002-i003
-    entity: concept-continuity
-    with_existing_story: story-function
-    reason: >
-      Cauchy's continuity concept intersects the existing editorial line on what kinds of
-      functions and limiting processes analysis can admit.
-  - id: r002-i004
-    entity: person-cauchy
-    with_existing_story: story-rigor
-    reason: >
-      The placeholder rigor Story already anticipates Cauchy's role but has not yet been
-      grounded in a dedicated research packet.
+- id: r002-i001
+  entity: concept-fourier-series
+  with_research_unit: R001
+  reason: 'R001 reaches convergence through Fourier''s representational method; R002 reaches the same
+    object from the foundations and control of infinite processes.
 
+    '
+- id: r002-i002
+  entity: concept-series-convergence
+  with_research_unit: R001
+  reason: 'Convergence is a downstream question in R001 and a central organizing problem in R002.
+
+    '
+- id: r002-i003
+  entity: concept-continuity
+  with_existing_story: story-function
+  reason: 'Cauchy''s continuity concept intersects the existing editorial line on what kinds of functions
+    and limiting processes analysis can admit.
+
+    '
+- id: r002-i004
+  entity: person-cauchy
+  with_existing_story: story-rigor
+  reason: 'The placeholder rigor Story already anticipates Cauchy''s role but has not yet been grounded
+    in a dedicated research packet.
+
+    '
 concept_state_candidates:
-  - concept: concept-continuity
-    states:
-      - id: r002-continuity-cauchy-1821
-        period: {from: 1821, to: 1850}
-        label: Cauchy's infinitesimal-increment formulation
-        description: >
-          Continuity expressed through infinitesimal changes in the independent variable
-          producing infinitesimal changes in the function, with interval language that does
-          not map mechanically onto later pointwise epsilon-delta formulations.
-        perspective: historical
-        sources: [src-cauchy-1821]
-  - concept: concept-uniform-convergence
-    states:
-      - id: r002-uniform-emergence-1847-1853
-        period: {from: 1847, to: 1853}
-        label: Stronger domain-wide convergence conditions emerge
-        description: >
-          Seidel, Stokes, and Cauchy's 1853 note use stronger control over remainders across
-          variable ranges; later historiography relates these formulations to uniform convergence.
-        perspective: later_interpretation
-        sources: [src-arsac-2013, src-weierstrass-uniform-history]
+- concept: concept-continuity
+  states:
+  - id: r002-continuity-cauchy-1821
+    period:
+      from: 1821
+      to: 1850
+    label: Cauchy's infinitesimal-increment formulation
+    description: 'Continuity expressed through infinitesimal changes in the independent variable producing
+      infinitesimal changes in the function, with interval language that does not map mechanically onto
+      later pointwise epsilon-delta formulations.
 
+      '
+    perspective: historical
+    sources:
+    - src-cauchy-1821
+- concept: concept-uniform-convergence
+  states:
+  - id: r002-uniform-emergence-1847-1853
+    period:
+      from: 1847
+      to: 1853
+    label: Stronger domain-wide convergence conditions emerge
+    description: 'Seidel, Stokes, and Cauchy''s 1853 note use stronger control over remainders across
+      variable ranges; later historiography relates these formulations to uniform convergence.
+
+      '
+    perspective: later_interpretation
+    sources:
+    - src-arsac-2013
+    - src-weierstrass-uniform-history
 story_candidates:
-  - id: r002-story-rigor
-    title: "When is a limit argument trustworthy?"
-    opening_question: q001
-    candidate_path: [q001, q002, q003, q004, q005, q006, q007]
-    note: >
-      Candidate only. Do not draft final Story until canonical promotion and provenance
-      validation are complete.
-  - id: r002-story-continuity-under-limits
-    title: "Can continuity survive an infinite limit?"
-    opening_question: q005
-    candidate_path: [q005, q006, q007]
-    note: >
-      This may become either a branch of the main R002 Story or a separate Story depending
-      on critic findings and canonical graph structure.
+- id: r002-story-rigor
+  title: When is a limit argument trustworthy?
+  opening_question: q001
+  candidate_path:
+  - q001
+  - q002
+  - q003
+  - q004
+  - q005
+  - q006
+  - q007
+  note: 'Candidate only. Do not draft final Story until canonical promotion and provenance validation
+    are complete.
 
+    '
+- id: r002-story-continuity-under-limits
+  title: Can continuity survive an infinite limit?
+  opening_question: q005
+  candidate_path:
+  - q005
+  - q006
+  - q007
+  note: 'This may become either a branch of the main R002 Story or a separate Story depending on critic
+    findings and canonical graph structure.
+
+    '
 sources:
-  - id: src-cauchy-1821
-    type: primary
-    author: Augustin-Louis Cauchy
-    title: "Cours d'analyse de l'École royale polytechnique, I.re partie: Analyse algébrique"
-    publication: Paris, Imprimerie royale
-    year: 1821
-    url: https://archive.org/details/coursdanalysede00caucgoog
-    locator: "Préliminaires; ch. VI, pp. 120–132 in standard pagination"
-  - id: src-cauchy-1823
-    type: primary
-    author: Augustin-Louis Cauchy
-    title: "Résumé des leçons données à l'École royale polytechnique sur le calcul infinitésimal"
-    publication: Paris, Imprimerie royale
-    year: 1823
-    url: https://gallica.bnf.fr/ark:/12148/bpt6k62404287
-  - id: src-cauchy-periodic-1827
-    type: primary
-    author: Augustin-Louis Cauchy
-    title: Mémoire sur les développements des fonctions en séries périodiques
-    publication: "Mémoires de l'Académie royale des sciences, vol. 6"
-    volume_year: 1823
-    read_date: "1826-02-27"
-    publication_year: 1827
-    pages: 603-612
-    url: https://fr.wikisource.org/wiki/Page:M%C3%A9moires_de_l%E2%80%99Acad%C3%A9mie_des_sciences,_Tome_6.djvu/791
-    locator: "opening page and memoir pp. 603–612"
-  - id: src-abel-1826
-    type: primary
-    author: Niels Henrik Abel
-    title: "Recherches sur la série 1 + mx/1 + m(m-1)x²/(1·2) + ..."
-    publication: Journal für die reine und angewandte Mathematik
-    year: 1826
-    volume: 1
-    pages: 311-339
-    url: https://gallica.bnf.fr/
-    locator: "pp. 316ff.; bibliographic identification cross-checked in Numdam/EuDML historical literature"
-  - id: src-dirichlet-1829
-    type: primary
-    author: Peter Gustav Lejeune Dirichlet
-    title: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données
-    publication: Journal für die reine und angewandte Mathematik
-    year: 1829
-    url: https://eudml.org/doc/183125
-  - id: src-cauchy-1853
-    type: primary
-    author: Augustin-Louis Cauchy
-    title: "Note sur les séries convergentes dont les divers termes sont des fonctions continues d'une variable réelle ou imaginaire, entre des limites données"
-    publication: Comptes rendus de l'Académie des sciences
-    year: 1853
-    volume: 36
-    pages: 454-459
-    url: https://gallica.bnf.fr/ark:/12148/bpt6k2993z/f458.item.r=Cauchy
-    locator: "14 March 1853, pp. 454–459"
-  - id: src-bradley-sandifer-2009
-    type: secondary_scholarly
-    authors: [Robert E. Bradley, C. Edward Sandifer]
-    title: "Cauchy's Cours d'analyse: An Annotated Translation"
-    publication: Springer
-    year: 2009
-    doi: 10.1007/978-1-4419-0549-9
-    url: https://doi.org/10.1007/978-1-4419-0549-9
-  - id: src-arsac-2013
-    type: secondary_scholarly
-    author: Gilbert Arsac
-    title: "Cauchy, Abel, Seidel, Stokes et la convergence uniforme: De la difficulté historique du raisonnement sur les limites"
-    publication: Hermann
-    year: 2013
-    url: https://stm.cairn.info/cauchy-abel-seidel-stokes-et-la-convergence-uniforme--9782705686918
-    locator: "especially chapters III and VII"
-  - id: src-riemann-trig-history
-    type: primary_retrospective
-    author: Bernhard Riemann
-    title: Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe
-    composed_year: 1854
-    publication_year: 1867
-    url: https://www.ndsu.edu/pubweb/~novozhil/Teaching/481%20Data/riemann.pdf
-    locator: "historical introduction on Cauchy and Dirichlet"
-  - id: src-weierstrass-uniform-history
-    type: secondary_peer_reviewed
-    title: The development of the concept of uniform convergence in Karl Weierstrass's lectures and publications between 1861 and 1886
-    publication: Archive for History of Exact Sciences
-    year: 2020
-    url: https://link.springer.com/article/10.1007/s00407-020-00266-9
-  - id: src-history-wrong-definitions-2026
-    type: secondary_peer_reviewed
-    title: The History of Three Wrong Definitions
-    publication: The Mathematical Intelligencer
-    year: 2026
-    url: https://link.springer.com/article/10.1007/s00283-026-10520-7
-
+- id: src-cauchy-1821
+  type: primary
+  author: Augustin-Louis Cauchy
+  title: 'Cours d''analyse de l''École royale polytechnique, I.re partie: Analyse algébrique'
+  publication: Paris, Imprimerie royale
+  year: 1821
+  url: https://archive.org/details/coursdanalysede00caucgoog
+  locator: Préliminaires; ch. VI, pp. 120–132 in standard pagination
+- id: src-cauchy-1823
+  type: primary
+  author: Augustin-Louis Cauchy
+  title: Résumé des leçons données à l'École royale polytechnique sur le calcul infinitésimal
+  publication: Paris, Imprimerie royale
+  year: 1823
+  url: https://gallica.bnf.fr/ark:/12148/bpt6k62404287
+- id: src-cauchy-periodic-1827
+  type: primary
+  author: Augustin-Louis Cauchy
+  title: Mémoire sur les développements des fonctions en séries périodiques
+  publication: Mémoires de l'Académie royale des sciences, vol. 6
+  volume_year: 1823
+  read_date: '1826-02-27'
+  publication_year: 1827
+  pages: 603-612
+  url: https://fr.wikisource.org/wiki/Page:M%C3%A9moires_de_l%E2%80%99Acad%C3%A9mie_des_sciences,_Tome_6.djvu/791
+  locator: opening page and memoir pp. 603–612
+- id: src-abel-1826
+  type: primary
+  author: Niels Henrik Abel
+  title: Recherches sur la série 1 + mx/1 + m(m-1)x²/(1·2) + ...
+  publication: Journal für die reine und angewandte Mathematik
+  year: 1826
+  volume: 1
+  pages: 311-339
+  url: https://gallica.bnf.fr/
+  locator: pp. 316ff.; bibliographic identification cross-checked in Numdam/EuDML historical literature
+- id: src-dirichlet-1829
+  type: primary
+  author: Peter Gustav Lejeune Dirichlet
+  title: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire
+    entre des limites données
+  publication: Journal für die reine und angewandte Mathematik
+  year: 1829
+  url: https://eudml.org/doc/183125
+- id: src-cauchy-1853
+  type: primary
+  author: Augustin-Louis Cauchy
+  title: Note sur les séries convergentes dont les divers termes sont des fonctions continues d'une variable
+    réelle ou imaginaire, entre des limites données
+  publication: Comptes rendus de l'Académie des sciences
+  year: 1853
+  volume: 36
+  pages: 454-459
+  url: https://gallica.bnf.fr/ark:/12148/bpt6k2993z/f458.item.r=Cauchy
+  locator: 14 March 1853, pp. 454–459
+- id: src-bradley-sandifer-2009
+  type: secondary_scholarly
+  authors:
+  - Robert E. Bradley
+  - C. Edward Sandifer
+  title: 'Cauchy''s Cours d''analyse: An Annotated Translation'
+  publication: Springer
+  year: 2009
+  doi: 10.1007/978-1-4419-0549-9
+  url: https://doi.org/10.1007/978-1-4419-0549-9
+- id: src-arsac-2013
+  type: secondary_scholarly
+  author: Gilbert Arsac
+  title: 'Cauchy, Abel, Seidel, Stokes et la convergence uniforme: De la difficulté historique du raisonnement
+    sur les limites'
+  publication: Hermann
+  year: 2013
+  url: https://stm.cairn.info/cauchy-abel-seidel-stokes-et-la-convergence-uniforme--9782705686918
+  locator: especially chapters III and VII
+- id: src-riemann-trig-history
+  type: primary_retrospective
+  author: Bernhard Riemann
+  title: Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+  composed_year: 1854
+  publication_year: 1867
+  url: https://www.ndsu.edu/pubweb/~novozhil/Teaching/481%20Data/riemann.pdf
+  locator: historical introduction on Cauchy and Dirichlet
+- id: src-weierstrass-uniform-history
+  type: secondary_peer_reviewed
+  title: The development of the concept of uniform convergence in Karl Weierstrass's lectures and publications
+    between 1861 and 1886
+  publication: Archive for History of Exact Sciences
+  year: 2020
+  url: https://link.springer.com/article/10.1007/s00407-020-00266-9
+- id: src-history-wrong-definitions-2026
+  type: secondary_peer_reviewed
+  title: The History of Three Wrong Definitions
+  publication: The Mathematical Intelligencer
+  year: 2026
+  url: https://link.springer.com/article/10.1007/s00283-026-10520-7
+- id: src-stokes-1847
+  type: primary
+  author: George Gabriel Stokes
+  title: On the Critical Values of the Sums of Periodic Series
+  publication: Transactions of the Cambridge Philosophical Society
+  read_date: '1847-12-06'
+  volume: 8
+  pages: 533-583
+  url: https://pordlabs.ucsd.edu/wryoung/theorySeminar/pdf15/Stokes1847.pdf
+- id: src-seidel-1848
+  type: primary
+  author: Philipp Ludwig von Seidel
+  title: Note über eine Eigenschaft der Reihen, welche discontinuirliche Functionen darstellen
+  publication: Abhandlungen der Mathematisch-Physikalischen Classe der Königlichen Bayerischen Akademie
+    der Wissenschaften
+  year: 1848
+  pages: 379-393
+  url: https://www.deutsche-digitale-bibliothek.de/item/7QBHOQIZXUBBN3GDGAVSWXKM4TYHFCM3
+  persistent_identifier: urn:nbn:de:bvb:12-bsb11441891-7
 uncertainties:
-  - id: r002-u001
-    issue: >
-      Cauchy's infinitesimals and continuity definitions are subject to active historiographical
-      debate. This packet records textual formulations but does not settle whether they should
-      be reconstructed within a strictly Archimedean or non-Archimedean framework.
-  - id: r002-u002
-    issue: >
-      The exact relation between Abel's 1826 remark and Cauchy's later 1853 revision should not
-      be expressed as direct influence without documentary evidence that Cauchy read and acted
-      on Abel's criticism.
-  - id: r002-u003
-    issue: >
-      The line Cauchy → Seidel/Stokes → Weierstrass is not necessarily a direct transmission chain.
-      Modern scholarship identifies partially independent developments.
-  - id: r002-u004
-    issue: >
-      The packet deliberately separates Cauchy's broad program of rigor from the Fourier-series
-      intersection. More evidence would be required to claim that Fourier's work historically
-      motivated Cauchy's foundational definitions of limit or continuity.
-  - id: r002-u005
-    issue: >
-      The Abel primary-source URL is bibliographically identified but should be replaced by a
-      direct persistent scan URL before canonical promotion if one is located.
+- id: r002-u001
+  issue: 'Cauchy''s infinitesimals and continuity definitions are subject to active historiographical
+    debate. This packet records textual formulations but does not settle whether they should be reconstructed
+    within a strictly Archimedean or non-Archimedean framework.
+
+    '
+- id: r002-u002
+  issue: 'The exact relation between Abel''s 1826 remark and Cauchy''s later 1853 revision should not
+    be expressed as direct influence without documentary evidence that Cauchy read and acted on Abel''s
+    criticism.
+
+    '
+- id: r002-u003
+  issue: 'The line Cauchy → Seidel/Stokes → Weierstrass is not necessarily a direct transmission chain.
+    Modern scholarship identifies partially independent developments.
+
+    '
+- id: r002-u004
+  issue: 'The packet deliberately separates Cauchy''s broad program of rigor from the Fourier-series intersection.
+    More evidence would be required to claim that Fourier''s work historically motivated Cauchy''s foundational
+    definitions of limit or continuity.
+
+    '
+- id: r002-u005
+  issue: 'The Abel primary-source URL is bibliographically identified but should be replaced by a direct
+    persistent scan URL before canonical promotion if one is located.
+
+    '
