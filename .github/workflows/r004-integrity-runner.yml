@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - research/r004-riemann-integrability
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
