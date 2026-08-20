@@ -243,9 +243,12 @@
         "role": "Question",
         "narrative": "Cauchy's 1821 Cours placed limits, infinitesimal quantities, continuity, and convergence near the center of a systematic program for analysis. That program should be reconstructed in Cauchy's own terminology rather than treated as an already completed version of later epsilon-delta analysis.\n",
         "assertion_refs": [
-          "assertion-r002-cauchy-rigor"
+          "assertion-r002-cauchy-rigor",
+          "assertion-r002-cauchy-infinitesimal",
+          "assertion-r002-cauchy-continuity",
+          "assertion-r002-cauchy-convergence"
         ],
-        "perspective": "historical"
+        "perspective": "later_interpretation"
       },
       {
         "id": "r002-story-2",
@@ -286,7 +289,7 @@
           "assertion-r002-periodic-fourier",
           "assertion-r002-periodic-convergence"
         ],
-        "perspective": "historical"
+        "perspective": "later_interpretation"
       },
       {
         "id": "r002-story-6",
@@ -308,7 +311,7 @@
           "assertion-r002-cauchy-1853-continuity",
           "assertion-r002-cauchy-1853-uniform"
         ],
-        "perspective": "historical"
+        "perspective": "later_interpretation"
       },
       {
         "id": "r002-story-8",
