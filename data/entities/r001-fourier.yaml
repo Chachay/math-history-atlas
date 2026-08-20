@@ -1,0 +1,26 @@
+- id: person-dirichlet
+  type: Person
+  name: Peter Gustav Lejeune Dirichlet
+  start_year: 1805
+  end_year: 1859
+  fields: [analysis]
+- id: problem-heat-boundary-data
+  type: Problem
+  name: Heat equation with prescribed initial and boundary temperature data
+  start_year: 1807
+  fields: [analysis, mathematical-physics]
+- id: concept-arbitrary-function
+  type: Concept
+  name: Arbitrary function
+  start_year: 1750
+  fields: [analysis]
+- id: concept-discontinuous-function
+  type: Concept
+  name: Discontinuous function
+  start_year: 1800
+  fields: [analysis]
+- id: work-dirichlet-1829
+  type: Work
+  name: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données
+  start_year: 1829
+  fields: [analysis]
