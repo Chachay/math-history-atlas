@@ -1,0 +1,551 @@
+[
+  {
+    "id": "story-function",
+    "title": "What is a function?",
+    "steps": [
+      {
+        "id": "function-1",
+        "ref": "concept-fourier-series",
+        "role": "Problem",
+        "narrative": "Fourier's use of trigonometric representation became, in later historical interpretation, part of a broader nineteenth-century loosening of the link between a function and one analytic expression. That retrospective connection raises the Atlas question of what kinds of numerical dependencies should count as functions.\n",
+        "assertion_refs": [
+          "assertion-r001-function-concept",
+          "assertion-r003-function-historiography"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "function-2",
+        "ref": "q-fourier-series-convergence",
+        "role": "Response",
+        "narrative": "In 1829 Dirichlet directly addressed when trigonometric series converge to the functions they are meant to represent. His paper explicitly places this work after Fourier's representational method and criticizes Cauchy's attempted general convergence proof.\n",
+        "assertion_refs": [
+          "assertion-r003-dirichlet-convergence",
+          "assertion-r003-dirichlet-fourier-cauchy"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1829,
+          "to": 1829
+        }
+      },
+      {
+        "id": "function-3",
+        "ref": "concept-discontinuous-function",
+        "role": "Remaining gap",
+        "narrative": "Dirichlet allowed finitely many discontinuities, but he also separated having finite determined values from being admissible for the integrals used in the Fourier coefficients. His rational-versus-irrational example makes that boundary explicit: a numerical assignment can be determined everywhere while still falling outside the integration machinery being used.\n",
+        "assertion_refs": [
+          "assertion-r003-dirichlet-arbitrary-admissibility",
+          "assertion-r003-dirichlet-discontinuity",
+          "assertion-r003-dirichlet-integral-boundary"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1829,
+          "to": 1829
+        }
+      },
+      {
+        "id": "function-4",
+        "ref": "work-dirichlet-1837",
+        "role": "Response",
+        "narrative": "In 1837 Dirichlet described a continuous function on an interval without requiring one common law over the whole interval or dependence expressible by mathematical operations. Later historians treat this as an important stage in the changing function concept, but the passage is not presented here as a twentieth-century set-theoretic definition or as a unique priority event.\n",
+        "assertion_refs": [
+          "assertion-r003-dirichlet-1837-function",
+          "assertion-r003-function-historiography"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1837,
+          "to": 1837
+        }
+      },
+      {
+        "id": "function-5",
+        "ref": "q-dirichlet-admissible-functions",
+        "role": "Next question",
+        "narrative": "Read retrospectively, the broader language of function still leaves a distinct analytic question: which such functions may legitimately enter definite integrals and trigonometric representations? R003 leaves that question open rather than supplying Riemann's later answer in advance.\n",
+        "assertion_refs": [
+          "assertion-r003-downstream-admissibility",
+          "assertion-r003-dirichlet-integral-boundary"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1837,
+          "to": 1837
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "function-1",
+        "to": "function-2",
+        "type": "branches"
+      },
+      {
+        "from": "function-2",
+        "to": "function-3",
+        "type": "continues"
+      },
+      {
+        "from": "function-3",
+        "to": "function-4",
+        "type": "branches"
+      },
+      {
+        "from": "function-4",
+        "to": "function-5",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-fourier-heat-representation",
+    "title": "From heat to arbitrary functions",
+    "steps": [
+      {
+        "id": "r001-story-1",
+        "ref": "q-heat-propagation",
+        "role": "Question",
+        "narrative": "Fourier's work began from a physical problem: how temperature changes and heat propagates through solid bodies. The aim was not initially to study trigonometric series for their own sake, but to build a mathematical theory of heat that could describe such changes.\n",
+        "assertion_refs": [
+          "assertion-r001-fourier-heat-problem"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-2",
+        "ref": "problem-heat-boundary-data",
+        "role": "Problem",
+        "narrative": "A differential equation alone does not determine a physical temperature history. The calculation must also accommodate the temperature distribution from which the body starts and the conditions imposed at its boundaries.\n",
+        "assertion_refs": [
+          "assertion-r001-heat-data-to-series"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-3",
+        "ref": "concept-fourier-series",
+        "role": "Response",
+        "narrative": "Trigonometric expansions supplied a way to connect the mathematical solutions of the heat equation with prescribed temperature data. In Fourier's treatment, this representational step became central to solving concrete heat problems.\n",
+        "assertion_refs": [
+          "assertion-r001-heat-data-to-series",
+          "assertion-r001-series-representation-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-4",
+        "ref": "q-trig-representation-scope",
+        "role": "Remaining gap",
+        "narrative": "The method immediately raised a harder question: which temperature distributions could actually be represented by such trigonometric series? The issue was not merely computational, because the admissible data need not be given by one simple analytic formula.\n",
+        "assertion_refs": [
+          "assertion-r001-series-representation-question",
+          "assertion-r001-arbitrary-function"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-5",
+        "ref": "concept-arbitrary-function",
+        "role": "Response",
+        "narrative": "Fourier treated the representational scope broadly, including functions specified by arbitrary curves and functions that need not obey a single analytic law throughout an interval. This broadened what the heat problem demanded from the language of functions, without yet supplying a modern set-theoretic definition of function.\n",
+        "assertion_refs": [
+          "assertion-r001-arbitrary-function"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-6",
+        "ref": "q-fourier-series-convergence",
+        "role": "Next question",
+        "narrative": "Representation and convergence are not the same claim. Once Fourier's method associated broad classes of functions with trigonometric series, convergence became a central downstream question: under what conditions does the series actually converge to the intended function?\n",
+        "assertion_refs": [
+          "assertion-r001-series-to-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1822,
+          "to": 1829
+        }
+      },
+      {
+        "id": "r001-story-7",
+        "ref": "work-dirichlet-1829",
+        "role": "Response",
+        "narrative": "Dirichlet's 1829 work gave a rigorous convergence result under explicit restrictions rather than accepting unrestricted convergence as automatic. It marks an important shift from using Fourier expansions successfully to stating conditions under which their convergence can be proved.\n",
+        "assertion_refs": [
+          "assertion-r001-dirichlet-convergence"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1829,
+          "to": 1829
+        }
+      },
+      {
+        "id": "r001-story-8",
+        "ref": "q-what-is-function",
+        "role": "Next question",
+        "narrative": "From a later historical perspective, the Fourier-series episode also became part of a broader transformation in the concept of function. The connection should not be read as a single direct causal chain, but Fourier's representational problems helped make the admissible class of functions itself a mathematical question.\n",
+        "assertion_refs": [
+          "assertion-r001-function-concept"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1830,
+          "to": 1850
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "r001-story-1",
+        "to": "r001-story-2",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-2",
+        "to": "r001-story-3",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-3",
+        "to": "r001-story-4",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-4",
+        "to": "r001-story-5",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-5",
+        "to": "r001-story-6",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-6",
+        "to": "r001-story-7",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-7",
+        "to": "r001-story-8",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-cauchy-rigor-continuity",
+    "title": "From rigor to continuity under infinite limits",
+    "steps": [
+      {
+        "id": "r002-story-1",
+        "ref": "q-cauchy-rigor",
+        "role": "Question",
+        "narrative": "Cauchy's 1821 Cours placed limits, infinitesimal quantities, continuity, and convergence near the center of a systematic program for analysis. That program should be reconstructed in Cauchy's own terminology rather than treated as an already completed version of later epsilon-delta analysis.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-rigor",
+          "assertion-r002-cauchy-infinitesimal",
+          "assertion-r002-cauchy-continuity",
+          "assertion-r002-cauchy-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-2",
+        "ref": "concept-infinitesimal",
+        "role": "Response",
+        "narrative": "Cauchy described an infinitesimal through a variable quantity whose successive numerical values decrease indefinitely toward zero. His formulation ties infinitesimals directly to limits, but does not by itself settle later debates about the ontology of infinitesimals.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-infinitesimal"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-3",
+        "ref": "concept-continuity",
+        "role": "Response",
+        "narrative": "Cauchy's continuity condition was expressed through infinitesimal changes in the independent variable producing infinitesimal changes in the function. Reading this directly as a modern pointwise or uniform epsilon-delta definition would erase historically important differences of language and formulation.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-continuity"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-4",
+        "ref": "concept-convergence",
+        "role": "Problem",
+        "narrative": "Infinite series were one major setting in which Cauchy's program had to control limiting processes rather than rely on formal manipulation alone. His 1821 treatment systematized convergence conditions and made the behavior of series part of the broader problem of rigor.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-5",
+        "ref": "concept-fourier-series",
+        "role": "Intersection",
+        "narrative": "Cauchy's 1826/1827 memoir on periodic series explicitly connected sine and cosine expansions with problems of mathematical physics and attempted a general convergence argument. Here the rigor agenda intersects directly with the Fourier-series line developed in R001, without implying that Fourier's heat problem caused Cauchy's broader foundational program.\n",
+        "assertion_refs": [
+          "assertion-r002-periodic-fourier",
+          "assertion-r002-periodic-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1827,
+          "to": 1827
+        }
+      },
+      {
+        "id": "r002-story-6",
+        "ref": "q-continuity-under-limits",
+        "role": "Remaining gap",
+        "narrative": "Cauchy's 1821 theorem on sums of continuous functions left a problem that later became central: convergence of continuous terms does not by itself guarantee a continuous sum. Specialist histories identify Abel's 1826 work as an early counterexample episode, but the present evidence does not justify a stronger claim about direct influence on Cauchy.\n",
+        "assertion_refs": [
+          "assertion-r002-sum-continuity-problem",
+          "assertion-r002-abel-continuity"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1826,
+          "to": 1826
+        }
+      },
+      {
+        "id": "r002-story-7",
+        "ref": "work-cauchy-series-1853",
+        "role": "Response",
+        "narrative": "In 1853 Cauchy returned to the continuity-of-the-sum problem, acknowledged exceptions to the general 1821 claim, and imposed stronger control on the remainder across the specified range of the variable. The historical text supplies the strengthened condition; calling it uniform convergence is a later interpretation.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-1853-continuity",
+          "assertion-r002-cauchy-1853-uniform"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1853,
+          "to": 1853
+        }
+      },
+      {
+        "id": "r002-story-8",
+        "ref": "q-uniform-convergence-emergence",
+        "role": "Next question",
+        "narrative": "The stronger conditions appearing in work by Cauchy, Stokes, and Seidel were later organized within the concept now called uniform convergence. The development is better treated as a distributed nineteenth-century clarification than as a single linear chain ending in Weierstrass.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-1853-uniform",
+          "assertion-r002-stokes-uniform",
+          "assertion-r002-seidel-uniform",
+          "assertion-r002-weierstrass-uniform"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1853,
+          "to": 1860
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "r002-story-1",
+        "to": "r002-story-2",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-2",
+        "to": "r002-story-3",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-3",
+        "to": "r002-story-4",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-4",
+        "to": "r002-story-5",
+        "type": "branches"
+      },
+      {
+        "from": "r002-story-4",
+        "to": "r002-story-6",
+        "type": "branches"
+      },
+      {
+        "from": "r002-story-6",
+        "to": "r002-story-7",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-7",
+        "to": "r002-story-8",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-rigor",
+    "title": "How can infinity be trusted?",
+    "steps": [
+      {
+        "id": "rigor-1",
+        "ref": "q-cauchy-rigor",
+        "role": "Question",
+        "narrative": "In Cauchy's program, questions about infinite processes were tied to a broader effort to organize analysis around limits, infinitesimal quantities, continuity, and convergence. The historical issue was not a single abstract demand for \"rigor\" in the modern sense, but how limiting arguments could be controlled within Cauchy's own framework.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-rigor",
+          "assertion-r002-cauchy-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "rigor-2",
+        "ref": "concept-convergence",
+        "role": "Response",
+        "narrative": "Cauchy's 1821 Cours gave convergence a systematic role in the treatment of infinite series. This supplied one way to distinguish acceptable limiting procedures from purely formal manipulation, without implying that nineteenth-century convergence theory already had its later final form.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-convergence"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "rigor-3",
+        "ref": "q-continuity-under-limits",
+        "role": "Remaining gap",
+        "narrative": "Convergence alone did not settle what properties survive an infinite limiting process. Cauchy's 1821 claim about sums of continuous functions became a central test case: later work showed that continuity of each term does not by itself guarantee continuity of the sum. Abel's 1826 example belongs to that historical problem, but the present evidence does not support a stronger claim of direct influence on Cauchy.\n",
+        "assertion_refs": [
+          "assertion-r002-sum-continuity-problem",
+          "assertion-r002-abel-continuity"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1826,
+          "to": 1826
+        }
+      },
+      {
+        "id": "rigor-4",
+        "ref": "concept-fourier-series",
+        "role": "Intersection",
+        "narrative": "The same convergence problem also appeared in Cauchy's work on periodic sine and cosine series connected with mathematical physics. This is an intersection with the Fourier-series line, not evidence that Fourier's heat problem caused Cauchy's general program for rigorous analysis.\n",
+        "assertion_refs": [
+          "assertion-r002-periodic-fourier",
+          "assertion-r002-periodic-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1827,
+          "to": 1827
+        }
+      },
+      {
+        "id": "rigor-5",
+        "ref": "work-cauchy-series-1853",
+        "role": "Response",
+        "narrative": "In 1853 Cauchy revisited the continuity-of-the-sum problem and imposed stronger control on the remainder across the variable range. The historical text gives the strengthened condition; identifying it with the later category of uniform convergence is a retrospective interpretation.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-1853-continuity",
+          "assertion-r002-cauchy-1853-uniform"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1853,
+          "to": 1853
+        }
+      },
+      {
+        "id": "rigor-6",
+        "ref": "q-uniform-convergence-emergence",
+        "role": "Next question",
+        "narrative": "Stronger forms of control over convergence emerged through several nineteenth-century contributions rather than one isolated invention. Cauchy, Stokes, and Seidel form part of the historical material later organized under uniform convergence, while Weierstrass belongs to the later systematic development of the concept.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-1853-uniform",
+          "assertion-r002-stokes-uniform",
+          "assertion-r002-seidel-uniform",
+          "assertion-r002-weierstrass-uniform"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1853,
+          "to": 1861
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "rigor-1",
+        "to": "rigor-2",
+        "type": "continues"
+      },
+      {
+        "from": "rigor-2",
+        "to": "rigor-3",
+        "type": "branches"
+      },
+      {
+        "from": "rigor-2",
+        "to": "rigor-4",
+        "type": "branches"
+      },
+      {
+        "from": "rigor-3",
+        "to": "rigor-5",
+        "type": "continues"
+      },
+      {
+        "from": "rigor-5",
+        "to": "rigor-6",
+        "type": "branches"
+      }
+    ]
+  }
+]
