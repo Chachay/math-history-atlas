@@ -1,0 +1,12 @@
+- id: q-heat-prescribed-data
+  question: How can a prescribed temperature distribution be matched by solutions of the heat equation?
+  period: {from: 1807, to: null}
+  fields: [analysis, mathematical-physics]
+- id: q-trig-representation-scope
+  question: Which prescribed functions can be represented by trigonometric series?
+  period: {from: 1807, to: null}
+  fields: [analysis]
+- id: q-fourier-series-convergence
+  question: Under what conditions does a trigonometric series converge to the intended function?
+  period: {from: 1820, to: null}
+  fields: [analysis]
