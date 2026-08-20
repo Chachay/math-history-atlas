@@ -1,0 +1,28 @@
+research_unit_id: R002
+packet: R002-cauchy-convergence-continuity.yaml
+review: R002-cauchy-convergence-continuity-review.yaml
+decisions:
+  - review_key: finding:f-chronology-abel-1826
+    kind: chronology
+    item_id: f-chronology-abel-1826
+    critic_classification: WEAK_EVIDENCE
+    decision: accept_critic
+    note: null
+  - review_key: finding:f-chronology-stokes-seidel
+    kind: chronology
+    item_id: f-chronology-stokes-seidel
+    critic_classification: WEAK_EVIDENCE
+    decision: accept_critic
+    note: null
+  - review_key: finding:f-a006
+    kind: assertions
+    item_id: f-a006
+    critic_classification: REVISE
+    decision: accept_critic
+    note: null
+  - review_key: finding:f-qt004
+    kind: question_transitions
+    item_id: f-qt004
+    critic_classification: WEAK_EVIDENCE
+    decision: accept_critic
+    note: null
