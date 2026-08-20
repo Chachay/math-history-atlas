@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
@@ -85,7 +86,6 @@ def build_promotion(
             continue
 
         item_id = str(decision.get("item_id", "")).strip()
-
         finding = findings.get(item_id)
 
         if finding is None:
@@ -154,6 +154,7 @@ def build_promotion(
         "skipped": skipped,
     }
 
+
 def resolve_section(
     packet: dict[str, Any],
     section_path: str,
@@ -193,7 +194,6 @@ def match_target(
         raise ValueError("Target is missing 'section'.")
 
     rows = resolve_section(packet, section)
-
     matches: list[int] = []
 
     target_id = target.get("id")
@@ -205,7 +205,6 @@ def match_target(
                 matches.append(index)
 
     elif isinstance(target_match, dict):
-        # Special case: substring match for scalar string entries.
         if set(target_match.keys()) == {"contains"}:
             needle = str(target_match["contains"])
 
@@ -214,7 +213,6 @@ def match_target(
                     matches.append(index)
 
         else:
-            # Normal mapping match for dictionary entries.
             for index, row in enumerate(rows):
                 if not isinstance(row, dict):
                     continue
@@ -232,13 +230,27 @@ def match_target(
 
     return section, rows, matches
 
+
+def source_index(data: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    result: dict[str, dict[str, Any]] = {}
+
+    for source in data.get("sources", []):
+        if not isinstance(source, dict):
+            continue
+        source_id = source.get("id")
+        if source_id:
+            result[str(source_id)] = source
+
+    return result
+
+
 def apply_change(
     packet: dict[str, Any],
+    review: dict[str, Any],
     change: dict[str, Any],
 ) -> str:
     target = change["target"]
     proposed_change = change["proposed_change"]
-
     action = proposed_change.get("action")
 
     section, rows, matches = match_target(packet, target)
@@ -260,51 +272,10 @@ def apply_change(
     if action == "replace_fields":
         if not isinstance(current, dict):
             raise RuntimeError(
-                f"{change['finding_id']}: "
-                "replace_fields target is not a mapping."
+                f"{change['finding_id']}: replace_fields target is not a mapping."
             )
 
         fields = proposed_change.get("fields")
-
-        if not isinstance(fields, dict):
-            raise ValueError(
-                f"{change['finding_id']}: "
-                "replace_fields requires 'fields'."
-            )
-
-        current.update(fields)
-        return "applied"
-
-    if action == "replace_entry":
-        if "value" not in proposed_change:
-            raise ValueError(
-                f"{change['finding_id']}: "
-                "replace_entry requires 'value'."
-            )
-
-        rows[index] = proposed_change["value"]
-        return "applied"
-
-    if action == "remove":
-        del rows[index]
-        return "applied"
-
-    if action == "manual_review":
-        return "manual_review"
-
-    if action == "add_evidence":
-        return "unsupported"
-
-    return "unsupported"
-
-    if not isinstance(current, dict):
-        raise RuntimeError(
-            f"{change['finding_id']}: target object is not a mapping."
-        )
-
-    if action == "replace_fields":
-        fields = proposed_change.get("fields")
-
         if not isinstance(fields, dict):
             raise ValueError(
                 f"{change['finding_id']}: replace_fields requires 'fields'."
@@ -314,27 +285,68 @@ def apply_change(
         return "applied"
 
     if action == "replace_entry":
-        value = proposed_change.get("value")
-
-        if not isinstance(value, dict):
+        if "value" not in proposed_change:
             raise ValueError(
                 f"{change['finding_id']}: replace_entry requires 'value'."
             )
 
-        rows[index] = value
+        rows[index] = proposed_change["value"]
         return "applied"
 
     if action == "remove":
         del rows[index]
         return "applied"
 
+    if action == "add_evidence":
+        if not isinstance(current, dict):
+            raise RuntimeError(
+                f"{change['finding_id']}: add_evidence target is not a mapping."
+            )
+
+        requested_sources = proposed_change.get("sources")
+        if not isinstance(requested_sources, list) or not requested_sources:
+            raise ValueError(
+                f"{change['finding_id']}: add_evidence requires a non-empty 'sources' list."
+            )
+
+        target_sources = current.setdefault("sources", [])
+        if not isinstance(target_sources, list):
+            raise RuntimeError(
+                f"{change['finding_id']}: target 'sources' field is not a list."
+            )
+
+        packet_sources = packet.setdefault("sources", [])
+        if not isinstance(packet_sources, list):
+            raise RuntimeError("Packet 'sources' section is not a list.")
+
+        packet_source_map = source_index(packet)
+        review_source_map = source_index(review)
+
+        for source_id_raw in requested_sources:
+            source_id = str(source_id_raw)
+
+            if source_id not in packet_source_map:
+                source_record = review_source_map.get(source_id)
+                if source_record is None:
+                    raise RuntimeError(
+                        f"{change['finding_id']}: source {source_id!r} is absent "
+                        "from both packet and review source records."
+                    )
+
+                copied_source = deepcopy(source_record)
+                packet_sources.append(copied_source)
+                packet_source_map[source_id] = copied_source
+
+            if source_id not in target_sources:
+                target_sources.append(source_id)
+
+        return "applied"
+
     if action == "manual_review":
         return "manual_review"
 
-    if action == "add_evidence":
-        return "unsupported"
-
     return "unsupported"
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(
@@ -392,11 +404,9 @@ def main() -> int:
     packet_unit_id = str(
         packet.get("research_unit", {}).get("id", "")
     ).upper()
-
     review_unit_id = str(
         review.get("review", {}).get("research_unit_id", "")
     ).upper()
-
     resolution_unit_id = str(
         resolution.get("research_unit_id", "")
     ).upper()
@@ -415,7 +425,6 @@ def main() -> int:
         raise ValueError(
             f"Resolution unit ID is {resolution_unit_id!r}, expected {unit_id!r}"
         )
-
 
     promotion = build_promotion(
         unit_id=unit_id,
@@ -449,15 +458,11 @@ def main() -> int:
         print()
         print("Skipped:")
         for item in promotion["skipped"]:
-            print(
-                f"- {item['item_id']}: {item['reason']}"
-            )
+            print(f"- {item['item_id']}: {item['reason']}")
 
-    # Dry run ends here.
     if not args.apply:
         return 0
 
-    # --apply continues here.
     applied = 0
     manual_review = 0
     unsupported = 0
@@ -468,8 +473,7 @@ def main() -> int:
 
     for change in promotion["changes"]:
         action = change["proposed_change"].get("action")
-
-        result = apply_change(packet, change)
+        result = apply_change(packet, review, change)
 
         print(
             f"- {change['finding_id']}: "
@@ -496,6 +500,7 @@ def main() -> int:
         print(f"Updated: {packet_file.relative_to(root)}")
 
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
