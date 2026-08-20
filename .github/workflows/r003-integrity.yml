@@ -1,0 +1,38 @@
+name: R003 integrity
+
+on:
+  push:
+    paths:
+      - '.github/workflows/r003-integrity.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  bind-and-promote:
+    if: github.ref == 'refs/heads/research/r003-dirichlet-function-concept'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/r003-dirichlet-function-concept
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Bind R003 human resolution
+        run: python -m scripts.bind_resolution R003
+      - name: Verify and apply accepted critic changes
+        run: python -m scripts.promote_verified R003 --apply
+      - name: Validate resulting artifacts
+        run: |
+          python scripts/validate.py
+          pytest
+      - name: Commit verified R003 artifacts
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add research/packets research/resolutions research/promotions
+          git diff --cached --quiet && exit 0
+          git commit -m 'Bind and verify R003 research resolution'
+          git push origin HEAD:research/r003-dirichlet-function-concept
