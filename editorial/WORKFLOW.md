@@ -8,8 +8,10 @@ Stories are a revisable editorial layer built on canonical historical data. They
 Research Packet
 → Historical Critic
 → Human research resolution
-→ Canonical fact promotion
+→ Bind resolution to packet/review fingerprints
+→ Verified canonical fact promotion
 → Canonical assertions/questions/entities
+→ Canonical provenance map
 → Story Editor draft
 → Story Critic
 → Human editorial resolution
@@ -26,10 +28,51 @@ Research Packet
 Collects candidate historical claims, chronology, questions, and sources. It may contain claims that never become canonical.
 
 ### Historical Critic
-Challenges source support, causation, chronology, terminology, priority, and historical motivation before canonical promotion.
+Challenges source support, causation, chronology, terminology, priority, and historical motivation before canonical promotion. Every finding must have a stable, unique `id`.
+
+### Human research resolution
+Records the human decision on critic findings. A resolution is not reusable indefinitely: before promotion it must be bound to the exact packet and review content by SHA-256 fingerprints.
+
+Run:
+
+```text
+python scripts/bind_resolution.py R002
+```
+
+If either the Research Packet or Historical Critic review later changes, the stored fingerprints become stale. The unit must be reviewed/rebound before promotion.
+
+### Verified canonical promotion
+Promotion must pass the integrity gate before any accepted correction is applied:
+
+```text
+python scripts/promote_verified.py R002
+python scripts/promote_verified.py R002 --apply
+```
+
+`promote_verified.py` refuses promotion when:
+
+- the resolution has no integrity binding;
+- the packet fingerprint changed;
+- the review fingerprint changed;
+- review finding IDs are missing or duplicated;
+- the resolution names a different packet or review file.
+
+This prevents an old human resolution from being applied to a newer research artifact.
 
 ### Canonical layer
 Stores durable entities, questions, and source-backed assertions. Canonical assertions must carry perspective, certainty, sources, and status.
+
+### Canonical provenance map
+For each promoted research unit, retain a machine-readable map under `research/promotions/` connecting Research Packet objects to their canonical IDs and, where applicable, Story steps. The purpose is auditability, not runtime rendering.
+
+The expected chain is:
+
+```text
+Research Packet object
+→ critic finding / human resolution
+→ canonical entity/question/assertion
+→ Story step assertion_refs
+```
 
 ### Story Editor
 Uses canonical data only. It creates a candidate editorial DAG whose steps contain reader-facing `narrative`, `assertion_refs`, and `perspective`. Unsupported transitions become research gaps.
@@ -75,16 +118,20 @@ This second link is provenance, not runtime UI data.
 
 ## R002 acceptance gate
 
-Before starting a second research unit, the workflow should support these repeatable operations without R001-specific code:
+Before starting Story drafting for a second research unit, the workflow must support these repeatable operations without R001-specific code:
 
 1. Produce a bounded Research Packet and Historical Critic review.
-2. Promote only human-accepted claims to canonical data.
-3. Retain a canonical-promotion provenance map.
-4. Generate a Story draft from canonical data with stable step IDs.
-5. Run Story Critic against the draft and canonical assertions.
-6. Resolve Story findings independently from research findings.
-7. Validate that Story assertion references are non-dangling.
-8. Build the SPA and open a stable deep link to the changed Story for mobile review.
+2. Require stable, unique finding IDs in the critic output.
+3. Complete human research resolution.
+4. Bind that resolution to the exact packet/review SHA-256 fingerprints.
+5. Refuse promotion if either upstream artifact changes after binding.
+6. Promote only human-accepted claims to canonical data.
+7. Retain a canonical-promotion provenance map.
+8. Generate a Story draft from canonical data with stable step IDs.
+9. Run Story Critic against the draft and canonical assertions.
+10. Resolve Story findings independently from research findings.
+11. Validate that Story assertion references are non-dangling.
+12. Build the SPA and open a stable deep link to the changed Story for mobile review.
 
 ## Editorial constraints
 
