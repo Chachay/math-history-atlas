@@ -1,0 +1,78 @@
+review:
+  story_id: story-integrability
+  research_unit_id: R004
+  status: reviewed
+  summary:
+    pass: 12
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+findings:
+  - id: sr-r004-001
+    classification: PASS
+    target: {story_id: story-integrability, field: description}
+    reason: The description states a bounded arc from admissibility through Riemann's criterion and explicitly preserves a remaining Fourier-representation gap.
+    assertion_refs: [assertion-r004-admissibility-handoff, assertion-r004-integrability-not-sufficient]
+  - id: sr-r004-002
+    classification: PASS
+    target: {story_id: story-integrability, step_id: integrability-1, field: narrative}
+    reason: The step marks the Atlas handoff as later interpretation while grounding it in Riemann's explicit treatment of unresolved Dirichlet cases and definite integration.
+    assertion_refs: [assertion-r004-admissibility-handoff, assertion-r004-integral-need]
+  - id: sr-r004-003
+    classification: PASS
+    target: {story_id: story-integrability, step_id: integrability-2, field: narrative}
+    reason: Both sentences track Riemann's own characterization of Dirichlet's conditions and his stated need to clarify definite integration.
+    assertion_refs: [assertion-r004-dirichlet-scope, assertion-r004-integral-need]
+  - id: sr-r004-004
+    classification: PASS
+    target: {story_id: story-integrability, step_id: integrability-3, field: narrative}
+    reason: The narrative stays with Riemann's subdivision-sum and oscillation presentation rather than replacing it with later Darboux or epsilon-delta formulations.
+    assertion_refs: [assertion-r004-integral-criterion]
+  - id: sr-r004-005
+    classification: PASS
+    target: {story_id: story-integrability, step_id: integrability-4, field: narrative}
+    reason: The example uses period-appropriate rational-denominator language and does not project dense/countable set terminology into the historical sentence.
+    assertion_refs: [assertion-r004-discontinuous-example]
+  - id: sr-r004-006
+    classification: PASS
+    target: {story_id: story-integrability, step_id: integrability-5, field: narrative}
+    reason: Riemann explicitly states the limitation that integrability throughout does not guarantee Fourier-series convergence, so the remaining gap is historical rather than inferred from chronology.
+    assertion_refs: [assertion-r004-integrability-not-sufficient]
+  - id: sr-r004-007
+    classification: PASS
+    target: {story_id: story-integrability, step_id: integrability-6, field: narrative}
+    reason: The step is visibly later interpretation and keeps later integration or exceptional-set developments as an open downstream question rather than attributing them to Riemann.
+    assertion_refs: [assertion-r004-downstream-gap]
+  - id: sr-r004-008
+    classification: PASS
+    target: {story_id: story-integrability, link: {from: integrability-1, to: integrability-2}}
+    reason: branches is appropriately weaker than continues because the source question is an Atlas retrospective synthesis even though Riemann supplies a direct historical basis for the handoff.
+    assertion_refs: [assertion-r004-admissibility-handoff]
+  - id: sr-r004-009
+    classification: PASS
+    target: {story_id: story-integrability, link: {from: integrability-2, to: integrability-3}}
+    reason: continues is supported because Riemann turns directly from the unresolved Dirichlet cases to clarification of definite integration within the same memoir.
+    assertion_refs: [assertion-r004-integral-need, assertion-r004-integral-criterion]
+  - id: sr-r004-010
+    classification: PASS
+    target: {story_id: story-integrability, link: {from: integrability-3, to: integrability-4}}
+    reason: The discontinuous example is an explicit test of the integrability criterion in the same investigation, so continues does not overstate continuity.
+    assertion_refs: [assertion-r004-integral-criterion, assertion-r004-discontinuous-example]
+  - id: sr-r004-011
+    classification: PASS
+    target: {story_id: story-integrability, link: {from: integrability-4, to: integrability-5}}
+    reason: branches avoids claiming that the discontinuous example itself caused the later representability limitation; both are supported parts of Riemann's broader investigation.
+    assertion_refs: [assertion-r004-discontinuous-example, assertion-r004-integrability-not-sufficient]
+  - id: sr-r004-012
+    classification: PASS
+    target: {story_id: story-integrability, link: {from: integrability-5, to: integrability-6}}
+    reason: branches correctly marks the final question as a retrospective downstream reading rather than a necessary consequence or Riemann's own later program.
+    assertion_refs: [assertion-r004-integrability-not-sufficient, assertion-r004-downstream-gap]
+research_gaps:
+  - id: gap-r004-bibliographic-1868
+    question: What bibliographic convention explains references to 1868 for the Abhandlungen volume despite the dated 1867 offprint and Dedekind notice?
+    needed_evidence: Bibliographic history distinguishing volume dating from the physical 1867 printing.
+  - id: gap-r004-textbook-integral
+    question: How exactly did later Darboux and textbook formulations reshape the integral presented by Riemann in 1854?
+    needed_evidence: Specialist history of integration comparing Riemann's original text with later formulations.
+sources: []
