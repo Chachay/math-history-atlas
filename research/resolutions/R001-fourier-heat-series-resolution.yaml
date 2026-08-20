@@ -2,99 +2,27 @@ research_unit_id: R001
 packet: R001-fourier-heat-series.yaml
 review: R001-fourier-heat-series-review.yaml
 decisions:
-- review_key: global:gf001
-  kind: global
-  item_id: gf001
-  critic_classification: REJECT
-  decision: accept_critic
-  note: null
-- review_key: global:gf002
-  kind: global
-  item_id: gf002
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: global:gf003
-  kind: global
-  item_id: gf003
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: global:gf004
-  kind: global
-  item_id: gf004
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: chronology:1808–1809
-  kind: chronology
-  item_id: 1808–1809
+- review_key: finding:f-a021
+  kind: assertions
+  item_id: f-a021
   critic_classification: WEAK_EVIDENCE
   decision: accept_critic
   note: null
-- review_key: chronology:1823
-  kind: chronology
-  item_id: '1823'
-  critic_classification: REJECT
-  decision: accept_critic
-  note: null
-- review_key: assertion:r001-a004
-  kind: assertion
-  item_id: r001-a004
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: assertion:r001-a011
-  kind: assertion
-  item_id: r001-a011
+- review_key: finding:f-a025
+  kind: assertions
+  item_id: f-a025
   critic_classification: WEAK_EVIDENCE
   decision: accept_critic
   note: null
-- review_key: assertion:r001-a012
-  kind: assertion
-  item_id: r001-a012
+- review_key: finding:f-chronology-cauchy
+  kind: chronology
+  item_id: f-chronology-cauchy
   critic_classification: REVISE
   decision: accept_critic
   note: null
-- review_key: assertion:r001-a017
-  kind: assertion
-  item_id: r001-a017
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: assertion:r001-a020
-  kind: assertion
-  item_id: r001-a020
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: assertion:r001-a021
-  kind: assertion
-  item_id: r001-a021
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: assertion:r001-a025
-  kind: assertion
-  item_id: r001-a025
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: question_transition:r001-qt002
-  kind: question_transition
-  item_id: r001-qt002
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: question_transition:r001-qt004
-  kind: question_transition
-  item_id: r001-qt004
-  critic_classification: REVISE
-  decision: accept_critic
-  note: null
-- review_key: question_transition:r001-qt005
-  kind: question_transition
-  item_id: r001-qt005
+- review_key: finding:f-source-gap-cauchy-date
+  kind: source_assessment.source_gaps
+  item_id: f-source-gap-cauchy-date
   critic_classification: REVISE
   decision: accept_critic
   note: null

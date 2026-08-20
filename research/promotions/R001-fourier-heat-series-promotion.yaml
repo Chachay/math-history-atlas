@@ -1,0 +1,72 @@
+research_unit_id: R001
+packet: R001-fourier-heat-series.yaml
+review: R001-fourier-heat-series-review.yaml
+resolution: R001-fourier-heat-series-resolution.yaml
+summary:
+  proposed_changes: 4
+  skipped_items: 0
+changes:
+- finding_id: f-a021
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: assertions
+    id: r001-a021
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-kjeldsen-lutzen-2015
+  status: proposed
+- finding_id: f-a025
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: assertions
+    id: r001-a025
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-kjeldsen-lutzen-2015
+  status: proposed
+- finding_id: f-chronology-cauchy
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: chronology
+    match:
+      date: '1823'
+  proposed_change:
+    action: replace_entry
+    value:
+      volume_year: 1823
+      read_date: '1826-02-27'
+      publication_year: 1827
+      event: Cauchy presents and later publishes an attempted general treatment of convergence of periodic/trigonometric
+        series; Dirichlet later argues that the proof is insufficient.
+      perspective: historical
+      certainty: high
+      sources:
+      - src-cauchy-periodic-series-1827
+      - src-dirichlet-1829
+      uncertainty: The memoir appears in volume 6 nominally labeled for the year 1823, but the memoir
+        itself was read on 27 February 1826 and the volume was published in 1827. These date types must
+        not be conflated.
+  status: proposed
+- finding_id: f-source-gap-cauchy-date
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: null
+  target:
+    section: source_assessment.source_gaps
+    match:
+      contains: Cauchy's 1823 convergence memoir
+  proposed_change:
+    action: replace_entry
+    value: Cauchy's convergence memoir, read to the Académie on 27 February 1826 and published in 1827
+      in volume 6 nominally associated with 1823, was not independently transcribed and audited; Dirichlet's
+      1829 contemporary criticism is used as the primary evidence about its failure.
+  status: proposed
+skipped: []

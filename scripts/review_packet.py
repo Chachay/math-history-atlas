@@ -26,6 +26,8 @@ class ReviewItem:
     critique: str
     needed_change: str | None
     evidence: list[dict[str, Any]]
+    target: dict[str, Any] | None = None
+    proposed_change: dict[str, Any] | None = None
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
@@ -73,6 +75,39 @@ def short_text(value: Any) -> str:
         return ""
     return str(value).strip()
 
+
+def normalize_findings(review: dict[str, Any]) -> list[ReviewItem]:
+    items: list[ReviewItem] = []
+
+    for index, row in enumerate(review.get("findings", []), start=1):
+        item_id = short_text(row.get("id")) or f"finding-{index:03d}"
+
+        reviewed_item = row.get("reviewed_item") or {}
+        section = short_text(reviewed_item.get("section")) or "unknown"
+
+        target = row.get("target") or reviewed_item
+
+        items.append(
+            ReviewItem(
+                key=f"finding:{item_id}",
+                kind=section.upper().replace("_", " "),
+                item_id=item_id,
+                classification=short_text(
+                    row.get("classification")
+                ).upper(),
+                severity=short_text(row.get("severity")) or None,
+                title=item_id,
+                critique=short_text(row.get("reason")),
+                needed_change=short_text(
+                    row.get("needed_evidence")
+                ) or None,
+                evidence=row.get("evidence") or [],
+                target=target or None,
+                proposed_change=row.get("proposed_change"),
+            )
+        )
+
+    return items
 
 def normalize_global_findings(review: dict[str, Any]) -> list[ReviewItem]:
     items: list[ReviewItem] = []
@@ -168,15 +203,18 @@ def normalize_question_transition_reviews(
 
     return items
 
-
 def build_review_items(review: dict[str, Any]) -> list[ReviewItem]:
+    # Current critic schema
+    if "findings" in review:
+        return normalize_findings(review)
+
+    # Backward compatibility with earlier critic output
     return (
         normalize_global_findings(review)
         + normalize_chronology_reviews(review)
         + normalize_assertion_reviews(review)
         + normalize_question_transition_reviews(review)
     )
-
 
 def source_index(
     packet: dict[str, Any],
@@ -275,6 +313,30 @@ def display_item(
         print("Required change / needed evidence")
         print_rule()
         print(item.needed_change)
+
+    if item.target:
+        print()
+        print("Target")
+        print_rule()
+        print(
+            yaml.safe_dump(
+                item.target,
+                sort_keys=False,
+                allow_unicode=True,
+            ).rstrip()
+        )
+
+    if item.proposed_change:
+        print()
+        print("Proposed change")
+        print_rule()
+        print(
+            yaml.safe_dump(
+                item.proposed_change,
+                sort_keys=False,
+                allow_unicode=True,
+            ).rstrip()
+        )
 
     print()
     print("Evidence")
