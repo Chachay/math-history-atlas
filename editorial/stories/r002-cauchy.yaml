@@ -10,8 +10,8 @@
       narrative: >
         Cauchy's 1821 Cours placed limits, infinitesimal quantities, continuity, and convergence near the center of a systematic program for analysis.
         That program should be reconstructed in Cauchy's own terminology rather than treated as an already completed version of later epsilon-delta analysis.
-      assertion_refs: [assertion-r002-cauchy-rigor]
-      perspective: historical
+      assertion_refs: [assertion-r002-cauchy-rigor, assertion-r002-cauchy-infinitesimal, assertion-r002-cauchy-continuity, assertion-r002-cauchy-convergence]
+      perspective: later_interpretation
     - id: r002-story-2
       ref: concept-infinitesimal
       role: Response
@@ -43,7 +43,7 @@
         Cauchy's 1826/1827 memoir on periodic series explicitly connected sine and cosine expansions with problems of mathematical physics and attempted a general convergence argument.
         Here the rigor agenda intersects directly with the Fourier-series line developed in R001, without implying that Fourier's heat problem caused Cauchy's broader foundational program.
       assertion_refs: [assertion-r002-periodic-fourier, assertion-r002-periodic-convergence]
-      perspective: historical
+      perspective: later_interpretation
     - id: r002-story-6
       ref: q-continuity-under-limits
       role: Remaining gap
@@ -59,7 +59,7 @@
         In 1853 Cauchy returned to the continuity-of-the-sum problem, acknowledged exceptions to the general 1821 claim, and imposed stronger control on the remainder across the specified range of the variable.
         The historical text supplies the strengthened condition; calling it uniform convergence is a later interpretation.
       assertion_refs: [assertion-r002-cauchy-1853-continuity, assertion-r002-cauchy-1853-uniform]
-      perspective: historical
+      perspective: later_interpretation
     - id: r002-story-8
       ref: q-uniform-convergence-emergence
       role: Next question
