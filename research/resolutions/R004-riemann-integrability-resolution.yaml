@@ -2,38 +2,45 @@ research_unit_id: R004
 packet: R004-riemann-integrability.yaml
 review: R004-riemann-integrability-review.yaml
 decisions:
-  - review_key: finding:hr-r004-a005
-    kind: assertions
-    item_id: hr-r004-a005
-    critic_classification: REVISE
-    decision: accept_critic
-    note: >
-      Accepted. Replace the graph predicate generalized with contributed_to so the canonical relation
-      does not overstate Riemann's criterion as a formal generalization of the broader inherited
-      analytic-admissibility concept.
-  - review_key: finding:hr-r004-a006
-    kind: assertions
-    item_id: hr-r004-a006
-    critic_classification: REVISE
-    decision: accept_critic
-    note: >
-      Accepted. Use Riemann's period-appropriate description of the rational discontinuity example in
-      the historical assertion and retain dense/countable language only as explicit modern abstraction.
-  - review_key: finding:hr-r004-a007
-    kind: assertions
-    item_id: hr-r004-a007
-    critic_classification: REVISE
-    decision: accept_critic
-    note: >
-      Accepted. Limit the comparison to the finite-discontinuity hypothesis in Dirichlet's main stated
-      convergence conditions; do not reduce Dirichlet's full 1829 admissibility discussion to that boundary.
-  - review_key: finding:hr-r004-qt001
-    kind: question_transitions
-    item_id: hr-r004-qt001
-    critic_classification: REVISE
-    decision: accept_critic
-    note: >
-      Accepted. Mark the Atlas question-to-question transition later_interpretation while preserving
-      Riemann's explicit treatment of unresolved Dirichlet cases as its direct historical basis.
+- review_key: finding:hr-r004-a005
+  kind: assertions
+  item_id: hr-r004-a005
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Replace the graph predicate generalized with contributed_to so the canonical relation
+    does not overstate Riemann''s criterion as a formal generalization of the broader inherited analytic-admissibility
+    concept.
+
+    '
+- review_key: finding:hr-r004-a006
+  kind: assertions
+  item_id: hr-r004-a006
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Use Riemann''s period-appropriate description of the rational discontinuity example
+    in the historical assertion and retain dense/countable language only as explicit modern abstraction.
+
+    '
+- review_key: finding:hr-r004-a007
+  kind: assertions
+  item_id: hr-r004-a007
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Limit the comparison to the finite-discontinuity hypothesis in Dirichlet''s main stated
+    convergence conditions; do not reduce Dirichlet''s full 1829 admissibility discussion to that boundary.
+
+    '
+- review_key: finding:hr-r004-qt001
+  kind: question_transitions
+  item_id: hr-r004-qt001
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Mark the Atlas question-to-question transition later_interpretation while preserving
+    Riemann''s explicit treatment of unresolved Dirichlet cases as its direct historical basis.
+
+    '
 resolution_date: '2026-08-20'
 resolution_status: human_approved_pending_integrity_binding
+integrity:
+  packet_sha256: sha256:0ff5d5d1df243c3b1773b230ee51a90a9747ece3d8f7e064dcdc023bfd6469e7
+  review_sha256: sha256:610b21015774836fe21f9a2cae1f9e06044b302d2dec25048f27196459b354c9
