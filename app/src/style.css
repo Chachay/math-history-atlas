@@ -9,3 +9,5 @@
 /* Data-driven Network additions */
 .story-filter .story-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:1px}
 .node-other{fill:#fff;stroke:#8a6f3f;stroke-width:2}
+
+.year-tick{stroke:#cfd6df;stroke-width:1}.story-overlay.retrospective{stroke-dasharray:5 4;opacity:.55}

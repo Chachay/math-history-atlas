@@ -6,7 +6,7 @@ type View = 'Atlas' | 'Network' | 'Story' | 'Person';
 type Entity = { id: string; type: string; name: string; start_year?: number; end_year?: number | null; fields?: string[] };
 type Question = { id: string; question: string; period?: { from?: number; to?: number | null }; fields?: string[] };
 type Assertion = { id: string; subject: string; predicate: string; object: string; period?: { from?: number; to?: number | null }; status?: string; perspective?: string };
-type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string };
+type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string; temporal_anchor?: { from?: number; to?: number | null } };
 type Story = { id: string; title: string; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
 type Intersection = { entity: string; story_count: number; stories: string[] };
 type AtlasField = { id: string; name: string; parents: string[] };
@@ -156,8 +156,15 @@ function AtlasNode({ x, y, label, sub, color, onClick }: { x: number; y: number;
   return <g className="atlas-node" onClick={onClick}><circle cx={x} cy={y} r="8" style={{ stroke: color }} /><text x={x + 12} y={y - 3} className="atlas-node-label">{label}</text>{sub && <text x={x + 12} y={y + 10} className="atlas-node-sub">{sub}</text>}</g>;
 }
 
-type NetworkPoint = { x: number; y: number; year: number };
-type NetworkLayout = { positions: Record<string, NetworkPoint>; minYear: number; maxYear: number; ticks: number[]; yearY: Record<number, number>; height: number };
+type NetworkPoint = { x: number; y: number; year: number; ref: string; storyIds: string[] };
+type NetworkLayout = {
+  positions: Record<string, NetworkPoint>;
+  stepKeys: Record<string, string>;
+  yearRows: { year: number; y: number }[];
+  minYear: number;
+  maxYear: number;
+  height: number;
+};
 
 function stableFraction(id: string) {
   let hash = 0;
@@ -165,107 +172,108 @@ function stableFraction(id: string) {
   return (Math.abs(hash) % 1000) / 1000;
 }
 
-function median(values: number[]) {
-  const sorted = [...values].sort((a, b) => a - b);
-  const middle = Math.floor(sorted.length / 2);
-  return sorted.length % 2 ? sorted[middle] : Math.round((sorted[middle - 1] + sorted[middle]) / 2);
-}
-
-function networkYear(id: string, item: Entity | Question, data: Dataset) {
-  const assertionYears = data.graph.assertions
-    .filter(a => a.subject === id || a.object === id)
-    .map(a => a.period?.from)
-    .filter((year): year is number => typeof year === 'number');
-  if (assertionYears.length) return median(assertionYears);
-  if ('type' in item) return item.start_year || 1800;
-  return item.period?.from || 1800;
-}
-
-function niceTicks(minYear: number, maxYear: number) {
-  const span = Math.max(20, maxYear - minYear);
-  const raw = span / 4;
-  const step = raw <= 10 ? 10 : raw <= 20 ? 20 : raw <= 25 ? 25 : raw <= 50 ? 50 : 100;
-  const first = Math.ceil(minYear / step) * step;
-  const ticks: number[] = [];
-  for (let y = first; y <= maxYear; y += step) ticks.push(y);
-  return ticks.length >= 2 ? ticks : [minYear, maxYear];
+function stepYear(step: StoryStep, item?: Entity | Question) {
+  const explicit = step.temporal_anchor?.from;
+  if (typeof explicit === 'number') return explicit;
+  if (!item) return 1800;
+  return 'type' in item ? (item.start_year || 1800) : (item.period?.from || 1800);
 }
 
 function buildNetworkLayout(data: Dataset, lookup: Record<string, Entity | Question>): NetworkLayout {
-  const storyRefs = [...new Set(data.stories.flatMap(story => story.steps.map(step => step.ref)))].filter(id => lookup[id]);
-  const yearByRef = Object.fromEntries(storyRefs.map(id => [id, networkYear(id, lookup[id], data)]));
-  const uniqueYears = [...new Set(Object.values(yearByRef))].sort((a, b) => a - b);
-  const minYear = uniqueYears[0] ?? 1750;
-  const maxYear = uniqueYears[uniqueYears.length - 1] ?? 1860;
-
-  // Chronology is an ordering constraint, not a linear scale. Dense historical periods
-  // receive enough visual space to remain readable instead of collapsing together.
-  const top = 50;
-  const bottom = 50;
-  const minGap = 46;
-  const targetGap = uniqueYears.length > 1 ? 500 / (uniqueYears.length - 1) : 0;
-  const gap = uniqueYears.length > 1 ? Math.max(minGap, Math.min(78, targetGap)) : 0;
-  const height = Math.max(640, Math.round(top + bottom + gap * Math.max(1, uniqueYears.length - 1)));
-  const yearY: Record<number, number> = {};
-  uniqueYears.forEach((year, index) => { yearY[year] = top + index * gap; });
-
   const storyIndex = new Map(data.stories.map((story, index) => [story.id, index]));
-  const memberships = new Map<string, string[]>();
-  data.stories.forEach(story => story.steps.forEach(step => {
-    const current = memberships.get(step.ref) || [];
-    if (!current.includes(story.id)) current.push(story.id);
-    memberships.set(step.ref, current);
-  }));
   const laneMin = 76;
   const laneMax = 285;
   const laneStep = data.stories.length > 1 ? (laneMax - laneMin) / (data.stories.length - 1) : 0;
-  const positions: Record<string, NetworkPoint> = {};
-  storyRefs.forEach(id => {
-    const memberStories = memberships.get(id) || [];
-    const year = yearByRef[id];
-    let x = 180;
-    if (memberStories.length === 1) {
-      const lane = storyIndex.get(memberStories[0]) || 0;
-      x = laneMin + lane * laneStep;
-      x += (stableFraction(id) - 0.5) * 26;
-    } else if (memberStories.length > 1) {
-      const lanes = memberStories.map(story => storyIndex.get(story) || 0);
-      x = laneMin + (lanes.reduce((a, b) => a + b, 0) / lanes.length) * laneStep;
-    }
-    positions[id] = { x: Math.max(62, Math.min(292, x)), y: yearY[year], year };
+
+  // A Network point is a temporal occurrence, not a timeless entity. Occurrences merge only when ref+year match.
+  const groups = new Map<string, { ref: string; year: number; storyIds: string[]; stepIds: string[] }>();
+  const stepKeys: Record<string, string> = {};
+  data.stories.forEach(story => story.steps.forEach(step => {
+    const item = lookup[step.ref];
+    if (!item) return;
+    const year = stepYear(step, item);
+    const key = `${step.ref}@${year}`;
+    const group = groups.get(key) || { ref: step.ref, year, storyIds: [], stepIds: [] };
+    if (!group.storyIds.includes(story.id)) group.storyIds.push(story.id);
+    group.stepIds.push(`${story.id}:${step.id}`);
+    groups.set(key, group);
+    stepKeys[`${story.id}:${step.id}`] = key;
+  }));
+
+  const byYear = new Map<number, string[]>();
+  groups.forEach((group, key) => {
+    const rows = byYear.get(group.year) || [];
+    rows.push(key);
+    byYear.set(group.year, rows);
   });
-  return { positions, minYear, maxYear, ticks: uniqueYears, yearY, height };
+  const years = [...byYear.keys()].sort((a, b) => a - b);
+  const minYear = years[0] || 1750;
+  const maxYear = years[years.length - 1] || 1860;
+  const positions: Record<string, NetworkPoint> = {};
+  const yearRows: { year: number; y: number }[] = [];
+  let cursor = 52;
+  const rowGap = 42;
+  const yearGap = 34;
+
+  years.forEach(year => {
+    const keys = (byYear.get(year) || []).sort((a, b) => a.localeCompare(b));
+    const firstY = cursor;
+    keys.forEach((key, index) => {
+      const group = groups.get(key)!;
+      const lanes = group.storyIds.map(id => storyIndex.get(id) || 0);
+      let x = laneMin + (lanes.reduce((a, b) => a + b, 0) / Math.max(1, lanes.length)) * laneStep;
+      if (group.storyIds.length === 1) x += (stableFraction(key) - 0.5) * 22;
+      positions[key] = {
+        x: Math.max(62, Math.min(292, x)),
+        y: cursor + index * rowGap,
+        year,
+        ref: group.ref,
+        storyIds: group.storyIds,
+      };
+    });
+    yearRows.push({ year, y: firstY });
+    cursor += Math.max(1, keys.length) * rowGap + yearGap;
+  });
+
+  return { positions, stepKeys, yearRows, minYear, maxYear, height: Math.max(640, cursor + 20) };
 }
 
 function NetworkView({ data, selectedStory, setSelectedStory, onOpenStory, onOpenPerson, onSheet }: {
   data: Dataset; selectedStory: string; setSelectedStory: (x: string) => void; onOpenStory: (x: string) => void; onOpenPerson: (x: string) => void; onSheet: (n: React.ReactNode) => void;
 }) {
   const lookup = useMemo(() => buildLookup(data), [data]);
-  const intersections = new Map(data.intersections.map(i => [i.entity, i]));
+  const canonicalIntersections = new Map(data.intersections.map(i => [i.entity, i]));
   const storyIds = ['all', ...data.stories.map(s => s.id)];
   const layout = useMemo(() => buildNetworkLayout(data, lookup), [data, lookup]);
 
-  const storyPath = (story: Story) => {
-    const pts = story.steps.map(s => layout.positions[s.ref]).filter(Boolean);
-    if (pts.length < 2) return '';
-    return pts.map((p, i) => `${i ? 'L' : 'M'}${p.x} ${p.y}`).join(' ');
+  const pointForStep = (story: Story, stepId: string) => {
+    const key = layout.stepKeys[`${story.id}:${stepId}`];
+    return key ? layout.positions[key] : undefined;
   };
-  const yForYear = (year: number) => layout.yearY[year] ?? 50;
+  const segmentPath = (story: Story, from: string, to: string) => {
+    const a = pointForStep(story, from); const b = pointForStep(story, to);
+    if (!a || !b) return '';
+    const mid = (a.y + b.y) / 2;
+    return `M${a.x} ${a.y} C${a.x} ${mid} ${b.x} ${mid} ${b.x} ${b.y}`;
+  };
 
   return <>
-    <section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · local Story graph</h2><p>Historical entities remain the graph. Vertical order follows chronology, but dense periods expand to preserve readability; vertical distance is not proportional to elapsed time. Horizontal lanes come from Story membership, with shared nodes literally shared between paths.</p><div className="entity-legend"><span><i className="person-mark" />Person</span><span><i className="concept-mark" />Concept</span><span><i className="work-mark" />Work</span></div></section>
+    <section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · chronological Story graph</h2><p>Years define order, not proportional distance. Same-year events are stacked inside a year band. Story lines follow explicit DAG links, so parallel branches split and later continuations do not imply a trip backward in time.</p><div className="entity-legend"><span><i className="person-mark" />Person</span><span><i className="concept-mark" />Concept</span><span><i className="work-mark" />Work</span></div></section>
     <section className="panel network-panel">
       <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory === id ? 'active' : ''} onClick={() => setSelectedStory(id)}>{id !== 'all' && <i className="story-dot" style={{ background: storyColor(id) }} />}{id === 'all' ? 'All paths' : data.stories.find(s => s.id === id)?.title}</button>)}</div>
       <svg className="network-svg" viewBox={`0 0 360 ${layout.height}`}>
-        <line x1="38" y1="30" x2="38" y2={layout.height - 30} className="time-axis" />
-        {layout.ticks.map(year => <text key={year} x="7" y={yForYear(year)} className="year-label">{year}</text>)}
-        {data.stories.map(s => <path key={s.id} d={storyPath(s)} className={`story-overlay ${selectedStory !== 'all' && selectedStory !== s.id ? 'dim' : ''}`} style={{ stroke: storyColor(s.id) }} />)}
-        {Object.entries(layout.positions).map(([id,p]) => {
-          const item = lookup[id]; if (!item) return null;
-          const inter = intersections.get(id);
-          return <NetworkNode key={id} id={id} item={item} x={p.x} y={p.y} intersection={inter} onClick={() => {
-            if (inter) onSheet(<IntersectionSheet intersection={inter} data={data} onOpen={onOpenStory} />);
-            else if ('type' in item && item.type === 'Person') onOpenPerson(id);
+        <line x1="38" y1="30" x2="38" y2={layout.height - 20} className="time-axis" />
+        {layout.yearRows.map(row => <g key={row.year}><text x="7" y={row.y} className="year-label">{row.year}</text><line x1="34" y1={row.y - 4} x2="42" y2={row.y - 4} className="year-tick" /></g>)}
+        {data.stories.flatMap(story => story.links.map(link => <path key={`${story.id}:${link.from}:${link.to}`} d={segmentPath(story, link.from, link.to)} className={`story-overlay ${link.type === 'retrospective' ? 'retrospective' : ''} ${selectedStory !== 'all' && selectedStory !== story.id ? 'dim' : ''}`} style={{ stroke: storyColor(story.id) }} />))}
+        {Object.entries(layout.positions).map(([key,p]) => {
+          const item = lookup[p.ref]; if (!item) return null;
+          const canonical = canonicalIntersections.get(p.ref);
+          const temporalIntersection = p.storyIds.length > 1 && canonical
+            ? { ...canonical, story_count: p.storyIds.length, stories: p.storyIds }
+            : undefined;
+          return <NetworkNode key={key} id={p.ref} item={item} x={p.x} y={p.y} intersection={temporalIntersection} onClick={() => {
+            if (canonical) onSheet(<IntersectionSheet intersection={canonical} data={data} onOpen={onOpenStory} />);
+            else if ('type' in item && item.type === 'Person') onOpenPerson(p.ref);
           }} />;
         })}
       </svg>
@@ -301,7 +309,7 @@ function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data: 
   return <>
     <section className="hero-card"><span className="eyebrow">CURRENT STORY</span><h2>{story.title}</h2><p>Read one editorial path vertically while parallel paths remain perceptible. Crossings return you to the Network.</p></section>
     <div className="story-layout"><div>
-      {story.steps.map((step, idx) => {
+      {[...story.steps].sort((a, b) => (a.temporal_anchor?.from ?? 9999) - (b.temporal_anchor?.from ?? 9999) || story.steps.indexOf(a) - story.steps.indexOf(b)).map((step, idx) => {
         const item = lookup[step.ref]; const inter = intersections.get(step.ref); const label = item ? ('type' in item ? item.name : item.question) : step.ref;
         const isProblem = /problem|gap/i.test(step.role);
         return <article key={step.id} className={`story-card panel ${isProblem ? 'problem' : ''} ${inter ? 'crossing' : ''}`}>
