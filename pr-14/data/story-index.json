@@ -425,6 +425,125 @@
     ]
   },
   {
+    "id": "story-integrability",
+    "title": "When is a function integrable enough for trigonometric representation?",
+    "steps": [
+      {
+        "id": "integrability-1",
+        "ref": "q-dirichlet-admissible-functions",
+        "role": "Question",
+        "narrative": "By 1854 Riemann explicitly treated cases he said Dirichlet had left unresolved and made the definite integral itself part of the investigation. Read through the Atlas, this gives R003's retrospective admissibility question a historically grounded handoff into a more explicit integration problem.\n",
+        "assertion_refs": [
+          "assertion-r004-admissibility-handoff",
+          "assertion-r004-integral-need"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-2",
+        "ref": "work-riemann-trig-1854",
+        "role": "Problem",
+        "narrative": "Riemann characterized Dirichlet's result as deciding representability only when the function was integrable throughout and did not have infinitely many maxima and minima. He then said that uncertainty in fundamental points of definite integration required clarifying the concept and its range of validity.\n",
+        "assertion_refs": [
+          "assertion-r004-dirichlet-scope",
+          "assertion-r004-integral-need"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-3",
+        "ref": "concept-riemann-integral",
+        "role": "Response",
+        "narrative": "In sections 4–5 Riemann defined the definite integral through limiting sums over subdivisions with freely chosen sample locations. He derived an oscillation condition that is necessary and sufficient for convergence of those sums for an everywhere finite function.\n",
+        "assertion_refs": [
+          "assertion-r004-integral-criterion"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-4",
+        "ref": "concept-discontinuous-function",
+        "role": "Test case",
+        "narrative": "Riemann then investigated functions discontinuous infinitely often in every interval. His example is discontinuous at rational arguments whose reduced denominator is even, yet it still satisfies his criterion for definite integration.\n",
+        "assertion_refs": [
+          "assertion-r004-discontinuous-example"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-5",
+        "ref": "q-fourier-series-convergence",
+        "role": "Remaining gap",
+        "narrative": "Integrability did not settle the original representation problem. Riemann explicitly observed that a function can admit integration throughout while its Fourier series still fails to converge.\n",
+        "assertion_refs": [
+          "assertion-r004-integrability-not-sufficient"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-6",
+        "ref": "q-post-riemann-integration-gap",
+        "role": "Next question",
+        "narrative": "Later interpretation therefore leaves a separate downstream question: what additional ideas are needed to handle integration and exceptional-set phenomena beyond the boundary reached here? R004 records that question without treating later developments as an inevitable consequence of Riemann's memoir.\n",
+        "assertion_refs": [
+          "assertion-r004-downstream-gap"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1867
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "integrability-1",
+        "to": "integrability-2",
+        "type": "branches"
+      },
+      {
+        "from": "integrability-2",
+        "to": "integrability-3",
+        "type": "continues"
+      },
+      {
+        "from": "integrability-3",
+        "to": "integrability-4",
+        "type": "continues"
+      },
+      {
+        "from": "integrability-4",
+        "to": "integrability-5",
+        "type": "branches"
+      },
+      {
+        "from": "integrability-5",
+        "to": "integrability-6",
+        "type": "branches"
+      }
+    ]
+  },
+  {
     "id": "story-rigor",
     "title": "How can infinity be trusted?",
     "steps": [

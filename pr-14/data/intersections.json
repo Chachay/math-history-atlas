@@ -8,6 +8,14 @@
     ]
   },
   {
+    "entity": "concept-discontinuous-function",
+    "story_count": 2,
+    "stories": [
+      "story-function",
+      "story-integrability"
+    ]
+  },
+  {
     "entity": "concept-fourier-series",
     "story_count": 4,
     "stories": [
@@ -34,11 +42,20 @@
     ]
   },
   {
-    "entity": "q-fourier-series-convergence",
+    "entity": "q-dirichlet-admissible-functions",
     "story_count": 2,
     "stories": [
+      "story-function",
+      "story-integrability"
+    ]
+  },
+  {
+    "entity": "q-fourier-series-convergence",
+    "story_count": 3,
+    "stories": [
       "story-fourier-heat-representation",
-      "story-function"
+      "story-function",
+      "story-integrability"
     ]
   },
   {
