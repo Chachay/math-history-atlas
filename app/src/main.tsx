@@ -6,7 +6,7 @@ type View = 'Atlas' | 'Network' | 'Story' | 'Person';
 type Entity = { id: string; type: string; name: string; start_year?: number; end_year?: number | null; fields?: string[] };
 type Question = { id: string; question: string; period?: { from?: number; to?: number | null }; fields?: string[] };
 type Assertion = { id: string; subject: string; predicate: string; object: string; status?: string; perspective?: string };
-type StoryStep = { id: string; ref: string; role: string };
+type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string };
 type Story = { id: string; title: string; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
 type Intersection = { entity: string; story_count: number; stories: string[] };
 type AtlasField = { id: string; name: string; parents: string[] };
@@ -197,9 +197,10 @@ function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data: 
         const item = lookup[step.ref]; const inter = intersections.get(step.ref); const label = item ? ('type' in item ? item.name : item.question) : step.ref;
         const isProblem = /problem|gap/i.test(step.role);
         return <article key={step.id} className={`story-card panel ${isProblem ? 'problem' : ''} ${inter ? 'crossing' : ''}`}>
+          <div className="story-index">{idx + 1}</div>
           <div className="story-meta"><span>{step.role.toUpperCase()}</span><span>{yearFor(item)}</span></div>
           <h3>{label}</h3>
-          <p>{storyText(story.id, step.ref, step.role)}</p>
+          {step.narrative && <p>{step.narrative}</p>}
           <div className="story-actions">
             {inter && <button onClick={onNetwork}>See the crossing in Network</button>}
             {item && 'type' in item && item.type === 'Person' && <button onClick={() => onOpenPerson(item.id)}>Open person</button>}
@@ -234,16 +235,5 @@ function yearFor(item?: Entity | Question) { if (!item) return ''; return 'type'
 function humanize(s: string) { return s.replaceAll('_', ' '); }
 function letter(v: View) { return ({ Atlas:'A', Network:'B', Story:'C', Person:'D' } as const)[v]; }
 function icon(v: View) { return ({ Atlas:'⌘', Network:'⋈', Story:'↧', Person:'●' } as const)[v]; }
-function storyText(storyId: string, ref: string, role: string) {
-  const keyed: Record<string, string> = {
-    'concept-infinite-series': 'Infinite processes were powerful, but finite-operation intuition could not simply be assumed to survive an infinite limit.',
-    'concept-fourier-series': 'A concrete mathematical object became a shared node for questions about convergence, the meaning of function, and frequency decomposition.',
-    'concept-convergence': 'The difficulty shifts from writing a series to specifying what it means for a sequence or series to approach a limit.',
-    'concept-function': 'The class of objects admitted as “functions” becomes part of the mathematical problem rather than a settled background assumption.',
-    'concept-continuity': 'Continuity must be separated from nearby notions and stated in a form that survives increasingly pathological examples.',
-    'work-fourier-theorie': 'A landmark work provides a historical anchor; editorial interpretations are kept separate from claims about the author’s own motivations.',
-  };
-  return keyed[ref] || '';
-}
 
 createRoot(document.getElementById('root')!).render(<App />);
