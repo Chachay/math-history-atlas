@@ -1,0 +1,8 @@
+research_packet:
+  topic: Fourier series and emerging questions of convergence
+  period: [1750, 1850]
+  status: example
+uncertainties:
+  - claim: Fourier's work directly caused later rigorous analysis.
+    reason: This is too strong without specialist historical evidence.
+    verification_needed: true

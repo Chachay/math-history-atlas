@@ -1,0 +1,3 @@
+- id: collection-analysis-origins
+  title: From Calculus to Modern Analysis
+  stories: [story-rigor, story-function, story-frequency]

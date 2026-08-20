@@ -1,0 +1,111 @@
+[
+  {
+    "id": "story-rigor",
+    "title": "How can infinity be trusted?",
+    "steps": [
+      {
+        "id": "rigor-1",
+        "ref": "concept-infinite-series",
+        "role": "Problem"
+      },
+      {
+        "id": "rigor-2",
+        "ref": "concept-fourier-series",
+        "role": "Response"
+      },
+      {
+        "id": "rigor-3",
+        "ref": "concept-convergence",
+        "role": "Remaining gap"
+      },
+      {
+        "id": "rigor-4",
+        "ref": "q-rigorous-limit-continuity",
+        "role": "Next question"
+      }
+    ],
+    "links": [
+      {
+        "from": "rigor-1",
+        "to": "rigor-2",
+        "type": "continues"
+      },
+      {
+        "from": "rigor-2",
+        "to": "rigor-3",
+        "type": "continues"
+      },
+      {
+        "from": "rigor-3",
+        "to": "rigor-4",
+        "type": "continues"
+      }
+    ]
+  },
+  {
+    "id": "story-function",
+    "title": "What is a function?",
+    "steps": [
+      {
+        "id": "function-1",
+        "ref": "concept-function",
+        "role": "Question"
+      },
+      {
+        "id": "function-2",
+        "ref": "concept-fourier-series",
+        "role": "Problem"
+      },
+      {
+        "id": "function-3",
+        "ref": "concept-continuity",
+        "role": "Remaining gap"
+      }
+    ],
+    "links": [
+      {
+        "from": "function-1",
+        "to": "function-2",
+        "type": "continues"
+      },
+      {
+        "from": "function-2",
+        "to": "function-3",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-frequency",
+    "title": "Seeing the world by frequency",
+    "steps": [
+      {
+        "id": "frequency-1",
+        "ref": "q-heat-propagation",
+        "role": "Question"
+      },
+      {
+        "id": "frequency-2",
+        "ref": "concept-fourier-series",
+        "role": "Response"
+      },
+      {
+        "id": "frequency-3",
+        "ref": "work-fourier-theorie",
+        "role": "Landmark"
+      }
+    ],
+    "links": [
+      {
+        "from": "frequency-1",
+        "to": "frequency-2",
+        "type": "continues"
+      },
+      {
+        "from": "frequency-2",
+        "to": "frequency-3",
+        "type": "continues"
+      }
+    ]
+  }
+]

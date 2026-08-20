@@ -1,0 +1,16 @@
+- id: q-heat-propagation
+  question: How does heat propagate?
+  period: {from: 1800, to: null}
+  fields: [analysis, mathematical-physics]
+- id: q-series-convergence
+  question: When does an infinite series converge?
+  period: {from: 1800, to: null}
+  fields: [analysis]
+- id: q-what-is-function
+  question: What kinds of objects should count as functions?
+  period: {from: 1750, to: null}
+  fields: [analysis]
+- id: q-rigorous-limit-continuity
+  question: How can limits and continuity be defined rigorously?
+  period: {from: 1820, to: null}
+  fields: [analysis]

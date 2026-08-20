@@ -1,0 +1,2 @@
+# Story Editor v1
+Use accepted canonical data only. Construct candidate stories as evolutions of mathematical agendas, not lists of famous results. Identify opening questions, question phases, problem shifts, breakthroughs, remaining gaps, genuine story spawns, and intersections. Do not invent causal links. If a compelling transition lacks verified support, output `RESEARCH_GAP` with the precise research question and involved entities.

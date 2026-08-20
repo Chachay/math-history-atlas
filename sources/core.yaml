@@ -1,0 +1,10 @@
+- id: source-fourier-1822
+  title: Théorie analytique de la chaleur
+  author: Joseph Fourier
+  year: 1822
+  kind: primary
+- id: source-cauchy-1821
+  title: Cours d'Analyse
+  author: Augustin-Louis Cauchy
+  year: 1821
+  kind: primary

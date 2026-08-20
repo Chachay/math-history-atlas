@@ -1,0 +1,8 @@
+- id: state-function-expression
+  concept_id: concept-function
+  period: {from: 1748, to: 1837}
+  label: Analytic-expression viewpoint
+- id: state-function-correspondence
+  concept_id: concept-function
+  period: {from: 1837, to: null}
+  label: Broader correspondence viewpoint

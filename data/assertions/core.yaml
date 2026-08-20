@@ -1,0 +1,36 @@
+- id: assertion-fourier-authored-heat
+  subject: person-fourier
+  predicate: authored
+  object: work-fourier-theorie
+  period: {from: 1822, to: 1822}
+  perspective: historical
+  certainty: high
+  sources: [source-fourier-1822]
+  status: published
+- id: assertion-cauchy-authored-cours
+  subject: person-cauchy
+  predicate: authored
+  object: work-cauchy-cours
+  period: {from: 1821, to: 1821}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-1821]
+  status: published
+- id: assertion-heat-to-convergence
+  subject: q-heat-propagation
+  predicate: spawned
+  object: q-series-convergence
+  period: {from: 1807, to: 1830}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-fourier-1822]
+  status: candidate
+- id: assertion-fourier-series-function
+  subject: concept-fourier-series
+  predicate: reframed
+  object: q-what-is-function
+  period: {from: 1807, to: 1850}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-fourier-1822]
+  status: candidate

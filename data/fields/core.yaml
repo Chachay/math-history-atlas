@@ -1,0 +1,24 @@
+- id: mathematics
+  name: Mathematics
+  parents: []
+- id: analysis
+  name: Analysis
+  parents: [mathematics]
+- id: mathematical-physics
+  name: Mathematical Physics
+  parents: [mathematics]
+- id: topology
+  name: Topology
+  parents: [mathematics]
+- id: algebra
+  name: Algebra
+  parents: [mathematics]
+- id: number-theory
+  name: Number Theory
+  parents: [mathematics]
+- id: algebraic-geometry
+  name: Algebraic Geometry
+  parents: [algebra]
+- id: arithmetic-geometry
+  name: Arithmetic Geometry
+  parents: [number-theory, algebraic-geometry]

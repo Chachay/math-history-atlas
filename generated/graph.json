@@ -1,0 +1,232 @@
+{
+  "entities": [
+    {
+      "id": "person-euler",
+      "type": "Person",
+      "name": "Leonhard Euler",
+      "start_year": 1707,
+      "end_year": 1783,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-fourier",
+      "type": "Person",
+      "name": "Joseph Fourier",
+      "start_year": 1768,
+      "end_year": 1830,
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "person-cauchy",
+      "type": "Person",
+      "name": "Augustin-Louis Cauchy",
+      "start_year": 1789,
+      "end_year": 1857,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-riemann",
+      "type": "Person",
+      "name": "Bernhard Riemann",
+      "start_year": 1826,
+      "end_year": 1866,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-infinite-series",
+      "type": "Concept",
+      "name": "Infinite series",
+      "start_year": 1600,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-fourier-series",
+      "type": "Concept",
+      "name": "Fourier series",
+      "start_year": 1807,
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "concept-convergence",
+      "type": "Concept",
+      "name": "Convergence",
+      "start_year": 1700,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-continuity",
+      "type": "Concept",
+      "name": "Continuity",
+      "start_year": 1700,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-function",
+      "type": "Concept",
+      "name": "Function",
+      "start_year": 1700,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-uniform-convergence",
+      "type": "Concept",
+      "name": "Uniform convergence",
+      "start_year": 1840,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-fourier-theorie",
+      "type": "Work",
+      "name": "Théorie analytique de la chaleur",
+      "start_year": 1822,
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "work-cauchy-cours",
+      "type": "Work",
+      "name": "Cours d'Analyse",
+      "start_year": 1821,
+      "fields": [
+        "analysis"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-heat-propagation",
+      "question": "How does heat propagate?",
+      "period": {
+        "from": 1800,
+        "to": null
+      },
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "id": "q-series-convergence",
+      "question": "When does an infinite series converge?",
+      "period": {
+        "from": 1800,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-what-is-function",
+      "question": "What kinds of objects should count as functions?",
+      "period": {
+        "from": 1750,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-rigorous-limit-continuity",
+      "question": "How can limits and continuity be defined rigorously?",
+      "period": {
+        "from": 1820,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    }
+  ],
+  "assertions": [
+    {
+      "id": "assertion-fourier-authored-heat",
+      "subject": "person-fourier",
+      "predicate": "authored",
+      "object": "work-fourier-theorie",
+      "period": {
+        "from": 1822,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "assertion-cauchy-authored-cours",
+      "subject": "person-cauchy",
+      "predicate": "authored",
+      "object": "work-cauchy-cours",
+      "period": {
+        "from": 1821,
+        "to": 1821
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821"
+      ],
+      "status": "published"
+    },
+    {
+      "id": "assertion-heat-to-convergence",
+      "subject": "q-heat-propagation",
+      "predicate": "spawned",
+      "object": "q-series-convergence",
+      "period": {
+        "from": 1807,
+        "to": 1830
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "candidate"
+    },
+    {
+      "id": "assertion-fourier-series-function",
+      "subject": "concept-fourier-series",
+      "predicate": "reframed",
+      "object": "q-what-is-function",
+      "period": {
+        "from": 1807,
+        "to": 1850
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "candidate"
+    }
+  ]
+}
