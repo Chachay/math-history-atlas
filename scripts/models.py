@@ -36,6 +36,9 @@ class ConceptState(BaseModel):
 
 class StoryStep(BaseModel):
     id: str; ref: str; role: str
+    narrative: str | None = None
+    assertion_refs: list[str] = []
+    perspective: Perspective | None = None
 
 class StoryLink(BaseModel):
     from_: str = Field(alias='from'); to: str
