@@ -310,6 +310,22 @@
       "status": "candidate"
     },
     {
+      "id": "assertion-r001-fourier-heat-problem",
+      "subject": "person-fourier",
+      "predicate": "contributed_to",
+      "object": "q-heat-propagation",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
       "id": "assertion-r001-heat-data-to-series",
       "subject": "problem-heat-boundary-data",
       "predicate": "motivated",
@@ -330,6 +346,22 @@
       "subject": "concept-fourier-series",
       "predicate": "raised_question",
       "object": "q-trig-representation-scope",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r001-arbitrary-function",
+      "subject": "concept-fourier-series",
+      "predicate": "contributed_to",
+      "object": "concept-arbitrary-function",
       "period": {
         "from": 1807,
         "to": 1822

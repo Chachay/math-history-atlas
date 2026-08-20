@@ -9,7 +9,8 @@
     "person": "person-fourier",
     "name": "Joseph Fourier",
     "assertions": [
-      "assertion-fourier-authored-heat"
+      "assertion-fourier-authored-heat",
+      "assertion-r001-fourier-heat-problem"
     ],
     "stories": []
   },
