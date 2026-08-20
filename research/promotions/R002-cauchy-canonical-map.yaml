@@ -45,7 +45,7 @@ stories:
   - story_id: story-cauchy-rigor-continuity
     steps:
       - step_id: r002-story-1
-        canonical_assertion_refs: [assertion-r002-cauchy-rigor]
+        canonical_assertion_refs: [assertion-r002-cauchy-rigor, assertion-r002-cauchy-infinitesimal, assertion-r002-cauchy-continuity, assertion-r002-cauchy-convergence]
       - step_id: r002-story-2
         canonical_assertion_refs: [assertion-r002-cauchy-infinitesimal]
       - step_id: r002-story-3
