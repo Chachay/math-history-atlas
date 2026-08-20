@@ -1,437 +1,529 @@
 research_unit:
   id: R003
-  title: "Dirichlet — trigonometric series, arbitrary functions, and the changing concept of function"
+  title: Dirichlet — trigonometric series, arbitrary functions, and the changing concept of function
   period:
     approximate_start: 1822
     approximate_end: 1837
-    core_period: "1829–1837"
-  scope_summary: >
-    Investigation of Dirichlet's 1829 and 1837 work on trigonometric series, the restrictions
-    he imposed on functions entering Fourier expansions, his treatment of discontinuity and
-    integrability, and the later historiographical claim that this work marks a decisive step
-    toward a modern concept of function. Earlier Fourier and Cauchy material is used only where
-    Dirichlet explicitly engages it or where specialist historiography is needed to identify
-    the conceptual background. Modern set-theoretic function language is treated as retrospective.
+    core_period: 1829–1837
+  scope_summary: 'Investigation of Dirichlet''s 1829 and 1837 work on trigonometric series, the restrictions
+    he imposed on functions entering Fourier expansions, his treatment of discontinuity and integrability,
+    and the later historiographical claim that this work marks a decisive step toward a modern concept
+    of function. Earlier Fourier and Cauchy material is used only where Dirichlet explicitly engages it
+    or where specialist historiography is needed to identify the conceptual background. Modern set-theoretic
+    function language is treated as retrospective.
+
+    '
   research_status: researched
   editorial_status: not_accepted
-  generated_date: "2026-08-20"
-
+  generated_date: '2026-08-20'
 research_questions:
-  - id: q001
-    question: "What problem was Dirichlet actually addressing in his 1829 convergence paper?"
-  - id: q002
-    question: "What restrictions did Dirichlet impose on a function before treating its trigonometric expansion as meaningful and convergent?"
-  - id: q003
-    question: "How did Dirichlet discuss arbitrary and discontinuous functions in 1829 and 1837?"
-  - id: q004
-    question: "What exactly does the 1837 text say that later authors have treated as a definition-like formulation of function?"
-  - id: q005
-    question: "How did Dirichlet's convergence work relate historically to Fourier and Cauchy?"
-  - id: q006
-    question: "How strong is the textbook claim that Dirichlet gave the first modern definition of function?"
-  - id: q007
-    question: "What unresolved question remains about which functions are legitimate objects of integration and trigonometric representation?"
-
+- id: q001
+  question: What problem was Dirichlet actually addressing in his 1829 convergence paper?
+- id: q002
+  question: What restrictions did Dirichlet impose on a function before treating its trigonometric expansion
+    as meaningful and convergent?
+- id: q003
+  question: How did Dirichlet discuss arbitrary and discontinuous functions in 1829 and 1837?
+- id: q004
+  question: What exactly does the 1837 text say that later authors have treated as a definition-like formulation
+    of function?
+- id: q005
+  question: How did Dirichlet's convergence work relate historically to Fourier and Cauchy?
+- id: q006
+  question: How strong is the textbook claim that Dirichlet gave the first modern definition of function?
+- id: q007
+  question: What unresolved question remains about which functions are legitimate objects of integration
+    and trigonometric representation?
 entities:
-  - id: person-dirichlet
-    type: Person
-    canonical_name: "Peter Gustav Lejeune Dirichlet"
-    birth_year: 1805
-    death_year: 1859
-  - id: person-fourier
-    type: Person
-    canonical_name: "Joseph Fourier"
-    birth_year: 1768
-    death_year: 1830
-  - id: person-cauchy
-    type: Person
-    canonical_name: "Augustin-Louis Cauchy"
-    birth_year: 1789
-    death_year: 1857
-  - id: person-lobachevsky
-    type: Person
-    canonical_name: "Nikolai Ivanovich Lobachevsky"
-    birth_year: 1792
-    death_year: 1856
-  - id: concept-fourier-series
-    type: Concept
-    canonical_name: "Fourier series"
-  - id: concept-function
-    type: Concept
-    canonical_name: "Function"
-  - id: concept-arbitrary-function
-    type: Concept
-    canonical_name: "Arbitrary function"
-  - id: concept-discontinuous-function
-    type: Concept
-    canonical_name: "Discontinuous function"
-  - id: concept-continuity
-    type: Concept
-    canonical_name: "Continuity"
-  - id: concept-integrability
-    type: Concept
-    canonical_name: "Conditions under which a definite integral is meaningful"
-  - id: work-dirichlet-1829
-    type: Work
-    canonical_name: "Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données"
-    publication_year: 1829
-  - id: work-dirichlet-1837
-    type: Work
-    canonical_name: "Ueber die Darstellung ganz willkürlicher Functionen durch Sinus- und Cosinusreihen"
-    publication_year: 1837
-
+- id: person-dirichlet
+  type: Person
+  canonical_name: Peter Gustav Lejeune Dirichlet
+  birth_year: 1805
+  death_year: 1859
+- id: person-fourier
+  type: Person
+  canonical_name: Joseph Fourier
+  birth_year: 1768
+  death_year: 1830
+- id: person-cauchy
+  type: Person
+  canonical_name: Augustin-Louis Cauchy
+  birth_year: 1789
+  death_year: 1857
+- id: person-lobachevsky
+  type: Person
+  canonical_name: Nikolai Ivanovich Lobachevsky
+  birth_year: 1792
+  death_year: 1856
+- id: concept-fourier-series
+  type: Concept
+  canonical_name: Fourier series
+- id: concept-function
+  type: Concept
+  canonical_name: Function
+- id: concept-arbitrary-function
+  type: Concept
+  canonical_name: Arbitrary function
+- id: concept-discontinuous-function
+  type: Concept
+  canonical_name: Discontinuous function
+- id: concept-continuity
+  type: Concept
+  canonical_name: Continuity
+- id: concept-integrability
+  type: Concept
+  canonical_name: Conditions under which a definite integral is meaningful
+- id: work-dirichlet-1829
+  type: Work
+  canonical_name: Sur la convergence des séries trigonométriques qui servent à représenter une fonction
+    arbitraire entre des limites données
+  publication_year: 1829
+- id: work-dirichlet-1837
+  type: Work
+  canonical_name: Ueber die Darstellung ganz willkürlicher Functionen durch Sinus- und Cosinusreihen
+  publication_year: 1837
 chronology:
-  - date: "1822"
-    event: >
-      Fourier publishes Théorie analytique de la chaleur, including a broad account of function
-      values and trigonometric representation that is later part of the background to Dirichlet's work.
-    perspective: historical
-    certainty: high
-    sources: [src-fourier-1822]
-    uncertainty: >
-      This entry establishes background, not a claim that Fourier alone caused a later modern concept of function.
+- date: '1822'
+  event: 'Fourier publishes Théorie analytique de la chaleur, including a broad account of function values
+    and trigonometric representation that is later part of the background to Dirichlet''s work.
 
-  - date: "1829"
-    event: >
-      Dirichlet publishes his paper on convergence of trigonometric series for representing an arbitrary
-      function between given limits. In the opening he identifies Fourier's heat work as having introduced
-      this mode of representing arbitrary functions, says that no general proof of convergence was then known
-      to him, and criticizes Cauchy's attempted proof.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      Dirichlet refers to Cauchy's memoir as belonging to the Academy memoirs "for 1823"; R002 has already
-      established that this nominal volume year must not be confused with the memoir's 1826 reading and 1827 publication.
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-fourier-1822
+  uncertainty: 'This entry establishes background, not a claim that Fourier alone caused a later modern
+    concept of function.
 
-  - date: "1829"
-    event: >
-      Dirichlet proves convergence under explicit restrictions, including finite determined values, only finitely
-      many discontinuities and extrema on the interval in the main theorem, and a more general local condition
-      intended to ensure that the definite integrals used as coefficients retain meaning.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      These hypotheses should not be silently replaced by the later terminology of piecewise smoothness,
-      bounded variation, or Riemann integrability.
+    '
+- date: '1829'
+  event: 'Dirichlet publishes his paper on convergence of trigonometric series for representing an arbitrary
+    function between given limits. In the opening he identifies Fourier''s heat work as having introduced
+    this mode of representing arbitrary functions, says that no general proof of convergence was then
+    known to him, and criticizes Cauchy''s attempted proof.
 
-  - date: "1829"
-    event: >
-      Dirichlet gives the rational/irrational two-value example as a function whose values are finite and determined
-      everywhere but for which the integrals entering the trigonometric series lose meaning under his stated framework.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      Calling this simply the modern "Dirichlet function" is useful retrospectively but should not obscure
-      Dirichlet's immediate point about admissibility for integration and series representation.
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: 'Dirichlet refers to Cauchy''s memoir as belonging to the Academy memoirs "for 1823"; R002
+    has already established that this nominal volume year must not be confused with the memoir''s 1826
+    reading and 1827 publication.
 
-  - date: "1837"
-    event: >
-      Dirichlet publishes a German treatment of the representation of completely arbitrary functions by sine and cosine
-      series in the first volume of Repertorium der Physik. The opening section defines a continuous function on an interval
-      through a unique finite y corresponding to each x and explicitly says that the dependence need not follow one law
-      throughout the interval or be expressible by mathematical operations.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1837]
-    uncertainty: >
-      The often-quoted passage is formally a definition of a continuous function, not a fully set-theoretic definition
-      of an arbitrary function between arbitrary domains and codomains.
+    '
+- date: '1829'
+  event: 'Dirichlet proves convergence under explicit restrictions, including finite determined values,
+    only finitely many discontinuities and extrema on the interval in the main theorem, and a more general
+    local condition intended to ensure that the definite integrals used as coefficients retain meaning.
 
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: 'These hypotheses should not be silently replaced by the later terminology of piecewise
+    smoothness, bounded variation, or Riemann integrability.
+
+    '
+- date: '1829'
+  event: 'Dirichlet gives the rational/irrational two-value example as a function whose values are finite
+    and determined everywhere but for which the integrals entering the trigonometric series lose meaning
+    under his stated framework.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: 'Calling this simply the modern "Dirichlet function" is useful retrospectively but should
+    not obscure Dirichlet''s immediate point about admissibility for integration and series representation.
+
+    '
+- date: '1837'
+  event: 'Dirichlet publishes a German treatment of the representation of completely arbitrary functions
+    by sine and cosine series in the first volume of Repertorium der Physik. The opening section defines
+    a continuous function on an interval through a unique finite y corresponding to each x and explicitly
+    says that the dependence need not follow one law throughout the interval or be expressible by mathematical
+    operations.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1837
+  uncertainty: 'The often-quoted passage is formally a definition of a continuous function, not a fully
+    set-theoretic definition of an arbitrary function between arbitrary domains and codomains.
+
+    '
 assertions:
-  - id: r003-a001
-    subject: person-dirichlet
-    predicate: contributed_to
-    object: q-fourier-series-convergence
-    statement: >
-      Dirichlet's 1829 paper directly addresses the convergence of trigonometric series intended to represent arbitrary
-      functions between given limits and provides a rigorous proof under stated restrictions.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      The result is not a proof for every function in the modern unrestricted sense.
+- id: r003-a001
+  subject: person-dirichlet
+  predicate: contributed_to
+  object: q-fourier-series-convergence
+  statement: 'Dirichlet''s 1829 paper directly addresses the convergence of trigonometric series intended
+    to represent arbitrary functions between given limits and provides a rigorous proof under stated restrictions.
 
-  - id: r003-a002
-    subject: work-dirichlet-1829
-    predicate: contributed_to
-    object: concept-fourier-series
-    statement: >
-      The 1829 paper analyzes convergence by working with finite partial sums and their limiting integral expressions,
-      rather than assuming convergence merely from coefficient decay.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: null
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: 'The result is not a proof for every function in the modern unrestricted sense.
 
-  - id: r003-a003
-    subject: work-dirichlet-1829
-    predicate: reframed
-    object: concept-arbitrary-function
-    statement: >
-      In the context of trigonometric representation, Dirichlet separates the idea of a function having finite determined
-      values from the stronger conditions needed for the relevant definite integrals and convergence argument to make sense.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      "Separates" here describes the distinction made in the paper; it does not assert a modern domain/codomain ontology.
+    '
+- id: r003-a002
+  subject: work-dirichlet-1829
+  predicate: contributed_to
+  object: concept-fourier-series
+  statement: 'The 1829 paper analyzes convergence by working with finite partial sums and their limiting
+    integral expressions, rather than assuming convergence merely from coefficient decay.
 
-  - id: r003-a004
-    subject: work-dirichlet-1829
-    predicate: contributed_to
-    object: concept-discontinuous-function
-    statement: >
-      Dirichlet's convergence theorem explicitly allows a finite number of discontinuities and states that at a discontinuity
-      the trigonometric series converges to a value determined by the two neighboring limiting values.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      Modern notation for one-sided limits is explanatory shorthand and is not attributed to Dirichlet.
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: null
+- id: r003-a003
+  subject: work-dirichlet-1829
+  predicate: reframed
+  object: concept-arbitrary-function
+  statement: 'In the context of trigonometric representation, Dirichlet separates the idea of a function
+    having finite determined values from the stronger conditions needed for the relevant definite integrals
+    and convergence argument to make sense.
 
-  - id: r003-a005
-    subject: work-dirichlet-1829
-    predicate: raised_question
-    object: concept-integrability
-    statement: >
-      Dirichlet's rational/irrational example shows that finite determined values alone did not make a function admissible
-      for his Fourier-integral machinery; the meaning of the definite integral was itself a boundary on admissibility.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      The packet deliberately does not identify Dirichlet's condition with the later Riemann criterion.
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: '"Separates" here describes the distinction made in the paper; it does not assert a modern
+    domain/codomain ontology.
 
-  - id: r003-a006
-    subject: person-dirichlet
-    predicate: contributed_to
-    object: concept-function
-    statement: >
-      Dirichlet's 1837 formulation allows a continuous function on an interval to depend on x without one common law
-      throughout the interval and without dependence expressible by mathematical operations.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1837]
-    uncertainty: >
-      This is a statement about the wording of Dirichlet's continuous-function definition, not yet a claim that he stated
-      the twentieth-century set-theoretic definition of function.
+    '
+- id: r003-a004
+  subject: work-dirichlet-1829
+  predicate: contributed_to
+  object: concept-discontinuous-function
+  statement: 'Dirichlet''s convergence theorem explicitly allows a finite number of discontinuities and
+    states that at a discontinuity the trigonometric series converges to a value determined by the two
+    neighboring limiting values.
 
-  - id: r003-a007
-    subject: concept-fourier-series
-    predicate: contributed_to
-    object: q-what-is-function
-    statement: >
-      Specialist historiography treats the Fourier/Dirichlet work on representing broad classes of numerical data as an
-      important episode in loosening the association of functions with a single analytic expression.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-youschkevitch-1976, src-kjeldsen-lutzen-2015]
-    uncertainty: >
-      This is a retrospective historical synthesis, not evidence that Fourier or Dirichlet described their aim as creating
-      the modern concept of function.
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: 'Modern notation for one-sided limits is explanatory shorthand and is not attributed to
+    Dirichlet.
 
-  - id: r003-a008
-    subject: person-dirichlet
-    predicate: contributed_to
-    object: q-what-is-function
-    statement: >
-      Dirichlet's 1837 text is a major nineteenth-century formulation in the history of the function concept, but the label
-      "first modern definition of function" is too compressed to use as an unqualified historical fact.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-youschkevitch-1976]
-    uncertainty: >
-      Earlier Fourier and Euler formulations and the nearby independent work of Lobachevsky complicate a single-person priority claim;
-      moreover, the famous Dirichlet passage directly defines continuity on a real interval rather than arbitrary set mappings.
+    '
+- id: r003-a005
+  subject: work-dirichlet-1829
+  predicate: raised_question
+  object: concept-integrability
+  statement: 'Dirichlet''s rational/irrational example shows that finite determined values alone did not
+    make a function admissible for his Fourier-integral machinery; the meaning of the definite integral
+    was itself a boundary on admissibility.
 
-  - id: r003-a009
-    subject: person-dirichlet
-    predicate: contributed_to
-    object: concept-fourier-series
-    statement: >
-      Dirichlet's 1829 paper explicitly places his proof after Fourier's representational work and in criticism of Cauchy's
-      attempted convergence proof, giving direct textual evidence for this local historical relation.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: >
-      This does not establish that Fourier's heat problem was the sole motivation for Dirichlet's wider mathematical work.
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: 'The packet deliberately does not identify Dirichlet''s condition with the later Riemann
+    criterion.
 
-  - id: r003-a010
-    subject: concept-discontinuous-function
-    predicate: contributed_to
-    object: q-what-is-function
-    statement: >
-      The use of functions with jumps and the rational/irrational example made it possible to discuss numerical dependencies
-      whose behavior could not be captured by one ordinary analytic expression, contributing to later changes in how historians
-      describe the nineteenth-century function concept.
-    perspective: later_interpretation
-    certainty: medium
-    sources: [src-dirichlet-1829, src-youschkevitch-1976]
-    uncertainty: >
-      A stronger causal claim that discontinuous examples themselves "created" the modern definition is not established.
+    '
+- id: r003-a006
+  subject: person-dirichlet
+  predicate: contributed_to
+  object: concept-function
+  statement: 'Dirichlet''s 1837 formulation allows a continuous function on an interval to depend on x
+    without one common law throughout the interval and without dependence expressible by mathematical
+    operations.
 
-  - id: r003-a011
-    subject: work-dirichlet-1837
-    predicate: raised_question
-    object: q-dirichlet-admissible-functions
-    statement: >
-      Dirichlet's 1837 treatment sharpens the downstream problem of identifying conditions under which broadly specified
-      functions can legitimately enter definite integrals and trigonometric representations.
-    perspective: later_interpretation
-    certainty: medium
-    sources: [src-dirichlet-1837, src-youschkevitch-1976]
-    uncertainty: >
-      This question is phrased for the Atlas as a bridge toward later integration theory; it is not asserted as Dirichlet's own wording.
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1837
+  uncertainty: 'This is a statement about the wording of Dirichlet''s continuous-function definition,
+    not yet a claim that he stated the twentieth-century set-theoretic definition of function.
 
+    '
+- id: r003-a007
+  subject: concept-fourier-series
+  predicate: contributed_to
+  object: q-what-is-function
+  statement: 'Specialist historiography treats the Fourier/Dirichlet work on representing broad classes
+    of numerical data as an important episode in loosening the association of functions with a single
+    analytic expression.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-youschkevitch-1976
+  - src-kjeldsen-lutzen-2015
+  uncertainty: 'This is a retrospective historical synthesis, not evidence that Fourier or Dirichlet described
+    their aim as creating the modern concept of function.
+
+    '
+- id: r003-a008
+  subject: person-dirichlet
+  predicate: contributed_to
+  object: q-what-is-function
+  statement: 'Dirichlet''s 1837 text is a major nineteenth-century formulation in the history of the function
+    concept, but the label "first modern definition of function" is too compressed to use as an unqualified
+    historical fact.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-youschkevitch-1976
+  uncertainty: 'Earlier Fourier and Euler formulations and the nearby independent work of Lobachevsky
+    complicate a single-person priority claim; moreover, the famous Dirichlet passage directly defines
+    continuity on a real interval rather than arbitrary set mappings.
+
+    '
+- id: r003-a009
+  subject: person-dirichlet
+  predicate: contributed_to
+  object: concept-fourier-series
+  statement: 'Dirichlet''s 1829 paper explicitly places his proof after Fourier''s representational work
+    and in criticism of Cauchy''s attempted convergence proof, giving direct textual evidence for this
+    local historical relation.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: 'This does not establish that Fourier''s heat problem was the sole motivation for Dirichlet''s
+    wider mathematical work.
+
+    '
+- id: r003-a010
+  subject: concept-discontinuous-function
+  predicate: contributed_to
+  object: q-what-is-function
+  statement: 'The use of functions with jumps and the rational/irrational example made it possible to
+    discuss numerical dependencies whose behavior could not be captured by one ordinary analytic expression,
+    contributing to later changes in how historians describe the nineteenth-century function concept.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-dirichlet-1829
+  - src-youschkevitch-1976
+  uncertainty: 'A stronger causal claim that discontinuous examples themselves "created" the modern definition
+    is not established.
+
+    '
+- id: r003-a011
+  subject: work-dirichlet-1837
+  predicate: contributed_to
+  object: q-dirichlet-admissible-functions
+  statement: 'Read retrospectively, Dirichlet''s 1837 treatment helps expose the downstream problem of
+    identifying conditions under which broadly specified functions can legitimately enter definite integrals
+    and trigonometric representations.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-dirichlet-1837
+  - src-youschkevitch-1976
+  uncertainty: 'This question is phrased for the Atlas as a bridge toward later integration theory; it
+    is not asserted as Dirichlet''s own wording.
+
+    '
 question_transitions:
-  - id: r003-qt001
-    from_question: q-trig-representation-scope
-    to_question: q-fourier-series-convergence
-    relation: "representation claims require convergence conditions"
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-dirichlet-1829]
-    note: >
-      Dirichlet's title and opening make this relation unusually direct, but the Atlas wording is retrospective.
+- id: r003-qt001
+  from_question: q-trig-representation-scope
+  to_question: q-fourier-series-convergence
+  relation: representation claims require convergence conditions
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  note: 'Dirichlet''s title and opening make this relation unusually direct, but the Atlas wording is
+    retrospective.
 
-  - id: r003-qt002
-    from_question: q-fourier-series-convergence
-    to_question: q-what-is-function
-    relation: "convergence analysis exposes restrictions on which arbitrary functions are admissible"
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-dirichlet-1829, src-youschkevitch-1976]
-    note: >
-      This is not a claim that convergence theory alone caused the modern function concept.
+    '
+- id: r003-qt002
+  from_question: q-fourier-series-convergence
+  to_question: q-what-is-function
+  relation: convergence analysis exposes restrictions on which arbitrary functions are admissible
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  - src-youschkevitch-1976
+  note: 'This is not a claim that convergence theory alone caused the modern function concept.
 
-  - id: r003-qt003
-    from_question: q-what-is-function
-    to_question: q-dirichlet-admissible-functions
-    relation: "broad function language leaves an analytic admissibility problem"
-    perspective: later_interpretation
-    certainty: medium
-    sources: [src-dirichlet-1829, src-dirichlet-1837]
-    note: >
-      The transition is intended as a bounded handoff toward R004, not as a claim that Dirichlet formulated Riemann's later criterion.
+    '
+- id: r003-qt003
+  from_question: q-what-is-function
+  to_question: q-dirichlet-admissible-functions
+  relation: broad function language leaves an analytic admissibility problem
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-dirichlet-1829
+  - src-dirichlet-1837
+  note: 'The transition is intended as a bounded handoff toward R004, not as a claim that Dirichlet formulated
+    Riemann''s later criterion.
 
+    '
 intersection_candidates:
-  - id: r003-i001
-    with: R001
-    refs: [concept-fourier-series, concept-arbitrary-function, person-dirichlet, work-dirichlet-1829, q-fourier-series-convergence]
-    significance: >
-      R003 deepens R001's Fourier/function intersection by distinguishing Fourier's broad representational claims from
-      Dirichlet's later convergence restrictions and explicit discussion of pathological input.
-  - id: r003-i002
-    with: R002
-    refs: [person-cauchy, person-dirichlet, work-dirichlet-1829, q-fourier-series-convergence]
-    significance: >
-      Dirichlet's opening criticism of Cauchy's periodic-series proof supplies a direct historical bridge between the units.
-  - id: r003-i003
-    with: R004
-    refs: [concept-integrability, q-dirichlet-admissible-functions]
-    significance: >
-      R003 should end with the unresolved admissibility/integration question without presupposing Riemann's answer.
+- id: r003-i001
+  with: R001
+  refs:
+  - concept-fourier-series
+  - concept-arbitrary-function
+  - person-dirichlet
+  - work-dirichlet-1829
+  - q-fourier-series-convergence
+  significance: 'R003 deepens R001''s Fourier/function intersection by distinguishing Fourier''s broad
+    representational claims from Dirichlet''s later convergence restrictions and explicit discussion of
+    pathological input.
 
+    '
+- id: r003-i002
+  with: R002
+  refs:
+  - person-cauchy
+  - person-dirichlet
+  - work-dirichlet-1829
+  - q-fourier-series-convergence
+  significance: 'Dirichlet''s opening criticism of Cauchy''s periodic-series proof supplies a direct historical
+    bridge between the units.
+
+    '
+- id: r003-i003
+  with: R004
+  refs:
+  - concept-integrability
+  - q-dirichlet-admissible-functions
+  significance: 'R003 should end with the unresolved admissibility/integration question without presupposing
+    Riemann''s answer.
+
+    '
 concept_state_candidates:
-  - id: r003-cs-function-1837
-    concept_id: concept-function
-    period: {from: 1837, to: 1837}
-    label: >
-      Numerical function language detached from a single analytic law, while still formulated on real intervals and within
-      nineteenth-century analytic practice rather than modern set theory.
-  - id: r003-cs-discontinuity-1829
-    concept_id: concept-discontinuous-function
-    period: {from: 1829, to: 1829}
-    label: >
-      Discontinuities and even everywhere-discontinuous examples are explicit objects of analysis, but their admissibility
-      depends on the integration framework being used.
+- id: r003-cs-function-1837
+  concept_id: concept-function
+  period:
+    from: 1837
+    to: 1837
+  label: 'Numerical function language detached from a single analytic law, while still formulated on real
+    intervals and within nineteenth-century analytic practice rather than modern set theory.
 
+    '
+- id: r003-cs-discontinuity-1829
+  concept_id: concept-discontinuous-function
+  period:
+    from: 1829
+    to: 1829
+  label: 'Discontinuities and even everywhere-discontinuous examples are explicit objects of analysis,
+    but their admissibility depends on the integration framework being used.
+
+    '
 story_candidates:
-  - story_id: story-function
-    title: "What is a function?"
-    integration_plan: >
-      Replace the PoC stub with an evidence-backed path that distinguishes formula-oriented background, Fourier's broad
-      representational practice, Dirichlet's convergence restrictions and discontinuity examples, the 1837 no-single-law
-      formulation, and an unresolved question about analytic admissibility leading toward R004.
+- story_id: story-function
+  title: What is a function?
+  integration_plan: 'Replace the PoC stub with an evidence-backed path that distinguishes formula-oriented
+    background, Fourier''s broad representational practice, Dirichlet''s convergence restrictions and
+    discontinuity examples, the 1837 no-single-law formulation, and an unresolved question about analytic
+    admissibility leading toward R004.
 
+    '
 sources:
-  - id: src-dirichlet-1829
-    type: primary
-    author: "Peter Gustav Lejeune Dirichlet"
-    title: "Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données"
-    publication: "Journal für die reine und angewandte Mathematik 4, pp. 157–169"
-    year: 1829
-    url: "https://eudml.org/doc/183134"
-    locator: "pp. 157–169; especially 157–158 and 167–169"
-    notes: >
-      Direct scan also available from Göttingen Digitalisierungszentrum; p. 157 names Fourier and Cauchy, pp. 167–169 state
-      the restricted convergence result and the rational/irrational example.
+- id: src-dirichlet-1829
+  type: primary
+  author: Peter Gustav Lejeune Dirichlet
+  title: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire
+    entre des limites données
+  publication: Journal für die reine und angewandte Mathematik 4, pp. 157–169
+  year: 1829
+  url: https://eudml.org/doc/183134
+  locator: pp. 157–169; especially 157–158 and 167–169
+  notes: 'Direct scan also available from Göttingen Digitalisierungszentrum; p. 157 names Fourier and
+    Cauchy, pp. 167–169 state the restricted convergence result and the rational/irrational example.
 
-  - id: src-dirichlet-1837
-    type: primary
-    author: "Peter Gustav Lejeune Dirichlet"
-    title: "Ueber die Darstellung ganz willkürlicher Functionen durch Sinus- und Cosinusreihen"
-    publication: "Repertorium der Physik, vol. 1, pp. 152–174"
-    year: 1837
-    url: "https://www.deutsche-digitale-bibliothek.de/item/4GWFVVGN4M2ZEKXIE5RNICIRKUFFIIIG"
-    locator: "§1, opening pages; original volume pp. 152–174"
-    notes: >
-      The Bayerische Staatsbibliothek digitization is identified by URN urn:nbn:de:bvb:12-bsb11942525-9.
-      A collected-works edition is Dirichlet, Werke I, pp. 133–160.
+    '
+- id: src-dirichlet-1837
+  type: primary
+  author: Peter Gustav Lejeune Dirichlet
+  title: Ueber die Darstellung ganz willkürlicher Functionen durch Sinus- und Cosinusreihen
+  publication: Repertorium der Physik, vol. 1, pp. 152–174
+  year: 1837
+  url: https://www.deutsche-digitale-bibliothek.de/item/4GWFVVGN4M2ZEKXIE5RNICIRKUFFIIIG
+  locator: §1, opening pages; original volume pp. 152–174
+  notes: 'The Bayerische Staatsbibliothek digitization is identified by URN urn:nbn:de:bvb:12-bsb11942525-9.
+    A collected-works edition is Dirichlet, Werke I, pp. 133–160.
 
-  - id: src-fourier-1822
-    type: primary
-    author: "Joseph Fourier"
-    title: "Théorie analytique de la chaleur"
-    publication: "Paris: Firmin Didot"
-    year: 1822
-    url: "https://gallica.bnf.fr/ark:/12148/bpt6k1045508v"
-    locator: "preliminary discourse and sections on arbitrary functions/trigonometric representation"
-
-  - id: src-youschkevitch-1976
-    type: secondary_peer_reviewed
-    author: "A. P. Youschkevitch"
-    title: "The Concept of Function up to the Middle of the 19th Century"
-    publication: "Archive for History of Exact Sciences 16(1), pp. 37–85"
-    year: 1976
-    url: "https://doi.org/10.1007/BF00348305"
-    locator: "sections on Fourier and on Cauchy/Dirichlet"
-
-  - id: src-kjeldsen-lutzen-2015
-    type: secondary_peer_reviewed
-    author: "Tinne Hoff Kjeldsen and Jesper Lützen"
-    title: "Interactions Between Mathematics and Physics: The History of the Concept of Function—Teaching with and About Nature of Mathematics"
-    publication: "Science & Education"
-    year: 2015
-    url: "https://doi.org/10.1007/s11191-015-9746-x"
-    locator: "historical discussion of vibrating strings, heat conduction, Fourier, and function concept"
-
+    '
+- id: src-fourier-1822
+  type: primary
+  author: Joseph Fourier
+  title: Théorie analytique de la chaleur
+  publication: 'Paris: Firmin Didot'
+  year: 1822
+  url: https://gallica.bnf.fr/ark:/12148/bpt6k1045508v
+  locator: preliminary discourse and sections on arbitrary functions/trigonometric representation
+- id: src-youschkevitch-1976
+  type: secondary_peer_reviewed
+  author: A. P. Youschkevitch
+  title: The Concept of Function up to the Middle of the 19th Century
+  publication: Archive for History of Exact Sciences 16(1), pp. 37–85
+  year: 1976
+  url: https://doi.org/10.1007/BF00348305
+  locator: sections on Fourier and on Cauchy/Dirichlet
+- id: src-kjeldsen-lutzen-2015
+  type: secondary_peer_reviewed
+  author: Tinne Hoff Kjeldsen and Jesper Lützen
+  title: 'Interactions Between Mathematics and Physics: The History of the Concept of Function—Teaching
+    with and About Nature of Mathematics'
+  publication: Science & Education
+  year: 2015
+  url: https://doi.org/10.1007/s11191-015-9746-x
+  locator: historical discussion of vibrating strings, heat conduction, Fourier, and function concept
 uncertainties:
-  - id: r003-u001
-    question: >
-      Should Dirichlet's 1837 passage be called a definition of function or, more narrowly, a definition of continuous function
-      that presupposes a broader understanding of function?
-    status: open
-    significance: high
-    needed_evidence: >
-      Compare the full 1837 §1 wording with specialist historiography; avoid textbook paraphrases that silently delete the continuity clause.
+- id: r003-u001
+  question: 'Should Dirichlet''s 1837 passage be called a definition of function or, more narrowly, a
+    definition of continuous function that presupposes a broader understanding of function?
 
-  - id: r003-u002
-    question: >
-      How should Lobachevsky's nearby formulation be integrated into priority language about a "first modern definition"?
-    status: open
-    significance: medium
-    needed_evidence: >
-      Direct primary text and specialist comparison. Until then, do not make a first-person priority claim for Dirichlet.
+    '
+  status: open
+  significance: high
+  needed_evidence: 'Compare the full 1837 §1 wording with specialist historiography; avoid textbook paraphrases
+    that silently delete the continuity clause.
 
-  - id: r003-u003
-    question: >
-      How far can Dirichlet's 1829 admissibility condition be compared with later Riemann integrability without projecting the later theory backward?
-    status: open
-    significance: high
-    needed_evidence: >
-      Riemann primary text and specialist historiography belong mainly to R004; R003 should retain only the historical gap.
+    '
+- id: r003-u002
+  question: 'How should Lobachevsky''s nearby formulation be integrated into priority language about a
+    "first modern definition"?
+
+    '
+  status: open
+  significance: medium
+  needed_evidence: 'Direct primary text and specialist comparison. Until then, do not make a first-person
+    priority claim for Dirichlet.
+
+    '
+- id: r003-u003
+  question: 'How far can Dirichlet''s 1829 admissibility condition be compared with later Riemann integrability
+    without projecting the later theory backward?
+
+    '
+  status: open
+  significance: high
+  needed_evidence: 'Riemann primary text and specialist historiography belong mainly to R004; R003 should
+    retain only the historical gap.
+
+    '

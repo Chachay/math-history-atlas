@@ -1,0 +1,66 @@
+research_unit_id: R003
+packet: R003-dirichlet-function-concept.yaml
+review: R003-dirichlet-function-concept-review.yaml
+resolution: R003-dirichlet-function-concept-resolution.yaml
+summary:
+  proposed_changes: 3
+  skipped_items: 0
+changes:
+- finding_id: hr-r003-chronology-1837
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Before promotion, independently audit the 1837 opening passage at page level.
+    A persistent scan of Dirichlet''s Werke I confirms the passage at pp. 133-134, corresponding to the
+    original Repertorium der Physik article pp. 152-153.
+
+    '
+  target:
+    section: chronology
+    match:
+      date: '1837'
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-dirichlet-1837
+  status: proposed
+- finding_id: hr-r003-a006
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Page-level audit completed against the persistent e-rara scan of Dirichlet''s
+    Werke I, pp. 133-134: the text states that each x corresponds to a unique finite y, that one common
+    law over the whole interval is unnecessary, and that the dependence need not be expressible by mathematical
+    operations. Preserve the packet''s caveat that the passage formally defines a continuous function
+    on a real interval rather than an arbitrary modern set mapping.
+
+    '
+  target:
+    section: assertions
+    id: r003-a006
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-dirichlet-1837
+  status: proposed
+- finding_id: hr-r003-a011
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Apply the critic''s proposed replacement: use contributed_to rather than raised_question,
+    and keep the bridge to later integrability explicitly retrospective.
+
+    '
+  target:
+    section: assertions
+    id: r003-a011
+  proposed_change:
+    action: replace_fields
+    fields:
+      predicate: contributed_to
+      statement: 'Read retrospectively, Dirichlet''s 1837 treatment helps expose the downstream problem
+        of identifying conditions under which broadly specified functions can legitimately enter definite
+        integrals and trigonometric representations.
+
+        '
+      perspective: later_interpretation
+      certainty: medium
+  status: proposed
+skipped: []
