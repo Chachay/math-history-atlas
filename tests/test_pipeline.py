@@ -2,6 +2,7 @@ from scripts.validate import validate_all
 from scripts.build_intersections import build_intersections
 from scripts.common import ROOT, load_yaml_files
 from scripts.integrity import artifact_integrity, require_integrity_match, validate_finding_ids
+from scripts.validate_provenance import validate_provenance
 
 
 def test_sample_data_valid():
@@ -49,3 +50,7 @@ def test_integrity_requires_stable_unique_finding_ids():
         assert 'Duplicate' in str(exc)
     else:
         raise AssertionError('duplicate finding IDs should be rejected')
+
+
+def test_canonical_promotion_provenance_maps_are_valid():
+    assert validate_provenance() == []
