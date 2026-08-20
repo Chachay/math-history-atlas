@@ -39,10 +39,11 @@ class StoryStep(BaseModel):
     narrative: str | None = None
     assertion_refs: list[str] = []
     perspective: Perspective | None = None
+    temporal_anchor: Period | None = None
 
 class StoryLink(BaseModel):
     from_: str = Field(alias='from'); to: str
-    type: Literal['continues','branches','converges','alternative']
+    type: Literal['continues','branches','converges','alternative','retrospective']
     model_config = {'populate_by_name': True}
 
 class Story(BaseModel):
