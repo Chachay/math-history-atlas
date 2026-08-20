@@ -36,5 +36,5 @@ decisions:
 resolution_date: '2026-08-20'
 resolution_status: human_approved_pending_integrity_binding
 integrity:
-  packet_sha256: sha256:cd62db712d056c304f4a754ec3cc492feace72a4fa516a2d382616750d1c7c9e
+  packet_sha256: sha256:bbae93c52d70cb1f2cf0ea0bc8cad68315fa5f73a4126163400105dcdfa34588
   review_sha256: sha256:5e24072e24471040dcb8db98410e2e7ed6d584b01918509ce4b746ebde2d84e9
