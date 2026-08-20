@@ -7,6 +7,7 @@ Use this prompt to start a new research unit in a fresh ChatGPT conversation wit
 - Repository: `Chachay/math-history-atlas`
 - Unit ID: `R00X`
 - Optional topic hint: `<topic hint or leave blank>`
+- Optional approved unit brief: `research/units/R00X-*.md`
 
 ## Mission
 
@@ -26,14 +27,17 @@ Before proposing a topic or editing files:
    - `research/prompts/story-editor-v2.md`
    - `research/prompts/story-critic-v1.md`
 6. Inspect the latest Network/Story semantics before drafting. In particular, Story steps may carry Story-local temporal anchors; entity birth/start dates are not automatically the date at which an entity appears in a Story.
+7. Check `research/units/` for a file whose name begins with the requested unit ID, e.g. `R003-*.md`. If exactly one approved brief exists, read it and treat its scope/integration target as the default topic unless current `main` makes the brief stale or contradictory. If several briefs exist, ask which one to use. If none exists, use the topic-selection procedure below.
 
 Do not rely on remembered repository state when the current `main` branch can be read.
 
 ## Topic selection
 
-If the user supplied a topic, test whether it is bounded and useful for the graph before proceeding.
+If an approved unit brief exists, first test whether it is still bounded and compatible with current `main`. Do not re-open broad topic selection merely because another plausible topic exists. Raise a scope issue only if the brief has become stale, duplicates newly merged work, or conflicts with current canonical data.
 
-If no topic was supplied, propose 2–3 candidates based on the **current graph**, preferring a unit that:
+If the user supplied a topic but no approved brief exists, test whether it is bounded and useful for the graph before proceeding.
+
+If neither a topic nor an approved brief exists, propose 2–3 candidates based on the **current graph**, preferring a unit that:
 
 - intersects at least one accepted/researched node from an existing Story;
 - introduces a genuinely new question/problem/concept line rather than merely extending a biography;
@@ -43,7 +47,7 @@ If no topic was supplied, propose 2–3 candidates based on the **current graph*
 
 Do not infer causation merely because the new unit follows an existing one chronologically.
 
-Wait for human approval of the topic if more than one materially different direction is plausible.
+Wait for human approval of the topic if more than one materially different direction is plausible and no approved brief already fixes the scope.
 
 ## Phase A — Research to canonical promotion
 
@@ -183,10 +187,10 @@ Across all units:
 
 ## Minimal fresh-chat command
 
-After this prompt exists on `main`, a user should be able to start a new conversation with only:
+If the unit has an approved brief in `research/units/`, the user should be able to start a new conversation with only:
 
 ```text
-Open Chachay/math-history-atlas and follow research/prompts/research-unit-kickoff-v1.md for R003. Read current main first, then propose the research theme.
+Open Chachay/math-history-atlas and follow research/prompts/research-unit-kickoff-v1.md for R003. Read current main and use the approved R003 brief in research/units/.
 ```
 
 For the next unit, replace `R003` with `R004`.
