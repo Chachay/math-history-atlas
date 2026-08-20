@@ -3,6 +3,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import json
 import shutil
+import yaml
 from scripts.common import ROOT, load_yaml_files
 from scripts.validate import validate_all
 from scripts.build_intersections import build_intersections
@@ -29,7 +30,8 @@ def main():
     questions = load_yaml_files(ROOT/'data/questions')
     assertions = load_yaml_files(ROOT/'data/assertions')
     stories = load_yaml_files(ROOT/'editorial/stories')
-    transitions = load_yaml_files(ROOT/'editorial', pattern='story-transitions.yaml')
+    transition_file = ROOT/'editorial/story-transitions.yaml'
+    transitions = yaml.safe_load(transition_file.read_text(encoding='utf-8')) or []
     dump('graph.json', {'entities': entities, 'questions': questions, 'assertions': assertions})
     dump('intersections.json', build_intersections())
     dump('person-index.json', build_person_index())
