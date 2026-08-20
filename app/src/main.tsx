@@ -243,7 +243,7 @@ function storyText(storyId: string, ref: string, role: string) {
     'concept-continuity': 'Continuity must be separated from nearby notions and stated in a form that survives increasingly pathological examples.',
     'work-fourier-theorie': 'A landmark work provides a historical anchor; editorial interpretations are kept separate from claims about the author’s own motivations.',
   };
-  return keyed[ref] || `${role} in ${storyId}. The final narrative will be generated only from accepted historical assertions.`;
+  return keyed[ref] || '';
 }
 
 createRoot(document.getElementById('root')!).render(<App />);
