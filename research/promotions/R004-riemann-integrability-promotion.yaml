@@ -1,0 +1,90 @@
+research_unit_id: R004
+packet: R004-riemann-integrability.yaml
+review: R004-riemann-integrability-review.yaml
+resolution: R004-riemann-integrability-resolution.yaml
+summary:
+  proposed_changes: 4
+  skipped_items: 0
+changes:
+- finding_id: hr-r004-a005
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Replace the graph predicate generalized with contributed_to so the canonical
+    relation does not overstate Riemann''s criterion as a formal generalization of the broader inherited
+    analytic-admissibility concept.
+
+    '
+  target:
+    section: assertions
+    id: r004-a005
+  proposed_change:
+    action: replace_fields
+    fields:
+      predicate: contributed_to
+  status: proposed
+- finding_id: hr-r004-a006
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Use Riemann''s period-appropriate description of the rational discontinuity example
+    in the historical assertion and retain dense/countable language only as explicit modern abstraction.
+
+    '
+  target:
+    section: assertions
+    id: r004-a006
+  proposed_change:
+    action: replace_fields
+    fields:
+      statement: 'Riemann explicitly investigates functions that are discontinuous infinitely often in
+        every interval and constructs an example discontinuous at rational arguments which, in lowest
+        terms, have an even denominator, while the function still satisfies his criterion for definite
+        integration.
+
+        '
+      uncertainty: 'Modern descriptions of these discontinuity points as a dense countable subset of the
+        rationals are explanatory abstractions and should not be attributed to Riemann''s terminology.
+
+        '
+  status: proposed
+- finding_id: hr-r004-a007
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Limit the comparison to the finite-discontinuity hypothesis in Dirichlet''s main
+    stated convergence conditions; do not reduce Dirichlet''s full 1829 admissibility discussion to that
+    boundary.
+
+    '
+  target:
+    section: assertions
+    id: r004-a007
+  proposed_change:
+    action: replace_fields
+    fields:
+      statement: 'Compared with the finite-discontinuity hypothesis in Dirichlet''s main stated convergence
+        conditions, Riemann''s example admits infinitely many discontinuities while remaining integrable
+        in Riemann''s sense; this does not imply that Dirichlet''s entire 1829 admissibility discussion
+        imposed finite discontinuity as a universal boundary.
+
+        '
+  status: proposed
+- finding_id: hr-r004-qt001
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Mark the Atlas question-to-question transition later_interpretation while preserving
+    Riemann''s explicit treatment of unresolved Dirichlet cases as its direct historical basis.
+
+    '
+  target:
+    section: question_transitions
+    id: r004-qt001
+  proposed_change:
+    action: replace_fields
+    fields:
+      perspective: later_interpretation
+      relation: 'Riemann''s explicit treatment of unresolved Dirichlet cases supplies a historical basis
+        for the Atlas transition from analytic admissibility to a more explicit criterion for definite
+        integration.
+
+        '
+  status: proposed
+skipped: []

@@ -1,0 +1,12 @@
+- id: r004-cs-integrability-1854
+  concept_id: concept-integrability
+  period: {from: 1854, to: 1854}
+  label: Definite integrability is tested through convergence of subdivision sums and control of oscillation.
+- id: r004-cs-riemann-integral-1854
+  concept_id: concept-riemann-integral
+  period: {from: 1854, to: 1854}
+  label: Riemann formulates a sum-based criterion for definite integration within the trigonometric-series investigation.
+- id: r004-cs-discontinuity-1854
+  concept_id: concept-discontinuous-function
+  period: {from: 1854, to: 1854}
+  label: Functions discontinuous infinitely often in every interval become explicit test cases rather than automatic exclusions from integration.

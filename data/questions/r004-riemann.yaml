@@ -1,0 +1,12 @@
+- id: q-riemann-integrability
+  question: Under what conditions does a finite function admit a definite integral in Riemann's sense?
+  period: {from: 1854, to: null}
+  fields: [analysis]
+- id: q-infinitely-discontinuous-functions
+  question: Can functions with infinitely many discontinuities still be definitely integrable?
+  period: {from: 1854, to: null}
+  fields: [analysis]
+- id: q-post-riemann-integration-gap
+  question: What further integration or exceptional-set questions remain beyond Riemann's criterion?
+  period: {from: 1854, to: null}
+  fields: [analysis]

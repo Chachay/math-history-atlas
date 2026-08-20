@@ -1,3 +1,6 @@
+import subprocess
+import sys
+
 from scripts.validate import validate_all
 from scripts.build_intersections import build_intersections
 from scripts.common import ROOT, load_yaml_files
@@ -69,6 +72,18 @@ def test_integrity_requires_stable_unique_finding_ids():
         assert 'Duplicate' in str(exc)
     else:
         raise AssertionError('duplicate finding IDs should be rejected')
+
+
+def test_integrity_cli_modules_are_invokable_from_repo_root():
+    for module in ('scripts.bind_resolution', 'scripts.promote_verified'):
+        result = subprocess.run(
+            [sys.executable, '-m', module, '--help'],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        assert result.returncode == 0, result.stderr
 
 
 def test_canonical_promotion_provenance_maps_are_valid():

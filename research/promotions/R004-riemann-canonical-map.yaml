@@ -1,0 +1,52 @@
+research_unit_id: R004
+packet: research/packets/R004-riemann-integrability.yaml
+canonical_entities:
+  - canonical_id: work-riemann-trig-1854
+    packet_refs: [{section: entities, id: work-riemann-trig-1854}]
+  - canonical_id: concept-riemann-integral
+    packet_refs: [{section: entities, id: concept-riemann-integral}]
+canonical_questions:
+  - canonical_id: q-riemann-integrability
+    packet_refs: [{section: question_transitions, id: r004-qt001}]
+  - canonical_id: q-infinitely-discontinuous-functions
+    packet_refs: [{section: question_transitions, id: r004-qt002}]
+  - canonical_id: q-post-riemann-integration-gap
+    packet_refs: [{section: question_transitions, id: r004-qt004}]
+canonical_assertions:
+  - canonical_id: assertion-r004-riemann-problem
+    packet_refs: [{section: assertions, id: r004-a001}]
+  - canonical_id: assertion-r004-dirichlet-scope
+    packet_refs: [{section: assertions, id: r004-a002}]
+  - canonical_id: assertion-r004-integral-need
+    packet_refs: [{section: assertions, id: r004-a003}]
+  - canonical_id: assertion-r004-integral-criterion
+    packet_refs: [{section: assertions, id: r004-a004}]
+  - canonical_id: assertion-r004-integrability-relation
+    packet_refs: [{section: assertions, id: r004-a005}]
+  - canonical_id: assertion-r004-discontinuous-example
+    packet_refs: [{section: assertions, id: r004-a006}]
+  - canonical_id: assertion-r004-dirichlet-comparison
+    packet_refs: [{section: assertions, id: r004-a007}]
+  - canonical_id: assertion-r004-admissibility-handoff
+    packet_refs: [{section: assertions, id: r004-a008}]
+  - canonical_id: assertion-r004-motivation-historiography
+    packet_refs: [{section: assertions, id: r004-a009}]
+  - canonical_id: assertion-r004-integrability-not-sufficient
+    packet_refs: [{section: assertions, id: r004-a010}]
+  - canonical_id: assertion-r004-downstream-gap
+    packet_refs: [{section: question_transitions, id: r004-qt004}]
+stories:
+  - story_id: story-integrability
+    steps:
+      - step_id: integrability-1
+        canonical_assertion_refs: [assertion-r004-admissibility-handoff, assertion-r004-integral-need]
+      - step_id: integrability-2
+        canonical_assertion_refs: [assertion-r004-dirichlet-scope, assertion-r004-integral-need]
+      - step_id: integrability-3
+        canonical_assertion_refs: [assertion-r004-integral-criterion]
+      - step_id: integrability-4
+        canonical_assertion_refs: [assertion-r004-discontinuous-example]
+      - step_id: integrability-5
+        canonical_assertion_refs: [assertion-r004-integrability-not-sufficient]
+      - step_id: integrability-6
+        canonical_assertion_refs: [assertion-r004-downstream-gap]

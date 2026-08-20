@@ -33,10 +33,10 @@ Challenges source support, causation, chronology, terminology, priority, and his
 ### Human research resolution
 Records the human decision on critic findings. A resolution is not reusable indefinitely: before promotion it must be bound to the exact packet and review content by SHA-256 fingerprints.
 
-Run:
+Run package-aware integrity tooling as modules from the repository root:
 
 ```text
-python scripts/bind_resolution.py R002
+python -m scripts.bind_resolution R002
 ```
 
 If either the Research Packet or Historical Critic review later changes, the stored fingerprints become stale. The unit must be reviewed/rebound before promotion.
@@ -45,8 +45,8 @@ If either the Research Packet or Historical Critic review later changes, the sto
 Promotion must pass the integrity gate before any accepted correction is applied:
 
 ```text
-python scripts/promote_verified.py R002
-python scripts/promote_verified.py R002 --apply
+python -m scripts.promote_verified R002
+python -m scripts.promote_verified R002 --apply
 ```
 
 `promote_verified.py` refuses promotion when:
