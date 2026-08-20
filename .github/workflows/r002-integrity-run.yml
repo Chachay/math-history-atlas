@@ -1,16 +1,15 @@
 name: R002 integrity promotion
 
 on:
-  push:
-    paths:
-      - '.github/workflows/r002-integrity-run.yml'
+  pull_request:
+    types: [synchronize]
 
 permissions:
   contents: write
 
 jobs:
   promote:
-    if: github.ref == 'refs/heads/research/r002-cauchy-rigor'
+    if: github.event.pull_request.head.ref == 'research/r002-cauchy-rigor' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
