@@ -66,7 +66,17 @@ The validator checks duplicate IDs, dangling references, source coverage, predic
 7. Apply explicit human editorial resolutions; unresolved transitions become research gaps rather than smooth prose.
 8. Run validation/build and use the Story's stable hash route in the PR Preview for mobile review.
 
-See `editorial/WORKFLOW.md` for the R002-ready acceptance gate and responsibility split.
+See `editorial/WORKFLOW.md` for the integrity gate and responsibility split.
+
+For a fresh ChatGPT conversation, use `research/prompts/research-unit-kickoff-v1.md`. It instructs the assistant to recover current `main`, select/bound the next topic, run Phase A + Phase B, validate/build, and stop with an open PR for human/mobile review.
+
+Minimal kickoff:
+
+```text
+Open Chachay/math-history-atlas and follow research/prompts/research-unit-kickoff-v1.md for R003. Read current main first, then propose the research theme.
+```
+
+Replace `R003` with the desired research unit ID.
 
 ## GitHub PR review workflow
 
@@ -78,9 +88,9 @@ The PoC sample is in `data/**/core.yaml`, `editorial/stories/core.yaml`, and `so
 
 ## Next steps
 
-1. Use R002 as the first fresh research unit to exercise the full Research → Story Critic workflow without R001-specific intervention.
-2. Add a PR-summary generator optimized for direct Story deep links and mobile review.
-3. Expand through Cantor, Lebesgue, Hilbert, topology/cohomology, Serre, and Grothendieck.
+1. Run R003 and R004 as fresh research units using the reusable kickoff prompt and current `main` as the only repository-state authority.
+2. Use those units to stress-test Story intersections, temporal anchors, branch/convergence semantics, and Network scaling.
+3. Continue expanding through Cantor, Lebesgue, Hilbert, topology/cohomology, Serre, and Grothendieck as the graph supports it.
 4. Improve Atlas projection and interactive graph rendering without changing canonical graph semantics.
 
 ## V5 mobile UI
