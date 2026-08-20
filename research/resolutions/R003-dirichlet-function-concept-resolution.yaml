@@ -1,0 +1,40 @@
+research_unit_id: R003
+packet: R003-dirichlet-function-concept.yaml
+review: R003-dirichlet-function-concept-review.yaml
+decisions:
+- review_key: finding:hr-r003-chronology-1837
+  kind: chronology
+  item_id: hr-r003-chronology-1837
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: 'Accepted. Before promotion, independently audit the 1837 opening passage at page level. A persistent
+    scan of Dirichlet''s Werke I confirms the passage at pp. 133-134, corresponding to the original Repertorium
+    der Physik article pp. 152-153.
+
+    '
+- review_key: finding:hr-r003-a006
+  kind: assertions
+  item_id: hr-r003-a006
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: 'Accepted. Page-level audit completed against the persistent e-rara scan of Dirichlet''s Werke
+    I, pp. 133-134: the text states that each x corresponds to a unique finite y, that one common law
+    over the whole interval is unnecessary, and that the dependence need not be expressible by mathematical
+    operations. Preserve the packet''s caveat that the passage formally defines a continuous function
+    on a real interval rather than an arbitrary modern set mapping.
+
+    '
+- review_key: finding:hr-r003-a011
+  kind: assertions
+  item_id: hr-r003-a011
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Apply the critic''s proposed replacement: use contributed_to rather than raised_question,
+    and keep the bridge to later integrability explicitly retrospective.
+
+    '
+resolution_date: '2026-08-20'
+resolution_status: human_approved_pending_integrity_binding
+integrity:
+  packet_sha256: sha256:bbae93c52d70cb1f2cf0ea0bc8cad68315fa5f73a4126163400105dcdfa34588
+  review_sha256: sha256:5e24072e24471040dcb8db98410e2e7ed6d584b01918509ce4b746ebde2d84e9

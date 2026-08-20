@@ -1,14 +1,51 @@
 - id: story-function
   title: What is a function?
-  description: >
-    PoC stub retained temporarily so the existing Story ID and Network intersection remain stable until R003 replaces this
-    file entry with a researched, reviewed Story using the same `story-function` ID.
-  question_phases: [q-what-is-function]
+  description: From Fourier's broad representational practice to Dirichlet's restrictions, discontinuous examples, and a remaining problem of analytic admissibility.
+  question_phases: [q-what-is-function, q-fourier-series-convergence, q-dirichlet-admissible-functions]
   fields: [analysis]
   steps:
-    - {id: function-1, ref: concept-function, role: Question}
-    - {id: function-2, ref: concept-fourier-series, role: Problem}
-    - {id: function-3, ref: concept-continuity, role: Remaining gap}
+    - id: function-1
+      ref: concept-fourier-series
+      role: Problem
+      narrative: >
+        Fourier's use of trigonometric representation became, in later historical interpretation, part of a broader nineteenth-century loosening of the link between a function and one analytic expression. That retrospective connection raises the Atlas question of what kinds of numerical dependencies should count as functions.
+      assertion_refs: [assertion-r001-function-concept, assertion-r003-function-historiography]
+      perspective: later_interpretation
+      temporal_anchor: {from: 1807, to: 1822}
+    - id: function-2
+      ref: q-fourier-series-convergence
+      role: Response
+      narrative: >
+        In 1829 Dirichlet directly addressed when trigonometric series converge to the functions they are meant to represent. His paper explicitly places this work after Fourier's representational method and criticizes Cauchy's attempted general convergence proof.
+      assertion_refs: [assertion-r003-dirichlet-convergence, assertion-r003-dirichlet-fourier-cauchy]
+      perspective: historical
+      temporal_anchor: {from: 1829, to: 1829}
+    - id: function-3
+      ref: concept-discontinuous-function
+      role: Remaining gap
+      narrative: >
+        Dirichlet allowed finitely many discontinuities, but he also separated having finite determined values from being admissible for the integrals used in the Fourier coefficients. His rational-versus-irrational example makes that boundary explicit: a numerical assignment can be determined everywhere while still falling outside the integration machinery being used.
+      assertion_refs: [assertion-r003-dirichlet-arbitrary-admissibility, assertion-r003-dirichlet-discontinuity, assertion-r003-dirichlet-integral-boundary]
+      perspective: historical
+      temporal_anchor: {from: 1829, to: 1829}
+    - id: function-4
+      ref: work-dirichlet-1837
+      role: Response
+      narrative: >
+        In 1837 Dirichlet described a continuous function on an interval without requiring one common law over the whole interval or dependence expressible by mathematical operations. Later historians treat this as an important stage in the changing function concept, but the passage is not presented here as a twentieth-century set-theoretic definition or as a unique priority event.
+      assertion_refs: [assertion-r003-dirichlet-1837-function, assertion-r003-function-historiography]
+      perspective: later_interpretation
+      temporal_anchor: {from: 1837, to: 1837}
+    - id: function-5
+      ref: q-dirichlet-admissible-functions
+      role: Next question
+      narrative: >
+        Read retrospectively, the broader language of function still leaves a distinct analytic question: which such functions may legitimately enter definite integrals and trigonometric representations? R003 leaves that question open rather than supplying Riemann's later answer in advance.
+      assertion_refs: [assertion-r003-downstream-admissibility, assertion-r003-dirichlet-integral-boundary]
+      perspective: later_interpretation
+      temporal_anchor: {from: 1837, to: 1837}
   links:
-    - {from: function-1, to: function-2, type: continues}
-    - {from: function-2, to: function-3, type: branches}
+    - {from: function-1, to: function-2, type: branches}
+    - {from: function-2, to: function-3, type: continues}
+    - {from: function-3, to: function-4, type: branches}
+    - {from: function-4, to: function-5, type: branches}

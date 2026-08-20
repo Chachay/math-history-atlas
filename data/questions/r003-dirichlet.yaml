@@ -1,0 +1,4 @@
+- id: q-dirichlet-admissible-functions
+  question: Under what conditions can broadly specified functions legitimately enter definite integrals and trigonometric representations?
+  period: {from: 1829, to: null}
+  fields: [analysis]

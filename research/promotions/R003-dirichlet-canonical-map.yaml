@@ -1,0 +1,40 @@
+research_unit_id: R003
+packet: research/packets/R003-dirichlet-function-concept.yaml
+canonical_entities:
+  - canonical_id: work-dirichlet-1837
+    packet_refs: [{section: entities, id: work-dirichlet-1837}]
+  - canonical_id: concept-integrability
+    packet_refs: [{section: entities, id: concept-integrability}]
+canonical_questions:
+  - canonical_id: q-dirichlet-admissible-functions
+    packet_refs: [{section: assertions, id: r003-a011}]
+canonical_assertions:
+  - canonical_id: assertion-r003-dirichlet-convergence
+    packet_refs: [{section: assertions, id: r003-a001}]
+  - canonical_id: assertion-r003-dirichlet-arbitrary-admissibility
+    packet_refs: [{section: assertions, id: r003-a003}]
+  - canonical_id: assertion-r003-dirichlet-discontinuity
+    packet_refs: [{section: assertions, id: r003-a004}]
+  - canonical_id: assertion-r003-dirichlet-integral-boundary
+    packet_refs: [{section: assertions, id: r003-a005}]
+  - canonical_id: assertion-r003-dirichlet-1837-function
+    packet_refs: [{section: assertions, id: r003-a006}]
+  - canonical_id: assertion-r003-function-historiography
+    packet_refs: [{section: assertions, id: r003-a007}]
+  - canonical_id: assertion-r003-dirichlet-fourier-cauchy
+    packet_refs: [{section: assertions, id: r003-a009}]
+  - canonical_id: assertion-r003-downstream-admissibility
+    packet_refs: [{section: assertions, id: r003-a011}]
+stories:
+  - story_id: story-function
+    steps:
+      - step_id: function-1
+        canonical_assertion_refs: [assertion-r001-function-concept, assertion-r003-function-historiography]
+      - step_id: function-2
+        canonical_assertion_refs: [assertion-r003-dirichlet-convergence, assertion-r003-dirichlet-fourier-cauchy]
+      - step_id: function-3
+        canonical_assertion_refs: [assertion-r003-dirichlet-arbitrary-admissibility, assertion-r003-dirichlet-discontinuity, assertion-r003-dirichlet-integral-boundary]
+      - step_id: function-4
+        canonical_assertion_refs: [assertion-r003-dirichlet-1837-function, assertion-r003-function-historiography]
+      - step_id: function-5
+        canonical_assertion_refs: [assertion-r003-downstream-admissibility, assertion-r003-dirichlet-integral-boundary]

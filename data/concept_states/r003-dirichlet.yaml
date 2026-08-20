@@ -1,0 +1,8 @@
+- id: state-r003-function-1837
+  concept_id: concept-function
+  period: {from: 1837, to: 1837}
+  label: Numerical function language need not be tied to one analytic law, while remaining within nineteenth-century real-variable practice.
+- id: state-r003-discontinuity-1829
+  concept_id: concept-discontinuous-function
+  period: {from: 1829, to: 1829}
+  label: Discontinuous and highly irregular numerical assignments appear explicitly, but admissibility still depends on the integration framework.

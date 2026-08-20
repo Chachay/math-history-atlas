@@ -1,0 +1,10 @@
+- id: work-dirichlet-1837
+  type: Work
+  name: Ueber die Darstellung ganz willkürlicher Functionen durch Sinus- und Cosinusreihen
+  start_year: 1837
+  fields: [analysis]
+- id: concept-integrability
+  type: Concept
+  name: Analytic admissibility for definite integration
+  start_year: 1829
+  fields: [analysis]
