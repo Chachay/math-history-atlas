@@ -154,22 +154,45 @@ def build_promotion(
         "skipped": skipped,
     }
 
+def resolve_section(
+    packet: dict[str, Any],
+    section_path: str,
+) -> list[Any]:
+    current: Any = packet
+
+    for part in section_path.split("."):
+        if not isinstance(current, dict):
+            raise ValueError(
+                f"Cannot resolve section path {section_path!r}: "
+                f"{part!r} is below a non-mapping object."
+            )
+
+        if part not in current:
+            raise ValueError(
+                f"Section path {section_path!r} does not exist "
+                f"in the Research Packet."
+            )
+
+        current = current[part]
+
+    if not isinstance(current, list):
+        raise ValueError(
+            f"Target section {section_path!r} is not a list in the packet."
+        )
+
+    return current
+
 
 def match_target(
     packet: dict[str, Any],
     target: dict[str, Any],
-) -> tuple[str, list[int]]:
+) -> tuple[str, list[Any], list[int]]:
     section = target.get("section")
 
     if not section:
         raise ValueError("Target is missing 'section'.")
 
-    rows = packet.get(section)
-
-    if not isinstance(rows, list):
-        raise ValueError(
-            f"Target section {section!r} is not a list in the packet."
-        )
+    rows = resolve_section(packet, section)
 
     matches: list[int] = []
 
@@ -182,22 +205,32 @@ def match_target(
                 matches.append(index)
 
     elif isinstance(target_match, dict):
-        for index, row in enumerate(rows):
-            if not isinstance(row, dict):
-                continue
+        # Special case: substring match for scalar string entries.
+        if set(target_match.keys()) == {"contains"}:
+            needle = str(target_match["contains"])
 
-            if all(
-                str(row.get(key)) == str(value)
-                for key, value in target_match.items()
-            ):
-                matches.append(index)
+            for index, row in enumerate(rows):
+                if isinstance(row, str) and needle in row:
+                    matches.append(index)
+
+        else:
+            # Normal mapping match for dictionary entries.
+            for index, row in enumerate(rows):
+                if not isinstance(row, dict):
+                    continue
+
+                if all(
+                    str(row.get(key)) == str(value)
+                    for key, value in target_match.items()
+                ):
+                    matches.append(index)
 
     else:
         raise ValueError(
             f"Target for section {section!r} has neither 'id' nor 'match'."
         )
 
-    return section, matches
+    return section, rows, matches
 
 def apply_change(
     packet: dict[str, Any],
@@ -208,7 +241,7 @@ def apply_change(
 
     action = proposed_change.get("action")
 
-    section, matches = match_target(packet, target)
+    section, rows, matches = match_target(packet, target)
 
     if len(matches) == 0:
         raise RuntimeError(
@@ -222,8 +255,47 @@ def apply_change(
         )
 
     index = matches[0]
-    rows = packet[section]
     current = rows[index]
+
+    if action == "replace_fields":
+        if not isinstance(current, dict):
+            raise RuntimeError(
+                f"{change['finding_id']}: "
+                "replace_fields target is not a mapping."
+            )
+
+        fields = proposed_change.get("fields")
+
+        if not isinstance(fields, dict):
+            raise ValueError(
+                f"{change['finding_id']}: "
+                "replace_fields requires 'fields'."
+            )
+
+        current.update(fields)
+        return "applied"
+
+    if action == "replace_entry":
+        if "value" not in proposed_change:
+            raise ValueError(
+                f"{change['finding_id']}: "
+                "replace_entry requires 'value'."
+            )
+
+        rows[index] = proposed_change["value"]
+        return "applied"
+
+    if action == "remove":
+        del rows[index]
+        return "applied"
+
+    if action == "manual_review":
+        return "manual_review"
+
+    if action == "add_evidence":
+        return "unsupported"
+
+    return "unsupported"
 
     if not isinstance(current, dict):
         raise RuntimeError(
@@ -344,41 +416,6 @@ def main() -> int:
             f"Resolution unit ID is {resolution_unit_id!r}, expected {unit_id!r}"
         )
 
-    promotion = build_promotion(
-        unit_id=unit_id,
-        packet_file=packet_file,
-        review_file=review_file,
-        resolution_file=resolution_file,
-        review=review,
-        resolution=resolution,
-    )
-
-    promotion_file = (
-        promotion_dir
-        / packet_file.name.replace(".yaml", "-promotion.yaml")
-    )
-
-    save_yaml(promotion_file, promotion)
-
-    print()
-    print(f"{unit_id} promotion proposal")
-    print("=" * 72)
-    print(
-        f"Proposed changes: {promotion['summary']['proposed_changes']}"
-    )
-    print(
-        f"Skipped items:    {promotion['summary']['skipped_items']}"
-    )
-    print()
-    print(f"Saved: {promotion_file.relative_to(root)}")
-
-    if promotion["skipped"]:
-        print()
-        print("Skipped:")
-        for item in promotion["skipped"]:
-            print(
-                f"- {item['item_id']}: {item['reason']}"
-            )
 
     promotion = build_promotion(
         unit_id=unit_id,
@@ -415,6 +452,48 @@ def main() -> int:
             print(
                 f"- {item['item_id']}: {item['reason']}"
             )
+
+    # Dry run ends here.
+    if not args.apply:
+        return 0
+
+    # --apply continues here.
+    applied = 0
+    manual_review = 0
+    unsupported = 0
+
+    print()
+    print("Applying accepted changes")
+    print("=" * 72)
+
+    for change in promotion["changes"]:
+        action = change["proposed_change"].get("action")
+
+        result = apply_change(packet, change)
+
+        print(
+            f"- {change['finding_id']}: "
+            f"{action} -> {result}"
+        )
+
+        if result == "applied":
+            applied += 1
+        elif result == "manual_review":
+            manual_review += 1
+        else:
+            unsupported += 1
+
+    if applied:
+        save_yaml(packet_file, packet)
+
+    print()
+    print(f"Applied changes: {applied}")
+    print(f"Manual review:   {manual_review}")
+    print(f"Unsupported:     {unsupported}")
+
+    if applied:
+        print()
+        print(f"Updated: {packet_file.relative_to(root)}")
 
     return 0
 
