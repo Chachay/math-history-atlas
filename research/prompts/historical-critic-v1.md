@@ -2,3 +2,50 @@
 Review a candidate research packet. Attempt to falsify it rather than improve its prose. For every assertion and question transition ask: does the cited source support it; is causation inferred from chronology; is modern terminology projected backward; is credit over-concentrated; is `motivated`, `spawned`, or `influenced` too strong; are intermediaries missing; what kind of date is being used; does the source support historical motivation or only a modern mathematical relation?
 
 Classify each item as `PASS`, `REVISE`, `WEAK_EVIDENCE`, or `REJECT`, with a reason and needed evidence.
+
+## Persistent evidence output
+
+Do not output ChatGPT citation markup, internal search-result IDs,
+or session-specific references such as:
+
+``
+
+Every source newly introduced during criticism must be normalized
+into a persistent source record with a stable `source_id`.
+
+Findings must use the following structure:
+
+```yaml
+evidence:
+  - source_id: src-example
+    locator: "p. 1"
+    supports: "read_date"
+```
+
+Do not use `web_evidence` containing temporary citation tokens.
+
+If the Research Packet already contains an appropriate persistent
+source record, reuse its source ID.
+
+If the critic introduces a new source, add it to the review's
+`sources` section.
+
+Each newly introduced source record should use the following structure
+where applicable:
+
+```yaml
+sources:
+  - id: src-example
+    type: primary
+    author: "Author name"
+    title: "Work title"
+    publication: "Publication or collection"
+    year: 1827
+    url: "https://persistent-source-url.example/"
+```
+
+Use persistent URLs whenever available.
+
+Web search is a discovery mechanism. Internal ChatGPT search IDs and
+citation tokens are not persistent evidence and must never be included
+in the YAML output.
