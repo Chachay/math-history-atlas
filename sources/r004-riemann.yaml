@@ -1,0 +1,30 @@
+- id: source-riemann-trig-1867
+  title: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+  author: Bernhard Riemann
+  year: 1867
+  kind: primary
+  url: https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Trig/Trig.pdf
+- id: source-riemann-trig-1867-erara
+  title: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+  author: Bernhard Riemann
+  year: 1867
+  kind: primary_digitization
+  url: https://doi.org/10.3931/e-rara-49760
+- id: source-riemann-ms-gdz
+  title: Trigonometrische Reihen / Habilitationsschrift manuscript
+  author: Bernhard Riemann
+  year: 1854
+  kind: primary_archive
+  url: http://resolver.sub.uni-goettingen.de/purl?DE-611-HS-3204968
+- id: source-rowe-2026
+  title: Riemann's Habilitation Texts
+  author: David E. Rowe
+  year: 2026
+  kind: secondary_specialist
+  url: https://doi.org/10.1007/978-3-032-25457-3_7
+- id: source-mascre-2005
+  title: Bernhard Riemann, posthumous thesis on the representation of functions by trigonometric series (1867)
+  author: David Mascré
+  year: 2005
+  kind: secondary_specialist
+  url: https://doi.org/10.1016/B978-044450871-3/50119-4
