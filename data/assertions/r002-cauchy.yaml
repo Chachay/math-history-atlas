@@ -1,0 +1,117 @@
+- id: assertion-r002-cauchy-rigor
+  subject: work-cauchy-cours
+  predicate: contributed_to
+  object: q-cauchy-rigor
+  period: {from: 1821, to: 1821}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-1821, source-bradley-sandifer-2009]
+  status: historically_reviewed
+- id: assertion-r002-cauchy-infinitesimal
+  subject: person-cauchy
+  predicate: contributed_to
+  object: concept-infinitesimal
+  period: {from: 1821, to: 1823}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-1821, source-cauchy-1823]
+  status: historically_reviewed
+- id: assertion-r002-cauchy-continuity
+  subject: person-cauchy
+  predicate: contributed_to
+  object: concept-continuity
+  period: {from: 1821, to: 1823}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-1821, source-bradley-sandifer-2009]
+  status: historically_reviewed
+- id: assertion-r002-cauchy-convergence
+  subject: work-cauchy-cours
+  predicate: contributed_to
+  object: concept-convergence
+  period: {from: 1821, to: 1821}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-1821, source-bradley-sandifer-2009]
+  status: historically_reviewed
+- id: assertion-r002-sum-continuity-problem
+  subject: work-cauchy-cours
+  predicate: contributed_to
+  object: q-continuity-under-limits
+  period: {from: 1821, to: 1853}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-cauchy-1821, source-arsac-2013]
+  status: historically_reviewed
+- id: assertion-r002-periodic-fourier
+  subject: work-cauchy-periodic-1827
+  predicate: contributed_to
+  object: concept-fourier-series
+  period: {from: 1826, to: 1827}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-periodic-series-1827]
+  status: historically_reviewed
+- id: assertion-r002-periodic-convergence
+  subject: work-cauchy-periodic-1827
+  predicate: contributed_to
+  object: q-fourier-series-convergence
+  period: {from: 1826, to: 1829}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-periodic-series-1827, source-dirichlet-1829]
+  status: historically_reviewed
+- id: assertion-r002-abel-continuity
+  subject: work-abel-binomial-1826
+  predicate: contributed_to
+  object: q-continuity-under-limits
+  period: {from: 1826, to: 1826}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-arsac-2013]
+  status: historically_reviewed
+- id: assertion-r002-cauchy-1853-continuity
+  subject: work-cauchy-series-1853
+  predicate: contributed_to
+  object: q-continuity-under-limits
+  period: {from: 1853, to: 1853}
+  perspective: historical
+  certainty: high
+  sources: [source-cauchy-1853, source-arsac-2013]
+  status: historically_reviewed
+- id: assertion-r002-cauchy-1853-uniform
+  subject: work-cauchy-series-1853
+  predicate: contributed_to
+  object: concept-uniform-convergence
+  period: {from: 1853, to: 1853}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-cauchy-1853, source-arsac-2013]
+  status: historically_reviewed
+- id: assertion-r002-stokes-uniform
+  subject: person-stokes
+  predicate: contributed_to
+  object: concept-uniform-convergence
+  period: {from: 1847, to: 1847}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-stokes-1847, source-arsac-2013]
+  status: historically_reviewed
+- id: assertion-r002-seidel-uniform
+  subject: person-seidel
+  predicate: contributed_to
+  object: concept-uniform-convergence
+  period: {from: 1848, to: 1848}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-seidel-1848, source-arsac-2013]
+  status: historically_reviewed
+- id: assertion-r002-weierstrass-uniform
+  subject: person-weierstrass
+  predicate: contributed_to
+  object: concept-uniform-convergence
+  period: {from: 1861, to: 1886}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-weierstrass-uniform-history]
+  status: historically_reviewed

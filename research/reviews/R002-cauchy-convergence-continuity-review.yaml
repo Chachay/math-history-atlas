@@ -1,0 +1,339 @@
+review:
+  research_unit_id: R002
+  packet: R002-cauchy-convergence-continuity.yaml
+  critic_version: historical-critic-v1
+  review_date: "2026-08-20"
+  summary:
+    pass: 21
+    revise: 1
+    weak_evidence: 3
+    reject: 0
+  overall_assessment: >
+    The packet is substantially more cautious than a conventional textbook genealogy and
+    correctly distinguishes Cauchy's own language from later epsilon-delta and uniform-
+    convergence formulations. The main remaining weakness is evidentiary rather than
+    conceptual: Abel's 1826 primary source is bibliographically identified but not linked
+    to a direct persistent scan, and the 1847/1848 Stokes-Seidel episode should be grounded
+    in their primary publications. One wording in the Abel assertion is also stronger than
+    the packet's present primary evidence supports.
+
+findings:
+  - id: f-chronology-1821
+    reviewed_item: {section: chronology, match: {date: "1821"}}
+    classification: PASS
+    reason: >
+      Cauchy's 1821 Cours is correctly dated and the packet does not project the later
+      epsilon-delta formalism onto his text.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "Préliminaires and ch. VI", supports: chronology_and_concepts}
+
+  - id: f-chronology-1823
+    reviewed_item: {section: chronology, match: {date: "1823"}}
+    classification: PASS
+    reason: >
+      The 1823 Résumé is correctly treated as a continuation of Cauchy's limit/infinitesimal
+      calculus program without claiming modern formal equivalence.
+    evidence:
+      - {source_id: src-cauchy-1823, locator: "volume as a whole", supports: publication_and_scope}
+
+  - id: f-chronology-periodic-1826
+    reviewed_item: {section: chronology, match: {date: "1826-02-27"}}
+    classification: PASS
+    reason: >
+      The read date, 1827 publication date, and nominal volume-year warning are explicit and
+      consistent with the memoir itself.
+    evidence:
+      - {source_id: src-cauchy-periodic-1827, locator: "opening page", supports: read_date_and_aim}
+
+  - id: f-chronology-abel-1826
+    reviewed_item: {section: chronology, match: {date: "1826"}}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      The historical claim is well supported by specialist secondary literature, but the
+      packet's Abel source URL points only to the Gallica home page rather than the cited
+      article or collected-works scan. The claim should not be promoted until a persistent
+      direct source is attached or the relevant primary pages are independently audited.
+    needed_evidence: >
+      Direct persistent scan or stable bibliographic object for Abel's 1826 paper, especially
+      the passage usually cited around p. 316.
+    target:
+      section: chronology
+      match: {date: "1826"}
+    proposed_change:
+      action: add_evidence
+      sources: [src-arsac-2013]
+    evidence:
+      - {source_id: src-arsac-2013, locator: "discussion of Abel 1826 and Cauchy's sum theorem", supports: historical_exception}
+
+  - id: f-chronology-dirichlet-1829
+    reviewed_item: {section: chronology, match: {date: "1829"}}
+    classification: PASS
+    reason: >
+      Dirichlet's paper and Riemann's retrospective account support both the rigorous restricted
+      convergence theorem and criticism of Cauchy's attempted proof.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "paper", supports: theorem_and_criticism}
+      - {source_id: src-riemann-trig-history, locator: "historical introduction", supports: retrospective_assessment}
+
+  - id: f-chronology-stokes-seidel
+    reviewed_item: {section: chronology, match: {date: "1847–1848"}}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      The chronology is broadly correct, but this is exactly the kind of priority-sensitive
+      transition that should be supported by the primary Stokes and Seidel publications rather
+      than only later histories. Stokes's paper was read on 6 December 1847; Seidel's publication
+      is catalogued as 1848.
+    needed_evidence: >
+      Add direct records for Stokes, On the Critical Values of the Sums of Periodic Series,
+      and Seidel, Note über eine Eigenschaft der Reihen, welche discontinuirliche Functionen darstellen.
+    target:
+      section: chronology
+      match: {date: "1847–1848"}
+    proposed_change:
+      action: add_evidence
+      sources: [src-stokes-1847, src-seidel-1848]
+    evidence:
+      - {source_id: src-stokes-1847, locator: "title page/opening, read 6 Dec 1847", supports: stokes_date_and_topic}
+      - {source_id: src-seidel-1848, locator: "catalog record and digitized work", supports: seidel_date_and_topic}
+
+  - id: f-chronology-cauchy-1853
+    reviewed_item: {section: chronology, match: {date: "1853-03-14"}}
+    classification: PASS
+    reason: >
+      Cauchy's 1853 note explicitly revisits the earlier theorem, acknowledges exceptions,
+      and strengthens the remainder condition for all values between the limits. The packet
+      correctly avoids attributing the later term uniform convergence to Cauchy himself.
+    evidence:
+      - {source_id: src-cauchy-1853, locator: "pp. 454-459", supports: revision_and_condition}
+
+  - id: f-a001
+    reviewed_item: {section: assertions, id: r002-a001}
+    classification: PASS
+    reason: >
+      The claim is a restrained statement about the organizational role of limits in the
+      Cours, not an invention-priority claim.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "Préliminaires", supports: role_of_limit}
+      - {source_id: src-bradley-sandifer-2009, locator: "editorial overview", supports: historical_significance}
+
+  - id: f-a002
+    reviewed_item: {section: assertions, id: r002-a002}
+    classification: PASS
+    reason: >
+      This closely follows Cauchy's own definition of an infinitesimal variable quantity and
+      explicitly quarantines later ontological interpretations.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "Préliminaires, quantities infiniment petites", supports: definition}
+
+  - id: f-a003
+    reviewed_item: {section: assertions, id: r002-a003}
+    classification: PASS
+    reason: >
+      The wording reflects Cauchy's infinitesimal-increment formulation and explicitly warns
+      against silently replacing it by a modern pointwise or uniform epsilon-delta definition.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "continuity definition", supports: definition}
+
+  - id: f-a004
+    reviewed_item: {section: assertions, id: r002-a004}
+    classification: PASS
+    reason: >
+      Cauchy's convergence condition is accurately described as closely related to what is now
+      called the Cauchy criterion, while the uncertainty note prevents false priority concentration.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "series chapter", supports: convergence_condition}
+      - {source_id: src-history-wrong-definitions-2026, locator: "discussion of Cauchy's criterion", supports: antecedents_and_modern_reading}
+
+  - id: f-a005
+    reviewed_item: {section: assertions, id: r002-a005}
+    classification: PASS
+    reason: >
+      The statement is recognizably Cauchy's 1821 sum theorem and the packet correctly marks
+      the ordinary modern pointwise reading as false without a stronger condition.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "pp. 131-132 in standard pagination", supports: theorem}
+      - {source_id: src-arsac-2013, locator: "chapter III", supports: historical_analysis}
+
+  - id: f-a006
+    reviewed_item: {section: assertions, id: r002-a006}
+    classification: REVISE
+    severity: medium
+    reason: >
+      Specialist histories support that Abel pointed out an exception to Cauchy's theorem,
+      but the packet currently lacks a direct auditable Abel source. The phrase "explicitly
+      pointed out an exception to Cauchy's theorem" should therefore be softened until the
+      primary passage is attached; the mathematical counterexample relation itself is secure.
+    needed_evidence: >
+      Direct primary page from Abel 1826 showing the wording and whether Cauchy is explicitly
+      named in the relevant footnote/passage.
+    target:
+      section: assertions
+      id: r002-a006
+    proposed_change:
+      action: replace_fields
+      fields:
+        statement: >
+          Abel's 1826 paper contains a trigonometric-series exception to the continuity-of-the-sum
+          claim associated with Cauchy's 1821 theorem; specialist histories treat it as an early
+          explicit challenge to that result.
+        certainty: medium_high
+    evidence:
+      - {source_id: src-arsac-2013, locator: "discussion of Abel 1826", supports: historical_interpretation}
+
+  - id: f-a007
+    reviewed_item: {section: assertions, id: r002-a007}
+    classification: PASS
+    reason: >
+      Cauchy's memoir directly says that many problems of mathematical physics require periodic
+      expansions and names sine/cosine series.
+    evidence:
+      - {source_id: src-cauchy-periodic-1827, locator: "opening paragraph", supports: stated_motivation}
+
+  - id: f-a008
+    reviewed_item: {section: assertions, id: r002-a008}
+    classification: PASS
+    reason: >
+      The memoir's declared aim is a general convergence argument, and the packet clearly separates
+      that aim from the later judgment that the proof was insufficient.
+    evidence:
+      - {source_id: src-cauchy-periodic-1827, locator: "opening paragraph", supports: aim}
+      - {source_id: src-riemann-trig-history, locator: "historical introduction", supports: insufficiency}
+
+  - id: f-a009
+    reviewed_item: {section: assertions, id: r002-a009}
+    classification: PASS
+    reason: >
+      The qualification in the uncertainty field prevents overclaiming that Dirichlet replaced
+      every part of Cauchy's approach.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "paper", supports: restricted_convergence_theorem}
+      - {source_id: src-riemann-trig-history, locator: "historical introduction", supports: criticism_of_cauchy}
+
+  - id: f-a010
+    reviewed_item: {section: assertions, id: r002-a010}
+    classification: PASS
+    reason: >
+      Cauchy's 1853 note directly supports the revision and the domain-wide remainder condition.
+    evidence:
+      - {source_id: src-cauchy-1853, locator: "pp. 454-459", supports: revised_theorem}
+
+  - id: f-a011
+    reviewed_item: {section: assertions, id: r002-a011}
+    classification: PASS
+    reason: >
+      This is correctly labeled later_interpretation and explicitly distributes conceptual credit
+      rather than turning 1853 into a single-act invention story.
+    evidence:
+      - {source_id: src-arsac-2013, locator: "chapters on Cauchy, Seidel, Stokes", supports: historiography}
+      - {source_id: src-weierstrass-uniform-history, locator: "historical analysis", supports: non_linear_genealogy}
+
+  - id: f-a012
+    reviewed_item: {section: assertions, id: r002-a012}
+    classification: PASS
+    reason: >
+      Calling Fourier series a testing ground is a defensible retrospective synthesis, and the
+      packet explicitly rejects the stronger causal claim that Fourier's heat problem caused
+      Cauchy's general foundational program.
+    evidence:
+      - {source_id: src-cauchy-periodic-1827, locator: "opening paragraph", supports: periodic_series_and_mathematical_physics}
+      - {source_id: src-dirichlet-1829, locator: "paper", supports: convergence_problem}
+
+  - id: f-a013
+    reviewed_item: {section: assertions, id: r002-a013}
+    classification: PASS
+    reason: >
+      Recent specialist historiography supports both Weierstrass's systematic later treatment
+      and the warning against a simple transmission chain.
+    evidence:
+      - {source_id: src-weierstrass-uniform-history, locator: "article", supports: weierstrass_development}
+
+  - id: f-qt001
+    reviewed_item: {section: question_transitions, id: r002-qt001}
+    classification: PASS
+    reason: >
+      This is explicitly a methodological later interpretation and does not claim that Cauchy
+      himself posed the modern historiographical question.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "definitions", supports: need_for_historical_reconstruction}
+
+  - id: f-qt002
+    reviewed_item: {section: question_transitions, id: r002-qt002}
+    classification: PASS
+    reason: >
+      The transition is labeled later_interpretation and describes a mathematical dependency,
+      not an unsupported personal motivation.
+    evidence:
+      - {source_id: src-cauchy-1821, locator: "series chapter", supports: role_of_series}
+
+  - id: f-qt003
+    reviewed_item: {section: question_transitions, id: r002-qt003}
+    classification: PASS
+    reason: >
+      Cauchy's periodic-series memoir and Dirichlet's 1829 paper make this a genuine historical
+      intersection rather than a chronology-only inference.
+    evidence:
+      - {source_id: src-cauchy-periodic-1827, locator: "memoir", supports: historical_intersection}
+      - {source_id: src-dirichlet-1829, locator: "paper", supports: historical_intersection}
+
+  - id: f-qt004
+    reviewed_item: {section: question_transitions, id: r002-qt004}
+    classification: WEAK_EVIDENCE
+    severity: low
+    reason: >
+      The mathematical relation is correct, but the phrase "made visible" is a retrospective
+      narrative transition. It is appropriately labeled later_interpretation, yet the Abel
+      primary source should be audited before using this transition in a final Story.
+    needed_evidence: >
+      Direct Abel 1826 passage and, ideally, evidence about contemporary reception rather than
+      only modern recognition of the counterexample.
+    target:
+      section: question_transitions
+      id: r002-qt004
+    proposed_change:
+      action: manual_review
+      reason: >
+        Keep as a candidate later-interpretation transition, but do not promote it to a strong
+        historical-causal Story link until Abel's primary wording and reception are checked.
+    evidence:
+      - {source_id: src-arsac-2013, locator: "Abel/Cauchy discussion", supports: retrospective_relation}
+
+  - id: f-qt005
+    reviewed_item: {section: question_transitions, id: r002-qt005}
+    classification: PASS
+    reason: >
+      This is a modern mathematical/historiographical transition and is correctly labeled
+      later_interpretation rather than historical motivation.
+    evidence:
+      - {source_id: src-cauchy-1853, locator: "strengthened remainder condition", supports: mathematical_relation}
+      - {source_id: src-weierstrass-uniform-history, locator: "article", supports: later_conceptualization}
+
+  - id: f-qt006
+    reviewed_item: {section: question_transitions, id: r002-qt006}
+    classification: PASS
+    reason: >
+      The final transition is explicitly historiographical and functions as a safeguard against
+      linearized textbook history rather than as a claim about historical actors' motives.
+    evidence:
+      - {source_id: src-weierstrass-uniform-history, locator: "article", supports: non_linear_development}
+
+sources:
+  - id: src-stokes-1847
+    type: primary
+    author: George Gabriel Stokes
+    title: On the Critical Values of the Sums of Periodic Series
+    publication: Transactions of the Cambridge Philosophical Society
+    read_date: "1847-12-06"
+    volume: 8
+    pages: 533-583
+    url: https://pordlabs.ucsd.edu/wryoung/theorySeminar/pdf15/Stokes1847.pdf
+  - id: src-seidel-1848
+    type: primary
+    author: Philipp Ludwig von Seidel
+    title: Note über eine Eigenschaft der Reihen, welche discontinuirliche Functionen darstellen
+    publication: Abhandlungen der Mathematisch-Physikalischen Classe der Königlichen Bayerischen Akademie der Wissenschaften
+    year: 1848
+    pages: 379-393
+    url: https://www.deutsche-digitale-bibliothek.de/item/7QBHOQIZXUBBN3GDGAVSWXKM4TYHFCM3
+    persistent_identifier: urn:nbn:de:bvb:12-bsb11441891-7

@@ -1,0 +1,154 @@
+review:
+  story_id: story-cauchy-rigor-continuity
+  research_unit_id: R002
+  critic_prompt: research/prompts/story-critic-v1.md
+  status: needs_transition_re_review
+  summary:
+    pass: 7
+    revise: 3
+    weak_evidence: 0
+    reject: 0
+findings:
+- id: sr-r002-001
+  classification: REVISE
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-1
+    field: assertion_refs_and_perspective
+  reason: 'The opening paragraph names limits, infinitesimals, continuity, and convergence and then gives a retrospective
+    warning about epsilon-delta reconstruction. One coarse rigor assertion does not support all of that content, and the dominant
+    perspective is editorial rather than purely contemporary.
+
+    '
+  assertion_refs:
+  - assertion-r002-cauchy-rigor
+  - assertion-r002-cauchy-infinitesimal
+  - assertion-r002-cauchy-continuity
+  - assertion-r002-cauchy-convergence
+  proposed_change:
+    action: add_assertion_refs_and_set_perspective
+    perspective: later_interpretation
+- id: sr-r002-002
+  classification: PASS
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-2
+    field: narrative
+  reason: Cauchy's infinitesimal formulation is described without converting it into a later ontology.
+  assertion_refs:
+  - assertion-r002-cauchy-infinitesimal
+- id: sr-r002-003
+  classification: PASS
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-3
+    field: narrative
+  reason: The continuity formulation and the warning against silent epsilon-delta substitution are both appropriately qualified.
+  assertion_refs:
+  - assertion-r002-cauchy-continuity
+- id: sr-r002-004
+  classification: PASS
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-4
+    field: narrative
+  reason: The role of series is explicitly retrospective and does not claim a unique historical motivation.
+  assertion_refs:
+  - assertion-r002-cauchy-convergence
+- id: sr-r002-005
+  classification: REVISE
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-5
+    field: perspective
+  reason: 'The first sentence is historical, but the explicit identification of an intersection with R001 and the anti-causal
+    qualification are retrospective editorial synthesis. The step should therefore be marked later_interpretation.
+
+    '
+  assertion_refs:
+  - assertion-r002-periodic-fourier
+  - assertion-r002-periodic-convergence
+  proposed_change:
+    action: set_perspective
+    value: later_interpretation
+- id: sr-r002-006
+  classification: PASS
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-6
+    field: narrative
+  reason: 'The Abel episode is deliberately phrased through specialist historiography and explicitly refuses to infer direct
+    influence. This respects the Historical Critic''s weak-evidence finding.
+
+    '
+  assertion_refs:
+  - assertion-r002-sum-continuity-problem
+  - assertion-r002-abel-continuity
+- id: sr-r002-007
+  classification: REVISE
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-7
+    field: perspective
+  reason: 'The step combines Cauchy''s historical 1853 revision with a retrospective statement about the later category of
+    uniform convergence. Marking the entire step historical would blur that distinction.
+
+    '
+  assertion_refs:
+  - assertion-r002-cauchy-1853-continuity
+  - assertion-r002-cauchy-1853-uniform
+  proposed_change:
+    action: set_perspective
+    value: later_interpretation
+- id: sr-r002-008
+  classification: PASS
+  target:
+    story_id: story-cauchy-rigor-continuity
+    step_id: r002-story-8
+    field: narrative
+  reason: The emergence of uniform convergence is presented as distributed and retrospective rather than as a single-act invention.
+  assertion_refs:
+  - assertion-r002-cauchy-1853-uniform
+  - assertion-r002-stokes-uniform
+  - assertion-r002-seidel-uniform
+  - assertion-r002-weierstrass-uniform
+- id: sr-r002-009
+  classification: PASS
+  target:
+    story_id: story-cauchy-rigor-continuity
+    link:
+      from: r002-story-4
+      to: r002-story-5
+  reason: Using branches correctly avoids implying that Cauchy's general convergence program necessarily flowed into periodic-series
+    work as one linear story.
+  assertion_refs:
+  - assertion-r002-periodic-fourier
+  - assertion-r002-periodic-convergence
+- id: sr-r002-010
+  classification: PASS
+  target:
+    story_id: story-cauchy-rigor-continuity
+    link:
+      from: r002-story-5
+      to: r002-story-6
+  reason: Using branches appropriately weakens the transition from the Fourier-series intersection to the separate continuity-of-the-sum
+    problem.
+  assertion_refs:
+  - assertion-r002-sum-continuity-problem
+research_gaps:
+- id: gap-r002-abel-primary
+  between:
+    from_ref: work-abel-binomial-1826
+    to_ref: q-continuity-under-limits
+  question: What exactly does Abel's 1826 primary text say about the exception, and does it explicitly identify Cauchy's theorem?
+  needed_evidence: Direct persistent scan and page-level audit of the relevant Abel passage.
+resolution:
+  status: applied
+  applied_findings:
+  - sr-r002-001
+  - sr-r002-005
+  - sr-r002-007
+  note: Narrative findings remain resolved. After temporal anchors were introduced, the Story DAG was changed so the 1826
+    continuity problem and 1827 periodic-series memoir are parallel branches from the 1821 convergence problem. The revised
+    transition structure requires a focused Story-link re-review before final editorial acceptance.
+sources: []

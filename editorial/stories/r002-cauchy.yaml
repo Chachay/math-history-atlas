@@ -1,0 +1,159 @@
+- id: story-cauchy-rigor-continuity
+  title: From rigor to continuity under infinite limits
+  description: A curated path through Cauchy's limit-based analysis, convergence, Fourier-series intersections, and the later
+    emergence of stronger convergence conditions.
+  question_phases:
+  - q-cauchy-rigor
+  - q-rigorous-limit-continuity
+  - q-series-convergence
+  - q-fourier-series-convergence
+  - q-continuity-under-limits
+  - q-uniform-convergence-emergence
+  fields:
+  - analysis
+  steps:
+  - id: r002-story-1
+    ref: q-cauchy-rigor
+    role: Question
+    narrative: 'Cauchy''s 1821 Cours placed limits, infinitesimal quantities, continuity, and convergence near the center
+      of a systematic program for analysis. That program should be reconstructed in Cauchy''s own terminology rather than
+      treated as an already completed version of later epsilon-delta analysis.
+
+      '
+    assertion_refs:
+    - assertion-r002-cauchy-rigor
+    - assertion-r002-cauchy-infinitesimal
+    - assertion-r002-cauchy-continuity
+    - assertion-r002-cauchy-convergence
+    perspective: later_interpretation
+    temporal_anchor:
+      from: 1821
+      to: 1821
+  - id: r002-story-2
+    ref: concept-infinitesimal
+    role: Response
+    narrative: 'Cauchy described an infinitesimal through a variable quantity whose successive numerical values decrease indefinitely
+      toward zero. His formulation ties infinitesimals directly to limits, but does not by itself settle later debates about
+      the ontology of infinitesimals.
+
+      '
+    assertion_refs:
+    - assertion-r002-cauchy-infinitesimal
+    perspective: historical
+    temporal_anchor:
+      from: 1821
+      to: 1821
+  - id: r002-story-3
+    ref: concept-continuity
+    role: Response
+    narrative: 'Cauchy''s continuity condition was expressed through infinitesimal changes in the independent variable producing
+      infinitesimal changes in the function. Reading this directly as a modern pointwise or uniform epsilon-delta definition
+      would erase historically important differences of language and formulation.
+
+      '
+    assertion_refs:
+    - assertion-r002-cauchy-continuity
+    perspective: historical
+    temporal_anchor:
+      from: 1821
+      to: 1821
+  - id: r002-story-4
+    ref: concept-convergence
+    role: Problem
+    narrative: 'Infinite series were one major setting in which Cauchy''s program had to control limiting processes rather
+      than rely on formal manipulation alone. His 1821 treatment systematized convergence conditions and made the behavior
+      of series part of the broader problem of rigor.
+
+      '
+    assertion_refs:
+    - assertion-r002-cauchy-convergence
+    perspective: later_interpretation
+    temporal_anchor:
+      from: 1821
+      to: 1821
+  - id: r002-story-5
+    ref: concept-fourier-series
+    role: Intersection
+    narrative: 'Cauchy''s 1826/1827 memoir on periodic series explicitly connected sine and cosine expansions with problems
+      of mathematical physics and attempted a general convergence argument. Here the rigor agenda intersects directly with
+      the Fourier-series line developed in R001, without implying that Fourier''s heat problem caused Cauchy''s broader foundational
+      program.
+
+      '
+    assertion_refs:
+    - assertion-r002-periodic-fourier
+    - assertion-r002-periodic-convergence
+    perspective: later_interpretation
+    temporal_anchor:
+      from: 1827
+      to: 1827
+  - id: r002-story-6
+    ref: q-continuity-under-limits
+    role: Remaining gap
+    narrative: 'Cauchy''s 1821 theorem on sums of continuous functions left a problem that later became central: convergence
+      of continuous terms does not by itself guarantee a continuous sum. Specialist histories identify Abel''s 1826 work as
+      an early counterexample episode, but the present evidence does not justify a stronger claim about direct influence on
+      Cauchy.
+
+      '
+    assertion_refs:
+    - assertion-r002-sum-continuity-problem
+    - assertion-r002-abel-continuity
+    perspective: later_interpretation
+    temporal_anchor:
+      from: 1826
+      to: 1826
+  - id: r002-story-7
+    ref: work-cauchy-series-1853
+    role: Response
+    narrative: 'In 1853 Cauchy returned to the continuity-of-the-sum problem, acknowledged exceptions to the general 1821
+      claim, and imposed stronger control on the remainder across the specified range of the variable. The historical text
+      supplies the strengthened condition; calling it uniform convergence is a later interpretation.
+
+      '
+    assertion_refs:
+    - assertion-r002-cauchy-1853-continuity
+    - assertion-r002-cauchy-1853-uniform
+    perspective: later_interpretation
+    temporal_anchor:
+      from: 1853
+      to: 1853
+  - id: r002-story-8
+    ref: q-uniform-convergence-emergence
+    role: Next question
+    narrative: 'The stronger conditions appearing in work by Cauchy, Stokes, and Seidel were later organized within the concept
+      now called uniform convergence. The development is better treated as a distributed nineteenth-century clarification
+      than as a single linear chain ending in Weierstrass.
+
+      '
+    assertion_refs:
+    - assertion-r002-cauchy-1853-uniform
+    - assertion-r002-stokes-uniform
+    - assertion-r002-seidel-uniform
+    - assertion-r002-weierstrass-uniform
+    perspective: later_interpretation
+    temporal_anchor:
+      from: 1853
+      to: 1860
+  links:
+  - from: r002-story-1
+    to: r002-story-2
+    type: continues
+  - from: r002-story-2
+    to: r002-story-3
+    type: continues
+  - from: r002-story-3
+    to: r002-story-4
+    type: continues
+  - from: r002-story-4
+    to: r002-story-5
+    type: branches
+  - from: r002-story-4
+    to: r002-story-6
+    type: branches
+  - from: r002-story-6
+    to: r002-story-7
+    type: continues
+  - from: r002-story-7
+    to: r002-story-8
+    type: branches

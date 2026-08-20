@@ -1,0 +1,59 @@
+- id: person-abel
+  type: Person
+  name: Niels Henrik Abel
+  start_year: 1802
+  end_year: 1829
+  fields: [analysis]
+- id: person-seidel
+  type: Person
+  name: Philipp Ludwig von Seidel
+  start_year: 1821
+  end_year: 1896
+  fields: [analysis]
+- id: person-stokes
+  type: Person
+  name: George Gabriel Stokes
+  start_year: 1819
+  end_year: 1903
+  fields: [analysis, mathematical-physics]
+- id: person-weierstrass
+  type: Person
+  name: Karl Weierstrass
+  start_year: 1815
+  end_year: 1897
+  fields: [analysis]
+- id: concept-limit
+  type: Concept
+  name: Limit
+  start_year: 1800
+  fields: [analysis]
+- id: concept-infinitesimal
+  type: Concept
+  name: Infinitesimal quantity
+  start_year: 1700
+  fields: [analysis]
+- id: concept-series-of-functions
+  type: Concept
+  name: Series of functions
+  start_year: 1800
+  fields: [analysis]
+- id: work-cauchy-calcul-1823
+  type: Work
+  name: Cauchy's 1823 lessons on infinitesimal calculus
+  start_year: 1823
+  fields: [analysis]
+- id: work-cauchy-periodic-1827
+  type: Work
+  name: Cauchy's memoir on periodic series
+  start_year: 1827
+  fields: [analysis, mathematical-physics]
+- id: work-abel-binomial-1826
+  type: Work
+  name: Abel's 1826 paper on the binomial series
+  start_year: 1826
+  fields: [analysis]
+- id: work-cauchy-series-1853
+  type: Work
+  name: Cauchy's 1853 note on convergent series of continuous functions
+  start_year: 1853
+  fields: [analysis]

@@ -5,8 +5,8 @@ import './style.css';
 type View = 'Atlas' | 'Network' | 'Story' | 'Person';
 type Entity = { id: string; type: string; name: string; start_year?: number; end_year?: number | null; fields?: string[] };
 type Question = { id: string; question: string; period?: { from?: number; to?: number | null }; fields?: string[] };
-type Assertion = { id: string; subject: string; predicate: string; object: string; status?: string; perspective?: string };
-type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string };
+type Assertion = { id: string; subject: string; predicate: string; object: string; period?: { from?: number; to?: number | null }; status?: string; perspective?: string };
+type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string; temporal_anchor?: { from?: number; to?: number | null } };
 type Story = { id: string; title: string; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
 type Intersection = { entity: string; story_count: number; stories: string[] };
 type AtlasField = { id: string; name: string; parents: string[] };
@@ -21,11 +21,15 @@ type Dataset = {
 type RouteState = { view: View; storyId?: string; personId?: string; networkStory?: string };
 
 const views: View[] = ['Atlas', 'Network', 'Story', 'Person'];
-const storyPalette: Record<string, string> = {
-  'story-rigor': '#2b78d0',
-  'story-function': '#7759c8',
-  'story-frequency': '#2d9163',
-};
+function storyColor(id: string) {
+  let hash = 2166136261;
+  for (let i = 0; i < id.length; i += 1) {
+    hash ^= id.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  const hue = Math.abs(hash) % 360;
+  return `hsl(${hue} 58% 44%)`;
+}
 
 async function loadJson<T>(name: string): Promise<T> {
   const r = await fetch(`./data/${name}`);
@@ -152,51 +156,124 @@ function AtlasNode({ x, y, label, sub, color, onClick }: { x: number; y: number;
   return <g className="atlas-node" onClick={onClick}><circle cx={x} cy={y} r="8" style={{ stroke: color }} /><text x={x + 12} y={y - 3} className="atlas-node-label">{label}</text>{sub && <text x={x + 12} y={y + 10} className="atlas-node-sub">{sub}</text>}</g>;
 }
 
-const positions: Record<string, { x: number; y: number }> = {
-  'person-euler': { x: 82, y: 58 },
-  'person-fourier': { x: 96, y: 135 },
-  'q-heat-propagation': { x: 258, y: 110 },
-  'concept-infinite-series': { x: 155, y: 75 },
-  'concept-fourier-series': { x: 155, y: 215 },
-  'work-fourier-theorie': { x: 272, y: 265 },
-  'person-cauchy': { x: 96, y: 330 },
-  'work-cauchy-cours': { x: 128, y: 390 },
-  'concept-convergence': { x: 84, y: 455 },
-  'concept-function': { x: 210, y: 340 },
-  'concept-continuity': { x: 202, y: 445 },
-  'concept-uniform-convergence': { x: 88, y: 565 },
-  'q-rigorous-limit-continuity': { x: 185, y: 555 },
-  'q-what-is-function': { x: 268, y: 390 },
-  'person-riemann': { x: 260, y: 525 },
+type NetworkPoint = { x: number; y: number; year: number; ref: string; storyIds: string[] };
+type NetworkLayout = {
+  positions: Record<string, NetworkPoint>;
+  stepKeys: Record<string, string>;
+  yearRows: { year: number; y: number }[];
+  minYear: number;
+  maxYear: number;
+  height: number;
 };
+
+function stableFraction(id: string) {
+  let hash = 0;
+  for (let i = 0; i < id.length; i += 1) hash = (Math.imul(hash, 31) + id.charCodeAt(i)) | 0;
+  return (Math.abs(hash) % 1000) / 1000;
+}
+
+function stepYear(step: StoryStep, item?: Entity | Question) {
+  const explicit = step.temporal_anchor?.from;
+  if (typeof explicit === 'number') return explicit;
+  if (!item) return 1800;
+  return 'type' in item ? (item.start_year || 1800) : (item.period?.from || 1800);
+}
+
+function buildNetworkLayout(data: Dataset, lookup: Record<string, Entity | Question>): NetworkLayout {
+  const storyIndex = new Map(data.stories.map((story, index) => [story.id, index]));
+  const laneMin = 76;
+  const laneMax = 285;
+  const laneStep = data.stories.length > 1 ? (laneMax - laneMin) / (data.stories.length - 1) : 0;
+
+  // A Network point is a temporal occurrence, not a timeless entity. Occurrences merge only when ref+year match.
+  const groups = new Map<string, { ref: string; year: number; storyIds: string[]; stepIds: string[] }>();
+  const stepKeys: Record<string, string> = {};
+  data.stories.forEach(story => story.steps.forEach(step => {
+    const item = lookup[step.ref];
+    if (!item) return;
+    const year = stepYear(step, item);
+    const key = `${step.ref}@${year}`;
+    const group = groups.get(key) || { ref: step.ref, year, storyIds: [], stepIds: [] };
+    if (!group.storyIds.includes(story.id)) group.storyIds.push(story.id);
+    group.stepIds.push(`${story.id}:${step.id}`);
+    groups.set(key, group);
+    stepKeys[`${story.id}:${step.id}`] = key;
+  }));
+
+  const byYear = new Map<number, string[]>();
+  groups.forEach((group, key) => {
+    const rows = byYear.get(group.year) || [];
+    rows.push(key);
+    byYear.set(group.year, rows);
+  });
+  const years = [...byYear.keys()].sort((a, b) => a - b);
+  const minYear = years[0] || 1750;
+  const maxYear = years[years.length - 1] || 1860;
+  const positions: Record<string, NetworkPoint> = {};
+  const yearRows: { year: number; y: number }[] = [];
+  let cursor = 52;
+  const rowGap = 42;
+  const yearGap = 34;
+
+  years.forEach(year => {
+    const keys = (byYear.get(year) || []).sort((a, b) => a.localeCompare(b));
+    const firstY = cursor;
+    keys.forEach((key, index) => {
+      const group = groups.get(key)!;
+      const lanes = group.storyIds.map(id => storyIndex.get(id) || 0);
+      let x = laneMin + (lanes.reduce((a, b) => a + b, 0) / Math.max(1, lanes.length)) * laneStep;
+      if (group.storyIds.length === 1) x += (stableFraction(key) - 0.5) * 22;
+      positions[key] = {
+        x: Math.max(62, Math.min(292, x)),
+        y: cursor + index * rowGap,
+        year,
+        ref: group.ref,
+        storyIds: group.storyIds,
+      };
+    });
+    yearRows.push({ year, y: firstY });
+    cursor += Math.max(1, keys.length) * rowGap + yearGap;
+  });
+
+  return { positions, stepKeys, yearRows, minYear, maxYear, height: Math.max(640, cursor + 20) };
+}
 
 function NetworkView({ data, selectedStory, setSelectedStory, onOpenStory, onOpenPerson, onSheet }: {
   data: Dataset; selectedStory: string; setSelectedStory: (x: string) => void; onOpenStory: (x: string) => void; onOpenPerson: (x: string) => void; onSheet: (n: React.ReactNode) => void;
 }) {
   const lookup = useMemo(() => buildLookup(data), [data]);
-  const intersections = new Map(data.intersections.map(i => [i.entity, i]));
+  const canonicalIntersections = new Map(data.intersections.map(i => [i.entity, i]));
   const storyIds = ['all', ...data.stories.map(s => s.id)];
+  const layout = useMemo(() => buildNetworkLayout(data, lookup), [data, lookup]);
 
-  const storyPath = (story: Story) => {
-    const pts = story.steps.map(s => positions[s.ref]).filter(Boolean);
-    if (pts.length < 2) return '';
-    return pts.map((p, i) => `${i ? 'L' : 'M'}${p.x} ${p.y}`).join(' ');
+  const pointForStep = (story: Story, stepId: string) => {
+    const key = layout.stepKeys[`${story.id}:${stepId}`];
+    return key ? layout.positions[key] : undefined;
+  };
+  const segmentPath = (story: Story, from: string, to: string) => {
+    const a = pointForStep(story, from); const b = pointForStep(story, to);
+    if (!a || !b) return '';
+    const mid = (a.y + b.y) / 2;
+    return `M${a.x} ${a.y} C${a.x} ${mid} ${b.x} ${mid} ${b.x} ${b.y}`;
   };
 
   return <>
-    <section className="hero-card"><h2>Network — 1700–1860 · Analysis</h2><p>Historical entities remain the graph. Story paths are overlays. When several Stories pass through the same node, the intersection becomes visible without creating a separate “Junction” screen.</p><div className="entity-legend"><span><i className="person-mark" />Person</span><span><i className="concept-mark" />Concept</span><span><i className="work-mark" />Work</span></div></section>
+    <section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · chronological Story graph</h2><p>Years define order, not proportional distance. Same-year events are stacked inside a year band. Story lines follow explicit DAG links, so parallel branches split and later continuations do not imply a trip backward in time.</p><div className="entity-legend"><span><i className="person-mark" />Person</span><span><i className="concept-mark" />Concept</span><span><i className="work-mark" />Work</span></div></section>
     <section className="panel network-panel">
-      <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory === id ? 'active' : ''} onClick={() => setSelectedStory(id)}>{id === 'all' ? 'All paths' : data.stories.find(s => s.id === id)?.title}</button>)}</div>
-      <svg className="network-svg" viewBox="0 0 360 640">
-        <line x1="38" y1="30" x2="38" y2="610" className="time-axis" />
-        {[['1700', 50], ['1800', 145], ['1820', 300], ['1840', 445], ['1860', 590]].map(([t,y]) => <text key={t} x="7" y={Number(y)} className="year-label">{t}</text>)}
-        {data.stories.map(s => <path key={s.id} d={storyPath(s)} className={`story-overlay ${selectedStory !== 'all' && selectedStory !== s.id ? 'dim' : ''}`} style={{ stroke: storyPalette[s.id] || '#888' }} />)}
-        {Object.entries(positions).map(([id,p]) => {
-          const item = lookup[id]; if (!item) return null;
-          const inter = intersections.get(id);
-          return <NetworkNode key={id} id={id} item={item} x={p.x} y={p.y} intersection={inter} onClick={() => {
-            if (inter) onSheet(<IntersectionSheet intersection={inter} data={data} onOpen={onOpenStory} />);
-            else if ('type' in item && item.type === 'Person') onOpenPerson(id);
+      <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory === id ? 'active' : ''} onClick={() => setSelectedStory(id)}>{id !== 'all' && <i className="story-dot" style={{ background: storyColor(id) }} />}{id === 'all' ? 'All paths' : data.stories.find(s => s.id === id)?.title}</button>)}</div>
+      <svg className="network-svg" viewBox={`0 0 360 ${layout.height}`}>
+        <line x1="38" y1="30" x2="38" y2={layout.height - 20} className="time-axis" />
+        {layout.yearRows.map(row => <g key={row.year}><text x="7" y={row.y} className="year-label">{row.year}</text><line x1="34" y1={row.y - 4} x2="42" y2={row.y - 4} className="year-tick" /></g>)}
+        {data.stories.flatMap(story => story.links.map(link => <path key={`${story.id}:${link.from}:${link.to}`} d={segmentPath(story, link.from, link.to)} className={`story-overlay ${link.type === 'retrospective' ? 'retrospective' : ''} ${selectedStory !== 'all' && selectedStory !== story.id ? 'dim' : ''}`} style={{ stroke: storyColor(story.id) }} />))}
+        {Object.entries(layout.positions).map(([key,p]) => {
+          const item = lookup[p.ref]; if (!item) return null;
+          const canonical = canonicalIntersections.get(p.ref);
+          const temporalIntersection = p.storyIds.length > 1 && canonical
+            ? { ...canonical, story_count: p.storyIds.length, stories: p.storyIds }
+            : undefined;
+          return <NetworkNode key={key} id={p.ref} item={item} x={p.x} y={p.y} intersection={temporalIntersection} onClick={() => {
+            if (canonical) onSheet(<IntersectionSheet intersection={canonical} data={data} onOpen={onOpenStory} />);
+            else if ('type' in item && item.type === 'Person') onOpenPerson(p.ref);
           }} />;
         })}
       </svg>
@@ -212,6 +289,7 @@ function NetworkNode({ item, x, y, intersection, onClick }: { id: string; item: 
     {type === 'Person' && <circle cx={x} cy={y} r="9" className="node-person" />}
     {type === 'Concept' && <polygon points={`${x},${y-11} ${x+11},${y} ${x},${y+11} ${x-11},${y}`} className="node-concept" />}
     {type === 'Work' && <rect x={x-10} y={y-10} width="20" height="20" rx="4" className="node-work" />}
+    {!isQuestion && !['Person', 'Concept', 'Work'].includes(type) && <circle cx={x} cy={y} r="9" className="node-other" />}
     {isQuestion && <rect x={x-12} y={y-9} width="24" height="18" rx="9" className="node-question" />}
     {intersection && <><circle cx={x} cy={y} r="20" className="intersection-ring" /><circle cx={x+18} cy={y-18} r="10" className="intersection-count-bg" /><text x={x+15} y={y-15} className="intersection-count">{intersection.story_count}</text></>}
     <text x={x+15} y={y-3} className="node-label">{short(label, 24)}</text>
@@ -221,7 +299,7 @@ function NetworkNode({ item, x, y, intersection, onClick }: { id: string; item: 
 
 function IntersectionSheet({ intersection, data, onOpen }: { intersection: Intersection; data: Dataset; onOpen: (x: string) => void }) {
   const entity = data.graph.entities.find(e => e.id === intersection.entity);
-  return <><span className="sheet-badge">INTERSECTION · {intersection.story_count} STORIES</span><h3>{entity?.name || intersection.entity}</h3><p>The same historical entity is part of several curated readings:</p><div className="sheet-story-list">{intersection.stories.map(id => <button key={id} onClick={() => onOpen(id)}><i style={{ background: storyPalette[id] }} />{data.stories.find(s => s.id === id)?.title || id}</button>)}</div></>;
+  return <><span className="sheet-badge">INTERSECTION · {intersection.story_count} STORIES</span><h3>{entity?.name || intersection.entity}</h3><p>The same historical entity is part of several curated readings:</p><div className="sheet-story-list">{intersection.stories.map(id => <button key={id} onClick={() => onOpen(id)}><i style={{ background: storyColor(id) }} />{data.stories.find(s => s.id === id)?.title || id}</button>)}</div></>;
 }
 
 function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data: Dataset; storyId: string; onNetwork: () => void; onOpenPerson: (id: string) => void; onSheet: (n: React.ReactNode) => void }) {
@@ -231,7 +309,7 @@ function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data: 
   return <>
     <section className="hero-card"><span className="eyebrow">CURRENT STORY</span><h2>{story.title}</h2><p>Read one editorial path vertically while parallel paths remain perceptible. Crossings return you to the Network.</p></section>
     <div className="story-layout"><div>
-      {story.steps.map((step, idx) => {
+      {[...story.steps].sort((a, b) => (a.temporal_anchor?.from ?? 9999) - (b.temporal_anchor?.from ?? 9999) || story.steps.indexOf(a) - story.steps.indexOf(b)).map((step, idx) => {
         const item = lookup[step.ref]; const inter = intersections.get(step.ref); const label = item ? ('type' in item ? item.name : item.question) : step.ref;
         const isProblem = /problem|gap/i.test(step.role);
         return <article key={step.id} className={`story-card panel ${isProblem ? 'problem' : ''} ${inter ? 'crossing' : ''}`}>
@@ -246,7 +324,7 @@ function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data: 
           </div>
         </article>;
       })}
-    </div><aside className="parallel-rail"><div className="rail-line">{data.stories.slice(0,3).map((s,i) => <span key={s.id} style={{ top: `${18+i*28}%`, background: storyPalette[s.id] || '#999' }} title={s.title} />)}</div></aside></div>
+    </div><aside className="parallel-rail"><div className="rail-line">{data.stories.slice(0,3).map((s,i) => <span key={s.id} style={{ top: `${18+i*28}%`, background: storyColor(s.id) }} title={s.title} />)}</div></aside></div>
   </>;
 }
 

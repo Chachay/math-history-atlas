@@ -52,15 +52,24 @@ def validate_all():
             if step.ref not in ref_ids: errors.append(f'invalid StoryStep ref {step.ref} in {story.id}')
             if step.narrative and not step.assertion_refs:
                 errors.append(f'narrative without assertion_refs on {step.id} in {story.id}')
+            if step.narrative and step.temporal_anchor is None:
+                errors.append(f'narrative StoryStep missing temporal_anchor on {step.id} in {story.id}')
             for assertion_id in step.assertion_refs:
                 if assertion_id not in assertion_ids:
                     errors.append(f'unknown StoryStep assertion_ref {assertion_id} on {step.id} in {story.id}')
         for q in story.question_phases:
             if q not in question_ids: errors.append(f'invalid question phase {q} in {story.id}')
+        by_step={x.id:x for x in story.steps}
         g=nx.DiGraph(); g.add_nodes_from(step_ids)
         for link in story.links:
             if link.from_ not in step_ids or link.to not in step_ids: errors.append(f'invalid StoryLink in {story.id}')
-            else: g.add_edge(link.from_,link.to)
+            else:
+                g.add_edge(link.from_,link.to)
+                source=by_step[link.from_].temporal_anchor
+                target=by_step[link.to].temporal_anchor
+                if source and target and source.from_ is not None and target.from_ is not None:
+                    if target.from_ < source.from_ and link.type != 'retrospective':
+                        errors.append(f'backward StoryLink requires retrospective type: {story.id} {link.from_}->{link.to}')
         if not nx.is_directed_acyclic_graph(g): errors.append(f'Story DAG cycle detected: {story.id}')
     return errors
 
