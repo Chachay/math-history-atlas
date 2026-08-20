@@ -1,0 +1,12 @@
+- id: q-cauchy-rigor
+  question: What did it mean to make analysis rigorous in Cauchy's program?
+  period: {from: 1821, to: null}
+  fields: [analysis]
+- id: q-continuity-under-limits
+  question: When does continuity survive an infinite limiting process?
+  period: {from: 1821, to: null}
+  fields: [analysis]
+- id: q-uniform-convergence-emergence
+  question: What stronger control over convergence is needed across a whole variable domain?
+  period: {from: 1840, to: null}
+  fields: [analysis]
