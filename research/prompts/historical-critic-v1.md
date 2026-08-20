@@ -49,3 +49,101 @@ Use persistent URLs whenever available.
 Web search is a discovery mechanism. Internal ChatGPT search IDs and
 citation tokens are not persistent evidence and must never be included
 in the YAML output.
+
+## Machine-actionable review output
+
+For every item classified as `REVISE` or `REJECT`, provide a
+machine-actionable description of the proposed correction whenever
+the correction can be expressed safely and unambiguously.
+
+Use:
+
+```yaml
+target:
+  section: assertions
+  id: r001-a004
+
+proposed_change:
+  action: replace_fields
+  fields:
+    perspective: later_interpretation
+```
+
+The `target` identifies the Research Packet object being criticized.
+
+Preferred target forms are:
+
+```yaml
+target:
+  section: assertions
+  id: r001-a004
+```
+
+```yaml
+target:
+  section: question_transitions
+  id: r001-qt002
+```
+
+For packet objects without stable IDs, use an explicit match:
+
+```yaml
+target:
+  section: chronology
+  match:
+    date: "1823"
+```
+
+Supported `proposed_change.action` values are:
+
+- `replace_fields`
+- `replace_entry`
+- `remove`
+- `add_evidence`
+- `manual_review`
+
+Examples:
+
+```yaml
+proposed_change:
+  action: replace_fields
+  fields:
+    perspective: later_interpretation
+    certainty: medium
+```
+
+```yaml
+proposed_change:
+  action: replace_entry
+  value:
+    volume_year: 1823
+    read_date: "1826-02-27"
+    publication_year: 1827
+```
+
+```yaml
+proposed_change:
+  action: remove
+```
+
+If the historical correction cannot be represented safely without
+additional research or human interpretation, do not invent a patch.
+Instead use:
+
+```yaml
+proposed_change:
+  action: manual_review
+  reason: >
+    The available evidence establishes that the claim is too strong,
+    but does not support a unique replacement wording.
+```
+
+A `PASS` item does not require `target` or `proposed_change`.
+
+A `WEAK_EVIDENCE` item should normally identify its `target`, but its
+proposed change should usually be either `add_evidence` or
+`manual_review`.
+
+The proposed change is advisory. It must never be treated as accepted
+canonical data until a human review resolution explicitly accepts the
+critic's finding.
