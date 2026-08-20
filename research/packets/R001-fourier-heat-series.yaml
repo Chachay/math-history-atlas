@@ -1,0 +1,1507 @@
+research_unit:
+  id: R001
+  title: "Fourier — heat propagation and trigonometric representation"
+  period:
+    approximate_start: 1790
+    approximate_end: 1830
+    core_period: "1807–1829"
+  scope_summary: >
+    Investigation of Joseph Fourier's mathematical theory of heat,
+    the role of trigonometric representations in solving heat problems,
+    Fourier's claims concerning arbitrary functions, contemporary objections,
+    and the later development of convergence and function concepts.
+  research_status: "researched"
+  editorial_status: "not_accepted"
+  generated_date: "2026-08-19"
+
+research_questions:
+  - id: q001
+    question: "What mathematical and physical problem was Fourier actually trying to solve?"
+  - id: q002
+    question: "Why and how did trigonometric representations enter Fourier's work?"
+  - id: q003
+    question: "What did Fourier claim about representing functions?"
+  - id: q004
+    question: "What objections, limitations, or unresolved mathematical questions existed at the time?"
+  - id: q005
+    question: "How are later questions about convergence and the concept of function historically connected to Fourier's work?"
+  - id: q006
+    question: "Which apparent connections are contemporary historical facts and which are later interpretations?"
+
+entities:
+  - id: person-fourier
+    type: Person
+    canonical_name: "Jean-Baptiste Joseph Fourier"
+    birth_year: 1768
+    death_year: 1830
+    roles:
+      - mathematician
+      - mathematical_physicist
+
+  - id: person-lagrange
+    type: Person
+    canonical_name: "Joseph-Louis Lagrange"
+    birth_year: 1736
+    death_year: 1813
+
+  - id: person-laplace
+    type: Person
+    canonical_name: "Pierre-Simon Laplace"
+    birth_year: 1749
+    death_year: 1827
+
+  - id: person-biot
+    type: Person
+    canonical_name: "Jean-Baptiste Biot"
+    birth_year: 1774
+    death_year: 1862
+
+  - id: person-poisson
+    type: Person
+    canonical_name: "Siméon Denis Poisson"
+    birth_year: 1781
+    death_year: 1840
+
+  - id: person-dalembert
+    type: Person
+    canonical_name: "Jean le Rond d'Alembert"
+    birth_year: 1717
+    death_year: 1783
+
+  - id: person-euler
+    type: Person
+    canonical_name: "Leonhard Euler"
+    birth_year: 1707
+    death_year: 1783
+
+  - id: person-daniel-bernoulli
+    type: Person
+    canonical_name: "Daniel Bernoulli"
+    birth_year: 1700
+    death_year: 1782
+
+  - id: person-cauchy
+    type: Person
+    canonical_name: "Augustin-Louis Cauchy"
+    birth_year: 1789
+    death_year: 1857
+
+  - id: person-dirichlet
+    type: Person
+    canonical_name: "Peter Gustav Lejeune Dirichlet"
+    birth_year: 1805
+    death_year: 1859
+
+  - id: person-riemann
+    type: Person
+    canonical_name: "Bernhard Riemann"
+    birth_year: 1826
+    death_year: 1866
+
+  - id: problem-heat-propagation
+    type: Problem
+    canonical_name: "Propagation and diffusion of heat in solids"
+
+  - id: problem-heat-boundary-value
+    type: Problem
+    canonical_name: "Heat equation with boundary and initial temperature data"
+
+  - id: problem-vibrating-string
+    type: Problem
+    canonical_name: "Vibrating-string problem"
+
+  - id: concept-trigonometric-series
+    type: Concept
+    canonical_name: "Trigonometric series"
+
+  - id: concept-arbitrary-function
+    type: Concept
+    canonical_name: "Arbitrary function"
+
+  - id: concept-fourier-coefficients
+    type: Concept
+    canonical_name: "Integral coefficients of a trigonometric expansion"
+
+  - id: concept-convergence
+    type: Concept
+    canonical_name: "Convergence of trigonometric series"
+
+  - id: concept-discontinuous-function
+    type: Concept
+    canonical_name: "Discontinuous function"
+
+  - id: concept-separation-modes
+    type: Concept
+    canonical_name: "Separated spatial modes"
+
+  - id: work-fourier-1807
+    type: Work
+    canonical_name: "Théorie de la propagation de la chaleur dans les solides"
+    year: 1807
+    publication_status: "presented to the Institut de France; not published at the time"
+
+  - id: work-fourier-1811
+    type: Work
+    canonical_name: "Fourier's prize memoir on heat"
+    year: 1811
+
+  - id: work-fourier-1822
+    type: Work
+    canonical_name: "Théorie analytique de la chaleur"
+    year: 1822
+
+  - id: work-dirichlet-1829
+    type: Work
+    canonical_name: "Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données"
+    year: 1829
+
+  - id: work-riemann-trig
+    type: Work
+    canonical_name: "Über die Darstellbarkeit einer Function durch eine trigonometrische Reihe"
+    year_composed: 1854
+    year_published: 1867
+
+chronology:
+  - date: "1740s–1760s"
+    event: >
+      The vibrating-string controversy among d'Alembert, Euler, Daniel Bernoulli,
+      Lagrange and others raises questions about arbitrary curves/functions
+      and whether general motions can be expressed through trigonometric modes.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-herreman-2013
+      - src-riemann-trig-translation
+    uncertainty: >
+      The exact relationship between eighteenth-century formulations and the
+      later Fourier theorem should not be expressed using modern equivalence
+      without qualification.
+
+  - date: "1807-12-21"
+    event: >
+      Fourier presents his memoir on heat propagation to the Institut de France.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-grattan-guinness-ravetz-1972
+      - src-mactutor-fourier
+    uncertainty: null
+
+  - date: "1808–1809"
+    event: >
+      Fourier responds to concerns about his trigonometric representations
+      and their convergence and representational scope.
+    perspective: historical
+    certainty: medium_high
+    sources:
+      - src-grattan-guinness-ravetz-1972
+      - src-mactutor-fourier
+    uncertainty: >
+      Detailed reconstruction of the correspondence and individual positions
+      requires consultation of the critical edition and manuscript record.
+
+  - date: "1811"
+    event: >
+      Fourier submits an expanded heat memoir for the Institut's prize competition.
+      The work wins the prize, although the report retains reservations concerning
+      rigor and generality.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-grattan-guinness-ravetz-1972
+      - src-mactutor-fourier
+    uncertainty: null
+
+  - date: "1822"
+    event: >
+      Fourier publishes Théorie analytique de la chaleur, including systematic
+      treatments of trigonometric expansions and the representation of arbitrary
+      temperature distributions.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-ch3
+      - src-fourier-1822-art235
+      - src-smithsonian-fourier
+    uncertainty: null
+
+  - date: "1823"
+    event: >
+      Cauchy publishes an attempted treatment of convergence of trigonometric
+      series; Dirichlet later argues that the proof is insufficient.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+    uncertainty: >
+      This packet relies primarily on Dirichlet's contemporary assessment of
+      Cauchy's argument rather than a separate line-by-line audit of Cauchy's memoir.
+
+  - date: "1829"
+    event: >
+      Dirichlet gives the first generally recognized rigorous convergence theorem
+      for Fourier series under explicit restrictions on the represented function.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+      - src-encyclopedia-fourier-series
+    uncertainty: >
+      "First rigorous proof" should be understood as the standard historical
+      characterization of a general convergence theorem, not as a claim that no
+      earlier special cases had been rigorously established.
+
+  - date: "1854 / 1867"
+    event: >
+      Riemann's work on trigonometric series takes the subject considerably beyond
+      Fourier and Dirichlet, linking it to deeper questions about integration,
+      representation and general trigonometric series.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-riemann-trig-translation
+      - src-riemann-landmark
+    uncertainty: >
+      Riemann belongs outside the core 1790–1830 research period and should appear
+      as downstream reception rather than as part of Fourier's contemporary program.
+
+assertions:
+  - id: r001-a001
+    subject: person-fourier
+    predicate: investigated
+    object: problem-heat-propagation
+    statement: >
+      Fourier's central scientific problem was to determine mathematically how
+      temperature is distributed and changes through solid bodies.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-ch3
+      - src-fourier-1822-ch9
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: null
+
+  - id: r001-a002
+    subject: person-fourier
+    predicate: reduced_physical_problem_to
+    object: problem-heat-boundary-value
+    statement: >
+      Fourier treated heat propagation by deriving differential equations for
+      temperature and then solving them subject to physical information about
+      initial temperatures, geometry and boundary interaction.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-ch3
+      - src-fourier-1822-ch8
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: >
+      Modern terminology such as "initial-value problem" and "boundary-value
+      problem" is useful descriptively but was not Fourier's later formal PDE
+      vocabulary.
+
+  - id: r001-a003
+    subject: work-fourier-1807
+    predicate: already_contained
+    object: concept-trigonometric-series
+    statement: >
+      The essential use of trigonometric series was already present in Fourier's
+      1807 memoir rather than being invented only for the 1822 book.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-grattan-guinness-ravetz-1972
+      - src-smithsonian-fourier
+    uncertainty: null
+
+  - id: r001-a004
+    subject: concept-trigonometric-series
+    predicate: entered_as_method_for
+    object: problem-heat-boundary-value
+    statement: >
+      Trigonometric series entered Fourier's heat theory because separated
+      solutions of the heat equations supplied sinusoidal spatial modes, while
+      the physical problem required matching prescribed boundary or initial
+      temperature distributions by combinations of those modes.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-section207
+      - src-fourier-1822-art235
+      - src-wiener-historical-background
+    uncertainty: >
+      "Modes" and especially "eigenmodes" are modern explanatory vocabulary.
+      They accurately summarize the mathematical structure but should not be
+      presented as Fourier's own terminology.
+
+  - id: r001-a005
+    subject: work-fourier-1822
+    predicate: explicitly_states_necessity_of
+    object: concept-trigonometric-series
+    statement: >
+      Fourier explicitly says that the fundamental heat problems cannot be
+      solved completely without reducing the functions describing the initial
+      state of temperature to trigonometric-series form.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-art235
+    uncertainty: null
+
+  - id: r001-a006
+    subject: person-fourier
+    predicate: derived
+    object: concept-fourier-coefficients
+    statement: >
+      Fourier supplied definite-integral formulas for the coefficients that
+      associate a given function with its sine and/or cosine expansion.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-art219-221
+      - src-fourier-1822-art235
+    uncertainty: >
+      Some related coefficient techniques had antecedents in eighteenth-century
+      work, and Laplace also used closely related integral representations.
+      Priority should therefore be stated specifically rather than as invention
+      ex nihilo.
+
+  - id: r001-a007
+    subject: person-fourier
+    predicate: claimed_representation_of
+    object: concept-arbitrary-function
+    statement: >
+      Fourier asserted that a function specified arbitrarily over a finite
+      interval, including one represented by the ordinate of an arbitrarily
+      drawn curve, could be developed into trigonometric series.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-art235
+      - src-fourier-1822-discontinuous
+    uncertainty: >
+      Fourier's word "arbitrary" must not automatically be identified with the
+      unrestricted modern set-theoretic notion of an arbitrary real-valued
+      function.
+
+  - id: r001-a008
+    subject: person-fourier
+    predicate: included
+    object: concept-discontinuous-function
+    statement: >
+      Fourier explicitly allowed functions whose ordinates were not constrained
+      by one common analytic law and stated that his representation methods
+      applied to discontinuous functions.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-function-conception
+      - src-fourier-1822-discontinuous
+    uncertainty: >
+      Fourier's examples and arguments do not establish the modern assertion
+      that every conceivable discontinuous function possesses a pointwise
+      convergent Fourier series equal to that function.
+
+  - id: r001-a009
+    subject: person-fourier
+    predicate: claimed
+    object: concept-convergence
+    statement: >
+      Fourier stated in 1822 that trigonometric series ordered in multiples of
+      sine or cosine are always convergent and converge toward the value of the
+      developed function.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-convergence-claim
+    uncertainty: >
+      Taken literally at modern generality, this statement is false. It records
+      Fourier's historical claim, not a theorem accepted without qualification
+      today.
+
+  - id: r001-a010
+    subject: person-lagrange
+    predicate: objected_to
+    object: concept-trigonometric-series
+    statement: >
+      Lagrange was among the principal contemporary critics of Fourier's broad
+      use of trigonometric representations, against the background of his earlier
+      position in the vibrating-string controversy.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-mactutor-fourier
+      - src-grattan-guinness-ravetz-1972
+      - src-herreman-2013
+    uncertainty: >
+      The precise division of objections among Lagrange, Laplace and other
+      committee members varies in secondary reconstructions; detailed personal
+      attribution should use the surviving committee and correspondence record.
+
+  - id: r001-a011
+    subject: person-laplace
+    predicate: raised_concerns_about
+    object: work-fourier-1807
+    statement: >
+      Laplace participated in the examination of Fourier's 1807 work and was
+      associated with early concerns about Fourier's treatment, although his
+      attitude was not simply one of permanent rejection.
+    perspective: historical
+    certainty: medium_high
+    sources:
+      - src-mactutor-fourier
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: >
+      Avoid reducing the episode to "Laplace rejected Fourier." His later
+      reactions were more favorable than Lagrange's according to historical
+      reconstructions.
+
+  - id: r001-a012
+    subject: person-biot
+    predicate: disputed
+    object: problem-heat-propagation
+    statement: >
+      Contemporary controversy concerned not only Fourier's series but also the
+      physical derivation and priority of the mathematical theory of heat, with
+      Biot among those contesting Fourier.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-mactutor-fourier
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: >
+      Priority disputes and mathematical objections should be distinguished;
+      they were overlapping but not identical issues.
+
+  - id: r001-a013
+    subject: work-fourier-1811
+    predicate: received_criticism_for
+    object: "rigor and generality"
+    statement: >
+      Fourier won the heat prize with his revised memoir, but the judges did not
+      regard the work as fully satisfactory in rigor and generality.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-mactutor-fourier
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: null
+
+  - id: r001-a014
+    subject: concept-arbitrary-function
+    predicate: had_pre_fourier_history_in
+    object: problem-vibrating-string
+    statement: >
+      Questions about arbitrary functions and trigonometric representation did
+      not originate with Fourier. They had already appeared in the eighteenth-
+      century vibrating-string controversy.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-herreman-2013
+      - src-riemann-trig-translation
+    uncertainty: null
+
+  - id: r001-a015
+    subject: person-daniel-bernoulli
+    predicate: advocated
+    object: concept-trigonometric-series
+    statement: >
+      Daniel Bernoulli had argued that vibrating motions could be formed from
+      harmonic components, anticipating part of the physical intuition later
+      associated with trigonometric decomposition.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-herreman-2013
+      - src-ohm-history
+      - src-riemann-trig-translation
+    uncertainty: >
+      Bernoulli did not possess Fourier's later integral coefficient formula or
+      Fourier's exact framework of arbitrary-function representation, so calling
+      his claim "the Fourier theorem" would be anachronistic.
+
+  - id: r001-a016
+    subject: person-fourier
+    predicate: transformed_status_of
+    object: concept-trigonometric-series
+    statement: >
+      Fourier's distinctive contribution was not the first appearance of sines
+      and cosines, but their systematic use with coefficient formulas to represent
+      general prescribed data in a broad physical-mathematical theory.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-herreman-2013
+      - src-grattan-guinness-ravetz-1972
+      - src-wiener-historical-background
+    uncertainty: >
+      Historians differ over how strongly to characterize Fourier's originality
+      relative to Euler, Bernoulli, Lagrange and Laplace.
+
+  - id: r001-a017
+    subject: person-cauchy
+    predicate: attempted_to_establish
+    object: concept-convergence
+    statement: >
+      Cauchy attempted to prove convergence results for trigonometric series
+      before Dirichlet's 1829 paper.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+    uncertainty: null
+
+  - id: r001-a018
+    subject: person-dirichlet
+    predicate: criticized
+    object: person-cauchy
+    statement: >
+      Dirichlet explicitly argued that Cauchy's convergence proof was
+      insufficient, including because it appealed to complex substitutions for
+      functions that need not be given by analytic formulas and because its
+      asymptotic argument did not imply convergence.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+    uncertainty: null
+
+  - id: r001-a019
+    subject: person-dirichlet
+    predicate: established_conditions_for
+    object: concept-convergence
+    statement: >
+      Dirichlet's 1829 theorem established convergence under restrictions such
+      as finitely many extrema and finitely many ordinary discontinuities;
+      at a jump the Fourier series converges to the mean of the two limiting
+      values rather than arbitrarily reproducing the assigned point value.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+      - src-encyclopedia-fourier-series
+    uncertainty: >
+      Modern textbook formulations often use bounded variation or piecewise
+      smoothness and should not be projected verbatim onto Dirichlet's original
+      formulation.
+
+  - id: r001-a020
+    subject: concept-convergence
+    predicate: became_independent_problem_after
+    object: work-fourier-1822
+    statement: >
+      Fourier's representation program made convergence of trigonometric series
+      a major problem in analysis that could no longer be settled merely by
+      formal manipulation of infinite series.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+      - src-riemann-trig-translation
+      - src-encyclopedia-trig-series
+    uncertainty: >
+      This is a historical synthesis. Convergence theory also developed through
+      other series problems, so Fourier should not be treated as its sole cause.
+
+  - id: r001-a021
+    subject: concept-arbitrary-function
+    predicate: was_broadened_in_context_of
+    object: concept-trigonometric-series
+    statement: >
+      Fourier's treatment strongly contributed to nineteenth-century pressure
+      to distinguish a function from a single analytic formula describing it.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-fourier-1822-function-conception
+      - src-riemann-trig-translation
+      - src-poincare-value-science
+    uncertainty: >
+      The modern function concept resulted from a long development involving
+      Euler, the vibrating-string controversy, Dirichlet, Riemann and others.
+      A direct statement that "Fourier invented the modern concept of function"
+      is not supported.
+
+  - id: r001-a022
+    subject: person-riemann
+    predicate: later_extended_analysis_of
+    object: concept-trigonometric-series
+    statement: >
+      Riemann later treated the representation problem and general trigonometric
+      series in ways that forced deeper examination of integration, convergence
+      and exceptional sets.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-riemann-trig-translation
+      - src-riemann-landmark
+    uncertainty: >
+      Riemann's work occurred decades after Fourier and should not be inserted
+      into the contemporary reception of the 1807 or 1822 work.
+
+  - id: r001-a023
+    subject: person-fourier
+    predicate: did_not_use_modern_concept_of
+    object: "frequency-domain signal decomposition"
+    statement: >
+      Describing Fourier's heat work as a decomposition into "frequencies" is a
+      useful modern analogy but risks anachronism. In the heat problems the
+      sine and cosine terms primarily function as spatial harmonics or separated
+      spatial modes whose amplitudes decay with time.
+    perspective: modern_abstraction
+    certainty: high
+    sources:
+      - src-fourier-1822-ch3
+      - src-fourier-1822-art235
+    uncertainty: >
+      Harmonic and vibration language existed before and during Fourier's time,
+      but the modern signal-processing ontology of time domain versus frequency
+      domain is later.
+
+  - id: r001-a024
+    subject: concept-separation-modes
+    predicate: has_modern_interpretation_as
+    object: "eigenfunction expansion"
+    statement: >
+      Modern mathematics interprets Fourier's method as expansion in eigenfunctions
+      of the spatial differential operator determined by the geometry and boundary
+      conditions.
+    perspective: modern_abstraction
+    certainty: high
+    sources:
+      - src-fourier-1822-ch3
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: >
+      Eigenvalue/eigenfunction terminology belongs to later spectral theory and
+      must not be attributed directly to Fourier.
+
+  - id: r001-a025
+    subject: problem-heat-propagation
+    predicate: historically_generated_questions_about
+    object: concept-arbitrary-function
+    statement: >
+      The demand to allow essentially arbitrary initial temperature distributions
+      gave concrete physical force to questions about what sorts of functions
+      could legitimately be represented and manipulated analytically.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-fourier-1822-art235
+      - src-fourier-1822-function-conception
+      - src-poincare-value-science
+    uncertainty: >
+      This causal formulation should be read as a contribution to the history
+      of the function concept, not as an exclusive origin story.
+
+  - id: r001-a026
+    subject: "Fourier-to-Cauchy-to-Riemann narrative"
+    predicate: is
+    object: "historically incomplete"
+    statement: >
+      A simple Fourier → Cauchy → Riemann sequence suppresses important actors
+      and distinct problem traditions. At minimum the eighteenth-century
+      vibrating-string controversy, Lagrange and Laplace's reception, Cauchy's
+      unsuccessful convergence attempt, Dirichlet's 1829 theorem, and later
+      Riemannian developments must be distinguished.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-herreman-2013
+      - src-dirichlet-1829
+      - src-riemann-trig-translation
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: >
+      Even this expanded chain is selective; a comprehensive nineteenth-century
+      genealogy would also involve Poisson, Abel, Seidel, Jordan, Cantor,
+      Weierstrass, Lebesgue and others depending on the endpoint being studied.
+
+question_transitions:
+  - id: r001-qt001
+    from_question: "How does heat propagate through a solid?"
+    to_question: "Which mathematical functions satisfy the heat equation and the physical boundary conditions?"
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-ch3
+    uncertainty: null
+
+  - id: r001-qt002
+    from_question: "Which separated solutions satisfy the geometry?"
+    to_question: "Can the required initial or boundary temperature distribution be composed from trigonometric modes?"
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-section207
+      - src-fourier-1822-art235
+    uncertainty: >
+      The wording "separated solutions" and "modes" is modernized.
+
+  - id: r001-qt003
+    from_question: "Can this particular temperature profile be represented?"
+    to_question: "Can an arbitrary function on an interval be represented by a trigonometric series?"
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-section207
+      - src-fourier-1822-art235
+    uncertainty: null
+
+  - id: r001-qt004
+    from_question: "Can an arbitrary function be represented formally?"
+    to_question: "Under what conditions does the resulting infinite series actually converge to the intended function?"
+    perspective: historical
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+    uncertainty: >
+      Fourier himself already discussed convergence, but the explicit separation
+      between formal coefficient construction and rigorous sufficient convergence
+      conditions became sharper in later work.
+
+  - id: r001-qt005
+    from_question: "What does convergence mean for discontinuous or non-analytic functions?"
+    to_question: "What objects should analysis admit as functions, and what notion of integration is sufficient to handle them?"
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-riemann-trig-translation
+      - src-riemann-landmark
+    uncertainty: >
+      This transition summarizes developments extending well beyond the 1830
+      endpoint and should not be attributed as Fourier's explicit research program.
+
+historical_connections:
+  contemporary:
+    - id: hc001
+      connection: "heat theory ↔ trigonometric representation"
+      status: "direct"
+      certainty: high
+      explanation: >
+        Explicitly present in Fourier's own heat research.
+      sources:
+        - src-fourier-1822-section207
+        - src-fourier-1822-art235
+
+    - id: hc002
+      connection: "Fourier ↔ vibrating-string controversy"
+      status: "intellectual_precedent"
+      certainty: high
+      explanation: >
+        Fourier's representation problem had a clear eighteenth-century precursor
+        in disputes over vibrating strings and arbitrary curves.
+      sources:
+        - src-herreman-2013
+        - src-riemann-trig-translation
+
+    - id: hc003
+      connection: "Fourier ↔ Lagrange/Laplace criticism"
+      status: "direct_contemporary_reception"
+      certainty: high
+      explanation: >
+        Their examination of Fourier's work belongs to the immediate historical
+        episode, though their positions should not be compressed into a single
+        uniform objection.
+      sources:
+        - src-mactutor-fourier
+        - src-grattan-guinness-ravetz-1972
+
+    - id: hc004
+      connection: "Fourier ↔ Cauchy convergence work"
+      status: "near-contemporary_downstream"
+      certainty: high
+      explanation: >
+        Cauchy's attempt directly addressed convergence issues raised by
+        trigonometric representations.
+      sources:
+        - src-dirichlet-1829
+
+    - id: hc005
+      connection: "Fourier ↔ Dirichlet convergence theorem"
+      status: "direct_downstream"
+      certainty: high
+      explanation: >
+        Dirichlet explicitly frames Fourier's representation method as the subject
+        whose convergence lacked a satisfactory general proof.
+      sources:
+        - src-dirichlet-1829
+
+  later_interpretations:
+    - id: hc006
+      connection: "Fourier ↔ modern concept of function"
+      status: "important_but_nonexclusive"
+      certainty: high
+      explanation: >
+        Fourier's broad use of arbitrary and discontinuous data became an important
+        episode in histories of the function concept, but the concept was not
+        created in a single Fourierian step.
+      sources:
+        - src-fourier-1822-function-conception
+        - src-poincare-value-science
+        - src-riemann-trig-translation
+
+    - id: hc007
+      connection: "Fourier ↔ Riemann integration"
+      status: "indirect_historical_development"
+      certainty: high
+      explanation: >
+        Riemann's investigation of trigonometric series contributed to his
+        examination of integration and representation, but this belongs to the
+        mid-nineteenth century rather than Fourier's own context.
+      sources:
+        - src-riemann-landmark
+        - src-riemann-trig-translation
+
+    - id: hc008
+      connection: "Fourier ↔ frequency-domain analysis"
+      status: "modern_abstraction"
+      certainty: high
+      explanation: >
+        Modern harmonic analysis and signal processing legitimately inherit
+        Fourier's mathematics, but interpreting the 1807 heat memoir primarily
+        through the modern concept of frequency obscures its original spatial
+        heat-conduction problem.
+      sources:
+        - src-fourier-1822-ch3
+        - src-fourier-1822-art235
+
+competing_or_intermediate_developments:
+  - id: cid001
+    actors:
+      - person-dalembert
+      - person-euler
+      - person-daniel-bernoulli
+      - person-lagrange
+    development: >
+      Eighteenth-century vibrating-string work had already brought arbitrary
+      curves, differential equations and trigonometric harmonic representations
+      into conflict.
+    significance: >
+      Fourier should be treated as transforming an existing representational
+      problem rather than creating it from nothing.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-herreman-2013
+      - src-riemann-trig-translation
+    uncertainty: null
+
+  - id: cid002
+    actors:
+      - person-laplace
+    development: >
+      Closely related integral coefficient methods appeared in Laplace's work,
+      complicating simple priority claims concerning the formula later called
+      the Fourier coefficient formula.
+    significance: >
+      Attribution should distinguish systematic use and generality from absolute
+      priority for every technical ingredient.
+    perspective: historical
+    certainty: medium
+    sources:
+      - src-wiener-historical-background
+    uncertainty: >
+      This point should be strengthened with direct examination of Laplace's
+      original probability writings before publication in a high-confidence Story.
+
+  - id: cid003
+    actors:
+      - person-cauchy
+      - person-dirichlet
+    development: >
+      Cauchy's attempted convergence proof and Dirichlet's criticism show that
+      rigor did not emerge in one step immediately after Fourier.
+    significance: >
+      The transition from formal representation to rigorous convergence was a
+      contested process.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+    uncertainty: null
+
+  - id: cid004
+    actors:
+      - person-poisson
+    development: >
+      Poisson pursued competing work on heat and criticized aspects of Fourier's
+      mathematical methods and physical theory.
+    significance: >
+      The reception of Fourier's heat theory involved competing physical and
+      mathematical programs, not merely resistance to a novel series theorem.
+    perspective: historical
+    certainty: medium_high
+    sources:
+      - src-mactutor-fourier
+      - src-grattan-guinness-ravetz-1972
+    uncertainty: >
+      Poisson's specific technical arguments require a separate research unit
+      for precise reconstruction.
+
+key_distinctions:
+  - id: kd001
+    distinction: "formal expansion vs convergence"
+    explanation: >
+      A formula for coefficients does not by itself prove that the resulting
+      infinite series converges, nor that its limit equals the specified function
+      at every point.
+    perspective: modern_abstraction
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+    uncertainty: null
+
+  - id: kd002
+    distinction: "function vs analytic formula"
+    explanation: >
+      Fourier treated prescribed ordinates as capable of defining a function
+      even when they were not governed by a single analytic expression.
+    perspective: historical
+    certainty: high
+    sources:
+      - src-fourier-1822-function-conception
+    uncertainty: >
+      This resembles later function concepts but is not identical to a modern
+      set-theoretic definition.
+
+  - id: kd003
+    distinction: "spatial harmonic vs temporal frequency"
+    explanation: >
+      In the core heat problems, the trigonometric dependence is often spatial,
+      while time appears through decay factors. Calling every term a temporal
+      frequency is therefore misleading.
+    perspective: modern_abstraction
+    certainty: high
+    sources:
+      - src-fourier-1822-ch3
+    uncertainty: null
+
+  - id: kd004
+    distinction: "historical influence vs retrospective genealogy"
+    explanation: >
+      Dirichlet explicitly responds to Fourier-series convergence, whereas broad
+      claims such as "Fourier caused modern real analysis" are retrospective
+      historical syntheses.
+    perspective: later_interpretation
+    certainty: high
+    sources:
+      - src-dirichlet-1829
+      - src-riemann-trig-translation
+    uncertainty: null
+
+editorial_findings:
+  supported_story_elements:
+    - >
+      Fourier's theory of heat led directly to the need to represent prescribed
+      temperature distributions by trigonometric series.
+    - >
+      Fourier made unusually broad claims concerning arbitrary and discontinuous
+      functions.
+    - >
+      His work exposed unresolved questions about convergence and legitimate
+      representation.
+    - >
+      Dirichlet's 1829 convergence theorem is a major direct continuation of this
+      problem.
+    - >
+      The history has a substantial pre-Fourier background in the vibrating-string
+      controversy.
+
+  story_elements_requiring_qualification:
+    - claim: "Fourier discovered that every function is a sum of sine waves."
+      problem: >
+        This overstates both Fourier's modern validity and his historical
+        formulation. His broad assertion requires convergence qualifications.
+      recommended_wording: >
+        Fourier argued that very general, even discontinuous, prescribed functions
+        could be represented by trigonometric series and developed integral
+        formulas for their coefficients; determining the exact conditions under
+        which such series converge became a major subsequent problem.
+
+    - claim: "Fourier invented the idea of trigonometric decomposition."
+      problem: >
+        Trigonometric representations were already central to the eighteenth-
+        century vibrating-string controversy.
+      recommended_wording: >
+        Fourier transformed earlier harmonic-series ideas into a systematic method
+        for representing general data in the theory of heat.
+
+    - claim: "Fourier introduced the modern concept of function."
+      problem: >
+        The historical development was distributed across the eighteenth and
+        nineteenth centuries.
+      recommended_wording: >
+        Fourier's use of arbitrary and discontinuous temperature distributions was
+        an important step in loosening the identification of functions with single
+        analytic formulas.
+
+    - claim: "Fourier led directly to Cauchy and then Riemann."
+      problem: >
+        This suppresses Dirichlet and the earlier vibrating-string tradition and
+        conflates several distinct mathematical developments.
+      recommended_wording: >
+        Fourier's representation problem fed into nineteenth-century work on
+        convergence and functions, notably through Cauchy's attempted proof,
+        Dirichlet's 1829 theorem and, later, Riemann's study of trigonometric
+        series and integration.
+
+    - claim: "Fourier decomposed heat signals into frequencies."
+      problem: >
+        This imports twentieth-century signal-processing language into a spatial
+        heat-conduction problem.
+      recommended_wording: >
+        Fourier represented temperature profiles as superpositions of
+        trigonometric spatial components; modern harmonic analysis later interprets
+        analogous decompositions in frequency-domain language.
+
+potential_story_graph:
+  nodes:
+    - problem-vibrating-string
+    - concept-arbitrary-function
+    - concept-trigonometric-series
+    - problem-heat-propagation
+    - problem-heat-boundary-value
+    - concept-fourier-coefficients
+    - concept-convergence
+    - concept-discontinuous-function
+
+  edges:
+    - from: problem-vibrating-string
+      to: concept-arbitrary-function
+      relation: "raised_questions_about"
+      perspective: historical
+
+    - from: problem-vibrating-string
+      to: concept-trigonometric-series
+      relation: "provided_precedent_for"
+      perspective: historical
+
+    - from: problem-heat-propagation
+      to: problem-heat-boundary-value
+      relation: "was_formulated_as"
+      perspective: modern_abstraction
+
+    - from: problem-heat-boundary-value
+      to: concept-trigonometric-series
+      relation: "required_use_of"
+      perspective: historical
+
+    - from: concept-trigonometric-series
+      to: concept-fourier-coefficients
+      relation: "required_determination_of"
+      perspective: historical
+
+    - from: concept-fourier-coefficients
+      to: concept-arbitrary-function
+      relation: "enabled_broad_representation_claim"
+      perspective: historical
+
+    - from: concept-arbitrary-function
+      to: concept-discontinuous-function
+      relation: "was_extended_to_include"
+      perspective: historical
+
+    - from: concept-trigonometric-series
+      to: concept-convergence
+      relation: "generated_problem_of"
+      perspective: historical
+
+uncertainties:
+  - id: r001-u001
+    topic: "Exact scope of Fourier's 'arbitrary function'"
+    severity: high
+    description: >
+      Fourier's rhetoric is extremely broad, but it should not be translated
+      mechanically into the modern statement "every function has a Fourier
+      series converging pointwise to it."
+    consequence: >
+      Stories must distinguish Fourier's historical claim from later correct
+      convergence theorems.
+    sources:
+      - src-fourier-1822-function-conception
+      - src-fourier-1822-convergence-claim
+      - src-dirichlet-1829
+
+  - id: r001-u002
+    topic: "Attribution of objections to individual examiners"
+    severity: medium
+    description: >
+      Secondary accounts identify Lagrange and Laplace with objections to
+      Fourier's series, but attitudes changed and the committee process was
+      complex.
+    consequence: >
+      Avoid invented dialogue or categorical claims about a single examiner's
+      motive without manuscript-level evidence.
+    sources:
+      - src-mactutor-fourier
+      - src-grattan-guinness-ravetz-1972
+
+  - id: r001-u003
+    topic: "Laplace and priority for integral coefficient formulas"
+    severity: medium
+    description: >
+      Historical literature notes related work by Laplace, possibly independent
+      of Fourier.
+    consequence: >
+      Do not assert that Fourier was indisputably the first person ever to write
+      any form of the coefficient integrals.
+    sources:
+      - src-wiener-historical-background
+
+  - id: r001-u004
+    topic: "Function-concept causal chain"
+    severity: high
+    description: >
+      Fourier's work was important, but histories connecting it to the modern
+      function concept are retrospective and involve many other mathematicians.
+    consequence: >
+      Mark Fourier → modern function concept as later_interpretation rather than
+      a simple contemporary fact.
+    sources:
+      - src-riemann-trig-translation
+      - src-poincare-value-science
+
+  - id: r001-u005
+    topic: "Fourier → Riemann directness"
+    severity: high
+    description: >
+      Riemann explicitly viewed trigonometric series as central to arbitrary-
+      function questions, but several decades and intermediate developments
+      separate his work from Fourier's.
+    consequence: >
+      Insert Dirichlet and other intermediate analysis rather than drawing a
+      direct causal edge.
+    sources:
+      - src-dirichlet-1829
+      - src-riemann-trig-translation
+
+  - id: r001-u006
+    topic: "Modern spectral interpretation"
+    severity: low
+    description: >
+      Eigenfunctions, spectral decomposition and frequency-domain language make
+      Fourier's procedure transparent to modern readers but are retrospective.
+    consequence: >
+      Such vocabulary should be explicitly tagged modern_abstraction.
+    sources:
+      - src-fourier-1822-ch3
+
+source_assessment:
+  primary_sources_used:
+    - src-fourier-1822-section207
+    - src-fourier-1822-art219-221
+    - src-fourier-1822-art235
+    - src-fourier-1822-convergence-claim
+    - src-fourier-1822-function-conception
+    - src-fourier-1822-discontinuous
+    - src-dirichlet-1829
+    - src-riemann-trig-translation
+
+  major_secondary_sources_used:
+    - src-grattan-guinness-ravetz-1972
+    - src-herreman-2013
+    - src-encyclopedia-fourier-series
+
+  source_gaps:
+    - >
+      Direct manuscript-level examination of Fourier's 1807 text was not
+      performed here; the 1972 Grattan-Guinness/Ravetz critical edition is the
+      principal authority used for its contents and chronology.
+    - >
+      Cauchy's 1823 convergence memoir was not independently transcribed and
+      audited; Dirichlet's 1829 contemporary criticism is used as the primary
+      evidence about its failure.
+    - >
+      Laplace's potentially independent coefficient formulas require a dedicated
+      primary-source check before making a strong priority assertion.
+    - >
+      Poisson's detailed mathematical objections to Fourier have not been
+      reconstructed in this packet.
+
+sources:
+  - id: src-fourier-1822-section207
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter III, Section VI, art. 207"
+    relevance: >
+      Fourier explains that the rectangular-solid heat problem leads directly
+      to the more general problem of developing an arbitrary function in
+      trigonometric series.
+    url: "https://fr.wikisource.org/wiki/Page:Fourier_-_Th%C3%A9orie_analytique_de_la_chaleur,_1822.djvu/242"
+    retrieval_citation: ":contentReference[oaicite:0]{index=0}"
+
+  - id: src-fourier-1822-art219-221
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter III, arts. 219–221"
+    relevance: >
+      Gives integral expressions for coefficients in sine-series expansion.
+    url: "https://fr.wikisource.org/wiki/Page:Fourier_-_Th%C3%A9orie_analytique_de_la_chaleur,_1822.djvu/267"
+    retrieval_citation: ":contentReference[oaicite:1]{index=1}"
+
+  - id: src-fourier-1822-art235
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter III, art. 235"
+    relevance: >
+      Fourier states that an arbitrarily drawn function on a finite interval can
+      be developed using sines and cosines and that heat theory requires such
+      reduction of initial temperature functions.
+    url: "https://fr.wikisource.org/wiki/Page:Fourier_-_Th%C3%A9orie_analytique_de_la_chaleur,_1822.djvu/290"
+    retrieval_citation: ":contentReference[oaicite:2]{index=2}"
+
+  - id: src-fourier-1822-convergence-claim
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter III, p. 259"
+    relevance: >
+      Fourier explicitly states that trigonometric series are always convergent
+      toward the value of the developed function.
+    url: "https://fr.wikisource.org/wiki/Page:Fourier_-_Th%C3%A9orie_analytique_de_la_chaleur,_1822.djvu/291"
+    retrieval_citation: ":contentReference[oaicite:3]{index=3}"
+
+  - id: src-fourier-1822-function-conception
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, discussion of arbitrary functions"
+    relevance: >
+      Fourier describes f(x) as an arbitrary succession of ordinates not
+      necessarily subject to one common law and explicitly includes
+      discontinuous functions.
+    url: "https://fr.wikisource.org/wiki/Page:Fourier_-_Th%C3%A9orie_analytique_de_la_chaleur,_1822.djvu/584"
+    retrieval_citation: ":contentReference[oaicite:4]{index=4}"
+
+  - id: src-fourier-1822-discontinuous
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter III discussion of discontinuous curves"
+    relevance: >
+      Fourier asserts that sine and cosine series can represent functions and
+      curves whose law is discontinuous.
+    url: "https://fr.wikisource.org/wiki/Page:Fourier_-_Th%C3%A9orie_analytique_de_la_chaleur,_1822.djvu/280"
+    retrieval_citation: ":contentReference[oaicite:5]{index=5}"
+
+  - id: src-fourier-1822-ch3
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter III"
+    relevance: >
+      Primary presentation of heat propagation in an infinite rectangular solid
+      and its reduction to mathematical analysis.
+    url: "https://fr.wikisource.org/wiki/Th%C3%A9orie_analytique_de_la_chaleur/Chapitre_3"
+    retrieval_citation: ":contentReference[oaicite:6]{index=6}"
+
+  - id: src-fourier-1822-ch8
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter VIII"
+    relevance: >
+      Application of Fourier's heat equations and separated forms to a solid cube.
+    url: "https://fr.wikisource.org/wiki/Th%C3%A9orie_analytique_de_la_chaleur/Chapitre_8"
+    retrieval_citation: ":contentReference[oaicite:7]{index=7}"
+
+  - id: src-fourier-1822-ch9
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, Chapter IX"
+    relevance: >
+      Treats free diffusion in an infinite body with arbitrary initial temperature
+      data and develops integral representations.
+    url: "https://fr.wikisource.org/wiki/Th%C3%A9orie_analytique_de_la_chaleur/Chapitre_9"
+    retrieval_citation: ":contentReference[oaicite:8]{index=8}"
+
+  - id: src-fourier-1822-retrospective
+    type: primary
+    author: "Joseph Fourier"
+    year: 1822
+    title: "Théorie analytique de la chaleur, concluding analytical remarks"
+    relevance: >
+      Fourier retrospectively stresses that separated functions and discontinuous
+      pieces can be expressed by convergent trigonometric series or definite
+      integrals.
+    url: "https://fr.wikisource.org/wiki/Page:Fourier_-_Th%C3%A9orie_analytique_de_la_chaleur,_1822.djvu/620"
+    retrieval_citation: ":contentReference[oaicite:9]{index=9}"
+
+  - id: src-dirichlet-1829
+    type: primary
+    author: "Peter Gustav Lejeune Dirichlet"
+    year: 1829
+    title: "Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données"
+    publication: "Journal für die reine und angewandte Mathematik, vol. 4, pp. 157–169"
+    relevance: >
+      Dirichlet identifies Fourier's arbitrary-function representation problem,
+      says a general convergence proof was still lacking, criticizes Cauchy's
+      attempted proof, and supplies a rigorous convergence argument.
+    url: "https://arxiv.org/abs/0806.1294"
+    retrieval_citation: ":contentReference[oaicite:10]{index=10}"
+
+  - id: src-riemann-trig-translation
+    type: primary_translation
+    author: "Bernhard Riemann"
+    year_composed: 1854
+    year_published_original: 1867
+    title: "On the Representability of a Function by a Trigonometric Series"
+    relevance: >
+      Riemann's historical introduction explicitly traces the arbitrary-function
+      and trigonometric-series problem back to the vibrating-string controversy
+      and treats it as central to later analysis.
+    url: "https://www.originalsources.com/Document.aspx?DocID=CFSZSUKU4N379LC"
+    retrieval_citation: ":contentReference[oaicite:11]{index=11}"
+
+  - id: src-grattan-guinness-ravetz-1972
+    type: secondary_critical_edition
+    authors:
+      - "Ivor Grattan-Guinness"
+      - "Jerome R. Ravetz"
+    year: 1972
+    title: "Joseph Fourier, 1768–1830: A Survey of His Life and Work"
+    publisher: "MIT Press"
+    relevance: >
+      Critical study based on Fourier's manuscripts and first publication of the
+      1807 heat memoir; important source for chronology, development and reception.
+    url: "https://mitpress.mit.edu/9780262070416/joseph-fourier-17681830/"
+    retrieval_citation: ":contentReference[oaicite:12]{index=12}"
+
+  - id: src-smithsonian-fourier
+    type: bibliographic_secondary
+    organization: "Smithsonian Libraries and Archives"
+    year: 1972
+    title: "Catalog record for Joseph Fourier, 1768–1830"
+    relevance: >
+      Confirms that the critical edition contains Fourier's unpublished 1807 text
+      and distinguishes it from the separately published 1822 work.
+    url: "https://www.si.edu/object/siris_sil_10388"
+    retrieval_citation: ":contentReference[oaicite:13]{index=13}"
+
+  - id: src-mactutor-fourier
+    type: secondary
+    organization: "MacTutor History of Mathematics"
+    title: "Joseph Fourier (1768–1830)"
+    relevance: >
+      Summary of the 1807 examination, objections, 1811 prize competition and
+      1822 publication history.
+    url: "https://mathshistory.st-andrews.ac.uk/Biographies/Fourier/"
+    retrieval_citation: ":contentReference[oaicite:14]{index=14}"
+
+  - id: src-herreman-2013
+    type: secondary_peer_reviewed
+    author: "Alain Herreman"
+    year: 2013
+    title: "L'inauguration des séries trigonométriques dans la théorie analytique de la chaleur de Fourier et dans la controverse des cordes vibrantes"
+    journal: "Revue d'histoire des mathématiques"
+    volume: 19
+    issue: 2
+    pages: "151–243"
+    doi: "10.24033/rhm.177"
+    relevance: >
+      Detailed historical comparison of Fourier's arbitrary-function
+      representation with the earlier vibrating-string controversy.
+    url: "https://numdam.org/articles/10.24033/rhm.177/"
+    retrieval_citation: ":contentReference[oaicite:15]{index=15}"
+
+  - id: src-wiener-historical-background
+    type: secondary
+    organization: "American Mathematical Society"
+    title: "The Historical Background of Harmonic Analysis"
+    relevance: >
+      Discusses the vibrating-string controversy, Lagrange's attempt, and the
+      significance of explicit integral coefficient formulas associated with
+      Fourier and possibly independently Laplace.
+    url: "https://www.ams.org/publicoutreach/math-history/procsemi-wiener.pdf"
+    retrieval_citation: ":contentReference[oaicite:16]{index=16}"
+
+  - id: src-encyclopedia-fourier-series
+    type: tertiary_reference
+    organization: "Encyclopedia of Mathematics"
+    title: "Fourier series"
+    relevance: >
+      Summarizes Dirichlet's 1829 convergence criterion and the value obtained
+      at jump discontinuities.
+    url: "https://encyclopediaofmath.org/wiki/Fourier_series"
+    retrieval_citation: ":contentReference[oaicite:17]{index=17}"
+
+  - id: src-encyclopedia-trig-series
+    type: tertiary_reference
+    organization: "Encyclopedia of Mathematics"
+    title: "Trigonometric series"
+    relevance: >
+      Provides later mathematical context for Riemann's role and the distinction
+      between Fourier series and general trigonometric series.
+    url: "https://encyclopediaofmath.org/wiki/Trigonometric_series"
+    retrieval_citation: ":contentReference[oaicite:18]{index=18}"
+
+  - id: src-riemann-landmark
+    type: secondary
+    year: 2005
+    title: "Bernhard Riemann, posthumous thesis on the representation of functions by trigonometric series"
+    container: "Landmark Writings in Western Mathematics 1640–1940"
+    relevance: >
+      Summarizes the later significance of Riemann's trigonometric-series work
+      for integration and real analysis.
+    url: "https://www.sciencedirect.com/science/chapter/edited-volume/abs/pii/B9780444508713501194"
+    retrieval_citation: ":contentReference[oaicite:19]{index=19}"
+
+  - id: src-ohm-history
+    type: secondary_peer_reviewed
+    title: "The Unmusical Ear: Georg Simon Ohm and the Mathematical Analysis of Sound"
+    journal: "Isis"
+    relevance: >
+      Provides context for Bernoulli's harmonic interpretation, eighteenth-
+      century objections, and the later establishment of trigonometric analysis.
+    url: "https://www.journals.uchicago.edu/doi/10.1086/710318"
+    retrieval_citation: ":contentReference[oaicite:20]{index=20}"
+
+  - id: src-poincare-value-science
+    type: later_primary_commentary
+    author: "Henri Poincaré"
+    year: 1905
+    title: "La Valeur de la Science"
+    relevance: >
+      Later testimony connecting physically motivated Fourier-series problems
+      with the widening acceptance of discontinuous functions in analysis.
+    url: "https://fr.wikisource.org/wiki/La_Valeur_de_la_science/Chapitre_V._L%E2%80%99analyse_et_la_physique"
+    retrieval_citation: ":contentReference[oaicite:21]{index=21}"
+
+research_conclusion:
+  perspective: later_interpretation
+  certainty: high
+  statement: >
+    Fourier's trigonometric representation should be understood first as a tool
+    demanded by his mathematical theory of heat. The heat equation supplied
+    families of simple spatial solutions, while physical initial and boundary
+    data could be highly non-simple; Fourier therefore needed a way to express
+    general prescribed temperature profiles as combinations of those solutions.
+    He pushed this method far beyond earlier harmonic calculations by asserting
+    that arbitrary, including discontinuous, functions could be represented and
+    by providing integral formulas for the coefficients. His claims outran the
+    rigor then available. The resulting questions about convergence and about
+    what counts as a function became major problems in nineteenth-century
+    analysis, but their history is not a clean Fourier → Cauchy → Riemann chain.
+    The vibrating-string controversy predates Fourier; Cauchy's convergence
+    attempt was inadequate; Dirichlet's 1829 theorem is a crucial intermediate
+    result; and Riemann belongs to a substantially later phase. Modern language
+    of eigenfunctions, spectra and frequency decomposition is mathematically
+    illuminating but should be tagged explicitly as retrospective abstraction.
+  sources:
+    - src-fourier-1822-section207
+    - src-fourier-1822-art235
+    - src-fourier-1822-function-conception
+    - src-fourier-1822-convergence-claim
+    - src-herreman-2013
+    - src-dirichlet-1829
+    - src-riemann-trig-translation
+  uncertainty: >
+    The packet establishes the broad historical architecture with high confidence,
+    but manuscript-level attribution of individual objections, Laplace's precise
+    independent role, Poisson's competing theory, and Cauchy's full 1823 argument
+    deserve separate research units before being encoded as fine-grained causal
+    Stories.
