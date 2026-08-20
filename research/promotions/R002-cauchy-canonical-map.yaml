@@ -1,0 +1,62 @@
+research_unit_id: R002
+packet: research/packets/R002-cauchy-convergence-continuity.yaml
+canonical_assertions:
+  - canonical_id: assertion-r002-cauchy-rigor
+    packet_refs:
+      - {section: assertions, id: r002-a001}
+  - canonical_id: assertion-r002-cauchy-infinitesimal
+    packet_refs:
+      - {section: assertions, id: r002-a002}
+  - canonical_id: assertion-r002-cauchy-continuity
+    packet_refs:
+      - {section: assertions, id: r002-a003}
+  - canonical_id: assertion-r002-cauchy-convergence
+    packet_refs:
+      - {section: assertions, id: r002-a004}
+  - canonical_id: assertion-r002-sum-continuity-problem
+    packet_refs:
+      - {section: assertions, id: r002-a005}
+  - canonical_id: assertion-r002-periodic-fourier
+    packet_refs:
+      - {section: assertions, id: r002-a007}
+  - canonical_id: assertion-r002-periodic-convergence
+    packet_refs:
+      - {section: assertions, id: r002-a008}
+      - {section: assertions, id: r002-a009}
+  - canonical_id: assertion-r002-abel-continuity
+    packet_refs:
+      - {section: assertions, id: r002-a006}
+  - canonical_id: assertion-r002-cauchy-1853-continuity
+    packet_refs:
+      - {section: assertions, id: r002-a010}
+  - canonical_id: assertion-r002-cauchy-1853-uniform
+    packet_refs:
+      - {section: assertions, id: r002-a011}
+  - canonical_id: assertion-r002-stokes-uniform
+    packet_refs:
+      - {section: chronology, match: {date: "1847–1848"}}
+  - canonical_id: assertion-r002-seidel-uniform
+    packet_refs:
+      - {section: chronology, match: {date: "1847–1848"}}
+  - canonical_id: assertion-r002-weierstrass-uniform
+    packet_refs:
+      - {section: assertions, id: r002-a013}
+stories:
+  - story_id: story-cauchy-rigor-continuity
+    steps:
+      - step_id: r002-story-1
+        canonical_assertion_refs: [assertion-r002-cauchy-rigor]
+      - step_id: r002-story-2
+        canonical_assertion_refs: [assertion-r002-cauchy-infinitesimal]
+      - step_id: r002-story-3
+        canonical_assertion_refs: [assertion-r002-cauchy-continuity]
+      - step_id: r002-story-4
+        canonical_assertion_refs: [assertion-r002-cauchy-convergence]
+      - step_id: r002-story-5
+        canonical_assertion_refs: [assertion-r002-periodic-fourier, assertion-r002-periodic-convergence]
+      - step_id: r002-story-6
+        canonical_assertion_refs: [assertion-r002-sum-continuity-problem, assertion-r002-abel-continuity]
+      - step_id: r002-story-7
+        canonical_assertion_refs: [assertion-r002-cauchy-1853-continuity, assertion-r002-cauchy-1853-uniform]
+      - step_id: r002-story-8
+        canonical_assertion_refs: [assertion-r002-cauchy-1853-uniform, assertion-r002-stokes-uniform, assertion-r002-seidel-uniform, assertion-r002-weierstrass-uniform]
