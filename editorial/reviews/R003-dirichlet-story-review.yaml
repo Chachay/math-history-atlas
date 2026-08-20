@@ -1,0 +1,65 @@
+review:
+  story_id: story-function
+  research_unit_id: R003
+  status: reviewed
+  summary:
+    pass: 10
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+findings:
+  - id: sr-r003-001
+    classification: PASS
+    target: {story_id: story-function, field: description}
+    reason: The description states a bounded editorial arc and does not make a priority or causal claim.
+    assertion_refs: [assertion-r001-function-concept, assertion-r003-function-historiography]
+  - id: sr-r003-002
+    classification: PASS
+    target: {story_id: story-function, step_id: function-1, field: narrative}
+    reason: The wording is explicitly retrospective and supported by the Fourier/function historiographical assertions.
+    assertion_refs: [assertion-r001-function-concept, assertion-r003-function-historiography]
+  - id: sr-r003-003
+    classification: PASS
+    target: {story_id: story-function, step_id: function-2, field: narrative}
+    reason: Dirichlet's 1829 convergence problem and explicit Fourier/Cauchy positioning are supported as historical claims.
+    assertion_refs: [assertion-r003-dirichlet-convergence, assertion-r003-dirichlet-fourier-cauchy]
+  - id: sr-r003-004
+    classification: PASS
+    target: {story_id: story-function, step_id: function-3, field: narrative}
+    reason: The narrative distinguishes determined values, discontinuity, and admissibility without translating Dirichlet's conditions into later integrability criteria.
+    assertion_refs: [assertion-r003-dirichlet-arbitrary-admissibility, assertion-r003-dirichlet-discontinuity, assertion-r003-dirichlet-integral-boundary]
+  - id: sr-r003-005
+    classification: PASS
+    target: {story_id: story-function, step_id: function-4, field: narrative}
+    reason: The 1837 formulation is accurately bounded to a real-interval continuous-function formulation and explicitly rejects both set-theoretic projection and unique-priority language.
+    assertion_refs: [assertion-r003-dirichlet-1837-function, assertion-r003-function-historiography]
+  - id: sr-r003-006
+    classification: PASS
+    target: {story_id: story-function, step_id: function-5, field: narrative}
+    reason: The handoff to analytic admissibility is marked later_interpretation and does not presuppose Riemann's later answer.
+    assertion_refs: [assertion-r003-downstream-admissibility, assertion-r003-dirichlet-integral-boundary]
+  - id: sr-r003-007
+    classification: PASS
+    target: {story_id: story-function, link: {from: function-1, to: function-2}}
+    reason: branches is appropriately weaker than continues for the retrospective Fourier-to-Dirichlet relation.
+    assertion_refs: [assertion-r003-function-historiography, assertion-r003-dirichlet-convergence]
+  - id: sr-r003-008
+    classification: PASS
+    target: {story_id: story-function, link: {from: function-2, to: function-3}}
+    reason: Both steps are parts of Dirichlet's 1829 convergence/admissibility analysis, so continues is supported.
+    assertion_refs: [assertion-r003-dirichlet-convergence, assertion-r003-dirichlet-integral-boundary]
+  - id: sr-r003-009
+    classification: PASS
+    target: {story_id: story-function, link: {from: function-3, to: function-4}}
+    reason: branches avoids asserting that the 1837 formulation was a necessary consequence of the 1829 examples.
+    assertion_refs: [assertion-r003-dirichlet-integral-boundary, assertion-r003-dirichlet-1837-function]
+  - id: sr-r003-010
+    classification: PASS
+    target: {story_id: story-function, link: {from: function-4, to: function-5}}
+    reason: branches correctly marks the final admissibility question as a retrospective downstream reading rather than Dirichlet's own stated agenda.
+    assertion_refs: [assertion-r003-dirichlet-1837-function, assertion-r003-downstream-admissibility]
+research_gaps:
+  - id: gap-r003-lobachevsky-priority
+    question: What exact Lobachevsky primary formulation should be compared with Dirichlet before any priority claim about a first modern definition of function?
+    needed_evidence: Direct primary text plus specialist comparison of date, wording, and scope.
+sources: []
