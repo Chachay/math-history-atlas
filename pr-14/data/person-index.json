@@ -27,7 +27,9 @@
   {
     "person": "person-riemann",
     "name": "Bernhard Riemann",
-    "assertions": [],
+    "assertions": [
+      "assertion-r004-integral-criterion"
+    ],
     "stories": []
   },
   {

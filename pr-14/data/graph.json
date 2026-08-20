@@ -284,6 +284,24 @@
       "fields": [
         "analysis"
       ]
+    },
+    {
+      "id": "work-riemann-trig-1854",
+      "type": "Work",
+      "name": "Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe",
+      "start_year": 1854,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-riemann-integral",
+      "type": "Concept",
+      "name": "Riemann's criterion for definite integrability",
+      "start_year": 1854,
+      "fields": [
+        "analysis"
+      ]
     }
   ],
   "questions": [
@@ -404,6 +422,39 @@
       "question": "Under what conditions can broadly specified functions legitimately enter definite integrals and trigonometric representations?",
       "period": {
         "from": 1829,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-riemann-integrability",
+      "question": "Under what conditions does a finite function admit a definite integral in Riemann's sense?",
+      "period": {
+        "from": 1854,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-infinitely-discontinuous-functions",
+      "question": "Can functions with infinitely many discontinuities still be definitely integrable?",
+      "period": {
+        "from": 1854,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-post-riemann-integration-gap",
+      "question": "What further integration or exceptional-set questions remain beyond Riemann's criterion?",
+      "period": {
+        "from": 1854,
         "to": null
       },
       "fields": [
@@ -937,6 +988,186 @@
       "sources": [
         "source-dirichlet-1837",
         "source-youschkevitch-1976"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-riemann-problem",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "concept-fourier-series",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-dirichlet-scope",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-integral-need",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "raised_question",
+      "object": "concept-integrability",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-integral-criterion",
+      "subject": "person-riemann",
+      "predicate": "contributed_to",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-integrability-relation",
+      "subject": "concept-riemann-integral",
+      "predicate": "contributed_to",
+      "object": "concept-integrability",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867",
+        "source-rowe-2026"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-discontinuous-example",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "concept-discontinuous-function",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-dirichlet-comparison",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "reframed",
+      "object": "concept-discontinuous-function",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867",
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-admissibility-handoff",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "q-dirichlet-admissible-functions",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867",
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-motivation-historiography",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-rowe-2026",
+        "source-mascre-2005"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-integrability-not-sufficient",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "raised_question",
+      "object": "concept-fourier-series",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r004-downstream-gap",
+      "subject": "concept-riemann-integral",
+      "predicate": "contributed_to",
+      "object": "q-post-riemann-integration-gap",
+      "period": {
+        "from": 1854,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-mascre-2005"
       ],
       "status": "historically_reviewed"
     }
