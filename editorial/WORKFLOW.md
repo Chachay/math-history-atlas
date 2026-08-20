@@ -75,7 +75,7 @@ Research Packet object
 ```
 
 ### Story Editor
-Uses canonical data only. It creates a candidate editorial DAG whose steps contain `narrative`, `assertion_refs`, and `perspective`. Unsupported transitions become research gaps.
+Uses canonical data only. It creates a candidate editorial DAG whose steps contain reader-facing `narrative`, `assertion_refs`, and `perspective`. Unsupported transitions become research gaps.
 
 ### Story Critic
 Reviews the Story as narrative: sentence support, transition strength, perspective, causation, modern terminology, and branch/continuation semantics. It does not promote new facts.
