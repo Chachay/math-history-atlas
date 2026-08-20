@@ -1,0 +1,41 @@
+- id: source-cauchy-1823
+  title: Résumé des leçons données à l'École royale polytechnique sur le calcul infinitésimal
+  author: Augustin-Louis Cauchy
+  year: 1823
+  kind: primary
+  url: https://gallica.bnf.fr/ark:/12148/bpt6k62404287
+- id: source-cauchy-1853
+  title: Note sur les séries convergentes dont les divers termes sont des fonctions continues d'une variable réelle ou imaginaire, entre des limites données
+  author: Augustin-Louis Cauchy
+  year: 1853
+  kind: primary
+  url: https://gallica.bnf.fr/ark:/12148/bpt6k2993z/f458.item.r=Cauchy
+- id: source-bradley-sandifer-2009
+  title: "Cauchy's Cours d'analyse: An Annotated Translation"
+  author: Robert E. Bradley and C. Edward Sandifer
+  year: 2009
+  kind: secondary_scholarly
+  url: https://doi.org/10.1007/978-1-4419-0549-9
+- id: source-arsac-2013
+  title: "Cauchy, Abel, Seidel, Stokes et la convergence uniforme: De la difficulté historique du raisonnement sur les limites"
+  author: Gilbert Arsac
+  year: 2013
+  kind: secondary_scholarly
+  url: https://stm.cairn.info/cauchy-abel-seidel-stokes-et-la-convergence-uniforme--9782705686918
+- id: source-stokes-1847
+  title: On the Critical Values of the Sums of Periodic Series
+  author: George Gabriel Stokes
+  year: 1847
+  kind: primary
+  url: https://pordlabs.ucsd.edu/wryoung/theorySeminar/pdf15/Stokes1847.pdf
+- id: source-seidel-1848
+  title: Note über eine Eigenschaft der Reihen, welche discontinuirliche Functionen darstellen
+  author: Philipp Ludwig von Seidel
+  year: 1848
+  kind: primary
+  url: https://www.deutsche-digitale-bibliothek.de/item/7QBHOQIZXUBBN3GDGAVSWXKM4TYHFCM3
+- id: source-weierstrass-uniform-history
+  title: The development of the concept of uniform convergence in Karl Weierstrass's lectures and publications between 1861 and 1886
+  year: 2020
+  kind: secondary_peer_reviewed
+  url: https://link.springer.com/article/10.1007/s00407-020-00266-9
