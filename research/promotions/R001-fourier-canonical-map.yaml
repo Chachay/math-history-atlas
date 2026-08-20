@@ -1,0 +1,64 @@
+research_unit_id: R001
+packet: research/packets/R001-fourier-heat-series.yaml
+canonical_assertions:
+  - canonical_id: assertion-r001-fourier-heat-problem
+    packet_refs:
+      - section: assertions
+        id: r001-a001
+  - canonical_id: assertion-r001-heat-data-to-series
+    packet_refs:
+      - section: assertions
+        id: r001-a002
+      - section: assertions
+        id: r001-a004
+      - section: assertions
+        id: r001-a005
+  - canonical_id: assertion-r001-series-representation-question
+    packet_refs:
+      - section: assertions
+        id: r001-a004
+      - section: assertions
+        id: r001-a007
+  - canonical_id: assertion-r001-arbitrary-function
+    packet_refs:
+      - section: assertions
+        id: r001-a007
+      - section: assertions
+        id: r001-a008
+  - canonical_id: assertion-r001-series-to-convergence
+    packet_refs:
+      - section: assertions
+        id: r001-a009
+      - section: chronology
+        match:
+          date: '1829'
+  - canonical_id: assertion-r001-dirichlet-convergence
+    packet_refs:
+      - section: chronology
+        match:
+          date: '1829'
+  - canonical_id: assertion-r001-function-concept
+    packet_refs:
+      - section: assertions
+        id: r001-a021
+      - section: assertions
+        id: r001-a025
+stories:
+  - story_id: story-fourier-heat-representation
+    steps:
+      - step_id: r001-story-1
+        canonical_assertion_refs: [assertion-r001-fourier-heat-problem]
+      - step_id: r001-story-2
+        canonical_assertion_refs: [assertion-r001-heat-data-to-series]
+      - step_id: r001-story-3
+        canonical_assertion_refs: [assertion-r001-heat-data-to-series, assertion-r001-series-representation-question]
+      - step_id: r001-story-4
+        canonical_assertion_refs: [assertion-r001-series-representation-question, assertion-r001-arbitrary-function]
+      - step_id: r001-story-5
+        canonical_assertion_refs: [assertion-r001-arbitrary-function]
+      - step_id: r001-story-6
+        canonical_assertion_refs: [assertion-r001-series-to-convergence]
+      - step_id: r001-story-7
+        canonical_assertion_refs: [assertion-r001-dirichlet-convergence]
+      - step_id: r001-story-8
+        canonical_assertion_refs: [assertion-r001-function-concept]

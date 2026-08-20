@@ -29,7 +29,7 @@ def validate_all():
     dup={x for x in ids if ids.count(x)>1}
     if dup: errors.append(f'duplicate IDs: {sorted(dup)}')
     entity_ids={e.id for e in entities}; question_ids={q.id for q in questions}; ref_ids=entity_ids|question_ids
-    source_ids={s['id'] for s in sources}; field_ids={f.id for f in fields}
+    assertion_ids={a.id for a in assertions}; source_ids={s['id'] for s in sources}; field_ids={f.id for f in fields}
     for e in entities:
         if e.start_year and e.end_year and e.start_year>e.end_year: errors.append(f'invalid years: {e.id}')
         for f in e.fields:
@@ -50,6 +50,11 @@ def validate_all():
         step_ids={x.id for x in story.steps}
         for step in story.steps:
             if step.ref not in ref_ids: errors.append(f'invalid StoryStep ref {step.ref} in {story.id}')
+            if step.narrative and not step.assertion_refs:
+                errors.append(f'narrative without assertion_refs on {step.id} in {story.id}')
+            for assertion_id in step.assertion_refs:
+                if assertion_id not in assertion_ids:
+                    errors.append(f'unknown StoryStep assertion_ref {assertion_id} on {step.id} in {story.id}')
         for q in story.question_phases:
             if q not in question_ids: errors.append(f'invalid question phase {q} in {story.id}')
         g=nx.DiGraph(); g.add_nodes_from(step_ids)

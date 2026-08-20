@@ -6,7 +6,7 @@ type View = 'Atlas' | 'Network' | 'Story' | 'Person';
 type Entity = { id: string; type: string; name: string; start_year?: number; end_year?: number | null; fields?: string[] };
 type Question = { id: string; question: string; period?: { from?: number; to?: number | null }; fields?: string[] };
 type Assertion = { id: string; subject: string; predicate: string; object: string; status?: string; perspective?: string };
-type StoryStep = { id: string; ref: string; role: string };
+type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string };
 type Story = { id: string; title: string; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
 type Intersection = { entity: string; story_count: number; stories: string[] };
 type AtlasField = { id: string; name: string; parents: string[] };
@@ -18,6 +18,7 @@ type Dataset = {
   atlas: { fields: AtlasField[] };
   people: PersonIndex[];
 };
+type RouteState = { view: View; storyId?: string; personId?: string; networkStory?: string };
 
 const views: View[] = ['Atlas', 'Network', 'Story', 'Person'];
 const storyPalette: Record<string, string> = {
@@ -32,13 +33,40 @@ async function loadJson<T>(name: string): Promise<T> {
   return r.json() as Promise<T>;
 }
 
+function parseRoute(): RouteState {
+  const raw = window.location.hash.replace(/^#\/?/, '');
+  const [path, query = ''] = raw.split('?');
+  const parts = path.split('/').filter(Boolean).map(decodeURIComponent);
+  if (parts[0] === 'story' && parts[1]) return { view: 'Story', storyId: parts[1] };
+  if (parts[0] === 'person' && parts[1]) return { view: 'Person', personId: parts[1] };
+  if (parts[0] === 'network') {
+    const story = new URLSearchParams(query).get('story') || 'all';
+    return { view: 'Network', networkStory: story };
+  }
+  return { view: 'Atlas' };
+}
+
+function routeHash(route: RouteState) {
+  if (route.view === 'Story') return `#/story/${encodeURIComponent(route.storyId || 'story-rigor')}`;
+  if (route.view === 'Person') return `#/person/${encodeURIComponent(route.personId || 'person-euler')}`;
+  if (route.view === 'Network') return route.networkStory && route.networkStory !== 'all'
+    ? `#/network?story=${encodeURIComponent(route.networkStory)}`
+    : '#/network';
+  return '#/atlas';
+}
+
 function App() {
-  const [view, setView] = useState<View>('Atlas');
+  const [route, setRoute] = useState<RouteState>(() => parseRoute());
   const [data, setData] = useState<Dataset | null>(null);
   const [error, setError] = useState('');
-  const [selectedStory, setSelectedStory] = useState('story-rigor');
-  const [selectedPerson, setSelectedPerson] = useState('person-euler');
   const [sheet, setSheet] = useState<React.ReactNode | null>(null);
+
+  useEffect(() => {
+    if (!window.location.hash) window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}#/atlas`);
+    const onHashChange = () => { setRoute(parseRoute()); setSheet(null); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   useEffect(() => {
     Promise.all([
@@ -52,8 +80,18 @@ function App() {
     }).catch(e => setError(String(e)));
   }, []);
 
-  const go = (v: View) => { setView(v); window.scrollTo({ top: 0, behavior: 'smooth' }); };
-  const openPerson = (id: string) => { setSelectedPerson(id); go('Person'); };
+  const selectedStory = route.view === 'Story' ? (route.storyId || 'story-rigor') : (route.networkStory || 'story-rigor');
+  const selectedPerson = route.personId || 'person-euler';
+  const navigate = (next: RouteState) => { window.location.hash = routeHash(next).slice(1); };
+  const go = (v: View) => {
+    if (v === 'Story') navigate({ view: 'Story', storyId: selectedStory === 'all' ? 'story-rigor' : selectedStory });
+    else if (v === 'Person') navigate({ view: 'Person', personId: selectedPerson });
+    else if (v === 'Network') navigate({ view: 'Network', networkStory: selectedStory });
+    else navigate({ view: 'Atlas' });
+  };
+  const openStory = (id: string) => navigate({ view: 'Story', storyId: id });
+  const openPerson = (id: string) => navigate({ view: 'Person', personId: id });
+  const selectNetworkStory = (id: string) => navigate({ view: 'Network', networkStory: id });
 
   if (error) return <main className="shell"><section className="load-error">Could not load generated data: {error}</section></main>;
   if (!data) return <main className="shell"><section className="loading">Loading atlas…</section></main>;
@@ -64,17 +102,17 @@ function App() {
         <div><h1>Why Mathematics Changed</h1><p>Fields evolve; Stories cross the historical graph.</p></div>
         <span className="version-badge">V5 UI</span>
       </div>
-      <nav className="top-tabs">{views.map(v => <button key={v} className={view === v ? 'active' : ''} onClick={() => go(v)}>{letter(v)} · {v}</button>)}</nav>
+      <nav className="top-tabs">{views.map(v => <button key={v} className={route.view === v ? 'active' : ''} onClick={() => go(v)}>{letter(v)} · {v}</button>)}</nav>
     </header>
 
     <main className="content">
-      {view === 'Atlas' && <AtlasView data={data} onEnterNetwork={() => go('Network')} />}
-      {view === 'Network' && <NetworkView data={data} selectedStory={selectedStory} setSelectedStory={setSelectedStory} onOpenStory={id => { setSelectedStory(id); go('Story'); }} onOpenPerson={openPerson} onSheet={setSheet} />}
-      {view === 'Story' && <StoryView data={data} storyId={selectedStory} onNetwork={() => go('Network')} onOpenPerson={openPerson} onSheet={setSheet} />}
-      {view === 'Person' && <PersonView data={data} personId={selectedPerson} onStory={id => { setSelectedStory(id); go('Story'); }} />}
+      {route.view === 'Atlas' && <AtlasView data={data} onEnterNetwork={() => go('Network')} />}
+      {route.view === 'Network' && <NetworkView data={data} selectedStory={route.networkStory || 'all'} setSelectedStory={selectNetworkStory} onOpenStory={openStory} onOpenPerson={openPerson} onSheet={setSheet} />}
+      {route.view === 'Story' && <StoryView data={data} storyId={selectedStory} onNetwork={() => navigate({ view: 'Network', networkStory: selectedStory })} onOpenPerson={openPerson} onSheet={setSheet} />}
+      {route.view === 'Person' && <PersonView data={data} personId={selectedPerson} onStory={openStory} />}
     </main>
 
-    <nav className="bottom-nav">{views.map(v => <button key={v} className={view === v ? 'active' : ''} onClick={() => go(v)}><b>{icon(v)}</b>{v}</button>)}</nav>
+    <nav className="bottom-nav">{views.map(v => <button key={v} className={route.view === v ? 'active' : ''} onClick={() => go(v)}><b>{icon(v)}</b>{v}</button>)}</nav>
 
     {sheet && <div className="sheet-backdrop" onClick={() => setSheet(null)}><div className="sheet" onClick={e => e.stopPropagation()}><div className="sheet-handle" />{sheet}</div></div>}
   </div>;
@@ -197,9 +235,10 @@ function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data: 
         const item = lookup[step.ref]; const inter = intersections.get(step.ref); const label = item ? ('type' in item ? item.name : item.question) : step.ref;
         const isProblem = /problem|gap/i.test(step.role);
         return <article key={step.id} className={`story-card panel ${isProblem ? 'problem' : ''} ${inter ? 'crossing' : ''}`}>
+          <div className="story-index">{idx + 1}</div>
           <div className="story-meta"><span>{step.role.toUpperCase()}</span><span>{yearFor(item)}</span></div>
           <h3>{label}</h3>
-          <p>{storyText(story.id, step.ref, step.role)}</p>
+          {step.narrative && <p>{step.narrative}</p>}
           <div className="story-actions">
             {inter && <button onClick={onNetwork}>See the crossing in Network</button>}
             {item && 'type' in item && item.type === 'Person' && <button onClick={() => onOpenPerson(item.id)}>Open person</button>}
@@ -234,16 +273,5 @@ function yearFor(item?: Entity | Question) { if (!item) return ''; return 'type'
 function humanize(s: string) { return s.replaceAll('_', ' '); }
 function letter(v: View) { return ({ Atlas:'A', Network:'B', Story:'C', Person:'D' } as const)[v]; }
 function icon(v: View) { return ({ Atlas:'⌘', Network:'⋈', Story:'↧', Person:'●' } as const)[v]; }
-function storyText(storyId: string, ref: string, role: string) {
-  const keyed: Record<string, string> = {
-    'concept-infinite-series': 'Infinite processes were powerful, but finite-operation intuition could not simply be assumed to survive an infinite limit.',
-    'concept-fourier-series': 'A concrete mathematical object became a shared node for questions about convergence, the meaning of function, and frequency decomposition.',
-    'concept-convergence': 'The difficulty shifts from writing a series to specifying what it means for a sequence or series to approach a limit.',
-    'concept-function': 'The class of objects admitted as “functions” becomes part of the mathematical problem rather than a settled background assumption.',
-    'concept-continuity': 'Continuity must be separated from nearby notions and stated in a form that survives increasingly pathological examples.',
-    'work-fourier-theorie': 'A landmark work provides a historical anchor; editorial interpretations are kept separate from claims about the author’s own motivations.',
-  };
-  return keyed[ref] || `${role} in ${storyId}. The final narrative will be generated only from accepted historical assertions.`;
-}
 
 createRoot(document.getElementById('root')!).render(<App />);

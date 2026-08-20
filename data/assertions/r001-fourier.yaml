@@ -1,0 +1,63 @@
+- id: assertion-r001-fourier-heat-problem
+  subject: person-fourier
+  predicate: contributed_to
+  object: q-heat-propagation
+  period: {from: 1807, to: 1822}
+  perspective: historical
+  certainty: high
+  sources: [source-fourier-1822]
+  status: historically_reviewed
+- id: assertion-r001-heat-data-to-series
+  subject: problem-heat-boundary-data
+  predicate: motivated
+  object: q-heat-prescribed-data
+  period: {from: 1807, to: 1822}
+  perspective: historical
+  certainty: high
+  sources: [source-fourier-1822]
+  status: historically_reviewed
+- id: assertion-r001-series-representation-question
+  subject: concept-fourier-series
+  predicate: raised_question
+  object: q-trig-representation-scope
+  period: {from: 1807, to: 1822}
+  perspective: historical
+  certainty: high
+  sources: [source-fourier-1822]
+  status: historically_reviewed
+- id: assertion-r001-arbitrary-function
+  subject: concept-fourier-series
+  predicate: contributed_to
+  object: concept-arbitrary-function
+  period: {from: 1807, to: 1822}
+  perspective: historical
+  certainty: high
+  sources: [source-fourier-1822]
+  status: historically_reviewed
+- id: assertion-r001-series-to-convergence
+  subject: concept-fourier-series
+  predicate: contributed_to
+  object: q-fourier-series-convergence
+  period: {from: 1822, to: 1829}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-fourier-1822, source-dirichlet-1829]
+  status: historically_reviewed
+- id: assertion-r001-dirichlet-convergence
+  subject: person-dirichlet
+  predicate: contributed_to
+  object: q-fourier-series-convergence
+  period: {from: 1829, to: 1829}
+  perspective: historical
+  certainty: high
+  sources: [source-dirichlet-1829]
+  status: historically_reviewed
+- id: assertion-r001-function-concept
+  subject: concept-fourier-series
+  predicate: reframed
+  object: q-what-is-function
+  period: {from: 1807, to: 1850}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-fourier-1822, source-kjeldsen-lutzen-2015]
+  status: historically_reviewed

@@ -1,0 +1,85 @@
+review:
+  story_id: story-fourier-heat-representation
+  research_unit_id: R001
+  critic_prompt: research/prompts/story-critic-v1.md
+  status: reviewed
+  summary:
+    pass: 8
+    revise: 2
+    weak_evidence: 0
+    reject: 0
+findings:
+  - id: sr-r001-001
+    classification: REVISE
+    target:
+      story_id: story-fourier-heat-representation
+      field: description
+    reason: >
+      "Led from" reads as a single historical causal chain, while the final function-concept connection is explicitly a later interpretation.
+    assertion_refs: [assertion-r001-function-concept]
+    proposed_change:
+      action: replace_text
+      value: >
+        A curated path from Fourier's heat problem through prescribed temperature data, trigonometric representation, convergence, and broader questions about functions.
+  - id: sr-r001-002
+    classification: PASS
+    target: {story_id: story-fourier-heat-representation, step_id: r001-story-1, field: narrative}
+    reason: The opening physical problem is supported and correctly marked historical.
+    assertion_refs: [assertion-r001-fourier-heat-problem]
+  - id: sr-r001-003
+    classification: PASS
+    target: {story_id: story-fourier-heat-representation, step_id: r001-story-2, field: narrative}
+    reason: The initial/boundary-data problem is traceable to the promoted heat-problem assertions and does not attribute modern PDE terminology to Fourier.
+    assertion_refs: [assertion-r001-heat-data-to-series]
+  - id: sr-r001-004
+    classification: PASS
+    target: {story_id: story-fourier-heat-representation, step_id: r001-story-3, field: narrative}
+    reason: The role of trigonometric expansions is stated as a method within the heat problem rather than as an autonomous invention story.
+    assertion_refs: [assertion-r001-heat-data-to-series, assertion-r001-series-representation-question]
+  - id: sr-r001-005
+    classification: PASS
+    target: {story_id: story-fourier-heat-representation, step_id: r001-story-4, field: narrative}
+    reason: The representational-scope question follows from the accepted assertions and stays within historical perspective.
+    assertion_refs: [assertion-r001-series-representation-question, assertion-r001-arbitrary-function]
+  - id: sr-r001-006
+    classification: PASS
+    target: {story_id: story-fourier-heat-representation, step_id: r001-story-5, field: narrative}
+    reason: The wording distinguishes Fourier's broad usage from a modern set-theoretic function concept.
+    assertion_refs: [assertion-r001-arbitrary-function]
+  - id: sr-r001-007
+    classification: REVISE
+    target:
+      story_id: story-fourier-heat-representation
+      step_id: r001-story-6
+      field: narrative
+    reason: >
+      "Became unavoidable" implies historical necessity. The supporting canonical assertion establishes a downstream connection, not inevitability.
+    assertion_refs: [assertion-r001-series-to-convergence]
+    proposed_change:
+      action: replace_text
+      value: >
+        Representation and convergence are not the same claim. Once Fourier's method associated broad classes of functions with trigonometric series, convergence became a central downstream question: under what conditions does the series actually converge to the intended function?
+  - id: sr-r001-008
+    classification: PASS
+    target: {story_id: story-fourier-heat-representation, step_id: r001-story-7, field: narrative}
+    reason: Dirichlet is presented as giving a restricted rigorous convergence result rather than as resolving every convergence problem.
+    assertion_refs: [assertion-r001-dirichlet-convergence]
+  - id: sr-r001-009
+    classification: PASS
+    target: {story_id: story-fourier-heat-representation, step_id: r001-story-8, field: narrative}
+    reason: The function-concept connection is explicitly retrospective and warns against a direct causal reading.
+    assertion_refs: [assertion-r001-function-concept]
+  - id: sr-r001-010
+    classification: PASS
+    target:
+      story_id: story-fourier-heat-representation
+      link: {from: r001-story-7, to: r001-story-8}
+    reason: Using `branches` appropriately weakens the transition from Dirichlet/convergence to the later function-concept reading.
+    assertion_refs: [assertion-r001-function-concept]
+research_gaps: []
+sources: []
+resolution:
+  status: applied
+  applied_findings: [sr-r001-001, sr-r001-007]
+  note: >
+    The two safe wording revisions were applied directly because they reduce causal strength without changing canonical facts.

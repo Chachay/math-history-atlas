@@ -1,0 +1,18 @@
+- id: source-dirichlet-1829
+  title: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données
+  author: Peter Gustav Lejeune Dirichlet
+  year: 1829
+  kind: primary
+  url: https://eudml.org/doc/183125
+- id: source-cauchy-periodic-series-1827
+  title: Mémoire sur les développements des fonctions en séries périodiques
+  author: Augustin-Louis Cauchy
+  year: 1827
+  kind: primary
+  url: https://fr.wikisource.org/wiki/Page:M%C3%A9moires_de_l%E2%80%99Acad%C3%A9mie_des_sciences,_Tome_6.djvu/791
+- id: source-kjeldsen-lutzen-2015
+  title: "Interactions Between Mathematics and Physics: The History of the Concept of Function—Teaching with and About Nature of Mathematics"
+  author: Tinne Hoff Kjeldsen and Jesper Lützen
+  year: 2015
+  kind: secondary_peer_reviewed
+  url: https://doi.org/10.1007/s11191-015-9746-x
