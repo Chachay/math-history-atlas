@@ -1,0 +1,259 @@
+review:
+  research_unit_id: R003
+  packet: R003-dirichlet-function-concept.yaml
+  critic_version: historical-critic-v1
+  review_date: "2026-08-20"
+  summary:
+    pass: 16
+    revise: 1
+    weak_evidence: 2
+    reject: 0
+  overall_assessment: >
+    The packet is appropriately cautious about textbook genealogies and is unusually well grounded in
+    Dirichlet's 1829 text for the relation among Fourier representation, convergence restrictions,
+    discontinuities, and the rational/irrational example. The principal remaining issues are narrower:
+    one Atlas-facing assertion uses the historically stronger predicate raised_question for a retrospective
+    bridge to later integrability; the 1837 no-single-law formulation should be page-audited against a direct
+    persistent scan before promotion; and the Lobachevsky priority caveat should not be promoted from a
+    secondary-source allusion without a direct primary or specialist comparison. No finding supports the
+    unqualified claims that Dirichlet gave the first modern definition of function, that Fourier caused the
+    modern function concept, or that Dirichlet solved Fourier-series convergence in full generality.
+
+findings:
+  - id: hr-r003-chronology-1822
+    reviewed_item: {section: chronology, match: {date: "1822"}}
+    classification: PASS
+    reason: >
+      Fourier is used as bounded background rather than as a single-cause origin story, and the uncertainty
+      explicitly blocks the stronger causal reading.
+    evidence:
+      - {source_id: src-fourier-1822, locator: "preliminary discourse and sections on arbitrary functions/trigonometric representation", supports: background}
+      - {source_id: src-kjeldsen-lutzen-2015, locator: "historical discussion of Fourier and function concept", supports: later_context}
+
+  - id: hr-r003-chronology-1829-opening
+    reviewed_item: {section: chronology, match: {date: "1829", event_contains: "opening"}}
+    classification: PASS
+    reason: >
+      Dirichlet's opening directly names Fourier's heat work as the source of the representational method,
+      says a general convergence proof was lacking, and criticizes Cauchy's attempted proof. The packet also
+      correctly warns that Cauchy's nominal 1823 volume year is not the memoir's actual reading/publication date.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 157–158", supports: Fourier_Cauchy_and_problem_statement}
+
+  - id: hr-r003-chronology-1829-restrictions
+    reviewed_item: {section: chronology, match: {date: "1829", event_contains: "explicit restrictions"}}
+    classification: PASS
+    reason: >
+      The restrictions are represented in period-appropriate descriptive language rather than silently translated
+      into piecewise-smooth, bounded-variation, or Riemann-integrability terminology.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 167–169", supports: restrictions_and_convergence}
+
+  - id: hr-r003-chronology-1829-pathological-example
+    reviewed_item: {section: chronology, match: {date: "1829", event_contains: "rational/irrational"}}
+    classification: PASS
+    reason: >
+      The two-value rational/irrational example is directly in Dirichlet's paper and the packet correctly uses
+      it to distinguish finite determined values from admissibility of the definite integrals in his framework.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "p. 169", supports: rational_irrational_example_and_integral_issue}
+
+  - id: hr-r003-chronology-1837
+    reviewed_item: {section: chronology, match: {date: "1837"}}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      The reported wording is consistent with the bibliographic record and with later editions, but the packet's
+      persistent 1837 source currently resolves at the digitized volume/object level rather than to a page-audited
+      original passage. Because this wording is central to the function-concept claim, promotion should require a
+      direct audit of the original 1837 §1 pages or a stable collected-works scan.
+    needed_evidence: >
+      Direct page-level audit of Repertorium der Physik vol. 1, pp. 152–153 (or the corresponding Werke I pages),
+      confirming the unique finite y, no-single-law, and not-necessarily-expressible-by-mathematical-operations clauses.
+    target:
+      section: chronology
+      match: {date: "1837"}
+    proposed_change:
+      action: add_evidence
+      sources: [src-dirichlet-1837]
+    evidence:
+      - {source_id: src-dirichlet-1837, locator: "§1; volume pp. 152–174, opening pages not yet page-audited", supports: bibliographic_identity_and_candidate_passage}
+
+  - id: hr-r003-a001
+    reviewed_item: {section: assertions, id: r003-a001}
+    classification: PASS
+    reason: >
+      The claim is bounded to a rigorous proof under stated restrictions and explicitly denies full modern generality.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 157–169", supports: convergence_problem_and_restricted_proof}
+
+  - id: hr-r003-a002
+    reviewed_item: {section: assertions, id: r003-a002}
+    classification: PASS
+    reason: >
+      The paper's finite-sum/integral argument supports the methodological description without introducing later
+      convergence terminology as Dirichlet's own.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "middle proof sections", supports: proof_structure}
+
+  - id: hr-r003-a003
+    reviewed_item: {section: assertions, id: r003-a003}
+    classification: PASS
+    reason: >
+      Dirichlet's text supports the distinction between determined finite values and the additional conditions
+      under which the required integrals and convergence argument remain meaningful.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 168–169", supports: determined_values_vs_admissibility}
+
+  - id: hr-r003-a004
+    reviewed_item: {section: assertions, id: r003-a004}
+    classification: PASS
+    reason: >
+      The finite-discontinuity condition and midpoint-type value at a discontinuity are supported, while the uncertainty
+      note prevents modern one-sided-limit notation from being attributed to Dirichlet.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 167–168", supports: discontinuities_and_series_value}
+
+  - id: hr-r003-a005
+    reviewed_item: {section: assertions, id: r003-a005}
+    classification: PASS
+    reason: >
+      This is the historically strongest part of the packet: Dirichlet himself gives the everywhere-determined two-value
+      example and says the integrals lose meaning in the framework at hand.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "p. 169", supports: pathological_example_and_integrability_boundary}
+
+  - id: hr-r003-a006
+    reviewed_item: {section: assertions, id: r003-a006}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      The formulation is plausible and matches commonly reproduced text, but this assertion is central enough that the
+      source should be audited directly at page level before canonical promotion. A volume-level persistent object plus
+      secondary quotation is insufficient for a claim about exact definition-like wording.
+    needed_evidence: >
+      Page-level primary verification of the 1837 opening definition and the clauses denying a single law or a dependence
+      expressible by mathematical operations.
+    target:
+      section: assertions
+      id: r003-a006
+    proposed_change:
+      action: add_evidence
+      sources: [src-dirichlet-1837]
+    evidence:
+      - {source_id: src-dirichlet-1837, locator: "§1, opening pages; exact original pagination to be audited", supports: candidate_definition_wording}
+
+  - id: hr-r003-a007
+    reviewed_item: {section: assertions, id: r003-a007}
+    classification: PASS
+    reason: >
+      The assertion is explicitly later_interpretation and uses specialist historiography rather than pretending
+      that Fourier or Dirichlet stated a program of creating the modern function concept.
+    evidence:
+      - {source_id: src-youschkevitch-1976, locator: "sections on Fourier and Dirichlet", supports: historiographical_function_concept_change}
+      - {source_id: src-kjeldsen-lutzen-2015, locator: "historical discussion of mathematical physics and function concept", supports: broader_context}
+
+  - id: hr-r003-a008
+    reviewed_item: {section: assertions, id: r003-a008}
+    classification: PASS
+    reason: >
+      The main statement is deliberately anti-priority: it calls the 1837 text a major formulation while rejecting
+      "first modern definition" as an unqualified historical fact. The Lobachevsky detail inside the uncertainty,
+      however, remains an explicit research gap and must not be promoted independently without the evidence identified below.
+    evidence:
+      - {source_id: src-youschkevitch-1976, locator: "mid-nineteenth-century function concept discussion", supports: anti_priority_historiography}
+
+  - id: hr-r003-a009
+    reviewed_item: {section: assertions, id: r003-a009}
+    classification: PASS
+    reason: >
+      This local relation is unusually well evidenced because Dirichlet himself explicitly places his work after
+      Fourier's representational method and against Cauchy's attempted proof. The uncertainty correctly blocks a broader
+      sole-motivation claim.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 157–158", supports: explicit_Fourier_Cauchy_relation}
+
+  - id: hr-r003-a010
+    reviewed_item: {section: assertions, id: r003-a010}
+    classification: PASS
+    reason: >
+      The assertion is marked later_interpretation with medium certainty and explicitly rejects the stronger causal claim
+      that discontinuous examples themselves created the modern definition.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 167–169", supports: discontinuous_and_pathological_examples}
+      - {source_id: src-youschkevitch-1976, locator: "function-concept discussion", supports: retrospective_significance}
+
+  - id: hr-r003-a011
+    reviewed_item: {section: assertions, id: r003-a011}
+    classification: REVISE
+    severity: medium
+    reason: >
+      The predicate raised_question is historically stronger than the evidence warrants. The statement itself admits that
+      q-dirichlet-admissible-functions is an Atlas bridge toward later integration theory rather than Dirichlet's own stated
+      question. Keeping raised_question would create a canonical edge that can be misread as a contemporary agenda relation.
+    needed_evidence: >
+      None is needed to preserve the retrospective bridge; stronger evidence would be required only to retain raised_question
+      as a historical predicate.
+    target:
+      section: assertions
+      id: r003-a011
+    proposed_change:
+      action: replace_fields
+      fields:
+        predicate: contributed_to
+        statement: >
+          Read retrospectively, Dirichlet's 1837 treatment helps expose the downstream problem of identifying conditions
+          under which broadly specified functions can legitimately enter definite integrals and trigonometric representations.
+        perspective: later_interpretation
+        certainty: medium
+    evidence:
+      - {source_id: src-dirichlet-1837, locator: "§1 and representation problem", supports: underlying_historical_material}
+      - {source_id: src-youschkevitch-1976, locator: "Dirichlet and later function-concept discussion", supports: retrospective_bridge}
+
+  - id: hr-r003-qt001
+    reviewed_item: {section: question_transitions, id: r003-qt001}
+    classification: PASS
+    reason: >
+      Dirichlet's title and opening directly connect the representation problem with the need for a convergence proof;
+      the packet nevertheless marks the Atlas transition later_interpretation.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 157–158", supports: representation_to_convergence_problem}
+
+  - id: hr-r003-qt002
+    reviewed_item: {section: question_transitions, id: r003-qt002}
+    classification: PASS
+    reason: >
+      The transition is appropriately retrospective and supported by both the 1829 admissibility discussion and specialist
+      historiography. It does not claim convergence theory alone caused the modern function concept.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "pp. 167–169", supports: admissibility_restrictions}
+      - {source_id: src-youschkevitch-1976, locator: "function-concept discussion", supports: retrospective_transition}
+
+  - id: hr-r003-qt003
+    reviewed_item: {section: question_transitions, id: r003-qt003}
+    classification: PASS
+    reason: >
+      As written, this is explicitly a later_interpretation with medium certainty and the note says it is a bounded handoff
+      rather than a claim that Dirichlet formulated Riemann's later criterion. It remains acceptable provided r003-a011's
+      canonical predicate is weakened as recommended.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: "p. 169", supports: integration_admissibility_problem}
+      - {source_id: src-dirichlet-1837, locator: "representation problem", supports: broad_function_setting}
+
+research_gaps:
+  - id: gap-r003-lobachevsky-priority
+    question: >
+      What exact primary formulation by Lobachevsky should be compared with Dirichlet before making any priority statement
+      about a "first modern definition" of function?
+    needed_evidence: >
+      A direct Lobachevsky primary text plus specialist historiography comparing its date, wording, and scope with Dirichlet 1837.
+    related_packet_refs: [r003-a008, r003-u002]
+
+  - id: gap-r003-1837-page-audit
+    question: >
+      What exact original pages in the 1837 Repertorium contain the unique-y, no-single-law, and no-mathematical-operations wording?
+    needed_evidence: >
+      Direct inspection of the BSB/DDB digitized original or a stable scan of Dirichlet Werke I, with persistent page locators.
+    related_packet_refs: [r003-a006, r003-u001]
+
+sources: []
