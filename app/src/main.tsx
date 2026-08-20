@@ -157,7 +157,7 @@ function AtlasNode({ x, y, label, sub, color, onClick }: { x: number; y: number;
 }
 
 type NetworkPoint = { x: number; y: number; year: number };
-type NetworkLayout = { positions: Record<string, NetworkPoint>; minYear: number; maxYear: number; ticks: number[] };
+type NetworkLayout = { positions: Record<string, NetworkPoint>; minYear: number; maxYear: number; ticks: number[]; yearY: Record<number, number>; height: number };
 
 function stableFraction(id: string) {
   let hash = 0;
@@ -193,12 +193,22 @@ function niceTicks(minYear: number, maxYear: number) {
 
 function buildNetworkLayout(data: Dataset, lookup: Record<string, Entity | Question>): NetworkLayout {
   const storyRefs = [...new Set(data.stories.flatMap(story => story.steps.map(step => step.ref)))].filter(id => lookup[id]);
-  const years = storyRefs.map(id => networkYear(id, lookup[id], data));
-  const rawMin = years.length ? Math.min(...years) : 1750;
-  const rawMax = years.length ? Math.max(...years) : 1860;
-  const padding = Math.max(10, Math.round((rawMax - rawMin) * 0.08));
-  const minYear = Math.floor((rawMin - padding) / 10) * 10;
-  const maxYear = Math.ceil((rawMax + padding) / 10) * 10;
+  const yearByRef = Object.fromEntries(storyRefs.map(id => [id, networkYear(id, lookup[id], data)]));
+  const uniqueYears = [...new Set(Object.values(yearByRef))].sort((a, b) => a - b);
+  const minYear = uniqueYears[0] ?? 1750;
+  const maxYear = uniqueYears[uniqueYears.length - 1] ?? 1860;
+
+  // Chronology is an ordering constraint, not a linear scale. Dense historical periods
+  // receive enough visual space to remain readable instead of collapsing together.
+  const top = 50;
+  const bottom = 50;
+  const minGap = 46;
+  const targetGap = uniqueYears.length > 1 ? 500 / (uniqueYears.length - 1) : 0;
+  const gap = uniqueYears.length > 1 ? Math.max(minGap, Math.min(78, targetGap)) : 0;
+  const height = Math.max(640, Math.round(top + bottom + gap * Math.max(1, uniqueYears.length - 1)));
+  const yearY: Record<number, number> = {};
+  uniqueYears.forEach((year, index) => { yearY[year] = top + index * gap; });
+
   const storyIndex = new Map(data.stories.map((story, index) => [story.id, index]));
   const memberships = new Map<string, string[]>();
   data.stories.forEach(story => story.steps.forEach(step => {
@@ -209,11 +219,10 @@ function buildNetworkLayout(data: Dataset, lookup: Record<string, Entity | Quest
   const laneMin = 76;
   const laneMax = 285;
   const laneStep = data.stories.length > 1 ? (laneMax - laneMin) / (data.stories.length - 1) : 0;
-  const yFor = (year: number) => 45 + ((year - minYear) / Math.max(1, maxYear - minYear)) * 550;
   const positions: Record<string, NetworkPoint> = {};
   storyRefs.forEach(id => {
     const memberStories = memberships.get(id) || [];
-    const year = networkYear(id, lookup[id], data);
+    const year = yearByRef[id];
     let x = 180;
     if (memberStories.length === 1) {
       const lane = storyIndex.get(memberStories[0]) || 0;
@@ -223,9 +232,9 @@ function buildNetworkLayout(data: Dataset, lookup: Record<string, Entity | Quest
       const lanes = memberStories.map(story => storyIndex.get(story) || 0);
       x = laneMin + (lanes.reduce((a, b) => a + b, 0) / lanes.length) * laneStep;
     }
-    positions[id] = { x: Math.max(62, Math.min(292, x)), y: yFor(year), year };
+    positions[id] = { x: Math.max(62, Math.min(292, x)), y: yearY[year], year };
   });
-  return { positions, minYear, maxYear, ticks: niceTicks(minYear, maxYear) };
+  return { positions, minYear, maxYear, ticks: uniqueYears, yearY, height };
 }
 
 function NetworkView({ data, selectedStory, setSelectedStory, onOpenStory, onOpenPerson, onSheet }: {
@@ -241,14 +250,14 @@ function NetworkView({ data, selectedStory, setSelectedStory, onOpenStory, onOpe
     if (pts.length < 2) return '';
     return pts.map((p, i) => `${i ? 'L' : 'M'}${p.x} ${p.y}`).join(' ');
   };
-  const yForYear = (year: number) => 45 + ((year - layout.minYear) / Math.max(1, layout.maxYear - layout.minYear)) * 550;
+  const yForYear = (year: number) => layout.yearY[year] ?? 50;
 
   return <>
-    <section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · local Story graph</h2><p>Historical entities remain the graph. Story paths are overlays. Vertical position is chronological; horizontal lanes are derived from Story membership, with shared nodes literally shared between paths.</p><div className="entity-legend"><span><i className="person-mark" />Person</span><span><i className="concept-mark" />Concept</span><span><i className="work-mark" />Work</span></div></section>
+    <section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · local Story graph</h2><p>Historical entities remain the graph. Vertical order follows chronology, but dense periods expand to preserve readability; vertical distance is not proportional to elapsed time. Horizontal lanes come from Story membership, with shared nodes literally shared between paths.</p><div className="entity-legend"><span><i className="person-mark" />Person</span><span><i className="concept-mark" />Concept</span><span><i className="work-mark" />Work</span></div></section>
     <section className="panel network-panel">
       <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory === id ? 'active' : ''} onClick={() => setSelectedStory(id)}>{id !== 'all' && <i className="story-dot" style={{ background: storyColor(id) }} />}{id === 'all' ? 'All paths' : data.stories.find(s => s.id === id)?.title}</button>)}</div>
-      <svg className="network-svg" viewBox="0 0 360 640">
-        <line x1="38" y1="30" x2="38" y2="610" className="time-axis" />
+      <svg className="network-svg" viewBox={`0 0 360 ${layout.height}`}>
+        <line x1="38" y1="30" x2="38" y2={layout.height - 30} className="time-axis" />
         {layout.ticks.map(year => <text key={year} x="7" y={yForYear(year)} className="year-label">{year}</text>)}
         {data.stories.map(s => <path key={s.id} d={storyPath(s)} className={`story-overlay ${selectedStory !== 'all' && selectedStory !== s.id ? 'dim' : ''}`} style={{ stroke: storyColor(s.id) }} />)}
         {Object.entries(layout.positions).map(([id,p]) => {
