@@ -1,0 +1,11 @@
+[
+  {
+    "entity": "concept-fourier-series",
+    "story_count": 3,
+    "stories": [
+      "story-frequency",
+      "story-function",
+      "story-rigor"
+    ]
+  }
+]
