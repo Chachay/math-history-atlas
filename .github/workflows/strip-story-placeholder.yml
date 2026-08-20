@@ -1,0 +1,37 @@
+name: Strip Story placeholder
+
+on:
+  push:
+    paths:
+      - '.github/workflows/strip-story-placeholder.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.ref == 'refs/heads/feature/r001-canonical-promotion'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/r001-canonical-promotion
+      - name: Remove scaffold narrative fallback
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('app/src/main.tsx')
+          s = p.read_text(encoding='utf-8')
+          old = "return keyed[ref] || `${role} in ${storyId}. The final narrative will be generated only from accepted historical assertions.`;"
+          new = "return keyed[ref] || '';"
+          if old not in s:
+              raise SystemExit('placeholder fallback not found')
+          p.write_text(s.replace(old, new), encoding='utf-8')
+          PY
+      - name: Commit patch
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add app/src/main.tsx
+          git commit -m "Remove Story scaffold narrative placeholder"
+          git push origin HEAD:feature/r001-canonical-promotion
