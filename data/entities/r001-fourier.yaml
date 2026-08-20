@@ -21,6 +21,6 @@
   fields: [analysis]
 - id: work-dirichlet-1829
   type: Work
-  name: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données
+  name: Dirichlet's 1829 paper on convergence of trigonometric series
   start_year: 1829
   fields: [analysis]
