@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import yaml
 
 from scripts.validate import validate_all
 from scripts.build_intersections import build_intersections
@@ -48,7 +49,7 @@ def test_rigor_story_is_reviewed_not_stub():
 def test_story_transitions_resolve_to_reviewed_steps_and_assertions():
     stories = load_yaml_files(ROOT / 'editorial/stories')
     assertions = load_yaml_files(ROOT / 'data/assertions')
-    transitions = load_yaml_files(ROOT / 'editorial', pattern='story-transitions.yaml')
+    transitions = yaml.safe_load((ROOT / 'editorial/story-transitions.yaml').read_text(encoding='utf-8')) or []
     story_map = {s['id']: s for s in stories}
     assertion_ids = {a['id'] for a in assertions}
 
