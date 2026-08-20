@@ -168,7 +168,7 @@
         "id": "r001-story-6",
         "ref": "q-fourier-series-convergence",
         "role": "Next question",
-        "narrative": "Representation and convergence are not the same claim. Once Fourier's method associated broad classes of functions with trigonometric series, a separate question became unavoidable: under what conditions does the series actually converge to the intended function?\n",
+        "narrative": "Representation and convergence are not the same claim. Once Fourier's method associated broad classes of functions with trigonometric series, convergence became a central downstream question: under what conditions does the series actually converge to the intended function?\n",
         "assertion_refs": [
           "assertion-r001-series-to-convergence"
         ],
