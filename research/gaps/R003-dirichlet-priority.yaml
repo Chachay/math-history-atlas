@@ -1,0 +1,7 @@
+research_unit_id: R003
+research_gaps:
+  - id: gap-r003-lobachevsky-priority
+    status: open
+    question: What exact primary formulation by Lobachevsky should be compared with Dirichlet before making any priority statement about a first modern definition of function?
+    needed_evidence: Direct Lobachevsky primary text plus specialist historiography comparing date, wording, and scope with Dirichlet 1837.
+    constraint: Do not promote or narrate an unqualified first-modern-definition claim for Dirichlet while this gap remains open.
