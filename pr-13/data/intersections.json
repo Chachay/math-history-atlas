@@ -9,12 +9,27 @@
   },
   {
     "entity": "concept-fourier-series",
-    "story_count": 5,
+    "story_count": 4,
     "stories": [
       "story-cauchy-rigor-continuity",
       "story-fourier-heat-representation",
-      "story-frequency",
       "story-function",
+      "story-rigor"
+    ]
+  },
+  {
+    "entity": "q-cauchy-rigor",
+    "story_count": 2,
+    "stories": [
+      "story-cauchy-rigor-continuity",
+      "story-rigor"
+    ]
+  },
+  {
+    "entity": "q-continuity-under-limits",
+    "story_count": 2,
+    "stories": [
+      "story-cauchy-rigor-continuity",
       "story-rigor"
     ]
   },
@@ -27,11 +42,19 @@
     ]
   },
   {
-    "entity": "q-heat-propagation",
+    "entity": "q-uniform-convergence-emergence",
     "story_count": 2,
     "stories": [
-      "story-fourier-heat-representation",
-      "story-frequency"
+      "story-cauchy-rigor-continuity",
+      "story-rigor"
+    ]
+  },
+  {
+    "entity": "work-cauchy-series-1853",
+    "story_count": 2,
+    "stories": [
+      "story-cauchy-rigor-continuity",
+      "story-rigor"
     ]
   }
 ]
