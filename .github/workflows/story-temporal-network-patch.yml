@@ -33,3 +33,5 @@ jobs:
           git add scripts/models.py scripts/validate.py editorial/stories/r001-fourier.yaml editorial/stories/r002-cauchy.yaml editorial/reviews/R002-cauchy-story-review.yaml app/src/main.tsx app/src/style.css
           git commit -m 'Add temporal Story anchors and chronological Network layout'
           git push origin HEAD:ui/network-data-driven
+
+# one-shot migration trigger
