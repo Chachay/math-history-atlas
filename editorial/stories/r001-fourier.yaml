@@ -1,0 +1,22 @@
+- id: story-fourier-heat-representation
+  title: From heat to arbitrary functions
+  description: How Fourier's heat problem led from prescribed temperature data to trigonometric representation, convergence, and broader questions about functions.
+  question_phases: [q-heat-propagation, q-heat-prescribed-data, q-trig-representation-scope, q-fourier-series-convergence, q-what-is-function]
+  fields: [analysis, mathematical-physics]
+  steps:
+    - {id: r001-story-1, ref: q-heat-propagation, role: Question}
+    - {id: r001-story-2, ref: problem-heat-boundary-data, role: Problem}
+    - {id: r001-story-3, ref: concept-fourier-series, role: Response}
+    - {id: r001-story-4, ref: q-trig-representation-scope, role: Remaining gap}
+    - {id: r001-story-5, ref: concept-arbitrary-function, role: Response}
+    - {id: r001-story-6, ref: q-fourier-series-convergence, role: Next question}
+    - {id: r001-story-7, ref: work-dirichlet-1829, role: Response}
+    - {id: r001-story-8, ref: q-what-is-function, role: Next question}
+  links:
+    - {from: r001-story-1, to: r001-story-2, type: continues}
+    - {from: r001-story-2, to: r001-story-3, type: continues}
+    - {from: r001-story-3, to: r001-story-4, type: continues}
+    - {from: r001-story-4, to: r001-story-5, type: continues}
+    - {from: r001-story-5, to: r001-story-6, type: continues}
+    - {from: r001-story-6, to: r001-story-7, type: continues}
+    - {from: r001-story-7, to: r001-story-8, type: branches}
