@@ -5,397 +5,480 @@ research_unit:
     approximate_start: 1829
     approximate_end: 1867
     core_period: 1854–1867
-  scope_summary: >
-    Investigation of Riemann's Habilitationsschrift on the representability of functions by
-    trigonometric series, its explicit engagement with Dirichlet's unresolved cases, the
-    definite-integral criterion introduced as groundwork for that investigation, examples with
-    infinitely many discontinuities, and the distinction between the 1854 submission and the
-    posthumous 1867 publication. Earlier Fourier/Dirichlet material is inherited context;
-    later measure theory and Lebesgue integration remain out of scope.
+  scope_summary: 'Investigation of Riemann''s Habilitationsschrift on the representability of functions
+    by trigonometric series, its explicit engagement with Dirichlet''s unresolved cases, the definite-integral
+    criterion introduced as groundwork for that investigation, examples with infinitely many discontinuities,
+    and the distinction between the 1854 submission and the posthumous 1867 publication. Earlier Fourier/Dirichlet
+    material is inherited context; later measure theory and Lebesgue integration remain out of scope.
+
+    '
   research_status: researched
   editorial_status: not_accepted
   generated_date: '2026-08-20'
-
 research_questions:
-  - id: q001
-    question: What problem was Riemann actually addressing in his trigonometric-series memoir?
-  - id: q002
-    question: Why did the meaning and range of definite integration become necessary within that investigation?
-  - id: q003
-    question: How did Riemann position his work relative to Dirichlet's convergence conditions and unresolved cases?
-  - id: q004
-    question: What criterion did Riemann give for the existence of a definite integral in the narrower sense?
-  - id: q005
-    question: What kinds of infinitely discontinuous functions did Riemann explicitly admit as integrable examples?
-  - id: q006
-    question: Which date belongs to composition/submission and which to publication of the memoir?
-  - id: q007
-    question: How far is the modern textbook Riemann integral an exact restatement of Riemann's 1854 presentation?
-  - id: q008
-    question: What gap remains between Riemann integrability and general trigonometric representability?
-
+- id: q001
+  question: What problem was Riemann actually addressing in his trigonometric-series memoir?
+- id: q002
+  question: Why did the meaning and range of definite integration become necessary within that investigation?
+- id: q003
+  question: How did Riemann position his work relative to Dirichlet's convergence conditions and unresolved
+    cases?
+- id: q004
+  question: What criterion did Riemann give for the existence of a definite integral in the narrower sense?
+- id: q005
+  question: What kinds of infinitely discontinuous functions did Riemann explicitly admit as integrable
+    examples?
+- id: q006
+  question: Which date belongs to composition/submission and which to publication of the memoir?
+- id: q007
+  question: How far is the modern textbook Riemann integral an exact restatement of Riemann's 1854 presentation?
+- id: q008
+  question: What gap remains between Riemann integrability and general trigonometric representability?
 entities:
-  - id: person-riemann
-    type: Person
-    canonical_name: Bernhard Riemann
-    birth_year: 1826
-    death_year: 1866
-  - id: person-dirichlet
-    type: Person
-    canonical_name: Peter Gustav Lejeune Dirichlet
-    birth_year: 1805
-    death_year: 1859
-  - id: concept-fourier-series
-    type: Concept
-    canonical_name: Fourier series
-  - id: concept-function
-    type: Concept
-    canonical_name: Function
-  - id: concept-discontinuous-function
-    type: Concept
-    canonical_name: Discontinuous function
-  - id: concept-integrability
-    type: Concept
-    canonical_name: Analytic admissibility for definite integration
-  - id: concept-riemann-integral
-    type: Concept
-    canonical_name: Riemann's criterion for definite integrability
-  - id: work-riemann-trig-1854
-    type: Work
-    canonical_name: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
-    composition_or_submission_year: 1854
-    publication_year: 1867
-
+- id: person-riemann
+  type: Person
+  canonical_name: Bernhard Riemann
+  birth_year: 1826
+  death_year: 1866
+- id: person-dirichlet
+  type: Person
+  canonical_name: Peter Gustav Lejeune Dirichlet
+  birth_year: 1805
+  death_year: 1859
+- id: concept-fourier-series
+  type: Concept
+  canonical_name: Fourier series
+- id: concept-function
+  type: Concept
+  canonical_name: Function
+- id: concept-discontinuous-function
+  type: Concept
+  canonical_name: Discontinuous function
+- id: concept-integrability
+  type: Concept
+  canonical_name: Analytic admissibility for definite integration
+- id: concept-riemann-integral
+  type: Concept
+  canonical_name: Riemann's criterion for definite integrability
+- id: work-riemann-trig-1854
+  type: Work
+  canonical_name: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+  composition_or_submission_year: 1854
+  publication_year: 1867
 chronology:
-  - date: '1829'
-    date_type: publication
-    event: >
-      Dirichlet publishes convergence conditions for trigonometric series and leaves broader
-      cases unresolved; this is inherited context already researched in R003.
-    perspective: historical
-    certainty: high
-    sources: [src-dirichlet-1829]
-    uncertainty: null
-  - date: '1854'
-    date_type: habilitation_submission
-    event: >
-      Riemann submits the memoir on representability by trigonometric series to the philosophical
-      faculty at Göttingen for his Habilitation.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867, src-riemann-ms-gdz]
-    uncertainty: >
-      The sources establish the year and function of the manuscript; this packet does not assign
-      a more precise submission day without archival evidence.
-  - date: '1867-07'
-    date_type: editorial_publication_notice
-    event: >
-      Richard Dedekind dates his editorial notice Braunschweig, July 1867 and explains that the
-      1854 Habilitation memoir is being issued posthumously in unchanged form.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    uncertainty: null
-  - date: '1867'
-    date_type: publication
-    event: >
-      The memoir appears in the thirteenth volume of the Abhandlungen der Königlichen Gesellschaft
-      der Wissenschaften zu Göttingen and as a Göttingen offprint/book edition.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867-erara, src-riemann-1867]
-    uncertainty: >
-      Some later bibliographies cite 1868 for the journal volume; the physical offprint and
-      Dedekind notice are dated 1867, so date type must be retained rather than flattened.
+- date: '1829'
+  date_type: publication
+  event: 'Dirichlet publishes convergence conditions for trigonometric series and leaves broader cases
+    unresolved; this is inherited context already researched in R003.
 
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-dirichlet-1829
+  uncertainty: null
+- date: '1854'
+  date_type: habilitation_submission
+  event: 'Riemann submits the memoir on representability by trigonometric series to the philosophical
+    faculty at Göttingen for his Habilitation.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  - src-riemann-ms-gdz
+  uncertainty: 'The sources establish the year and function of the manuscript; this packet does not assign
+    a more precise submission day without archival evidence.
+
+    '
+- date: 1867-07
+  date_type: editorial_publication_notice
+  event: 'Richard Dedekind dates his editorial notice Braunschweig, July 1867 and explains that the 1854
+    Habilitation memoir is being issued posthumously in unchanged form.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  uncertainty: null
+- date: '1867'
+  date_type: publication
+  event: 'The memoir appears in the thirteenth volume of the Abhandlungen der Königlichen Gesellschaft
+    der Wissenschaften zu Göttingen and as a Göttingen offprint/book edition.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867-erara
+  - src-riemann-1867
+  uncertainty: 'Some later bibliographies cite 1868 for the journal volume; the physical offprint and
+    Dedekind notice are dated 1867, so date type must be retained rather than flattened.
+
+    '
 assertions:
-  - id: r004-a001
-    subject: work-riemann-trig-1854
-    predicate: contributed_to
-    object: concept-fourier-series
-    statement: >
-      Riemann describes his subject as the representability of arbitrarily given functions by
-      trigonometric series and explicitly divides the memoir into a historical part and a new
-      investigation covering cases he regarded as still unresolved.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    uncertainty: null
-  - id: r004-a002
-    subject: work-riemann-trig-1854
-    predicate: contributed_to
-    object: q-fourier-series-convergence
-    statement: >
-      Riemann states that Dirichlet's treatment had decided representability only under two
-      assumptions: that the function admits integration throughout and that it does not have
-      infinitely many maxima and minima.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    uncertainty: >
-      This records Riemann's own characterization of the prior state of the problem, not a modern
-      claim that Dirichlet's theorem is best formulated exactly this way today.
-  - id: r004-a003
-    subject: work-riemann-trig-1854
-    predicate: raised_question
-    object: concept-integrability
-    statement: >
-      Immediately after explaining why Dirichlet's route is insufficient for the unresolved cases,
-      Riemann says that uncertainty in fundamental points of definite integration requires him to
-      clarify the concept and range of validity of a definite integral.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    uncertainty: null
-  - id: r004-a004
-    subject: person-riemann
-    predicate: contributed_to
-    object: concept-riemann-integral
-    statement: >
-      In sections 4–5 Riemann defines a definite integral through limiting sums over subdivisions
-      with freely chosen sample locations and derives a necessary-and-sufficient oscillation
-      condition for convergence of those sums for an everywhere finite function.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    uncertainty: >
-      The label concept-riemann-integral is an Atlas label. Riemann's own presentation should not
-      be silently replaced by later Darboux-sum or epsilon-delta textbook formulations.
-  - id: r004-a005
-    subject: concept-riemann-integral
-    predicate: generalized
-    object: concept-integrability
-    statement: >
-      Relative to the analytic-admissibility boundary inherited from Dirichlet, Riemann supplies a
-      more explicit criterion for when a bounded function's definite-integral sums converge rather
-      than simply assuming that the required integral exists.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-riemann-1867, src-rowe-2026]
-    uncertainty: >
-      'Generalized' is used comparatively within the Atlas graph and does not claim that every
-      earlier integration practice is subsumed by one linear historical progression.
-  - id: r004-a006
-    subject: work-riemann-trig-1854
-    predicate: contributed_to
-    object: concept-discontinuous-function
-    statement: >
-      Riemann explicitly investigates functions that are discontinuous infinitely often in every
-      interval and constructs an example whose discontinuities occur at a dense countable set of
-      rational arguments while the function still satisfies his integrability criterion.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    uncertainty: >
-      The phrase 'dense countable set' is modern descriptive shorthand for the rational locations
-      generated by Riemann's construction; it is not quoted as Riemann's terminology.
-  - id: r004-a007
-    subject: work-riemann-trig-1854
-    predicate: reframed
-    object: concept-discontinuous-function
-    statement: >
-      Riemann's examples show within his own investigation that infinitely many discontinuities do
-      not by themselves rule out definite integrability, weakening the finite-discontinuity boundary
-      used in the earlier Dirichlet convergence theorem.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-riemann-1867, src-dirichlet-1829]
-    uncertainty: >
-      This is a comparison of admissibility conditions, not a claim that Riemann formulated a modern
-      topology of discontinuity sets.
-  - id: r004-a008
-    subject: work-riemann-trig-1854
-    predicate: contributed_to
-    object: q-dirichlet-admissible-functions
-    statement: >
-      Riemann's 1854 memoir provides a direct historical continuation of the admissibility question
-      left open in R003 because he explicitly treats cases that he says Dirichlet had left unresolved
-      and makes the definite integral itself part of the investigation.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867, src-dirichlet-1829]
-    uncertainty: >
-      'Continuation' here refers to the explicitly discussed research problem, not to an inevitable
-      conceptual chain from Dirichlet's function language to Riemann's integration theory.
-  - id: r004-a009
-    subject: work-riemann-trig-1854
-    predicate: contributed_to
-    object: concept-riemann-integral
-    statement: >
-      Specialist historiography interprets the need to enlarge the class of integrable functions in
-      the trigonometric-series problem as the original motivation for what is now called the Riemann integral.
-    perspective: later_interpretation
-    certainty: high
-    sources: [src-rowe-2026, src-mascre-2005]
-    uncertainty: >
-      This formulation is attributed to later historiography; it is not projected backward as Riemann's
-      own use of the modern name 'Riemann integral'.
-  - id: r004-a010
-    subject: work-riemann-trig-1854
-    predicate: raised_question
-    object: concept-fourier-series
-    statement: >
-      Riemann explicitly notes that a function can admit integration throughout while its Fourier
-      series still fails to converge, so integrability alone does not settle general trigonometric representability.
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    uncertainty: null
+- id: r004-a001
+  subject: work-riemann-trig-1854
+  predicate: contributed_to
+  object: concept-fourier-series
+  statement: 'Riemann describes his subject as the representability of arbitrarily given functions by
+    trigonometric series and explicitly divides the memoir into a historical part and a new investigation
+    covering cases he regarded as still unresolved.
 
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  uncertainty: null
+- id: r004-a002
+  subject: work-riemann-trig-1854
+  predicate: contributed_to
+  object: q-fourier-series-convergence
+  statement: 'Riemann states that Dirichlet''s treatment had decided representability only under two assumptions:
+    that the function admits integration throughout and that it does not have infinitely many maxima and
+    minima.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  uncertainty: 'This records Riemann''s own characterization of the prior state of the problem, not a
+    modern claim that Dirichlet''s theorem is best formulated exactly this way today.
+
+    '
+- id: r004-a003
+  subject: work-riemann-trig-1854
+  predicate: raised_question
+  object: concept-integrability
+  statement: 'Immediately after explaining why Dirichlet''s route is insufficient for the unresolved cases,
+    Riemann says that uncertainty in fundamental points of definite integration requires him to clarify
+    the concept and range of validity of a definite integral.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  uncertainty: null
+- id: r004-a004
+  subject: person-riemann
+  predicate: contributed_to
+  object: concept-riemann-integral
+  statement: 'In sections 4–5 Riemann defines a definite integral through limiting sums over subdivisions
+    with freely chosen sample locations and derives a necessary-and-sufficient oscillation condition for
+    convergence of those sums for an everywhere finite function.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  uncertainty: 'The label concept-riemann-integral is an Atlas label. Riemann''s own presentation should
+    not be silently replaced by later Darboux-sum or epsilon-delta textbook formulations.
+
+    '
+- id: r004-a005
+  subject: concept-riemann-integral
+  predicate: contributed_to
+  object: concept-integrability
+  statement: 'Relative to the analytic-admissibility boundary inherited from Dirichlet, Riemann supplies
+    a more explicit criterion for when a bounded function''s definite-integral sums converge rather than
+    simply assuming that the required integral exists.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-riemann-1867
+  - src-rowe-2026
+  uncertainty: '''Generalized'' is used comparatively within the Atlas graph and does not claim that every
+    earlier integration practice is subsumed by one linear historical progression.
+
+    '
+- id: r004-a006
+  subject: work-riemann-trig-1854
+  predicate: contributed_to
+  object: concept-discontinuous-function
+  statement: 'Riemann explicitly investigates functions that are discontinuous infinitely often in every
+    interval and constructs an example discontinuous at rational arguments which, in lowest terms, have
+    an even denominator, while the function still satisfies his criterion for definite integration.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  uncertainty: 'Modern descriptions of these discontinuity points as a dense countable subset of the rationals
+    are explanatory abstractions and should not be attributed to Riemann''s terminology.
+
+    '
+- id: r004-a007
+  subject: work-riemann-trig-1854
+  predicate: reframed
+  object: concept-discontinuous-function
+  statement: 'Compared with the finite-discontinuity hypothesis in Dirichlet''s main stated convergence
+    conditions, Riemann''s example admits infinitely many discontinuities while remaining integrable in
+    Riemann''s sense; this does not imply that Dirichlet''s entire 1829 admissibility discussion imposed
+    finite discontinuity as a universal boundary.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-riemann-1867
+  - src-dirichlet-1829
+  uncertainty: 'This is a comparison of admissibility conditions, not a claim that Riemann formulated
+    a modern topology of discontinuity sets.
+
+    '
+- id: r004-a008
+  subject: work-riemann-trig-1854
+  predicate: contributed_to
+  object: q-dirichlet-admissible-functions
+  statement: 'Riemann''s 1854 memoir provides a direct historical continuation of the admissibility question
+    left open in R003 because he explicitly treats cases that he says Dirichlet had left unresolved and
+    makes the definite integral itself part of the investigation.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  - src-dirichlet-1829
+  uncertainty: '''Continuation'' here refers to the explicitly discussed research problem, not to an inevitable
+    conceptual chain from Dirichlet''s function language to Riemann''s integration theory.
+
+    '
+- id: r004-a009
+  subject: work-riemann-trig-1854
+  predicate: contributed_to
+  object: concept-riemann-integral
+  statement: 'Specialist historiography interprets the need to enlarge the class of integrable functions
+    in the trigonometric-series problem as the original motivation for what is now called the Riemann
+    integral.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-rowe-2026
+  - src-mascre-2005
+  uncertainty: 'This formulation is attributed to later historiography; it is not projected backward as
+    Riemann''s own use of the modern name ''Riemann integral''.
+
+    '
+- id: r004-a010
+  subject: work-riemann-trig-1854
+  predicate: raised_question
+  object: concept-fourier-series
+  statement: 'Riemann explicitly notes that a function can admit integration throughout while its Fourier
+    series still fails to converge, so integrability alone does not settle general trigonometric representability.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  uncertainty: null
 question_transitions:
-  - id: r004-qt001
-    from_question: q-dirichlet-admissible-functions
-    to_question: q-riemann-integrability
-    relation: unresolved Fourier-coefficient admissibility becomes an explicit investigation of definite integration
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867, src-dirichlet-1829]
-    note: >
-      Riemann explicitly names Dirichlet's unresolved cases and then introduces the integral section;
-      this is stronger than chronology alone.
-  - id: r004-qt002
-    from_question: q-riemann-integrability
-    to_question: q-infinitely-discontinuous-functions
-    relation: the new integrability criterion permits testing functions with infinitely many discontinuities
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    note: null
-  - id: r004-qt003
-    from_question: q-infinitely-discontinuous-functions
-    to_question: q-fourier-series-convergence
-    relation: integrability does not by itself guarantee Fourier-series convergence
-    perspective: historical
-    certainty: high
-    sources: [src-riemann-1867]
-    note: >
-      Riemann states this limitation explicitly in the later part of the memoir.
-  - id: r004-qt004
-    from_question: q-fourier-series-convergence
-    to_question: q-post-riemann-integration-gap
-    relation: broader integration and exceptional-set questions remain after Riemann
-    perspective: later_interpretation
-    certainty: medium
-    sources: [src-mascre-2005]
-    note: >
-      This is a bounded downstream handoff only; Cantor, Hankel, Darboux, Lebesgue and measure theory
-      are not absorbed into R004.
+- id: r004-qt001
+  from_question: q-dirichlet-admissible-functions
+  to_question: q-riemann-integrability
+  relation: 'Riemann''s explicit treatment of unresolved Dirichlet cases supplies a historical basis for
+    the Atlas transition from analytic admissibility to a more explicit criterion for definite integration.
 
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-riemann-1867
+  - src-dirichlet-1829
+  note: 'Riemann explicitly names Dirichlet''s unresolved cases and then introduces the integral section;
+    this is stronger than chronology alone.
+
+    '
+- id: r004-qt002
+  from_question: q-riemann-integrability
+  to_question: q-infinitely-discontinuous-functions
+  relation: the new integrability criterion permits testing functions with infinitely many discontinuities
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  note: null
+- id: r004-qt003
+  from_question: q-infinitely-discontinuous-functions
+  to_question: q-fourier-series-convergence
+  relation: integrability does not by itself guarantee Fourier-series convergence
+  perspective: historical
+  certainty: high
+  sources:
+  - src-riemann-1867
+  note: 'Riemann states this limitation explicitly in the later part of the memoir.
+
+    '
+- id: r004-qt004
+  from_question: q-fourier-series-convergence
+  to_question: q-post-riemann-integration-gap
+  relation: broader integration and exceptional-set questions remain after Riemann
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-mascre-2005
+  note: 'This is a bounded downstream handoff only; Cantor, Hankel, Darboux, Lebesgue and measure theory
+    are not absorbed into R004.
+
+    '
 intersection_candidates:
-  - id: r004-i001
-    with: R003
-    refs: [concept-integrability, q-dirichlet-admissible-functions, concept-discontinuous-function]
-    significance: >
-      R004 directly answers part of R003's open analytic-admissibility question while showing that
-      integrability and Fourier representability remain distinct.
-  - id: r004-i002
-    with: R001
-    refs: [concept-fourier-series, q-fourier-series-convergence]
-    significance: >
-      R004 returns to Fourier representation through Riemann's explicit historical review, but the
-      bridge is via Dirichlet's unresolved convergence conditions rather than a claim of direct Fourier-to-Riemann causation.
+- id: r004-i001
+  with: R003
+  refs:
+  - concept-integrability
+  - q-dirichlet-admissible-functions
+  - concept-discontinuous-function
+  significance: 'R004 directly answers part of R003''s open analytic-admissibility question while showing
+    that integrability and Fourier representability remain distinct.
 
+    '
+- id: r004-i002
+  with: R001
+  refs:
+  - concept-fourier-series
+  - q-fourier-series-convergence
+  significance: 'R004 returns to Fourier representation through Riemann''s explicit historical review,
+    but the bridge is via Dirichlet''s unresolved convergence conditions rather than a claim of direct
+    Fourier-to-Riemann causation.
+
+    '
 concept_state_candidates:
-  - id: r004-cs-integrability-1854
-    concept_id: concept-integrability
-    period: {from: 1854, to: 1854}
-    label: >
-      Definite integrability is tested by convergence of subdivision sums and by control of total
-      interval length on which function oscillation exceeds a fixed threshold.
-  - id: r004-cs-discontinuity-1854
-    concept_id: concept-discontinuous-function
-    period: {from: 1854, to: 1854}
-    label: >
-      Infinitely and densely occurring discontinuities become explicit test cases rather than an
-      automatic exclusion from integration.
+- id: r004-cs-integrability-1854
+  concept_id: concept-integrability
+  period:
+    from: 1854
+    to: 1854
+  label: 'Definite integrability is tested by convergence of subdivision sums and by control of total
+    interval length on which function oscillation exceeds a fixed threshold.
 
+    '
+- id: r004-cs-discontinuity-1854
+  concept_id: concept-discontinuous-function
+  period:
+    from: 1854
+    to: 1854
+  label: 'Infinitely and densely occurring discontinuities become explicit test cases rather than an automatic
+    exclusion from integration.
+
+    '
 story_candidates:
-  - story_id: story-integrability
-    title: When is a function integrable enough for trigonometric representation?
-    integration_plan: >
-      Branch from the R003 admissibility question; move to Riemann's explicit critique of the remaining
-      Dirichlet cases, the integral criterion, infinitely discontinuous examples, and the remaining gap
-      that integrability alone does not guarantee Fourier-series convergence. Intersect story-function
-      at the inherited admissibility/discontinuity nodes rather than extending it as one inevitable line.
+- story_id: story-integrability
+  title: When is a function integrable enough for trigonometric representation?
+  integration_plan: 'Branch from the R003 admissibility question; move to Riemann''s explicit critique
+    of the remaining Dirichlet cases, the integral criterion, infinitely discontinuous examples, and the
+    remaining gap that integrability alone does not guarantee Fourier-series convergence. Intersect story-function
+    at the inherited admissibility/discontinuity nodes rather than extending it as one inevitable line.
 
+    '
 sources:
-  - id: src-riemann-1867
-    type: primary
-    author: Bernhard Riemann
-    title: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
-    publication: Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, vol. 13
-    year: 1867
-    url: https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Trig/Trig.pdf
-    locator: §§1–6 and §13; transcription reproducing Dedekind's 1867 editorial note
-    notes: >
-      Primary text used for Riemann's own problem statement, discussion of Dirichlet, integral definition,
-      oscillation criterion, discontinuous examples, and limits of integrability for Fourier representation.
-  - id: src-riemann-1867-erara
-    type: primary_digitization
-    author: Bernhard Riemann
-    title: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
-    publication: Göttingen, Dieterichsche Buchhandlung
-    year: 1867
-    url: https://doi.org/10.3931/e-rara-49760
-    locator: 47-page 1867 offprint; section on definite integral begins at original p. 17 of the offprint sequence
-    notes: >
-      ETH-Bibliothek digitization with persistent DOI; bibliographic evidence for the 1867 printed edition.
-  - id: src-riemann-ms-gdz
-    type: primary_archive
-    author: Bernhard Riemann
-    title: Trigonometrische Reihen / Habilitationsschrift manuscript
-    publication: SUB Göttingen, Cod. Ms. B. Riemann 8
-    year: 1854
-    url: http://resolver.sub.uni-goettingen.de/purl?DE-611-HS-3204968
-    locator: manuscript record, Bl. 1–28 for the Habilitationsschrift
-    notes: >
-      Archival record identifying the manuscript as Göttingen 1854; used for date type, not to infer a precise submission day.
-  - id: src-dirichlet-1829
-    type: primary
-    author: Peter Gustav Lejeune Dirichlet
-    title: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire entre des limites données
-    publication: Journal für die reine und angewandte Mathematik 4, pp. 157–169
-    year: 1829
-    url: https://eudml.org/doc/183134
-    locator: pp. 157–169, especially the theorem restrictions and closing example
-  - id: src-rowe-2026
-    type: secondary_specialist
-    author: David E. Rowe
-    title: Riemann's Habilitation Texts
-    publication: Bernhard Riemann — His Life and Wondrous Mathematical Legacy, chapter 7, pp. 183–202, Springer
-    year: 2026
-    url: https://doi.org/10.1007/978-3-032-25457-3_7
-    locator: chapter abstract and discussion of the trigonometric-series Habilitationsschrift
-    notes: >
-      Specialist historiography explicitly identifies extension of the integrable class for trigonometric
-      representation as the original motivation for the integral now bearing Riemann's name.
-  - id: src-mascre-2005
-    type: secondary_specialist
-    author: David Mascré
-    title: Bernhard Riemann, posthumous thesis on the representation of functions by trigonometric series (1867)
-    publication: Landmark Writings in Western Mathematics 1640–1940, pp. 491–505
-    year: 2005
-    url: https://doi.org/10.1016/B978-044450871-3/50119-4
-    locator: chapter 38
-    notes: >
-      Used only for retrospective significance and downstream development, not as evidence for Riemann's own stated motivation.
+- id: src-riemann-1867
+  type: primary
+  author: Bernhard Riemann
+  title: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+  publication: Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, vol. 13
+  year: 1867
+  url: https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Trig/Trig.pdf
+  locator: §§1–6 and §13; transcription reproducing Dedekind's 1867 editorial note
+  notes: 'Primary text used for Riemann''s own problem statement, discussion of Dirichlet, integral definition,
+    oscillation criterion, discontinuous examples, and limits of integrability for Fourier representation.
 
+    '
+- id: src-riemann-1867-erara
+  type: primary_digitization
+  author: Bernhard Riemann
+  title: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+  publication: Göttingen, Dieterichsche Buchhandlung
+  year: 1867
+  url: https://doi.org/10.3931/e-rara-49760
+  locator: 47-page 1867 offprint; section on definite integral begins at original p. 17 of the offprint
+    sequence
+  notes: 'ETH-Bibliothek digitization with persistent DOI; bibliographic evidence for the 1867 printed
+    edition.
+
+    '
+- id: src-riemann-ms-gdz
+  type: primary_archive
+  author: Bernhard Riemann
+  title: Trigonometrische Reihen / Habilitationsschrift manuscript
+  publication: SUB Göttingen, Cod. Ms. B. Riemann 8
+  year: 1854
+  url: http://resolver.sub.uni-goettingen.de/purl?DE-611-HS-3204968
+  locator: manuscript record, Bl. 1–28 for the Habilitationsschrift
+  notes: 'Archival record identifying the manuscript as Göttingen 1854; used for date type, not to infer
+    a precise submission day.
+
+    '
+- id: src-dirichlet-1829
+  type: primary
+  author: Peter Gustav Lejeune Dirichlet
+  title: Sur la convergence des séries trigonométriques qui servent à représenter une fonction arbitraire
+    entre des limites données
+  publication: Journal für die reine und angewandte Mathematik 4, pp. 157–169
+  year: 1829
+  url: https://eudml.org/doc/183134
+  locator: pp. 157–169, especially the theorem restrictions and closing example
+- id: src-rowe-2026
+  type: secondary_specialist
+  author: David E. Rowe
+  title: Riemann's Habilitation Texts
+  publication: Bernhard Riemann — His Life and Wondrous Mathematical Legacy, chapter 7, pp. 183–202, Springer
+  year: 2026
+  url: https://doi.org/10.1007/978-3-032-25457-3_7
+  locator: chapter abstract and discussion of the trigonometric-series Habilitationsschrift
+  notes: 'Specialist historiography explicitly identifies extension of the integrable class for trigonometric
+    representation as the original motivation for the integral now bearing Riemann''s name.
+
+    '
+- id: src-mascre-2005
+  type: secondary_specialist
+  author: David Mascré
+  title: Bernhard Riemann, posthumous thesis on the representation of functions by trigonometric series
+    (1867)
+  publication: Landmark Writings in Western Mathematics 1640–1940, pp. 491–505
+  year: 2005
+  url: https://doi.org/10.1016/B978-044450871-3/50119-4
+  locator: chapter 38
+  notes: 'Used only for retrospective significance and downstream development, not as evidence for Riemann''s
+    own stated motivation.
+
+    '
 uncertainties:
-  - id: r004-u001
-    question: What exact bibliographic convention explains later references to 1868 for the Abhandlungen volume when the offprint and Dedekind notice are dated 1867?
-    status: open
-    significance: medium
-    needed_evidence: >
-      Bibliographic history of volume 13 sufficient to distinguish issue/volume dating from the physical 1867 offprint.
-  - id: r004-u002
-    question: How precisely should Riemann's original sum-and-oscillation criterion be related to the later textbook 'Riemann integral' and Darboux formulations?
-    status: open
-    significance: high
-    needed_evidence: >
-      Specialist history of integration focused on Riemann's 1854 text and later reformulations; avoid retrojecting modern definitions.
-  - id: r004-u003
-    question: How should the later exceptional-set and measure-theoretic developments be bounded into a subsequent unit without making them appear inevitable from Riemann?
-    status: deferred
-    significance: medium
-    needed_evidence: >
-      Research on Hankel, Cantor, Jordan, Borel and Lebesgue belongs to later units unless directly required by R004 criticism.
+- id: r004-u001
+  question: What exact bibliographic convention explains later references to 1868 for the Abhandlungen
+    volume when the offprint and Dedekind notice are dated 1867?
+  status: open
+  significance: medium
+  needed_evidence: 'Bibliographic history of volume 13 sufficient to distinguish issue/volume dating from
+    the physical 1867 offprint.
+
+    '
+- id: r004-u002
+  question: How precisely should Riemann's original sum-and-oscillation criterion be related to the later
+    textbook 'Riemann integral' and Darboux formulations?
+  status: open
+  significance: high
+  needed_evidence: 'Specialist history of integration focused on Riemann''s 1854 text and later reformulations;
+    avoid retrojecting modern definitions.
+
+    '
+- id: r004-u003
+  question: How should the later exceptional-set and measure-theoretic developments be bounded into a
+    subsequent unit without making them appear inevitable from Riemann?
+  status: deferred
+  significance: medium
+  needed_evidence: 'Research on Hankel, Cantor, Jordan, Borel and Lebesgue belongs to later units unless
+    directly required by R004 criticism.
+
+    '
