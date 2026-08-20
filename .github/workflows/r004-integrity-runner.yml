@@ -1,0 +1,38 @@
+name: R004 integrity runner
+
+on:
+  push:
+    branches:
+      - research/r004-riemann-integrability
+
+permissions:
+  contents: write
+
+jobs:
+  bind-and-apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/r004-riemann-integrability
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyyaml pydantic
+      - name: Apply accepted critic changes
+        run: python scripts/promote_packet.py R004 --apply
+      - name: Bind exact packet and review fingerprints
+        run: python scripts/bind_resolution.py R004
+      - name: Commit generated research artifacts
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -- research/packets/R004-riemann-integrability.yaml research/promotions/R004-riemann-integrability-promotion.yaml research/resolutions/R004-riemann-integrability-resolution.yaml
+          if git diff --cached --quiet; then
+            echo 'No generated changes'
+          else
+            git commit -m 'Bind and apply R004 research resolution'
+            git push origin HEAD:research/r004-riemann-integrability
+          fi
