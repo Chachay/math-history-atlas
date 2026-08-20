@@ -1,0 +1,10 @@
+- id: work-riemann-trig-1854
+  type: Work
+  name: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+  start_year: 1854
+  fields: [analysis]
+- id: concept-riemann-integral
+  type: Concept
+  name: Riemann's criterion for definite integrability
+  start_year: 1854
+  fields: [analysis]
