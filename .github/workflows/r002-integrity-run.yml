@@ -21,8 +21,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Bind resolution and apply verified critic changes
         run: |
-          python scripts/bind_resolution.py R002
-          python scripts/promote_verified.py R002 --apply
+          python -m scripts.bind_resolution R002
+          python -m scripts.promote_verified R002 --apply
       - name: Commit promotion artifacts
         run: |
           git config user.name github-actions[bot]
