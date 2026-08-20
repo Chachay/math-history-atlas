@@ -1,0 +1,268 @@
+review:
+  research_unit_id: R004
+  packet: R004-riemann-integrability.yaml
+  critic_version: historical-critic-v1
+  review_date: '2026-08-20'
+  summary:
+    pass: 14
+    revise: 4
+    weak_evidence: 0
+    reject: 0
+  overall_assessment: >
+    The packet is strongly grounded in Riemann's published Habilitationsschrift for the central
+    historical chain: explicit engagement with Dirichlet's unresolved cases, the ensuing need to
+    clarify definite integration, the subdivision-sum and oscillation criterion, and examples with
+    infinitely many discontinuities. The 1854-versus-1867 chronology is also handled with explicit
+    date types. Four revisions are needed before human acceptance: avoid making generalized a stronger
+    graph predicate than the evidence warrants; remove modern set-language from a historical assertion;
+    qualify the comparison with Dirichlet so that his 1829 framework is not reduced to the finite-
+    discontinuity form of the main theorem; and mark the Atlas question-to-question transition from
+    R003 as later interpretation even though its historical basis is unusually direct. No evidence
+    supports the rejected simplifications that Fourier directly caused the Riemann integral, that
+    Riemann's 1854 memoir was published in 1854, or that integrability alone solves trigonometric
+    representability.
+
+findings:
+  - id: hr-r004-chronology-1829
+    reviewed_item: {section: chronology, match: {date: '1829'}}
+    classification: PASS
+    reason: >
+      The entry is explicitly inherited context and does not infer a Riemann motivation from chronology.
+      It is consistent with the already reviewed R003 treatment of Dirichlet's convergence restrictions
+      and unresolved admissibility problem.
+    evidence:
+      - {source_id: src-dirichlet-1829, locator: 'pp. 157–169', supports: Dirichlet_context}
+
+  - id: hr-r004-chronology-1854
+    reviewed_item: {section: chronology, match: {date: '1854'}}
+    classification: PASS
+    reason: >
+      The packet correctly identifies 1854 as a Habilitation submission/manuscript date rather than a
+      publication date. Dedekind's editorial notice and the Göttingen manuscript record independently
+      support that date type.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'Dedekind editorial note before §1', supports: 1854_Habilitation_submission}
+      - {source_id: src-riemann-ms-gdz, locator: 'Cod. Ms. B. Riemann 8 manuscript record', supports: 1854_manuscript_date}
+
+  - id: hr-r004-chronology-1867-notice
+    reviewed_item: {section: chronology, match: {date: '1867-07'}}
+    classification: PASS
+    reason: >
+      Dedekind's notice is explicitly dated Braunschweig, July 1867 and states that the 1854
+      Habilitation memoir is being issued after Riemann's death in unchanged form.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'Dedekind editorial note before §1', supports: July_1867_editorial_notice}
+
+  - id: hr-r004-chronology-1867-publication
+    reviewed_item: {section: chronology, match: {date: '1867', date_type: publication}}
+    classification: PASS
+    reason: >
+      The 1867 Göttingen printing is supported by the persistent e-rara bibliographic object and the
+      Dedekind notice. The packet correctly leaves the later 1868 volume citation as a bibliographic
+      date-type question instead of flattening it into a contradiction.
+    evidence:
+      - {source_id: src-riemann-1867-erara, locator: 'bibliographic record and 47-page offprint', supports: 1867_printing}
+      - {source_id: src-riemann-1867, locator: 'title page/editorial notice', supports: 1867_publication_context}
+
+  - id: hr-r004-a001
+    reviewed_item: {section: assertions, id: r004-a001}
+    classification: PASS
+    reason: >
+      Riemann's introduction directly identifies the representability problem and the division between
+      historical survey and new investigation. The claim stays within his stated agenda.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'introduction and §§1–3', supports: memoir_problem_and_structure}
+
+  - id: hr-r004-a002
+    reviewed_item: {section: assertions, id: r004-a002}
+    classification: PASS
+    reason: >
+      Riemann explicitly characterizes Dirichlet's result using the two assumptions reproduced in the
+      packet. The uncertainty correctly identifies this as Riemann's characterization rather than a
+      timeless modern statement of Dirichlet's theorem.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'end of historical part immediately before §4', supports: Riemann_on_Dirichlet_assumptions}
+
+  - id: hr-r004-a003
+    reviewed_item: {section: assertions, id: r004-a003}
+    classification: PASS
+    reason: >
+      The transition is not inferred from chronology: Riemann himself says that uncertainty about
+      fundamental points of definite integration requires clarification of the concept and its range
+      immediately after discussing the unresolved trigonometric-series cases.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'opening of §4', supports: explicit_need_to_clarify_integral}
+
+  - id: hr-r004-a004
+    reviewed_item: {section: assertions, id: r004-a004}
+    classification: PASS
+    reason: >
+      Sections 4–5 support both the subdivision-sum definition and the necessary-and-sufficient
+      oscillation criterion. The uncertainty prevents later Darboux or epsilon-delta formulations from
+      being projected backward.
+    evidence:
+      - {source_id: src-riemann-1867, locator: '§§4–5', supports: subdivision_sums_and_oscillation_criterion}
+
+  - id: hr-r004-a005
+    reviewed_item: {section: assertions, id: r004-a005}
+    classification: REVISE
+    severity: medium
+    reason: >
+      The prose is appropriately bounded to the Dirichlet/Riemann admissibility comparison, but the graph
+      predicate generalized is stronger than the sources establish. Riemann enlarged the class of functions
+      that could be integrated relative to the problem at hand, yet specialist history does not justify
+      encoding the whole relation as a formal generalization of the existing Atlas concept-integrability node,
+      which already represents a broader analytic-admissibility question rather than a single prior definition.
+    needed_evidence: >
+      A specialist history explicitly framing Riemann's 1854 criterion as a generalization of the precise
+      canonical concept represented by concept-integrability; absent that, use the weaker contributed_to predicate.
+    target:
+      section: assertions
+      id: r004-a005
+    proposed_change:
+      action: replace_fields
+      fields:
+        predicate: contributed_to
+    evidence:
+      - {source_id: src-riemann-1867, locator: '§§4–5', supports: broader_integrability_criterion}
+      - {source_id: src-rowe-2026, locator: 'chapter discussion of extending the class of integrable functions', supports: historical_enlargement_not_formal_graph_generalization}
+
+  - id: hr-r004-a006
+    reviewed_item: {section: assertions, id: r004-a006}
+    classification: REVISE
+    severity: medium
+    reason: >
+      The underlying mathematics is supported, but dense countable set is modern set-theoretic descriptive
+      language inside an assertion marked historical. Riemann's own period-appropriate statement identifies
+      discontinuities at rational arguments with an even reduced denominator and observes that such
+      discontinuities occur infinitely often between arbitrarily close bounds. That wording should carry the
+      historical assertion; the dense/countable characterization may be retained only as explicit modern abstraction.
+    needed_evidence: >
+      No new source is needed; the primary text already determines a safer replacement.
+    target:
+      section: assertions
+      id: r004-a006
+    proposed_change:
+      action: replace_fields
+      fields:
+        statement: >
+          Riemann explicitly investigates functions that are discontinuous infinitely often in every interval
+          and constructs an example discontinuous at rational arguments which, in lowest terms, have an even
+          denominator, while the function still satisfies his criterion for definite integration.
+        uncertainty: >
+          Modern descriptions of these discontinuity points as a dense countable subset of the rationals are
+          explanatory abstractions and should not be attributed to Riemann's terminology.
+    evidence:
+      - {source_id: src-riemann-1867, locator: '§6', supports: rational_discontinuity_example_and_integrability}
+
+  - id: hr-r004-a007
+    reviewed_item: {section: assertions, id: r004-a007}
+    classification: REVISE
+    severity: medium
+    reason: >
+      The comparison is directionally correct but risks reducing Dirichlet's entire 1829 admissibility framework
+      to the finite-discontinuity hypothesis in his main theorem. R003 already records that Dirichlet also stated
+      a more general local condition intended to preserve the meaning of the integrals. The R004 comparison should
+      therefore be explicitly limited to the main stated convergence conditions rather than described as weakening
+      a single Dirichlet boundary.
+    needed_evidence: >
+      No additional source is required; the primary Dirichlet and Riemann texts suffice for a narrower comparison.
+    target:
+      section: assertions
+      id: r004-a007
+    proposed_change:
+      action: replace_fields
+      fields:
+        statement: >
+          Compared with the finite-discontinuity hypothesis in Dirichlet's main stated convergence conditions,
+          Riemann's example admits infinitely many discontinuities while remaining integrable in Riemann's sense;
+          this does not imply that Dirichlet's entire 1829 admissibility discussion imposed finite discontinuity
+          as a universal boundary.
+    evidence:
+      - {source_id: src-riemann-1867, locator: '§6', supports: infinitely_many_discontinuities_and_integrability}
+      - {source_id: src-dirichlet-1829, locator: 'pp. 167–169', supports: main_restrictions_and_more_general_local_condition}
+
+  - id: hr-r004-a008
+    reviewed_item: {section: assertions, id: r004-a008}
+    classification: PASS
+    reason: >
+      Unlike a merely chronological genealogy, this relation is supported by Riemann's explicit account of
+      the cases Dirichlet left undecided and his immediate turn to definite integration. The uncertainty
+      correctly blocks an inevitable Dirichlet-function-concept-to-Riemann causal story.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'end of historical part and opening of §4', supports: explicit_Dirichlet_to_integral_problem_relation}
+      - {source_id: src-dirichlet-1829, locator: 'pp. 167–169', supports: prior_admissibility_problem}
+
+  - id: hr-r004-a009
+    reviewed_item: {section: assertions, id: r004-a009}
+    classification: PASS
+    reason: >
+      The claim is explicitly later_interpretation and attributes the strong original-motivation wording
+      to specialist historiography rather than to Riemann's modernized self-description. Rowe directly supports
+      the link between extending trigonometric representation and extending the class of integrable functions.
+    evidence:
+      - {source_id: src-rowe-2026, locator: 'chapter discussion of the trigonometric-series Habilitationsschrift', supports: historiographical_original_motivation}
+      - {source_id: src-mascre-2005, locator: 'chapter 38', supports: retrospective_significance}
+
+  - id: hr-r004-a010
+    reviewed_item: {section: assertions, id: r004-a010}
+    classification: PASS
+    reason: >
+      Riemann explicitly observes that integrability throughout does not by itself guarantee representability
+      by a Fourier series. This appropriately prevents the Story from collapsing integration and Fourier convergence
+      into one solved problem.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'later discussion of integrable functions not representable by their Fourier series', supports: integrability_not_sufficient}
+
+  - id: hr-r004-qt001
+    reviewed_item: {section: question_transitions, id: r004-qt001}
+    classification: REVISE
+    severity: high
+    reason: >
+      The historical basis is direct, but q-dirichlet-admissible-functions is an Atlas retrospective question
+      created in R003 rather than Dirichlet's own phrasing. A transition whose source node is already a retrospective
+      synthesis should not be labeled historical as though both question formulations belonged to the actors.
+      The evidence should instead justify a later_interpretation transition grounded in an explicit historical relation.
+    needed_evidence: >
+      No additional evidence is needed; the issue is perspective semantics, not source weakness.
+    target:
+      section: question_transitions
+      id: r004-qt001
+    proposed_change:
+      action: replace_fields
+      fields:
+        perspective: later_interpretation
+        relation: >
+          Riemann's explicit treatment of unresolved Dirichlet cases supplies a historical basis for the Atlas
+          transition from analytic admissibility to a more explicit criterion for definite integration.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'end of historical part and opening of §4', supports: historical_basis_for_retrospective_transition}
+
+  - id: hr-r004-qt002
+    reviewed_item: {section: question_transitions, id: r004-qt002}
+    classification: PASS
+    reason: >
+      The transition is internal to Riemann's own investigation: after establishing his criterion he explicitly
+      tests functions discontinuous infinitely often. It does not require inferred causation from mere chronology.
+    evidence:
+      - {source_id: src-riemann-1867, locator: '§§5–6', supports: criterion_to_discontinuous_examples}
+
+  - id: hr-r004-qt003
+    reviewed_item: {section: question_transitions, id: r004-qt003}
+    classification: PASS
+    reason: >
+      Riemann explicitly establishes the limitation that integrability does not settle Fourier-series
+      representability, so returning from discontinuous integrable examples to convergence/representation is supported.
+    evidence:
+      - {source_id: src-riemann-1867, locator: 'later discussion of Fourier-series failure despite integrability', supports: remaining_representation_problem}
+
+  - id: hr-r004-qt004
+    reviewed_item: {section: question_transitions, id: r004-qt004}
+    classification: PASS
+    reason: >
+      The transition is explicitly later_interpretation, medium certainty, and framed only as a deferred handoff.
+      It does not import Cantor, Lebesgue, or measure theory into R004 as if they were Riemann's own agenda.
+    evidence:
+      - {source_id: src-mascre-2005, locator: 'chapter 38 retrospective discussion', supports: downstream_significance}
+
+sources: []
