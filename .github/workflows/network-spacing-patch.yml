@@ -1,0 +1,30 @@
+name: Network spacing migration
+
+on:
+  push:
+    paths:
+      - '.github/workflows/network-spacing-patch.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.ref == 'refs/heads/ui/network-data-driven'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ui/network-data-driven
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply spacing migration
+        run: python scripts/patch_network_spacing.py
+      - name: Commit UI change
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add app/src/main.tsx
+          git commit -m 'Use chronological minimum spacing in Network'
+          git push origin HEAD:ui/network-data-driven
