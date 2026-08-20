@@ -1,6 +1,6 @@
 - id: story-fourier-heat-representation
   title: From heat to arbitrary functions
-  description: How Fourier's heat problem led from prescribed temperature data to trigonometric representation, convergence, and broader questions about functions.
+  description: A curated path from Fourier's heat problem through prescribed temperature data, trigonometric representation, convergence, and broader questions about functions.
   question_phases: [q-heat-propagation, q-heat-prescribed-data, q-trig-representation-scope, q-fourier-series-convergence, q-what-is-function]
   fields: [analysis, mathematical-physics]
   steps:
@@ -49,7 +49,7 @@
       role: Next question
       narrative: >
         Representation and convergence are not the same claim.
-        Once Fourier's method associated broad classes of functions with trigonometric series, a separate question became unavoidable: under what conditions does the series actually converge to the intended function?
+        Once Fourier's method associated broad classes of functions with trigonometric series, convergence became a central downstream question: under what conditions does the series actually converge to the intended function?
       assertion_refs: [assertion-r001-series-to-convergence]
       perspective: later_interpretation
     - id: r001-story-7
