@@ -1,0 +1,491 @@
+review:
+  research_unit_id: R001
+  critic: Historical Critic v1
+  review_date: '2026-08-20'
+  overall_classification: REVISE
+  summary: The packet is broadly well supported and unusually careful about anachronism, but one chronology entry materially conflates a nominal Academy volume year (1823) with the actual reading and publication dates of Cauchy's memoir. Two later-interpretive claims about the development of the function concept are plausible but should be strengthened with modern specialist historiography rather than resting mainly on primary/later testimony.
+  evidence_hygiene_note: The input packet's source records contain session-specific retrieval_citation values. They are not used anywhere in this review. For a canonical packet, those fields should be removed or ignored in favor of stable source IDs and persistent URLs.
+  finding_counts:
+    PASS: 29
+    WEAK_EVIDENCE: 2
+    REVISE: 2
+findings:
+- id: f-a001
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a001
+  reason: Fourier's 1822 treatise explicitly frames the mathematical laws of heat propagation in solids as its central object.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-ch3
+    locator: Chapter III, art. 163
+    supports: central heat-propagation problem
+- id: f-a002
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a002
+  reason: The sources support differential equations for heat together with prescribed physical/geometrical data. The packet already warns that modern initial-/boundary-value terminology is retrospective.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-ch3
+    locator: Chapter III
+    supports: differential-equation treatment of heat
+  - source_id: src-fourier-1822-ch8
+    locator: Chapter VIII
+    supports: geometry and boundary-dependent solutions
+- id: f-a003
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a003
+  reason: The 1807 memoir is documented in the cited critical edition as already containing Fourier's trigonometric-series method; the assertion does not claim the method originated only in 1807.
+  needed_evidence: none
+  evidence:
+  - source_id: src-grattan-guinness-ravetz-1972
+    locator: critical edition and discussion of the 1807 memoir
+    supports: trigonometric series in the 1807 memoir
+- id: f-a004
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a004
+  reason: 'The mathematical dependency is supported: Fourier''s heat solutions lead to trigonometric forms and the theory then requires reduction of prescribed temperature data to such series. The packet explicitly labels ''modes'' as modern vocabulary.'
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-section207
+    locator: art. 207
+    supports: heat problem leading to arbitrary-function trigonometric development
+  - source_id: src-fourier-1822-art235
+    locator: art. 235
+    supports: necessity of reducing initial-temperature functions to trigonometric form
+- id: f-a005
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a005
+  reason: This closely paraphrases Fourier's explicit statement that the fundamental questions of heat theory cannot be fully solved without reducing initial-temperature functions to trigonometric-series form.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-art235
+    locator: art. 235
+    supports: explicit necessity statement
+- id: f-a006
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a006
+  reason: Fourier gives definite-integral expressions for trigonometric-series coefficients. The priority caveat appropriately avoids an ex nihilo invention claim.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-art219-221
+    locator: arts. 219-221
+    supports: definite-integral coefficient formulas
+- id: f-a007
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a007
+  reason: Fourier explicitly states that a function represented on a finite interval by the ordinate of an arbitrarily drawn curve can be developed in trigonometric series. The packet correctly warns against importing unrestricted modern set-theoretic generality.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-art235
+    locator: art. 235
+    supports: arbitrarily drawn curve and trigonometric development
+- id: f-a008
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a008
+  reason: Fourier explicitly describes arbitrary ordinates not governed by a common law and says the general equation applies rigorously to discontinuous functions.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-function-conception
+    locator: discussion of arbitrary functions, p. 552 in the scanned edition
+    supports: ordinates not subject to a common law and discontinuous functions
+- id: f-a009
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a009
+  reason: Fourier explicitly states that sine/cosine series of multiple arcs are always convergent and that their sum tends to the value of the developed function. The packet correctly marks the modern invalidity of unrestricted generalization.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-convergence-claim
+    locator: Chapter III, p. 259
+    supports: Fourier's explicit universal convergence claim
+- id: f-a010
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a010
+  reason: The cited historical reconstruction identifies Lagrange as a principal critic of Fourier's trigonometric expansions; the uncertainty field appropriately limits over-specific attribution.
+  needed_evidence: none
+  evidence:
+  - source_id: src-mactutor-fourier
+    locator: discussion of the 1807 committee and 1808 objections
+    supports: Lagrange's objection to trigonometric expansions
+  - source_id: src-grattan-guinness-ravetz-1972
+    locator: discussion of 1807-1809 reception
+    supports: Lagrange's role in criticism
+- id: f-a011
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a011
+  reason: Laplace was on the examination committee and is associated in the cited reconstruction with early objections, while the wording explicitly avoids portraying him as a permanent categorical opponent.
+  needed_evidence: none
+  evidence:
+  - source_id: src-mactutor-fourier
+    locator: 1807 committee and 1808 objections
+    supports: Laplace's participation and early concerns
+- id: f-a012
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a012
+  reason: The cited reconstruction distinguishes Biot's objection to Fourier's physical derivation and priority issue from the trigonometric-series controversy. The assertion preserves that distinction.
+  needed_evidence: none
+  evidence:
+  - source_id: src-mactutor-fourier
+    locator: discussion of Biot's objection and heat-equation derivation
+    supports: Biot's role in contemporary controversy
+- id: f-a013
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a013
+  reason: The historical account supports both the 1811 prize award and the committee's continued reservations. The assertion does not over-specify the exact technical defects.
+  needed_evidence: none
+  evidence:
+  - source_id: src-mactutor-fourier
+    locator: 1811 prize competition and committee report
+    supports: prize award with reservations
+- id: f-a014
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a014
+  reason: The cited historiography and Riemann's retrospective introduction support a substantial pre-Fourier history of arbitrary-function and trigonometric-representation questions in the vibrating-string controversy.
+  needed_evidence: none
+  evidence:
+  - source_id: src-herreman-2013
+    locator: pp. 151-243; comparison with vibrating-string controversy
+    supports: pre-Fourier representational problem
+  - source_id: src-riemann-trig-translation
+    locator: historical introduction
+    supports: vibrating-string antecedents
+- id: f-a015
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a015
+  reason: Bernoulli's harmonic superposition claim is appropriately characterized as an antecedent physical intuition rather than Fourier's later theorem or coefficient method.
+  needed_evidence: none
+  evidence:
+  - source_id: src-herreman-2013
+    locator: discussion of vibrating-string controversy
+    supports: Bernoulli harmonic superposition antecedent
+- id: f-a016
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a016
+  reason: 'As a later historical synthesis, this is consistent with the cited specialist historiography: Fourier''s importance lies in systematic general representation within heat theory, not in the first appearance of trigonometric harmonics.'
+  needed_evidence: none
+  evidence:
+  - source_id: src-herreman-2013
+    locator: abstract and historical analysis
+    supports: distinctive status of Fourier's systematic trigonometric representation
+  - source_id: src-grattan-guinness-ravetz-1972
+    locator: analysis of Fourier's method
+    supports: systematic use in heat theory
+- id: f-a017
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a017
+  reason: Dirichlet explicitly discusses an earlier Cauchy attempt and criticizes it. The assertion only requires that the attempt preceded 1829, which is correct despite the separate chronology-date error.
+  needed_evidence: none
+  evidence:
+  - source_id: src-dirichlet-1829
+    locator: opening paragraphs
+    supports: Cauchy's earlier convergence attempt
+- id: f-a018
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a018
+  reason: 'Dirichlet explicitly raises both objections stated here: the problematic complex substitution for an arbitrary function and the invalid inference from asymptotically equivalent terms to convergence.'
+  needed_evidence: none
+  evidence:
+  - source_id: src-dirichlet-1829
+    locator: opening critique of Cauchy
+    supports: complex-substitution and asymptotic-convergence objections
+- id: f-a019
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a019
+  reason: The assertion matches the standard content of Dirichlet's 1829 sufficient conditions and correctly avoids replacing his historical hypotheses with later bounded-variation language.
+  needed_evidence: none
+  evidence:
+  - source_id: src-dirichlet-1829
+    locator: main convergence argument and stated restrictions
+    supports: finite discontinuities/extrema and convergence behavior
+- id: f-a020
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a020
+  reason: 'As a later interpretation, the claim is proportionate: Dirichlet explicitly says no satisfactory general proof was known, and Riemann later made trigonometric representation a central analytic problem. The uncertainty field prevents a sole-cause narrative.'
+  needed_evidence: none
+  evidence:
+  - source_id: src-dirichlet-1829
+    locator: opening paragraphs
+    supports: general convergence problem still unresolved in 1829
+  - source_id: src-riemann-trig-translation
+    locator: historical introduction
+    supports: continued centrality of trigonometric-series representation
+- id: f-a022
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a022
+  reason: Riemann's 1854 Habilitation work directly concerns representability by trigonometric series and develops integration/convergence questions beyond Fourier and Dirichlet; the downstream chronology is correctly marked.
+  needed_evidence: none
+  evidence:
+  - source_id: src-riemann-trig-translation
+    locator: 1854 work, published 1867
+    supports: representation, integration and trigonometric-series analysis
+- id: f-a023
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a023
+  reason: The claim is explicitly tagged modern_abstraction and accurately distinguishes spatial trigonometric dependence in heat problems from modern time-frequency signal-processing ontology.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-ch3
+    locator: Chapter III
+    supports: spatial trigonometric factors and temporal decay structure
+- id: f-a024
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a024
+  reason: This is a mathematically legitimate retrospective interpretation and is explicitly tagged modern_abstraction; it does not attribute eigenfunction terminology to Fourier.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-ch3
+    locator: Chapter III
+    supports: spatial separated trigonometric solution structure
+- id: f-a026
+  classification: PASS
+  reviewed_item:
+    section: assertions
+    id: r001-a026
+  reason: The warning against a simple Fourier-Cauchy-Riemann chain is well supported by the pre-Fourier string controversy, Dirichlet's explicit intervention, and Riemann's later work. It is deliberately presented as a selective synthesis.
+  needed_evidence: none
+  evidence:
+  - source_id: src-herreman-2013
+    locator: historical comparison
+    supports: eighteenth-century antecedents
+  - source_id: src-dirichlet-1829
+    locator: opening critique and theorem
+    supports: Dirichlet as crucial intermediate actor
+  - source_id: src-riemann-trig-translation
+    locator: historical introduction
+    supports: later Riemannian phase
+- id: f-a021
+  classification: WEAK_EVIDENCE
+  reviewed_item:
+    section: assertions
+    id: r001-a021
+  target:
+    section: assertions
+    id: r001-a021
+  reason: The claim is historically plausible and carefully marked later_interpretation, but its cited evidence is weighted toward Fourier's own text, Riemann, and Poincare. Those sources establish the mathematical episode and later testimony, not by themselves the historiographical strength of the causal phrase 'strongly contributed'. A modern specialist history of the function concept should support that synthesis.
+  needed_evidence: Modern specialist historiography explicitly connecting heat/Fourier-series problems with the nineteenth-century change in the function concept.
+  evidence:
+  - source_id: src-fourier-1822-function-conception
+    locator: discussion of arbitrary functions
+    supports: Fourier's broad function conception
+  - source_id: src-kjeldsen-lutzen-2015
+    locator: abstract and pp. 543-559
+    supports: physics problems including heat conduction as drivers of changes in the function concept
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-kjeldsen-lutzen-2015
+- id: f-a025
+  classification: WEAK_EVIDENCE
+  reviewed_item:
+    section: assertions
+    id: r001-a025
+  target:
+    section: assertions
+    id: r001-a025
+  reason: Fourier's primary text establishes the need to handle arbitrary prescribed temperature data, but the causal language 'gave concrete physical force' is a retrospective historiographical claim. The cited Poincare testimony is valuable but should be supplemented by modern specialist historiography.
+  needed_evidence: A modern history of mathematics/physics source explicitly treating heat conduction as a driver of changes in function concepts or representability.
+  evidence:
+  - source_id: src-fourier-1822-art235
+    locator: art. 235
+    supports: heat theory's need for arbitrary initial-temperature functions
+  - source_id: src-kjeldsen-lutzen-2015
+    locator: abstract and pp. 543-559
+    supports: heat conduction and other physical problems as drivers of function-concept change
+  proposed_change:
+    action: add_evidence
+    sources:
+    - src-kjeldsen-lutzen-2015
+- id: f-chronology-cauchy
+  classification: REVISE
+  reviewed_item:
+    section: chronology
+    match:
+      date: '1823'
+  target:
+    section: chronology
+    match:
+      date: '1823'
+  reason: The entry conflates three different dates. '1823' is the nominal year attached to volume 6 of the Mémoires de l'Académie; Cauchy's memoir itself states that it was read to the Académie on 27 February 1826, and bibliographic records identify publication in 1827. Calling 1823 the publication date is therefore historically incorrect.
+  needed_evidence: Direct bibliographic and first-page evidence for read date and publication date.
+  evidence:
+  - source_id: src-cauchy-periodic-series-1827
+    locator: p. 603, title heading
+    supports: 'read_date: 1826-02-27'
+  - source_id: src-cauchy-periodic-series-biblio
+    locator: bibliography entry [17]
+    supports: 'volume_year: 1823 and publication_year: 1827'
+  - source_id: src-dirichlet-1829
+    locator: opening paragraphs
+    supports: Dirichlet's later criticism of Cauchy's memoir
+  proposed_change:
+    action: replace_entry
+    value:
+      volume_year: 1823
+      read_date: '1826-02-27'
+      publication_year: 1827
+      event: Cauchy presents and later publishes an attempted general treatment of convergence of periodic/trigonometric series; Dirichlet later argues that the proof is insufficient.
+      perspective: historical
+      certainty: high
+      sources:
+      - src-cauchy-periodic-series-1827
+      - src-dirichlet-1829
+      uncertainty: The memoir appears in volume 6 nominally labeled for the year 1823, but the memoir itself was read on 27 February 1826 and the volume was published in 1827. These date types must not be conflated.
+- id: f-source-gap-cauchy-date
+  classification: REVISE
+  reviewed_item:
+    section: source_assessment.source_gaps
+    match:
+      contains: Cauchy's 1823 convergence memoir
+  target:
+    section: source_assessment.source_gaps
+    match:
+      contains: Cauchy's 1823 convergence memoir
+  reason: The phrase repeats the same date conflation. The memoir is not properly described as a memoir of 1823 without qualification.
+  needed_evidence: Same bibliographic correction as the chronology finding.
+  evidence:
+  - source_id: src-cauchy-periodic-series-1827
+    locator: p. 603
+    supports: 'read_date: 1826-02-27'
+  - source_id: src-cauchy-periodic-series-biblio
+    locator: bibliography entry [17]
+    supports: 'publication_year: 1827'
+  proposed_change:
+    action: replace_entry
+    value: Cauchy's convergence memoir, read to the Académie on 27 February 1826 and published in 1827 in volume 6 nominally associated with 1823, was not independently transcribed and audited; Dirichlet's 1829 contemporary criticism is used as the primary evidence about its failure.
+- id: f-qt001
+  classification: PASS
+  reviewed_item:
+    section: question_transitions
+    id: r001-qt001
+  reason: Fourier explicitly reduces heat propagation to analytical problems governed by differential equations; the transition is historically faithful even though 'heat equation' and 'boundary conditions' are modern compact labels.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-ch3
+    locator: Chapter III, art. 163 and surrounding sections
+    supports: heat problem reduced to analysis with differential equations and physical conditions
+- id: f-qt002
+  classification: PASS
+  reviewed_item:
+    section: question_transitions
+    id: r001-qt002
+  reason: The transition from particular trigonometric solution forms to representing prescribed data is directly visible in Fourier's development. The packet explicitly marks 'separated solutions' and 'modes' as modernized wording.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-section207
+    locator: art. 207
+    supports: transition from heat solution to arbitrary-function trigonometric expansion
+  - source_id: src-fourier-1822-art235
+    locator: art. 235
+    supports: need to reduce initial-temperature functions
+- id: f-qt003
+  classification: PASS
+  reviewed_item:
+    section: question_transitions
+    id: r001-qt003
+  reason: Fourier generalizes from concrete profiles to arbitrary functions/curves and states a general trigonometric representation claim; this is a genuine historical transition.
+  needed_evidence: none
+  evidence:
+  - source_id: src-fourier-1822-art235
+    locator: art. 235
+    supports: arbitrary finite-interval function representation
+- id: f-qt004
+  classification: PASS
+  reviewed_item:
+    section: question_transitions
+    id: r001-qt004
+  reason: Dirichlet's 1829 paper explicitly begins from the gap between Fourier's general convergence assertion and the absence of a satisfactory general proof. The uncertainty correctly notes that the formal/rigorous distinction sharpened downstream rather than originating wholly with Dirichlet.
+  needed_evidence: none
+  evidence:
+  - source_id: src-dirichlet-1829
+    locator: opening paragraphs
+    supports: transition to rigorous sufficient convergence conditions
+- id: f-qt005
+  classification: PASS
+  reviewed_item:
+    section: question_transitions
+    id: r001-qt005
+  reason: As a later_interpretation, this accurately summarizes the downstream move from trigonometric-series representation to questions of integration and admissible functions in Riemann's work. It is not falsely attributed to Fourier's own program.
+  needed_evidence: none
+  evidence:
+  - source_id: src-riemann-trig-translation
+    locator: 1854 Habilitation work and historical introduction
+    supports: representation, integration, and general-function questions
+sources:
+- id: src-cauchy-periodic-series-1827
+  type: primary
+  author: Augustin-Louis Cauchy
+  title: Mémoire sur les développements des fonctions en séries périodiques
+  publication: Mémoires de l'Académie royale des sciences de l'Institut de France, vol. 6, pp. 603-612
+  volume_year: 1823
+  read_date: '1826-02-27'
+  publication_year: 1827
+  url: https://fr.wikisource.org/wiki/Page:M%C3%A9moires_de_l%E2%80%99Acad%C3%A9mie_des_sciences,_Tome_6.djvu/791
+- id: src-cauchy-periodic-series-biblio
+  type: secondary_peer_reviewed
+  title: Les premières démonstrations de la formule intégrale de Fourier
+  publication: Revue d'histoire des mathématiques
+  year: 1997
+  url: https://www.numdam.org/articles/10.24033/rhm.62/
+  author: Silvia Annaratone
+  volume: 3
+  issue: 1
+  pages: 99-136
+  doi: 10.24033/rhm.62
+- id: src-kjeldsen-lutzen-2015
+  type: secondary_peer_reviewed
+  authors:
+  - Tinne Hoff Kjeldsen
+  - Jesper Lützen
+  title: 'Interactions Between Mathematics and Physics: The History of the Concept of Function—Teaching with and About Nature of Mathematics'
+  publication: Science & Education
+  year: 2015
+  volume: 24
+  issue: 5-6
+  pages: 543-559
+  doi: 10.1007/s11191-015-9746-x
+  url: https://doi.org/10.1007/s11191-015-9746-x

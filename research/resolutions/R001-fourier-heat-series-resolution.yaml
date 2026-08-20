@@ -1,0 +1,28 @@
+research_unit_id: R001
+packet: R001-fourier-heat-series.yaml
+review: R001-fourier-heat-series-review.yaml
+decisions:
+- review_key: finding:f-a021
+  kind: assertions
+  item_id: f-a021
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: null
+- review_key: finding:f-a025
+  kind: assertions
+  item_id: f-a025
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: null
+- review_key: finding:f-chronology-cauchy
+  kind: chronology
+  item_id: f-chronology-cauchy
+  critic_classification: REVISE
+  decision: accept_critic
+  note: null
+- review_key: finding:f-source-gap-cauchy-date
+  kind: source_assessment.source_gaps
+  item_id: f-source-gap-cauchy-date
+  critic_classification: REVISE
+  decision: accept_critic
+  note: null
