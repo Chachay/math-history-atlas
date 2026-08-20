@@ -1,0 +1,35 @@
+name: Story temporal Network migration
+
+on:
+  push:
+    paths:
+      - '.github/workflows/story-temporal-network-patch.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.ref == 'refs/heads/ui/network-data-driven'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ui/network-data-driven
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Apply temporal Story/Network migration
+        run: python scripts/patch_story_temporal_network.py
+      - name: Validate migration
+        run: |
+          python scripts/validate.py
+          python scripts/build.py
+      - name: Commit migrated files
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add scripts/models.py scripts/validate.py editorial/stories/r001-fourier.yaml editorial/stories/r002-cauchy.yaml editorial/reviews/R002-cauchy-story-review.yaml app/src/main.tsx app/src/style.css
+          git commit -m 'Add temporal Story anchors and chronological Network layout'
+          git push origin HEAD:ui/network-data-driven
