@@ -532,6 +532,83 @@
       "fields": [
         "geometry"
       ]
+    },
+    {
+      "id": "person-cantor",
+      "type": "Person",
+      "name": "Georg Cantor",
+      "start_year": 1845,
+      "end_year": 1918,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-trig-series-uniqueness",
+      "type": "Concept",
+      "name": "Uniqueness of trigonometric-series representation",
+      "start_year": 1870,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-exceptional-point-set",
+      "type": "Concept",
+      "name": "Exceptional point set in a uniqueness theorem",
+      "start_year": 1871,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-derived-set",
+      "type": "Concept",
+      "name": "Derived set of a point set",
+      "start_year": 1872,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-heine-trig-1870",
+      "type": "Work",
+      "name": "Heine on trigonometric series",
+      "original_title": "Ueber trigonometrische Reihen",
+      "start_year": 1870,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-cantor-uniqueness-1870",
+      "type": "Work",
+      "name": "Cantor's uniqueness proof for trigonometric representation",
+      "original_title": "Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt",
+      "start_year": 1870,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-cantor-uniqueness-note-1871",
+      "type": "Work",
+      "name": "Cantor's note on exceptional points in the uniqueness theorem",
+      "original_title": "Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt",
+      "start_year": 1871,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-cantor-extension-1872",
+      "type": "Work",
+      "name": "Cantor's extension of the trigonometric-series uniqueness theorem",
+      "original_title": "Ueber die Ausdehnung eines Satzes aus der Theorie der trigonometrischen Reihen",
+      "start_year": 1872,
+      "fields": [
+        "analysis"
+      ]
     }
   ],
   "questions": [
@@ -810,6 +887,39 @@
       },
       "fields": [
         "geometry"
+      ]
+    },
+    {
+      "id": "q-trig-series-uniqueness",
+      "question": "When is a trigonometric-series representation unique?",
+      "period": {
+        "from": 1870,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-exceptional-set-uniqueness",
+      "question": "Which exceptional point sets can be tolerated without destroying uniqueness of trigonometric representation?",
+      "period": {
+        "from": 1871,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-derived-set-structure",
+      "question": "How can an infinite point set be analyzed by repeatedly passing to its limit points?",
+      "period": {
+        "from": 1872,
+        "to": null
+      },
+      "fields": [
+        "analysis"
       ]
     }
   ],
@@ -2191,6 +2301,224 @@
         "source-gauss-1827-1902",
         "source-dombrowski-1979",
         "source-kline-1990"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-heine-uniqueness",
+      "subject": "work-heine-trig-1870",
+      "predicate": "raised_question",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-heine-1870",
+        "source-r008-halle-heine"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-cantor-1870-uniqueness",
+      "subject": "person-cantor",
+      "predicate": "contributed_to",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1870",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-cantor-1871-finite-exceptions",
+      "subject": "work-cantor-uniqueness-note-1871",
+      "predicate": "generalized",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1871",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-cantor-1872-exceptional-sets",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "generalized",
+      "object": "concept-exceptional-point-set",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-cantor-derived-set-definition",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "contributed_to",
+      "object": "concept-derived-set",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-exceptional-to-derived",
+      "subject": "concept-exceptional-point-set",
+      "predicate": "contributed_to",
+      "object": "concept-derived-set",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-1872-uniqueness-theorem",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "contributed_to",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-heine-cantor-context",
+      "subject": "person-heine",
+      "predicate": "contributed_to",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-r008-dauben-1979",
+        "source-r008-halle-heine",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-analytic-origin-reading",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "contributed_to",
+      "object": "concept-derived-set",
+      "period": {
+        "from": 1872,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r008-dauben-1979",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-modern-uniqueness-language",
+      "subject": "concept-derived-set",
+      "predicate": "contributed_to",
+      "object": "concept-exceptional-point-set",
+      "period": {
+        "from": 1872,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-r008-eom-uniqueness-set",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-convergence-to-uniqueness-question",
+      "subject": "q-fourier-series-convergence",
+      "predicate": "contributed_to",
+      "object": "q-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r008-heine-1870",
+        "source-r008-cantor-1870"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-uniqueness-to-exceptional-question",
+      "subject": "q-trig-series-uniqueness",
+      "predicate": "generalized",
+      "object": "q-exceptional-set-uniqueness",
+      "period": {
+        "from": 1871,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1871",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r008-exceptional-to-derived-question",
+      "subject": "q-exceptional-set-uniqueness",
+      "predicate": "contributed_to",
+      "object": "q-derived-set-structure",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
       ],
       "status": "historically_reviewed"
     }

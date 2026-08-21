@@ -26,11 +26,12 @@
   },
   {
     "entity": "q-fourier-series-convergence",
-    "story_count": 3,
+    "story_count": 4,
     "stories": [
       "story-fourier-heat-representation",
       "story-function",
-      "story-integrability"
+      "story-integrability",
+      "story-r008-uniqueness"
     ]
   },
   {

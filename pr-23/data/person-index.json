@@ -84,7 +84,9 @@
   {
     "person": "person-heine",
     "name": "Eduard Heine",
-    "assertions": [],
+    "assertions": [
+      "assertion-r008-heine-cantor-context"
+    ],
     "stories": []
   },
   {
@@ -120,6 +122,14 @@
     "name": "Carl Friedrich Gauss",
     "assertions": [
       "assertion-r007-geodesy-context"
+    ],
+    "stories": []
+  },
+  {
+    "person": "person-cantor",
+    "name": "Georg Cantor",
+    "assertions": [
+      "assertion-r008-cantor-1870-uniqueness"
     ],
     "stories": []
   }

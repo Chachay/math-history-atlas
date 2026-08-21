@@ -949,5 +949,151 @@
         "type": "branches"
       }
     ]
+  },
+  {
+    "id": "story-r008-uniqueness",
+    "title": "When is a representation unique?",
+    "description": "A researched analysis path from the established convergence problem to the distinct question of uniqueness, then through Cantor's finite and structured infinite exceptional sets to derived-set questions. The Story treats the route into point-set investigation as historically real without claiming that Fourier series directly created later transfinite set theory.\n",
+    "fields": [
+      "analysis"
+    ],
+    "steps": [
+      {
+        "id": "uniqueness-1",
+        "ref": "q-fourier-series-convergence",
+        "role": "Earlier problem",
+        "narrative": "By 1870 the question whether a trigonometric series converges to a function did not settle a different issue: whether the coefficients of a convergent representation are uniquely determined. The Atlas therefore treats uniqueness as a branch from the representation-and-convergence line rather than as another name for convergence.\n",
+        "assertion_refs": [
+          "assertion-r008-convergence-to-uniqueness-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1870,
+          "to": 1870
+        }
+      },
+      {
+        "id": "uniqueness-2",
+        "ref": "work-heine-trig-1870",
+        "role": "Uniqueness problem",
+        "narrative": "Heine's 1870 paper explicitly treated uniqueness under hypotheses that included general uniform convergence. Later historical accounts place Heine's Halle work and discussions with Cantor directly in the setting from which Cantor entered the uniqueness problem, while the exact direction of individual suggestions remains uncertain.\n",
+        "assertion_refs": [
+          "assertion-r008-heine-uniqueness",
+          "assertion-r008-heine-cantor-context"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1870,
+          "to": 1870
+        }
+      },
+      {
+        "id": "uniqueness-3",
+        "ref": "work-cantor-uniqueness-1870",
+        "role": "Stronger uniqueness result",
+        "narrative": "Cantor's 1870 result removed the uniform-convergence restriction from the uniqueness conclusion. He proved uniqueness for a trigonometric series converging for every real argument.\n",
+        "assertion_refs": [
+          "assertion-r008-cantor-1870-uniqueness"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1870,
+          "to": 1870
+        }
+      },
+      {
+        "id": "uniqueness-4",
+        "ref": "q-exceptional-set-uniqueness",
+        "role": "Finite exceptions",
+        "narrative": "Cantor next asked how much failure at exceptional arguments could be tolerated. His 1871 note retained uniqueness even when finitely many arguments were excepted, turning the exceptional set itself into part of the mathematical problem.\n",
+        "assertion_refs": [
+          "assertion-r008-cantor-1871-finite-exceptions",
+          "assertion-r008-uniqueness-to-exceptional-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1871,
+          "to": 1871
+        }
+      },
+      {
+        "id": "uniqueness-5",
+        "ref": "work-cantor-extension-1872",
+        "role": "Infinite exceptional sets",
+        "narrative": "In 1872 Cantor extended the theorem to certain infinite exceptional point sets. The condition was not arbitrary smallness: it was expressed through a finite sequence of operations on the point set and gave a sufficient condition under which uniqueness survived.\n",
+        "assertion_refs": [
+          "assertion-r008-cantor-1872-exceptional-sets",
+          "assertion-r008-1872-uniqueness-theorem"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1872,
+          "to": 1872
+        }
+      },
+      {
+        "id": "uniqueness-6",
+        "ref": "concept-derived-set",
+        "role": "New point-set structure",
+        "narrative": "To formulate that extension Cantor defined the derived set P' as the set of limit points of P and iterated the operation finitely. The need to characterize admissible infinite exceptional sets thus made the internal structure of point sets itself relevant to the uniqueness problem.\n",
+        "assertion_refs": [
+          "assertion-r008-cantor-derived-set-definition",
+          "assertion-r008-exceptional-to-derived",
+          "assertion-r008-exceptional-to-derived-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1872,
+          "to": 1872
+        }
+      },
+      {
+        "id": "uniqueness-7",
+        "ref": "q-derived-set-structure",
+        "role": "Historiographic boundary",
+        "narrative": "Later historians can identify this 1872 analysis as a concrete origin of Cantor's sustained investigation of point sets. That does not make later transfinite set theory already present here, and modern labels such as uniqueness sets or Cantor–Bendixson complexity are explanatory vocabulary rather than Cantor's own language in this paper.\n",
+        "assertion_refs": [
+          "assertion-r008-analytic-origin-reading",
+          "assertion-r008-modern-uniqueness-language"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1872,
+          "to": 1900
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "uniqueness-1",
+        "to": "uniqueness-2",
+        "type": "branches"
+      },
+      {
+        "from": "uniqueness-2",
+        "to": "uniqueness-3",
+        "type": "branches"
+      },
+      {
+        "from": "uniqueness-3",
+        "to": "uniqueness-4",
+        "type": "continues"
+      },
+      {
+        "from": "uniqueness-4",
+        "to": "uniqueness-5",
+        "type": "continues"
+      },
+      {
+        "from": "uniqueness-5",
+        "to": "uniqueness-6",
+        "type": "continues"
+      },
+      {
+        "from": "uniqueness-6",
+        "to": "uniqueness-7",
+        "type": "branches"
+      }
+    ]
   }
 ]
