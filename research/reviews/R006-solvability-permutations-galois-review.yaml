@@ -1,0 +1,473 @@
+review:
+  research_unit_id: R006
+  packet: R006-solvability-permutations-galois.yaml
+  critic_version: historical-critic-v1
+  review_date: '2026-08-20'
+  summary:
+    pass: 20
+    revise: 2
+    weak_evidence: 3
+    reject: 0
+  overall_assessment: >
+    The packet succeeds at the central historical discipline required for R006. It does not
+    equate the impossibility of a general quintic formula with impossibility for every quintic;
+    it does not start from the modern abstract definition of a group; it separates Galois's
+    1831 manuscript/submission history from the 1846 posthumous publication; and it treats the
+    Lagrange–Abel–Galois line as a retrospective genealogy unless direct transmission evidence
+    is available. Five material issues remain before canonical promotion. Ruffini appears as
+    an important intermediary but is supported only through secondary historiography here and
+    therefore should not yet carry a promoted historical edge. The wording of the main Galois
+    substitution-group assertion still merges distinctions that Ehrhardt explicitly warns
+    historians not to collapse. The proposed Cauchy intersection is not yet backed by a
+    specific source-supported transition into the R006 Story. Finally, the proposed later
+    abstract-group concept state incorrectly reuses the historical substitution-group concept
+    ID and assigns a broad 1870 start date to a distributed later development.
+
+findings:
+  - id: hr-r006-chronology-lagrange
+    reviewed_item:
+      section: chronology
+      match: {date: 1770–1771}
+    classification: PASS
+    reason: >
+      The entry is grounded in Lagrange's own equation-solving program and correctly presents
+      permutation/value counting as a tool for explaining resolvent degree rather than as an
+      abstract group-theory program.
+    evidence:
+      - source_id: src-lagrange-1770-1771
+        locator: 'Œuvres, t. III, pp. 205–421'
+        supports: Lagrange_resolvent_and_permutation_analysis
+      - source_id: src-gray-2018
+        locator: 'chapter 9, pp. 79–95'
+        supports: historical_context
+
+  - id: hr-r006-chronology-ruffini
+    reviewed_item:
+      section: chronology
+      match: {date: 1799–1813}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      Kiernan and Gray are sufficient to establish Ruffini as an important predecessor and
+      intermediary, but the packet itself admits that no primary-edition page has been checked.
+      Because proof-status and priority language around Ruffini are historically delicate, a
+      chronology item intended for promotion should not rely solely on a broad publication range
+      and secondary summary.
+    needed_evidence: >
+      A stable primary edition or specialist source with a precise locator identifying which
+      Ruffini publication(s) use the relevant permutation argument and how the proof status is assessed.
+    target:
+      section: chronology
+      match: {date: 1799–1813}
+    proposed_change:
+      action: manual_review
+      reason: >
+        Either add a primary locator before promotion or keep Ruffini as an explicit research
+        gap/intermediary note rather than a canonical chronology assertion.
+    evidence:
+      - source_id: src-kiernan-1971
+        locator: 'Ruffini section'
+        supports: Ruffini_as_predecessor
+      - source_id: src-gray-2018
+        locator: 'chapter 10, section on Ruffini'
+        supports: Ruffini_proof_history
+
+  - id: hr-r006-chronology-abel-1824
+    reviewed_item:
+      section: chronology
+      match: {date: '1824'}
+    classification: PASS
+    reason: >
+      The scope is correctly limited to the general quintic and the primary pamphlet title
+      directly supports the impossibility claim. The entry explicitly blocks the common but
+      false inference that every particular quintic is unsolvable by radicals.
+    evidence:
+      - source_id: src-abel-1824
+        locator: 'title and pp. 1–8'
+        supports: general_quintic_scope
+
+  - id: hr-r006-chronology-abel-1826
+    reviewed_item:
+      section: chronology
+      match: {date: '1826'}
+    classification: PASS
+    reason: >
+      The entry accurately distinguishes Abel's expanded publication from the 1824 pamphlet
+      and avoids turning the general impossibility theorem into a classification theorem for
+      individual equations.
+    evidence:
+      - source_id: src-abel-1826
+        locator: 'JRAM 1 (1826), pp. 65–84'
+        supports: expanded_general_impossibility_result
+
+  - id: hr-r006-chronology-galois-1829-1830
+    reviewed_item:
+      section: chronology
+      match: {date: 1829–1830}
+    classification: PASS
+    reason: >
+      The entry treats these years as submission history and explicitly refuses to identify
+      the lost or unrecovered texts with the surviving 1831 memoir. That is the required
+      distinction between document chronology and later reconstruction.
+    evidence:
+      - source_id: src-ehrhardt-2010
+        locator: 'Academy submission history'
+        supports: institutional_chronology
+      - source_id: src-kiernan-1971
+        locator: 'Galois chronology section'
+        supports: manuscript_history
+
+  - id: hr-r006-chronology-galois-manuscript
+    reviewed_item:
+      section: chronology
+      match: {date: '1831-01-16'}
+    classification: PASS
+    reason: >
+      The packet distinguishes the manuscript date from publication and correctly preserves
+      Galois's own opening claim of a necessary-and-sufficient condition while noting that the
+      worked application in this memoir is restricted to prime degree.
+    evidence:
+      - source_id: src-galois-1846
+        locator: 'opening paragraph and final prime-degree theorem'
+        supports: stated_scope_of_memoir
+      - source_id: src-ehrhardt-bibnum
+        locator: 'historical-mathematical commentary on the memoir'
+        supports: interpretation_of_scope
+
+  - id: hr-r006-chronology-poisson
+    reviewed_item:
+      section: chronology
+      match: {date: '1831-07-04'}
+    classification: PASS
+    reason: >
+      The referee report is used as evidence for Academy reception rather than as a verdict on
+      the truth of Galois's mathematics. The date type is explicit and historically appropriate.
+    evidence:
+      - source_id: src-poisson-report-1831
+        locator: 'document 7, 4 July 1831'
+        supports: Academy_report_and_date
+
+  - id: hr-r006-chronology-death
+    reviewed_item:
+      section: chronology
+      match: {date: '1832-05-29 to 1832-05-31'}
+    classification: PASS
+    reason: >
+      The entry keeps final correspondence/annotations and death distinct from the 1831
+      submission and 1846 publication, which prevents a misleading single 'Galois date'.
+    evidence:
+      - source_id: src-tannery-1908
+        locator: 'manuscript/editorial chronology'
+        supports: final_manuscript_context
+
+  - id: hr-r006-chronology-publication
+    reviewed_item:
+      section: chronology
+      match: {date: '1846'}
+    classification: PASS
+    reason: >
+      Liouville's posthumous publication is correctly identified as a publication event rather
+      than backdated to the manuscript's composition.
+    evidence:
+      - source_id: src-galois-1846
+        locator: 'Journal de mathématiques pures et appliquées 11 (1846), pp. 417–433'
+        supports: first_publication
+
+  - id: hr-r006-a001
+    reviewed_item: {section: assertions, id: r006-a001}
+    classification: PASS
+    reason: >
+      Lagrange's permutation/value-counting method is stated at the right historical level and
+      the assertion does not smuggle in subgroup, orbit, or abstract-group language as his own.
+    evidence:
+      - source_id: src-lagrange-1770-1771
+        locator: 'cubic, quartic, and general permutation sections'
+        supports: Lagrange_method
+
+  - id: hr-r006-a002
+    reviewed_item: {section: assertions, id: r006-a002}
+    classification: PASS
+    reason: >
+      The later_interpretation perspective is correct: systematic permutation calculation is
+      historically supported, while the negative statement about modern abstract group axioms
+      is grounded in specialist historiography.
+    evidence:
+      - source_id: src-wussing-1984
+        locator: 'historical genesis of abstract group concept'
+        supports: non_single_invention_history
+      - source_id: src-kiernan-1971
+        locator: 'Lagrange section'
+        supports: equation_theory_context
+
+  - id: hr-r006-a003
+    reviewed_item: {section: assertions, id: r006-a003}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      The statement is carefully hedged, but its phrase 'historical route between Lagrange ...
+      and Abel' risks becoming a canonical transition while the packet has not checked Ruffini's
+      relevant primary passages. The secondary sources support an historiographical placement,
+      not yet a packet-level primary-backed edge.
+    needed_evidence: >
+      Add a precise Ruffini source/locator, or keep the claim solely as later historiographical
+      context outside canonical transition data.
+    target:
+      section: assertions
+      id: r006-a003
+    proposed_change:
+      action: manual_review
+      reason: >
+        Do not promote this assertion unless primary or more tightly localized specialist
+        evidence is added; retaining person-ruffini as a research-gap intermediary is safe.
+    evidence:
+      - source_id: src-kiernan-1971
+        locator: 'Ruffini section'
+        supports: historiographical_placement
+      - source_id: src-gray-2018
+        locator: 'chapter 10'
+        supports: proof_history
+
+  - id: hr-r006-a004
+    reviewed_item: {section: assertions, id: r006-a004}
+    classification: PASS
+    reason: >
+      This is the most important scope correction in the unit and is well supported: Abel's
+      theorem concerns the general quintic formula problem, not all degree-five equations.
+    evidence:
+      - source_id: src-abel-1824
+        locator: 'title and pamphlet'
+        supports: exact_scope
+
+  - id: hr-r006-a005
+    reviewed_item: {section: assertions, id: r006-a005}
+    classification: PASS
+    reason: >
+      The assertion distinguishes Abel's general impossibility result from the still-open
+      classification of particular solvable higher-degree equations.
+    evidence:
+      - source_id: src-abel-1826
+        locator: 'pp. 65–84'
+        supports: higher_degree_general_impossibility
+
+  - id: hr-r006-a006
+    reviewed_item: {section: assertions, id: r006-a006}
+    classification: PASS
+    reason: >
+      Galois's shift of question is stated through the surviving memoir's own announced aim,
+      and the packet does not replace that aim with the modern solvable-group theorem.
+    evidence:
+      - source_id: src-galois-1846
+        locator: 'opening statement and prime-degree application'
+        supports: Galois_problem_and_scope
+
+  - id: hr-r006-a007
+    reviewed_item: {section: assertions, id: r006-a007}
+    classification: REVISE
+    severity: high
+    reason: >
+      The sentence says that Galois 'organizes permutations/substitutions ... into structures
+      he calls groups'. Even with the following caveat, this merges categories that Ehrhardt
+      specifically separates: Galois's displayed groupe de permutations, his substitutions,
+      and the later modern group object are not interchangeable. Because this assertion is the
+      core algebraic structural claim, the distinction should be carried in the positive wording,
+      not only in uncertainty metadata.
+    target:
+      section: assertions
+      id: r006-a007
+    proposed_change:
+      action: replace_fields
+      fields:
+        statement: >
+          Galois associates an equation with a groupe of permutations of its roots and studies
+          substitutions acting on functions of those roots in his solvability argument. These
+          notions are structurally related in his work, but his displayed permutation groups,
+          substitutions, and the later abstract group concept should remain terminologically
+          distinct rather than being collapsed into one modern object.
+        perspective: historical
+    evidence:
+      - source_id: src-galois-1846
+        locator: 'definitions and propositions concerning permutations, substitutions, and groups'
+        supports: Galois_terminology
+      - source_id: src-ehrhardt-bibnum
+        locator: 'commentary distinguishing groupe de permutations from modernized substitution-group readings'
+        supports: anti_anachronism
+
+  - id: hr-r006-a008
+    reviewed_item: {section: assertions, id: r006-a008}
+    classification: PASS
+    reason: >
+      The assertion explicitly labels the modern solvable-group equivalence as later abstraction
+      rather than attributing that textbook formulation verbatim to Galois.
+    evidence:
+      - source_id: src-ehrhardt-bibnum
+        locator: 'terminology and retrospective reconstruction discussion'
+        supports: modern_abstraction_boundary
+
+  - id: hr-r006-a009
+    reviewed_item: {section: assertions, id: r006-a009}
+    classification: PASS
+    reason: >
+      Wussing and later histories directly support rejecting a single-person 'invention of the
+      modern group' narrative. The later_interpretation perspective is appropriate.
+    evidence:
+      - source_id: src-wussing-1984
+        locator: 'multiple roots of abstract group concept'
+        supports: distributed_development
+
+  - id: hr-r006-a010
+    reviewed_item: {section: assertions, id: r006-a010}
+    classification: PASS
+    reason: >
+      The delayed and distributed development of group and field abstraction is well supported
+      by Kiernan, Wussing, and Gray. The assertion does not claim that 1846 publication produced
+      immediate comprehension.
+    evidence:
+      - source_id: src-kiernan-1971
+        locator: 'post-Galois development through Artin'
+        supports: later_development
+      - source_id: src-gray-2018
+        locator: 'chapters 12 and 16'
+        supports: reception_and_reconstruction
+
+  - id: hr-r006-qt001
+    reviewed_item: {section: question_transitions, id: r006-qt001}
+    classification: PASS
+    reason: >
+      This transition is internal to Lagrange's documented investigation of known formulae and
+      does not infer personal influence across authors.
+    evidence:
+      - source_id: src-lagrange-1770-1771
+        locator: 'resolvent/permutation discussions'
+        supports: question_transition
+
+  - id: hr-r006-qt002
+    reviewed_item: {section: question_transitions, id: r006-qt002}
+    classification: PASS
+    reason: >
+      The transition is explicitly later_interpretation and, unusually importantly, states what
+      it does not prove: it refuses to infer a direct Lagrange–Ruffini–Abel transmission chain
+      from chronology alone.
+    evidence:
+      - source_id: src-kiernan-1971
+        locator: 'Lagrange through Abel sections'
+        supports: retrospective_genealogy_with_intermediaries
+
+  - id: hr-r006-qt003
+    reviewed_item: {section: question_transitions, id: r006-qt003}
+    classification: PASS
+    reason: >
+      The mathematical distinction between a universal formula and criteria for particular
+      equations is soundly sourced, and the note correctly refuses to infer that Abel personally
+      motivated Galois's earliest work.
+    evidence:
+      - source_id: src-abel-1824
+        locator: 'general quintic theorem'
+        supports: impossibility_problem
+      - source_id: src-galois-1846
+        locator: 'announced solvability condition'
+        supports: criterion_problem
+
+  - id: hr-r006-qt004
+    reviewed_item: {section: question_transitions, id: r006-qt004}
+    classification: PASS
+    reason: >
+      This is correctly marked later_interpretation and distributes later abstraction across a
+      longer history rather than saying that Galois immediately founded modern abstract algebra.
+    evidence:
+      - source_id: src-wussing-1984
+        locator: 'genesis of abstract group concept'
+        supports: later_abstraction
+
+  - id: hr-r006-intersection-cauchy
+    reviewed_item: {section: intersection_candidates, id: r006-i001}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      It is historically reasonable to inspect Cauchy's algebraic permutation work, but this
+      candidate does not identify a particular Cauchy work/result or a direct source-backed
+      transition into Abel's or Galois's solvability problem. Reusing person-cauchy merely
+      because he already exists in the Atlas would create exactly the artificial cross-Story
+      connectivity the R006 brief forbids.
+    needed_evidence: >
+      Identify a specific Cauchy algebraic result with a primary locator and specialist evidence
+      connecting it to an R006 claim, or leave Cauchy out of the R006 Story.
+    target:
+      section: intersection_candidates
+      id: r006-i001
+    proposed_change:
+      action: manual_review
+      reason: >
+        Preserve this as a research gap only; do not promote a Story/network intersection from
+        the current evidence.
+    evidence:
+      - source_id: src-kiernan-1971
+        locator: 'discussion of Cauchy in permutation theory'
+        supports: relevance_but_not_specific_transition
+
+  - id: hr-r006-concept-state-lagrange
+    reviewed_item: {section: concept_state_candidates, id: state-root-permutation-lagrange-1770}
+    classification: PASS
+    reason: >
+      The state is narrowly historical and describes exactly the role permutations play in
+      Lagrange's equation-solving calculation without modernizing the concept.
+    evidence:
+      - source_id: src-lagrange-1770-1771
+        locator: 'permutation/value-counting sections'
+        supports: historical_state
+
+  - id: hr-r006-concept-state-galois
+    reviewed_item: {section: concept_state_candidates, id: state-substitution-group-galois-1831}
+    classification: PASS
+    reason: >
+      The label remains attached to Galois's equation-solvability context and does not claim
+      that his terminology is already the later abstract theory.
+    evidence:
+      - source_id: src-galois-1846
+        locator: 'group/permutation/substitution passages'
+        supports: historical_state
+
+  - id: hr-r006-concept-state-modern
+    reviewed_item: {section: concept_state_candidates, id: state-group-modern-retrospective}
+    classification: REVISE
+    severity: high
+    reason: >
+      This candidate conflates two different historical objects by assigning the later abstract
+      group concept as a state of concept-substitution-group. It also gives 1870 as a broad start
+      year without identifying what event, publication, or definition that date represents. The
+      R006 brief explicitly defers formal abstract-group emergence to a later unit.
+    target:
+      section: concept_state_candidates
+      id: state-group-modern-retrospective
+    proposed_change:
+      action: remove
+    evidence:
+      - source_id: src-wussing-1984
+        locator: 'multi-source nineteenth-century development of abstract group concept'
+        supports: distinct_later_object
+      - source_id: src-gray-2018
+        locator: 'chapters on post-Galois and rise of modern algebra'
+        supports: later_unit_scope
+
+research_gaps:
+  - id: gap-r006-ruffini-primary
+    question: >
+      Which precise Ruffini publication and passage should anchor his permutation contribution
+      and the historical assessment of his impossibility proof?
+    needed_evidence: >
+      Stable primary edition plus specialist discussion of proof status.
+  - id: gap-r006-cauchy-algebra-intersection
+    question: >
+      Is there a specific Cauchy permutation/substitution result that should become a genuine
+      cross-field Atlas intersection for R006?
+    needed_evidence: >
+      A primary Cauchy work/result and evidence of its mathematical or historical relation to
+      the Abel/Galois solvability line.
+  - id: gap-r006-post-galois-abstraction
+    question: >
+      When and through whose work did group and field concepts become sufficiently independent
+      and abstract to warrant their own canonical concept states?
+    needed_evidence: >
+      Dedicated downstream research covering later nineteenth-century algebra rather than a
+      retrospective state attached to Galois's substitution-group concept.
+
+sources: []
