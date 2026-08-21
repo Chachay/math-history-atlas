@@ -110,3 +110,11 @@ def test_integrity_cli_modules_are_invokable_from_repo_root():
 
 def test_canonical_promotion_provenance_maps_are_valid():
     assert validate_provenance() == []
+
+
+def test_original_work_titles_are_separate_from_ui_names():
+    entities = load_yaml_files(ROOT / 'data/entities')
+    titled_works = [e for e in entities if e.get('type') == 'Work' and e.get('original_title')]
+    assert titled_works
+    for work in titled_works:
+        assert work['name'].strip() != work['original_title'].strip()
