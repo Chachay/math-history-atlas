@@ -1,0 +1,843 @@
+[
+  {
+    "id": "story-function",
+    "title": "What is a function?",
+    "description": "From Fourier's broad representational practice to Dirichlet's restrictions, discontinuous examples, and a remaining problem of analytic admissibility.",
+    "fields": [
+      "analysis"
+    ],
+    "steps": [
+      {
+        "id": "function-1",
+        "ref": "concept-fourier-series",
+        "role": "Problem",
+        "narrative": "Fourier's use of trigonometric representation became, in later historical interpretation, part of a broader nineteenth-century loosening of the link between a function and one analytic expression. That retrospective connection raises the Atlas question of what kinds of numerical dependencies should count as functions.\n",
+        "assertion_refs": [
+          "assertion-r001-function-concept",
+          "assertion-r003-function-historiography"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "function-2",
+        "ref": "q-fourier-series-convergence",
+        "role": "Response",
+        "narrative": "In 1829 Dirichlet directly addressed when trigonometric series converge to the functions they are meant to represent. His paper explicitly places this work after Fourier's representational method and criticizes Cauchy's attempted general convergence proof.\n",
+        "assertion_refs": [
+          "assertion-r003-dirichlet-convergence",
+          "assertion-r003-dirichlet-fourier-cauchy"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1829,
+          "to": 1829
+        }
+      },
+      {
+        "id": "function-3",
+        "ref": "concept-discontinuous-function",
+        "role": "Remaining gap",
+        "narrative": "Dirichlet allowed finitely many discontinuities, but he also separated having finite determined values from being admissible for the integrals used in the Fourier coefficients. His rational-versus-irrational example makes that boundary explicit: a numerical assignment can be determined everywhere while still falling outside the integration machinery being used.\n",
+        "assertion_refs": [
+          "assertion-r003-dirichlet-arbitrary-admissibility",
+          "assertion-r003-dirichlet-discontinuity",
+          "assertion-r003-dirichlet-integral-boundary"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1829,
+          "to": 1829
+        }
+      },
+      {
+        "id": "function-4",
+        "ref": "work-dirichlet-1837",
+        "role": "Response",
+        "narrative": "In 1837 Dirichlet described a continuous function on an interval without requiring one common law over the whole interval or dependence expressible by mathematical operations. Later historians treat this as an important stage in the changing function concept, but the passage is not presented here as a twentieth-century set-theoretic definition or as a unique priority event.\n",
+        "assertion_refs": [
+          "assertion-r003-dirichlet-1837-function",
+          "assertion-r003-function-historiography"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1837,
+          "to": 1837
+        }
+      },
+      {
+        "id": "function-5",
+        "ref": "q-dirichlet-admissible-functions",
+        "role": "Next question",
+        "narrative": "Read retrospectively, the broader language of function still leaves a distinct analytic question: which such functions may legitimately enter definite integrals and trigonometric representations? R003 leaves that question open rather than supplying Riemann's later answer in advance.\n",
+        "assertion_refs": [
+          "assertion-r003-downstream-admissibility",
+          "assertion-r003-dirichlet-integral-boundary"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1837,
+          "to": 1837
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "function-1",
+        "to": "function-2",
+        "type": "branches"
+      },
+      {
+        "from": "function-2",
+        "to": "function-3",
+        "type": "continues"
+      },
+      {
+        "from": "function-3",
+        "to": "function-4",
+        "type": "branches"
+      },
+      {
+        "from": "function-4",
+        "to": "function-5",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-fourier-heat-representation",
+    "title": "From heat to arbitrary functions",
+    "description": "A curated path from Fourier's heat problem through prescribed temperature data, trigonometric representation, convergence, and broader questions about functions.",
+    "fields": [
+      "analysis",
+      "mathematical-physics"
+    ],
+    "steps": [
+      {
+        "id": "r001-story-1",
+        "ref": "q-heat-propagation",
+        "role": "Question",
+        "narrative": "Fourier's work began from a physical problem: how temperature changes and heat propagates through solid bodies. The aim was not initially to study trigonometric series for their own sake, but to build a mathematical theory of heat that could describe such changes.\n",
+        "assertion_refs": [
+          "assertion-r001-fourier-heat-problem"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-2",
+        "ref": "problem-heat-boundary-data",
+        "role": "Problem",
+        "narrative": "A differential equation alone does not determine a physical temperature history. The calculation must also accommodate the temperature distribution from which the body starts and the conditions imposed at its boundaries.\n",
+        "assertion_refs": [
+          "assertion-r001-heat-data-to-series"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-3",
+        "ref": "concept-fourier-series",
+        "role": "Response",
+        "narrative": "Trigonometric expansions supplied a way to connect the mathematical solutions of the heat equation with prescribed temperature data. In Fourier's treatment, this representational step became central to solving concrete heat problems.\n",
+        "assertion_refs": [
+          "assertion-r001-heat-data-to-series",
+          "assertion-r001-series-representation-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-4",
+        "ref": "q-trig-representation-scope",
+        "role": "Remaining gap",
+        "narrative": "The method immediately raised a harder question: which temperature distributions could actually be represented by such trigonometric series? The issue was not merely computational, because the admissible data need not be given by one simple analytic formula.\n",
+        "assertion_refs": [
+          "assertion-r001-series-representation-question",
+          "assertion-r001-arbitrary-function"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-5",
+        "ref": "concept-arbitrary-function",
+        "role": "Response",
+        "narrative": "Fourier treated the representational scope broadly, including functions specified by arbitrary curves and functions that need not obey a single analytic law throughout an interval. This broadened what the heat problem demanded from the language of functions, without yet supplying a modern set-theoretic definition of function.\n",
+        "assertion_refs": [
+          "assertion-r001-arbitrary-function"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1807,
+          "to": 1822
+        }
+      },
+      {
+        "id": "r001-story-6",
+        "ref": "q-fourier-series-convergence",
+        "role": "Next question",
+        "narrative": "Representation and convergence are not the same claim. Once Fourier's method associated broad classes of functions with trigonometric series, convergence became a central downstream question: under what conditions does the series actually converge to the intended function?\n",
+        "assertion_refs": [
+          "assertion-r001-series-to-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1822,
+          "to": 1829
+        }
+      },
+      {
+        "id": "r001-story-7",
+        "ref": "work-dirichlet-1829",
+        "role": "Response",
+        "narrative": "Dirichlet's 1829 work gave a rigorous convergence result under explicit restrictions rather than accepting unrestricted convergence as automatic. It marks an important shift from using Fourier expansions successfully to stating conditions under which their convergence can be proved.\n",
+        "assertion_refs": [
+          "assertion-r001-dirichlet-convergence"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1829,
+          "to": 1829
+        }
+      },
+      {
+        "id": "r001-story-8",
+        "ref": "q-what-is-function",
+        "role": "Next question",
+        "narrative": "From a later historical perspective, the Fourier-series episode also became part of a broader transformation in the concept of function. The connection should not be read as a single direct causal chain, but Fourier's representational problems helped make the admissible class of functions itself a mathematical question.\n",
+        "assertion_refs": [
+          "assertion-r001-function-concept"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1830,
+          "to": 1850
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "r001-story-1",
+        "to": "r001-story-2",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-2",
+        "to": "r001-story-3",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-3",
+        "to": "r001-story-4",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-4",
+        "to": "r001-story-5",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-5",
+        "to": "r001-story-6",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-6",
+        "to": "r001-story-7",
+        "type": "continues"
+      },
+      {
+        "from": "r001-story-7",
+        "to": "r001-story-8",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-cauchy-rigor-continuity",
+    "title": "From rigor to continuity under infinite limits",
+    "description": "A curated path through Cauchy's limit-based analysis, convergence, Fourier-series intersections, and the later emergence of stronger convergence conditions.",
+    "fields": [
+      "analysis"
+    ],
+    "steps": [
+      {
+        "id": "r002-story-1",
+        "ref": "q-cauchy-rigor",
+        "role": "Question",
+        "narrative": "Cauchy's 1821 Cours placed limits, infinitesimal quantities, continuity, and convergence near the center of a systematic program for analysis. That program should be reconstructed in Cauchy's own terminology rather than treated as an already completed version of later epsilon-delta analysis.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-rigor",
+          "assertion-r002-cauchy-infinitesimal",
+          "assertion-r002-cauchy-continuity",
+          "assertion-r002-cauchy-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-2",
+        "ref": "concept-infinitesimal",
+        "role": "Response",
+        "narrative": "Cauchy described an infinitesimal through a variable quantity whose successive numerical values decrease indefinitely toward zero. His formulation ties infinitesimals directly to limits, but does not by itself settle later debates about the ontology of infinitesimals.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-infinitesimal"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-3",
+        "ref": "concept-continuity",
+        "role": "Response",
+        "narrative": "Cauchy's continuity condition was expressed through infinitesimal changes in the independent variable producing infinitesimal changes in the function. Reading this directly as a modern pointwise or uniform epsilon-delta definition would erase historically important differences of language and formulation.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-continuity"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-4",
+        "ref": "concept-convergence",
+        "role": "Problem",
+        "narrative": "Infinite series were one major setting in which Cauchy's program had to control limiting processes rather than rely on formal manipulation alone. His 1821 treatment systematized convergence conditions and made the behavior of series part of the broader problem of rigor.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1821,
+          "to": 1821
+        }
+      },
+      {
+        "id": "r002-story-5",
+        "ref": "concept-fourier-series",
+        "role": "Intersection",
+        "narrative": "Cauchy's 1826/1827 memoir on periodic series explicitly connected sine and cosine expansions with problems of mathematical physics and attempted a general convergence argument. Here the rigor agenda intersects directly with the Fourier-series line developed in R001, without implying that Fourier's heat problem caused Cauchy's broader foundational program.\n",
+        "assertion_refs": [
+          "assertion-r002-periodic-fourier",
+          "assertion-r002-periodic-convergence"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1827,
+          "to": 1827
+        }
+      },
+      {
+        "id": "r002-story-6",
+        "ref": "q-continuity-under-limits",
+        "role": "Remaining gap",
+        "narrative": "Cauchy's 1821 theorem on sums of continuous functions left a problem that later became central: convergence of continuous terms does not by itself guarantee a continuous sum. Specialist histories identify Abel's 1826 work as an early counterexample episode, but the present evidence does not justify a stronger claim about direct influence on Cauchy.\n",
+        "assertion_refs": [
+          "assertion-r002-sum-continuity-problem",
+          "assertion-r002-abel-continuity"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1826,
+          "to": 1826
+        }
+      },
+      {
+        "id": "r002-story-7",
+        "ref": "work-cauchy-series-1853",
+        "role": "Response",
+        "narrative": "In 1853 Cauchy returned to the continuity-of-the-sum problem, acknowledged exceptions to the general 1821 claim, and imposed stronger control on the remainder across the specified range of the variable. The historical text supplies the strengthened condition; calling it uniform convergence is a later interpretation.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-1853-continuity",
+          "assertion-r002-cauchy-1853-uniform"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1853,
+          "to": 1853
+        }
+      },
+      {
+        "id": "r002-story-8",
+        "ref": "q-uniform-convergence-emergence",
+        "role": "Next question",
+        "narrative": "The stronger conditions appearing in work by Cauchy, Stokes, and Seidel were later organized within the concept now called uniform convergence. The development is better treated as a distributed nineteenth-century clarification than as a single linear chain ending in Weierstrass.\n",
+        "assertion_refs": [
+          "assertion-r002-cauchy-1853-uniform",
+          "assertion-r002-stokes-uniform",
+          "assertion-r002-seidel-uniform",
+          "assertion-r002-weierstrass-uniform"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1853,
+          "to": 1860
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "r002-story-1",
+        "to": "r002-story-2",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-2",
+        "to": "r002-story-3",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-3",
+        "to": "r002-story-4",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-4",
+        "to": "r002-story-5",
+        "type": "branches"
+      },
+      {
+        "from": "r002-story-4",
+        "to": "r002-story-6",
+        "type": "branches"
+      },
+      {
+        "from": "r002-story-6",
+        "to": "r002-story-7",
+        "type": "continues"
+      },
+      {
+        "from": "r002-story-7",
+        "to": "r002-story-8",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-integrability",
+    "title": "When is a function integrable enough for trigonometric representation?",
+    "description": "From Dirichlet's admissibility boundary to Riemann's definite-integral criterion, discontinuous test cases, and the remaining gap between integrability and Fourier representation.",
+    "fields": [
+      "analysis"
+    ],
+    "steps": [
+      {
+        "id": "integrability-1",
+        "ref": "q-dirichlet-admissible-functions",
+        "role": "Question",
+        "narrative": "By 1854 Riemann explicitly treated cases he said Dirichlet had left unresolved and made the definite integral itself part of the investigation. Read through the Atlas, this gives R003's retrospective admissibility question a historically grounded handoff into a more explicit integration problem.\n",
+        "assertion_refs": [
+          "assertion-r004-admissibility-handoff",
+          "assertion-r004-integral-need"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-2",
+        "ref": "work-riemann-trig-1854",
+        "role": "Problem",
+        "narrative": "Riemann characterized Dirichlet's result as deciding representability only when the function was integrable throughout and did not have infinitely many maxima and minima. He then said that uncertainty in fundamental points of definite integration required clarifying the concept and its range of validity.\n",
+        "assertion_refs": [
+          "assertion-r004-dirichlet-scope",
+          "assertion-r004-integral-need"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-3",
+        "ref": "concept-riemann-integral",
+        "role": "Response",
+        "narrative": "In sections 4–5 Riemann defined the definite integral through limiting sums over subdivisions with freely chosen sample locations. He derived an oscillation condition that is necessary and sufficient for convergence of those sums for an everywhere finite function.\n",
+        "assertion_refs": [
+          "assertion-r004-integral-criterion"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-4",
+        "ref": "concept-discontinuous-function",
+        "role": "Test case",
+        "narrative": "Riemann then investigated functions discontinuous infinitely often in every interval. His example is discontinuous at rational arguments whose reduced denominator is even, yet it still satisfies his criterion for definite integration.\n",
+        "assertion_refs": [
+          "assertion-r004-discontinuous-example"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-5",
+        "ref": "q-fourier-series-convergence",
+        "role": "Remaining gap",
+        "narrative": "Integrability did not settle the original representation problem. Riemann explicitly observed that a function can admit integration throughout while its Fourier series still fails to converge.\n",
+        "assertion_refs": [
+          "assertion-r004-integrability-not-sufficient"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1854
+        }
+      },
+      {
+        "id": "integrability-6",
+        "ref": "q-post-riemann-integration-gap",
+        "role": "Next question",
+        "narrative": "Later interpretation therefore leaves a separate downstream question: what additional ideas are needed to handle integration and exceptional-set phenomena beyond the boundary reached here? R004 records that question without treating later developments as an inevitable consequence of Riemann's memoir.\n",
+        "assertion_refs": [
+          "assertion-r004-downstream-gap"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1867
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "integrability-1",
+        "to": "integrability-2",
+        "type": "branches"
+      },
+      {
+        "from": "integrability-2",
+        "to": "integrability-3",
+        "type": "continues"
+      },
+      {
+        "from": "integrability-3",
+        "to": "integrability-4",
+        "type": "continues"
+      },
+      {
+        "from": "integrability-4",
+        "to": "integrability-5",
+        "type": "branches"
+      },
+      {
+        "from": "integrability-5",
+        "to": "integrability-6",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-quantified-control",
+    "title": "How precisely must arbitrarily close be controlled?",
+    "description": "A researched path from early nineteenth-century small-change formulations through Cauchy's inequality practice, Weierstrass's textually mediated lecture tradition, and Heine's published formulation. It separates notation, proof technique, lecture chronology, publication, and later standardization rather than assigning epsilon-delta rigor to one invention event.\n",
+    "fields": [
+      "analysis"
+    ],
+    "steps": [
+      {
+        "id": "quantified-1",
+        "ref": "q-quantified-limit-control",
+        "role": "Question",
+        "narrative": "Nineteenth-century analysts did not begin from one shared modern epsilon-delta definition. Bolzano's and Cauchy's formulations instead provide distinct historical ways of making arbitrarily small change mathematically controllable, so the Atlas treats later quantified syntax as a development to be traced rather than a standard that earlier work either possessed or lacked.\n",
+        "assertion_refs": [
+          "assertion-r005-bolzano-continuity",
+          "assertion-r005-cauchy-continuity-language",
+          "assertion-r005-cauchy-handoff"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1817,
+          "to": 1821
+        }
+      },
+      {
+        "id": "quantified-2",
+        "ref": "work-bolzano-1817",
+        "role": "Antecedent",
+        "narrative": "Bolzano's 1817 continuity formulation required the change in a function to become smaller than any prescribed quantity when the increment was taken sufficiently small. This is evidence for quantified smallness before Weierstrass, but not for the later epsilon-delta notation or textbook quantifier syntax.\n",
+        "assertion_refs": [
+          "assertion-r005-bolzano-continuity"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1817,
+          "to": 1817
+        }
+      },
+      {
+        "id": "quantified-3",
+        "ref": "work-cauchy-calcul-1823",
+        "role": "Antecedent",
+        "narrative": "Cauchy's 1823 calculus text used epsilon and delta inside an inequality argument controlling error. The episode shows that the symbols and algebraic control techniques predate Weierstrass, while stopping short of attributing a general modern epsilon-delta definition to Cauchy.\n",
+        "assertion_refs": [
+          "assertion-r005-cauchy-inequality-control"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1823,
+          "to": 1823
+        }
+      },
+      {
+        "id": "quantified-4",
+        "ref": "work-weierstrass-schwarz-notes-1861",
+        "role": "Response",
+        "narrative": "Schwarz's notes from Weierstrass's 1861 lectures record a continuity condition in which a bound on the input increment corresponds to an arbitrarily small allowed change in the function. The evidence is historically important but mediated: these are private student notes known through later scholarship, not a Weierstrass-authored 1861 publication.\n",
+        "assertion_refs": [
+          "assertion-r005-weierstrass-1861-control"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1861,
+          "to": 1861
+        }
+      },
+      {
+        "id": "quantified-5",
+        "ref": "q-uniform-convergence-emergence",
+        "role": "Intersection",
+        "narrative": "The same 1861 teaching environment also contains Weierstrass's early verifiable treatment of convergence at the same rate. This creates a real intersection with the R002 convergence story, but the evidence does not establish that uniform-convergence work caused the quantified formulation of continuity or that a linear Cauchy-to-Weierstrass transmission occurred.\n",
+        "assertion_refs": [
+          "assertion-r005-weierstrass-uniformity",
+          "assertion-r005-continuity-convergence-intersection",
+          "assertion-r005-uniformity-intersection"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1861,
+          "to": 1861
+        }
+      },
+      {
+        "id": "quantified-6",
+        "ref": "q-epsilon-delta-circulation",
+        "role": "Publication",
+        "narrative": "Heine's 1872 function theory provides a printed anchor for explicit small-error and small-increment conditions and for uniform continuity. It demonstrates publication and circulation of these methods, not a single moment at which all epsilon-delta notation became standardized.\n",
+        "assertion_refs": [
+          "assertion-r005-heine-published-control",
+          "assertion-r005-heine-circulation"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1872,
+          "to": 1872
+        }
+      },
+      {
+        "id": "quantified-7",
+        "ref": "q-real-number-completeness",
+        "role": "Remaining gap",
+        "narrative": "More explicit control of limits and continuity does not by itself settle the foundations of the real-number system on which existence and completeness arguments depend. The Atlas therefore leaves completeness as a separate downstream problem rather than treating epsilon-delta language as the completion of rigor.\n",
+        "assertion_refs": [
+          "assertion-r005-completeness-gap"
+        ],
+        "perspective": "modern_abstraction",
+        "temporal_anchor": {
+          "from": 1872,
+          "to": 1880
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "quantified-1",
+        "to": "quantified-2",
+        "type": "continues"
+      },
+      {
+        "from": "quantified-2",
+        "to": "quantified-3",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-3",
+        "to": "quantified-4",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-4",
+        "to": "quantified-5",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-4",
+        "to": "quantified-6",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-5",
+        "to": "quantified-6",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-6",
+        "to": "quantified-7",
+        "type": "branches"
+      }
+    ]
+  },
+  {
+    "id": "story-r006-solvability",
+    "title": "Why can some equations be solved by radicals and others cannot?",
+    "description": "A researched algebra path from the problem of general radical formulas through Lagrange's use of root permutations and resolvents, Abel's impossibility result for the general quintic, and Galois's criterion-oriented treatment of permutations and substitutions. The Story does not treat this as a single uninterrupted influence chain and leaves the later abstraction of groups and fields as a separate downstream question.\n",
+    "fields": [
+      "algebra"
+    ],
+    "steps": [
+      {
+        "id": "solvability-1",
+        "ref": "q-r006-general-radical-formula",
+        "role": "Problem",
+        "narrative": "By the late eighteenth century, the concrete algebraic problem was to understand general solution procedures for polynomial equations, especially why formulas known for lower degrees worked as they did. Lagrange approached this problem by comparing those formulas rather than by starting from an abstract theory of groups.\n",
+        "assertion_refs": [
+          "assertion-r006-lagrange-formula-question",
+          "assertion-r006-lagrange-resolvents"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1770,
+          "to": 1771
+        }
+      },
+      {
+        "id": "solvability-2",
+        "ref": "work-lagrange-reflexions",
+        "role": "Structural clue",
+        "narrative": "Lagrange examined functions of the roots under permutations and counted how many distinct values they could take. In his equation-solving program this helped explain the lower-degree resolvents appearing in successful cubic and quartic methods; describing the calculation with later subgroup language would be a retrospective modernization.\n",
+        "assertion_refs": [
+          "assertion-r006-lagrange-resolvents",
+          "assertion-r006-lagrange-permutations",
+          "assertion-r006-permutation-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1770,
+          "to": 1771
+        }
+      },
+      {
+        "id": "solvability-3",
+        "ref": "work-abel-1824",
+        "role": "Negative result",
+        "narrative": "Abel's 1824 memoir ruled out a general radical formula for the general quintic, and his 1826 paper expanded the impossibility result to general equations above degree four. This does not say that every individual quintic is unsolvable by radicals; the theorem concerns the general-formula problem.\n",
+        "assertion_refs": [
+          "assertion-r006-abel-general-quintic",
+          "assertion-r006-abel-higher-degree",
+          "assertion-r006-abel-impossibility-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1824,
+          "to": 1826
+        }
+      },
+      {
+        "id": "solvability-4",
+        "ref": "q-r006-particular-solvability",
+        "role": "Reframed question",
+        "narrative": "Once a universal radical formula is separated from the solvability of particular equations, a different question becomes visible: what conditions distinguish equations that are solvable by radicals from those that are not? The Atlas treats this as a retrospective problem transition, not as evidence that Abel directly motivated Galois's earliest work.\n",
+        "assertion_refs": [
+          "assertion-r006-abel-impossibility-question",
+          "assertion-r006-particular-solvability-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1824,
+          "to": 1831
+        }
+      },
+      {
+        "id": "solvability-5",
+        "ref": "work-galois-resolubilite",
+        "role": "Structural response",
+        "narrative": "Galois's surviving 1831 memoir sought conditions characterizing solvability by radicals and made permutations of roots central to the argument. It associates an equation with a groupe of permutations and studies substitutions acting on functions of the roots, but those historical notions should not be collapsed into the later abstract group concept or the modern textbook solvable-group theorem.\n",
+        "assertion_refs": [
+          "assertion-r006-galois-reframing",
+          "assertion-r006-galois-substitution-structure",
+          "assertion-r006-galois-root-permutations"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1831,
+          "to": 1831
+        }
+      },
+      {
+        "id": "solvability-6",
+        "ref": "q-r006-later-abstraction",
+        "role": "Remaining gap",
+        "narrative": "Galois's work became one important source for later group-theoretic algebra, but the abstract group concept and mature field framework emerged through later work and multiple mathematical traditions. The 1846 posthumous publication is therefore a publication milestone, not the moment at which modern abstract algebra was already fully formed or immediately understood.\n",
+        "assertion_refs": [
+          "assertion-r006-galois-later-group-history",
+          "assertion-r006-later-abstraction-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1846,
+          "to": 1900
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "solvability-1",
+        "to": "solvability-2",
+        "type": "continues"
+      },
+      {
+        "from": "solvability-2",
+        "to": "solvability-3",
+        "type": "branches"
+      },
+      {
+        "from": "solvability-3",
+        "to": "solvability-4",
+        "type": "branches"
+      },
+      {
+        "from": "solvability-4",
+        "to": "solvability-5",
+        "type": "branches"
+      },
+      {
+        "from": "solvability-5",
+        "to": "solvability-6",
+        "type": "branches"
+      }
+    ]
+  }
+]
