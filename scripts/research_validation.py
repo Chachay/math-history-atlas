@@ -79,7 +79,12 @@ def validate_packet(packet: dict[str, Any]) -> list[str]:
     return errors
 
 
-def validate_review(review: dict[str, Any], packet: dict[str, Any]) -> list[str]:
+def validate_review(
+    review: dict[str, Any],
+    packet: dict[str, Any],
+    *,
+    require_current_targets: bool = True,
+) -> list[str]:
     errors: list[str] = []
     header = review.get("review")
     if not isinstance(header, dict) or not header.get("research_unit_id"):
@@ -98,20 +103,21 @@ def validate_review(review: dict[str, Any], packet: dict[str, Any]) -> list[str]
     if missing_sources:
         errors.append(f"unresolved review source refs: {missing_sources}")
 
-    for row in findings:
-        if not isinstance(row, dict):
-            errors.append("review finding is not a mapping")
-            continue
-        finding_id = str(row.get("id", "<missing>"))
-        target = row.get("target")
-        if target:
-            try:
-                _, _, matches = match_target(packet, target)
-            except (ValueError, RuntimeError) as exc:
-                errors.append(f"{finding_id}: invalid target: {exc}")
+    if require_current_targets:
+        for row in findings:
+            if not isinstance(row, dict):
+                errors.append("review finding is not a mapping")
                 continue
-            if len(matches) != 1:
-                errors.append(f"{finding_id}: target matched {len(matches)} packet objects")
+            finding_id = str(row.get("id", "<missing>"))
+            target = row.get("target")
+            if target:
+                try:
+                    _, _, matches = match_target(packet, target)
+                except (ValueError, RuntimeError) as exc:
+                    errors.append(f"{finding_id}: invalid target: {exc}")
+                    continue
+                if len(matches) != 1:
+                    errors.append(f"{finding_id}: target matched {len(matches)} packet objects")
     return errors
 
 
@@ -119,6 +125,8 @@ def validate_resolution_semantics(
     packet: dict[str, Any],
     review: dict[str, Any],
     resolution: dict[str, Any],
+    *,
+    require_current_targets: bool = True,
 ) -> list[str]:
     errors: list[str] = []
     findings = {
@@ -158,7 +166,7 @@ def validate_resolution_semantics(
             proposed = finding.get("proposed_change")
             if not target:
                 errors.append(f"{item_id}: accepted finding has no target")
-            else:
+            elif require_current_targets:
                 try:
                     _, _, matches = match_target(packet, target)
                     if len(matches) != 1:
