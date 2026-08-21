@@ -1,0 +1,102 @@
+research_unit_id: R009
+packet: research/packets/R009-dedekind-ideals-factorization.yaml
+canonical_entities:
+  - canonical_id: person-kummer
+    packet_refs: [{section: entities, id: person-kummer}]
+  - canonical_id: person-dedekind
+    packet_refs: [{section: entities, id: person-dedekind}]
+  - canonical_id: person-kronecker
+    packet_refs: [{section: entities, id: person-kronecker}]
+  - canonical_id: person-dirichlet
+    reused_from: data/entities/r001-fourier.yaml
+    packet_refs: [{section: entities, id: person-dirichlet}]
+  - canonical_id: concept-algebraic-number-field
+    packet_refs: [{section: entities, id: concept-algebraic-number-field}]
+  - canonical_id: concept-algebraic-integer
+    packet_refs: [{section: entities, id: concept-algebraic-integer}]
+  - canonical_id: concept-ideal-divisor
+    packet_refs: [{section: entities, id: concept-ideal-divisor}]
+  - canonical_id: concept-dedekind-ideal
+    packet_refs: [{section: entities, id: concept-dedekind-ideal}]
+  - canonical_id: concept-prime-ideal
+    packet_refs: [{section: entities, id: concept-prime-ideal}]
+  - canonical_id: concept-ideal-factorization
+    packet_refs: [{section: entities, id: concept-ideal-factorization}]
+  - canonical_id: work-kummer-1847-complex-numbers
+    packet_refs: [{section: entities, id: work-kummer-1847-complex-numbers}]
+  - canonical_id: work-dedekind-1871-supplement
+    packet_refs: [{section: entities, id: work-dedekind-1871-supplement}]
+  - canonical_id: work-dedekind-1877-algebraic-integers
+    packet_refs: [{section: entities, id: work-dedekind-1877-algebraic-integers}]
+  - canonical_id: work-dedekind-1879-supplement
+    packet_refs: [{section: entities, id: work-dedekind-1879-supplement}]
+  - canonical_id: work-dedekind-1894-supplement
+    packet_refs: [{section: entities, id: work-dedekind-1894-supplement}]
+canonical_questions:
+  - canonical_id: q-r009-factorization-replacement
+    packet_refs: [{section: research_questions, id: q001}]
+  - canonical_id: q-r009-ideal-structure
+    packet_refs: [{section: research_questions, id: q003}, {section: research_questions, id: q005}]
+  - canonical_id: q-r009-changing-ideal-concept
+    packet_refs: [{section: research_questions, id: q004}]
+  - canonical_id: q-r009-historical-vs-modern
+    packet_refs: [{section: research_questions, id: q006}]
+canonical_assertions:
+  - canonical_id: assertion-r009-kummer-ideal-divisors
+    packet_refs: [{section: assertions, id: r009-a001}]
+    critic_refs: [hr-r009-001]
+  - canonical_id: assertion-r009-kummer-dedekind-context
+    packet_refs: [{section: assertions, id: r009-a002}]
+  - canonical_id: assertion-r009-dedekind-field-framework
+    packet_refs: [{section: assertions, id: r009-a003}]
+  - canonical_id: assertion-r009-dedekind-ideal-system
+    packet_refs: [{section: assertions, id: r009-a004}]
+  - canonical_id: assertion-r009-dedekind-prime-ideal
+    packet_refs: [{section: assertions, id: r009-a005}]
+  - canonical_id: assertion-r009-dedekind-ideal-factorization
+    packet_refs: [{section: assertions, id: r009-a006}]
+  - canonical_id: assertion-r009-1871-to-1879-revision
+    packet_refs: [{section: assertions, id: r009-a007}]
+  - canonical_id: assertion-r009-1879-to-1894-revision
+    packet_refs: [{section: assertions, id: r009-a008}]
+  - canonical_id: assertion-r009-kronecker-alternative
+    packet_refs: [{section: assertions, id: r009-a009}]
+    critic_refs: [hr-r009-009]
+  - canonical_id: assertion-r009-modern-ideal-factorization
+    packet_refs: [{section: assertions, id: r009-a010}]
+  - canonical_id: assertion-r009-field-to-ideal
+    packet_refs: [{section: assertions, id: r009-a011}]
+  - canonical_id: assertion-r009-factorization-to-ideal-question
+    packet_refs: [{section: question_transitions, id: r009-qt001}, {section: question_transitions, id: r009-qt002}, {section: question_transitions, id: r009-qt003}]
+  - canonical_id: assertion-r009-ideal-to-revision-question
+    packet_refs: [{section: question_transitions, id: r009-qt004}]
+  - canonical_id: assertion-r009-ideal-to-modern-boundary
+    packet_refs: [{section: question_transitions, id: r009-qt005}]
+research_gaps:
+  - packet_assertion: r009-a012
+    critic_ref: hr-r009-012
+    status: not_promoted_as_edge
+    reason: The approved revision supports a textual Galois intersection around fields and conjugacy, but the current canonical predicate vocabulary has no safe non-causal textual-intersection edge. Do not encode it as contributed_to or motivated.
+  - packet_uncertainty: r009-u002
+    status: supplementary
+    reason: Edition-by-edition primary-source comparison of the 1877, 1879, and 1894 formulations remains incomplete.
+  - packet_uncertainty: r009-u003
+    status: supplementary
+    reason: Kronecker's technical divisor theory still lacks primary-source reconstruction in this unit.
+stories:
+  - story_id: story-r009-factorization
+    steps:
+      - step_id: factorization-1
+        canonical_assertion_refs: [assertion-r009-kummer-ideal-divisors]
+      - step_id: factorization-2
+        canonical_assertion_refs: [assertion-r009-kummer-ideal-divisors, assertion-r009-kummer-dedekind-context]
+      - step_id: factorization-3
+        canonical_assertion_refs: [assertion-r009-kummer-dedekind-context, assertion-r009-dedekind-field-framework, assertion-r009-dedekind-ideal-system, assertion-r009-field-to-ideal]
+      - step_id: factorization-4
+        canonical_assertion_refs: [assertion-r009-dedekind-prime-ideal, assertion-r009-dedekind-ideal-factorization]
+      - step_id: factorization-5
+        canonical_assertion_refs: [assertion-r009-1871-to-1879-revision, assertion-r009-1879-to-1894-revision]
+      - step_id: factorization-6
+        canonical_assertion_refs: [assertion-r009-kronecker-alternative]
+      - step_id: factorization-7
+        canonical_assertion_refs: [assertion-r009-modern-ideal-factorization, assertion-r009-ideal-to-modern-boundary]
