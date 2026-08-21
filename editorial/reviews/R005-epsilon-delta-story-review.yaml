@@ -1,0 +1,93 @@
+review:
+  story_id: story-quantified-control
+  research_unit_id: R005
+  status: reviewed
+  summary:
+    pass: 15
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+findings:
+  - id: sr-r005-001
+    classification: PASS
+    target: {story_id: story-quantified-control, field: description}
+    reason: The description decomposes the development into distinct evidentiary acts and avoids a single-inventor claim.
+    assertion_refs: [assertion-r005-cauchy-inequality-control, assertion-r005-weierstrass-role, assertion-r005-heine-circulation]
+  - id: sr-r005-002
+    classification: PASS
+    target: {story_id: story-quantified-control, step_id: quantified-1, field: narrative}
+    reason: The opening is explicitly retrospective and is supported by separate Bolzano and Cauchy formulations rather than projecting modern syntax backward.
+    assertion_refs: [assertion-r005-bolzano-continuity, assertion-r005-cauchy-continuity-language, assertion-r005-cauchy-handoff]
+  - id: sr-r005-003
+    classification: PASS
+    target: {story_id: story-quantified-control, step_id: quantified-2, field: narrative}
+    reason: The Bolzano step states quantified smallness while explicitly denying anachronistic epsilon-delta notation.
+    assertion_refs: [assertion-r005-bolzano-continuity]
+  - id: sr-r005-004
+    classification: PASS
+    target: {story_id: story-quantified-control, step_id: quantified-3, field: narrative}
+    reason: The Cauchy step is bounded to a specific 1823 inequality technique and does not turn symbol use into a general modern definition.
+    assertion_refs: [assertion-r005-cauchy-inequality-control]
+  - id: sr-r005-005
+    classification: PASS
+    target: {story_id: story-quantified-control, step_id: quantified-4, field: narrative}
+    reason: The Weierstrass step preserves the medium-certainty, student-note mediation and does not misdate the evidence as publication.
+    assertion_refs: [assertion-r005-weierstrass-1861-control]
+  - id: sr-r005-006
+    classification: PASS
+    target: {story_id: story-quantified-control, step_id: quantified-5, field: narrative}
+    reason: The R002 intersection is supported while both uniform-convergence causation and a linear Cauchy-to-Weierstrass transmission are explicitly rejected.
+    assertion_refs: [assertion-r005-weierstrass-uniformity, assertion-r005-continuity-convergence-intersection, assertion-r005-uniformity-intersection]
+  - id: sr-r005-007
+    classification: PASS
+    target: {story_id: story-quantified-control, step_id: quantified-6, field: narrative}
+    reason: Heine is used as a publication and circulation anchor without assigning universal standardization priority to the 1872 paper.
+    assertion_refs: [assertion-r005-heine-published-control, assertion-r005-heine-circulation]
+  - id: sr-r005-008
+    classification: PASS
+    target: {story_id: story-quantified-control, step_id: quantified-7, field: narrative}
+    reason: The completeness handoff is visibly modern abstraction and does not attribute a twentieth-century foundations agenda to the earlier actors.
+    assertion_refs: [assertion-r005-completeness-gap]
+  - id: sr-r005-009
+    classification: PASS
+    target: {story_id: story-quantified-control, link: {from: quantified-1, to: quantified-2}}
+    reason: continues is only an editorial unpacking of the opening 1817 framing into its Bolzano antecedent and adds no causal claim.
+    assertion_refs: [assertion-r005-bolzano-continuity]
+  - id: sr-r005-010
+    classification: PASS
+    target: {story_id: story-quantified-control, link: {from: quantified-2, to: quantified-3}}
+    reason: branches correctly avoids a Bolzano-to-Cauchy influence claim unsupported by the packet.
+    assertion_refs: [assertion-r005-bolzano-continuity, assertion-r005-cauchy-inequality-control]
+  - id: sr-r005-011
+    classification: PASS
+    target: {story_id: story-quantified-control, link: {from: quantified-3, to: quantified-4}}
+    reason: branches prevents chronology from becoming a Cauchy-to-Weierstrass transmission claim.
+    assertion_refs: [assertion-r005-cauchy-inequality-control, assertion-r005-weierstrass-1861-control]
+  - id: sr-r005-012
+    classification: PASS
+    target: {story_id: story-quantified-control, link: {from: quantified-4, to: quantified-5}}
+    reason: branches is appropriately weak for two developments documented in the same teaching environment without demonstrated causation.
+    assertion_refs: [assertion-r005-continuity-convergence-intersection]
+  - id: sr-r005-013
+    classification: PASS
+    target: {story_id: story-quantified-control, link: {from: quantified-4, to: quantified-6}}
+    reason: branches treats Heine's later publication as a downstream circulation path rather than an inevitable continuation.
+    assertion_refs: [assertion-r005-weierstrass-role, assertion-r005-heine-circulation]
+  - id: sr-r005-014
+    classification: PASS
+    target: {story_id: story-quantified-control, link: {from: quantified-5, to: quantified-6}}
+    reason: branches avoids claiming that uniform-convergence development converged causally into Heine's continuity formulation.
+    assertion_refs: [assertion-r005-uniformity-intersection, assertion-r005-heine-circulation]
+  - id: sr-r005-015
+    classification: PASS
+    target: {story_id: story-quantified-control, link: {from: quantified-6, to: quantified-7}}
+    reason: branches correctly marks completeness as a separate downstream foundations problem.
+    assertion_refs: [assertion-r005-completeness-gap]
+research_gaps:
+  - id: gap-r005-schwarz-direct
+    question: What stable direct edition or archive locator best supports the 1861 Schwarz lecture-note passage?
+    needed_evidence: Dugac's transcription or the Mittag-Leffler manuscript with a page or folio locator and independent specialist comparison.
+  - id: gap-r005-arithmetization
+    question: Can arithmetization of analysis be tied to a contemporary Weierstrass text rather than only later historiography?
+    needed_evidence: Primary programmatic evidence; otherwise the phrase remains later interpretation.
+sources: []
