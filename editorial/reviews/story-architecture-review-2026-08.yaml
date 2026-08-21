@@ -1,0 +1,103 @@
+review:
+  type: story_architecture
+  review_date: '2026-08-21'
+  status: reviewed
+  stories:
+    - story-function
+    - story-fourier-heat-representation
+    - story-cauchy-rigor-continuity
+    - story-quantified-control
+    - story-r008-uniqueness
+  summary:
+    pass: 3
+    revise: 2
+    weak_evidence: 0
+    reject: 0
+
+findings:
+  - id: sar-001
+    classification: REVISE
+    dimension: entry
+    stories: [story-function]
+    reason: >
+      The title asks the broad question "What is a function?", but the detailed path opens with Fourier-era
+      trigonometric representation and the current description immediately narrows the reader to Fourier and
+      Dirichlet. The researched path itself is usable, but the entry can make the local starting point feel like
+      the beginning of the subject. This is an editorial-entry problem, not a requirement to reconstruct the
+      complete pre-Fourier history of functions.
+    gap:
+      kind: entry_context
+      research_burden: light
+      resolution_mode: editorial_edit
+      needed_work: >
+        Add a short, natural contextual lead that acknowledges the longer history of mathematical dependence and
+        explains why the detailed narrative becomes useful around Fourier, without workflow-style disclaimer prose
+        or unsupported priority/causal claims.
+
+  - id: sar-002
+    classification: REVISE
+    dimension: overlap
+    stories: [story-function, story-fourier-heat-representation]
+    reason: >
+      Both Stories use Fourier's broad trigonometric representation as the branch into questions about functions.
+      The overlap is historically meaningful, but each Story currently narrates the Fourier episode independently.
+      Before adding more research, the shared material should be reviewed as an editorial synthesis problem so the
+      two paths can share orientation without drifting into inconsistent duplicate explanations.
+    gap:
+      kind: synthesis
+      research_burden: medium
+      resolution_mode: editorial_synthesis
+      needed_work: >
+        Compare the two Fourier passages and decide what context should be repeated, what should be shortened, and
+        where the reader should be handed from the heat/representation path into the function-concept path.
+
+  - id: sar-003
+    classification: PASS
+    dimension: question_disposition
+    stories: [story-fourier-heat-representation]
+    reason: >
+      The Story begins with the physical heat-propagation problem and then moves into the mathematical demands
+      created by prescribed temperature data and trigonometric representation. It is coherent to treat the broad
+      heat question as answered for this Story once the mathematical heat theory supplies the working framework;
+      this does not close the canonical heat Question globally.
+    question_dispositions:
+      - question: q-heat-propagation
+        disposition: answered_for_story
+      - question: q-heat-prescribed-data
+        disposition: handoff
+      - question: q-trig-representation-scope
+        disposition: branches
+
+  - id: sar-004
+    classification: PASS
+    dimension: overlap
+    stories: [story-cauchy-rigor-continuity, story-quantified-control]
+    reason: >
+      These Stories run parallel through nineteenth-century control of limiting processes and meet explicitly at
+      the uniform-convergence/Weierstrass teaching intersection. The current material already distinguishes that
+      intersection from a direct Cauchy-to-Weierstrass transmission or a claim that uniform convergence caused
+      epsilon-delta analysis. The architecture therefore supports synthesis and cross-navigation without creating
+      a new Research Unit merely because the paths overlap.
+    question_dispositions:
+      - question: q-uniform-convergence-emergence
+        disposition: branches
+
+  - id: sar-005
+    classification: PASS
+    dimension: question_path
+    stories: [story-r008-uniqueness]
+    reason: >
+      The convergence problem functions as an earlier branch point rather than a synonym for uniqueness. The Story
+      then follows a strong researched sequence from uniqueness to finite exceptions, structured infinite
+      exceptional sets, and derived-set structure. Its later-interpretation entry and historiographic boundary are
+      kept distinct from Cantor's historically documented 1870-1872 extensions, so the narrative spine does not
+      turn the whole path into one retrospective causal chain.
+    question_dispositions:
+      - question: q-fourier-series-convergence
+        disposition: branches
+      - question: q-trig-series-uniqueness
+        disposition: opens
+      - question: q-exceptional-set-uniqueness
+        disposition: continues
+      - question: q-derived-set-structure
+        disposition: handoff
