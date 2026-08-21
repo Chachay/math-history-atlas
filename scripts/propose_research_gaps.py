@@ -56,6 +56,27 @@ def _similar(a: str, b: str) -> float:
     )
 
 
+def _semantic_id_tokens(value: str) -> set[str]:
+    ignored = {"gap", "story", "research", "unit"}
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", value.casefold())
+        if token not in ignored and not re.fullmatch(r"r[0-9]+", token)
+    }
+
+
+def _same_gap(proposal_id: str, question: str, existing: dict[str, Any]) -> bool:
+    existing_question = str(existing.get("question", ""))
+    if _similar(question, existing_question) >= 0.38:
+        return True
+    left = _semantic_id_tokens(proposal_id)
+    right = _semantic_id_tokens(str(existing.get("id", "")))
+    if not left or not right:
+        return False
+    overlap = len(left & right) / max(1, min(len(left), len(right)))
+    return overlap >= 0.5
+
+
 def _downstream_hints(unit_id: str, root: Path) -> list[str]:
     hints: list[str] = []
     promotion = _promotion(unit_id, root)
@@ -159,8 +180,8 @@ def build_gap_plan(unit_id: str, root: Path = ROOT) -> dict[str, Any]:
         if not question:
             continue
         kind, rationale = _kind_for_gap(gap, downstream_hints)
-        match = next((row for row in existing if _similar(question, str(row.get("question", ""))) >= 0.48), None)
         proposal_id = str(gap.get("id") or f"gap-{unit_id.lower()}-proposal-{index:02d}")
+        match = next((row for row in existing if _same_gap(proposal_id, question, row)), None)
         row: dict[str, Any] = {
             "proposal_id": proposal_id,
             "originating_unit": unit_id,
