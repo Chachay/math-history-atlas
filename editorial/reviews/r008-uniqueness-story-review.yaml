@@ -1,0 +1,102 @@
+review:
+  story_id: story-r008-uniqueness
+  research_unit_id: R008
+  status: reviewed
+  summary:
+    pass: 15
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+  overall_assessment: >
+    The Story keeps uniqueness distinct from convergence, preserves Heine as an intermediary without assigning
+    a disputed one-way suggestion, follows Cantor's documented 1870–1872 sequence through finite and structured
+    infinite exceptional sets, and stops at derived-set questions. It does not promote the unresolved Riemann/
+    Schwarz proof-chain claim and does not turn the later historiographic relation to set theory into a direct
+    1872-to-transfinite causal edge.
+findings:
+  - id: sr-r008-story-level
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, field: description}
+    reason: The description states a bounded representation/convergence-to-uniqueness path and explicitly blocks the unreviewed direct creation-of-set-theory narrative.
+    assertion_refs: []
+  - id: sr-r008-step-1
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, step_id: uniqueness-1, field: narrative}
+    reason: The step presents uniqueness as a later editorial branch from convergence, matching the canonical transition's later_interpretation perspective rather than asserting historical causation.
+    assertion_refs: [assertion-r008-convergence-to-uniqueness-question]
+  - id: sr-r008-step-2
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, step_id: uniqueness-2, field: narrative}
+    reason: Heine's result is stated at the reviewed historical level, while the Heine–Cantor relationship is explicitly attributed to later accounts and preserves uncertainty about individual suggestions.
+    assertion_refs: [assertion-r008-heine-uniqueness, assertion-r008-heine-cantor-context]
+  - id: sr-r008-step-3
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, step_id: uniqueness-3, field: narrative}
+    reason: The narrative is limited to the reviewed 1870 uniqueness result and does not add later exceptional-set terminology.
+    assertion_refs: [assertion-r008-cantor-1870-uniqueness]
+  - id: sr-r008-step-4
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, step_id: uniqueness-4, field: narrative}
+    reason: The finite-exception statement and movement from uniqueness to exceptional-set questions are directly supported by the reviewed 1871/1872 sequence.
+    assertion_refs: [assertion-r008-cantor-1871-finite-exceptions, assertion-r008-uniqueness-to-exceptional-question]
+  - id: sr-r008-step-5
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, step_id: uniqueness-5, field: narrative}
+    reason: The step correctly limits the 1872 result to certain infinite exceptional sets characterized by finite derived-set iteration and does not substitute a modern measure/category notion of smallness.
+    assertion_refs: [assertion-r008-cantor-1872-exceptional-sets, assertion-r008-1872-uniqueness-theorem]
+  - id: sr-r008-step-6
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, step_id: uniqueness-6, field: narrative}
+    reason: Cantor's P-prime construction and its role in the uniqueness theorem are stated in the historical vocabulary supported by the canonical assertions.
+    assertion_refs: [assertion-r008-cantor-derived-set-definition, assertion-r008-exceptional-to-derived, assertion-r008-exceptional-to-derived-question]
+  - id: sr-r008-step-7
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, step_id: uniqueness-7, field: narrative}
+    reason: The final step cleanly separates later historiographic significance from modern terminology and explicitly refuses to identify the 1872 work with completed transfinite set theory.
+    assertion_refs: [assertion-r008-analytic-origin-reading, assertion-r008-modern-uniqueness-language]
+  - id: sr-r008-link-1-2
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, link: {from: uniqueness-1, to: uniqueness-2}}
+    reason: branches is appropriate for moving from the established convergence question to the distinct uniqueness problem without encoding convergence as the cause of Heine's work.
+    assertion_refs: [assertion-r008-convergence-to-uniqueness-question, assertion-r008-heine-uniqueness]
+  - id: sr-r008-link-2-3
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, link: {from: uniqueness-2, to: uniqueness-3}}
+    reason: branches is weaker than continues and is supported by the medium-certainty later historiographic Heine–Cantor context; the step prose separately preserves the unresolved direction of particular suggestions.
+    assertion_refs: [assertion-r008-heine-cantor-context, assertion-r008-cantor-1870-uniqueness]
+  - id: sr-r008-link-3-4
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, link: {from: uniqueness-3, to: uniqueness-4}}
+    reason: continues is justified by Cantor's own 1871 note referring back to the 1870 theorem and extending it to finite exceptions.
+    assertion_refs: [assertion-r008-cantor-1870-uniqueness, assertion-r008-cantor-1871-finite-exceptions]
+  - id: sr-r008-link-4-5
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, link: {from: uniqueness-4, to: uniqueness-5}}
+    reason: continues is justified because Cantor's 1872 opening explicitly presents the infinite-exception theorem as an extension of the preceding finite-exception result.
+    assertion_refs: [assertion-r008-uniqueness-to-exceptional-question, assertion-r008-cantor-1872-exceptional-sets]
+  - id: sr-r008-link-5-6
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, link: {from: uniqueness-5, to: uniqueness-6}}
+    reason: The derived-set construction occurs in the same 1872 work and is used to formulate the exceptional-set condition, so continues does not rely on chronology alone.
+    assertion_refs: [assertion-r008-cantor-derived-set-definition, assertion-r008-exceptional-to-derived]
+  - id: sr-r008-link-6-7
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, link: {from: uniqueness-6, to: uniqueness-7}}
+    reason: branches correctly marks a later historiographic reading rather than making a direct historical transition from finite derived sets to transfinite theory.
+    assertion_refs: [assertion-r008-analytic-origin-reading, assertion-r008-modern-uniqueness-language]
+  - id: sr-r008-no-post1872-edge
+    classification: PASS
+    target: {story_id: story-r008-uniqueness, field: links}
+    reason: The Story omits the rejected q-derived-set-structure to later-infinite-set-structure edge and ends before the unresearched 1873–1874 transition.
+    assertion_refs: []
+research_gaps:
+  - id: gap-r008-story-heine-cantor
+    question: What primary evidence fixes the detailed direction of suggestions exchanged by Heine and Cantor around the uniqueness generalizations?
+    needed_evidence: Cantor–Heine correspondence, Heine's full relevant passage, or specialist quotation of the primary exchange.
+  - id: gap-r008-story-riemann-schwarz
+    question: Which precise Riemann result and Schwarz lemma enter Cantor's 1870 proof?
+    needed_evidence: Proof-level primary or specialist locators before adding a canonical Riemann-to-Cantor edge.
+  - id: gap-r008-story-post1872
+    question: What historically documented path connects the 1872 finite derived-set analysis to Cantor's 1873–1874 work on infinite totalities?
+    needed_evidence: Cantor's 1873 correspondence, the 1874 paper, and specialist historiography in a later bounded unit.
+sources: []
