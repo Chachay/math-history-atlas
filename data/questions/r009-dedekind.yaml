@@ -1,0 +1,16 @@
+- id: q-r009-factorization-replacement
+  question: What should replace ordinary factors when unique factorization fails?
+  period: {from: 1846, to: null}
+  fields: [algebra, number-theory]
+- id: q-r009-ideal-structure
+  question: How can divisibility and prime decomposition be reformulated using ideals?
+  period: {from: 1871, to: null}
+  fields: [algebra, number-theory]
+- id: q-r009-changing-ideal-concept
+  question: How did Dedekind's formulation of ideals change across his successive presentations?
+  period: {from: 1871, to: 1894}
+  fields: [algebra, number-theory]
+- id: q-r009-historical-vs-modern
+  question: Which parts of ideal theory are historical formulations, and which are later ring-theoretic abstractions?
+  period: {from: 1871, to: null}
+  fields: [algebra, number-theory]
