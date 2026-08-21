@@ -1,0 +1,104 @@
+- id: story-r009-factorization
+  title: What survives when unique factorization fails?
+  description: >
+    An internally generated algebra-and-number-theory path from Kummer's ideal divisors to Dedekind's
+    systems of algebraic integers and prime-ideal decomposition. The Story keeps Kronecker's alternative
+    route visible and separates Dedekind's historical formulations from later ring-theoretic abstraction.
+  question_phases:
+    - q-r009-factorization-replacement
+    - q-r009-ideal-structure
+    - q-r009-changing-ideal-concept
+    - q-r009-historical-vs-modern
+  fields: [algebra, number-theory]
+  steps:
+    - id: factorization-1
+      ref: q-r009-factorization-replacement
+      role: Factorization problem
+      narrative: >
+        Kummer publicly outlined his ideal-divisor theory in 1846 and republished the overview with changes
+        in 1847. In cyclotomic arithmetic these ideal divisors supplied prime-factor reasoning that ordinary
+        factors did not provide.
+      assertion_refs:
+        - assertion-r009-kummer-ideal-divisors
+      perspective: historical
+      temporal_anchor: {from: 1846, to: 1847}
+    - id: factorization-2
+      ref: concept-ideal-divisor
+      role: Earlier response
+      narrative: >
+        Kummer's ideal divisors were an earlier response to this arithmetic difficulty, not Dedekind ideals
+        under another name. Dedekind's later theory addressed the same factorization problem while replacing
+        indirect divisibility conditions with systems of algebraic integers.
+      assertion_refs:
+        - assertion-r009-kummer-ideal-divisors
+        - assertion-r009-kummer-dedekind-context
+      perspective: historical
+      temporal_anchor: {from: 1846, to: 1871}
+    - id: factorization-3
+      ref: work-dedekind-1871-supplement
+      role: New objects
+      narrative: >
+        In the 1871 supplement Dedekind developed finite number fields together with their algebraic integers.
+        He identified an ideal divisor with a system of integers closed under addition and under multiplication
+        by arbitrary integers of the field, making the divisibility structure itself into an object of study.
+      assertion_refs:
+        - assertion-r009-kummer-dedekind-context
+        - assertion-r009-dedekind-field-framework
+        - assertion-r009-dedekind-ideal-system
+        - assertion-r009-field-to-ideal
+      perspective: historical
+      temporal_anchor: {from: 1871, to: 1871}
+    - id: factorization-4
+      ref: concept-ideal-factorization
+      role: Structural replacement
+      narrative: >
+        Dedekind defined prime ideals and established a decomposition theory in which ideals are determined
+        by the powers of prime ideals dividing them. The replacement for failed element factorization was
+        therefore a factorization structure on ideals, formulated in the arithmetic setting of his number fields.
+      assertion_refs:
+        - assertion-r009-dedekind-prime-ideal
+        - assertion-r009-dedekind-ideal-factorization
+      perspective: historical
+      temporal_anchor: {from: 1871, to: 1871}
+    - id: factorization-5
+      ref: q-r009-changing-ideal-concept
+      role: Revising the formulation
+      narrative: >
+        Dedekind did not leave the 1871 presentation fixed. Later versions moved away from its dependence on
+        simple ideals and particular congruence representations toward a more abstract treatment of ideals
+        and their operations, with further published reformulations through 1894.
+      assertion_refs:
+        - assertion-r009-1871-to-1879-revision
+        - assertion-r009-1879-to-1894-revision
+      perspective: later_interpretation
+      temporal_anchor: {from: 1871, to: 1894}
+    - id: factorization-6
+      ref: person-kronecker
+      role: Alternative route
+      narrative: >
+        Dedekind's formulation was not the only contemporary route beyond Kummer. Specialist histories describe
+        Kronecker as developing a distinct, explicitly computational approach to extended ideal factorization;
+        the present evidence is not sufficient to reconstruct that technical theory in detail.
+      assertion_refs:
+        - assertion-r009-kronecker-alternative
+      perspective: historical
+      temporal_anchor: {from: 1850, to: 1891}
+    - id: factorization-7
+      ref: q-r009-historical-vs-modern
+      role: Historiographic boundary
+      narrative: >
+        Modern algebra can restate this development using ideals in the ring of integers of a number field and
+        unique factorization into prime ideals. That language is an explanatory abstraction over the historical
+        theory, not terminology that should be attributed wholesale to Dedekind's 1871 presentation.
+      assertion_refs:
+        - assertion-r009-modern-ideal-factorization
+        - assertion-r009-ideal-to-modern-boundary
+      perspective: modern_abstraction
+      temporal_anchor: {from: 1871, to: null}
+  links:
+    - {from: factorization-1, to: factorization-2, type: continues}
+    - {from: factorization-2, to: factorization-3, type: continues}
+    - {from: factorization-3, to: factorization-4, type: continues}
+    - {from: factorization-4, to: factorization-5, type: branches}
+    - {from: factorization-2, to: factorization-6, type: branches}
+    - {from: factorization-5, to: factorization-7, type: branches}
