@@ -1,0 +1,12 @@
+- id: q-quantified-limit-control
+  question: How precisely must arbitrarily small variation be controlled?
+  period: {from: 1817, to: null}
+  fields: [analysis]
+- id: q-epsilon-delta-circulation
+  question: How did quantified continuity formulations enter published function theory?
+  period: {from: 1872, to: null}
+  fields: [analysis]
+- id: q-real-number-completeness
+  question: What guarantees the completeness of the real-number system underlying limit arguments?
+  period: {from: 1870, to: null}
+  fields: [analysis]
