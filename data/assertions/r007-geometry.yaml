@@ -1,0 +1,108 @@
+- id: assertion-r007-euler-surface-curvature
+  subject: person-euler
+  predicate: contributed_to
+  object: concept-surface-curvature
+  period: {from: 1760, to: 1767}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-kline-1990, source-euler-dsb]
+  status: historically_reviewed
+- id: assertion-r007-monge-surface-theory
+  subject: person-monge
+  predicate: contributed_to
+  object: concept-surface-curvature
+  period: {from: 1795, to: 1795}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-kline-1990, source-eom-differential-geometry]
+  status: historically_reviewed
+- id: assertion-r007-gauss-curvature-definition
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-surface-curvature
+  period: {from: 1827, to: 1827}
+  perspective: historical
+  certainty: high
+  sources: [source-gauss-1827-1902]
+  status: historically_reviewed
+- id: assertion-r007-gauss-development
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-surface-applicability
+  period: {from: 1827, to: 1827}
+  perspective: historical
+  certainty: high
+  sources: [source-gauss-1827-1902]
+  status: historically_reviewed
+- id: assertion-r007-egregium-invariance
+  subject: result-theorema-egregium
+  predicate: contributed_to
+  object: concept-surface-applicability
+  period: {from: 1827, to: 1827}
+  perspective: historical
+  certainty: high
+  sources: [source-gauss-1827-1902, source-dombrowski-1979]
+  status: historically_reviewed
+- id: assertion-r007-gauss-deformation-independent
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  period: {from: 1827, to: 1827}
+  perspective: historical
+  certainty: high
+  sources: [source-gauss-1827-1902]
+  status: historically_reviewed
+- id: assertion-r007-egregium-modern-intrinsic
+  subject: result-theorema-egregium
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  period: {from: 1827, to: null}
+  perspective: modern_abstraction
+  certainty: high
+  sources: [source-dombrowski-1979, source-darrigol-2021]
+  status: historically_reviewed
+- id: assertion-r007-gauss-foundational-reading
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  period: {from: 1827, to: null}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-dombrowski-1979, source-kline-1990]
+  status: historically_reviewed
+- id: assertion-r007-geodesy-context
+  subject: person-gauss
+  predicate: contributed_to
+  object: concept-surface-applicability
+  period: {from: 1818, to: 1827}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-kline-1990, source-dombrowski-1979]
+  status: historically_reviewed
+- id: assertion-r007-curvature-question
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: q-r007-surface-curvature
+  period: {from: 1827, to: 1827}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-gauss-1827-1902, source-dombrowski-1979]
+  status: historically_reviewed
+- id: assertion-r007-development-question
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: q-r007-surface-development
+  period: {from: 1827, to: 1827}
+  perspective: historical
+  certainty: high
+  sources: [source-gauss-1827-1902]
+  status: historically_reviewed
+- id: assertion-r007-intrinsic-question
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: q-r007-intrinsic-geometry
+  period: {from: 1827, to: null}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-gauss-1827-1902, source-dombrowski-1979, source-kline-1990]
+  status: historically_reviewed
