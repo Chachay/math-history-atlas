@@ -3,7 +3,7 @@ review:
   review_date: '2026-08-20'
   status: reviewed
   summary:
-    pass: 6
+    pass: 7
     revise: 0
     weak_evidence: 0
     reject: 0
@@ -45,9 +45,17 @@ findings:
     assertion_refs: []
   - id: sir-006
     classification: PASS
-    target: story-rigor-parallel-lens
+    target: retire-story-rigor-parallel-lens
     reason: >
-      story-rigor is retained as a parallel editorial reading of accepted R002 material. Its same-year shared
-      canonical refs already create Network intersections, so adding a synthetic cross-Story genealogy would
-      overstate what is only a different editorial path through the same evidence.
+      With R005 now supplying a separately researched quantified-control Story, the old story-rigor path would
+      duplicate R002 evidence and compete with the new analysis arc. Retiring it from active Stories preserves
+      its title for a future cross-Story theme rather than presenting a second evidence path over the same nodes.
     assertion_refs: []
+  - id: sir-007
+    classification: PASS
+    target: transition-r002-r005-uniformity
+    reason: >
+      R002's final uniform-convergence question and R005's 1861 intersection share reviewed Weierstrass material.
+      The transition is explicitly thematic and retrospective, and its rationale rejects both direct Cauchy-to-
+      Weierstrass transmission and the claim that uniform convergence caused epsilon-delta analysis.
+    assertion_refs: [assertion-r002-weierstrass-uniform, assertion-r005-weierstrass-uniformity, assertion-r005-uniformity-intersection]
