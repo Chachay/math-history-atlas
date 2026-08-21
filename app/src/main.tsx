@@ -7,7 +7,7 @@ type Entity = { id: string; type: string; name: string; start_year?: number; end
 type Question = { id: string; question: string; period?: { from?: number; to?: number | null }; fields?: string[] };
 type Assertion = { id: string; subject: string; predicate: string; object: string; period?: { from?: number; to?: number | null }; status?: string; perspective?: string };
 type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string; temporal_anchor?: { from?: number; to?: number | null } };
-type Story = { id: string; title: string; fields?: string[]; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
+type Story = { id: string; title: string; description?: string; fields?: string[]; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
 type StoryTransition = { id: string; from_story: string; from_step: string; to_story: string; to_step: string; type: string; perspective: string; assertion_refs: string[]; rationale?: string };
 type Intersection = { entity: string; story_count: number; stories: string[] };
 type AtlasField = { id: string; name: string; parents: string[] };
@@ -116,7 +116,7 @@ function AtlasView({ data, onEnterNetwork }: { data: Dataset; onEnterNetwork: (f
   const field = (id: string) => data.atlas.fields.find(f => f.id === id)?.name || id;
   const rootFields = data.atlas.fields.filter(f => f.parents.includes('mathematics'));
   const storyCount = (fieldId: string) => data.stories.filter(s => s.fields?.includes(fieldId)).length;
-  return <><section className="hero-card"><h2>Atlas — How mathematical fields branch and recombine</h2><p>This view is about field evolution. Field branches below are derived from canonical field data; choose one to frame its reviewed Network cluster.</p></section>
+  return <><section className="hero-card"><h2>Atlas — How mathematical fields branch and recombine</h2><p>See how mathematical fields split, overlap, and recombine across time. Enter a branch to follow the researched questions and Stories inside it.</p></section>
     <section className="panel atlas-panel">
       <div className="story-filter"><button onClick={() => onEnterNetwork(undefined)}>All researched paths</button>{rootFields.map(f => <button key={f.id} onClick={() => onEnterNetwork(f.id)}>{f.name} · {storyCount(f.id)} Stories</button>)}</div>
       <svg className="atlas-svg" viewBox="0 0 360 650"><line x1="36" y1="30" x2="36" y2="620" className="time-axis" />
@@ -179,7 +179,7 @@ function NetworkView({ data, selectedStory, selectedField, setSelectedStory, set
   const rootFields = data.atlas.fields.filter(f=>f.parents.includes('mathematics'));
   const visibleIds = new Set(fieldStories.map(s=>s.id));
 
-  return <><section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · {fieldName}</h2><p>Solid colored paths are links inside one Story. Dashed neutral connectors are separately reviewed handoffs between Stories; field framing is derived from Story field metadata.</p></section>
+  return <><section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · {fieldName}</h2><p>See where mathematical Stories intersect, branch apart, and hand questions to one another across time.</p></section>
     <section className="panel network-panel">
       <div className="story-filter"><button className={!selectedField?'active':''} onClick={()=>setSelectedField(undefined)}>All fields</button>{rootFields.map(f=><button key={f.id} className={selectedField===f.id?'active':''} onClick={()=>setSelectedField(f.id)}>{f.name}</button>)}</div>
       <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory===id?'active':''} onClick={()=>setSelectedStory(id)}>{id!=='all' && <i className="story-dot" style={{background:storyColor(id)}} />}{id==='all'?'All paths':storyMap.get(id)?.title}</button>)}</div>
@@ -207,7 +207,7 @@ function IntersectionSheet({ intersection, data, onOpen }: { intersection:Inters
 
 function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data:Dataset; storyId:string; onNetwork:()=>void; onOpenPerson:(id:string)=>void; onSheet:(n:React.ReactNode)=>void }) {
   const story=data.stories.find(s=>s.id===storyId)||data.stories[0], lookup=buildLookup(data), intersections=new Map(data.intersections.map(i=>[i.entity,i]));
-  return <><section className="hero-card"><span className="eyebrow">CURRENT STORY</span><h2>{story.title}</h2><p>Read one editorial path vertically. Person links are derived from the assertions supporting each step, not only from direct Person steps.</p></section>
+  return <><section className="hero-card"><span className="eyebrow">CURRENT STORY</span><h2>{story.title}</h2><p>{story.description || 'Follow the mathematical question through the historical steps that changed it.'}</p></section>
     <div className="story-layout"><div>{[...story.steps].sort((a,b)=>(a.temporal_anchor?.from??9999)-(b.temporal_anchor?.from??9999)||story.steps.indexOf(a)-story.steps.indexOf(b)).map((step,idx)=>{ const item=lookup[step.ref], inter=intersections.get(step.ref), label=item?('type' in item?item.name:item.question):step.ref, people=peopleForStep(data,step); return <article key={step.id} className={`story-card panel ${/problem|gap/i.test(step.role)?'problem':''} ${inter?'crossing':''}`}><div className="story-index">{idx+1}</div><div className="story-meta"><span>{step.role.toUpperCase()}</span><span>{step.temporal_anchor?.from||yearFor(item)}</span></div><h3>{label}</h3>{step.narrative&&<p>{step.narrative}</p>}<div className="story-actions">{inter&&<button onClick={onNetwork}>See crossing in Network</button>}{people.map(p=><button key={p.id} onClick={()=>onOpenPerson(p.id)}>Open {short(p.name,18)}</button>)}{inter&&<button onClick={()=>onSheet(<IntersectionSheet intersection={inter} data={data} onOpen={()=>{}}/>)}>Other Stories</button>}</div></article>; })}</div><aside className="parallel-rail"><div className="rail-line">{data.stories.slice(0,4).map((s,i)=><span key={s.id} style={{top:`${15+i*22}%`,background:storyColor(s.id)}} title={s.title}/>)}</div></aside></div></>;
 }
 

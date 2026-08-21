@@ -39,6 +39,7 @@ def main():
         {
             'id': s['id'],
             'title': s['title'],
+            'description': s.get('description', ''),
             'fields': s.get('fields', []),
             'steps': s['steps'],
             'links': s['links'],
