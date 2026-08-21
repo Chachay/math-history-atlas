@@ -867,9 +867,10 @@
         "id": "intrinsic-2",
         "ref": "work-gauss-disquisitiones-surfaces",
         "role": "New formulation",
-        "narrative": "In the 1827 memoir Gauss defined a pointwise measure of curvature through the spherical image of a surface and derived formulas for it in general surface coordinates. In his formulation the area of the spherical image is compared with the corresponding area on the surface.\n",
+        "narrative": "In the 1827 memoir Gauss defined a pointwise measure of curvature through the spherical image of a surface and derived formulas for it in general surface coordinates. His measure compares the infinitesimal area of the spherical image with the corresponding infinitesimal area on the surface.\n",
         "assertion_refs": [
           "assertion-r007-gauss-curvature-definition",
+          "assertion-r007-gauss-curvature-ratio",
           "assertion-r007-curvature-question"
         ],
         "perspective": "historical",
@@ -882,7 +883,7 @@
         "id": "intrinsic-3",
         "ref": "q-r007-surface-development",
         "role": "Geometric test",
-        "narrative": "Gauss also treated the development of one surface upon another through equality of the infinitesimal line element at corresponding points. This supplies a precise setting for asking which geometric quantities survive deformation without stretching, without assuming that the curvature formula historically generated that question.\n",
+        "narrative": "Gauss also treated the development of one surface upon another through equality of the infinitesimal line element at corresponding points. In that setting the mathematical question is which further geometric quantities remain unchanged when the metric data are preserved.\n",
         "assertion_refs": [
           "assertion-r007-gauss-development",
           "assertion-r007-development-question"
@@ -897,10 +898,10 @@
         "id": "intrinsic-4",
         "ref": "result-theorema-egregium",
         "role": "Invariance result",
-        "narrative": "The Theorema Egregium states that when one curved surface is developed upon another, the measure of curvature at corresponding points remains unchanged. Gauss obtained this by expressing the curvature through the coefficients of the infinitesimal metric and their derivatives.\n",
+        "narrative": "The Theorema Egregium states that when one curved surface is developed upon another, the measure of curvature at corresponding points remains unchanged. Gauss obtained this after expressing the curvature through the coefficients of the infinitesimal metric and their derivatives.\n",
         "assertion_refs": [
           "assertion-r007-egregium-invariance",
-          "assertion-r007-gauss-development"
+          "assertion-r007-gauss-metric-curvature-formula"
         ],
         "perspective": "historical",
         "temporal_anchor": {
