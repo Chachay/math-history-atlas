@@ -1,0 +1,12 @@
+- id: state-r008-uniqueness-1870
+  concept_id: concept-trig-series-uniqueness
+  period: {from: 1870, to: 1870}
+  label: Uniqueness is formulated by requiring every coefficient to vanish when a convergent trigonometric series has zero sum for every real argument, without assuming uniform convergence.
+- id: state-r008-exceptional-1871
+  concept_id: concept-exceptional-point-set
+  period: {from: 1871, to: 1871}
+  label: A finite number of exceptional arguments may be omitted from convergence or equality without destroying the uniqueness conclusion.
+- id: state-r008-derived-1872
+  concept_id: concept-derived-set
+  period: {from: 1872, to: 1872}
+  label: For a linear point set P, P' is the set of limit points of P; finite iteration of this operation is used to distinguish point sets in the uniqueness theorem.
