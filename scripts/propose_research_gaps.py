@@ -8,7 +8,6 @@ from typing import Any
 
 import yaml
 
-
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -18,19 +17,14 @@ def _load(path: Path) -> Any:
 
 def _save(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        yaml.safe_dump(data, sort_keys=False, allow_unicode=True, width=100),
-        encoding="utf-8",
-    )
+    path.write_text(yaml.safe_dump(data, sort_keys=False, allow_unicode=True, width=100), encoding="utf-8")
 
 
-def _one_by_unit(directory: Path, unit_id: str, *, story_review: bool = False) -> Path | None:
+def _one_review(directory: Path, unit_id: str) -> Path | None:
     matches: list[Path] = []
     for path in sorted(directory.glob("*.yaml")):
         data = _load(path) or {}
-        if not isinstance(data, dict):
-            continue
-        header = data.get("review", {}) if story_review else data.get("review", {})
+        header = data.get("review", {}) if isinstance(data, dict) else {}
         if isinstance(header, dict) and str(header.get("research_unit_id", "")).upper() == unit_id:
             matches.append(path)
     if len(matches) > 1:
@@ -42,9 +36,7 @@ def _promotion(unit_id: str, root: Path) -> dict[str, Any]:
     matches = sorted((root / "research/promotions").glob(f"{unit_id}-*-promotion.yaml"))
     if len(matches) > 1:
         raise RuntimeError(f"Expected at most one verified promotion for {unit_id}, found {len(matches)}")
-    if not matches:
-        return {}
-    data = _load(matches[0]) or {}
+    data = _load(matches[0]) if matches else {}
     return data if isinstance(data, dict) else {}
 
 
@@ -58,9 +50,10 @@ def _similar(a: str, b: str) -> float:
     if not na or not nb:
         return 0.0
     aset, bset = set(na.split()), set(nb.split())
-    jaccard = len(aset & bset) / max(1, len(aset | bset))
-    sequence = SequenceMatcher(None, na, nb).ratio()
-    return max(jaccard, sequence)
+    return max(
+        len(aset & bset) / max(1, len(aset | bset)),
+        SequenceMatcher(None, na, nb).ratio(),
+    )
 
 
 def _downstream_hints(unit_id: str, root: Path) -> list[str]:
@@ -72,18 +65,10 @@ def _downstream_hints(unit_id: str, root: Path) -> list[str]:
         proposed = change.get("proposed_change") or {}
         target = change.get("target") or {}
         action = proposed.get("action") if isinstance(proposed, dict) else None
-        if action not in {"remove", "remove_entry"}:
-            continue
-        if not isinstance(target, dict) or target.get("section") != "question_transitions":
-            continue
-        for key in ("reason",):
-            if isinstance(proposed, dict) and proposed.get(key):
-                hints.append(str(proposed[key]))
-        if change.get("reason"):
-            hints.append(str(change["reason"]))
-        if change.get("needed_evidence"):
-            hints.append(str(change["needed_evidence"]))
-    review_path = _one_by_unit(root / "research/reviews", unit_id)
+        if action in {"remove", "remove_entry"} and isinstance(target, dict) and target.get("section") == "question_transitions":
+            hints.extend(str(value) for value in (change.get("reason"), change.get("needed_evidence"), proposed.get("reason") if isinstance(proposed, dict) else None) if value)
+
+    review_path = _one_review(root / "research/reviews", unit_id)
     if review_path:
         review = _load(review_path) or {}
         for finding in review.get("findings", []) or []:
@@ -96,19 +81,12 @@ def _downstream_hints(unit_id: str, root: Path) -> list[str]:
                 and target.get("section") == "question_transitions"
                 and str(finding.get("classification", "")).upper() in {"REJECT", "WEAK_EVIDENCE"}
             ):
-                hints.extend(
-                    str(value)
-                    for value in (finding.get("reason"), finding.get("needed_evidence"), proposed.get("reason") if isinstance(proposed, dict) else None)
-                    if value
-                )
+                hints.extend(str(value) for value in (finding.get("reason"), finding.get("needed_evidence"), proposed.get("reason") if isinstance(proposed, dict) else None) if value)
     return hints
 
 
 def _allocated_units(root: Path) -> list[str]:
-    result: list[str] = []
-    for path in sorted((root / "research/units").glob("R[0-9][0-9][0-9]-*.md")):
-        result.append(path.name.split("-", 1)[0])
-    return result
+    return [path.name.split("-", 1)[0] for path in sorted((root / "research/units").glob("R[0-9][0-9][0-9]-*.md"))]
 
 
 def _roadmap_files(root: Path) -> list[str]:
@@ -130,7 +108,8 @@ def _existing_gap_rows(unit_id: str, root: Path) -> list[dict[str, Any]]:
 
 def _kind_for_gap(gap: dict[str, Any], downstream_hints: list[str]) -> tuple[str, str]:
     text = " ".join(str(gap.get(key, "")) for key in ("question", "needed_evidence"))
-    future_phrases = (
+    lower = text.casefold()
+    explicit_future_phrases = (
         "later bounded unit",
         "future unit",
         "later unit",
@@ -138,28 +117,37 @@ def _kind_for_gap(gap: dict[str, Any], downstream_hints: list[str]) -> tuple[str
         "research handoff",
         "later research",
     )
-    if any(phrase in text.casefold() for phrase in future_phrases):
+    future_spine_markers = (
+        "1873",
+        "1874",
+        "set theory",
+        "transfinite",
+        "infinite totalities",
+        "cardinality",
+        "later theory",
+        "handoff",
+    )
+    if any(phrase in lower for phrase in explicit_future_phrases):
         return "candidate_future_unit", "Story Critic explicitly frames the gap as later-unit/downstream work"
-    if any(_similar(text, hint) >= 0.32 for hint in downstream_hints):
+    if any(marker in lower for marker in future_spine_markers) and any(_similar(text, hint) >= 0.32 for hint in downstream_hints):
         return "candidate_future_unit", "Matches a rejected/withheld downstream question transition"
     return "supplementary", "Unresolved evidence can be filled without allocating a new research unit"
 
 
 def build_gap_plan(unit_id: str, root: Path = ROOT) -> dict[str, Any]:
     unit_id = unit_id.upper()
-    story_review_path = _one_by_unit(root / "editorial/reviews", unit_id, story_review=True)
-    research_review_path = _one_by_unit(root / "research/reviews", unit_id)
+    story_review_path = _one_review(root / "editorial/reviews", unit_id)
+    research_review_path = _one_review(root / "research/reviews", unit_id)
     if story_review_path:
-        story_review = _load(story_review_path) or {}
-        raw_gaps = story_review.get("research_gaps") or []
+        review = _load(story_review_path) or {}
+        raw_gaps = review.get("research_gaps") or []
         source_label = str(story_review_path.relative_to(root))
     elif research_review_path:
-        research_review = _load(research_review_path) or {}
-        raw_gaps = research_review.get("research_gaps") or []
+        review = _load(research_review_path) or {}
+        raw_gaps = review.get("research_gaps") or []
         source_label = str(research_review_path.relative_to(root))
     else:
-        raw_gaps = []
-        source_label = "<none>"
+        raw_gaps, source_label = [], "<none>"
 
     downstream_hints = _downstream_hints(unit_id, root)
     existing = _existing_gap_rows(unit_id, root)
@@ -171,14 +159,7 @@ def build_gap_plan(unit_id: str, root: Path = ROOT) -> dict[str, Any]:
         if not question:
             continue
         kind, rationale = _kind_for_gap(gap, downstream_hints)
-        match = next(
-            (
-                row
-                for row in existing
-                if _similar(question, str(row.get("question", ""))) >= 0.48
-            ),
-            None,
-        )
+        match = next((row for row in existing if _similar(question, str(row.get("question", ""))) >= 0.48), None)
         proposal_id = str(gap.get("id") or f"gap-{unit_id.lower()}-proposal-{index:02d}")
         row: dict[str, Any] = {
             "proposal_id": proposal_id,
@@ -206,9 +187,9 @@ def build_gap_plan(unit_id: str, root: Path = ROOT) -> dict[str, Any]:
         },
         "proposals": proposals,
         "summary": {
-            "supplementary": sum(1 for row in proposals if row["kind"] == "supplementary"),
-            "candidate_future_unit": sum(1 for row in proposals if row["kind"] == "candidate_future_unit"),
-            "already_registered": sum(1 for row in proposals if row["registered"]),
+            "supplementary": sum(row["kind"] == "supplementary" for row in proposals),
+            "candidate_future_unit": sum(row["kind"] == "candidate_future_unit" for row in proposals),
+            "already_registered": sum(bool(row["registered"]) for row in proposals),
         },
     }
 
@@ -235,31 +216,23 @@ def apply_gap_plan(plan: dict[str, Any], root: Path = ROOT) -> Path | None:
         return None
     existing_files = _existing_gap_files(unit_id, root)
     if len(existing_files) > 1:
-        raise RuntimeError(
-            f"{unit_id} already has multiple gap registry files; merge manually before automatic registration"
-        )
+        raise RuntimeError(f"{unit_id} already has multiple gap registry files; merge manually before automatic registration")
     path = existing_files[0] if existing_files else root / "research/gaps" / f"{unit_id}-followups.yaml"
     data = _load(path) if path.exists() else {"research_unit_id": unit_id, "research_gaps": []}
-    if not isinstance(data, dict):
-        raise RuntimeError(f"{path} is not a gap registry mapping")
-    rows = data.setdefault("research_gaps", [])
-    if not isinstance(rows, list):
-        raise RuntimeError(f"{path} research_gaps must be a list")
+    if not isinstance(data, dict) or not isinstance(data.setdefault("research_gaps", []), list):
+        raise RuntimeError(f"{path} is not a valid gap registry mapping")
     for proposal in missing:
-        rows.append(_persistent_row(proposal))
+        data["research_gaps"].append(_persistent_row(proposal))
     _save(path, data)
     return path
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="Propose persistent research gaps after Story Critic without allocating future R-numbers."
-    )
+    parser = argparse.ArgumentParser(description="Propose persistent research gaps after Story Critic without allocating future R-numbers.")
     parser.add_argument("unit_id")
     parser.add_argument("--yaml", action="store_true")
     parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()
-
     plan = build_gap_plan(args.unit_id)
     if args.yaml:
         print(yaml.safe_dump(plan, sort_keys=False, allow_unicode=True))
@@ -272,17 +245,10 @@ def main() -> int:
             if row["kind"] == "candidate_future_unit":
                 print(f"           roadmap: {row['roadmap_eligibility']}")
         summary = plan["summary"]
-        print(
-            f"Summary: supplementary {summary['supplementary']} / "
-            f"candidate_future_unit {summary['candidate_future_unit']} / "
-            f"already registered {summary['already_registered']}"
-        )
+        print(f"Summary: supplementary {summary['supplementary']} / candidate_future_unit {summary['candidate_future_unit']} / already registered {summary['already_registered']}")
     if args.apply:
         path = apply_gap_plan(plan)
-        if path is None:
-            print("No registration changes: all proposed gaps are already persistent")
-        else:
-            print(f"Registered gaps in {path.relative_to(ROOT)}")
+        print("No registration changes: all proposed gaps are already persistent" if path is None else f"Registered gaps in {path.relative_to(ROOT)}")
     return 0
 
 
