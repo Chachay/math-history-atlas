@@ -1,0 +1,78 @@
+review:
+  story_id: story-r007-intrinsic-geometry
+  research_unit_id: R007
+  status: reviewed
+  summary:
+    pass: 11
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+  overall_assessment: >
+    The Story keeps the mathematical spine on surface curvature, development, and deformation-independent
+    geometry. It avoids the rejected single-inventor framing by retaining Euler and Monge as predecessors,
+    does not use surveying as a causal explanation, distinguishes Gauss's own language from the later
+    intrinsic interpretation, and does not manufacture a direct Gauss-to-Riemann continuation edge.
+findings:
+  - id: sr-r007-story-level
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, field: description}
+    reason: The description states the bounded editorial path and explicitly preserves the accepted geodesy and Gauss-to-Riemann limitations.
+    assertion_refs: []
+  - id: sr-r007-step-1
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, step_id: intrinsic-1, field: narrative}
+    reason: The step accurately presents Euler and Monge as substantive predecessors without assigning either a priority superlative or implying direct causation into Gauss's work.
+    assertion_refs: [assertion-r007-euler-surface-curvature, assertion-r007-monge-surface-theory]
+  - id: sr-r007-step-2
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, step_id: intrinsic-2, field: narrative}
+    reason: The narrative is supported by the reviewed primary-source assertions for Gauss's spherical-image definition, ratio direction, and general-coordinate treatment.
+    assertion_refs: [assertion-r007-gauss-curvature-definition, assertion-r007-gauss-curvature-ratio, assertion-r007-curvature-question]
+  - id: sr-r007-step-3
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, step_id: intrinsic-3, field: narrative}
+    reason: The step states the development/applicability problem without claiming that the curvature formula caused or historically generated the question.
+    assertion_refs: [assertion-r007-gauss-development, assertion-r007-development-question]
+  - id: sr-r007-step-4
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, step_id: intrinsic-4, field: narrative}
+    reason: The theorem and its relation to Gauss's metric-coefficient formula are both supported by reviewed primary-source assertions.
+    assertion_refs: [assertion-r007-egregium-invariance, assertion-r007-gauss-metric-curvature-formula]
+  - id: sr-r007-step-5
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, step_id: intrinsic-5, field: narrative}
+    reason: The step cleanly separates Gauss's contemporary deformation-independent distinction, later historiographical intrinsic framing, and modern metric formulation.
+    assertion_refs: [assertion-r007-gauss-deformation-independent, assertion-r007-gauss-foundational-reading, assertion-r007-egregium-modern-intrinsic, assertion-r007-intrinsic-question]
+  - id: sr-r007-link-1-2
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, link: {from: intrinsic-1, to: intrinsic-2}}
+    reason: branches is appropriately weaker than continues and avoids turning predecessor chronology into a direct Euler/Monge-to-Gauss influence claim.
+    assertion_refs: [assertion-r007-euler-surface-curvature, assertion-r007-monge-surface-theory, assertion-r007-gauss-curvature-definition]
+  - id: sr-r007-link-2-3
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, link: {from: intrinsic-2, to: intrinsic-3}}
+    reason: branches avoids asserting that Gauss's curvature formula historically generated the applicability problem while allowing the Story to move between two parts of the same memoir.
+    assertion_refs: [assertion-r007-gauss-curvature-definition, assertion-r007-gauss-development]
+  - id: sr-r007-link-3-4
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, link: {from: intrinsic-3, to: intrinsic-4}}
+    reason: continues is justified here because the reviewed 1827 text directly treats development through preserved metric data and then states the curvature-invariance result in that setting.
+    assertion_refs: [assertion-r007-gauss-development, assertion-r007-gauss-metric-curvature-formula, assertion-r007-egregium-invariance]
+  - id: sr-r007-link-4-5
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, link: {from: intrinsic-4, to: intrinsic-5}}
+    reason: branches correctly marks the move from Gauss's theorem to a later intrinsic interpretation rather than presenting modern vocabulary as his own.
+    assertion_refs: [assertion-r007-egregium-invariance, assertion-r007-gauss-deformation-independent, assertion-r007-gauss-foundational-reading, assertion-r007-egregium-modern-intrinsic]
+  - id: sr-r007-no-riemann-edge
+    classification: PASS
+    target: {story_id: story-r007-intrinsic-geometry, field: links}
+    reason: The Story preserves the accepted transmission gap by omitting a direct Riemann continuation or influence edge; shared future geometry context is left for a later researched unit.
+    assertion_refs: []
+research_gaps:
+  - id: gap-r007-story-geodesy
+    question: What documentary evidence establishes how Gauss himself connected the Hanover survey and geodetic work to the development of the Theorema Egregium?
+    needed_evidence: Gauss correspondence, notebooks, geodetic publications, or specialist historiography tracing the research transition rather than chronology alone.
+  - id: gap-r007-story-riemann
+    question: What historically documented transmission path connects Gauss's 1827 surface theory to Riemann's 1854 higher-dimensional metric geometry?
+    needed_evidence: Riemann manuscripts and lecture context, institutional evidence, or specialist studies identifying the conceptual channels and necessary intermediaries.
+sources: []

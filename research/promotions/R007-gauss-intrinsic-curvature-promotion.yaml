@@ -1,0 +1,117 @@
+research_unit_id: R007
+packet: R007-gauss-intrinsic-curvature.yaml
+review: R007-gauss-intrinsic-curvature-review.yaml
+resolution: R007-gauss-intrinsic-curvature-resolution.yaml
+summary:
+  proposed_changes: 5
+  skipped_items: 0
+changes:
+- finding_id: hc-r007-001
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Correct Gauss''s curvature-definition ratio to spherical-image area divided by
+    corresponding surface-element area, as stated in the 1827 memoir.
+
+    '
+  target:
+    section: chronology
+    match:
+      date: '1827-10-08'
+  proposed_change:
+    action: replace_entry
+    value:
+      date: '1827-10-08'
+      date_type: presentation
+      event: 'Gauss presented the Disquisitiones generales circa superficies curvas to the Royal Society
+        of Göttingen. The published memoir defines a pointwise measure of curvature as the ratio of the
+        infinitesimal area of the spherical image to the corresponding infinitesimal area on the surface
+        and derives formulas in general surface coordinates.
+
+        '
+      perspective: historical
+      certainty: high
+      sources:
+      - src-gauss-1827-1902
+      primary_locator: §§6–10; presentation date on title page
+  status: proposed
+- finding_id: hc-r007-009
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Replace the evaluative "decisive step" wording with a precisely attributed later-historiographical
+    interpretation and retain the distinction from Gauss''s own vocabulary.
+
+    '
+  target:
+    section: assertions
+    id: r007-a008
+  proposed_change:
+    action: replace_fields
+    fields:
+      statement: 'Later histories of differential geometry interpret Gauss''s 1827 work as foundational
+        for intrinsic surface geometry, while Gauss''s own text formulates the distinction in terms of
+        development, infinitesimal metric relations, and properties independent of a surface''s changing
+        spatial form rather than the later technical vocabulary.
+
+        '
+      perspective: later_interpretation
+      certainty: high
+  status: proposed
+- finding_id: hc-r007-010
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted with caution. Retain geodesy and surveying only as medium-certainty historical
+    context. Do not promote causal wording such as "geodesy motivated" or "surveying led to" without stronger
+    documentary evidence.
+
+    '
+  target:
+    section: assertions
+    id: r007-a009
+  proposed_change:
+    action: manual_review
+    reason: 'Retain only if the human accepts an explicitly contextual, non-causal assertion. Do not promote
+      wording such as "geodesy motivated" or "surveying led to" without stronger documentary evidence.
+
+      '
+  status: proposed
+- finding_id: hc-r007-015
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Recast the transition non-causally: Gauss''s applicability problem and metric
+    expression of curvature meet in the Theorema Egregium; do not imply that the curvature formula historically
+    generated the applicability question.
+
+    '
+  target:
+    section: question_transitions
+    id: r007-qt002
+  proposed_change:
+    action: replace_fields
+    fields:
+      statement: 'Gauss''s applicability problem and his expression of curvature through the infinitesimal
+        metric meet in the Theorema Egregium: equal metric coefficients for corresponding surface elements
+        imply equal measure of curvature.
+
+        '
+      perspective: later_interpretation
+      certainty: high
+  status: proposed
+- finding_id: hc-r007-017
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted with the gap preserved. Retain Gauss-to-Riemann only as later interpretation/open
+    path. Do not create a direct historical influence or Story continues edge without additional transmission
+    evidence.
+
+    '
+  target:
+    section: question_transitions
+    id: r007-qt004
+  proposed_change:
+    action: manual_review
+    reason: 'Keep only as later interpretation/open path. Do not promote a direct historical influence
+      or Story continuation edge unless additional evidence establishes it.
+
+      '
+  status: proposed
+skipped: []

@@ -1,0 +1,348 @@
+review:
+  research_unit_id: R007
+  packet: R007-gauss-intrinsic-curvature.yaml
+  critic: historical-critic-v1
+  status: reviewed
+  summary:
+    pass: 12
+    revise: 3
+    weak_evidence: 2
+    reject: 0
+  overall_assessment: >
+    The packet is bounded and substantially source-grounded. Its strongest material is the
+    primary-source distinction between spatial-form-dependent and deformation-independent
+    surface relations and the published Theorema Egregium. The critic identifies one factual
+    reversal in the curvature-definition chronology, one transition that overstates a logical
+    sequence, one overly evaluative historiographical formulation, and two places where
+    contextual or downstream historical linkage should remain explicitly weak rather than be
+    upgraded into causal Story edges.
+
+findings:
+  - id: hc-r007-001
+    classification: REVISE
+    target:
+      section: chronology
+      match:
+        date: "1827-10-08"
+    reason: >
+      The event reverses Gauss's ratio. In §6 the pointwise measure of curvature is the
+      integral curvature (area of the spherical image) divided by the area of the surface
+      element, not surface-element area divided by spherical-image area.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "1827 paper §6"
+        supports: curvature_definition_ratio
+    proposed_change:
+      action: replace_entry
+      value:
+        date: "1827-10-08"
+        date_type: presentation
+        event: >
+          Gauss presented the Disquisitiones generales circa superficies curvas to the Royal
+          Society of Göttingen. The published memoir defines a pointwise measure of curvature
+          as the ratio of the infinitesimal area of the spherical image to the corresponding
+          infinitesimal area on the surface and derives formulas in general surface coordinates.
+        perspective: historical
+        certainty: high
+        sources:
+          - src-gauss-1827-1902
+        primary_locator: "§§6–10; presentation date on title page"
+
+  - id: hc-r007-002
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a001
+    reason: >
+      The secondary historical sources support Euler as a substantive predecessor in surface
+      curvature, and the assertion avoids a priority superlative.
+    evidence:
+      - source_id: src-euler-dsb
+        locator: "section on geometry and surface curvature"
+        supports: Euler_surface_curvature_predecessor
+      - source_id: src-kline-1990
+        locator: "chapter 37 opening"
+        supports: pre_Gaussian_surface_theory
+
+  - id: hc-r007-003
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a002
+    reason: >
+      Monge's role as a pre-Gaussian contributor is supported and the wording explicitly
+      resists a single-inventor narrative.
+    evidence:
+      - source_id: src-kline-1990
+        locator: "chapter 37 opening"
+        supports: Monge_predecessor
+      - source_id: src-eom-differential-geometry
+        locator: "historical section"
+        supports: Monge_surface_treatise
+
+  - id: hc-r007-004
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a003
+    reason: >
+      Gauss's primary text directly supports the spherical-image definition and the use of
+      general surface coordinates.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "§§6–10"
+        supports: Gauss_curvature_definition
+
+  - id: hc-r007-005
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a004
+    reason: >
+      §12 explicitly compares the infinitesimal line elements of developed surfaces and sets
+      the corresponding E, F, G coefficients equal. The packet flags isometry as modern
+      terminology rather than Gauss's word.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "§12"
+        supports: development_preserves_line_element
+
+  - id: hc-r007-006
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a005
+    reason: >
+      This closely paraphrases the theorem as Gauss states it and does not silently replace
+      his language of development with the modern word isometry.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "§12 theorem"
+        supports: curvature_invariance_under_development
+
+  - id: hc-r007-007
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a006
+    reason: >
+      Gauss's contemporary abstract explicitly distinguishes relations depending on spatial
+      form from those independent of the forms of a flexible but inextensible surface. The
+      assertion appropriately avoids attributing the later terms intrinsic/extrinsic to him.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "Abstract of the paper of 1827, concluding discussion"
+        supports: Gauss_deformation_independent_distinction
+
+  - id: hc-r007-008
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a007
+    reason: >
+      The statement is explicitly marked modern_abstraction and accurately describes the
+      standard modern reading of the theorem rather than presenting that vocabulary as Gauss's.
+    evidence:
+      - source_id: src-dombrowski-1979
+        locator: "discussion of Theorema Egregium"
+        supports: modern_intrinsic_reading
+      - source_id: src-darrigol-2021
+        locator: "chapter 8 opening"
+        supports: intrinsic_metric_curvature_reading
+
+  - id: hc-r007-009
+    classification: REVISE
+    target:
+      section: assertions
+      id: r007-a008
+    reason: >
+      "A decisive step toward intrinsic surface geometry" is a broad evaluative historical
+      judgment. The sources support that later historians interpret Gauss's work as foundational,
+      but the packet can state that historiographical fact more precisely and avoid making the
+      evaluator's superlative into a canonical assertion.
+    evidence:
+      - source_id: src-kline-1990
+        locator: "chapter 37 introduction"
+        supports: later_historiographical_intrinsic_reading
+      - source_id: src-dombrowski-1979
+        locator: "pp. 97–153"
+        supports: historical_significance_of_1827_work
+    proposed_change:
+      action: replace_fields
+      fields:
+        statement: >
+          Later histories of differential geometry interpret Gauss's 1827 work as foundational
+          for intrinsic surface geometry, while Gauss's own text formulates the distinction in
+          terms of development, infinitesimal metric relations, and properties independent of a
+          surface's changing spatial form rather than the later technical vocabulary.
+        perspective: later_interpretation
+        certainty: high
+
+  - id: hc-r007-010
+    classification: WEAK_EVIDENCE
+    target:
+      section: assertions
+      id: r007-a009
+    reason: >
+      Kline explicitly connects Gauss's geodesy and mapmaking with his interest in surface
+      geometry, and Dombrowski documents surveying applications. That supports contextual
+      linkage, but documentary evidence establishing a stronger causal route from surveying to
+      the Theorema Egregium is not supplied here. The current wording is close to acceptable,
+      but this assertion should remain medium-certainty and must not be strengthened in Story
+      prose.
+    evidence:
+      - source_id: src-kline-1990
+        locator: "chapter 37 introduction"
+        supports: geodesy_as_context
+      - source_id: src-dombrowski-1979
+        locator: "discussion of geodesic triangles and surveying applications, pp. 114–115"
+        supports: geodetic_application_context
+    proposed_change:
+      action: manual_review
+      reason: >
+        Retain only if the human accepts an explicitly contextual, non-causal assertion. Do not
+        promote wording such as "geodesy motivated" or "surveying led to" without stronger
+        documentary evidence.
+
+  - id: hc-r007-011
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a010
+    reason: >
+      The primary memoir begins with embedded surfaces and a spherical normal map, while the
+      invariance result isolates quantities independent of metric-preserving deformation. The
+      assertion correctly resists the retrospective claim that Gauss simply abandoned ambient
+      Euclidean space.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "§§1–12"
+        supports: embedded_framework_and_invariance
+
+  - id: hc-r007-012
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a011
+    reason: >
+      The source sequence directly supports the claim: the curvature expression in metric
+      coefficients is followed by the invariance theorem.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "§§11–12"
+        supports: formula_then_invariance_theorem
+
+  - id: hc-r007-013
+    classification: PASS
+    target:
+      section: assertions
+      id: r007-a012
+    reason: >
+      Dombrowski explicitly reconstructs earlier Gauss discoveries around 1816, 1822, and 1825.
+      The packet marks this as later interpretation, medium certainty, and unpublished
+      chronology, which is appropriately calibrated.
+    evidence:
+      - source_id: src-dombrowski-1979
+        locator: "pp. 129–130"
+        supports: reconstructed_pre_1827_development
+
+  - id: hc-r007-014
+    classification: PASS
+    target:
+      section: question_transitions
+      id: r007-qt001
+    reason: >
+      The transition is explicitly retrospective and supported as background rather than direct
+      personal influence. It does not claim that Euler or Monge caused Gauss's formulation.
+    evidence:
+      - source_id: src-kline-1990
+        locator: "chapter 37 opening"
+        supports: earlier_surface_theory_background
+
+  - id: hc-r007-015
+    classification: REVISE
+    target:
+      section: question_transitions
+      id: r007-qt002
+    reason: >
+      "Once curvature is expressed ... the applicability problem asks" makes the mathematical
+      dependency sound like a historical sequence in which the curvature formula generated the
+      applicability question. Gauss's memoir treats representation/development of surfaces as
+      part of the broader problem, while the metric formula permits the invariance conclusion.
+      The causal/question-ordering relation should therefore be weakened.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "introductory remarks and §§11–12"
+        supports: applicability_problem_and_invariance_relation
+    proposed_change:
+      action: replace_fields
+      fields:
+        statement: >
+          Gauss's applicability problem and his expression of curvature through the
+          infinitesimal metric meet in the Theorema Egregium: equal metric coefficients for
+          corresponding surface elements imply equal measure of curvature.
+        perspective: later_interpretation
+        certainty: high
+
+  - id: hc-r007-016
+    classification: PASS
+    target:
+      section: question_transitions
+      id: r007-qt003
+    reason: >
+      The transition is clearly labeled later interpretation and is anchored in both the
+      invariance theorem and Gauss's own deformation-independent distinction.
+    evidence:
+      - source_id: src-gauss-1827-1902
+        locator: "§12 and 1827 abstract"
+        supports: basis_for_later_intrinsic_language
+
+  - id: hc-r007-017
+    classification: WEAK_EVIDENCE
+    target:
+      section: question_transitions
+      id: r007-qt004
+    reason: >
+      Darrigol and Kline support the mathematical/historiographical statement that Riemann
+      generalized Gauss's surface-metric ideas to higher dimensions. They do not, by themselves,
+      establish a detailed transmission chain or justify a strong continues/influenced edge in
+      the Atlas. The packet already recognizes this gap; it should remain explicit through
+      canonical promotion and Story drafting.
+    evidence:
+      - source_id: src-darrigol-2021
+        locator: "chapter 8 opening"
+        supports: Riemann_generalized_Gaussian_surface_geometry
+      - source_id: src-kline-1990
+        locator: "chapter 37"
+        supports: retrospective_Gauss_Riemann_connection
+    proposed_change:
+      action: manual_review
+      reason: >
+        Keep only as later interpretation/open path. Do not promote a direct historical
+        influence or Story continuation edge unless additional evidence establishes it.
+
+research_gaps:
+  - id: gap-r007-001
+    question: >
+      What documentary evidence, beyond later historical synthesis and practical application,
+      establishes how Gauss himself connected the Hanover survey/geodesy program to the
+      development of the Theorema Egregium?
+    needed_evidence: >
+      Gauss correspondence, notebooks, geodetic publications, or specialist historiography
+      specifically tracing the research transition rather than merely noting chronology.
+  - id: gap-r007-002
+    question: >
+      What historically documented transmission path connects Gauss's 1827 surface theory to
+      Riemann's 1854 higher-dimensional metric geometry?
+    needed_evidence: >
+      Riemann manuscripts/lecture context, Gauss-Riemann institutional evidence, or specialist
+      studies of the conceptual transmission and relevant intermediaries.
+  - id: gap-r007-003
+    question: >
+      Which exact primary editions/pages of Euler and Monge should be attached if their
+      predecessor roles are promoted beyond background context into detailed canonical claims?
+    needed_evidence: >
+      Primary editions of Euler's surface-curvature memoirs and Monge's surface theory with
+      page-level locators.
+
+sources: []

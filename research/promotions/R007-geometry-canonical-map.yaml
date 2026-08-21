@@ -1,0 +1,69 @@
+research_unit_id: R007
+packet: research/packets/R007-gauss-intrinsic-curvature.yaml
+canonical_entities:
+  - canonical_id: person-euler
+    reused_from: data/entities/core.yaml
+    packet_refs: [{section: entities, id: person-euler}]
+  - canonical_id: person-monge
+    packet_refs: [{section: entities, id: person-monge}]
+  - canonical_id: person-gauss
+    packet_refs: [{section: entities, id: person-gauss}]
+  - canonical_id: concept-surface-curvature
+    packet_refs: [{section: entities, id: concept-surface-curvature}]
+  - canonical_id: concept-surface-applicability
+    packet_refs: [{section: entities, id: concept-surface-applicability}]
+  - canonical_id: concept-intrinsic-surface-geometry
+    packet_refs: [{section: entities, id: concept-intrinsic-surface-geometry}]
+  - canonical_id: result-theorema-egregium
+    packet_refs: [{section: entities, id: result-theorema-egregium}]
+  - canonical_id: work-gauss-disquisitiones-surfaces
+    packet_refs: [{section: entities, id: work-gauss-disquisitiones-surfaces}]
+canonical_questions:
+  - canonical_id: q-r007-surface-curvature
+    packet_refs: [{section: research_questions, id: q002}]
+  - canonical_id: q-r007-surface-development
+    packet_refs: [{section: research_questions, id: q003}, {section: research_questions, id: q004}]
+  - canonical_id: q-r007-intrinsic-geometry
+    packet_refs: [{section: research_questions, id: q005}]
+canonical_assertions:
+  - canonical_id: assertion-r007-euler-surface-curvature
+    packet_refs: [{section: assertions, id: r007-a001}]
+  - canonical_id: assertion-r007-monge-surface-theory
+    packet_refs: [{section: assertions, id: r007-a002}]
+  - canonical_id: assertion-r007-gauss-curvature-definition
+    packet_refs: [{section: assertions, id: r007-a003}]
+  - canonical_id: assertion-r007-gauss-curvature-ratio
+    packet_refs: [{section: chronology, match: {date: '1827-10-08'}}]
+  - canonical_id: assertion-r007-gauss-development
+    packet_refs: [{section: assertions, id: r007-a004}]
+  - canonical_id: assertion-r007-gauss-metric-curvature-formula
+    packet_refs: [{section: assertions, id: r007-a011}]
+  - canonical_id: assertion-r007-egregium-invariance
+    packet_refs: [{section: assertions, id: r007-a005}]
+  - canonical_id: assertion-r007-gauss-deformation-independent
+    packet_refs: [{section: assertions, id: r007-a006}]
+  - canonical_id: assertion-r007-egregium-modern-intrinsic
+    packet_refs: [{section: assertions, id: r007-a007}]
+  - canonical_id: assertion-r007-gauss-foundational-reading
+    packet_refs: [{section: assertions, id: r007-a008}]
+  - canonical_id: assertion-r007-geodesy-context
+    packet_refs: [{section: assertions, id: r007-a009}]
+  - canonical_id: assertion-r007-curvature-question
+    packet_refs: [{section: question_transitions, id: r007-qt001}]
+  - canonical_id: assertion-r007-development-question
+    packet_refs: [{section: question_transitions, id: r007-qt002}]
+  - canonical_id: assertion-r007-intrinsic-question
+    packet_refs: [{section: question_transitions, id: r007-qt003}]
+stories:
+  - story_id: story-r007-intrinsic-geometry
+    steps:
+      - step_id: intrinsic-1
+        canonical_assertion_refs: [assertion-r007-euler-surface-curvature, assertion-r007-monge-surface-theory]
+      - step_id: intrinsic-2
+        canonical_assertion_refs: [assertion-r007-gauss-curvature-definition, assertion-r007-gauss-curvature-ratio, assertion-r007-curvature-question]
+      - step_id: intrinsic-3
+        canonical_assertion_refs: [assertion-r007-gauss-development, assertion-r007-development-question]
+      - step_id: intrinsic-4
+        canonical_assertion_refs: [assertion-r007-egregium-invariance, assertion-r007-gauss-metric-curvature-formula]
+      - step_id: intrinsic-5
+        canonical_assertion_refs: [assertion-r007-gauss-deformation-independent, assertion-r007-gauss-foundational-reading, assertion-r007-egregium-modern-intrinsic, assertion-r007-intrinsic-question]

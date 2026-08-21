@@ -1,0 +1,35 @@
+- id: source-gauss-1827-1902
+  title: General Investigations of Curved Surfaces of 1827 and 1825
+  author: Carl Friedrich Gauss; translated by James Caddall Morehead and Adam Miller Hiltebeitel
+  year: 1902
+  kind: primary_translation
+  url: https://www.gutenberg.org/ebooks/36856
+- id: source-dombrowski-1979
+  title: 150 years after Gauss' ‘Disquisitiones generales circa superficies curvas’
+  author: Peter Dombrowski
+  year: 1979
+  kind: secondary_specialist
+  url: https://numdam.org/item/AST_1979__62__R1_0/
+- id: source-kline-1990
+  title: Mathematical Thought from Ancient to Modern Times, Vol. 3 — The Differential Geometry of Gauss and Riemann
+  author: Morris Kline
+  year: 1990
+  kind: secondary_history
+  url: https://doi.org/10.1093/oso/9780195061376.003.0004
+- id: source-darrigol-2021
+  title: Relativity Principles and Theories from Galileo to Einstein — From Riemann to Ricci
+  author: Olivier Darrigol
+  year: 2021
+  kind: secondary_history
+  url: https://doi.org/10.1093/oso/9780192849533.003.0008
+- id: source-euler-dsb
+  title: Leonhard Euler
+  author: A. P. Yushkevich and others
+  year: 1970
+  kind: secondary_reference
+  url: https://mathshistory.st-andrews.ac.uk/DSB/Euler.pdf
+- id: source-eom-differential-geometry
+  title: Differential geometry
+  author: Encyclopedia of Mathematics
+  kind: reference
+  url: https://encyclopediaofmath.org/wiki/Differential_geometry
