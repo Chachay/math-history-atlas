@@ -29,6 +29,7 @@ Before proposing a topic or editing files:
    - `research/prompts/story-critic-v1.md`
 7. Inspect the latest Network/Story semantics before drafting. In particular, Story steps may carry Story-local temporal anchors; entity birth/start dates are not automatically the date at which an entity appears in a Story.
 8. Check `research/units/` for a file whose name begins with the requested unit ID, e.g. `R003-*.md`. If exactly one approved brief exists, read it and treat its scope/integration target as the default topic unless current `main` makes the brief stale or contradictory. If several briefs exist, ask which one to use. If none exists, use the topic-selection procedure below.
+9. When artifacts for the unit already exist, run or inspect `python -m scripts.research_unit_status R00X` before deciding what stage to resume.
 
 Do not rely on remembered repository state when the current `main` branch can be read.
 
@@ -76,6 +77,14 @@ For units involving an external domain, the packet must also distinguish the ext
 
 Normalize persistent sources. Web search is discovery, not persistent evidence.
 
+Before the packet enters criticism or human review, run the artifact gate:
+
+```text
+python -m scripts.check_research_artifact research/packets/R00X-....yaml
+```
+
+No malformed or structurally unresolved artifact should enter a semantic review gate.
+
 ### A2. Independent Historical Critic
 
 Apply `historical-critic-v1.md` adversarially. Attempt to falsify claims and transitions rather than improve prose.
@@ -89,6 +98,14 @@ Every finding must have a stable unique `id` and classification:
 
 For actionable non-PASS findings, provide machine-actionable `target` / `proposed_change` only when safe.
 
+After saving the review, run the artifact gate again:
+
+```text
+python -m scripts.check_research_artifact research/reviews/R00X-....yaml
+```
+
+This must verify review IDs, source references, and current packet targets before the human-resolution gate.
+
 ### A3. Human research resolution
 
 Present only the material non-PASS findings to the user, with a concise recommendation for each. Do not silently accept critic findings on the user's behalf.
@@ -97,7 +114,7 @@ After the user decides, record the human resolution.
 
 ### A4. Integrity binding and verified promotion
 
-Bind the resolution to the exact packet/review fingerprints using the repository tooling. Refuse stale or incomplete promotion.
+Bind the resolution to the exact packet/review fingerprints using the repository tooling. `bind_resolution` performs semantic resolution validation before writing fingerprints and must refuse stale, incomplete, or unresolvable decisions.
 
 Run package-aware integrity tooling as modules from the repository root:
 
@@ -106,6 +123,8 @@ python -m scripts.bind_resolution R00X
 python -m scripts.promote_verified R00X
 python -m scripts.promote_verified R00X --apply
 ```
+
+For smartphone/connector-centered operation, use the permanent **Research Unit Ops** GitHub Actions workflow rather than adding a unit-specific temporary workflow. It accepts a unit ID, target ref, and operation (`status`, `check`, `bind`, `promote-dry-run`, or `promote-apply`) and delegates semantics to repository Python modules.
 
 Do not invoke `bind_resolution.py` or `promote_verified.py` by file path in CI runners; both import the `scripts` package and must retain the repository root on Python's module search path.
 
@@ -122,6 +141,8 @@ Research Packet
 → integrity binding
 → canonical object/assertion
 ```
+
+Use `python -m scripts.research_unit_status R00X` as a read-only audit of the current gate; it must not replace human judgment.
 
 ## Phase B — Story drafting and editorial criticism
 

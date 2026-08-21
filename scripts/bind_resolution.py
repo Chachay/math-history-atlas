@@ -7,6 +7,12 @@ from typing import Any
 import yaml
 
 from scripts.integrity import artifact_integrity, validate_finding_ids
+from scripts.research_validation import (
+    require_no_errors,
+    validate_packet,
+    validate_resolution_semantics,
+    validate_review,
+)
 
 
 def load_yaml(path: Path) -> dict[str, Any]:
@@ -31,7 +37,7 @@ def one(directory: Path, pattern: str) -> Path:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Bind a human resolution to exact packet/review content hashes."
+        description="Validate and bind a human resolution to exact packet/review content hashes."
     )
     parser.add_argument("unit_id")
     args = parser.parse_args()
@@ -40,9 +46,7 @@ def main() -> int:
     root = Path(__file__).resolve().parents[1]
     packet_file = one(root / "research/packets", f"{unit_id}-*.yaml")
     review_file = one(root / "research/reviews", f"{unit_id}-*.yaml")
-    resolution_file = one(
-        root / "research/resolutions", f"{unit_id}-*-resolution.yaml"
-    )
+    resolution_file = one(root / "research/resolutions", f"{unit_id}-*-resolution.yaml")
 
     packet = load_yaml(packet_file)
     review = load_yaml(review_file)
@@ -57,6 +61,11 @@ def main() -> int:
         raise RuntimeError(
             f"Unit mismatch: packet={packet_unit}, review={review_unit}, resolution={resolution_unit}"
         )
+
+    errors = validate_packet(packet)
+    errors.extend(validate_review(review, packet))
+    errors.extend(validate_resolution_semantics(packet, review, resolution))
+    require_no_errors(errors, label=f"{unit_id} pre-bind")
 
     resolution["packet"] = packet_file.name
     resolution["review"] = review_file.name
