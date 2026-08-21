@@ -5,41 +5,46 @@ research_unit:
     approximate_start: 1840
     approximate_end: 1895
     core_period: 1844–1894
-  scope_summary: >
-    Investigation of the nineteenth-century factorization problem in algebraic number theory from
-    Kummer's ideal divisors for cyclotomic integers through Dedekind's 1871 ideal theory and its
-    revisions in 1877, 1879, and 1894. The packet follows the internal mathematical tension created
-    when element factorization ceases to behave like rational-integer arithmetic, and asks what
-    replacement objects restore a usable decomposition theory. It distinguishes Dedekind's historical
-    systems of algebraic integers and ideals from later ring-theoretic language, and treats the
-    relationship to R006's Galois/equation branch as a possible intersection rather than a causal chain.
+  scope_summary: 'Investigation of the nineteenth-century factorization problem in algebraic number theory
+    from Kummer''s ideal divisors for cyclotomic integers through Dedekind''s 1871 ideal theory and its revisions
+    in 1877, 1879, and 1894. The packet follows the internal mathematical tension created when element factorization
+    ceases to behave like rational-integer arithmetic, and asks what replacement objects restore a usable
+    decomposition theory. It distinguishes Dedekind''s historical systems of algebraic integers and ideals
+    from later ring-theoretic language, and treats the relationship to R006''s Galois/equation branch as
+    a possible intersection rather than a causal chain.
+
+    '
   origin_pattern: internal_mathematical_development
-  prior_mathematical_problem: >
-    Arithmetic in algebraic-number domains did not in general retain the familiar unique decomposition
-    of rational integers into primes. Kummer addressed this in cyclotomic settings by reasoning with
-    ideal divisors; Dedekind and Kronecker later sought theories applicable more generally.
+  prior_mathematical_problem: 'Arithmetic in algebraic-number domains did not in general retain the familiar
+    unique decomposition of rational integers into primes. Kummer addressed this in cyclotomic settings
+    by reasoning with ideal divisors; Dedekind and Kronecker later sought theories applicable more generally.
+
+    '
   generated_date: '2026-08-21'
   research_status: researched
   editorial_status: not_accepted
-
 research_questions:
 - id: q001
-  question: What factorization failure was historically at issue in algebraic number theory before Dedekind's ideal theory?
+  question: What factorization failure was historically at issue in algebraic number theory before Dedekind's
+    ideal theory?
 - id: q002
   question: What did Kummer's ideal divisors accomplish, and what was the scope of his construction?
 - id: q003
-  question: How did Dedekind's 1871 ideal theory turn divisibility conditions into systems of algebraic integers?
+  question: How did Dedekind's 1871 ideal theory turn divisibility conditions into systems of algebraic
+    integers?
 - id: q004
   question: How did Dedekind's presentation change between 1871 and the 1877, 1879, and 1894 versions?
 - id: q005
   question: In what historical sense did factorization become recoverable at the level of ideals?
 - id: q006
-  question: How should fields, algebraic integers, bases, modules, and ideals be described without projecting later abstract algebra backward?
+  question: How should fields, algebraic integers, bases, modules, and ideals be described without projecting
+    later abstract algebra backward?
 - id: q007
-  question: How did Dedekind's and Kronecker's approaches differ, and why should neither be presented as the inevitable path?
+  question: How did Dedekind's and Kronecker's approaches differ, and why should neither be presented as
+    the inevitable path?
 - id: q008
-  question: Is there evidence for a historical R006 Galois-solvability → Dedekind-ideal chain, or only a broader algebraic-number intersection?
-
+  question: Is there evidence for a historical R006 Galois-solvability → Dedekind-ideal chain, or only
+    a broader algebraic-number intersection?
 entities:
 - id: person-kummer
   type: Person
@@ -104,146 +109,192 @@ entities:
   canonical_name: Dedekind's 1894 revised theory of algebraic integers
   original_title: Supplement XI to Dirichlet's Vorlesungen über Zahlentheorie, fourth edition
   year: 1894
-
 assertions:
 - id: r009-a001
   subject: work-kummer-1847-complex-numbers
   predicate: contributed_to
   object: concept-ideal-divisor
-  period: {from: 1847, to: 1847}
+  period:
+    from: 1846
+    to: 1847
   perspective: historical
   certainty: high
-  sources: [src-r009-kummer-1847, src-r009-avigad-2004]
-  claim: >
-    Kummer's 1847 work introduced ideal divisors/ideal complex numbers in the cyclotomic setting as a
-    way to recover arithmetic decomposition behavior that ordinary factors did not provide.
+  sources:
+  - src-r009-kummer-1847
+  - src-r009-avigad-2004
+  claim: Kummer publicly outlined his ideal-divisor theory in 1846 and republished the overview with changes
+    in Crelle's Journal in 1847; the theory introduced ideal divisors/ideal complex numbers in cyclotomic
+    arithmetic to recover prime-factor reasoning unavailable from ordinary factors.
 - id: r009-a002
   subject: concept-ideal-divisor
   predicate: contributed_to
   object: concept-dedekind-ideal
-  period: {from: 1847, to: 1871}
+  period:
+    from: 1847
+    to: 1871
   perspective: historical
   certainty: high
-  sources: [src-r009-avigad-2004, src-r009-edwards-1980]
-  claim: >
-    Dedekind's ideal theory explicitly addressed the problem previously treated through Kummer's ideal
-    divisors, while replacing indirect divisibility predicates with systems of algebraic integers.
+  sources:
+  - src-r009-avigad-2004
+  - src-r009-edwards-1980
+  claim: 'Dedekind''s ideal theory explicitly addressed the problem previously treated through Kummer''s
+    ideal divisors, while replacing indirect divisibility predicates with systems of algebraic integers.
+
+    '
 - id: r009-a003
   subject: work-dedekind-1871-supplement
   predicate: contributed_to
   object: concept-algebraic-number-field
-  period: {from: 1871, to: 1871}
+  period:
+    from: 1871
+    to: 1871
   perspective: historical
   certainty: high
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    In the 1871 supplement Dedekind treats a finite number field as a system closed under the four
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: 'In the 1871 supplement Dedekind treats a finite number field as a system closed under the four
     arithmetic operations and develops bases, conjugacy, norms, discriminants, and its algebraic integers.
+
+    '
 - id: r009-a004
   subject: work-dedekind-1871-supplement
   predicate: contributed_to
   object: concept-dedekind-ideal
-  period: {from: 1871, to: 1871}
+  period:
+    from: 1871
+    to: 1871
   perspective: historical
   certainty: high
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    Dedekind identifies an ideal divisor with the system of algebraic integers divisible by it; these
-    systems are closed under addition and under multiplication by arbitrary integers of the field.
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: 'Dedekind identifies an ideal divisor with the system of algebraic integers divisible by it;
+    these systems are closed under addition and under multiplication by arbitrary integers of the field.
+
+    '
 - id: r009-a005
   subject: work-dedekind-1871-supplement
   predicate: contributed_to
   object: concept-prime-ideal
-  period: {from: 1871, to: 1871}
+  period:
+    from: 1871
+    to: 1871
   perspective: historical
   certainty: high
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    The 1871 presentation defines prime ideals through the divisibility ordering of ideals and proves a
-    prime-ideal property analogous to the familiar prime-divisor property for products.
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: 'The 1871 presentation defines prime ideals through the divisibility ordering of ideals and proves
+    a prime-ideal property analogous to the familiar prime-divisor property for products.
+
+    '
 - id: r009-a006
   subject: work-dedekind-1871-supplement
   predicate: contributed_to
   object: concept-ideal-factorization
-  period: {from: 1871, to: 1871}
+  period:
+    from: 1871
+    to: 1871
   perspective: historical
   certainty: high
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    Dedekind proves that an ideal is determined by the highest powers of prime ideals dividing it and
-    subsequently defines ideal multiplication, yielding the decomposition structure that replaces
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: 'Dedekind proves that an ideal is determined by the highest powers of prime ideals dividing it
+    and subsequently defines ideal multiplication, yielding the decomposition structure that replaces
     ordinary element factorization in the theory.
+
+    '
 - id: r009-a007
   subject: work-dedekind-1871-supplement
   predicate: reframed
   object: work-dedekind-1879-supplement
-  period: {from: 1871, to: 1879}
+  period:
+    from: 1871
+    to: 1879
   perspective: later_interpretation
   certainty: high
-  sources: [src-r009-avigad-2004]
-  claim: >
-    Dedekind published substantially revised presentations of ideal theory; the later versions moved
-    away from the 1871 dependence on 'simple ideals' and particular congruence representations toward
+  sources:
+  - src-r009-avigad-2004
+  claim: 'Dedekind published substantially revised presentations of ideal theory; the later versions moved
+    away from the 1871 dependence on ''simple ideals'' and particular congruence representations toward
     a more abstract treatment of ideals and their operations.
+
+    '
 - id: r009-a008
   subject: work-dedekind-1879-supplement
   predicate: reframed
   object: work-dedekind-1894-supplement
-  period: {from: 1879, to: 1894}
+  period:
+    from: 1879
+    to: 1894
   perspective: later_interpretation
   certainty: high
-  sources: [src-r009-avigad-2004, src-r009-sep-dedekind]
-  claim: >
-    Ideal theory was not a single frozen 1871 formulation: Dedekind repeatedly revised the exposition,
+  sources:
+  - src-r009-avigad-2004
+  - src-r009-sep-dedekind
+  claim: 'Ideal theory was not a single frozen 1871 formulation: Dedekind repeatedly revised the exposition,
     with versions in 1871, 1877, 1879, and 1894.
+
+    '
 - id: r009-a009
   subject: person-kronecker
   predicate: contributed_to
   object: concept-ideal-factorization
-  period: {from: 1850, to: 1891}
+  period:
+    from: 1850
+    to: 1891
   perspective: historical
-  certainty: high
-  sources: [src-r009-avigad-2004, src-r009-edwards-1980]
-  claim: >
-    Kronecker developed a distinct, explicitly computational approach to the extension of ideal
-    factorization, so Dedekind's set/system-based formulation should not be narrated as the only
-    contemporary route.
+  certainty: medium
+  sources:
+  - src-r009-avigad-2004
+  - src-r009-edwards-1980
+  claim: Specialist histories describe Kronecker as developing a distinct, explicitly computational approach
+    to the extension of ideal factorization. This is sufficient to prevent narrating Dedekind's formulation
+    as the only contemporary route, but not to reconstruct Kronecker's technical theory here.
 - id: r009-a010
   subject: concept-dedekind-ideal
   predicate: contributed_to
   object: concept-ideal-factorization
-  period: {from: 1871, to: 1894}
+  period:
+    from: 1871
+    to: 1894
   perspective: modern_abstraction
   certainty: high
-  sources: [src-r009-dedekind-1871-avigad, src-r009-avigad-2004]
-  claim: >
-    In modern terminology, Dedekind's systems satisfy the familiar ideal closure conditions in the ring
-    of integers of a number field, and nonzero ideals admit unique prime-ideal factorization; this is a
-    modern reformulation of the historical theory, not Dedekind's later ring-theoretic vocabulary.
+  sources:
+  - src-r009-dedekind-1871-avigad
+  - src-r009-avigad-2004
+  claim: 'In modern terminology, Dedekind''s systems satisfy the familiar ideal closure conditions in
+    the ring of integers of a number field, and nonzero ideals admit unique prime-ideal factorization;
+    this is a modern reformulation of the historical theory, not Dedekind''s later ring-theoretic vocabulary.
+
+    '
 - id: r009-a011
   subject: concept-algebraic-number-field
   predicate: contributed_to
   object: concept-dedekind-ideal
-  period: {from: 1871, to: 1894}
+  period:
+    from: 1871
+    to: 1894
   perspective: historical
   certainty: high
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    Dedekind's ideal theory is formulated relative to the system of algebraic integers of a finite
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: 'Dedekind''s ideal theory is formulated relative to the system of algebraic integers of a finite
     algebraic number field, rather than as a theory of ideals in arbitrary rings.
+
+    '
 - id: r009-a012
   subject: person-dedekind
   predicate: contributed_to
   object: concept-algebraic-number-field
-  period: {from: 1871, to: 1871}
-  perspective: historical
+  period:
+    from: 1871
+    to: 1871
+  perspective: later_interpretation
   certainty: medium
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    Dedekind's 1871 discussion explicitly notes a connection from the finite-field framework to principles
-    introduced by Galois, but this local textual connection does not by itself establish a simple historical
-    chain from Galois's solvability problem to Dedekind's ideal theory.
-
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: Dedekind's 1871 discussion of conjugate finite fields explicitly remarks that pursuing those questions
+    leads to principles introduced by Galois. This supports a textual intersection around fields and conjugacy,
+    but not a claim that Galois's solvability problem motivated Dedekind's construction of ideals.
 question_transitions:
 - id: r009-qt001
   from: q001
@@ -251,132 +302,167 @@ question_transitions:
   relation: reframed_by
   perspective: historical
   certainty: high
-  sources: [src-r009-kummer-1847, src-r009-avigad-2004]
-  claim: >
-    Failure of ordinary decomposition in cyclotomic arithmetic made the behavior of supplementary ideal
-    divisors a concrete way to preserve prime-factor reasoning.
+  sources:
+  - src-r009-kummer-1847
+  - src-r009-avigad-2004
+  claim: 'Failure of ordinary decomposition in cyclotomic arithmetic made the behavior of supplementary
+    ideal divisors a concrete way to preserve prime-factor reasoning.
+
+    '
 - id: r009-qt002
   from: q002
   to: q003
   relation: generalized_and_reframed_by
   perspective: historical
   certainty: high
-  sources: [src-r009-avigad-2004, src-r009-edwards-1980]
-  claim: >
-    Dedekind and Kronecker took up the extension of Kummer-style factorization beyond its original
-    cyclotomic setting; Dedekind's route reified divisibility conditions as systems of integers.
+  sources:
+  - src-r009-avigad-2004
+  - src-r009-edwards-1980
+  claim: 'Dedekind and Kronecker took up the extension of Kummer-style factorization beyond its original
+    cyclotomic setting; Dedekind''s route reified divisibility conditions as systems of integers.
+
+    '
 - id: r009-qt003
   from: q003
   to: q005
   relation: answered_by
   perspective: historical
   certainty: high
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    Once ideals were treated as systems on which divisibility, primality, powers, and multiplication could
-    be defined, Dedekind could formulate the replacement decomposition theory at the level of ideals.
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: 'Once ideals were treated as systems on which divisibility, primality, powers, and multiplication
+    could be defined, Dedekind could formulate the replacement decomposition theory at the level of ideals.
+
+    '
 - id: r009-qt004
   from: q003
   to: q004
   relation: revised_over_time
   perspective: later_interpretation
   certainty: high
-  sources: [src-r009-avigad-2004]
-  claim: >
-    Comparing Dedekind's successive versions shows a methodological shift away from representation by
-    special congruences toward increasingly abstract reasoning about ideals as objects.
+  sources:
+  - src-r009-avigad-2004
+  claim: 'Comparing Dedekind''s successive versions shows a methodological shift away from representation
+    by special congruences toward increasingly abstract reasoning about ideals as objects.
+
+    '
 - id: r009-qt005
   from: q005
   to: q006
   relation: creates_terminology_risk
   perspective: modern_abstraction
   certainty: high
-  sources: [src-r009-avigad-2004, src-r009-sep-dedekind]
-  claim: >
-    The modern theorem is naturally stated in rings, modules, and Dedekind domains, but those terms must
-    not be substituted wholesale for Dedekind's historical vocabulary and scope.
+  sources:
+  - src-r009-avigad-2004
+  - src-r009-sep-dedekind
+  claim: 'The modern theorem is naturally stated in rings, modules, and Dedekind domains, but those terms
+    must not be substituted wholesale for Dedekind''s historical vocabulary and scope.
+
+    '
 - id: r009-qt006
   from: q002
   to: q007
   relation: branches
   perspective: historical
   certainty: high
-  sources: [src-r009-avigad-2004, src-r009-edwards-1980]
-  claim: >
-    The post-Kummer problem produced distinct Dedekindian and Kroneckerian approaches rather than one
-    inevitable conceptual trajectory.
+  sources:
+  - src-r009-avigad-2004
+  - src-r009-edwards-1980
+  claim: 'The post-Kummer problem produced distinct Dedekindian and Kroneckerian approaches rather than
+    one inevitable conceptual trajectory.
+
+    '
 - id: r009-qt007
   from: q008
   to: q003
   relation: possible_intersection
   perspective: later_interpretation
   certainty: low
-  sources: [src-r009-dedekind-1871-avigad]
-  claim: >
-    R006 and R009 can intersect around algebraic numbers, finite fields, roots, and conjugacy, but current
-    evidence is insufficient for a Story edge claiming that Galois solvability historically motivated
-    Dedekind's ideal theory.
+  sources:
+  - src-r009-dedekind-1871-avigad
+  claim: 'R006 and R009 can intersect around algebraic numbers, finite fields, roots, and conjugacy, but
+    current evidence is insufficient for a Story edge claiming that Galois solvability historically motivated
+    Dedekind''s ideal theory.
 
+    '
 intersection_candidates:
 - id: r009-int001
   with: R006
   type: cautious_cross_story_intersection
-  basis: >
-    Dedekind's 1871 number-field discussion explicitly refers to Galoisian principles when discussing
+  basis: 'Dedekind''s 1871 number-field discussion explicitly refers to Galoisian principles when discussing
     conjugate fields, while R006 already contains roots, substitutions, and the later question of fields
     as algebraic objects. This supports shared mathematical territory, not a direct motivation claim.
+
+    '
   certainty: medium
-  sources: [src-r009-dedekind-1871-avigad]
+  sources:
+  - src-r009-dedekind-1871-avigad
 - id: r009-int002
   with: future-abstract-algebra
   type: downstream_modern_relation
-  basis: >
-    Later abstract ring and module theory generalizes the ideal structures seen here. This is a future
+  basis: 'Later abstract ring and module theory generalizes the ideal structures seen here. This is a future
     handoff and must not be written as Dedekind already working in twentieth-century commutative algebra.
-  certainty: high
-  sources: [src-r009-sep-dedekind]
 
+    '
+  certainty: high
+  sources:
+  - src-r009-sep-dedekind
 concept_state_candidates:
 - id: r009-cs001
   concept: concept-ideal-divisor
-  period: {from: 1847, to: 1870}
-  label: >
-    Kummer's ideal divisors are characterized through divisibility behavior in cyclotomic integer domains;
-    they should not be silently identified with Dedekind's later sets/systems.
+  period:
+    from: 1847
+    to: 1870
+  label: 'Kummer''s ideal divisors are characterized through divisibility behavior in cyclotomic integer
+    domains; they should not be silently identified with Dedekind''s later sets/systems.
+
+    '
 - id: r009-cs002
   concept: concept-dedekind-ideal
-  period: {from: 1871, to: 1876}
-  label: >
-    Dedekind's first formulation uses systems of integers together with a substantial dependence on
-    simple ideals represented through congruences.
+  period:
+    from: 1871
+    to: 1876
+  label: 'Dedekind''s first formulation uses systems of integers together with a substantial dependence
+    on simple ideals represented through congruences.
+
+    '
 - id: r009-cs003
   concept: concept-dedekind-ideal
-  period: {from: 1877, to: 1894}
-  label: >
-    Dedekind's later presentations increasingly foreground abstract operations and properties of ideals
-    rather than particular congruence representations.
+  period:
+    from: 1877
+    to: 1894
+  label: 'Dedekind''s later presentations increasingly foreground abstract operations and properties of
+    ideals rather than particular congruence representations.
 
+    '
 story_candidates:
 - id: r009-story-candidate-001
   title: What survives when unique factorization fails?
-  question_spine: [q001, q002, q003, q005, q006]
-  proposed_arc: >
-    Begin with the arithmetic tension created by failed element factorization; introduce Kummer's ideal
-    divisors as an earlier response; follow Dedekind's replacement of indirect divisibility talk by systems
-    of algebraic integers; show how prime-ideal decomposition restores a structural analogue of arithmetic;
-    end by separating the historical theory from its later ring-theoretic abstraction.
-  integration_note: >
-    If R006 appears, use it as a restrained intersection around algebraic numbers/fields rather than as
-    the opening cause of R009.
+  question_spine:
+  - q001
+  - q002
+  - q003
+  - q005
+  - q006
+  proposed_arc: 'Begin with the arithmetic tension created by failed element factorization; introduce
+    Kummer''s ideal divisors as an earlier response; follow Dedekind''s replacement of indirect divisibility
+    talk by systems of algebraic integers; show how prime-ideal decomposition restores a structural analogue
+    of arithmetic; end by separating the historical theory from its later ring-theoretic abstraction.
 
+    '
+  integration_note: 'If R006 appears, use it as a restrained intersection around algebraic numbers/fields
+    rather than as the opening cause of R009.
+
+    '
 sources:
 - id: src-r009-kummer-1847
   type: primary_translation
   author: Ernst Eduard Kummer
   title: On the Theory of Complex Numbers / On Ideal Numbers
-  publication: >
-    Translation of material from Journal für die reine und angewandte Mathematik 35 (1847), pp. 319–326,
-    in D. E. Smith, A Source Book in Mathematics (1929)
+  publication: 'Translation of material from Journal für die reine und angewandte Mathematik 35 (1847),
+    pp. 319–326, in D. E. Smith, A Source Book in Mathematics (1929)
+
+    '
   year: 1847
   url: https://www.sphere.univ-paris-diderot.fr/IMG/pdf/idealelementsenglishtranslation1846_ou_1847smitha_source_book_in_mathematics1929.pdf
   locator: translated opening and discussion of ideal complex divisors
@@ -424,33 +510,40 @@ sources:
   year: 2025
   url: https://plato.stanford.edu/entries/dedekind-foundations/
   locator: sections on algebraic number theory and bibliography
-
 uncertainties:
 - id: r009-u001
-  issue: >
-    The packet has not established a direct causal line from R006's equation-solvability problem to
-    Dedekind's ideal theory. Dedekind's explicit reference to Galois occurs inside his field discussion,
+  issue: 'The packet has not established a direct causal line from R006''s equation-solvability problem
+    to Dedekind''s ideal theory. Dedekind''s explicit reference to Galois occurs inside his field discussion,
     but that is not sufficient evidence that Galois theory motivated the ideal construction.
-  impact: >
-    Any R006↔R009 Story connection should be an intersection or later synthesis unless stronger evidence
-    is found.
+
+    '
+  impact: 'Any R006↔R009 Story connection should be an intersection or later synthesis unless stronger
+    evidence is found.
+
+    '
 - id: r009-u002
-  issue: >
-    The exact chronology and conceptual differences among Dedekind's 1877, 1879, and 1894 formulations
+  issue: 'The exact chronology and conceptual differences among Dedekind''s 1877, 1879, and 1894 formulations
     deserve edition-by-edition primary-source checking beyond the 1871 translation and secondary overview.
-  impact: >
-    The Story may safely say that Dedekind revised the theory repeatedly, but should avoid detailed claims
-    about each edition unless separately evidenced.
+
+    '
+  impact: 'The Story may safely say that Dedekind revised the theory repeatedly, but should avoid detailed
+    claims about each edition unless separately evidenced.
+
+    '
 - id: r009-u003
-  issue: >
-    Kronecker's divisor theory is represented mainly through specialist secondary comparison in this
-    packet rather than a primary-source reconstruction.
-  impact: >
-    Kronecker should appear as a historically real alternative route, but detailed technical contrasts
+  issue: 'Kronecker''s divisor theory is represented mainly through specialist secondary comparison in
+    this packet rather than a primary-source reconstruction.
+
+    '
+  impact: 'Kronecker should appear as a historically real alternative route, but detailed technical contrasts
     should remain limited or become a supplementary evidence gap.
+
+    '
 - id: r009-u004
-  issue: >
-    Modern statements using 'ring of integers', 'module', 'Dedekind domain', and textbook unique
+  issue: 'Modern statements using ''ring of integers'', ''module'', ''Dedekind domain'', and textbook unique
     factorization of ideals compress historical changes in terminology and proof organization.
-  impact: >
-    These terms may be used only under modern_abstraction perspective or with explicit qualification.
+
+    '
+  impact: 'These terms may be used only under modern_abstraction perspective or with explicit qualification.
+
+    '
