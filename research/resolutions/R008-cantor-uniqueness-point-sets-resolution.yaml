@@ -4,7 +4,7 @@ review: R008-cantor-uniqueness-point-sets-review.yaml
 decisions:
 - review_key: finding:hr-r008-riemann-intermediary
   kind: assertions
-  item_id: r008-a009
+  item_id: hr-r008-riemann-intermediary
   critic_classification: WEAK_EVIDENCE
   decision: accept_critic
   note: 'Accepted with the gap preserved. Keep Riemann as researched background/intermediary, but do not
@@ -14,7 +14,7 @@ decisions:
     '
 - review_key: finding:hr-r008-a011-predicate
   kind: assertions
-  item_id: r008-a011
+  item_id: hr-r008-a011-predicate
   critic_classification: REVISE
   decision: accept_critic
   note: 'Accepted. Remove the contributed_to assertion between Cantor''s 1872 and 1874 work; the researched
@@ -23,7 +23,7 @@ decisions:
     '
 - review_key: finding:hr-r008-qt005-scope
   kind: question_transitions
-  item_id: r008-qt005
+  item_id: hr-r008-qt005-scope
   critic_classification: REJECT
   decision: accept_critic
   note: 'Accepted. Remove the downstream transition to later infinite-set structure. Treat the 1873-1874
@@ -32,7 +32,7 @@ decisions:
     '
 - review_key: finding:hr-r008-r003-intersection
   kind: intersection_candidates
-  item_id: r008-i002
+  item_id: hr-r008-r003-intersection
   critic_classification: WEAK_EVIDENCE
   decision: accept_critic
   note: 'Accepted. Retain only a Network-level conceptual intersection with R003 concerning trigonometric
@@ -41,7 +41,7 @@ decisions:
     '
 - review_key: finding:hr-r008-heine-year
   kind: sources
-  item_id: src-heine-1870
+  item_id: hr-r008-heine-year
   critic_classification: REVISE
   decision: accept_critic
   note: 'Accepted. Use 1870 as the journal issue/standard citation year while explicitly preserving the
