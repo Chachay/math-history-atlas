@@ -1,17 +1,22 @@
 import subprocess
 import sys
-from pathlib import Path
 
 import yaml
 
 from scripts.common import ROOT
 
 
+def _one(directory, pattern):
+    matches = sorted(directory.glob(pattern))
+    assert len(matches) == 1
+    return matches[0]
+
+
 def test_status_reports_completed_r008_without_mutation():
     tracked = [
-        ROOT / "research/packets/R008-cantor-uniqueness-derived-sets.yaml",
-        ROOT / "research/reviews/R008-cantor-uniqueness-derived-sets-review.yaml",
-        ROOT / "research/resolutions/R008-cantor-uniqueness-derived-sets-resolution.yaml",
+        _one(ROOT / "research/packets", "R008-*.yaml"),
+        _one(ROOT / "research/reviews", "R008-*.yaml"),
+        _one(ROOT / "research/resolutions", "R008-*-resolution.yaml"),
     ]
     before = {path: path.read_bytes() for path in tracked}
     result = subprocess.run(
@@ -30,7 +35,8 @@ def test_status_reports_completed_r008_without_mutation():
 
 def test_research_unit_ops_is_permanent_dispatch_workflow():
     workflow = yaml.safe_load((ROOT / ".github/workflows/research-unit-ops.yml").read_text(encoding="utf-8"))
-    dispatch = workflow["on"]["workflow_dispatch"]
+    on_block = workflow.get("on", workflow.get(True))
+    dispatch = on_block["workflow_dispatch"]
     assert set(dispatch["inputs"]["operation"]["options"]) >= {
         "status",
         "check",
