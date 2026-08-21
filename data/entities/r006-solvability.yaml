@@ -38,21 +38,21 @@
   fields: [algebra]
 - id: work-lagrange-reflexions
   type: Work
-  name: Réflexions sur la résolution algébrique des équations
+  name: Lagrange's Reflections on the algebraic solution of equations
   start_year: 1770
   fields: [algebra]
 - id: work-abel-1824
   type: Work
-  name: Mémoire sur les équations algébriques — impossibility of the general quintic solution
+  name: Abel's 1824 memoir on the impossibility of a general quintic formula
   start_year: 1824
   fields: [algebra]
 - id: work-abel-1826
   type: Work
-  name: Beweis der Unmöglichkeit algebraische Gleichungen von höheren Graden als dem vierten allgemein aufzulösen
+  name: Abel's 1826 expanded impossibility proof for equations above degree four
   start_year: 1826
   fields: [algebra]
 - id: work-galois-resolubilite
   type: Work
-  name: Mémoire sur les conditions de résolubilité des équations par radicaux
+  name: Galois's memoir on conditions for solvability by radicals
   start_year: 1831
   fields: [algebra]
