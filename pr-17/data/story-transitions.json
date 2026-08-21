@@ -53,5 +53,20 @@
       "assertion-r004-admissibility-handoff"
     ],
     "rationale": "R003 ends with an Atlas-level question about analytic admissibility. R004 explicitly takes that question up through Riemann's 1854 investigation. The bridge is editorial and retrospective; it is not attributed to Dirichlet as a formulation of Riemann's later criterion.\n"
+  },
+  {
+    "id": "transition-r002-r005-uniformity",
+    "from_story": "story-cauchy-rigor-continuity",
+    "from_step": "r002-story-8",
+    "to_story": "story-quantified-control",
+    "to_step": "quantified-5",
+    "type": "thematic_handoff",
+    "perspective": "later_interpretation",
+    "assertion_refs": [
+      "assertion-r002-weierstrass-uniform",
+      "assertion-r005-weierstrass-uniformity",
+      "assertion-r005-uniformity-intersection"
+    ],
+    "rationale": "R002 ends with the distributed emergence of stronger convergence control. R005 re-enters the Weierstrass lecture tradition to examine quantified local variation and records that both topics occur in the 1861 teaching environment. The handoff is retrospective and does not claim that uniform convergence caused epsilon-delta analysis or that Cauchy's work was directly transmitted to Weierstrass.\n"
   }
 ]
