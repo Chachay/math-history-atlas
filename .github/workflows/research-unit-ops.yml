@@ -108,12 +108,20 @@ jobs:
           TARGET_REF: ${{ inputs.ref }}
         run: |
           set -euo pipefail
+          shopt -s nullglob
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- research/resolutions/${UNIT_ID}-*-resolution.yaml
-          git add -- research/packets/${UNIT_ID}-*.yaml
-          git add -- research/promotions/${UNIT_ID}-*-promotion.yaml
-          git add -- research/gaps/${UNIT_ID}-*.yaml
+
+          paths=(
+            research/resolutions/${UNIT_ID}-*-resolution.yaml
+            research/packets/${UNIT_ID}-*.yaml
+            research/promotions/${UNIT_ID}-*-promotion.yaml
+            research/gaps/${UNIT_ID}-*.yaml
+          )
+          if [[ ${#paths[@]} -gt 0 ]]; then
+            git add -- "${paths[@]}"
+          fi
+
           if git diff --cached --quiet; then
             echo "No repository mutations to commit"
           else
