@@ -28,10 +28,11 @@
       role: New formulation
       narrative: >
         In the 1827 memoir Gauss defined a pointwise measure of curvature through the spherical image of
-        a surface and derived formulas for it in general surface coordinates. In his formulation the area
-        of the spherical image is compared with the corresponding area on the surface.
+        a surface and derived formulas for it in general surface coordinates. His measure compares the
+        infinitesimal area of the spherical image with the corresponding infinitesimal area on the surface.
       assertion_refs:
         - assertion-r007-gauss-curvature-definition
+        - assertion-r007-gauss-curvature-ratio
         - assertion-r007-curvature-question
       perspective: historical
       temporal_anchor: {from: 1827, to: 1827}
@@ -40,9 +41,8 @@
       role: Geometric test
       narrative: >
         Gauss also treated the development of one surface upon another through equality of the
-        infinitesimal line element at corresponding points. This supplies a precise setting for asking
-        which geometric quantities survive deformation without stretching, without assuming that the
-        curvature formula historically generated that question.
+        infinitesimal line element at corresponding points. In that setting the mathematical question is
+        which further geometric quantities remain unchanged when the metric data are preserved.
       assertion_refs:
         - assertion-r007-gauss-development
         - assertion-r007-development-question
@@ -53,11 +53,11 @@
       role: Invariance result
       narrative: >
         The Theorema Egregium states that when one curved surface is developed upon another, the measure
-        of curvature at corresponding points remains unchanged. Gauss obtained this by expressing the
+        of curvature at corresponding points remains unchanged. Gauss obtained this after expressing the
         curvature through the coefficients of the infinitesimal metric and their derivatives.
       assertion_refs:
         - assertion-r007-egregium-invariance
-        - assertion-r007-gauss-development
+        - assertion-r007-gauss-metric-curvature-formula
       perspective: historical
       temporal_anchor: {from: 1827, to: 1827}
     - id: intrinsic-5
