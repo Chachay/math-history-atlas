@@ -1,0 +1,311 @@
+review:
+  research_unit_id: R009
+  packet: research/packets/R009-dedekind-ideals-factorization.yaml
+  critic: historical-critic-v1
+  status: reviewed
+  generated_date: '2026-08-21'
+  summary:
+    pass: 16
+    revise: 2
+    weak_evidence: 1
+    reject: 0
+findings:
+- id: hr-r009-001
+  classification: REVISE
+  target:
+    section: assertions
+    id: r009-a001
+  reason: 'The mathematical substance is sound, but the wording makes 1847 look like the first public
+    introduction. Recent source-level historiography dates Kummer''s public overview to March 1846; the
+    1847 Crelle paper reprinted that overview with changes. The packet should distinguish first communication
+    from journal republication.
+
+    '
+  evidence:
+  - source_id: src-r009-chemla-2024
+    locator: p. 2
+    supports: first_publication_date
+  proposed_change:
+    action: replace_fields
+    fields:
+      period:
+        from: 1846
+        to: 1847
+      claim: 'Kummer publicly outlined his ideal-divisor theory in 1846 and republished the overview with
+        changes in Crelle''s Journal in 1847; the theory introduced ideal divisors/ideal complex numbers
+        in cyclotomic arithmetic to recover prime-factor reasoning unavailable from ordinary factors.
+
+        '
+- id: hr-r009-002
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a002
+  reason: 'Avigad''s introduction explicitly contrasts Kummer''s indirect divisibility predicates with
+    Dedekind''s identification of an ideal divisor with the system of integers it divides and places Dedekind
+    and Kronecker as later extensions of Kummer''s program.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 1–3
+    supports: historical_relation
+- id: hr-r009-003
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a003
+  reason: 'The 1871 text itself defines fields through arithmetic closure and develops bases, conjugacy,
+    norms, discriminants, and integers of the field. The packet does not substitute modern abstract field
+    theory for the source''s terminology.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: pp. 11–16, 33–35
+    supports: field_framework
+- id: hr-r009-004
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a004
+  reason: 'The claim matches the 1871 construction and Avigad''s methodological summary.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: pp. 2, 36–38
+    supports: ideal_definition
+- id: hr-r009-005
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a005
+  reason: 'The translated §163 explicitly defines prime ideals in Dedekind''s divisibility convention
+    and proves the product criterion used in the packet.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: pp. 39–40
+    supports: prime_ideal_definition
+- id: hr-r009-006
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a006
+  reason: 'The 1871 text states the fundamental theorem in terms of highest powers of prime ideals, then
+    defines ideal multiplication. The packet carefully calls this a replacement decomposition structure
+    rather than retrojecting the modern theorem statement verbatim.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: pp. 42–46
+    supports: decomposition_and_product
+- id: hr-r009-007
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a007
+  reason: 'Avigad explicitly identifies the 1871 dependence on simple ideals and explains how the later
+    theory removes representation-dependent reasoning.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 3–6
+    supports: revision_of_method
+- id: hr-r009-008
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a008
+  reason: 'The chronology of four published versions—1871, 1877, 1879, 1894—is directly supported.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 1–2
+    supports: edition_chronology
+- id: hr-r009-009
+  classification: WEAK_EVIDENCE
+  target:
+    section: assertions
+    id: r009-a009
+  reason: 'The existence of a distinct Kroneckerian route is well supported by specialist historiography
+    and Avigad''s overview, but the packet does not inspect a primary Kronecker source. The broad alternative-
+    route claim is defensible; detailed claims about Kronecker''s method should not be promoted from this
+    evidence base.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 1–3
+    supports: distinct_computational_approach
+  - source_id: src-r009-edwards-1980
+    locator: article scope
+    supports: comparative_history
+  proposed_change:
+    action: replace_fields
+    fields:
+      certainty: medium
+      claim: 'Specialist histories describe Kronecker as developing a distinct, explicitly computational
+        approach to the extension of ideal factorization. This is sufficient to prevent narrating Dedekind''s
+        formulation as the only contemporary route, but not to reconstruct Kronecker''s technical theory
+        here.
+
+        '
+- id: hr-r009-010
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a010
+  reason: 'The assertion is explicitly marked modern_abstraction and warns that ring-theoretic vocabulary
+    is a reformulation, satisfying the packet''s main anachronism constraint.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 2–6
+    supports: modern_comparison
+- id: hr-r009-011
+  classification: PASS
+  target:
+    section: assertions
+    id: r009-a011
+  reason: 'The 1871 source works with the integers o of a finite field Ω; arbitrary-ring ideal theory
+    is later.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: pp. 33–47
+    supports: historical_scope
+- id: hr-r009-012
+  classification: REVISE
+  target:
+    section: assertions
+    id: r009-a012
+  reason: 'The source supports a specific textual connection: while discussing conjugate finite fields
+    Dedekind says that pursuing the topic leads to principles introduced by Galois. The current canonical-style
+    predicate ''contributed_to'' from Dedekind to the number-field concept is too vague for the actual
+    point and risks being read as a stronger genealogy. Preserve the evidence as an intersection claim
+    rather than a causal assertion.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: p. 15 n.14
+    supports: explicit_galois_reference
+  proposed_change:
+    action: replace_fields
+    fields:
+      perspective: later_interpretation
+      certainty: medium
+      claim: 'Dedekind''s 1871 discussion of conjugate finite fields explicitly remarks that pursuing
+        those questions leads to principles introduced by Galois. This supports a textual intersection
+        around fields and conjugacy, but not a claim that Galois''s solvability problem motivated Dedekind''s
+        construction of ideals.
+
+        '
+- id: hr-r009-013
+  classification: PASS
+  target:
+    section: question_transitions
+    id: r009-qt001
+  reason: 'The transition from factorization failure to Kummer''s ideal-divisor response is historically
+    supported, subject to the 1846/1847 date correction in hr-r009-001.
+
+    '
+  evidence:
+  - source_id: src-r009-chemla-2024
+    locator: pp. 1–3
+    supports: Kummer_context
+- id: hr-r009-014
+  classification: PASS
+  target:
+    section: question_transitions
+    id: r009-qt002
+  reason: 'The generalization beyond Kummer and Dedekind''s reification of divisibility conditions are
+    supported by Avigad and Edwards without requiring chronology alone to do causal work.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 1–3
+    supports: generalization_and_reframing
+- id: hr-r009-015
+  classification: PASS
+  target:
+    section: question_transitions
+    id: r009-qt003
+  reason: 'This is an internal mathematical transition demonstrated inside the 1871 construction, not
+    an inferred influence claim.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: pp. 39–46
+    supports: ideal_decomposition
+- id: hr-r009-016
+  classification: PASS
+  target:
+    section: question_transitions
+    id: r009-qt004
+  reason: 'The transition is correctly marked later_interpretation and is directly supported by comparison
+    of Dedekind''s successive presentations.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 1–6
+    supports: methodological_change
+- id: hr-r009-017
+  classification: PASS
+  target:
+    section: question_transitions
+    id: r009-qt005
+  reason: 'This is explicitly a modern-abstraction warning, not a historical claim attributed to Dedekind.
+
+    '
+  evidence:
+  - source_id: src-r009-avigad-2004
+    locator: pp. 2–6
+    supports: terminology_risk
+- id: hr-r009-018
+  classification: PASS
+  target:
+    section: question_transitions
+    id: r009-qt006
+  reason: 'Specialist historiography explicitly treats Dedekind and Kronecker as distinct approaches to
+    the same post-Kummer problem. No inevitability is asserted.
+
+    '
+  evidence:
+  - source_id: src-r009-edwards-1980
+    locator: article scope
+    supports: alternative_routes
+- id: hr-r009-019
+  classification: PASS
+  target:
+    section: question_transitions
+    id: r009-qt007
+  reason: 'The packet deliberately assigns low certainty and refuses to infer a Galois→Dedekind motivation
+    chain. Dedekind''s explicit Galois reference supports only the proposed intersection around finite
+    fields and conjugacy.
+
+    '
+  evidence:
+  - source_id: src-r009-dedekind-1871-avigad
+    locator: p. 15 n.14
+    supports: cautious_intersection
+sources:
+- id: src-r009-chemla-2024
+  type: secondary
+  author: Karine Chemla
+  title: Historical analysis of Kummer's first publication of ideal factors
+  publication: 'Symmetry, Integrability and Geometry: Methods and Applications 20 (2024), article 066'
+  year: 2024
+  url: https://www2.math.ethz.ch/EMIS/journals/SIGMA/2024/066/sigma24-066.pdf
+  locator: pp. 1–3

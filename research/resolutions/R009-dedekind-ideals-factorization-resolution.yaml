@@ -1,0 +1,36 @@
+research_unit_id: R009
+packet: R009-dedekind-ideals-factorization.yaml
+review: R009-dedekind-ideals-factorization-review.yaml
+decisions:
+- review_key: finding:hr-r009-001
+  kind: assertions
+  item_id: hr-r009-001
+  critic_classification: REVISE
+  decision: accept_critic
+  note: >
+    Accepted. Distinguish Kummer's 1846 public overview from the 1847 Crelle republication; use the
+    1846–1847 period and the critic's revised claim rather than presenting 1847 as the first public
+    introduction.
+- review_key: finding:hr-r009-009
+  kind: assertions
+  item_id: hr-r009-009
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: >
+    Accepted with caution. Retain Kronecker only as a medium-certainty distinct computational
+    alternative to Dedekind's route. Do not reconstruct technical details of Kronecker's theory from
+    the current secondary-only evidence base.
+- review_key: finding:hr-r009-012
+  kind: assertions
+  item_id: hr-r009-012
+  critic_classification: REVISE
+  decision: accept_critic
+  note: >
+    Accepted. Treat Dedekind's explicit Galois reference as a cautious textual intersection around
+    fields and conjugacy under later_interpretation, not as evidence that Galois's solvability problem
+    motivated Dedekind's construction of ideals.
+resolution_date: '2026-08-21'
+resolution_status: human_approved_pending_integrity_binding
+integrity:
+  packet_sha256: sha256:70971d644623e918ba267117d79d89cf636338c5279429c616783dc792a7217f
+  review_sha256: sha256:d874a4daf3f40c7379dc4d508ef5bad47abe44ec286ed9120f8b4b14ad5f3e1e

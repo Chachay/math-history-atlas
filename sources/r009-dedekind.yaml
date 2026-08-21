@@ -1,0 +1,42 @@
+- id: source-r009-kummer-1847
+  title: On the Theory of Complex Numbers / On Ideal Numbers
+  author: Ernst Eduard Kummer
+  year: 1847
+  kind: primary_translation
+  url: https://www.sphere.univ-paris-diderot.fr/IMG/pdf/idealelementsenglishtranslation1846_ou_1847smitha_source_book_in_mathematics1929.pdf
+- id: source-r009-dedekind-1871
+  title: Dedekind's 1871 version of the theory of ideals
+  author: Richard Dedekind
+  year: 1871
+  kind: primary_translation
+  url: https://www.andrew.cmu.edu/user/avigad/Papers/ideals71.pdf
+- id: source-r009-avigad-2004
+  title: Translator's introduction to Dedekind's 1871 version of the theory of ideals
+  author: Jeremy Avigad
+  year: 2004
+  kind: secondary_specialist
+  url: https://www.andrew.cmu.edu/user/avigad/Papers/ideals71.pdf
+- id: source-r009-edwards-1980
+  title: The Genesis of Ideal Theory
+  author: Harold M. Edwards
+  year: 1980
+  kind: secondary_specialist
+  url: https://doi.org/10.1007/BF00327914
+- id: source-r009-edwards-1983
+  title: Dedekind's Invention of Ideals
+  author: Harold M. Edwards
+  year: 1983
+  kind: secondary_specialist
+  url: https://doi.org/10.1112/blms/15.1.8
+- id: source-r009-sep-dedekind
+  title: Dedekind's Contributions to the Foundations of Mathematics
+  author: Erich H. Reck and others
+  year: 2025
+  kind: reference
+  url: https://plato.stanford.edu/entries/dedekind-foundations/
+- id: source-r009-chemla-2024
+  title: Historical analysis of Kummer's first publication of ideal factors
+  author: Karine Chemla
+  year: 2024
+  kind: secondary_specialist
+  url: https://www2.math.ethz.ch/EMIS/journals/SIGMA/2024/066/sigma24-066.pdf

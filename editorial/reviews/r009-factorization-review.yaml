@@ -1,0 +1,80 @@
+review:
+  story_id: story-r009-factorization
+  research_unit_id: R009
+  status: reviewed
+  summary:
+    pass: 13
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+findings:
+- id: sr-r009-001
+  classification: PASS
+  target: {story_id: story-r009-factorization, field: description}
+  reason: The description accurately identifies an internally generated arithmetic problem and explicitly keeps the later abstraction separate.
+- id: sr-r009-002
+  classification: PASS
+  target: {story_id: story-r009-factorization, step_id: factorization-1, field: narrative}
+  reason: The 1846/1847 chronology and Kummer response match the approved critic revision and persistent evidence.
+  assertion_refs: [assertion-r009-kummer-ideal-divisors]
+- id: sr-r009-003
+  classification: PASS
+  target: {story_id: story-r009-factorization, step_id: factorization-2, field: narrative}
+  reason: The prose distinguishes Kummer's ideal divisors from Dedekind's later systems and does not collapse the two constructions.
+  assertion_refs: [assertion-r009-kummer-ideal-divisors, assertion-r009-kummer-dedekind-context]
+- id: sr-r009-004
+  classification: PASS
+  target: {story_id: story-r009-factorization, step_id: factorization-3, field: narrative}
+  reason: The number-field framework and ideal-as-system formulation are supported by the 1871 translation and do not import arbitrary-ring language.
+  assertion_refs: [assertion-r009-kummer-dedekind-context, assertion-r009-dedekind-field-framework, assertion-r009-dedekind-ideal-system, assertion-r009-field-to-ideal]
+- id: sr-r009-005
+  classification: PASS
+  target: {story_id: story-r009-factorization, step_id: factorization-4, field: narrative}
+  reason: The structural replacement is stated in the historical arithmetic setting and avoids presenting the modern Dedekind-domain theorem as Dedekind's own vocabulary.
+  assertion_refs: [assertion-r009-dedekind-prime-ideal, assertion-r009-dedekind-ideal-factorization]
+- id: sr-r009-006
+  classification: PASS
+  target: {story_id: story-r009-factorization, step_id: factorization-5, field: narrative}
+  reason: The revision claim is explicitly retrospective and limited to the supported methodological change across Dedekind's presentations.
+  assertion_refs: [assertion-r009-1871-to-1879-revision, assertion-r009-1879-to-1894-revision]
+- id: sr-r009-007
+  classification: PASS
+  target: {story_id: story-r009-factorization, step_id: factorization-6, field: narrative}
+  reason: The Kronecker sentence preserves the approved medium-certainty limitation and explicitly refuses a technical reconstruction from secondary evidence alone.
+  assertion_refs: [assertion-r009-kronecker-alternative]
+- id: sr-r009-008
+  classification: PASS
+  target: {story_id: story-r009-factorization, step_id: factorization-7, field: narrative}
+  reason: Modern ring-theoretic language is clearly marked as modern_abstraction rather than projected into 1871.
+  assertion_refs: [assertion-r009-modern-ideal-factorization, assertion-r009-ideal-to-modern-boundary]
+- id: sr-r009-009
+  classification: PASS
+  target: {story_id: story-r009-factorization, link: {from: factorization-1, to: factorization-2}}
+  reason: The continues relation stays within the same Kummer ideal-divisor episode and shares direct evidence.
+- id: sr-r009-010
+  classification: PASS
+  target: {story_id: story-r009-factorization, link: {from: factorization-2, to: factorization-3}}
+  reason: Specialist historiography supports Dedekind's treatment as an extension and reformulation of the post-Kummer factorization problem; the transition is not inferred from chronology alone.
+- id: sr-r009-011
+  classification: PASS
+  target: {story_id: story-r009-factorization, link: {from: factorization-3, to: factorization-4}}
+  reason: Both steps belong to the 1871 construction and are directly supported by the same primary translation.
+- id: sr-r009-012
+  classification: PASS
+  target: {story_id: story-r009-factorization, link: {from: factorization-2, to: factorization-6}}
+  reason: branches correctly represents Kronecker as an alternative route rather than a necessary continuation or convergence.
+- id: sr-r009-013
+  classification: PASS
+  target: {story_id: story-r009-factorization, link: {from: factorization-5, to: factorization-7}}
+  reason: branches is appropriately weaker than direct historical continuity for the move from Dedekind's revisions to later ring-theoretic abstraction.
+research_gaps:
+- id: gap-r009-galois-intersection
+  question: What additional evidence would justify treating Dedekind's 1871 reference to Galois as more than a local textual intersection around fields and conjugacy?
+  needed_evidence: Primary correspondence, lecture notes, or specialist source-level historiography establishing transmission from Galoisian solvability questions into Dedekind's ideal construction; absent that evidence, retain no causal Story edge.
+- id: gap-r009-kronecker-primary
+  question: Which primary Kronecker texts establish the technical form of his alternative approach to generalized ideal factorization?
+  needed_evidence: A stable primary-source edition and locators sufficient to compare Kronecker's construction with Dedekind's without relying only on secondary summaries.
+- id: gap-r009-edition-comparison
+  question: Exactly what conceptual and proof-organizational changes distinguish Dedekind's 1877, 1879, and 1894 presentations of ideal theory?
+  needed_evidence: Edition-by-edition primary-source locators, especially for the removal of simple-ideal and congruence-dependent machinery and the later organization of ideal operations.
+sources: []

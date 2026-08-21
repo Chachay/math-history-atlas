@@ -1,0 +1,12 @@
+- id: state-r009-kummer-ideal-divisor
+  concept_id: concept-ideal-divisor
+  period: {from: 1846, to: 1870}
+  label: Kummer's ideal divisors were characterized through divisibility behavior in cyclotomic arithmetic, not as Dedekind's later systems of integers.
+- id: state-r009-dedekind-ideal-1871
+  concept_id: concept-dedekind-ideal
+  period: {from: 1871, to: 1876}
+  label: Dedekind's first ideal theory used systems of algebraic integers and still depended substantially on simple ideals represented by congruences.
+- id: state-r009-dedekind-ideal-later
+  concept_id: concept-dedekind-ideal
+  period: {from: 1877, to: 1894}
+  label: Dedekind's later presentations increasingly foregrounded operations and properties of ideals rather than particular congruence representations.

@@ -1,0 +1,78 @@
+- id: person-kummer
+  type: Person
+  name: Ernst Eduard Kummer
+  start_year: 1810
+  end_year: 1893
+  fields: [algebra, number-theory]
+- id: person-dedekind
+  type: Person
+  name: Richard Dedekind
+  start_year: 1831
+  end_year: 1916
+  fields: [algebra, number-theory]
+- id: person-kronecker
+  type: Person
+  name: Leopold Kronecker
+  start_year: 1823
+  end_year: 1891
+  fields: [algebra, number-theory]
+- id: concept-algebraic-number-field
+  type: Concept
+  name: Algebraic number field
+  start_year: 1871
+  fields: [algebra, number-theory]
+- id: concept-algebraic-integer
+  type: Concept
+  name: Algebraic integer
+  start_year: 1871
+  fields: [algebra, number-theory]
+- id: concept-ideal-divisor
+  type: Concept
+  name: Ideal divisor in Kummer's factorization theory
+  start_year: 1846
+  fields: [algebra, number-theory]
+- id: concept-dedekind-ideal
+  type: Concept
+  name: Ideal as a system of algebraic integers
+  start_year: 1871
+  fields: [algebra, number-theory]
+- id: concept-prime-ideal
+  type: Concept
+  name: Prime ideal
+  start_year: 1871
+  fields: [algebra, number-theory]
+- id: concept-ideal-factorization
+  type: Concept
+  name: Factorization of ideals into prime ideals
+  start_year: 1871
+  fields: [algebra, number-theory]
+- id: work-kummer-1847-complex-numbers
+  type: Work
+  name: Kummer's 1847 paper on complex numbers and ideal divisors
+  original_title: Zur Theorie der complexen Zahlen
+  start_year: 1847
+  fields: [number-theory]
+- id: work-dedekind-1871-supplement
+  type: Work
+  name: Dedekind's 1871 first version of ideal theory
+  original_title: Supplement X to Dirichlet's Vorlesungen über Zahlentheorie, second edition
+  start_year: 1871
+  fields: [algebra, number-theory]
+- id: work-dedekind-1877-algebraic-integers
+  type: Work
+  name: Dedekind's 1877 theory of algebraic integers
+  original_title: Sur la théorie des nombres entiers algébriques
+  start_year: 1877
+  fields: [algebra, number-theory]
+- id: work-dedekind-1879-supplement
+  type: Work
+  name: Dedekind's 1879 revised theory of algebraic integers
+  original_title: Supplement XI to Dirichlet's Vorlesungen über Zahlentheorie, third edition
+  start_year: 1879
+  fields: [algebra, number-theory]
+- id: work-dedekind-1894-supplement
+  type: Work
+  name: Dedekind's 1894 revised theory of algebraic integers
+  original_title: Supplement XI to Dirichlet's Vorlesungen über Zahlentheorie, fourth edition
+  start_year: 1894
+  fields: [algebra, number-theory]
