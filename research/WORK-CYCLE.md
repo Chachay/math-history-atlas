@@ -45,7 +45,21 @@ Typical triggers:
 - two Stories repeat, intersect, or partially overlap the same researched material;
 - existing canonical material may be sufficient, but editorial synthesis is needed.
 
-The first implementation of this cycle is tracked in GitHub issue #33.
+The cycle is defined by `research/prompts/story-architecture-review-v1.md`.
+
+Build structural context before making editorial judgments:
+
+```bash
+python -m scripts.story_architecture_review context <story-id> [<story-id> ...]
+```
+
+Save the resulting human/LLM review under `editorial/reviews/`, then validate it:
+
+```bash
+python -m scripts.story_architecture_review validate editorial/reviews/<review>.yaml
+```
+
+The context tool reports structure only; it does not decide historical influence, causation, Story correctness, or whether an overlap deserves a new Research Unit.
 
 The review should remain lighter than a new Research Unit. It should distinguish editorial problems from evidence problems and should prefer synthesis or bounded context over unnecessary new research.
 
@@ -164,7 +178,7 @@ Likewise, Network Question-to-Question edges are potential narrative spines. The
 
 Do not collapse every discovered problem into a future Research Unit.
 
-Story Architecture Review should eventually distinguish at least:
+Story Architecture Review distinguishes:
 
 Gap kind:
 
@@ -196,6 +210,8 @@ candidate_future_unit
 
 These axes are intentionally separate. For example, an `entry_context` problem may require only a `light` burden and an `editorial_edit`, while an `evidence` problem may require `full_research` without necessarily becoming a new numbered unit.
 
+An `entry_context` finding alone must not jump directly to `candidate_future_unit`.
+
 ## 7. Current implementation boundary
 
 PR #32 / issue #28 owns mechanical Story evidence and research-gap completion:
@@ -207,13 +223,15 @@ PR #32 / issue #28 owns mechanical Story evidence and research-gap completion:
 - distinction between supplementary work and future-unit candidates;
 - no automatic R-number allocation.
 
-Issue #33 owns the next Story Architecture layer:
+Issue #33 owns the Story Architecture layer:
 
+- structural context extraction;
 - bounded entry and contextual leads;
 - selected Question paths;
 - Story-local closure / handoff;
 - overlap, synthesis, and intersections across Stories;
-- richer editorial gap classification.
+- editorial gap kind, research burden, and resolution mode as separate axes;
+- persistent review artifacts with semantic validation.
 
 Do not introduce reusable Episode objects, production Story-local lifecycle schema, or automatic Story generation until repeated review evidence justifies those abstractions.
 
@@ -225,10 +243,10 @@ A normal Research Unit remains explicit:
 Open Chachay/math-history-atlas and follow research/prompts/research-unit-kickoff-v1.md for R009. Read current main and use the approved R009 brief in research/units/.
 ```
 
-A Story Architecture Review should eventually have its own prompt, for example:
+A Story Architecture Review is also explicit:
 
 ```text
-Open Chachay/math-history-atlas and run the Story Architecture Review for story-function and its neighboring Question paths.
+Open Chachay/math-history-atlas and follow research/prompts/story-architecture-review-v1.md for story-function and its neighboring Question paths. Read current main and persist the review under editorial/reviews/.
 ```
 
 A Forest Review should similarly be explicit at a roadmap checkpoint, for example:
