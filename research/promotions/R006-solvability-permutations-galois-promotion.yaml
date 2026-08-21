@@ -1,0 +1,101 @@
+research_unit_id: R006
+packet: R006-solvability-permutations-galois.yaml
+review: R006-solvability-permutations-galois-review.yaml
+resolution: R006-solvability-permutations-galois-resolution.yaml
+summary:
+  proposed_changes: 5
+  skipped_items: 0
+changes:
+- finding_id: hr-r006-chronology-ruffini
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Do not promote the Ruffini chronology item without a stable primary locator.
+    Preserve Ruffini as an historically important intermediary and keep the precise primary passage/proof-status
+    question as an explicit research gap.
+
+    '
+  target:
+    section: chronology
+    match:
+      date: 1799–1813
+  proposed_change:
+    action: manual_review
+    reason: 'Either add a primary locator before promotion or keep Ruffini as an explicit research gap/intermediary
+      note rather than a canonical chronology assertion.
+
+      '
+  status: proposed
+- finding_id: hr-r006-a003
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Do not promote the proposed Ruffini historical-route assertion. Secondary historiography
+    may justify retaining Ruffini as an intermediary entity/research context, but it is not sufficient
+    here for a canonical transition edge between Lagrange and Abel.
+
+    '
+  target:
+    section: assertions
+    id: r006-a003
+  proposed_change:
+    action: manual_review
+    reason: 'Do not promote this assertion unless primary or more tightly localized specialist evidence
+      is added; retaining person-ruffini as a research-gap intermediary is safe.
+
+      '
+  status: proposed
+- finding_id: hr-r006-a007
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Replace the assertion wording so that Galois''s groupe of permutations of roots,
+    substitutions acting on functions of roots, and the later abstract group concept remain explicitly
+    distinct rather than being collapsed into one modern object.
+
+    '
+  target:
+    section: assertions
+    id: r006-a007
+  proposed_change:
+    action: replace_fields
+    fields:
+      statement: 'Galois associates an equation with a groupe of permutations of its roots and studies
+        substitutions acting on functions of those roots in his solvability argument. These notions are
+        structurally related in his work, but his displayed permutation groups, substitutions, and the
+        later abstract group concept should remain terminologically distinct rather than being collapsed
+        into one modern object.
+
+        '
+      perspective: historical
+  status: proposed
+- finding_id: hr-r006-intersection-cauchy
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Do not create a Cauchy cross-Story or Network intersection from the current evidence.
+    Preserve the possibility only as a research gap until a specific Cauchy algebraic work/result and
+    source-supported relation to the R006 solvability line are identified.
+
+    '
+  target:
+    section: intersection_candidates
+    id: r006-i001
+  proposed_change:
+    action: manual_review
+    reason: 'Preserve this as a research gap only; do not promote a Story/network intersection from the
+      current evidence.
+
+      '
+  status: proposed
+- finding_id: hr-r006-concept-state-modern
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Remove the retrospective modern-group state from concept-substitution-group.
+    The emergence of the abstract group concept is a distinct distributed downstream topic and should
+    be researched in a later unit rather than back-projected into R006.
+
+    '
+  target:
+    section: concept_state_candidates
+    id: state-group-modern-retrospective
+  proposed_change:
+    action: remove
+  status: proposed
+skipped: []
