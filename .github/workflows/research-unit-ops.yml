@@ -106,6 +106,7 @@ jobs:
         env:
           UNIT_ID: ${{ inputs.unit_id }}
           TARGET_REF: ${{ inputs.ref }}
+          OPERATION: ${{ inputs.operation }}
         run: |
           set -euo pipefail
           shopt -s nullglob
