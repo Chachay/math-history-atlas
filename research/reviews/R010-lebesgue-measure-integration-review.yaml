@@ -1,0 +1,234 @@
+review:
+  research_unit_id: R010
+  packet: R010-lebesgue-measure-integration.yaml
+  critic_version: historical-critic-v1
+  review_date: '2026-08-21'
+  summary:
+    pass: 9
+    revise: 2
+    weak_evidence: 0
+    reject: 1
+  overall_assessment: >
+    The packet has a strong primary-source spine. Lebesgue's 1901 note directly supports the R004→R010
+    reopening of integrability, the primitive-function motivation, the use of measure, and the value-band
+    construction of the generalized integral. Jordan and Borel are retained as intermediaries and modern
+    sigma-algebra/Lp terminology is kept out of the historical layer. Three material issues remain. First,
+    r010-a009 encodes a Cantor→Borel causal edge with `contributed_to` while the prose admits that the unit
+    has not established that direct transmission; this should be removed rather than promoted. Second,
+    r010-qt002 risks narrating Jordan/Borel set content as a consequence of enlarging the Riemann-integrable
+    function class, whereas the evidence supports converging late-nineteenth-century lines rather than that
+    one-way causal sequence. Third, r010-a011 compresses Lebesgue's 1901 limiting claims too broadly and could
+    be mistaken for the later named convergence theorems; it should be narrowed to the claims actually made
+    in the note.
+
+findings:
+  - id: hr-r010-riemann-motivation
+    reviewed_item: {section: assertions, id: r010-a001}
+    classification: PASS
+    reason: >
+      Lebesgue's opening paragraph explicitly says that not every derivative is Riemann-integrable and that
+      the primitive-function problem is therefore not solved by Riemann integration. This is direct evidence
+      of a historical problem statement, not a retrospective textbook comparison.
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: opening paragraph, pp. 1025–1026
+        supports: explicit_Riemann_limitation_and_primitive_problem
+
+  - id: hr-r010-design-requirement
+    reviewed_item: {section: assertions, id: r010-a002}
+    classification: PASS
+    reason: >
+      The note explicitly asks for an integral containing Riemann's as a special case and able to address
+      primitives beyond it. The packet correctly limits this to Lebesgue's stated 1901 aim.
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: opening paragraph and first footnote
+        supports: stated_generalization_requirements
+
+  - id: hr-r010-jordan-intermediary
+    reviewed_item: {section: assertions, id: r010-a003}
+    classification: PASS
+    reason: >
+      The assertion is later_interpretation and avoids sole-priority language. Jordan's 1892 paper is directly
+      about definite integrals and set content, while the reference source also records Peano as an earlier
+      contributor. This is appropriately calibrated for an intermediary role.
+    evidence:
+      - source_id: src-jordan-1892
+        locator: pp. 69–99
+        supports: definite_integral_and_content_context
+      - source_id: src-eom-jordan-measure
+        locator: historical note
+        supports: Peano_and_Jordan_priority_caution
+
+  - id: hr-r010-borel-intermediary
+    reviewed_item: {section: assertions, id: r010-a004}
+    classification: PASS
+    reason: >
+      Borel's 1898 book contains an explicit section on measurable sets and uses countable set operations.
+      Lebesgue's 1901 note itself refers to Borel measurable sets, so Borel is an evidenced immediate
+      intermediary rather than a later genealogical insertion.
+    evidence:
+      - source_id: src-borel-1898
+        locator: chapter on ensembles parfaits et ensembles mesurables, approximately pp. 34–50
+        supports: Borel_measurable_set_construction
+      - source_id: src-lebesgue-1901
+        locator: footnote referring to M. Borel, Leçons sur la théorie des fonctions
+        supports: direct_Lebesgue_reference_to_Borel
+
+  - id: hr-r010-measure-definition
+    reviewed_item: {section: assertions, id: r010-a005}
+    classification: PASS
+    reason: >
+      The 1901 note describes measure through countable open coverings and then uses measurable sets in the
+      integration construction. The packet correctly refuses to substitute later outer-measure/completion
+      language for this historical formulation.
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: middle of the note, definition of measure
+        supports: countable_open_cover_measure_definition
+
+  - id: hr-r010-value-band-construction
+    reviewed_item: {section: assertions, id: r010-a006}
+    classification: PASS
+    reason: >
+      The note explicitly divides the range of y into intervals, considers the sets of x for which y lies
+      in each band, and weights representative values by the measures of those sets. The packet also warns
+      that the domain-versus-range slogan is only a compression.
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: paragraphs defining the integral after the measure construction
+        supports: value_band_and_argument_set_construction
+
+  - id: hr-r010-thesis-structure
+    reviewed_item: {section: assertions, id: r010-a007}
+    classification: PASS
+    reason: >
+      The 1902 thesis is bibliographically secure and its chapter sequence places measure of sets before
+      integration. The assertion does not import abstract measure spaces or Lp theory.
+    evidence:
+      - source_id: src-lebesgue-1902-sorbonne
+        locator: table of contents; Chapitre I and Chapitre II
+        supports: measure_then_integral_structure
+
+  - id: hr-r010-borel-explicit-reference
+    reviewed_item: {section: assertions, id: r010-a008}
+    classification: PASS
+    reason: >
+      Lebesgue's own footnote explicitly names Borel's measurable sets and cites the Leçons. This is the
+      strongest cross-line historical link in the packet and supports an actual Borel→Lebesgue handoff.
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: note attached to the measurable-set construction
+        supports: explicit_Borel_reference
+
+  - id: hr-r010-cantor-causal-edge
+    reviewed_item: {section: assertions, id: r010-a009}
+    classification: REJECT
+    severity: high
+    reason: >
+      The prose says only that Cantor's point-set investigations belong to the broader environment and
+      explicitly denies that the packet establishes a direct Cantor-to-Lebesgue causal line. Encoding the
+      assertion with subject person-cantor, predicate `contributed_to`, and object concept-borel-measure
+      nevertheless creates a direct historical edge. Hawkins can support a broad set-theoretic background,
+      but the present locator does not establish the specific R008-derived-set → Borel-measure transmission.
+    target:
+      section: assertions
+      id: r010-a009
+    proposed_change:
+      action: remove
+    evidence:
+      - source_id: src-hawkins-1979
+        locator: chapters on set theory and the theory of integration
+        supports: broad_set_theoretic_background_only
+    needed_evidence: >
+      A specialist or primary source identifying the specific Cantorian results Borel adopted, and connecting
+      those results to the measurable-set construction relevant to Lebesgue, before a direct causal predicate
+      is promoted.
+
+  - id: hr-r010-modern-containment
+    reviewed_item: {section: assertions, id: r010-a010}
+    classification: PASS
+    reason: >
+      The containment statement is explicitly marked modern_abstraction and is separated from Lebesgue's
+      historical motivation. It is suitable as explanatory canonical material if retained with that perspective.
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: opening requirement that the new integral contain Riemann's as a special case
+        supports: historical_basis_for_extension_statement
+      - source_id: src-kahane-2001
+        locator: discussion of the 1901 note
+        supports: modern_comparison_with_Riemann
+
+  - id: hr-r010-limit-claims
+    reviewed_item: {section: assertions, id: r010-a011}
+    classification: REVISE
+    severity: medium
+    reason: >
+      The phrase 'functions arising as limits' is too broad for a durable historical assertion. The short
+      1901 note states closure/limit properties in compressed language, but without this packet reconstructing
+      the exact hypotheses it risks being read as a precursor statement of the later monotone or dominated
+      convergence theorems. The safe correction is to record only that Lebesgue explicitly announced limiting
+      stability properties and an application to bounded derivatives, without generalizing beyond the note.
+    target:
+      section: assertions
+      id: r010-a011
+    proposed_change:
+      action: replace_fields
+      fields:
+        statement: >
+          Lebesgue's 1901 note explicitly announces closure and limiting properties for his class of
+          summable functions and applies the new integral to bounded derivatives; the packet does not identify
+          these compressed statements with the later named convergence theorems.
+        certainty: medium
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: numbered properties and bounded-derivative application near the end of the note
+        supports: limited_1901_closure_and_derivative_claims
+
+  - id: hr-r010-r004-intersection
+    reviewed_item: {section: intersection_candidates, id: r010-i001}
+    classification: PASS
+    reason: >
+      This intersection is unusually strong: Lebesgue explicitly names Riemann's integral and states why
+      he wants to generalize it. The Story can therefore connect R004 and R010 without inferring influence
+      from chronology or modern mathematical containment alone.
+    evidence:
+      - source_id: src-lebesgue-1901
+        locator: opening paragraph
+        supports: direct_Riemann_to_Lebesgue_problem_statement
+
+  - id: hr-r010-qt002-sequence
+    reviewed_item: {section: question_transitions, id: r010-qt002}
+    classification: REVISE
+    severity: medium
+    reason: >
+      'Once the admissible function class is enlarged' makes the Jordan/Borel set-content line sound like a
+      downstream consequence of enlarging Riemann integration. Jordan 1892 and Borel 1898 predate Lebesgue's
+      1901 generalization and are better represented as a converging line that supplied set-size machinery.
+      The transition should therefore avoid one-way causal sequencing.
+    target:
+      section: question_transitions
+      id: r010-qt002
+    proposed_change:
+      action: replace_fields
+      fields:
+        relation: converges
+        statement: >
+          Alongside the late nineteenth-century integrability problem, Jordan and Borel developed ways to
+          assign content or measure to point sets. Lebesgue's 1901 construction brings this set-size machinery
+          into a generalized integral, so the Atlas should represent the two lines as converging rather than
+          making one a simple consequence of the other.
+        perspective: later_interpretation
+        certainty: high
+    evidence:
+      - source_id: src-jordan-1892
+        locator: pp. 69–99
+        supports: pre_1901_set_content_line
+      - source_id: src-borel-1898
+        locator: measurable-sets chapter
+        supports: pre_1901_measure_line
+      - source_id: src-lebesgue-1901
+        locator: measure and integral construction
+        supports: 1901_recombination
+
+sources: []
