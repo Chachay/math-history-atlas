@@ -1,0 +1,126 @@
+- id: assertion-r009-kummer-ideal-divisors
+  subject: work-kummer-1847-complex-numbers
+  predicate: contributed_to
+  object: concept-ideal-divisor
+  period: {from: 1846, to: 1847}
+  perspective: historical
+  certainty: high
+  sources: [source-r009-kummer-1847, source-r009-avigad-2004, source-r009-chemla-2024]
+  status: historically_reviewed
+- id: assertion-r009-kummer-dedekind-context
+  subject: concept-ideal-divisor
+  predicate: contributed_to
+  object: concept-dedekind-ideal
+  period: {from: 1847, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r009-avigad-2004, source-r009-edwards-1980]
+  status: historically_reviewed
+- id: assertion-r009-dedekind-field-framework
+  subject: work-dedekind-1871-supplement
+  predicate: contributed_to
+  object: concept-algebraic-number-field
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r009-dedekind-1871]
+  status: historically_reviewed
+- id: assertion-r009-dedekind-ideal-system
+  subject: work-dedekind-1871-supplement
+  predicate: contributed_to
+  object: concept-dedekind-ideal
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r009-dedekind-1871, source-r009-avigad-2004]
+  status: historically_reviewed
+- id: assertion-r009-dedekind-prime-ideal
+  subject: work-dedekind-1871-supplement
+  predicate: contributed_to
+  object: concept-prime-ideal
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r009-dedekind-1871]
+  status: historically_reviewed
+- id: assertion-r009-dedekind-ideal-factorization
+  subject: work-dedekind-1871-supplement
+  predicate: contributed_to
+  object: concept-ideal-factorization
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r009-dedekind-1871]
+  status: historically_reviewed
+- id: assertion-r009-field-to-ideal
+  subject: concept-algebraic-number-field
+  predicate: contributed_to
+  object: concept-dedekind-ideal
+  period: {from: 1871, to: 1894}
+  perspective: historical
+  certainty: high
+  sources: [source-r009-dedekind-1871]
+  status: historically_reviewed
+- id: assertion-r009-1871-to-1879-revision
+  subject: work-dedekind-1871-supplement
+  predicate: reframed
+  object: work-dedekind-1879-supplement
+  period: {from: 1871, to: 1879}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-r009-avigad-2004]
+  status: historically_reviewed
+- id: assertion-r009-1879-to-1894-revision
+  subject: work-dedekind-1879-supplement
+  predicate: reframed
+  object: work-dedekind-1894-supplement
+  period: {from: 1879, to: 1894}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-r009-avigad-2004, source-r009-sep-dedekind]
+  status: historically_reviewed
+- id: assertion-r009-kronecker-alternative
+  subject: person-kronecker
+  predicate: contributed_to
+  object: concept-ideal-factorization
+  period: {from: 1850, to: 1891}
+  perspective: historical
+  certainty: medium
+  sources: [source-r009-avigad-2004, source-r009-edwards-1980]
+  status: historically_reviewed
+- id: assertion-r009-modern-ideal-factorization
+  subject: concept-dedekind-ideal
+  predicate: contributed_to
+  object: concept-ideal-factorization
+  period: {from: 1871, to: null}
+  perspective: modern_abstraction
+  certainty: high
+  sources: [source-r009-dedekind-1871, source-r009-avigad-2004]
+  status: historically_reviewed
+- id: assertion-r009-factorization-to-ideal-question
+  subject: q-r009-factorization-replacement
+  predicate: contributed_to
+  object: q-r009-ideal-structure
+  period: {from: 1846, to: 1871}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-r009-kummer-1847, source-r009-avigad-2004, source-r009-dedekind-1871]
+  status: historically_reviewed
+- id: assertion-r009-ideal-to-revision-question
+  subject: q-r009-ideal-structure
+  predicate: contributed_to
+  object: q-r009-changing-ideal-concept
+  period: {from: 1871, to: 1894}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-r009-avigad-2004]
+  status: historically_reviewed
+- id: assertion-r009-ideal-to-modern-boundary
+  subject: q-r009-ideal-structure
+  predicate: contributed_to
+  object: q-r009-historical-vs-modern
+  period: {from: 1871, to: null}
+  perspective: modern_abstraction
+  certainty: high
+  sources: [source-r009-avigad-2004, source-r009-sep-dedekind]
+  status: historically_reviewed
