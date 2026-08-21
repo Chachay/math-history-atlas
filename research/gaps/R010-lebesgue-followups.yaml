@@ -1,0 +1,21 @@
+research_unit_id: R010
+research_gaps:
+  - id: gap-r010-cantor-borel-transmission
+    status: open
+    kind: supplementary
+    originating_unit: R010
+    category: intellectual_transmission
+    question: What documentary evidence, if any, supports a direct Cantor-to-Borel transmission path relevant to Borel's measure construction and the later Lebesgue integration framework?
+    needed_evidence: Borel's primary writings and correspondence, Cantor–Borel documentary contacts where relevant, and specialist historiography that distinguishes direct intellectual transmission from the broader development of point-set methods.
+    constraint: Do not promote a direct person-cantor -> contributed_to -> concept-borel-measure edge, or narrate Cantor -> Borel -> Lebesgue as a single causal chain, while this gap remains open.
+    disposition: supplementary_research
+
+  - id: gap-r010-limit-theorem-handoff
+    status: open
+    kind: candidate_future_unit
+    originating_unit: R010
+    category: next_research_spine
+    question: How did Lebesgue's compressed 1901–1902 limiting claims develop into the later named convergence theorems and the mature theory of interchange of limits and integration?
+    needed_evidence: Lebesgue's later papers and editions, early formulations of monotone and dominated convergence results, and specialist historiography locating the transition from the 1901 note to later theorem forms.
+    constraint: Do not identify the 1901 note's closure and limiting claims with the later named monotone or dominated convergence theorems without a dedicated historical review.
+    disposition: future_analysis_candidate
