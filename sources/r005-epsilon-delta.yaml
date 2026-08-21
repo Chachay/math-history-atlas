@@ -1,0 +1,29 @@
+- id: source-bolzano-1817
+  title: Rein analytischer Beweis des Lehrsatzes, dass zwischen je zwey Werthen, die ein entgegengesetztes Resultat gewähren, wenigstens eine reelle Wurzel der Gleichung liege
+  author: Bernard Bolzano
+  year: 1817
+  kind: primary
+  url: https://eudml.org/doc/202403
+- id: source-rusnock-sebestik-2019
+  title: Bernard Bolzano — His Life and Work, chapter 9 Mathematics
+  author: Paul Rusnock and Jan Šebestík
+  year: 2019
+  kind: secondary_scholarly
+  url: https://doi.org/10.1093/oso/9780198823681.003.0010
+- id: source-grabiner-1983
+  title: Who Gave You the Epsilon? The Origins of Cauchy's Rigorous Calculus
+  author: Judith V. Grabiner
+  year: 1983
+  kind: secondary_peer_reviewed
+  url: https://scholarship.claremont.edu/pitzer_fac_pub/122/
+- id: source-sinkevich-2016
+  title: On History of Epsilontics
+  author: Galina Ivanovna Sinkevich
+  year: 2016
+  kind: secondary_peer_reviewed
+  url: https://eudml.org/doc/293231
+- id: source-heine-1872
+  title: Die Elemente der Functionenlehre
+  author: Eduard Heine
+  year: 1872
+  kind: primary

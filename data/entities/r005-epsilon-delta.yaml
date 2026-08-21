@@ -1,0 +1,32 @@
+- id: person-bolzano
+  type: Person
+  name: Bernard Bolzano
+  start_year: 1781
+  end_year: 1848
+  fields: [analysis]
+- id: person-heine
+  type: Person
+  name: Eduard Heine
+  start_year: 1821
+  end_year: 1881
+  fields: [analysis]
+- id: concept-quantified-control
+  type: Concept
+  name: Quantified control of variation
+  start_year: 1817
+  fields: [analysis]
+- id: work-bolzano-1817
+  type: Work
+  name: Rein analytischer Beweis
+  start_year: 1817
+  fields: [analysis]
+- id: work-weierstrass-schwarz-notes-1861
+  type: Work
+  name: Schwarz's notes from Weierstrass's 1861 Differentialrechnung lectures
+  start_year: 1861
+  fields: [analysis]
+- id: work-heine-functionenlehre-1872
+  type: Work
+  name: Die Elemente der Functionenlehre
+  start_year: 1872
+  fields: [analysis]

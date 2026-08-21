@@ -1,0 +1,64 @@
+research_unit_id: R005
+packet: research/packets/R005-epsilon-delta-rigor.yaml
+canonical_entities:
+  - canonical_id: person-bolzano
+    packet_refs: [{section: entities, id: person-bolzano}]
+  - canonical_id: person-heine
+    packet_refs: [{section: entities, id: person-heine}]
+  - canonical_id: concept-quantified-control
+    packet_refs: [{section: entities, id: concept-quantified-control}]
+  - canonical_id: work-bolzano-1817
+    packet_refs: [{section: entities, id: work-bolzano-1817}]
+  - canonical_id: work-weierstrass-schwarz-notes-1861
+    packet_refs: [{section: entities, id: work-weierstrass-schwarz-notes-1861}]
+  - canonical_id: work-heine-functionenlehre-1872
+    packet_refs: [{section: entities, id: work-heine-functionenlehre-1872}]
+canonical_questions:
+  - canonical_id: q-quantified-limit-control
+    packet_refs: [{section: question_transitions, id: r005-qt001}]
+  - canonical_id: q-epsilon-delta-circulation
+    packet_refs: [{section: question_transitions, id: r005-qt003}]
+  - canonical_id: q-real-number-completeness
+    packet_refs: [{section: question_transitions, id: r005-qt004}]
+canonical_assertions:
+  - canonical_id: assertion-r005-bolzano-continuity
+    packet_refs: [{section: assertions, id: r005-a001}]
+  - canonical_id: assertion-r005-cauchy-continuity-language
+    packet_refs: [{section: assertions, id: r005-a002}]
+  - canonical_id: assertion-r005-cauchy-inequality-control
+    packet_refs: [{section: assertions, id: r005-a003}]
+  - canonical_id: assertion-r005-weierstrass-1861-control
+    packet_refs: [{section: assertions, id: r005-a004}]
+  - canonical_id: assertion-r005-weierstrass-uniformity
+    packet_refs: [{section: assertions, id: r005-a005}]
+  - canonical_id: assertion-r005-continuity-convergence-intersection
+    packet_refs: [{section: assertions, id: r005-a006}]
+  - canonical_id: assertion-r005-heine-published-control
+    packet_refs: [{section: assertions, id: r005-a007}]
+  - canonical_id: assertion-r005-weierstrass-role
+    packet_refs: [{section: assertions, id: r005-a008}]
+  - canonical_id: assertion-r005-uniformity-intersection
+    packet_refs: [{section: assertions, id: r005-a010}]
+  - canonical_id: assertion-r005-cauchy-handoff
+    packet_refs: [{section: question_transitions, id: r005-qt001}]
+  - canonical_id: assertion-r005-heine-circulation
+    packet_refs: [{section: question_transitions, id: r005-qt003}]
+  - canonical_id: assertion-r005-completeness-gap
+    packet_refs: [{section: question_transitions, id: r005-qt004}]
+stories:
+  - story_id: story-quantified-control
+    steps:
+      - step_id: quantified-1
+        canonical_assertion_refs: [assertion-r005-bolzano-continuity, assertion-r005-cauchy-continuity-language, assertion-r005-cauchy-handoff]
+      - step_id: quantified-2
+        canonical_assertion_refs: [assertion-r005-bolzano-continuity]
+      - step_id: quantified-3
+        canonical_assertion_refs: [assertion-r005-cauchy-inequality-control]
+      - step_id: quantified-4
+        canonical_assertion_refs: [assertion-r005-weierstrass-1861-control]
+      - step_id: quantified-5
+        canonical_assertion_refs: [assertion-r005-weierstrass-uniformity, assertion-r005-continuity-convergence-intersection, assertion-r005-uniformity-intersection]
+      - step_id: quantified-6
+        canonical_assertion_refs: [assertion-r005-heine-published-control, assertion-r005-heine-circulation]
+      - step_id: quantified-7
+        canonical_assertion_refs: [assertion-r005-completeness-gap]

@@ -1,0 +1,76 @@
+research_unit_id: R005
+packet: R005-epsilon-delta-rigor.yaml
+review: R005-epsilon-delta-rigor-review.yaml
+resolution: R005-epsilon-delta-rigor-resolution.yaml
+summary:
+  proposed_changes: 4
+  skipped_items: 0
+changes:
+- finding_id: hr-r005-chronology-1823
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Bind the 1823 claim to Cauchy''s seventh lesson, specifically the mean-value/derivative
+    inequality argument in Oeuvres complètes, series 2, vol. 4, pp. 44–45. Preserve the distinction between
+    this proof technique and a general modern epsilon-delta definition.
+
+    '
+  target:
+    section: chronology
+    match:
+      date: '1823'
+  proposed_change:
+    action: replace_fields
+    fields:
+      primary_locator: Septième Leçon; Oeuvres complètes, series 2, vol. 4, pp. 44–45
+  status: proposed
+- finding_id: hr-r005-a003
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Add the exact primary locator: Septième Leçon, Oeuvres complètes, series 2, vol.
+    4, pp. 44–45, where Cauchy begins the inequality argument with delta and epsilon.
+
+    '
+  target:
+    section: assertions
+    id: r005-a003
+  proposed_change:
+    action: replace_fields
+    fields:
+      primary_locator: Septième Leçon; Oeuvres complètes, series 2, vol. 4, pp. 44–45
+  status: proposed
+- finding_id: hr-r005-a009
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Remove the separate Weierstrass-to-concept-limit edge. The directly inspected
+    1861 passage supports quantified continuity; a distinct canonical limit edge would exceed the bounded
+    evidence.
+
+    '
+  target:
+    section: assertions
+    id: r005-a009
+  proposed_change:
+    action: remove
+  status: proposed
+- finding_id: hr-r005-qt003
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Recast the move to Heine''s 1872 publication explicitly as a retrospective Atlas
+    transition from lecture-note formulations to tracing publication and circulation, not as a contemporary
+    research problem shown to have been posed by the historical actors.
+
+    '
+  target:
+    section: question_transitions
+    id: r005-qt003
+  proposed_change:
+    action: replace_fields
+    fields:
+      relation: 'For the Atlas, Heine''s 1872 publication provides a retrospective transition from identifying
+        quantified formulations in Weierstrass''s lecture tradition to tracing their appearance and circulation
+        in published function theory.
+
+        '
+      perspective: later_interpretation
+  status: proposed
+skipped: []

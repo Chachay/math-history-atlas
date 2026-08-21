@@ -1,0 +1,461 @@
+review:
+  research_unit_id: R005
+  packet: R005-epsilon-delta-rigor.yaml
+  critic_version: historical-critic-v1
+  review_date: '2026-08-20'
+  summary:
+    pass: 18
+    revise: 2
+    weak_evidence: 3
+    reject: 0
+  overall_assessment: 'The packet successfully resists the textbook simplification that Weierstrass invented
+    epsilon-delta rigor in one identifiable publication. It distinguishes Bolzano''s increment formulation,
+    Cauchy''s variable-quantity and inequality practices, the mediated 1861 Weierstrass lecture evidence,
+    and Heine''s 1872 publication. It also keeps lecture, note, publication, and later-edition dates separate
+    and does not infer a Cauchy-to-Weierstrass or uniform-convergence-to-epsilon-delta causal chain. Five
+    material issues remain before promotion. Two Cauchy-1823 items need a precise primary locator rather
+    than relying on broad secondary descriptions. The core 1861 Weierstrass continuity claim is still
+    mediated through later reproductions of Schwarz''s private notes and should remain explicitly evidence-limited
+    unless a stable scholarly edition/manuscript locator is added. The packet''s separate graph edge from
+    Weierstrass to the concept of limit is redundant and stronger than the directly quoted 1861 continuity
+    evidence, so it should be removed unless direct evidence is supplied. Finally, the transition from
+    quantified control to publication/circulation should be worded as an Atlas retrospective move rather
+    than as a historical problem that actors themselves are shown to have posed.
+
+    '
+findings:
+- id: hr-r005-chronology-1817
+  reviewed_item:
+    section: chronology
+    match:
+      date: '1817'
+  classification: PASS
+  reason: 'The entry accurately describes Bolzano''s small-increment continuity formulation while explicitly
+    refusing to rewrite it as modern epsilon-delta syntax. The primary work and specialist history are
+    appropriate to the claim.
+
+    '
+  evidence:
+  - source_id: src-bolzano-1817
+    locator: pp. 11–12
+    supports: Bolzano_continuity_definition
+  - source_id: src-rusnock-sebestik-2019
+    locator: chapter 9, pp. 502–543
+    supports: historical_context
+- id: hr-r005-chronology-1821
+  reviewed_item:
+    section: chronology
+    match:
+      date: '1821'
+  classification: PASS
+  reason: 'Cauchy''s own variable-quantity and infinitesimal framework is preserved rather than modernized.
+    The entry does not infer conceptual deficiency from his terminology.
+
+    '
+  evidence:
+  - source_id: src-cauchy-1821
+    locator: preliminary definitions and continuity discussion
+    supports: Cauchy_limit_infinitesimal_continuity_language
+  - source_id: src-grabiner-1983
+    locator: pp. 185–194
+    supports: historical_interpretation_of_Cauchy_rigor
+- id: hr-r005-chronology-1823
+  reviewed_item:
+    section: chronology
+    match:
+      date: '1823'
+  classification: WEAK_EVIDENCE
+  severity: medium
+  reason: 'Grabiner and Sinkevich support the claim that Cauchy used epsilon/delta-style inequality control
+    before Weierstrass, but the packet gives only a generic locator for the 1823 primary text. Since this
+    chronology entry is being used to defeat a priority simplification, the exact theorem/proof/page in
+    Cauchy''s text should be pinned down before promotion.
+
+    '
+  needed_evidence: 'A precise page or section locator in the 1823 Résumé identifying the epsilon and delta
+    inequality argument, preferably checked directly in the Gallica scan or a reliable scholarly edition.
+
+    '
+  target:
+    section: chronology
+    match:
+      date: '1823'
+  proposed_change:
+    action: replace_fields
+    fields:
+      primary_locator: Septième Leçon; Oeuvres complètes, series 2, vol. 4, pp. 44–45
+  evidence:
+  - source_id: src-cauchy-1823
+    locator: locator presently too broad
+    supports: primary_text_exists
+  - source_id: src-grabiner-1983
+    locator: discussion of Cauchy inequality proofs
+    supports: secondary_identification
+  - source_id: src-sinkevich-2016
+    locator: pp. 16–17
+    supports: 1823_epsilon_delta_historiography
+- id: hr-r005-chronology-1861
+  reviewed_item:
+    section: chronology
+    match:
+      date: '1861'
+  classification: PASS
+  reason: 'The date type is correctly identified as lecture_and_student_notes rather than publication.
+    The entry also lowers certainty to medium and explicitly records the textual mediation, which is essential
+    here.
+
+    '
+  evidence:
+  - source_id: src-sinkevich-2016
+    locator: p. 15
+    supports: Schwarz_1861_notes_and_continuity_formulation
+  - source_id: src-viertel-2021
+    locator: sections 2–4
+    supports: first_verifiable_1861_uniformity_trace_and_note_provenance
+- id: hr-r005-chronology-1870-1871
+  reviewed_item:
+    section: chronology
+    match:
+      date: 1870-1871
+  classification: PASS
+  reason: 'Viertel directly supports the terminology change and warns that the lecture formulations should
+    not all be flattened into one later concept. The packet preserves that qualification.
+
+    '
+  evidence:
+  - source_id: src-viertel-2021
+    locator: sections 5–6
+    supports: Weierstrass_uniformity_terminology_development
+- id: hr-r005-chronology-1872
+  reviewed_item:
+    section: chronology
+    match:
+      date: '1872'
+  classification: PASS
+  reason: 'Heine''s publication is a strong printed anchor. The packet appropriately distinguishes evidence
+    of circulation of Weierstrassian principles from a universal priority or standardization claim.
+
+    '
+  evidence:
+  - source_id: src-heine-1872
+    locator: pp. 172, 182–184
+    supports: published_continuity_and_uniform_continuity_formulations
+  - source_id: src-sinkevich-2016
+    locator: pp. 15–16
+    supports: Heine_epsilontic_formulations
+- id: hr-r005-chronology-1894
+  reviewed_item:
+    section: chronology
+    match:
+      date: '1894'
+  classification: PASS
+  reason: 'The packet correctly treats the collected-works appearance of the signed 1841 paper as a later-edited
+    publication and does not equate the 1841 signature date with the date of all printed terminology.
+
+    '
+  evidence:
+  - source_id: src-viertel-2021
+    locator: section 2
+    supports: 1841_1894_revision_problem
+- id: hr-r005-a001
+  reviewed_item:
+    section: assertions
+    id: r005-a001
+  classification: PASS
+  reason: 'The assertion stays close to Bolzano''s 1817 increment formulation and explicitly marks the
+    danger of importing modern nested-quantifier syntax.
+
+    '
+  evidence:
+  - source_id: src-bolzano-1817
+    locator: pp. 11–12
+    supports: increment_based_continuity
+  - source_id: src-rusnock-sebestik-2019
+    locator: chapter 9
+    supports: Bolzano_analysis_context
+- id: hr-r005-a002
+  reviewed_item:
+    section: assertions
+    id: r005-a002
+  classification: PASS
+  reason: 'This is a faithful statement of Cauchy''s 1821 continuity framework and avoids the false dichotomy
+    between infinitesimal language and understanding of limits.
+
+    '
+  evidence:
+  - source_id: src-cauchy-1821
+    locator: continuity definition
+    supports: Cauchy_own_language
+  - source_id: src-grabiner-1983
+    locator: pp. 185–194
+    supports: historical_context
+- id: hr-r005-a003
+  reviewed_item:
+    section: assertions
+    id: r005-a003
+  classification: WEAK_EVIDENCE
+  severity: medium
+  reason: 'The wording is admirably cautious, but the same primary-locator weakness identified in the
+    1823 chronology remains. Because this assertion may become the canonical edge demonstrating pre-Weierstrass
+    epsilon/delta inequality practice, a precise primary location is required.
+
+    '
+  needed_evidence: 'Exact page/section in Cauchy''s 1823 Résumé for the epsilon/delta inequality argument.
+
+    '
+  target:
+    section: assertions
+    id: r005-a003
+  proposed_change:
+    action: replace_fields
+    fields:
+      primary_locator: Septième Leçon; Oeuvres complètes, series 2, vol. 4, pp. 44–45
+  evidence:
+  - source_id: src-grabiner-1983
+    locator: discussion of the 1823 inequality proof
+    supports: secondary_support
+  - source_id: src-sinkevich-2016
+    locator: pp. 16–17
+    supports: pre_Weierstrass_symbol_use
+- id: hr-r005-a004
+  reviewed_item:
+    section: assertions
+    id: r005-a004
+  classification: WEAK_EVIDENCE
+  severity: high
+  reason: 'This is the central Weierstrass claim, yet the packet currently cites Sinkevich''s report of
+    a Yushkevich/Dugac reproduction of Schwarz''s private notes rather than a stable direct scholarly
+    edition or manuscript locator. The packet properly labels certainty medium, but promotion of this
+    edge should either preserve that evidentiary limitation explicitly or add direct evidence.
+
+    '
+  needed_evidence: 'A stable citation to Dugac''s published transcription/edition or to the Schwarz manuscript
+    at the Mittag-Leffler Institute, with a locator for the 1861 continuity passage. A second specialist
+    source independently discussing the same passage would strengthen the transmission claim.
+
+    '
+  target:
+    section: assertions
+    id: r005-a004
+  proposed_change:
+    action: manual_review
+    reason: 'Human must decide whether the current mediated evidence is sufficient for a medium-certainty
+      canonical assertion or whether promotion should wait for a direct manuscript/edition locator.
+
+      '
+  evidence:
+  - source_id: src-sinkevich-2016
+    locator: p. 15
+    supports: reported_1861_Schwarz_continuity_text
+- id: hr-r005-a005
+  reviewed_item:
+    section: assertions
+    id: r005-a005
+  classification: PASS
+  reason: 'Viertel''s source-critical study directly supports the 1861 same-rate convergence evidence
+    and the retrospective nature of mapping different formulations onto uniform convergence.
+
+    '
+  evidence:
+  - source_id: src-viertel-2021
+    locator: sections 3–6
+    supports: 1861_same_rate_and_later_development
+- id: hr-r005-a006
+  reviewed_item:
+    section: assertions
+    id: r005-a006
+  classification: PASS
+  reason: 'The assertion makes only an intersection claim and explicitly refuses causation. The two specialist
+    sources independently place quantified continuity and stronger convergence control in Weierstrass''s
+    1861 teaching context.
+
+    '
+  evidence:
+  - source_id: src-sinkevich-2016
+    locator: p. 15
+    supports: quantified_continuity_in_1861_notes
+  - source_id: src-viertel-2021
+    locator: section 4
+    supports: same_rate_convergence_in_1861_course
+- id: hr-r005-a007
+  reviewed_item:
+    section: assertions
+    id: r005-a007
+  classification: PASS
+  reason: 'The claim is bounded to what Heine''s 1872 publication actually provides and avoids claiming
+    that Heine alone standardized all subsequent notation.
+
+    '
+  evidence:
+  - source_id: src-heine-1872
+    locator: pp. 182–184
+    supports: continuity_and_uniform_continuity_definitions
+  - source_id: src-sinkevich-2016
+    locator: pp. 15–16
+    supports: epsilontic_reading
+- id: hr-r005-a008
+  reviewed_item:
+    section: assertions
+    id: r005-a008
+  classification: PASS
+  reason: 'The synthesis is explicitly later_interpretation and correctly decomposes priority into several
+    dateable acts rather than awarding a unitary invention. The lecture-based nature of Weierstrass''s
+    contribution is well supported by Heine, Sinkevich, and Viertel.
+
+    '
+  evidence:
+  - source_id: src-heine-1872
+    locator: p. 172
+    supports: circulation_without_author_supervised_publication
+  - source_id: src-sinkevich-2016
+    locator: p. 15
+    supports: 1861_epsilontic_lecture_evidence
+  - source_id: src-viertel-2021
+    locator: sections 2–6
+    supports: lecture_based_development_and_date_criticism
+- id: hr-r005-a009
+  reviewed_item:
+    section: assertions
+    id: r005-a009
+  classification: REVISE
+  severity: high
+  reason: 'This separate graph edge from Weierstrass to concept-limit is stronger than the directly inspected
+    evidence. Sinkevich''s abstract attributes a full 1861 limit definition to Weierstrass, while the
+    specific Schwarz passage reproduced in the body is a continuity formulation. The packet already has
+    the better- bounded r005-a004 edge for quantified continuity. Keeping a distinct limit edge risks
+    converting a historiographical summary into a stronger canonical fact and duplicates the core claim.
+
+    '
+  needed_evidence: 'Direct 1861 lecture-note/transcription evidence for a definition of the limit of a
+    function, not merely continuity, plus specialist comparison with earlier limit formulations.
+
+    '
+  target:
+    section: assertions
+    id: r005-a009
+  proposed_change:
+    action: remove
+  evidence:
+  - source_id: src-sinkevich-2016
+    locator: abstract and p. 15
+    supports: distinction_between_summary_limit_claim_and_reproduced_continuity_passage
+- id: hr-r005-a010
+  reviewed_item:
+    section: assertions
+    id: r005-a010
+  classification: PASS
+  reason: 'The R002 intersection is supported by the 1861 same-rate convergence evidence and is explicitly
+    protected against a linear Cauchy-to-Weierstrass genealogy. Viertel specifically reports no known
+    explicit references by Weierstrass in this context to Cauchy''s 1821/1853 theorem or to Seidel/Stokes.
+
+    '
+  evidence:
+  - source_id: src-viertel-2021
+    locator: abstract and sections 3–4
+    supports: independent_Weierstrass_branch_and_1861_trace
+- id: hr-r005-qt001
+  reviewed_item:
+    section: question_transitions
+    id: r005-qt001
+  classification: PASS
+  reason: 'The transition is explicitly Atlas-level later interpretation. It compares frameworks without
+    claiming that Cauchy historically posed a Weierstrassian future problem.
+
+    '
+  evidence:
+  - source_id: src-cauchy-1821
+    locator: preliminary definitions
+    supports: Cauchy_framework
+  - source_id: src-grabiner-1983
+    locator: pp. 185–194
+    supports: historical_comparison
+- id: hr-r005-qt002
+  reviewed_item:
+    section: question_transitions
+    id: r005-qt002
+  classification: PASS
+  reason: 'The transition is deliberately stated as an intersection in the same teaching environment,
+    not a causal sequence. That strength is supported by the two source-critical studies.
+
+    '
+  evidence:
+  - source_id: src-viertel-2021
+    locator: section 4
+    supports: convergence_control_in_1861_teaching
+  - source_id: src-sinkevich-2016
+    locator: p. 15
+    supports: quantified_continuity_in_1861_teaching
+- id: hr-r005-qt003
+  reviewed_item:
+    section: question_transitions
+    id: r005-qt003
+  classification: REVISE
+  severity: medium
+  reason: 'The evidence supports moving editorial attention from lecture-note formulations to a printed
+    formulation in Heine, but the phrase ''the historical problem shifts'' can be read as if contemporary
+    actors are shown to have posed circulation/standardization as the next research problem. The sources
+    establish publication and circulation, not that problem transition in actors'' own terms.
+
+    '
+  needed_evidence: 'No new source is required if the statement is recast explicitly as a retrospective
+    Atlas transition.
+
+    '
+  target:
+    section: question_transitions
+    id: r005-qt003
+  proposed_change:
+    action: replace_fields
+    fields:
+      relation: 'For the Atlas, Heine''s 1872 publication provides a retrospective transition from identifying
+        quantified formulations in Weierstrass''s lecture tradition to tracing their appearance and circulation
+        in published function theory.
+
+        '
+      perspective: later_interpretation
+  evidence:
+  - source_id: src-heine-1872
+    locator: pp. 172, 182–184
+    supports: publication_and_circulation_anchor
+  - source_id: src-sinkevich-2016
+    locator: pp. 15–16
+    supports: later_historical_synthesis
+- id: hr-r005-qt004
+  reviewed_item:
+    section: question_transitions
+    id: r005-qt004
+  classification: PASS
+  reason: 'The relation is explicitly modern_abstraction and expressly denies historical causation. It
+    functions as a bounded handoff to a future completeness unit rather than absorbing real-number construction
+    into R005.
+
+    '
+  evidence:
+  - source_id: src-rusnock-sebestik-2019
+    locator: chapter 9
+    supports: foundations_and_real_analysis_context
+  - source_id: src-sinkevich-2016
+    locator: later nineteenth-century discussion
+    supports: downstream_number_foundations_context
+research_gaps:
+- id: gap-r005-schwarz-direct
+  question: What stable direct edition or archive locator best supports the 1861 Schwarz lecture-note
+    passage?
+  needed_evidence: 'Dugac''s transcription or the Mittag-Leffler manuscript record with page/folio locator
+    and, ideally, a second specialist comparison of the wording.
+
+    '
+- id: gap-r005-cauchy-1823-locator
+  question: Where exactly in the 1823 Résumé does Cauchy's epsilon/delta inequality argument occur?
+  needed_evidence: 'Direct Gallica page/section verification, sufficient to replace the present broad
+    locator.
+
+    '
+- id: gap-r005-arithmetization
+  question: Can arithmetization of analysis be tied to a contemporary Weierstrass text rather than only
+    later historiography?
+  needed_evidence: 'Primary letters, lecture text, inaugural address, or publications explicitly supporting
+    the programmatic characterization; otherwise preserve it only as later interpretation.
+
+    '
+sources: []

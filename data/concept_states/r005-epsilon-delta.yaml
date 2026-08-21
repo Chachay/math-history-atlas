@@ -1,0 +1,12 @@
+- id: r005-cs-continuity-1817-1823
+  concept_id: concept-continuity
+  period: {from: 1817, to: 1823}
+  label: Continuity is expressed through historically distinct variable-increment and infinitesimal frameworks rather than one shared modern epsilon-delta syntax.
+- id: r005-cs-quantified-control-1861
+  concept_id: concept-quantified-control
+  period: {from: 1861, to: 1861}
+  label: Student notes from Weierstrass's teaching record an explicit bound on input variation corresponding to an arbitrarily small allowed function variation.
+- id: r005-cs-quantified-control-1872
+  concept_id: concept-quantified-control
+  period: {from: 1872, to: 1872}
+  label: Heine's published function theory gives explicit small-error and small-increment conditions for continuity and uniform continuity.
