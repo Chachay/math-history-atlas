@@ -103,7 +103,7 @@ Do not translate Research Packets or canonical evidence. Translation should foll
 
 ## Operating rule
 
-Use `research/ORIGINS-OF-MATHEMATICAL-QUESTIONS.md` / the current question-origin guideline when selecting transitions:
+Use `research/EXTERNAL-CONTEXT-GUIDELINE.md`, whose current scope covers origins of mathematical questions, when selecting transitions:
 
 - internal mathematical development;
 - external stimulation;
