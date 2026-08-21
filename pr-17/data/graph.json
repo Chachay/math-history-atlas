@@ -302,6 +302,62 @@
       "fields": [
         "analysis"
       ]
+    },
+    {
+      "id": "person-bolzano",
+      "type": "Person",
+      "name": "Bernard Bolzano",
+      "start_year": 1781,
+      "end_year": 1848,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-heine",
+      "type": "Person",
+      "name": "Eduard Heine",
+      "start_year": 1821,
+      "end_year": 1881,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-quantified-control",
+      "type": "Concept",
+      "name": "Quantified control of variation",
+      "start_year": 1817,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-bolzano-1817",
+      "type": "Work",
+      "name": "Rein analytischer Beweis",
+      "start_year": 1817,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-weierstrass-schwarz-notes-1861",
+      "type": "Work",
+      "name": "Schwarz's notes from Weierstrass's 1861 Differentialrechnung lectures",
+      "start_year": 1861,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-heine-functionenlehre-1872",
+      "type": "Work",
+      "name": "Die Elemente der Functionenlehre",
+      "start_year": 1872,
+      "fields": [
+        "analysis"
+      ]
     }
   ],
   "questions": [
@@ -455,6 +511,39 @@
       "question": "What further integration or exceptional-set questions remain beyond Riemann's criterion?",
       "period": {
         "from": 1854,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-quantified-limit-control",
+      "question": "How precisely must arbitrarily small variation be controlled?",
+      "period": {
+        "from": 1817,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-epsilon-delta-circulation",
+      "question": "How did quantified continuity formulations enter published function theory?",
+      "period": {
+        "from": 1872,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-real-number-completeness",
+      "question": "What guarantees the completeness of the real-number system underlying limit arguments?",
+      "period": {
+        "from": 1870,
         "to": null
       },
       "fields": [
@@ -1168,6 +1257,210 @@
       "certainty": "medium",
       "sources": [
         "source-mascre-2005"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-bolzano-continuity",
+      "subject": "work-bolzano-1817",
+      "predicate": "contributed_to",
+      "object": "concept-continuity",
+      "period": {
+        "from": 1817,
+        "to": 1817
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-bolzano-1817",
+        "source-rusnock-sebestik-2019"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-cauchy-continuity-language",
+      "subject": "work-cauchy-cours",
+      "predicate": "contributed_to",
+      "object": "concept-continuity",
+      "period": {
+        "from": 1821,
+        "to": 1821
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-grabiner-1983"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-cauchy-inequality-control",
+      "subject": "work-cauchy-calcul-1823",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1823,
+        "to": 1823
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1823",
+        "source-grabiner-1983",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-weierstrass-1861-control",
+      "subject": "work-weierstrass-schwarz-notes-1861",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1861,
+        "to": 1861
+      },
+      "perspective": "historical",
+      "certainty": "medium",
+      "sources": [
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-weierstrass-uniformity",
+      "subject": "person-weierstrass",
+      "predicate": "contributed_to",
+      "object": "concept-uniform-convergence",
+      "period": {
+        "from": 1861,
+        "to": 1886
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-weierstrass-uniform-history"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-continuity-convergence-intersection",
+      "subject": "work-weierstrass-schwarz-notes-1861",
+      "predicate": "contributed_to",
+      "object": "concept-continuity",
+      "period": {
+        "from": 1861,
+        "to": 1861
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-sinkevich-2016",
+        "source-weierstrass-uniform-history"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-heine-published-control",
+      "subject": "work-heine-functionenlehre-1872",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-heine-1872",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-weierstrass-role",
+      "subject": "person-weierstrass",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1861,
+        "to": 1872
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-sinkevich-2016",
+        "source-weierstrass-uniform-history",
+        "source-heine-1872"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-uniformity-intersection",
+      "subject": "work-weierstrass-schwarz-notes-1861",
+      "predicate": "contributed_to",
+      "object": "q-uniform-convergence-emergence",
+      "period": {
+        "from": 1861,
+        "to": 1861
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-weierstrass-uniform-history"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-cauchy-handoff",
+      "subject": "work-cauchy-cours",
+      "predicate": "contributed_to",
+      "object": "q-quantified-limit-control",
+      "period": {
+        "from": 1821,
+        "to": 1861
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-grabiner-1983",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-heine-circulation",
+      "subject": "work-heine-functionenlehre-1872",
+      "predicate": "contributed_to",
+      "object": "q-epsilon-delta-circulation",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-heine-1872",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r005-completeness-gap",
+      "subject": "concept-quantified-control",
+      "predicate": "contributed_to",
+      "object": "q-real-number-completeness",
+      "period": {
+        "from": 1872,
+        "to": 1880
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "medium",
+      "sources": [
+        "source-rusnock-sebestik-2019",
+        "source-sinkevich-2016"
       ],
       "status": "historically_reviewed"
     }

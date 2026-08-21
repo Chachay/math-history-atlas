@@ -67,8 +67,22 @@
     "person": "person-weierstrass",
     "name": "Karl Weierstrass",
     "assertions": [
-      "assertion-r002-weierstrass-uniform"
+      "assertion-r002-weierstrass-uniform",
+      "assertion-r005-weierstrass-uniformity",
+      "assertion-r005-weierstrass-role"
     ],
+    "stories": []
+  },
+  {
+    "person": "person-bolzano",
+    "name": "Bernard Bolzano",
+    "assertions": [],
+    "stories": []
+  },
+  {
+    "person": "person-heine",
+    "name": "Eduard Heine",
+    "assertions": [],
     "stories": []
   }
 ]
