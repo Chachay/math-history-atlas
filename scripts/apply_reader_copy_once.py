@@ -1,5 +1,6 @@
 from pathlib import Path
 
+# One-shot migration; the workflow removes this file after applying it.
 root = Path(__file__).resolve().parents[1]
 main = root / "app/src/main.tsx"
 build = root / "scripts/build.py"
@@ -28,6 +29,5 @@ if old not in btext:
     raise SystemExit("Expected story-index build block not found")
 build.write_text(btext.replace(old, new, 1), encoding="utf-8")
 
-# This migration is intentionally one-shot; remove its runner artifacts from the resulting commit.
 (root / ".github/workflows/reader-copy-once.yml").unlink(missing_ok=True)
 Path(__file__).unlink(missing_ok=True)
