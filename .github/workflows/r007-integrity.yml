@@ -1,0 +1,38 @@
+name: R007 integrity promotion
+
+on:
+  push:
+    branches:
+      - research/r007-gauss-intrinsic-curvature
+
+permissions:
+  contents: write
+
+jobs:
+  bind-and-promote:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/r007-gauss-intrinsic-curvature
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m scripts.bind_resolution R007
+      - run: python -m scripts.promote_verified R007
+      - run: python -m scripts.promote_verified R007 --apply
+      - name: Commit verified R007 artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- research/resolutions/R007-gauss-intrinsic-curvature-resolution.yaml
+          git add -- research/packets/R007-gauss-intrinsic-curvature.yaml
+          git add -- research/promotions/R007-gauss-intrinsic-curvature-promotion.yaml
+          if git diff --cached --quiet; then
+            echo "No integrity changes to commit"
+          else
+            git commit -m "Bind and apply R007 research resolution"
+            git push
+          fi
