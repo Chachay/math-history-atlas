@@ -430,6 +430,7 @@
       "id": "work-lagrange-reflexions",
       "type": "Work",
       "name": "Lagrange's Reflections on the algebraic solution of equations",
+      "original_title": "Réflexions sur la résolution algébrique des équations",
       "start_year": 1770,
       "fields": [
         "algebra"
@@ -439,6 +440,7 @@
       "id": "work-abel-1824",
       "type": "Work",
       "name": "Abel's 1824 memoir on the impossibility of a general quintic formula",
+      "original_title": "Mémoire sur les équations algébriques",
       "start_year": 1824,
       "fields": [
         "algebra"
@@ -448,6 +450,7 @@
       "id": "work-abel-1826",
       "type": "Work",
       "name": "Abel's 1826 expanded impossibility proof for equations above degree four",
+      "original_title": "Beweis der Unmöglichkeit algebraische Gleichungen von höheren Graden als dem vierten allgemein aufzulösen",
       "start_year": 1826,
       "fields": [
         "algebra"
@@ -457,6 +460,7 @@
       "id": "work-galois-resolubilite",
       "type": "Work",
       "name": "Galois's memoir on conditions for solvability by radicals",
+      "original_title": "Mémoire sur les conditions de résolubilité des équations par radicaux",
       "start_year": 1831,
       "fields": [
         "algebra"
