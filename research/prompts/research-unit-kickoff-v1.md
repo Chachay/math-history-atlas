@@ -124,11 +124,19 @@ python -m scripts.promote_verified R00X
 python -m scripts.promote_verified R00X --apply
 ```
 
-For smartphone/connector-centered operation, use the permanent **Research Unit Ops** GitHub Actions workflow rather than adding a unit-specific temporary workflow. It accepts a unit ID, target ref, and operation (`status`, `check`, `bind`, `promote-dry-run`, or `promote-apply`) and delegates semantics to repository Python modules.
+For smartphone/connector-centered operation, use the permanent **Research Unit Ops** GitHub Actions workflow rather than adding a unit-specific temporary workflow. It accepts a unit ID, target ref, and operation. Current read/write operations include `status`, `check`, `bind`, `promote-dry-run`, `promote-apply`, `canonical-plan`, `story-evidence`, `gap-plan`, and `gap-apply`; repository Python modules own the workflow semantics.
 
 Do not invoke `bind_resolution.py` or `promote_verified.py` by file path in CI runners; both import the `scripts` package and must retain the repository root on Python's module search path.
 
 Promote only human-accepted material to canonical data. Reuse existing canonical IDs when the historical object/question is genuinely the same; do not create duplicates simply because the research unit is new.
+
+Before writing canonical entity files, inspect the read-only canonical promotion plan:
+
+```text
+python -m scripts.plan_canonical_promotion R00X
+```
+
+Resolve any `CONFLICT` before canonical mutation. `REUSE` should point to the existing canonical object, and `NEW` should represent a genuinely new object.
 
 Retain a machine-readable canonical provenance map under `research/promotions/`.
 
@@ -166,6 +174,27 @@ Do not make a Story line move backward in historical time merely because a refer
 
 For externally motivated episodes, explain only enough of the outside domain to establish the historical stakes. Move the reader onto the mathematical Question rather than turning the Story into an application tutorial.
 
+### B1.5. Story evidence gate
+
+Before Story Critic, validate the Story's evidence structure:
+
+```text
+python -m scripts.validate_story_evidence editorial/stories/r00x-....yaml
+```
+
+This gate does **not** judge historical truth and does not rewrite prose. It verifies the machine-checkable chain:
+
+```text
+Story narrative
+→ assertion_refs
+→ reviewed canonical assertions
+→ persistent source records
+```
+
+It also checks that a Story step's perspective is represented by its supporting assertions. Strong `continues` links receive extra scrutiny: a warning means Story Critic must explicitly verify that direct continuity is supported and is not merely inferred from chronology. Warnings are review inputs, not automatic historical rejection.
+
+Do not begin Story Critic while the evidence gate has errors.
+
 ### B2. Story Critic
 
 Apply `story-critic-v1.md` independently. Check:
@@ -174,7 +203,7 @@ Apply `story-critic-v1.md` independently. Check:
 - causation vs chronology;
 - modern terminology projected backward;
 - perspective;
-- Story-link semantics;
+- Story-link semantics, including any `continues` warning surfaced by the evidence gate;
 - temporal ordering;
 - missing intermediaries;
 - whether a purported branch/convergence is actually evidenced;
@@ -184,16 +213,43 @@ Present material non-PASS findings to the human. Apply only explicitly resolved 
 
 If Story links or temporal anchors change after Story Critic, invalidate or re-run the affected transition review rather than pretending the earlier review still covers the new DAG.
 
+### B3. Research-gap completion
+
+After Story Critic and any required human editorial resolution, make unresolved evidence persistent rather than leaving it only in chat or PR prose.
+
+First inspect the read-only proposal:
+
+```text
+python -m scripts.propose_research_gaps R00X
+```
+
+Classify proposed gaps as:
+
+- `supplementary`: evidence can be filled without allocating another bounded research unit;
+- `candidate_future_unit`: a genuine downstream research spine that may justify a later unit.
+
+A `candidate_future_unit` must remain unnumbered until the current roadmap is read and the roadmap-controlled allocation checkpoint permits assignment. Never allocate a new `R` number solely from the current unit.
+
+After inspecting the classifications and roadmap snapshot, persist missing gaps with:
+
+```text
+python -m scripts.propose_research_gaps R00X --apply
+```
+
+Do not duplicate gaps already present in `research/gaps/`.
+
 ## Validation and preview
 
 Before declaring Phase B complete:
 
-1. Run repository validation/tests/build through CI or available tooling.
-2. Confirm the changed Story's canonical provenance is non-dangling.
-3. Confirm chronological Story-link validation passes.
-4. Confirm SPA build passes.
-5. Open a PR to `main` and obtain the mobile PR Preview.
-6. Give the user direct links to the changed Story and its Network context.
+1. Confirm the Story evidence gate has no errors; carry any strong-link warnings into Story Critic.
+2. Confirm unresolved research gaps have been classified and persisted, or explicitly establish that there are none.
+3. Run repository validation/tests/build through CI or available tooling.
+4. Confirm the changed Story's canonical provenance is non-dangling.
+5. Confirm chronological Story-link validation passes.
+6. Confirm SPA build passes.
+7. Open a PR to `main` and obtain the mobile PR Preview.
+8. Give the user direct links to the changed Story and its Network context.
 
 Do not say CI is green unless the latest head checks were actually read.
 
@@ -205,7 +261,7 @@ Report:
 
 - research unit title and period;
 - critic summary;
-- unresolved research gaps;
+- unresolved research gaps and their persistent classification;
 - canonical additions/reused nodes;
 - Story title and important intersections;
 - Story Critic summary;
