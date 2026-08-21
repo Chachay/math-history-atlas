@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - research/r007-gauss-intrinsic-curvature
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: write
