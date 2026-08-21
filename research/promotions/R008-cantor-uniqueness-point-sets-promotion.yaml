@@ -1,0 +1,91 @@
+research_unit_id: R008
+packet: R008-cantor-uniqueness-point-sets.yaml
+review: R008-cantor-uniqueness-point-sets-review.yaml
+resolution: R008-cantor-uniqueness-point-sets-resolution.yaml
+summary:
+  proposed_changes: 5
+  skipped_items: 0
+changes:
+- finding_id: hr-r008-riemann-intermediary
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted with the gap preserved. Keep Riemann as researched background/intermediary, but
+    do not promote a canonical contributed_to edge until a proof-level locator identifies the precise
+    Riemann result and Schwarz step used in Cantor''s 1870 proof.
+
+    '
+  target:
+    section: assertions
+    id: r008-a009
+  proposed_change:
+    action: manual_review
+    reason: 'Keep Riemann as researched background/intermediary, but do not promote this assertion as
+      a canonical `contributed_to` edge until the proof-level locator is supplied.
+
+      '
+  status: proposed
+- finding_id: hr-r008-a011-predicate
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Remove the contributed_to assertion between Cantor''s 1872 and 1874 work; the
+    researched evidence supports a developing trajectory but not that causal machine predicate.
+
+    '
+  target:
+    section: assertions
+    id: r008-a011
+  proposed_change:
+    action: remove
+  status: proposed
+- finding_id: hr-r008-qt005-scope
+  critic_classification: REJECT
+  human_decision: accept_critic
+  human_note: 'Accepted. Remove the downstream transition to later infinite-set structure. Treat the 1873-1874
+    stage as a separate research handoff rather than a canonical R008 transition.
+
+    '
+  target:
+    section: question_transitions
+    id: r008-qt005
+  proposed_change:
+    action: remove
+  status: proposed
+- finding_id: hr-r008-r003-intersection
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: 'Accepted. Retain only a Network-level conceptual intersection with R003 concerning trigonometric
+    representation; assert no direct historical Dirichlet-function-concept to Cantor-uniqueness transmission.
+
+    '
+  target:
+    section: intersection_candidates
+    id: r008-i002
+  proposed_change:
+    action: replace_fields
+    fields:
+      significance: 'R003 and R008 can intersect in the Network as two reviewed questions about the legitimacy
+        and determination of trigonometric representation, but no direct historical transition from the
+        Dirichlet admissibility question to Cantor''s uniqueness work is asserted in R008.
+
+        '
+  status: proposed
+- finding_id: hr-r008-heine-year
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Use 1870 as the journal issue/standard citation year while explicitly preserving
+    the EuDML 1869 metadata discrepancy; infer no more precise appearance date.
+
+    '
+  target:
+    section: sources
+    id: src-heine-1870
+  proposed_change:
+    action: replace_fields
+    fields:
+      year: 1870
+      notes: 'Journal issue/standard citation year 1870; EuDML metadata displays 1869. Preserve both facts
+        and do not infer a more precise appearance date without bibliographic evidence.
+
+        '
+  status: proposed
+skipped: []
