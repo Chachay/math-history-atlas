@@ -1,0 +1,590 @@
+research_unit:
+  id: R008
+  title: Cantor — uniqueness of trigonometric series, exceptional sets, and point-set questions
+  period:
+    approximate_start: 1860
+    approximate_end: 1885
+    core_period: 1870–1872
+  scope_summary: >
+    Investigation of the uniqueness problem for trigonometric-series representations from
+    Heine's 1870 treatment through Cantor's 1870, 1871, and 1872 uniqueness papers. The packet
+    follows the mathematical change from uniqueness everywhere, through finitely many exceptional
+    arguments, to infinite point sets controlled by finite iteration of derived sets. It treats
+    the later connection to Cantorian set theory as a historiographic question rather than as an
+    automatic causal consequence of Fourier series, and it does not retroject the later language
+    of U-sets, Cantor–Bendixson rank, topology, or transfinite derived sets into the 1870–1872 work.
+  origin_pattern: internal_mathematical_development
+  prior_mathematical_problem: >
+    Trigonometric representation had raised distinct questions of representability, convergence,
+    and uniqueness. Riemann's work enlarged the admissible analytic setting without making
+    uniqueness a settled consequence of convergence or integrability.
+  generated_date: '2026-08-20'
+  research_status: researched
+  editorial_status: not_accepted
+
+research_questions:
+  - id: q001
+    question: What uniqueness problem for trigonometric series was being discussed by Heine and Cantor around 1870?
+  - id: q002
+    question: What hypotheses did Cantor remove in moving beyond Heine's result?
+  - id: q003
+    question: What exactly changed when Cantor allowed finitely many exceptional points in 1871?
+  - id: q004
+    question: What class of infinite exceptional point sets is covered by Cantor's 1872 extension?
+  - id: q005
+    question: When and how does Cantor introduce the operation of passing from a point set to its set of limit points?
+  - id: q006
+    question: Which terminology in modern uniqueness theory is retrospective rather than Cantor's own terminology?
+  - id: q007
+    question: How strong is the historical claim that work on trigonometric series caused or produced Cantor's later set theory?
+  - id: q008
+    question: What roles should be assigned to Heine, Riemann, Schwarz, and Weierstrass rather than crediting the development to Cantor alone?
+
+entities:
+  - id: person-cantor
+    type: Person
+    canonical_name: Georg Cantor
+    birth_year: 1845
+    death_year: 1918
+  - id: person-heine
+    type: Person
+    canonical_name: Eduard Heine
+    birth_year: 1821
+    death_year: 1881
+  - id: person-riemann
+    type: Person
+    canonical_name: Bernhard Riemann
+    canonical_reuse_candidate: true
+  - id: person-schwarz
+    type: Person
+    canonical_name: Hermann Amandus Schwarz
+    birth_year: 1843
+    death_year: 1921
+  - id: concept-trig-series-uniqueness
+    type: Concept
+    canonical_name: Uniqueness of trigonometric-series representation
+  - id: concept-exceptional-point-set
+    type: Concept
+    canonical_name: Exceptional point set in a uniqueness theorem
+  - id: concept-derived-set
+    type: Concept
+    canonical_name: Derived set of a point set
+    terminology_note: >
+      Cantor's 1872 paper defines the derived set P' as the set of limit points of P and iterates
+      the operation finitely. Later terminology such as Cantor–Bendixson derivative/rank and U-set
+      is explanatory modern language and is not to be attributed to the 1872 paper.
+  - id: work-heine-trig-1870
+    type: Work
+    canonical_name: Heine on trigonometric series
+    original_title: Ueber trigonometrische Reihen
+    publication_year: 1870
+  - id: work-cantor-uniqueness-1870
+    type: Work
+    canonical_name: Cantor's uniqueness proof for trigonometric representation
+    original_title: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt
+    publication_year: 1870
+  - id: work-cantor-uniqueness-note-1871
+    type: Work
+    canonical_name: Cantor's note on exceptional points in the uniqueness theorem
+    original_title: Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt
+    publication_year: 1871
+  - id: work-cantor-extension-1872
+    type: Work
+    canonical_name: Cantor's extension of the trigonometric-series uniqueness theorem
+    original_title: Ueber die Ausdehnung eines Satzes aus der Theorie der trigonometrischen Reihen
+    publication_year: 1872
+  - id: work-cantor-algebraic-reals-1874
+    type: Work
+    canonical_name: Cantor on the set of real algebraic numbers
+    original_title: Ueber eine Eigenschaft des Inbegriffes aller reellen algebraischen Zahlen
+    publication_year: 1874
+    boundary_note: >
+      Included only to mark that the nondenumerability/countability line is a later stage than
+      the 1872 uniqueness paper; its mathematics is not absorbed into R008.
+
+chronology:
+  - date: '1870'
+    date_type: journal_volume_publication
+    event: >
+      Heine published a treatment of trigonometric series that made uniqueness an explicit issue
+      under hypotheses including general uniform convergence, with "im allgemeinen" allowing only
+      finitely many exceptional points in the stated conventions.
+    perspective: historical
+    certainty: high
+    sources: [src-heine-1870, src-halle-heine]
+    primary_locator: 'J. reine angew. Math. 71, pp. 353–365; especially p. 355'
+    uncertainty: >
+      EuDML metadata labels the item 1869 while the journal issue, Halle bibliography, and standard
+      citation use 1870. Treat 1870 as the issue/publication convention and retain the discrepancy.
+
+  - date: '1870'
+    date_type: publication
+    event: >
+      Cantor proved that if a function is represented for every real x by a convergent trigonometric
+      series, the representation is unique; equivalently, a trigonometric series converging to zero
+      everywhere has all coefficients zero.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1870-uniqueness]
+    primary_locator: 'J. reine angew. Math. 72, pp. 139–142'
+
+  - date: '1871'
+    date_type: publication
+    event: >
+      In a note explicitly referring back to the 1870 uniqueness paper, Cantor showed that the
+      conclusion persists when convergence or equality of the represented sums is abandoned at a
+      finite number of values of x.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1871-note, src-cantor-1872-extension]
+    primary_locator: 'J. reine angew. Math. 73, pp. 294–296; retrospective summary in Cantor 1872, opening paragraph'
+
+  - date: '1872'
+    date_type: publication
+    event: >
+      Cantor extended the uniqueness theorem to certain infinite exceptional point sets. He defined
+      the derived set P' of a point set P as the set of its limit points and iterated the operation.
+      His theorem covers a set P for which, after a finite number nu of derivations, P^(nu) consists
+      of finitely many points and hence has no further derived set.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1872-extension]
+    primary_locator: 'Math. Ann. 5, pp. 123–132, especially §2 and §3'
+    uncertainty: >
+      The later compression "finite Cantor–Bendixson rank" is mathematically convenient but is not
+      Cantor's 1872 terminology and is excluded from the historical wording.
+
+  - date: '1872'
+    date_type: publication
+    event: >
+      The same paper develops a construction of real number magnitudes by fundamental sequences of
+      rationals because Cantor says preparatory definitions are needed for a compact statement and
+      proof of the intended uniqueness extension.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1872-extension, src-trinity-cantor-1872]
+    primary_locator: 'opening paragraph and §1'
+
+  - date: '1874'
+    date_type: publication
+    event: >
+      Cantor's paper on real algebraic numbers belongs to a later phase in which countability and the
+      non-equivalence of infinite totalities became central. This is kept chronologically distinct
+      from the 1872 uniqueness/derived-set paper.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-dauben-1979, src-halle-cantor]
+    uncertainty: >
+      R008 does not research the 1874 proof itself; the entry only prevents the later transfinite
+      trajectory from being folded back into 1872.
+
+assertions:
+  - id: r008-a001
+    subject: work-heine-trig-1870
+    predicate: raised_question
+    object: concept-trig-series-uniqueness
+    statement: >
+      Heine's trigonometric-series paper explicitly treats uniqueness and proves it under conditions
+      that include general uniform convergence; his convention permits finitely many exceptional points.
+    perspective: historical
+    certainty: high
+    sources: [src-heine-1870, src-halle-heine]
+
+  - id: r008-a002
+    subject: person-cantor
+    predicate: contributed_to
+    object: concept-trig-series-uniqueness
+    statement: >
+      Cantor's 1870 paper removes the uniform-convergence restriction from the uniqueness conclusion
+      by proving uniqueness for a trigonometric series converging pointwise for every real x.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1870-uniqueness, src-scoville-2012]
+
+  - id: r008-a003
+    subject: work-cantor-uniqueness-note-1871
+    predicate: generalized
+    object: concept-trig-series-uniqueness
+    statement: >
+      Cantor's 1871 note extends his uniqueness theorem so that finitely many x-values may be excepted
+      from convergence or agreement of the represented sums.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1871-note, src-cantor-1872-extension]
+
+  - id: r008-a004
+    subject: work-cantor-extension-1872
+    predicate: generalized
+    object: concept-exceptional-point-set
+    statement: >
+      Cantor's 1872 paper asks how an infinite collection of exceptional x-values can be admitted
+      without destroying the uniqueness theorem and formulates a sufficient condition using finite
+      iteration of derived point sets.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1872-extension]
+
+  - id: r008-a005
+    subject: work-cantor-extension-1872
+    predicate: contributed_to
+    object: concept-derived-set
+    statement: >
+      Cantor defines P' as the set of limit points of a point set P, considers P'', P''', and finite
+      iterates P^(nu), and uses this structure in the statement and proof of his uniqueness extension.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1872-extension]
+
+  - id: r008-a006
+    subject: concept-exceptional-point-set
+    predicate: contributed_to
+    object: concept-derived-set
+    statement: >
+      In the 1872 paper, the need to characterize admissible infinite exceptional point sets is the
+      immediate setting in which the derived-set operation is introduced and used.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1872-extension, src-scoville-2012]
+
+  - id: r008-a007
+    subject: work-cantor-extension-1872
+    predicate: contributed_to
+    object: concept-trig-series-uniqueness
+    statement: >
+      The 1872 theorem establishes uniqueness when the exceptional set is of a finite derived-set
+      type in Cantor's sense: some finite iterate consists of finitely many points and therefore has
+      no further derived set.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1872-extension]
+
+  - id: r008-a008
+    subject: person-heine
+    predicate: contributed_to
+    object: concept-trig-series-uniqueness
+    statement: >
+      Later historical accounts place Heine's Halle work and discussions with Cantor immediately
+      upstream of Cantor's entry into the uniqueness problem, but the exact direction of particular
+      suggestions between Heine and Cantor is not fixed here as a primary-source causal claim.
+    perspective: later_interpretation
+    certainty: medium
+    sources: [src-dauben-1979, src-halle-heine, src-scoville-2012]
+    uncertainty: >
+      Secondary accounts differ in how they narrate who suggested which generalization. A precise
+      correspondence or a checked primary locator in Heine is needed before using "Heine motivated
+      Cantor" or an equally strong one-way predicate.
+
+  - id: r008-a009
+    subject: person-riemann
+    predicate: contributed_to
+    object: concept-trig-series-uniqueness
+    statement: >
+      Riemann's trigonometric-series work supplied analytic machinery used in the Heine/Cantor
+      uniqueness setting, so Riemann is an intermediary in the mathematical background rather than
+      merely a chronological predecessor.
+    perspective: later_interpretation
+    certainty: medium
+    sources: [src-riemann-1867, src-halle-heine, src-scoville-2012]
+    uncertainty: >
+      The packet has not yet pinned every step of Cantor's 1870 proof to a precise Riemann passage;
+      promotion should avoid a stronger direct-influence claim without that locator.
+
+  - id: r008-a010
+    subject: work-cantor-extension-1872
+    predicate: contributed_to
+    object: concept-derived-set
+    statement: >
+      Later historians regard the 1872 paper as a concrete analytic origin of Cantor's sustained
+      investigation of point sets, but this does not make the full later transfinite theory already
+      present in the paper.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-dauben-1979, src-scoville-2012]
+
+  - id: r008-a011
+    subject: work-cantor-extension-1872
+    predicate: contributed_to
+    object: work-cantor-algebraic-reals-1874
+    statement: >
+      Cantor's 1872 point-set work and his 1874 investigation of infinite numerical totalities belong
+      to a developing research trajectory, but specialist historiography explicitly warns that
+      transfinite set theory did not follow immediately from the 1872 trigonometric-series paper.
+    perspective: later_interpretation
+    certainty: medium
+    sources: [src-dauben-1979]
+    uncertainty: >
+      This is a bounded historiographic handoff, not a claim that the 1872 uniqueness theorem caused
+      the 1874 result or later transfinite arithmetic.
+
+  - id: r008-a012
+    subject: concept-derived-set
+    predicate: contributed_to
+    object: concept-exceptional-point-set
+    statement: >
+      Modern uniqueness theory can redescribe Cantor's 1872 exceptional sets using later notions such
+      as uniqueness sets and finite Cantor–Bendixson complexity, but those labels are modern abstractions
+      and must not be presented as Cantor's contemporary vocabulary.
+    perspective: modern_abstraction
+    certainty: high
+    sources: [src-eom-uniqueness-set, src-cantor-1872-extension]
+
+question_transitions:
+  - id: r008-qt001
+    from_question: q-trig-representation-scope
+    to_question: q-trig-series-uniqueness
+    relation: >
+      Once trigonometric representation is considered beyond restricted formula classes, existence and
+      convergence do not settle whether the representing coefficients are uniquely determined; Heine and
+      Cantor treat uniqueness as a distinct mathematical problem.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-heine-1870, src-cantor-1870-uniqueness, src-scoville-2012]
+
+  - id: r008-qt002
+    from_question: q-fourier-series-convergence
+    to_question: q-trig-series-uniqueness
+    relation: >
+      The 1870 uniqueness problem separates the question whether a trigonometric series converges to a
+      function from the question whether two convergent trigonometric series can represent the same function.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-heine-1870, src-cantor-1870-uniqueness]
+
+  - id: r008-qt003
+    from_question: q-trig-series-uniqueness
+    to_question: q-exceptional-set-uniqueness
+    relation: >
+      Cantor's own sequence of 1870, 1871, and 1872 papers progressively asks how much failure of convergence
+      or agreement at exceptional x-values can be tolerated while retaining uniqueness.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1871-note, src-cantor-1872-extension]
+
+  - id: r008-qt004
+    from_question: q-exceptional-set-uniqueness
+    to_question: q-derived-set-structure
+    relation: >
+      To state a uniqueness result for certain infinite exceptional sets, Cantor introduces repeated passage
+      to limit-point sets and thereby makes the internal structure of point sets itself mathematically relevant.
+    perspective: historical
+    certainty: high
+    sources: [src-cantor-1872-extension]
+
+  - id: r008-qt005
+    from_question: q-derived-set-structure
+    to_question: q-later-infinite-set-structure
+    relation: >
+      Later Cantorian set theory can be read as developing from a research trajectory in which point sets had
+      become mathematical objects, but the 1872 paper alone does not establish a direct causal transition to
+      transfinite set theory; the 1874 nondenumerability result and later work form distinct stages.
+    perspective: later_interpretation
+    certainty: medium
+    sources: [src-dauben-1979]
+
+canonical_question_candidates:
+  - id: q-trig-series-uniqueness
+    question: When is a trigonometric-series representation unique?
+    period: {from: 1870, to: null}
+    fields: [analysis]
+  - id: q-exceptional-set-uniqueness
+    question: Which exceptional point sets can be tolerated without destroying uniqueness of trigonometric representation?
+    period: {from: 1871, to: null}
+    fields: [analysis]
+  - id: q-derived-set-structure
+    question: How can an infinite point set be analyzed by repeatedly passing to its limit points?
+    period: {from: 1872, to: null}
+    fields: [analysis]
+  - id: q-later-infinite-set-structure
+    question: What structural distinctions among infinite sets become mathematically significant beyond the first derived-set questions?
+    period: {from: 1874, to: null}
+    fields: [analysis]
+    boundary_note: downstream handoff only; not proposed for canonical promotion within R008 without later-unit research
+
+intersection_candidates:
+  - id: r008-i001
+    with: R001
+    refs: [q-trig-representation-scope, q-fourier-series-convergence, q-trig-series-uniqueness]
+    significance: >
+      R008 branches from the established representation/convergence line into uniqueness; this is a reviewed
+      mathematical-question intersection, not a claim of direct Fourier-to-Cantor personal influence.
+  - id: r008-i002
+    with: R003
+    refs: [q-dirichlet-admissible-functions, q-trig-series-uniqueness]
+    significance: >
+      Dirichlet-era restrictions on admissible functions form part of the analytical background, while R008
+      asks the different question of uniqueness after a representation is given. The intersection should remain
+      conceptual unless direct transmission evidence is added.
+  - id: r008-i003
+    with: R004
+    refs: [q-fourier-series-convergence, q-post-riemann-integration-gap, q-trig-series-uniqueness, person-riemann]
+    significance: >
+      Riemann's trigonometric-series work is an explicit mathematical intermediary in the setting inherited by
+      Heine and Cantor. R008 should connect through the trigonometric-series problem, not by claiming that
+      Riemann's integral criterion itself caused Cantor's point-set work.
+
+concept_state_candidates:
+  - id: r008-cs-uniqueness-1870
+    concept_id: concept-trig-series-uniqueness
+    period: {from: 1870, to: 1870}
+    label: >
+      Uniqueness is formulated as vanishing of every coefficient when a convergent trigonometric series has
+      zero sum for every real argument, without assuming uniform convergence.
+  - id: r008-cs-exceptional-1871
+    concept_id: concept-exceptional-point-set
+    period: {from: 1871, to: 1871}
+    label: >
+      A finite number of exceptional arguments may be omitted from convergence or equality without destroying
+      the uniqueness conclusion.
+  - id: r008-cs-derived-1872
+    concept_id: concept-derived-set
+    period: {from: 1872, to: 1872}
+    label: >
+      For a linear point set P, P' is the set of limit points of P; finite iteration P', P'', ... is used to
+      distinguish sets whose nu-th derivative is finite and has no further derivative.
+
+story_candidates:
+  - story_id: story-uniqueness
+    title: When is a representation unique?
+    integration_plan: >
+      Begin at the established Fourier/Riemann representation-convergence line, make uniqueness a distinct
+      question through Heine and Cantor, then follow Cantor's progression from no exceptions to finite
+      exceptions and to infinite exceptional point sets described by derived sets. End with an explicit
+      historiographic boundary: this supplies a real analytic route into point-set questions, but the Story
+      must not say that Fourier series simply "created set theory" or import later transfinite/cardinality
+      results into the 1872 step.
+
+sources:
+  - id: src-heine-1870
+    type: primary
+    author: Eduard Heine
+    title: Ueber trigonometrische Reihen
+    publication: Journal für die reine und angewandte Mathematik 71, pp. 353–365
+    year: 1870
+    url: http://eudml.org/doc/148121
+    locator: 'pp. 353–365, especially p. 355'
+    notes: >
+      EuDML metadata displays 1869; the journal issue and standard bibliographies identify volume 71 as 1870.
+  - id: src-cantor-1870-uniqueness
+    type: primary
+    author: Georg Cantor
+    title: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt
+    publication: Journal für die reine und angewandte Mathematik 72, pp. 139–142
+    year: 1870
+    url: https://doi.org/10.1515/crll.1870.72.139
+    locator: 'pp. 139–142'
+  - id: src-cantor-1871-note
+    type: primary
+    author: Georg Cantor
+    title: Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt
+    publication: Journal für die reine und angewandte Mathematik 73, pp. 294–296
+    year: 1871
+    url: https://doi.org/10.1515/crll.1871.73.294
+    locator: 'pp. 294–296'
+  - id: src-cantor-1872-extension
+    type: primary
+    author: Georg Cantor
+    title: Ueber die Ausdehnung eines Satzes aus der Theorie der trigonometrischen Reihen
+    publication: Mathematische Annalen 5, pp. 123–132
+    year: 1872
+    url: https://eudml.org/doc/156562
+    locator: 'opening paragraph; §1; §2 definition and examples of P prime; §3 theorem'
+    notes: >
+      Primary text directly states the move from finite exceptional values to certain infinite exceptional
+      point sets and defines/iterates the derived set used in the theorem.
+  - id: src-trinity-cantor-1872
+    type: primary_transcription
+    author: Georg Cantor
+    title: Ueber die Ausdehnung eines Satzes aus der Theorie der trigonometrischen Reihen
+    publication: Trinity College Dublin History of Mathematics transcription
+    year: 1872
+    url: https://www.maths.tcd.ie/pub/HistMath/People/Cantor/Ausdehnung/
+    locator: 'paper landing page and linked transcription/PDF; §§1–3'
+  - id: src-riemann-1867
+    type: primary
+    author: Bernhard Riemann
+    title: Ueber die Darstellbarkeit einer Function durch eine trigonometrische Reihe
+    publication: Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, vol. 13
+    year: 1867
+    url: https://www.maths.tcd.ie/pub/HistMath/People/Riemann/Trig/Trig.pdf
+    locator: '§§1–6 and §13; 1854 Habilitationsschrift published posthumously in 1867'
+  - id: src-dauben-1979
+    type: secondary_specialist
+    author: Joseph Warren Dauben
+    title: Georg Cantor: His Mathematics and Philosophy of the Infinite
+    publication: Princeton University Press
+    year: 1979
+    url: https://doi.org/10.2307/j.ctv10crfh1
+    locator: 'chapters 1–3, especially chapter 2 and opening of chapter 3'
+    notes: >
+      Used for historiographic synthesis and for the warning that transfinite set theory did not follow
+      immediately from the 1872 trigonometric-series paper.
+  - id: src-scoville-2012
+    type: secondary_expository_history
+    author: Nicholas Scoville
+    title: Georg Cantor at the Dawn of Point-Set Topology — Background
+    publication: Convergence, Mathematical Association of America
+    year: 2012
+    url: https://old.maa.org/press/periodicals/convergence/georg-cantor-at-the-dawn-of-point-set-topology-background
+    locator: 'Background section on Heine and Cantor, 1870–1872'
+  - id: src-halle-heine
+    type: institutional_history
+    author: Martin-Luther-Universität Halle-Wittenberg, Fachbereich Mathematik/Informatik
+    title: Heines Untersuchungen zur Theorie trigonometrischer Reihen — Cantors erste Arbeit zur Mengentheorie
+    publication: History pages of the Department of Mathematics and Computer Science
+    url: https://disk.mathematik.uni-halle.de/history/heine/index.html
+    locator: 'section 3'
+  - id: src-halle-cantor
+    type: institutional_reference
+    author: Martin-Luther-Universität Halle-Wittenberg, Fachbereich Mathematik/Informatik
+    title: Georg Cantor — Schriftenverzeichnis
+    publication: History pages of the Department of Mathematics and Computer Science
+    url: https://disk.mathematik.uni-halle.de/history/cantor/index.html
+    locator: 'publication list, 1870–1874'
+  - id: src-eom-uniqueness-set
+    type: reference_modern
+    author: Encyclopedia of Mathematics
+    title: Uniqueness set
+    url: https://encyclopediaofmath.org/wiki/Uniqueness_set
+    locator: 'definition and historical note on Cantor'
+    notes: >
+      Used only to identify later modern terminology. It is not evidence that Cantor used U-set language.
+
+uncertainties:
+  - id: r008-u001
+    question: >
+      What is the strongest primary documentary evidence for the exact direction of the Heine–Cantor exchange:
+      who proposed the general uniqueness problem and who proposed the finite-exception generalization?
+    status: open
+    significance: high
+    needed_evidence: >
+      Heine p. 355 checked in full together with Cantor/Heine correspondence or a specialist history quoting
+      the relevant primary documents. Until then avoid a one-way "Heine motivated Cantor" assertion.
+
+  - id: r008-u002
+    question: >
+      Which precise Riemann propositions and Schwarz correspondence were used in Cantor's 1870 uniqueness proof?
+    status: open
+    significance: medium
+    needed_evidence: >
+      Primary or specialist locators connecting Riemann's formal double-integral machinery and Schwarz's lemma
+      to Cantor's proof, sufficient to replace the current broad intermediary claim.
+
+  - id: r008-u003
+    question: >
+      When did Cantor's later terminology for classes/species of point sets and transfinite iterations replace or
+      extend the finite "nu-th kind" language of the 1872 paper?
+    status: deferred
+    significance: medium
+    needed_evidence: >
+      Cantor's 1879–1884 point-set papers and specialist historiography. This belongs to a later unit unless needed
+      to prevent anachronism in R008.
+
+  - id: r008-u004
+    question: >
+      How should the 1872 derived-set work be connected to the 1874 nondenumerability result without implying a
+      direct causal jump from Fourier series to transfinite set theory?
+    status: open
+    significance: high
+    needed_evidence: >
+      Specialist historiography and, for a later unit, Cantor's 1873 correspondence and 1874 paper. Dauben already
+      establishes that the 1872 paper alone is not an adequate direct-causation story.
