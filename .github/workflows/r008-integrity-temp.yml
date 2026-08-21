@@ -1,9 +1,9 @@
-name: R008 integrity temp
+name: R008 promotion temp
 on:
   pull_request:
     branches: [main]
 jobs:
-  bind:
+  promote:
     if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
@@ -11,5 +11,6 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: pip install -r requirements.txt
-      - run: python -m scripts.bind_resolution R008
-      - run: cat research/resolutions/R008-cantor-uniqueness-point-sets-resolution.yaml
+      - run: python -m scripts.promote_verified R008
+      - run: python -m scripts.promote_verified R008 --apply
+      - run: git diff -- research/packets/R008-cantor-uniqueness-point-sets.yaml research/promotions/R008-cantor-uniqueness-point-sets-promotion.yaml
