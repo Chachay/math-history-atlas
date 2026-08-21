@@ -1,0 +1,66 @@
+- id: source-lagrange-1770-1771
+  title: Réflexions sur la résolution algébrique des équations
+  author: Joseph-Louis Lagrange
+  year: 1770
+  kind: primary
+  url: https://fr.wikisource.org/wiki/M%C3%A9moires_extraits_des_recueils_de_l%E2%80%99Acad%C3%A9mie_royale_de_Berlin/R%C3%A9flexions_sur_la_r%C3%A9solution_alg%C3%A9brique_des_%C3%A9quations
+- id: source-abel-1824
+  title: Mémoire sur les équations algébriques où on démontre l'impossibilité de la résolution de l'équation générale du cinquième degré
+  author: Niels Henrik Abel
+  year: 1824
+  kind: primary
+  url: http://urn.kb.se/resolve?urn=urn:nbn:se:alvin:portal:record-559740
+- id: source-abel-1826
+  title: Beweis der Unmöglichkeit algebraische Gleichungen von höheren Graden als dem vierten allgemein aufzulösen
+  author: Niels Henrik Abel
+  year: 1826
+  kind: primary
+  url: https://sites.mathdoc.fr/cgi-bin/rbsm?idrevue=47
+- id: source-galois-1846
+  title: Mémoire sur les conditions de résolubilité des équations par radicaux
+  author: Évariste Galois
+  year: 1846
+  kind: primary_posthumous_publication
+  url: https://fr.wikisource.org/wiki/%C5%92uvres_math%C3%A9matiques/7
+- id: source-poisson-report-1831
+  title: Rapport sur le mémoire de M. Galois
+  author: Siméon-Denis Poisson and Sylvestre-François Lacroix
+  year: 1831
+  kind: primary_document
+  url: https://bibnum.publimath.fr/AAP/AAP82005.pdf
+- id: source-tannery-1908
+  title: Manuscrits de Évariste Galois
+  author: Évariste Galois; edited by Jules Tannery
+  year: 1908
+  kind: primary_edition
+  url: https://fr.wikisource.org/wiki/Page:Galois_-_Manuscrits,_%C3%A9dition_Tannery,_1908.djvu/60
+- id: source-kiernan-1971
+  title: The Development of Galois Theory from Lagrange to Artin
+  author: B. Melvin Kiernan
+  year: 1971
+  kind: secondary_specialist
+  url: https://doi.org/10.1007/BF00327219
+- id: source-wussing-1984
+  title: The Genesis of the Abstract Group Concept
+  author: Hans Wussing
+  year: 1984
+  kind: secondary_specialist
+  url: https://openlibrary.org/books/OL3176348M/The_genesis_of_the_abstract_group_concept
+- id: source-ehrhardt-bibnum
+  title: Évariste Galois, Mémoire sur les conditions de résolubilité des équations par radicaux — lecture historique et mathématique
+  author: Caroline Ehrhardt
+  year: 2008
+  kind: secondary_specialist
+  url: https://doi.org/10.4000/bibnum.616
+- id: source-ehrhardt-2010
+  title: A Social History of the 'Galois Affair' at the Paris Academy of Sciences (1831)
+  author: Caroline Ehrhardt
+  year: 2010
+  kind: secondary_specialist
+  url: https://doi.org/10.1017/S0269889709990251
+- id: source-gray-2018
+  title: A History of Abstract Algebra — From Algebraic Equations to Modern Algebra
+  author: Jeremy Gray
+  year: 2018
+  kind: secondary_specialist
+  url: https://doi.org/10.1007/978-3-319-94773-0
