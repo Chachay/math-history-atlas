@@ -1,0 +1,553 @@
+research_unit:
+  id: R010
+  title: Lebesgue — measure, integration, and functions beyond Riemann's boundary
+  period:
+    approximate_start: 1870
+    approximate_end: 1910
+    core_period: 1892–1902
+  scope_summary: 'Investigation of the transition from late nineteenth-century definite integration and
+    set content to Lebesgue''s 1901–1902 measure-and-integral construction. The unit centers Jordan and
+    Borel as intermediaries, Lebesgue''s explicit concern with limitations of Riemann integration for
+    recovering primitives, and the conceptual use of sets of arguments corresponding to ranges of function
+    values. It does not retroject modern sigma-algebra language, abstract measure spaces, Lp theory, or
+    the later canonical convergence theorems into Lebesgue''s earliest formulation. A possible Cantor/point-set
+    intersection is treated as a historical question requiring evidence rather than as an automatic chain.
+
+    '
+  origin_pattern: internal_mathematical_development_with_cross_field_recombination
+  prior_mathematical_problem: 'Riemann had made integrability itself an explicit mathematical object and
+    admitted highly discontinuous examples, but his integral did not encompass every bounded derivative.
+    By the 1890s Jordan and Borel were also developing ways to assign content or measure to increasingly
+    general point sets.
+
+    '
+  generated_date: '2026-08-21'
+  research_status: researched
+  editorial_status: not_accepted
+research_questions:
+- id: q001
+  question: Which limitations of Riemann-style integration were explicit for Lebesgue around 1901?
+- id: q002
+  question: What did Jordan's content and Borel's measurable-set work contribute before Lebesgue?
+- id: q003
+  question: How did Lebesgue define measure in his 1901 note and 1902 thesis without modern sigma-algebra
+    terminology?
+- id: q004
+  question: How did Lebesgue's construction reorganize integration around sets associated with ranges
+    of function values?
+- id: q005
+  question: What class of functions did the early Lebesgue integral aim to include beyond the Riemann-integrable
+    class?
+- id: q006
+  question: Which convergence claims belong to Lebesgue's earliest work, and which belong to later textbook
+    formulation?
+- id: q007
+  question: How strong is the historical connection from Cantor's point-set work through Borel to Lebesgue
+    measure?
+- id: q008
+  question: Which modern measure-theoretic terms are retrospective abstractions rather than Lebesgue's
+    1901–1902 vocabulary?
+entities:
+- id: person-lebesgue
+  type: Person
+  canonical_name: Henri Lebesgue
+  birth_year: 1875
+  death_year: 1941
+- id: person-jordan
+  type: Person
+  canonical_name: Camille Jordan
+  birth_year: 1838
+  death_year: 1922
+- id: person-borel
+  type: Person
+  canonical_name: Émile Borel
+  birth_year: 1871
+  death_year: 1956
+- id: person-riemann
+  type: Person
+  canonical_name: Bernhard Riemann
+  canonical_reuse_candidate: true
+- id: person-cantor
+  type: Person
+  canonical_name: Georg Cantor
+  canonical_reuse_candidate: true
+- id: concept-riemann-integral
+  type: Concept
+  canonical_name: Riemann's criterion for definite integrability
+  canonical_reuse_candidate: true
+- id: concept-jordan-content
+  type: Concept
+  canonical_name: Jordan content for point sets
+- id: concept-borel-measure
+  type: Concept
+  canonical_name: Borel measure of point sets
+- id: concept-lebesgue-measure
+  type: Concept
+  canonical_name: Lebesgue measure
+- id: concept-lebesgue-integral
+  type: Concept
+  canonical_name: Lebesgue integral
+- id: concept-measurable-set
+  type: Concept
+  canonical_name: Measurable set in early measure theory
+- id: work-jordan-integrals-1892
+  type: Work
+  canonical_name: Jordan on definite integrals
+  original_title: Remarques sur les intégrales définies
+  publication_year: 1892
+- id: work-borel-functions-1898
+  type: Work
+  canonical_name: Borel's lessons on the theory of functions
+  original_title: Leçons sur la théorie des fonctions
+  publication_year: 1898
+- id: work-lebesgue-generalization-1901
+  type: Work
+  canonical_name: Lebesgue's generalization of the definite integral
+  original_title: Sur une généralisation de l'intégrale définie
+  publication_year: 1901
+- id: work-lebesgue-thesis-1902
+  type: Work
+  canonical_name: Lebesgue's thesis on integral, length, and area
+  original_title: Intégrale, longueur, aire
+  publication_year: 1902
+chronology:
+- date: '1892'
+  date_type: publication
+  event: 'Camille Jordan publishes Remarques sur les intégrales définies, developing a set-content approach
+    within a discussion of definite integration; later terminology commonly calls this Jordan content
+    or Jordan measure.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-jordan-1892
+  - src-eom-jordan-measure
+  uncertainty: 'Modern descriptions in terms of boundaries of Lebesgue measure zero are retrospective
+    and are not used as Jordan''s own formulation here.
+
+    '
+- date: '1898'
+  date_type: publication
+  event: 'Émile Borel publishes Leçons sur la théorie des fonctions, including a chapter on perfect and
+    measurable sets and extending length to a substantially broader family of point sets using countable
+    operations.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-borel-1898
+  - src-hawkins-1979
+  uncertainty: 'The modern statement that Borel thereby defined a measure on the sigma-algebra generated
+    by intervals is mathematically accurate as a retrospective reconstruction but is not used as his historical
+    wording.
+
+    '
+- date: '1901-04-29'
+  date_type: academy_presentation_and_publication
+  event: 'Lebesgue''s note Sur une généralisation de l''intégrale définie is presented by Picard to the
+    Académie des sciences. Lebesgue states that Riemann''s integral does not integrate every derivative
+    and proposes a broader integral that contains Riemann''s as a special case and addresses the primitive-function
+    problem.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+- date: '1901-04-29'
+  date_type: publication
+  event: 'In the same note Lebesgue defines the measure of a set through countable open coverings and
+    defines integration by subdividing the range of function values and measuring the corresponding sets
+    of arguments.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+  uncertainty: 'This is described in Lebesgue''s own one-dimensional language. Modern outer-measure and
+    measurable-function terminology can explain it later but should not replace the historical formulation.
+
+    '
+- date: '1902'
+  date_type: doctoral_thesis_publication
+  event: 'Lebesgue publishes Intégrale, longueur, aire as his Paris doctoral thesis, with separate chapters
+    on measure of sets and integration and a much fuller development of the 1901 construction.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1902-sorbonne
+assertions:
+- id: r010-a001
+  subject: work-lebesgue-generalization-1901
+  predicate: raised_question
+  object: concept-riemann-integral
+  statement: 'Lebesgue explicitly identifies a limitation of Riemann integration: not every derivative
+    is Riemann-integrable, so integration in Riemann''s sense does not by itself solve the search for
+    primitive functions.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+  uncertainty: null
+- id: r010-a002
+  subject: work-lebesgue-generalization-1901
+  predicate: generalized
+  object: concept-lebesgue-integral
+  statement: 'Lebesgue states as a design requirement that the new integral include the Riemann integral
+    as a special case while permitting recovery of primitives in cases excluded by Riemann integration.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+  uncertainty: 'This is Lebesgue''s stated aim in the 1901 note, not a claim that all later integration
+    problems were thereby solved.
+
+    '
+- id: r010-a003
+  subject: person-jordan
+  predicate: contributed_to
+  object: concept-jordan-content
+  statement: 'Jordan''s 1892 work forms an important pre-Lebesgue stage in relating definite integration
+    to the content of point sets.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-jordan-1892
+  - src-hawkins-1979
+  - src-eom-jordan-measure
+  uncertainty: 'Peano also belongs to the development of set content; this assertion does not assign sole
+    priority to Jordan.
+
+    '
+- id: r010-a004
+  subject: person-borel
+  predicate: contributed_to
+  object: concept-borel-measure
+  statement: 'Borel''s 1898 book extends the assignment of length from intervals to a wider family of
+    point sets through countable set operations, providing a major immediate predecessor to Lebesgue''s
+    measure work.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-borel-1898
+  - src-hawkins-1979
+  uncertainty: 'The phrase Borel measure is an Atlas label; Borel''s own construction should not be silently
+    rewritten in modern sigma-algebra language.
+
+    '
+- id: r010-a005
+  subject: work-lebesgue-generalization-1901
+  predicate: generalized
+  object: concept-lebesgue-measure
+  statement: 'Lebesgue defines the measure of a point set using countable open coverings and uses measurable
+    sets as the basic set-theoretic material from which his generalized integral is built.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+  - src-lebesgue-1902-sorbonne
+  uncertainty: 'Modern outer measure and completion language is deliberately omitted from the historical
+    wording.
+
+    '
+- id: r010-a006
+  subject: work-lebesgue-generalization-1901
+  predicate: contributed_to
+  object: concept-lebesgue-integral
+  statement: 'Lebesgue''s construction partitions the range of function values and associates to each
+    value band the set of arguments where the function falls in that band; the integral is obtained from
+    sums involving the measures of those argument sets.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+  uncertainty: 'The common slogan that Riemann partitions the domain while Lebesgue partitions the range
+    is useful only if it remains an explanatory compression of this construction rather than a complete
+    historical definition.
+
+    '
+- id: r010-a007
+  subject: work-lebesgue-thesis-1902
+  predicate: contributed_to
+  object: concept-lebesgue-integral
+  statement: 'Lebesgue''s 1902 thesis develops measure of sets before the integral and systematically
+    enlarges the class of functions that can be treated beyond the older Riemann boundary.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1902-sorbonne
+  - src-hawkins-1979
+  uncertainty: null
+- id: r010-a008
+  subject: work-lebesgue-generalization-1901
+  predicate: contributed_to
+  object: concept-measurable-set
+  statement: 'Lebesgue explicitly refers to Borel''s measurable sets in the 1901 note, making Borel''s
+    set-measure framework an evidenced immediate context rather than a merely modern structural resemblance.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+  - src-borel-1898
+  uncertainty: null
+- id: r010-a010
+  subject: concept-lebesgue-integral
+  predicate: generalized
+  object: concept-riemann-integral
+  statement: 'In modern mathematical terms the Lebesgue integral extends the Riemann integral on bounded
+    intervals for the Riemann-integrable functions covered by both theories.
+
+    '
+  perspective: modern_abstraction
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+  - src-kahane-2001
+  uncertainty: 'This is a modern containment statement. It must not be read as a complete description
+    of Lebesgue''s historical motivation.
+
+    '
+- id: r010-a011
+  subject: work-lebesgue-generalization-1901
+  predicate: contributed_to
+  object: concept-lebesgue-integral
+  statement: 'Lebesgue''s 1901 note explicitly announces closure and limiting properties for his class
+    of summable functions and applies the new integral to bounded derivatives; the packet does not identify
+    these compressed statements with the later named convergence theorems.
+
+    '
+  perspective: historical
+  certainty: medium
+  sources:
+  - src-lebesgue-1901
+  uncertainty: 'Later named convergence theorems and their modern hypotheses should not be attributed
+    wholesale to this short note.
+
+    '
+question_transitions:
+- id: r010-qt001
+  from_question: q-riemann-integrability-boundary
+  to_question: q001
+  relation: continues
+  statement: 'Lebesgue himself identifies the insufficiency of Riemann integration for all derivatives,
+    giving a direct historical reason to reopen the integrability boundary researched in R004.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+- id: r010-qt002
+  from_question: q001
+  to_question: q002
+  relation: converges
+  statement: 'Alongside the late nineteenth-century integrability problem, Jordan and Borel developed
+    ways to assign content or measure to point sets. Lebesgue''s 1901 construction brings this set-size
+    machinery into a generalized integral, so the Atlas should represent the two lines as converging rather
+    than making one a simple consequence of the other.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-jordan-1892
+  - src-borel-1898
+  - src-hawkins-1979
+- id: r010-qt003
+  from_question: q002
+  to_question: q004
+  relation: continues
+  statement: 'Lebesgue''s 1901 note explicitly uses measurable sets and their measures to define the generalized
+    integral by value bands.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+- id: r010-qt004
+  from_question: q004
+  to_question: q006
+  relation: branches
+  statement: 'The enlarged integral immediately raises questions about closure and limiting processes,
+    but the packet separates the 1901–1902 claims from later named convergence theorems and twentieth-century
+    functional analysis.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-lebesgue-1901
+  - src-hawkins-1979
+intersection_candidates:
+- id: r010-i001
+  with_unit: R004
+  refs:
+  - concept-riemann-integral
+  - work-lebesgue-generalization-1901
+  significance: 'Strong historical intersection. Lebesgue explicitly names Riemann''s integral and states
+    the limitation that motivates his requested generalization, so R004''s integrability boundary can
+    feed R010 without relying on chronology alone.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lebesgue-1901
+- id: r010-i002
+  with_unit: R008
+  refs:
+  - person-cantor
+  - concept-borel-measure
+  - concept-lebesgue-measure
+  significance: 'Candidate cross-field intersection only. Cantor''s point-set work belongs to the historical
+    background of the French set-theoretic analysis in which Borel and Lebesgue worked, but this packet
+    does not establish a direct edge from R008''s 1870–1872 uniqueness/derived-set problem to Lebesgue''s
+    integration theory.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-hawkins-1979
+concept_state_candidates:
+- id: r010-cs001
+  concept_id: concept-measurable-set
+  period:
+    from: 1898
+    to: 1902
+  label: 'Historically specific measurable-set language associated with Borel and Lebesgue before later
+    abstract measure-space axiomatization.
+
+    '
+- id: r010-cs002
+  concept_id: concept-lebesgue-integral
+  period:
+    from: 1901
+    to: 1902
+  label: 'Early generalized integral defined through measure of sets associated with ranges of function
+    values, not yet the modern abstract integral on arbitrary measure spaces.
+
+    '
+story_candidates:
+- id: r010-story-candidate-001
+  title: How much bad behavior can integration tolerate?
+  arc: 'Riemann''s integrability boundary → Jordan/Borel set size → Lebesgue''s 1901 primitive-function
+    problem → measure of value-level sets → generalized integral → new limiting questions.
+
+    '
+  risk: 'Do not turn the story into Riemann-versus-Lebesgue textbook comparison, and do not present Cantor→Borel→Lebesgue
+    as a clean causal chain unless the R008 handoff is independently supported.
+
+    '
+sources:
+- id: src-lebesgue-1901
+  type: primary
+  author: Henri Lebesgue
+  title: Sur une généralisation de l'intégrale définie
+  publication: Comptes rendus hebdomadaires des séances de l'Académie des sciences, tome 132, pp. 1025–1028
+  year: 1901
+  url: https://fr.wikisource.org/wiki/Sur_une_g%C3%A9n%C3%A9ralisation_de_l%E2%80%99int%C3%A9grale_d%C3%A9finie
+  locators:
+  - opening paragraph for Riemann limitation and primitive-function aim
+  - middle paragraphs for measure by countable open coverings and value-band integral
+  - closing paragraphs for closure/limit and bounded-derivative applications
+- id: src-lebesgue-1902-sorbonne
+  type: primary
+  author: Henri Lebesgue
+  title: Intégrale, longueur, aire
+  publication: Thèses de la Faculté des sciences de Paris
+  year: 1902
+  url: https://patrimoine.sorbonne-universite.fr/idurl/1/3295
+  locators:
+  - Chapitre I, Mesure des Ensembles
+  - Chapitre II, Intégrale
+- id: src-jordan-1892
+  type: primary
+  author: Camille Jordan
+  title: Remarques sur les intégrales définies
+  publication: Journal de mathématiques pures et appliquées, 4e série, tome 8, pp. 69–99
+  year: 1892
+  url: https://www.numdam.org/item/JMPA_1892_4_8__69_0.pdf
+  locator: pp. 69–99
+- id: src-borel-1898
+  type: primary
+  author: Émile Borel
+  title: Leçons sur la théorie des fonctions
+  publication: Paris, Gauthier-Villars et fils
+  year: 1898
+  url: https://archive.org/details/leconstheoriefon00borerich
+  locator: chapter on ensembles parfaits et ensembles mesurables, approximately pp. 34–50
+- id: src-hawkins-1979
+  type: secondary
+  author: Thomas Hawkins
+  title: Lebesgue's Theory of Integration — Its Origins and Development
+  publication: AMS Chelsea Publishing
+  year: 1979
+  url: https://bookstore.ams.org/CHEL/282
+  locator: chapters on Riemann integration, set theory and integration, and creation of modern integration
+    theory
+- id: src-kahane-2001
+  type: secondary
+  author: Jean-Pierre Kahane
+  title: Naissance et postérité de l'intégrale de Lebesgue
+  publication: Gazette des mathématiciens, no. 89
+  year: 2001
+  url: https://smf.emath.fr/system/files/filepdf/Gaz-89.pdf
+  locator: discussion of the 1901 note and comparison with Riemann integration
+- id: src-eom-jordan-measure
+  type: reference
+  author: Encyclopedia of Mathematics
+  title: Jordan measure
+  publication: Encyclopedia of Mathematics
+  year: 2020
+  url: https://encyclopediaofmath.org/wiki/Jordan_measure
+  locator: historical note and references to Peano and Jordan
+uncertainties:
+- id: r010-u001
+  issue: 'The exact proof-level lineage from Cantor''s 1870–1872 exceptional/derived-set work to Borel''s
+    1898 measurable sets and then to Lebesgue''s integration theory is not established here.
+
+    '
+  consequence: 'Do not promote a direct R008→R010 historical transition without stronger specialist or
+    primary evidence.
+
+    '
+- id: r010-u002
+  issue: 'The pedagogical phrase ''Riemann partitions the domain; Lebesgue partitions the range'' compresses
+    the 1901 construction and can hide the essential role of measuring inverse-image sets.
+
+    '
+  consequence: 'Story prose may use the contrast only with qualification and primary-source-backed detail.
+
+    '
+- id: r010-u003
+  issue: 'The 1901 note states strong closure and limiting properties in compressed form; later named
+    convergence theorems have refined hypotheses and should not be back-attributed without separate research.
+
+    '
+  consequence: 'Keep dominated convergence, monotone convergence as modern named theorems, and Lp theory
+    outside the first-phase story unless directly evidenced and dated.
+
+    '

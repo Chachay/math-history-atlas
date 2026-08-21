@@ -1,0 +1,98 @@
+research_unit_id: R010
+packet: research/packets/R010-lebesgue-measure-integration.yaml
+canonical_entities:
+  - canonical_id: person-lebesgue
+    packet_refs: [{section: entities, id: person-lebesgue}]
+  - canonical_id: person-jordan
+    packet_refs: [{section: entities, id: person-jordan}]
+  - canonical_id: person-borel
+    packet_refs: [{section: entities, id: person-borel}]
+  - canonical_id: person-riemann
+    reused_from: data/entities/core.yaml
+    packet_refs: [{section: entities, id: person-riemann}]
+  - canonical_id: person-cantor
+    reused_from: data/entities/r008-cantor.yaml
+    packet_refs: [{section: entities, id: person-cantor}]
+  - canonical_id: concept-riemann-integral
+    reused_from: data/entities/r004-riemann.yaml
+    packet_refs: [{section: entities, id: concept-riemann-integral}]
+  - canonical_id: concept-jordan-content
+    packet_refs: [{section: entities, id: concept-jordan-content}]
+  - canonical_id: concept-borel-measure
+    packet_refs: [{section: entities, id: concept-borel-measure}]
+  - canonical_id: concept-lebesgue-measure
+    packet_refs: [{section: entities, id: concept-lebesgue-measure}]
+  - canonical_id: concept-lebesgue-integral
+    packet_refs: [{section: entities, id: concept-lebesgue-integral}]
+  - canonical_id: concept-measurable-set
+    packet_refs: [{section: entities, id: concept-measurable-set}]
+  - canonical_id: work-jordan-integrals-1892
+    packet_refs: [{section: entities, id: work-jordan-integrals-1892}]
+  - canonical_id: work-borel-functions-1898
+    packet_refs: [{section: entities, id: work-borel-functions-1898}]
+  - canonical_id: work-lebesgue-generalization-1901
+    packet_refs: [{section: entities, id: work-lebesgue-generalization-1901}]
+  - canonical_id: work-lebesgue-thesis-1902
+    packet_refs: [{section: entities, id: work-lebesgue-thesis-1902}]
+canonical_questions:
+  - canonical_id: q-lebesgue-riemann-limitations
+    packet_refs: [{section: research_questions, id: q001}, {section: question_transitions, id: r010-qt001}]
+  - canonical_id: q-set-size-integration
+    packet_refs: [{section: research_questions, id: q002}, {section: question_transitions, id: r010-qt002}]
+  - canonical_id: q-lebesgue-value-band-integration
+    packet_refs: [{section: research_questions, id: q004}, {section: question_transitions, id: r010-qt003}]
+  - canonical_id: q-lebesgue-limit-processes
+    packet_refs: [{section: research_questions, id: q006}, {section: question_transitions, id: r010-qt004}]
+canonical_assertions:
+  - canonical_id: assertion-r010-riemann-limitation
+    packet_refs: [{section: assertions, id: r010-a001}]
+  - canonical_id: assertion-r010-generalization-aim
+    packet_refs: [{section: assertions, id: r010-a002}]
+  - canonical_id: assertion-r010-jordan-content
+    packet_refs: [{section: assertions, id: r010-a003}]
+  - canonical_id: assertion-r010-borel-measure
+    packet_refs: [{section: assertions, id: r010-a004}]
+  - canonical_id: assertion-r010-lebesgue-measure
+    packet_refs: [{section: assertions, id: r010-a005}]
+  - canonical_id: assertion-r010-value-band-integral
+    packet_refs: [{section: assertions, id: r010-a006}]
+  - canonical_id: assertion-r010-thesis-development
+    packet_refs: [{section: assertions, id: r010-a007}]
+  - canonical_id: assertion-r010-borel-context
+    packet_refs: [{section: assertions, id: r010-a008}]
+  - canonical_id: assertion-r010-modern-riemann-containment
+    packet_refs: [{section: assertions, id: r010-a010}]
+  - canonical_id: assertion-r010-limit-properties
+    packet_refs: [{section: assertions, id: r010-a011}]
+  - canonical_id: assertion-r010-riemann-to-lebesgue-question
+    packet_refs: [{section: question_transitions, id: r010-qt001}]
+  - canonical_id: assertion-r010-lines-converge
+    packet_refs: [{section: question_transitions, id: r010-qt002}]
+  - canonical_id: assertion-r010-set-size-to-value-band
+    packet_refs: [{section: question_transitions, id: r010-qt003}]
+  - canonical_id: assertion-r010-value-band-to-limits
+    packet_refs: [{section: question_transitions, id: r010-qt004}]
+research_gaps:
+  - packet_assertion: r010-a009
+    status: not_promoted
+    reason: Accepted critic finding hr-r010-cantor-causal-edge; no direct Cantor-to-Borel causal edge is established.
+  - packet_question: q007
+    status: unresolved
+    reason: Direct R008-to-R010 transmission remains unestablished and requires specific specialist or primary evidence.
+stories:
+  - story_id: story-lebesgue-integration
+    steps:
+      - step_id: lebesgue-1
+        canonical_assertion_refs: [assertion-r010-riemann-to-lebesgue-question, assertion-r010-riemann-limitation]
+      - step_id: lebesgue-2
+        canonical_assertion_refs: [assertion-r010-jordan-content, assertion-r010-borel-measure, assertion-r010-lines-converge]
+      - step_id: lebesgue-3
+        canonical_assertion_refs: [assertion-r010-generalization-aim, assertion-r010-borel-context]
+      - step_id: lebesgue-4
+        canonical_assertion_refs: [assertion-r010-lebesgue-measure]
+      - step_id: lebesgue-5
+        canonical_assertion_refs: [assertion-r010-value-band-integral, assertion-r010-set-size-to-value-band]
+      - step_id: lebesgue-6
+        canonical_assertion_refs: [assertion-r010-thesis-development]
+      - step_id: lebesgue-7
+        canonical_assertion_refs: [assertion-r010-limit-properties, assertion-r010-value-band-to-limits]

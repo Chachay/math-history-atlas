@@ -1,0 +1,37 @@
+research_unit_id: R010
+packet: R010-lebesgue-measure-integration.yaml
+review: R010-lebesgue-measure-integration-review.yaml
+decisions:
+- review_key: finding:hr-r010-cantor-causal-edge
+  kind: assertions
+  item_id: hr-r010-cantor-causal-edge
+  critic_classification: REJECT
+  decision: accept_critic
+  note: 'Accepted. Remove the direct Cantor contributed_to Borel-measure edge. Preserve R008 to R010 only
+    as an unresolved historical handoff until specific transmission evidence is supplied.
+
+    '
+- review_key: finding:hr-r010-limit-claims
+  kind: assertions
+  item_id: hr-r010-limit-claims
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Narrow the 1901 limit claim to the closure and limiting properties actually announced
+    in the note, and do not identify them with later named convergence theorems.
+
+    '
+- review_key: finding:hr-r010-qt002-sequence
+  kind: question_transitions
+  item_id: hr-r010-qt002-sequence
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Represent the Jordan/Borel set-size line and the integrability line as converging in
+    Lebesgue''s construction rather than as a one-way consequence of enlarging the Riemann-integrable
+    class.
+
+    '
+resolution_date: '2026-08-21'
+resolution_status: human_approved_pending_integrity_binding
+integrity:
+  packet_sha256: sha256:abac1119ebaed784c82b4c2c700ecfeb9e701b040ae0130b13fdacacd970f361
+  review_sha256: sha256:def7adc63782743b6d0a6f76c35669c6dce8b9e8a966b580c38e70e810430446

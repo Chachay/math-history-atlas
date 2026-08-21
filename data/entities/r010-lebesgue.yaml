@@ -1,0 +1,67 @@
+- id: person-lebesgue
+  type: Person
+  name: Henri Lebesgue
+  start_year: 1875
+  end_year: 1941
+  fields: [analysis]
+- id: person-jordan
+  type: Person
+  name: Camille Jordan
+  start_year: 1838
+  end_year: 1922
+  fields: [analysis]
+- id: person-borel
+  type: Person
+  name: Émile Borel
+  start_year: 1871
+  end_year: 1956
+  fields: [analysis]
+- id: concept-jordan-content
+  type: Concept
+  name: Jordan content for point sets
+  start_year: 1892
+  fields: [analysis]
+- id: concept-borel-measure
+  type: Concept
+  name: Borel measure of point sets
+  start_year: 1898
+  fields: [analysis]
+- id: concept-lebesgue-measure
+  type: Concept
+  name: Lebesgue measure
+  start_year: 1901
+  fields: [analysis]
+- id: concept-lebesgue-integral
+  type: Concept
+  name: Lebesgue integral
+  start_year: 1901
+  fields: [analysis]
+- id: concept-measurable-set
+  type: Concept
+  name: Measurable set in early measure theory
+  start_year: 1898
+  fields: [analysis]
+- id: work-jordan-integrals-1892
+  type: Work
+  name: Jordan on definite integrals
+  original_title: Remarques sur les intégrales définies
+  start_year: 1892
+  fields: [analysis]
+- id: work-borel-functions-1898
+  type: Work
+  name: Borel's lessons on the theory of functions
+  original_title: Leçons sur la théorie des fonctions
+  start_year: 1898
+  fields: [analysis]
+- id: work-lebesgue-generalization-1901
+  type: Work
+  name: Lebesgue's generalization of the definite integral
+  original_title: Sur une généralisation de l'intégrale définie
+  start_year: 1901
+  fields: [analysis]
+- id: work-lebesgue-thesis-1902
+  type: Work
+  name: Lebesgue's thesis on integral, length, and area
+  original_title: Intégrale, longueur, aire
+  start_year: 1902
+  fields: [analysis]

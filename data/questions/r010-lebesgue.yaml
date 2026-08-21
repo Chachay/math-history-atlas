@@ -1,0 +1,16 @@
+- id: q-lebesgue-riemann-limitations
+  question: Which limitations of Riemann integration did Lebesgue explicitly seek to overcome?
+  period: {from: 1901, to: null}
+  fields: [analysis]
+- id: q-set-size-integration
+  question: How can content or measure of point sets enter the construction of a broader integral?
+  period: {from: 1892, to: null}
+  fields: [analysis]
+- id: q-lebesgue-value-band-integration
+  question: How can an integral be built by measuring sets of arguments associated with ranges of function values?
+  period: {from: 1901, to: null}
+  fields: [analysis]
+- id: q-lebesgue-limit-processes
+  question: What closure and limiting questions arise for the enlarged class of summable functions?
+  period: {from: 1901, to: null}
+  fields: [analysis]

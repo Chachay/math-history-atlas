@@ -1,0 +1,42 @@
+- id: source-r010-lebesgue-1901
+  title: Sur une généralisation de l'intégrale définie
+  author: Henri Lebesgue
+  year: 1901
+  kind: primary
+  url: https://fr.wikisource.org/wiki/Sur_une_g%C3%A9n%C3%A9ralisation_de_l%E2%80%99int%C3%A9grale_d%C3%A9finie
+- id: source-r010-lebesgue-1902
+  title: Intégrale, longueur, aire
+  author: Henri Lebesgue
+  year: 1902
+  kind: primary
+  url: https://patrimoine.sorbonne-universite.fr/idurl/1/3295
+- id: source-r010-jordan-1892
+  title: Remarques sur les intégrales définies
+  author: Camille Jordan
+  year: 1892
+  kind: primary
+  url: https://www.numdam.org/item/JMPA_1892_4_8__69_0.pdf
+- id: source-r010-borel-1898
+  title: Leçons sur la théorie des fonctions
+  author: Émile Borel
+  year: 1898
+  kind: primary
+  url: https://archive.org/details/leconstheoriefon00borerich
+- id: source-r010-hawkins-1979
+  title: Lebesgue's Theory of Integration — Its Origins and Development
+  author: Thomas Hawkins
+  year: 1979
+  kind: secondary_specialist
+  url: https://bookstore.ams.org/CHEL/282
+- id: source-r010-kahane-2001
+  title: Naissance et postérité de l'intégrale de Lebesgue
+  author: Jean-Pierre Kahane
+  year: 2001
+  kind: secondary_history
+  url: https://smf.emath.fr/system/files/filepdf/Gaz-89.pdf
+- id: source-r010-eom-jordan-measure
+  title: Jordan measure
+  author: Encyclopedia of Mathematics
+  year: 2020
+  kind: reference
+  url: https://encyclopediaofmath.org/wiki/Jordan_measure
