@@ -2,6 +2,9 @@
   {
     "id": "story-function",
     "title": "What is a function?",
+    "fields": [
+      "analysis"
+    ],
     "steps": [
       {
         "id": "function-1",
@@ -106,6 +109,10 @@
   {
     "id": "story-fourier-heat-representation",
     "title": "From heat to arbitrary functions",
+    "fields": [
+      "analysis",
+      "mathematical-physics"
+    ],
     "steps": [
       {
         "id": "r001-story-1",
@@ -263,6 +270,9 @@
   {
     "id": "story-cauchy-rigor-continuity",
     "title": "From rigor to continuity under infinite limits",
+    "fields": [
+      "analysis"
+    ],
     "steps": [
       {
         "id": "r002-story-1",
@@ -427,6 +437,9 @@
   {
     "id": "story-integrability",
     "title": "When is a function integrable enough for trigonometric representation?",
+    "fields": [
+      "analysis"
+    ],
     "steps": [
       {
         "id": "integrability-1",
@@ -546,6 +559,9 @@
   {
     "id": "story-quantified-control",
     "title": "How precisely must arbitrarily close be controlled?",
+    "fields": [
+      "analysis"
+    ],
     "steps": [
       {
         "id": "quantified-1",
@@ -692,6 +708,9 @@
   {
     "id": "story-r006-solvability",
     "title": "Why can some equations be solved by radicals and others cannot?",
+    "fields": [
+      "algebra"
+    ],
     "steps": [
       {
         "id": "solvability-1",
