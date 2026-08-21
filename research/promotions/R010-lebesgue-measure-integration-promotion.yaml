@@ -1,0 +1,66 @@
+research_unit_id: R010
+packet: R010-lebesgue-measure-integration.yaml
+review: R010-lebesgue-measure-integration-review.yaml
+resolution: R010-lebesgue-measure-integration-resolution.yaml
+summary:
+  proposed_changes: 3
+  skipped_items: 0
+changes:
+- finding_id: hr-r010-cantor-causal-edge
+  critic_classification: REJECT
+  human_decision: accept_critic
+  human_note: 'Accepted. Remove the direct Cantor contributed_to Borel-measure edge. Preserve R008 to
+    R010 only as an unresolved historical handoff until specific transmission evidence is supplied.
+
+    '
+  target:
+    section: assertions
+    id: r010-a009
+  proposed_change:
+    action: remove
+  status: proposed
+- finding_id: hr-r010-limit-claims
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Narrow the 1901 limit claim to the closure and limiting properties actually announced
+    in the note, and do not identify them with later named convergence theorems.
+
+    '
+  target:
+    section: assertions
+    id: r010-a011
+  proposed_change:
+    action: replace_fields
+    fields:
+      statement: 'Lebesgue''s 1901 note explicitly announces closure and limiting properties for his class
+        of summable functions and applies the new integral to bounded derivatives; the packet does not
+        identify these compressed statements with the later named convergence theorems.
+
+        '
+      certainty: medium
+  status: proposed
+- finding_id: hr-r010-qt002-sequence
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: 'Accepted. Represent the Jordan/Borel set-size line and the integrability line as converging
+    in Lebesgue''s construction rather than as a one-way consequence of enlarging the Riemann-integrable
+    class.
+
+    '
+  target:
+    section: question_transitions
+    id: r010-qt002
+  proposed_change:
+    action: replace_fields
+    fields:
+      relation: converges
+      statement: 'Alongside the late nineteenth-century integrability problem, Jordan and Borel developed
+        ways to assign content or measure to point sets. Lebesgue''s 1901 construction brings this set-size
+        machinery into a generalized integral, so the Atlas should represent the two lines as converging
+        rather than making one a simple consequence of the other.
+
+        '
+      perspective: later_interpretation
+      certainty: high
+  status: proposed
+skipped: []
