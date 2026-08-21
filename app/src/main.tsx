@@ -7,7 +7,7 @@ type Entity = { id: string; type: string; name: string; start_year?: number; end
 type Question = { id: string; question: string; period?: { from?: number; to?: number | null }; fields?: string[] };
 type Assertion = { id: string; subject: string; predicate: string; object: string; period?: { from?: number; to?: number | null }; status?: string; perspective?: string };
 type StoryStep = { id: string; ref: string; role: string; narrative?: string; assertion_refs?: string[]; perspective?: string; temporal_anchor?: { from?: number; to?: number | null } };
-type Story = { id: string; title: string; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
+type Story = { id: string; title: string; fields?: string[]; steps: StoryStep[]; links: { from: string; to: string; type: string }[] };
 type StoryTransition = { id: string; from_story: string; from_step: string; to_story: string; to_step: string; type: string; perspective: string; assertion_refs: string[]; rationale?: string };
 type Intersection = { entity: string; story_count: number; stories: string[] };
 type AtlasField = { id: string; name: string; parents: string[] };
@@ -20,7 +20,7 @@ type Dataset = {
   atlas: { fields: AtlasField[] };
   people: PersonIndex[];
 };
-type RouteState = { view: View; storyId?: string; personId?: string; networkStory?: string };
+type RouteState = { view: View; storyId?: string; personId?: string; networkStory?: string; networkField?: string };
 type NetworkPoint = { x: number; y: number; year: number; ref: string; storyIds: string[] };
 type NetworkLayout = { positions: Record<string, NetworkPoint>; stepKeys: Record<string, string>; yearRows: { year: number; y: number }[]; minYear: number; maxYear: number; height: number };
 
@@ -44,14 +44,23 @@ function parseRoute(): RouteState {
   const parts = path.split('/').filter(Boolean).map(decodeURIComponent);
   if (parts[0] === 'story' && parts[1]) return { view: 'Story', storyId: parts[1] };
   if (parts[0] === 'person' && parts[1]) return { view: 'Person', personId: parts[1] };
-  if (parts[0] === 'network') return { view: 'Network', networkStory: new URLSearchParams(query).get('story') || 'all' };
+  if (parts[0] === 'network') {
+    const params = new URLSearchParams(query);
+    return { view: 'Network', networkStory: params.get('story') || 'all', networkField: params.get('field') || undefined };
+  }
   return { view: 'Atlas' };
 }
 
 function routeHash(route: RouteState) {
   if (route.view === 'Story') return `#/story/${encodeURIComponent(route.storyId || 'story-rigor')}`;
   if (route.view === 'Person') return `#/person/${encodeURIComponent(route.personId || 'person-euler')}`;
-  if (route.view === 'Network') return route.networkStory && route.networkStory !== 'all' ? `#/network?story=${encodeURIComponent(route.networkStory)}` : '#/network';
+  if (route.view === 'Network') {
+    const params = new URLSearchParams();
+    if (route.networkStory && route.networkStory !== 'all') params.set('story', route.networkStory);
+    if (route.networkField) params.set('field', route.networkField);
+    const query = params.toString();
+    return query ? `#/network?${query}` : '#/network';
+  }
   return '#/atlas';
 }
 
@@ -82,7 +91,7 @@ function App() {
   const go = (v: View) => {
     if (v === 'Story') navigate({ view: 'Story', storyId: selectedStory === 'all' ? (data?.stories[0]?.id || 'story-rigor') : selectedStory });
     else if (v === 'Person') navigate({ view: 'Person', personId: selectedPerson });
-    else if (v === 'Network') navigate({ view: 'Network', networkStory: selectedStory });
+    else if (v === 'Network') navigate({ view: 'Network', networkStory: selectedStory, networkField: route.networkField });
     else navigate({ view: 'Atlas' });
   };
 
@@ -93,8 +102,8 @@ function App() {
     <header className="app-header"><div className="brand-row"><div><h1>Why Mathematics Changed</h1><p>Fields evolve; Stories cross the historical graph.</p></div><span className="version-badge">V5 UI</span></div>
       <nav className="top-tabs">{views.map(v => <button key={v} className={route.view === v ? 'active' : ''} onClick={() => go(v)}>{letter(v)} · {v}</button>)}</nav></header>
     <main className="content">
-      {route.view === 'Atlas' && <AtlasView data={data} onEnterNetwork={() => navigate({ view: 'Network', networkStory: 'all' })} />}
-      {route.view === 'Network' && <NetworkView data={data} selectedStory={route.networkStory || 'all'} setSelectedStory={id => navigate({ view: 'Network', networkStory: id })} onOpenStory={id => navigate({ view: 'Story', storyId: id })} onOpenPerson={id => navigate({ view: 'Person', personId: id })} onSheet={setSheet} />}
+      {route.view === 'Atlas' && <AtlasView data={data} onEnterNetwork={fieldId => navigate({ view: 'Network', networkStory: 'all', networkField: fieldId })} />}
+      {route.view === 'Network' && <NetworkView data={data} selectedStory={route.networkStory || 'all'} selectedField={route.networkField} setSelectedStory={id => navigate({ view: 'Network', networkStory: id, networkField: route.networkField })} setSelectedField={fieldId => navigate({ view: 'Network', networkStory: 'all', networkField: fieldId })} onOpenStory={id => navigate({ view: 'Story', storyId: id })} onOpenPerson={id => navigate({ view: 'Person', personId: id })} onSheet={setSheet} />}
       {route.view === 'Story' && <StoryView data={data} storyId={selectedStory} onNetwork={() => navigate({ view: 'Network', networkStory: selectedStory })} onOpenPerson={id => navigate({ view: 'Person', personId: id })} onSheet={setSheet} />}
       {route.view === 'Person' && <PersonView data={data} personId={selectedPerson} onStory={id => navigate({ view: 'Story', storyId: id })} />}
     </main>
@@ -103,20 +112,24 @@ function App() {
   </div>;
 }
 
-function AtlasView({ data, onEnterNetwork }: { data: Dataset; onEnterNetwork: () => void }) {
+function AtlasView({ data, onEnterNetwork }: { data: Dataset; onEnterNetwork: (fieldId?: string) => void }) {
   const field = (id: string) => data.atlas.fields.find(f => f.id === id)?.name || id;
-  return <><section className="hero-card"><h2>Atlas — How mathematical fields branch and recombine</h2><p>This view is about field evolution. Enter the Network to inspect researched historical paths and their crossings.</p></section>
-    <section className="panel atlas-panel"><svg className="atlas-svg" viewBox="0 0 360 650"><line x1="36" y1="30" x2="36" y2="620" className="time-axis" />
+  const rootFields = data.atlas.fields.filter(f => f.parents.includes('mathematics'));
+  const storyCount = (fieldId: string) => data.stories.filter(s => s.fields?.includes(fieldId)).length;
+  return <><section className="hero-card"><h2>Atlas — How mathematical fields branch and recombine</h2><p>This view is about field evolution. Field branches below are derived from canonical field data; choose one to frame its reviewed Network cluster.</p></section>
+    <section className="panel atlas-panel">
+      <div className="story-filter"><button onClick={() => onEnterNetwork(undefined)}>All researched paths</button>{rootFields.map(f => <button key={f.id} onClick={() => onEnterNetwork(f.id)}>{f.name} · {storyCount(f.id)} Stories</button>)}</div>
+      <svg className="atlas-svg" viewBox="0 0 360 650"><line x1="36" y1="30" x2="36" y2="620" className="time-axis" />
       {[['1600',38],['1750',170],['1850',310],['1950',455],['2020',610]].map(([t,y]) => <text key={t} x="7" y={Number(y)} className="year-label">{t}</text>)}
       <path d="M80 55 C80 120 95 150 110 190 C120 230 120 270 120 330 C125 390 132 455 140 590" className="field-path analysis" />
       <path d="M80 55 C95 120 155 135 168 190 C175 245 182 295 190 350 C205 410 222 490 230 590" className="field-path algebra" />
       <path d="M80 55 C65 125 55 165 62 230 C68 305 80 390 86 590" className="field-path geometry" />
       <path d="M168 190 C208 230 225 265 242 315 C257 375 270 455 278 590" className="field-path topology" />
-      <AtlasNode x={80} y={55} label="Calculus / Geometry / Algebra" sub="17th-century starting cluster" onClick={onEnterNetwork} />
-      <AtlasNode x={110} y={190} label={field('analysis')} sub="limits · series · functions" onClick={onEnterNetwork} />
-      <AtlasNode x={168} y={190} label={field('algebra')} sub="equations → structures" onClick={onEnterNetwork} />
-      <AtlasNode x={242} y={315} label={field('topology')} onClick={onEnterNetwork} />
-      <AtlasNode x={278} y={470} label="Harmonic analysis" onClick={onEnterNetwork} />
+      <AtlasNode x={80} y={55} label="Calculus / Geometry / Algebra" sub="17th-century starting cluster" onClick={() => onEnterNetwork(undefined)} />
+      <AtlasNode x={110} y={190} label={field('analysis')} sub="limits · series · functions" onClick={() => onEnterNetwork('analysis')} />
+      <AtlasNode x={168} y={190} label={field('algebra')} sub="equations → structures" onClick={() => onEnterNetwork('algebra')} />
+      <AtlasNode x={242} y={315} label={field('topology')} onClick={() => onEnterNetwork('topology')} />
+      <AtlasNode x={278} y={470} label="Harmonic analysis" onClick={() => onEnterNetwork('analysis')} />
     </svg></section></>;
 }
 
@@ -127,12 +140,12 @@ function AtlasNode({ x, y, label, sub, onClick }: { x: number; y: number; label:
 function stableFraction(id: string) { let hash = 0; for (let i = 0; i < id.length; i += 1) hash = (Math.imul(hash, 31) + id.charCodeAt(i)) | 0; return (Math.abs(hash) % 1000) / 1000; }
 function stepYear(step: StoryStep, item?: Entity | Question) { if (typeof step.temporal_anchor?.from === 'number') return step.temporal_anchor.from; if (!item) return 1800; return 'type' in item ? (item.start_year || 1800) : (item.period?.from || 1800); }
 
-function buildNetworkLayout(data: Dataset, lookup: Record<string, Entity | Question>): NetworkLayout {
-  const storyIndex = new Map(data.stories.map((story, index) => [story.id, index]));
-  const laneMin = 76, laneMax = 285, laneStep = data.stories.length > 1 ? (laneMax - laneMin) / (data.stories.length - 1) : 0;
+function buildNetworkLayout(stories: Story[], lookup: Record<string, Entity | Question>): NetworkLayout {
+  const storyIndex = new Map(stories.map((story, index) => [story.id, index]));
+  const laneMin = 76, laneMax = 285, laneStep = stories.length > 1 ? (laneMax - laneMin) / (stories.length - 1) : 0;
   const groups = new Map<string, { ref: string; year: number; storyIds: string[] }>();
   const stepKeys: Record<string, string> = {};
-  data.stories.forEach(story => story.steps.forEach(step => {
+  stories.forEach(story => story.steps.forEach(step => {
     const item = lookup[step.ref]; if (!item) return;
     const year = stepYear(step, item), key = `${step.ref}@${year}`;
     const group = groups.get(key) || { ref: step.ref, year, storyIds: [] };
@@ -151,26 +164,31 @@ function buildNetworkLayout(data: Dataset, lookup: Record<string, Entity | Quest
   return { positions, stepKeys, yearRows, minYear: years[0] || 1750, maxYear: years[years.length-1] || 1860, height: Math.max(640,cursor+20) };
 }
 
-function NetworkView({ data, selectedStory, setSelectedStory, onOpenStory, onOpenPerson, onSheet }: { data: Dataset; selectedStory: string; setSelectedStory:(x:string)=>void; onOpenStory:(x:string)=>void; onOpenPerson:(x:string)=>void; onSheet:(n:React.ReactNode)=>void }) {
+function NetworkView({ data, selectedStory, selectedField, setSelectedStory, setSelectedField, onOpenStory, onOpenPerson, onSheet }: { data: Dataset; selectedStory: string; selectedField?: string; setSelectedStory:(x:string)=>void; setSelectedField:(x?:string)=>void; onOpenStory:(x:string)=>void; onOpenPerson:(x:string)=>void; onSheet:(n:React.ReactNode)=>void }) {
   const lookup = useMemo(() => buildLookup(data), [data]);
-  const layout = useMemo(() => buildNetworkLayout(data, lookup), [data, lookup]);
+  const fieldStories = useMemo(() => selectedField ? data.stories.filter(s => s.fields?.includes(selectedField)) : data.stories, [data, selectedField]);
+  const layout = useMemo(() => buildNetworkLayout(fieldStories, lookup), [fieldStories, lookup]);
   const intersections = new Map(data.intersections.map(i => [i.entity, i]));
-  const storyIds = ['all', ...data.stories.map(s=>s.id)];
+  const storyIds = ['all', ...fieldStories.map(s=>s.id)];
   const storyMap = new Map(data.stories.map(s=>[s.id,s]));
   const point = (storyId:string, stepId:string) => { const key = layout.stepKeys[`${storyId}:${stepId}`]; return key ? layout.positions[key] : undefined; };
   const curve = (a?:NetworkPoint,b?:NetworkPoint) => { if (!a || !b) return ''; const mid=(a.y+b.y)/2; return `M${a.x} ${a.y} C${a.x} ${mid} ${b.x} ${mid} ${b.x} ${b.y}`; };
-  const selectedStories = selectedStory === 'all' ? data.stories : data.stories.filter(s=>s.id===selectedStory);
+  const selectedStories = selectedStory === 'all' ? fieldStories : fieldStories.filter(s=>s.id===selectedStory);
   const people = peopleForStories(data, selectedStories);
+  const fieldName = selectedField ? data.atlas.fields.find(f=>f.id===selectedField)?.name || selectedField : 'All fields';
+  const rootFields = data.atlas.fields.filter(f=>f.parents.includes('mathematics'));
+  const visibleIds = new Set(fieldStories.map(s=>s.id));
 
-  return <><section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · integrated Story graph</h2><p>Solid colored paths are links inside one Story. Dashed neutral connectors are separately reviewed handoffs between Stories; they do not imply causation merely from chronology.</p></section>
+  return <><section className="hero-card"><h2>Network — {layout.minYear}–{layout.maxYear} · {fieldName}</h2><p>Solid colored paths are links inside one Story. Dashed neutral connectors are separately reviewed handoffs between Stories; field framing is derived from Story field metadata.</p></section>
     <section className="panel network-panel">
+      <div className="story-filter"><button className={!selectedField?'active':''} onClick={()=>setSelectedField(undefined)}>All fields</button>{rootFields.map(f=><button key={f.id} className={selectedField===f.id?'active':''} onClick={()=>setSelectedField(f.id)}>{f.name}</button>)}</div>
       <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory===id?'active':''} onClick={()=>setSelectedStory(id)}>{id!=='all' && <i className="story-dot" style={{background:storyColor(id)}} />}{id==='all'?'All paths':storyMap.get(id)?.title}</button>)}</div>
       <div className="story-filter">{people.map(p => <button key={p.id} onClick={()=>onOpenPerson(p.id)}>● {p.name}</button>)}</div>
       <svg className="network-svg" viewBox={`0 0 360 ${layout.height}`}>
         <line x1="38" y1="30" x2="38" y2={layout.height-20} className="time-axis" />
         {layout.yearRows.map(r => <g key={r.year}><text x="7" y={r.y} className="year-label">{r.year}</text><line x1="34" y1={r.y-4} x2="42" y2={r.y-4} className="year-tick" /></g>)}
-        {data.stories.flatMap(story => story.links.map(link => <path key={`${story.id}:${link.from}:${link.to}`} d={curve(point(story.id,link.from),point(story.id,link.to))} className={`story-overlay ${selectedStory!=='all' && selectedStory!==story.id?'dim':''}`} style={{stroke:storyColor(story.id)}} />))}
-        {data.transitions.map(t => <path key={t.id} d={curve(point(t.from_story,t.from_step),point(t.to_story,t.to_step))} fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="6 5" opacity={selectedStory==='all' || selectedStory===t.from_story || selectedStory===t.to_story ? 0.7 : 0.12} />)}
+        {fieldStories.flatMap(story => story.links.map(link => <path key={`${story.id}:${link.from}:${link.to}`} d={curve(point(story.id,link.from),point(story.id,link.to))} className={`story-overlay ${selectedStory!=='all' && selectedStory!==story.id?'dim':''}`} style={{stroke:storyColor(story.id)}} />))}
+        {data.transitions.filter(t=>visibleIds.has(t.from_story)&&visibleIds.has(t.to_story)).map(t => <path key={t.id} d={curve(point(t.from_story,t.from_step),point(t.to_story,t.to_step))} fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="6 5" opacity={selectedStory==='all' || selectedStory===t.from_story || selectedStory===t.to_story ? 0.7 : 0.12} />)}
         {Object.entries(layout.positions).map(([key,p]) => { const item=lookup[p.ref]; if(!item) return null; const canonical=intersections.get(p.ref); const temporal=p.storyIds.length>1&&canonical?{...canonical,story_count:p.storyIds.length,stories:p.storyIds}:undefined; return <NetworkNode key={key} item={item} x={p.x} y={p.y} intersection={temporal} onClick={()=>{ if(canonical) onSheet(<IntersectionSheet intersection={canonical} data={data} onOpen={onOpenStory}/>); else if('type' in item && item.type==='Person') onOpenPerson(item.id); }} />; })}
       </svg>
     </section></>;
