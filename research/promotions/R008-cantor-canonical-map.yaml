@@ -63,3 +63,20 @@ research_gaps:
   - packet_question: q-later-infinite-set-structure
     status: not_promoted
     reason: Downstream 1873–1874 handoff is outside R008 and transition r008-qt005 was rejected.
+stories:
+  - story_id: story-r008-uniqueness
+    steps:
+      - step_id: uniqueness-1
+        canonical_assertion_refs: [assertion-r008-convergence-to-uniqueness-question]
+      - step_id: uniqueness-2
+        canonical_assertion_refs: [assertion-r008-heine-uniqueness, assertion-r008-heine-cantor-context]
+      - step_id: uniqueness-3
+        canonical_assertion_refs: [assertion-r008-cantor-1870-uniqueness]
+      - step_id: uniqueness-4
+        canonical_assertion_refs: [assertion-r008-cantor-1871-finite-exceptions, assertion-r008-uniqueness-to-exceptional-question]
+      - step_id: uniqueness-5
+        canonical_assertion_refs: [assertion-r008-cantor-1872-exceptional-sets, assertion-r008-1872-uniqueness-theorem]
+      - step_id: uniqueness-6
+        canonical_assertion_refs: [assertion-r008-cantor-derived-set-definition, assertion-r008-exceptional-to-derived, assertion-r008-exceptional-to-derived-question]
+      - step_id: uniqueness-7
+        canonical_assertion_refs: [assertion-r008-analytic-origin-reading, assertion-r008-modern-uniqueness-language]
