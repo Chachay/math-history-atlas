@@ -35,6 +35,14 @@
     ]
   },
   {
+    "entity": "q-post-riemann-integration-gap",
+    "story_count": 2,
+    "stories": [
+      "story-integrability",
+      "story-lebesgue-integration"
+    ]
+  },
+  {
     "entity": "q-uniform-convergence-emergence",
     "story_count": 2,
     "stories": [

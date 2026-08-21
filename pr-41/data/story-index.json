@@ -1243,5 +1243,151 @@
         "type": "branches"
       }
     ]
+  },
+  {
+    "id": "story-lebesgue-integration",
+    "title": "How much bad behavior can integration tolerate?",
+    "description": "From Riemann's remaining integration boundary through Jordan and Borel's set-size machinery to Lebesgue's 1901–1902 measure-based integral and the new limiting questions it exposed.",
+    "fields": [
+      "analysis"
+    ],
+    "steps": [
+      {
+        "id": "lebesgue-1",
+        "ref": "q-post-riemann-integration-gap",
+        "role": "Question",
+        "narrative": "Riemann's criterion did not exhaust the later integration problem. Lebesgue's 1901 note gives a historically explicit way to reopen that boundary: he states that not every derivative is integrable in Riemann's sense and treats recovery of primitive functions as a reason to seek a broader integral.\n",
+        "assertion_refs": [
+          "assertion-r010-riemann-to-lebesgue-question",
+          "assertion-r010-riemann-limitation"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1854,
+          "to": 1901
+        }
+      },
+      {
+        "id": "lebesgue-2",
+        "ref": "q-set-size-integration",
+        "role": "Converging line",
+        "narrative": "A separate late-nineteenth-century line developed ways to assign size to point sets. Jordan's 1892 work connected definite integration with set content, while Borel's 1898 construction extended length to a broader family of sets; retrospectively, these developments supplied machinery that could meet the integration problem without being a simple consequence of it.\n",
+        "assertion_refs": [
+          "assertion-r010-jordan-content",
+          "assertion-r010-borel-measure",
+          "assertion-r010-lines-converge"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1892,
+          "to": 1898
+        }
+      },
+      {
+        "id": "lebesgue-3",
+        "ref": "work-lebesgue-generalization-1901",
+        "role": "Problem",
+        "narrative": "In 1901 Lebesgue asks for an integral that contains Riemann's as a special case while handling cases excluded by the older theory. In the same note he explicitly refers to Borel's measurable sets, making the set-measure context part of the documented construction rather than a later analogy.\n",
+        "assertion_refs": [
+          "assertion-r010-generalization-aim",
+          "assertion-r010-borel-context"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1901,
+          "to": 1901
+        }
+      },
+      {
+        "id": "lebesgue-4",
+        "ref": "concept-lebesgue-measure",
+        "role": "Response",
+        "narrative": "Lebesgue defines measure for point sets through countable open coverings and uses measurable sets as the material from which the generalized integral is built. The historical formulation is kept in its one-dimensional 1901–1902 setting rather than being rewritten as later abstract measure-space theory.\n",
+        "assertion_refs": [
+          "assertion-r010-lebesgue-measure"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1901,
+          "to": 1902
+        }
+      },
+      {
+        "id": "lebesgue-5",
+        "ref": "q-lebesgue-value-band-integration",
+        "role": "Response",
+        "narrative": "Instead of only subdividing the argument interval, Lebesgue groups ranges of function values and measures the corresponding sets of arguments. The integral is then formed from sums weighted by those measures, which is the concrete historical content behind the later pedagogical contrast between Riemann and Lebesgue integration.\n",
+        "assertion_refs": [
+          "assertion-r010-value-band-integral",
+          "assertion-r010-set-size-to-value-band"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1901,
+          "to": 1901
+        }
+      },
+      {
+        "id": "lebesgue-6",
+        "ref": "work-lebesgue-thesis-1902",
+        "role": "Development",
+        "narrative": "Lebesgue's 1902 thesis gives the construction a fuller systematic form, treating measure of sets before integration and enlarging the class of functions that can be handled beyond the older Riemann boundary.\n",
+        "assertion_refs": [
+          "assertion-r010-thesis-development"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1902,
+          "to": 1902
+        }
+      },
+      {
+        "id": "lebesgue-7",
+        "ref": "q-lebesgue-limit-processes",
+        "role": "Next question",
+        "narrative": "The 1901 note had already announced closure and limiting properties for the enlarged class of summable functions and applied the integral to bounded derivatives. Read after the fuller 1902 development, this opens a downstream Atlas question about limiting processes, without identifying Lebesgue's compressed 1901 claims with the later named convergence theorems.\n",
+        "assertion_refs": [
+          "assertion-r010-limit-properties",
+          "assertion-r010-value-band-to-limits"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1902,
+          "to": null
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "lebesgue-1",
+        "to": "lebesgue-2",
+        "type": "branches"
+      },
+      {
+        "from": "lebesgue-2",
+        "to": "lebesgue-3",
+        "type": "converges"
+      },
+      {
+        "from": "lebesgue-3",
+        "to": "lebesgue-4",
+        "type": "continues"
+      },
+      {
+        "from": "lebesgue-4",
+        "to": "lebesgue-5",
+        "type": "continues"
+      },
+      {
+        "from": "lebesgue-5",
+        "to": "lebesgue-6",
+        "type": "continues"
+      },
+      {
+        "from": "lebesgue-6",
+        "to": "lebesgue-7",
+        "type": "branches"
+      }
+    ]
   }
 ]
