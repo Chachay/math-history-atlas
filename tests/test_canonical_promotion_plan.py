@@ -1,6 +1,4 @@
-from pathlib import Path
-
-from scripts.plan_canonical_promotion import CanonicalEntity, classify_entity
+from scripts.plan_canonical_promotion import CanonicalEntity, build_plan, classify_entity
 
 
 def _canonical(id: str, type: str, name: str, path: str = "data/entities/test.yaml") -> CanonicalEntity:
@@ -44,3 +42,13 @@ def test_new_entity_is_new_when_no_identity_candidate_exists():
         canonical,
     )
     assert result["status"] == "NEW"
+
+
+def test_r008_replay_reuses_heine_and_riemann_and_preserves_manual_exclusion():
+    plan = build_plan("R008")
+    by_id = {row["id"]: row for row in plan["entities"]}
+    assert by_id["person-heine"]["status"] == "REUSE"
+    assert by_id["person-riemann"]["status"] == "REUSE"
+
+    excluded = plan["assertions"]["excluded_or_manual"]
+    assert any(row.get("id") == "r008-a009" and row.get("action") == "manual_review" for row in excluded)
