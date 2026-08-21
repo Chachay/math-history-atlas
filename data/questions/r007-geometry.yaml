@@ -1,0 +1,12 @@
+- id: q-r007-surface-curvature
+  question: How can the curvature of a surface be measured?
+  period: {from: 1760, to: null}
+  fields: [geometry]
+- id: q-r007-surface-development
+  question: What geometric quantities are preserved when one surface is developed upon another without stretching?
+  period: {from: 1827, to: null}
+  fields: [geometry]
+- id: q-r007-intrinsic-geometry
+  question: Which properties of a surface can be determined from measurements made within the surface itself?
+  period: {from: 1827, to: null}
+  fields: [geometry]
