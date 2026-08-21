@@ -22,6 +22,8 @@ python -m scripts.story_architecture_review context <story-id> [<story-id> ...]
 
 The context is descriptive only. Shared Questions, refs, or assertions do not by themselves establish historical influence or causation.
 
+The context also exposes canonical Question-to-Question Network assertions. Inspect their `predicate`, `perspective`, `certainty`, and `status` before treating them as part of a Story spine. A `candidate` edge remains a hypothesis; its presence in the Network must not silently upgrade it into a reviewed Story transition.
+
 ## Review dimensions
 
 ### 1. Entry
@@ -45,6 +47,8 @@ Network Question-to-Question relations are potential narrative spines, not autom
 - historical transition;
 - later historical interpretation;
 - modern abstraction/editorial relation.
+
+Use the canonical Question-edge metadata surfaced by the context tool rather than inferring transition strength from visual proximity or Story order. Candidate or low-certainty edges may be useful editorial signals but are not reviewed historical transitions.
 
 Do not strengthen a retrospective or thematic relation merely because it makes a cleaner Story.
 
@@ -173,14 +177,15 @@ The first implementation should remain sensible for these distinct structures:
 
 2. `story-fourier-heat-representation`
    - `q-heat-propagation` can be treated as `answered_for_story` / handoff while remaining globally open;
-   - the Story then moves into prescribed-data and representation Questions.
+   - the Story then moves into prescribed-data and representation Questions;
+   - nearby candidate Network edges must remain visibly candidate rather than being promoted by the review.
 
 3. `story-cauchy-rigor-continuity` + `story-quantified-control`
    - parallel convergence/continuity lines and their existing intersection should be distinguishable from a demand for a new Research Unit.
 
 4. `story-r008-uniqueness`
    - convergence → uniqueness → exceptional sets → derived-set structure should read as a strong Question-path spine;
-   - transitions must retain their different historical/later-interpretation strengths.
+   - transitions must retain their different historical/later-interpretation strengths as recorded in canonical Question-edge assertions.
 
 ## Non-goals
 

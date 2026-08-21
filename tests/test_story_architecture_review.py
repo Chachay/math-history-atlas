@@ -41,6 +41,21 @@ def test_fourier_heat_context_keeps_heat_question_in_story_path():
     assert "q-trig-representation-scope" in story["question_phases"]
 
 
+def test_fourier_heat_context_exposes_candidate_neighbor_network_edge():
+    context = build_architecture_context(["story-fourier-heat-representation"])
+    story = _story(context, "story-fourier-heat-representation")
+    edge = next(
+        row
+        for row in story["neighbor_question_edges"]
+        if row["assertion_id"] == "assertion-heat-to-convergence"
+    )
+    assert edge["subject"] == "q-heat-propagation"
+    assert edge["object"] == "q-series-convergence"
+    assert edge["predicate"] == "spawned"
+    assert edge["perspective"] == "later_interpretation"
+    assert edge["status"] == "candidate"
+
+
 def test_r002_r005_context_exposes_existing_uniformity_intersection():
     context = build_architecture_context(
         ["story-cauchy-rigor-continuity", "story-quantified-control"]
@@ -58,6 +73,21 @@ def test_r008_context_preserves_question_spine_order():
         "q-exceptional-set-uniqueness",
         "q-derived-set-structure",
     ]
+
+
+def test_r008_context_exposes_network_edge_strengths():
+    context = build_architecture_context(["story-r008-uniqueness"])
+    story = _story(context, "story-r008-uniqueness")
+    by_id = {row["assertion_id"]: row for row in story["question_phase_edges"]}
+    assert {
+        "assertion-r008-convergence-to-uniqueness-question",
+        "assertion-r008-uniqueness-to-exceptional-question",
+        "assertion-r008-exceptional-to-derived-question",
+    } <= set(by_id)
+    assert by_id["assertion-r008-convergence-to-uniqueness-question"]["perspective"] == "later_interpretation"
+    assert by_id["assertion-r008-convergence-to-uniqueness-question"]["status"] == "historically_reviewed"
+    assert by_id["assertion-r008-uniqueness-to-exceptional-question"]["perspective"] == "historical"
+    assert by_id["assertion-r008-exceptional-to-derived-question"]["perspective"] == "historical"
 
 
 def test_persistent_story_architecture_review_is_valid():

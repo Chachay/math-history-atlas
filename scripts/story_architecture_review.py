@@ -33,6 +33,17 @@ def _load_yaml(path: Path) -> Any:
     return yaml.safe_load(path.read_text(encoding="utf-8"))
 
 
+def _rows(directory: Path) -> list[dict[str, Any]]:
+    result: list[dict[str, Any]] = []
+    for path in sorted(directory.glob("*.yaml")):
+        data = _load_yaml(path) or []
+        if isinstance(data, dict):
+            data = [data]
+        if isinstance(data, list):
+            result.extend(row for row in data if isinstance(row, dict))
+    return result
+
+
 def _story_rows(path: Path) -> list[dict[str, Any]]:
     data = _load_yaml(path) or []
     if isinstance(data, dict):
@@ -64,6 +75,38 @@ def load_question_ids(root: Path = ROOT) -> set[str]:
                 if isinstance(row, dict) and row.get("id"):
                     ids.add(str(row["id"]))
     return ids
+
+
+def load_question_edges(
+    question_ids: set[str],
+    root: Path = ROOT,
+) -> list[dict[str, Any]]:
+    edges: list[dict[str, Any]] = []
+    for row in _rows(root / "data/assertions"):
+        subject = str(row.get("subject", ""))
+        obj = str(row.get("object", ""))
+        if subject not in question_ids or obj not in question_ids:
+            continue
+        edges.append(
+            {
+                "assertion_id": str(row.get("id", "")),
+                "subject": subject,
+                "predicate": str(row.get("predicate", "")),
+                "object": obj,
+                "perspective": str(row.get("perspective", "")),
+                "certainty": str(row.get("certainty", "")),
+                "status": str(row.get("status", "")),
+                "period": row.get("period"),
+            }
+        )
+    return sorted(
+        edges,
+        key=lambda row: (
+            row["subject"],
+            row["object"],
+            row["assertion_id"],
+        ),
+    )
 
 
 def _as_strings(value: Any) -> list[str]:
@@ -122,12 +165,32 @@ def _story_context(story: dict[str, Any], question_ids: set[str]) -> dict[str, A
     }
 
 
+def _edge_context_for_story(
+    story: dict[str, Any],
+    question_edges: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    phases = set(_as_strings(story.get("question_phases")))
+    path_edges = [
+        edge
+        for edge in question_edges
+        if edge["subject"] in phases and edge["object"] in phases
+    ]
+    neighbor_edges = [
+        edge
+        for edge in question_edges
+        if (edge["subject"] in phases or edge["object"] in phases)
+        and not (edge["subject"] in phases and edge["object"] in phases)
+    ]
+    return path_edges, neighbor_edges
+
+
 def build_architecture_context(
     selected_story_ids: list[str] | None = None,
     root: Path = ROOT,
 ) -> dict[str, Any]:
     stories = load_stories(root)
     question_ids = load_question_ids(root)
+    question_edges = load_question_edges(question_ids, root)
     if selected_story_ids:
         missing = sorted(set(selected_story_ids) - set(stories))
         if missing:
@@ -136,10 +199,14 @@ def build_architecture_context(
     else:
         selected = stories
 
-    contexts = {
-        story_id: _story_context(story, question_ids)
-        for story_id, story in selected.items()
-    }
+    contexts = {}
+    for story_id, story in selected.items():
+        context = _story_context(story, question_ids)
+        path_edges, neighbor_edges = _edge_context_for_story(story, question_edges)
+        context["question_phase_edges"] = path_edges
+        context["neighbor_question_edges"] = neighbor_edges
+        contexts[story_id] = context
+
     all_contexts = {
         story_id: _story_context(story, question_ids)
         for story_id, story in stories.items()
@@ -179,7 +246,8 @@ def build_architecture_context(
         "overlaps": sorted(overlaps, key=lambda row: tuple(row["stories"])),
         "notes": [
             "This context reports structure only; overlap is not itself a historical influence or causal relation.",
-            "Question paths are candidate narrative spines and must preserve the perspective/evidence strength of their supporting assertions.",
+            "Question-to-Question Network edges are canonical assertions; inspect predicate, perspective, certainty, and status before using them as a narrative spine.",
+            "Candidate Network edges remain hypotheses and must not be silently upgraded into reviewed Story transitions.",
             "A broad title does not imply an obligation to reconstruct all upstream history.",
         ],
     }
