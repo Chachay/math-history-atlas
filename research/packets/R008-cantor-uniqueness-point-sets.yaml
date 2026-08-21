@@ -86,7 +86,7 @@ entities:
   - id: work-cantor-uniqueness-note-1871
     type: Work
     canonical_name: Cantor's note on exceptional points in the uniqueness theorem
-    original_title: Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt
+    original_title: "Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt"
     publication_year: 1871
   - id: work-cantor-extension-1872
     type: Work
@@ -127,7 +127,6 @@ chronology:
     certainty: high
     sources: [src-cantor-1870-uniqueness]
     primary_locator: 'J. reine angew. Math. 72, pp. 139–142'
-
   - date: '1871'
     date_type: publication
     event: >
@@ -257,7 +256,6 @@ assertions:
     perspective: historical
     certainty: high
     sources: [src-cantor-1872-extension]
-
   - id: r008-a008
     subject: person-heine
     predicate: contributed_to
