@@ -21,6 +21,7 @@ on:
           - bind
           - promote-dry-run
           - promote-apply
+          - canonical-plan
 
 permissions:
   contents: write
@@ -71,6 +72,9 @@ jobs:
             promote-apply)
               python -m scripts.promote_verified "$UNIT_ID"
               python -m scripts.promote_verified "$UNIT_ID" --apply
+              ;;
+            canonical-plan)
+              python -m scripts.plan_canonical_promotion "$UNIT_ID"
               ;;
             *)
               echo "Unknown operation: $OPERATION" >&2
