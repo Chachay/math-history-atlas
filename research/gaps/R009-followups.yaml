@@ -1,0 +1,20 @@
+research_unit_id: R009
+research_gaps:
+- id: gap-r009-galois-intersection
+  status: open
+  kind: supplementary
+  originating_unit: R009
+  question: What additional evidence would justify treating Dedekind's 1871 reference to Galois as more than a local textual intersection around fields and conjugacy?
+  needed_evidence: Primary correspondence, lecture notes, or specialist source-level historiography establishing transmission from Galoisian solvability questions into Dedekind's ideal construction; absent that evidence, retain no causal Story edge.
+- id: gap-r009-kronecker-primary
+  status: open
+  kind: supplementary
+  originating_unit: R009
+  question: Which primary Kronecker texts establish the technical form of his alternative approach to generalized ideal factorization?
+  needed_evidence: A stable primary-source edition and locators sufficient to compare Kronecker's construction with Dedekind's without relying only on secondary summaries.
+- id: gap-r009-edition-comparison
+  status: open
+  kind: supplementary
+  originating_unit: R009
+  question: Exactly what conceptual and proof-organizational changes distinguish Dedekind's 1877, 1879, and 1894 presentations of ideal theory?
+  needed_evidence: Edition-by-edition primary-source locators, especially for the removal of simple-ideal and congruence-dependent machinery and the later organization of ideal operations.
