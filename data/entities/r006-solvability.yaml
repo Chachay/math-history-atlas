@@ -10,12 +10,6 @@
   start_year: 1765
   end_year: 1822
   fields: [algebra]
-- id: person-abel
-  type: Person
-  name: Niels Henrik Abel
-  start_year: 1802
-  end_year: 1829
-  fields: [algebra]
 - id: person-galois
   type: Person
   name: Évariste Galois
