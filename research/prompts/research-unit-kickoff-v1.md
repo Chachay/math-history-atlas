@@ -19,15 +19,16 @@ Before proposing a topic or editing files:
 
 1. Read `README.md`.
 2. Read `editorial/WORKFLOW.md`.
-3. Read the current schemas and validators in `scripts/models.py` and `scripts/validate.py`.
-4. Inspect current canonical entities/questions/assertions, current Stories, and the most recent completed research units.
-5. Read these prompts:
+3. Read `research/EXTERNAL-CONTEXT-GUIDELINE.md` when it exists. Apply it whenever a unit involves physics, engineering, astronomy, computation, economics, or another domain outside mathematics.
+4. Read the current schemas and validators in `scripts/models.py` and `scripts/validate.py`.
+5. Inspect current canonical entities/questions/assertions, current Stories, and the most recent completed research units.
+6. Read these prompts:
    - `research/prompts/cluster-research-v1.md`
    - `research/prompts/historical-critic-v1.md`
    - `research/prompts/story-editor-v2.md`
    - `research/prompts/story-critic-v1.md`
-6. Inspect the latest Network/Story semantics before drafting. In particular, Story steps may carry Story-local temporal anchors; entity birth/start dates are not automatically the date at which an entity appears in a Story.
-7. Check `research/units/` for a file whose name begins with the requested unit ID, e.g. `R003-*.md`. If exactly one approved brief exists, read it and treat its scope/integration target as the default topic unless current `main` makes the brief stale or contradictory. If several briefs exist, ask which one to use. If none exists, use the topic-selection procedure below.
+7. Inspect the latest Network/Story semantics before drafting. In particular, Story steps may carry Story-local temporal anchors; entity birth/start dates are not automatically the date at which an entity appears in a Story.
+8. Check `research/units/` for a file whose name begins with the requested unit ID, e.g. `R003-*.md`. If exactly one approved brief exists, read it and treat its scope/integration target as the default topic unless current `main` makes the brief stale or contradictory. If several briefs exist, ask which one to use. If none exists, use the topic-selection procedure below.
 
 Do not rely on remembered repository state when the current `main` branch can be read.
 
@@ -40,10 +41,12 @@ If the user supplied a topic but no approved brief exists, test whether it is bo
 If neither a topic nor an approved brief exists, propose 2–3 candidates based on the **current graph**, preferring a unit that:
 
 - intersects at least one accepted/researched node from an existing Story;
-- introduces a genuinely new question/problem/concept line rather than merely extending a biography;
+- introduces a genuinely new mathematical question/problem/concept line rather than merely extending a biography;
 - creates a useful branch, convergence, or cross-Story intersection;
 - is narrow enough to research with primary and specialist secondary sources;
 - helps expose weaknesses in the graph/editorial model without choosing a topic merely for UI convenience.
+
+When an external scientific/engineering context is involved, keep the proposed Atlas Question mathematical. State the external context, mathematical response, Atlas Question, historical test, and retrospective-risk test separately. Do not make a physics or engineering problem the main Question merely because it motivated the historical work.
 
 Do not infer causation merely because the new unit follows an existing one chronologically.
 
@@ -68,6 +71,8 @@ The packet must distinguish:
 - modern mathematical abstraction;
 - chronology/date type where relevant;
 - uncertainty and source gaps.
+
+For units involving an external domain, the packet must also distinguish the external historical problem from the mathematical method and from the mathematical Question that the Atlas follows. Treat the claimed outside → inside transition as a research claim, not as framing that is exempt from criticism.
 
 Normalize persistent sources. Web search is discovery, not persistent evidence.
 
@@ -138,6 +143,8 @@ The Story is a DAG. Use `continues`, `branches`, `converges`, `alternative`, or 
 
 Do not make a Story line move backward in historical time merely because a referenced Concept or Person originated earlier. If the Story intentionally looks backward, use the repository's explicit retrospective semantics rather than hiding the reversal.
 
+For externally motivated episodes, explain only enough of the outside domain to establish the historical stakes. Move the reader onto the mathematical Question rather than turning the Story into an application tutorial.
+
 ### B2. Story Critic
 
 Apply `story-critic-v1.md` independently. Check:
@@ -149,7 +156,8 @@ Apply `story-critic-v1.md` independently. Check:
 - Story-link semantics;
 - temporal ordering;
 - missing intermediaries;
-- whether a purported branch/convergence is actually evidenced.
+- whether a purported branch/convergence is actually evidenced;
+- for external-context episodes, whether the Story overstates motivation or turns a later mathematical relation into historical influence.
 
 Present material non-PASS findings to the human. Apply only explicitly resolved editorial revisions.
 
@@ -193,7 +201,8 @@ Across all units:
 - distributed developments should not be collapsed into single-person invention stories;
 - intermediary people/works/results should be added when historically necessary;
 - modern mathematical relation and historical motivation are separate claims;
-- uncertain evidence remains an explicit research gap rather than being smoothed into narrative.
+- uncertain evidence remains an explicit research gap rather than being smoothed into narrative;
+- external scientific or engineering problems may explain historical context, but the Atlas Question spine remains mathematical unless the project explicitly changes scope.
 
 ## Minimal fresh-chat command
 
