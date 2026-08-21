@@ -473,7 +473,7 @@ sources:
   - id: src-cantor-1871-note
     type: primary
     author: Georg Cantor
-    title: Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt
+    title: "Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt"
     publication: Journal für die reine und angewandte Mathematik 73, pp. 294–296
     year: 1871
     url: https://doi.org/10.1515/crll.1871.73.294
@@ -508,7 +508,7 @@ sources:
   - id: src-dauben-1979
     type: secondary_specialist
     author: Joseph Warren Dauben
-    title: Georg Cantor: His Mathematics and Philosophy of the Infinite
+    title: "Georg Cantor: His Mathematics and Philosophy of the Infinite"
     publication: Princeton University Press
     year: 1979
     url: https://doi.org/10.2307/j.ctv10crfh1
