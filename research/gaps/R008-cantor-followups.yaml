@@ -1,0 +1,26 @@
+research_unit_id: R008
+research_gaps:
+  - id: gap-r008-heine-cantor-direction
+    status: open
+    category: documentary_priority
+    question: What is the strongest primary documentary evidence for the direction of the Heine–Cantor exchange around the trigonometric-series uniqueness problem, including who proposed the general uniqueness problem and who proposed the finite-exception generalization?
+    needed_evidence: Cantor–Heine correspondence where available, Heine's relevant primary passages checked in full, and specialist historiography quoting or locating the documentary record.
+    constraint: Do not promote a one-way "Heine motivated Cantor" or equivalent priority/influence claim while this gap remains open.
+    disposition: supplementary_research
+
+  - id: gap-r008-riemann-schwarz-proof-chain
+    status: open
+    category: proof_genealogy
+    question: Which precise results of Riemann and which Schwarz lemma or correspondence enter Cantor's 1870 uniqueness proof, and what documentary evidence supports that transmission?
+    needed_evidence: Proof-level locators in Cantor 1870, Riemann's trigonometric-series work, Schwarz material or correspondence, and specialist historical reconstruction sufficient to identify the actual mathematical dependency.
+    constraint: Keep Riemann as background/intermediary only; do not promote a direct canonical contributed_to edge into Cantor's uniqueness work without proof-level evidence.
+    disposition: supplementary_research
+
+  - id: gap-r008-cantor-1872-1874-handoff
+    status: open
+    category: next_research_spine
+    question: What historically documented path connects Cantor's 1872 finite derived-set analysis to his 1873 correspondence and 1874 work on infinite totalities, countability, and the real algebraic numbers?
+    needed_evidence: Cantor's 1873 correspondence, the 1874 paper, and specialist historiography distinguishing continuity of research trajectory from retrospective causal compression.
+    constraint: Do not narrate a direct Fourier-series-to-set-theory causal jump or fold cardinality/transfinite results backward into the 1872 uniqueness paper.
+    disposition: post_R010_candidate_unit
+    roadmap_note: Candidate for the Cantor/cardinality/foundations branch at the forest-level review after R010; do not assign an R-number before that checkpoint.
