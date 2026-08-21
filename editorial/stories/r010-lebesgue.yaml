@@ -61,9 +61,9 @@
       perspective: later_interpretation
       temporal_anchor: {from: 1902, to: null}
   links:
-    - {from: lebesgue-1, to: lebesgue-2, type: branches}
+    - {from: lebesgue-1, to: lebesgue-3, type: converges}
     - {from: lebesgue-2, to: lebesgue-3, type: converges}
     - {from: lebesgue-3, to: lebesgue-4, type: continues}
     - {from: lebesgue-4, to: lebesgue-5, type: continues}
     - {from: lebesgue-5, to: lebesgue-6, type: continues}
-    - {from: lebesgue-6, to: lebesgue-7, type: branches}
+    - {from: lebesgue-5, to: lebesgue-7, type: branches}
