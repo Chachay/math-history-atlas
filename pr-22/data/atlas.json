@@ -54,6 +54,13 @@
         "number-theory",
         "algebraic-geometry"
       ]
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "parents": [
+        "mathematics"
+      ]
     }
   ],
   "note": "Polyhierarchy projection; UI may choose a tree-like view without changing canonical data."

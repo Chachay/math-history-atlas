@@ -2,7 +2,9 @@
   {
     "person": "person-euler",
     "name": "Leonhard Euler",
-    "assertions": [],
+    "assertions": [
+      "assertion-r007-euler-surface-curvature"
+    ],
     "stories": []
   },
   {
@@ -102,6 +104,22 @@
     "name": "Évariste Galois",
     "assertions": [
       "assertion-r006-galois-later-group-history"
+    ],
+    "stories": []
+  },
+  {
+    "person": "person-monge",
+    "name": "Gaspard Monge",
+    "assertions": [
+      "assertion-r007-monge-surface-theory"
+    ],
+    "stories": []
+  },
+  {
+    "person": "person-gauss",
+    "name": "Carl Friedrich Gauss",
+    "assertions": [
+      "assertion-r007-geodesy-context"
     ],
     "stories": []
   }

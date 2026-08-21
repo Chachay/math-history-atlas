@@ -839,5 +839,114 @@
         "type": "branches"
       }
     ]
+  },
+  {
+    "id": "story-r007-intrinsic-geometry",
+    "title": "Can geometry be read from inside a surface?",
+    "description": "A researched geometry path from pre-Gaussian surface curvature through Gauss's 1827 treatment of curvature, surface development, and the Theorema Egregium to the later intrinsic reading of those results. The Story treats surveying as context rather than a causal explanation and leaves the Gauss-to-Riemann transmission path open rather than drawing a direct continuation edge.\n",
+    "fields": [
+      "geometry"
+    ],
+    "steps": [
+      {
+        "id": "intrinsic-1",
+        "ref": "q-r007-surface-curvature",
+        "role": "Earlier problem",
+        "narrative": "Surface curvature did not begin with Gauss. Euler had developed major results on normal-section curvature and principal curvatures, while Monge extended and organized an analytic theory of surfaces before Gauss's 1827 memoir.\n",
+        "assertion_refs": [
+          "assertion-r007-euler-surface-curvature",
+          "assertion-r007-monge-surface-theory"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1760,
+          "to": 1795
+        }
+      },
+      {
+        "id": "intrinsic-2",
+        "ref": "work-gauss-disquisitiones-surfaces",
+        "role": "New formulation",
+        "narrative": "In the 1827 memoir Gauss defined a pointwise measure of curvature through the spherical image of a surface and derived formulas for it in general surface coordinates. In his formulation the area of the spherical image is compared with the corresponding area on the surface.\n",
+        "assertion_refs": [
+          "assertion-r007-gauss-curvature-definition",
+          "assertion-r007-curvature-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1827,
+          "to": 1827
+        }
+      },
+      {
+        "id": "intrinsic-3",
+        "ref": "q-r007-surface-development",
+        "role": "Geometric test",
+        "narrative": "Gauss also treated the development of one surface upon another through equality of the infinitesimal line element at corresponding points. This supplies a precise setting for asking which geometric quantities survive deformation without stretching, without assuming that the curvature formula historically generated that question.\n",
+        "assertion_refs": [
+          "assertion-r007-gauss-development",
+          "assertion-r007-development-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1827,
+          "to": 1827
+        }
+      },
+      {
+        "id": "intrinsic-4",
+        "ref": "result-theorema-egregium",
+        "role": "Invariance result",
+        "narrative": "The Theorema Egregium states that when one curved surface is developed upon another, the measure of curvature at corresponding points remains unchanged. Gauss obtained this by expressing the curvature through the coefficients of the infinitesimal metric and their derivatives.\n",
+        "assertion_refs": [
+          "assertion-r007-egregium-invariance",
+          "assertion-r007-gauss-development"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1827,
+          "to": 1827
+        }
+      },
+      {
+        "id": "intrinsic-5",
+        "ref": "q-r007-intrinsic-geometry",
+        "role": "Later mathematical reading",
+        "narrative": "Gauss's own abstract distinguishes relations that depend on a surface's form in space from relations unchanged when a flexible surface is deformed without extension. Later histories read the 1827 work as foundational for intrinsic surface geometry, while the modern statement that Gaussian curvature is determined by the surface metric is a later mathematical formulation rather than Gauss's own technical vocabulary.\n",
+        "assertion_refs": [
+          "assertion-r007-gauss-deformation-independent",
+          "assertion-r007-gauss-foundational-reading",
+          "assertion-r007-egregium-modern-intrinsic",
+          "assertion-r007-intrinsic-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1827,
+          "to": 1900
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "intrinsic-1",
+        "to": "intrinsic-2",
+        "type": "branches"
+      },
+      {
+        "from": "intrinsic-2",
+        "to": "intrinsic-3",
+        "type": "branches"
+      },
+      {
+        "from": "intrinsic-3",
+        "to": "intrinsic-4",
+        "type": "continues"
+      },
+      {
+        "from": "intrinsic-4",
+        "to": "intrinsic-5",
+        "type": "branches"
+      }
+    ]
   }
 ]
