@@ -3,7 +3,7 @@
   name: Leonhard Euler
   start_year: 1707
   end_year: 1783
-  fields: [analysis]
+  fields: [analysis, geometry]
 - id: person-fourier
   type: Person
   name: Joseph Fourier
