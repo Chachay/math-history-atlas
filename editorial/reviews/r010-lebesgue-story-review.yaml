@@ -1,0 +1,108 @@
+review:
+  story_id: story-lebesgue-integration
+  research_unit_id: R010
+  status: reviewed
+  summary:
+    pass: 12
+    revise: 2
+    weak_evidence: 0
+    reject: 0
+  overall_assessment: >
+    The Story is well grounded in the reviewed R010 canonical assertions and correctly avoids a direct
+    Cantor-to-Borel-to-Lebesgue causal chain or anachronistic identification of the 1901 claims with later
+    named convergence theorems. Two DAG edges, however, misstate the editorial structure established by
+    the accepted research resolution: the set-size line should not appear to branch out of the post-Riemann
+    integration gap, and the limiting-process question is supported as a branch from the 1901 value-band
+    construction rather than as a consequence of the 1902 thesis step.
+findings:
+  - id: sr-r010-story-level
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, field: description}
+    reason: The description accurately bounds the Story to the Riemann boundary, Jordan/Borel set-size machinery, Lebesgue's 1901–1902 construction, and downstream limiting questions.
+    assertion_refs: []
+  - id: sr-r010-step-1
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, step_id: lebesgue-1, field: narrative}
+    reason: The step distinguishes the later integration boundary from Lebesgue's explicit 1901 primitive-function motivation and is supported by the direct R004-to-R010 handoff assertions.
+    assertion_refs: [assertion-r010-riemann-to-lebesgue-question, assertion-r010-riemann-limitation]
+  - id: sr-r010-step-2
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, step_id: lebesgue-2, field: narrative}
+    reason: The narrative explicitly presents Jordan/Borel as a separate late-nineteenth-century line and marks the synthesis as retrospective rather than as a one-way causal consequence of Riemann's problem.
+    assertion_refs: [assertion-r010-jordan-content, assertion-r010-borel-measure, assertion-r010-lines-converge]
+  - id: sr-r010-step-3
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, step_id: lebesgue-3, field: narrative}
+    reason: Lebesgue's stated generalization aim and explicit use of Borel measurable-set language are both historically reviewed and do not require a direct Cantor transmission claim.
+    assertion_refs: [assertion-r010-generalization-aim, assertion-r010-borel-context]
+  - id: sr-r010-step-4
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, step_id: lebesgue-4, field: narrative}
+    reason: The step remains within the reviewed one-dimensional 1901–1902 measure construction and explicitly blocks projection of later abstract measure-space terminology backward.
+    assertion_refs: [assertion-r010-lebesgue-measure]
+  - id: sr-r010-step-5
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, step_id: lebesgue-5, field: narrative}
+    reason: The value-band description is the reviewed historical construction, while the pedagogical Riemann/Lebesgue contrast is qualified as a later explanatory compression rather than substituted for the definition.
+    assertion_refs: [assertion-r010-value-band-integral, assertion-r010-set-size-to-value-band]
+  - id: sr-r010-step-6
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, step_id: lebesgue-6, field: narrative}
+    reason: The 1902 thesis is described as a fuller systematic development without implying that every later measure-theoretic abstraction is already present.
+    assertion_refs: [assertion-r010-thesis-development]
+  - id: sr-r010-step-7
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, step_id: lebesgue-7, field: narrative}
+    reason: The step preserves the medium-certainty 1901 limiting-property claim and explicitly refuses to identify it wholesale with later named convergence theorems.
+    assertion_refs: [assertion-r010-limit-properties, assertion-r010-value-band-to-limits]
+  - id: sr-r010-link-1-2
+    classification: REVISE
+    target: {story_id: story-lebesgue-integration, link: {from: lebesgue-1, to: lebesgue-2}}
+    reason: >
+      The current branches edge makes the Jordan/Borel set-size line look like a downstream branch of the
+      post-Riemann integration gap. That conflicts with the accepted research resolution, which requires the
+      two lines to remain independent until they converge in Lebesgue's construction.
+    assertion_refs: [assertion-r010-lines-converge]
+    proposed_change:
+      action: manual_review
+      value: >
+        Remove lebesgue-1 -> lebesgue-2. Make lebesgue-1 and lebesgue-2 independent predecessors that meet
+        at lebesgue-3, using a convergence relation into lebesgue-3 rather than a branch from one line to the other.
+  - id: sr-r010-link-2-3
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, link: {from: lebesgue-2, to: lebesgue-3}}
+    reason: converges is appropriate for the set-size line meeting Lebesgue's documented 1901 construction.
+    assertion_refs: [assertion-r010-borel-context, assertion-r010-lines-converge]
+  - id: sr-r010-link-3-4
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, link: {from: lebesgue-3, to: lebesgue-4}}
+    reason: The measure construction occurs within the same 1901–1902 development and is directly supported by the reviewed Lebesgue assertions.
+    assertion_refs: [assertion-r010-generalization-aim, assertion-r010-lebesgue-measure]
+  - id: sr-r010-link-4-5
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, link: {from: lebesgue-4, to: lebesgue-5}}
+    reason: continues is supported because measurable-set machinery is used directly in the reviewed value-band integral construction.
+    assertion_refs: [assertion-r010-lebesgue-measure, assertion-r010-value-band-integral]
+  - id: sr-r010-link-5-6
+    classification: PASS
+    target: {story_id: story-lebesgue-integration, link: {from: lebesgue-5, to: lebesgue-6}}
+    reason: The 1902 thesis is a documented fuller development of the 1901 integral, so continues does not rely on chronology alone.
+    assertion_refs: [assertion-r010-value-band-integral, assertion-r010-thesis-development]
+  - id: sr-r010-link-6-7
+    classification: REVISE
+    target: {story_id: story-lebesgue-integration, link: {from: lebesgue-6, to: lebesgue-7}}
+    reason: >
+      The supporting canonical transition for limiting questions starts from the value-band integration question
+      and the 1901 note, not from the 1902 thesis step. Keeping lebesgue-6 -> lebesgue-7 therefore suggests a
+      stronger thesis-to-limit lineage than the accepted evidence establishes.
+    assertion_refs: [assertion-r010-limit-properties, assertion-r010-value-band-to-limits]
+    proposed_change:
+      action: manual_review
+      value: >
+        Replace lebesgue-6 -> lebesgue-7 with lebesgue-5 -> lebesgue-7 as a branches edge, leaving lebesgue-5 ->
+        lebesgue-6 as the separate thesis-development continuation.
+research_gaps:
+  - id: gap-r010-story-cantor-borel-transmission
+    question: What specific historical evidence, if any, supports a direct transmission path from Cantor's 1870–1872 point-set work to Borel's 1898 measurable-set framework and then to Lebesgue?
+    needed_evidence: Primary citations, correspondence, explicit published acknowledgments, or specialist historiography establishing the transmission rather than only later mathematical relatedness.
+sources: []
