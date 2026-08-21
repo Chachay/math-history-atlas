@@ -2,6 +2,8 @@ research_unit_id: R008
 research_gaps:
   - id: gap-r008-heine-cantor-direction
     status: open
+    kind: supplementary
+    originating_unit: R008
     category: documentary_priority
     question: What is the strongest primary documentary evidence for the direction of the Heine–Cantor exchange around the trigonometric-series uniqueness problem, including who proposed the general uniqueness problem and who proposed the finite-exception generalization?
     needed_evidence: Cantor–Heine correspondence where available, Heine's relevant primary passages checked in full, and specialist historiography quoting or locating the documentary record.
@@ -10,6 +12,8 @@ research_gaps:
 
   - id: gap-r008-riemann-schwarz-proof-chain
     status: open
+    kind: supplementary
+    originating_unit: R008
     category: proof_genealogy
     question: Which precise results of Riemann and which Schwarz lemma or correspondence enter Cantor's 1870 uniqueness proof, and what documentary evidence supports that transmission?
     needed_evidence: Proof-level locators in Cantor 1870, Riemann's trigonometric-series work, Schwarz material or correspondence, and specialist historical reconstruction sufficient to identify the actual mathematical dependency.
@@ -18,6 +22,10 @@ research_gaps:
 
   - id: gap-r008-cantor-1872-1874-handoff
     status: open
+    kind: candidate_future_unit
+    originating_unit: R008
+    candidate_id: cantor-cardinality-foundations
+    roadmap_eligibility: post-R010 forest review; R-number unassigned
     category: next_research_spine
     question: What historically documented path connects Cantor's 1872 finite derived-set analysis to his 1873 correspondence and 1874 work on infinite totalities, countability, and the real algebraic numbers?
     needed_evidence: Cantor's 1873 correspondence, the 1874 paper, and specialist historiography distinguishing continuity of research trajectory from retrospective causal compression.
