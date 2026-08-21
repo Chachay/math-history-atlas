@@ -56,10 +56,10 @@
       ref: q-lebesgue-limit-processes
       role: Next question
       narrative: >
-        The 1901 note also announces closure and limiting properties for the enlarged class of summable functions and applies the integral to bounded derivatives. For the Atlas this opens a downstream question about limiting processes, but it does not identify Lebesgue's compressed 1901 claims with the later named convergence theorems.
+        The 1901 note had already announced closure and limiting properties for the enlarged class of summable functions and applied the integral to bounded derivatives. Read after the fuller 1902 development, this opens a downstream Atlas question about limiting processes, without identifying Lebesgue's compressed 1901 claims with the later named convergence theorems.
       assertion_refs: [assertion-r010-limit-properties, assertion-r010-value-band-to-limits]
       perspective: later_interpretation
-      temporal_anchor: {from: 1901, to: null}
+      temporal_anchor: {from: 1902, to: null}
   links:
     - {from: lebesgue-1, to: lebesgue-2, type: branches}
     - {from: lebesgue-2, to: lebesgue-3, type: converges}
