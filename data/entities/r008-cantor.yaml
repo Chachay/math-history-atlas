@@ -4,12 +4,6 @@
   start_year: 1845
   end_year: 1918
   fields: [analysis]
-- id: person-heine
-  type: Person
-  name: Eduard Heine
-  start_year: 1821
-  end_year: 1881
-  fields: [analysis]
 - id: concept-trig-series-uniqueness
   type: Concept
   name: Uniqueness of trigonometric-series representation
