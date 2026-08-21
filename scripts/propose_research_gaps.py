@@ -77,6 +77,13 @@ def _same_gap(proposal_id: str, question: str, existing: dict[str, Any]) -> bool
     return overlap >= 0.5
 
 
+def _candidate_id(proposal_id: str) -> str:
+    value = re.sub(r"^gap-", "", proposal_id.casefold())
+    value = re.sub(r"^r[0-9]+-", "", value)
+    value = re.sub(r"^story-", "", value)
+    return value or "future-research-candidate"
+
+
 def _downstream_hints(unit_id: str, root: Path) -> list[str]:
     hints: list[str] = []
     promotion = _promotion(unit_id, root)
@@ -194,7 +201,7 @@ def build_gap_plan(unit_id: str, root: Path = ROOT) -> dict[str, Any]:
             "registered_gap_id": match.get("id") if match else None,
         }
         if kind == "candidate_future_unit":
-            row["candidate_id"] = re.sub(r"^gap-", "", proposal_id).replace("story-", "")
+            row["candidate_id"] = _candidate_id(proposal_id)
             row["roadmap_eligibility"] = "unassigned; requires current roadmap review"
         proposals.append(row)
 
