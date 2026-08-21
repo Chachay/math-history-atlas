@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       unit_id:
-        description: Research unit ID, e.g. R009
-        required: true
+        description: Optional research unit ID, e.g. R009; inferred from ref when omitted
+        required: false
         type: string
       ref:
         description: Branch/ref containing the research unit artifacts
@@ -16,6 +16,8 @@ on:
         required: true
         type: choice
         options:
+          - advance-research
+          - advance-story
           - status
           - check
           - bind
@@ -44,27 +46,87 @@ jobs:
 
       - run: python -m pip install -r requirements.txt
 
+      - name: Resolve research unit
+        shell: bash
+        env:
+          INPUT_UNIT_ID: ${{ inputs.unit_id }}
+          TARGET_REF: ${{ inputs.ref }}
+        run: |
+          set -euo pipefail
+          unit="${INPUT_UNIT_ID^^}"
+          if [[ -z "$unit" ]]; then
+            if [[ "$TARGET_REF" =~ ([Rr][0-9]{3}) ]]; then
+              unit="${BASH_REMATCH[1]^^}"
+              echo "Inferred research unit $unit from ref $TARGET_REF"
+            else
+              echo "unit_id was omitted and no R### token could be inferred from ref: $TARGET_REF" >&2
+              exit 2
+            fi
+          fi
+          if [[ ! "$unit" =~ ^R[0-9]{3}$ ]]; then
+            echo "Invalid research unit ID: $unit (expected R###)" >&2
+            exit 2
+          fi
+          echo "UNIT_ID=$unit" >> "$GITHUB_ENV"
+          echo "TARGET_REF=$TARGET_REF" >> "$GITHUB_ENV"
+
       - name: Run requested operation
         shell: bash
         env:
-          UNIT_ID: ${{ inputs.unit_id }}
           OPERATION: ${{ inputs.operation }}
         run: |
           set -euo pipefail
           shopt -s nullglob
+
+          check_artifacts() {
+            packets=(research/packets/${UNIT_ID}-*.yaml)
+            reviews=(research/reviews/${UNIT_ID}-*.yaml)
+            if [[ ${#packets[@]} -ne 1 || ${#reviews[@]} -ne 1 ]]; then
+              echo "Expected exactly one packet and review for $UNIT_ID" >&2
+              exit 1
+            fi
+            python -m scripts.check_research_artifact "${packets[0]}"
+            python -m scripts.check_research_artifact "${reviews[0]}"
+          }
+
+          validate_story() {
+            lower="${UNIT_ID,,}"
+            stories=(editorial/stories/${lower}-*.yaml)
+            if [[ ${#stories[@]} -ne 1 ]]; then
+              echo "Expected exactly one Story file for $UNIT_ID" >&2
+              exit 1
+            fi
+            python -m scripts.validate_story_evidence "${stories[0]}"
+          }
+
           case "$OPERATION" in
+            advance-research)
+              echo "== check =="
+              check_artifacts
+              echo "== bind =="
+              python -m scripts.bind_resolution "$UNIT_ID"
+              echo "== verified promotion dry-run =="
+              python -m scripts.promote_verified "$UNIT_ID"
+              echo "== verified promotion apply =="
+              python -m scripts.promote_verified "$UNIT_ID" --apply
+              echo "== canonical plan =="
+              python -m scripts.plan_canonical_promotion "$UNIT_ID"
+              echo "== status =="
+              python -m scripts.research_unit_status "$UNIT_ID"
+              ;;
+            advance-story)
+              echo "== story evidence =="
+              validate_story
+              echo "== gap plan =="
+              python -m scripts.propose_research_gaps "$UNIT_ID"
+              echo "== status =="
+              python -m scripts.research_unit_status "$UNIT_ID"
+              ;;
             status)
               python -m scripts.research_unit_status "$UNIT_ID"
               ;;
             check)
-              packets=(research/packets/${UNIT_ID}-*.yaml)
-              reviews=(research/reviews/${UNIT_ID}-*.yaml)
-              if [[ ${#packets[@]} -ne 1 || ${#reviews[@]} -ne 1 ]]; then
-                echo "Expected exactly one packet and review for $UNIT_ID" >&2
-                exit 1
-              fi
-              python -m scripts.check_research_artifact "${packets[0]}"
-              python -m scripts.check_research_artifact "${reviews[0]}"
+              check_artifacts
               ;;
             bind)
               python -m scripts.bind_resolution "$UNIT_ID"
@@ -80,13 +142,7 @@ jobs:
               python -m scripts.plan_canonical_promotion "$UNIT_ID"
               ;;
             story-evidence)
-              lower="${UNIT_ID,,}"
-              stories=(editorial/stories/${lower}-*.yaml)
-              if [[ ${#stories[@]} -ne 1 ]]; then
-                echo "Expected exactly one Story file for $UNIT_ID" >&2
-                exit 1
-              fi
-              python -m scripts.validate_story_evidence "${stories[0]}"
+              validate_story
               ;;
             gap-plan)
               python -m scripts.propose_research_gaps "$UNIT_ID"
@@ -101,11 +157,9 @@ jobs:
           esac
 
       - name: Commit repository mutations
-        if: inputs.operation == 'bind' || inputs.operation == 'promote-apply' || inputs.operation == 'gap-apply'
+        if: inputs.operation == 'bind' || inputs.operation == 'promote-apply' || inputs.operation == 'gap-apply' || inputs.operation == 'advance-research'
         shell: bash
         env:
-          UNIT_ID: ${{ inputs.unit_id }}
-          TARGET_REF: ${{ inputs.ref }}
           OPERATION: ${{ inputs.operation }}
         run: |
           set -euo pipefail
