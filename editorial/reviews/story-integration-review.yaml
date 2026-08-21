@@ -1,0 +1,53 @@
+review:
+  scope: active-story-integration
+  review_date: '2026-08-20'
+  status: reviewed
+  summary:
+    pass: 6
+    revise: 0
+    weak_evidence: 0
+    reject: 0
+findings:
+  - id: sir-001
+    classification: PASS
+    target: transition-r001-r003-convergence
+    reason: >
+      Both Stories meet at Dirichlet's 1829 convergence result. The transition is bounded to the local
+      convergence episode and does not infer a general causal chain from Fourier to the modern function concept.
+    assertion_refs: [assertion-r001-dirichlet-convergence, assertion-r003-dirichlet-convergence]
+  - id: sir-002
+    classification: PASS
+    target: transition-r002-r003-cauchy-dirichlet
+    reason: >
+      Dirichlet's own 1829 opening supplies unusually direct evidence for the Cauchy-to-Dirichlet local bridge.
+      The edge does not claim that Cauchy's broader rigor program caused Dirichlet's function concept.
+    assertion_refs: [assertion-r003-dirichlet-fourier-cauchy]
+  - id: sir-003
+    classification: PASS
+    target: transition-r001-r003-function-concept
+    reason: >
+      This is explicitly later interpretation and connects an open editorial question in R001 to researched
+      material in R003. It avoids a priority claim or a single-line genealogy.
+    assertion_refs: [assertion-r001-function-concept, assertion-r003-function-historiography]
+  - id: sir-004
+    classification: PASS
+    target: transition-r003-r004-admissibility
+    reason: >
+      R004 explicitly takes up the admissibility problem left open by R003, while both Stories mark the handoff
+      as retrospective. The transition does not project Riemann's criterion backward onto Dirichlet.
+    assertion_refs: [assertion-r003-downstream-admissibility, assertion-r004-admissibility-handoff]
+  - id: sir-005
+    classification: PASS
+    target: no-direct-r002-r004-edge
+    reason: >
+      No direct Cauchy-to-Riemann Story transition is added merely because both concern rigor and limiting
+      processes. The present canonical evidence does not require that genealogy for R004's integration problem.
+    assertion_refs: []
+  - id: sir-006
+    classification: PASS
+    target: story-rigor-parallel-lens
+    reason: >
+      story-rigor is retained as a parallel editorial reading of accepted R002 material. Its same-year shared
+      canonical refs already create Network intersections, so adding a synthetic cross-Story genealogy would
+      overstate what is only a different editorial path through the same evidence.
+    assertion_refs: []
