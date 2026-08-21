@@ -544,6 +544,151 @@
     ]
   },
   {
+    "id": "story-quantified-control",
+    "title": "How precisely must arbitrarily close be controlled?",
+    "steps": [
+      {
+        "id": "quantified-1",
+        "ref": "q-quantified-limit-control",
+        "role": "Question",
+        "narrative": "Nineteenth-century analysts did not begin from one shared modern epsilon-delta definition. Bolzano's and Cauchy's formulations instead provide distinct historical ways of making arbitrarily small change mathematically controllable, so the Atlas treats later quantified syntax as a development to be traced rather than a standard that earlier work either possessed or lacked.\n",
+        "assertion_refs": [
+          "assertion-r005-bolzano-continuity",
+          "assertion-r005-cauchy-handoff"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1817,
+          "to": 1821
+        }
+      },
+      {
+        "id": "quantified-2",
+        "ref": "work-bolzano-1817",
+        "role": "Antecedent",
+        "narrative": "Bolzano's 1817 continuity formulation required the change in a function to become smaller than any prescribed quantity when the increment was taken sufficiently small. This is evidence for quantified smallness before Weierstrass, but not for the later epsilon-delta notation or textbook quantifier syntax.\n",
+        "assertion_refs": [
+          "assertion-r005-bolzano-continuity"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1817,
+          "to": 1817
+        }
+      },
+      {
+        "id": "quantified-3",
+        "ref": "work-cauchy-calcul-1823",
+        "role": "Antecedent",
+        "narrative": "Cauchy's 1823 calculus text used epsilon and delta inside an inequality argument controlling error. The episode shows that the symbols and algebraic control techniques predate Weierstrass, while stopping short of attributing a general modern epsilon-delta definition to Cauchy.\n",
+        "assertion_refs": [
+          "assertion-r005-cauchy-inequality-control"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1823,
+          "to": 1823
+        }
+      },
+      {
+        "id": "quantified-4",
+        "ref": "work-weierstrass-schwarz-notes-1861",
+        "role": "Response",
+        "narrative": "Schwarz's notes from Weierstrass's 1861 lectures record a continuity condition in which a bound on the input increment corresponds to an arbitrarily small allowed change in the function. The evidence is historically important but mediated: these are private student notes known through later scholarship, not a Weierstrass-authored 1861 publication.\n",
+        "assertion_refs": [
+          "assertion-r005-weierstrass-1861-control"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1861,
+          "to": 1861
+        }
+      },
+      {
+        "id": "quantified-5",
+        "ref": "q-uniform-convergence-emergence",
+        "role": "Intersection",
+        "narrative": "The same 1861 teaching environment also contains Weierstrass's early verifiable treatment of convergence at the same rate. This creates a real intersection with the R002 convergence story, but the evidence does not establish that uniform-convergence work caused the quantified formulation of continuity or that a linear Cauchy-to-Weierstrass transmission occurred.\n",
+        "assertion_refs": [
+          "assertion-r005-weierstrass-uniformity",
+          "assertion-r005-continuity-convergence-intersection",
+          "assertion-r005-uniformity-intersection"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1861,
+          "to": 1861
+        }
+      },
+      {
+        "id": "quantified-6",
+        "ref": "q-epsilon-delta-circulation",
+        "role": "Publication",
+        "narrative": "Heine's 1872 function theory provides a printed anchor for explicit small-error and small-increment conditions and for uniform continuity. It demonstrates publication and circulation of these methods, not a single moment at which all epsilon-delta notation became standardized.\n",
+        "assertion_refs": [
+          "assertion-r005-heine-published-control",
+          "assertion-r005-heine-circulation"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1872,
+          "to": 1872
+        }
+      },
+      {
+        "id": "quantified-7",
+        "ref": "q-real-number-completeness",
+        "role": "Remaining gap",
+        "narrative": "More explicit control of limits and continuity does not by itself settle the foundations of the real-number system on which existence and completeness arguments depend. The Atlas therefore leaves completeness as a separate downstream problem rather than treating epsilon-delta language as the completion of rigor.\n",
+        "assertion_refs": [
+          "assertion-r005-completeness-gap"
+        ],
+        "perspective": "modern_abstraction",
+        "temporal_anchor": {
+          "from": 1872,
+          "to": 1880
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "quantified-1",
+        "to": "quantified-2",
+        "type": "continues"
+      },
+      {
+        "from": "quantified-2",
+        "to": "quantified-3",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-3",
+        "to": "quantified-4",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-4",
+        "to": "quantified-5",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-4",
+        "to": "quantified-6",
+        "type": "branches"
+      },
+      {
+        "from": "quantified-5",
+        "to": "quantified-6",
+        "type": "converges"
+      },
+      {
+        "from": "quantified-6",
+        "to": "quantified-7",
+        "type": "branches"
+      }
+    ]
+  },
+  {
     "id": "story-rigor",
     "title": "How can infinity be trusted?",
     "steps": [

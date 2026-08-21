@@ -60,9 +60,10 @@
   },
   {
     "entity": "q-uniform-convergence-emergence",
-    "story_count": 2,
+    "story_count": 3,
     "stories": [
       "story-cauchy-rigor-continuity",
+      "story-quantified-control",
       "story-rigor"
     ]
   },
