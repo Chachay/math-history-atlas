@@ -2,8 +2,11 @@ name: R008 integrity temp
 on:
   push:
     branches: [research/r008-cantor-uniqueness-point-sets]
+  pull_request:
+    branches: [main]
 jobs:
   bind:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
