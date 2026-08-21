@@ -1,0 +1,117 @@
+- id: assertion-r008-heine-uniqueness
+  subject: work-heine-trig-1870
+  predicate: raised_question
+  object: concept-trig-series-uniqueness
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-heine-1870, source-r008-halle-heine]
+  status: historically_reviewed
+- id: assertion-r008-cantor-1870-uniqueness
+  subject: person-cantor
+  predicate: contributed_to
+  object: concept-trig-series-uniqueness
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1870, source-r008-scoville-2012]
+  status: historically_reviewed
+- id: assertion-r008-cantor-1871-finite-exceptions
+  subject: work-cantor-uniqueness-note-1871
+  predicate: generalized
+  object: concept-trig-series-uniqueness
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1871, source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-cantor-1872-exceptional-sets
+  subject: work-cantor-extension-1872
+  predicate: generalized
+  object: concept-exceptional-point-set
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-cantor-derived-set-definition
+  subject: work-cantor-extension-1872
+  predicate: contributed_to
+  object: concept-derived-set
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-exceptional-to-derived
+  subject: concept-exceptional-point-set
+  predicate: contributed_to
+  object: concept-derived-set
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872, source-r008-scoville-2012]
+  status: historically_reviewed
+- id: assertion-r008-1872-uniqueness-theorem
+  subject: work-cantor-extension-1872
+  predicate: contributed_to
+  object: concept-trig-series-uniqueness
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-heine-cantor-context
+  subject: person-heine
+  predicate: contributed_to
+  object: concept-trig-series-uniqueness
+  period: {from: 1870, to: 1870}
+  perspective: later_interpretation
+  certainty: medium
+  sources: [source-r008-dauben-1979, source-r008-halle-heine, source-r008-scoville-2012]
+  status: historically_reviewed
+- id: assertion-r008-analytic-origin-reading
+  subject: work-cantor-extension-1872
+  predicate: contributed_to
+  object: concept-derived-set
+  period: {from: 1872, to: null}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-r008-dauben-1979, source-r008-scoville-2012]
+  status: historically_reviewed
+- id: assertion-r008-modern-uniqueness-language
+  subject: concept-derived-set
+  predicate: contributed_to
+  object: concept-exceptional-point-set
+  period: {from: 1872, to: null}
+  perspective: modern_abstraction
+  certainty: high
+  sources: [source-r008-eom-uniqueness-set, source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-convergence-to-uniqueness-question
+  subject: q-fourier-series-convergence
+  predicate: contributed_to
+  object: q-trig-series-uniqueness
+  period: {from: 1870, to: 1870}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-r008-heine-1870, source-r008-cantor-1870]
+  status: historically_reviewed
+- id: assertion-r008-uniqueness-to-exceptional-question
+  subject: q-trig-series-uniqueness
+  predicate: generalized
+  object: q-exceptional-set-uniqueness
+  period: {from: 1871, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1871, source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-exceptional-to-derived-question
+  subject: q-exceptional-set-uniqueness
+  predicate: contributed_to
+  object: q-derived-set-structure
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed

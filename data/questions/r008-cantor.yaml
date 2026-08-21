@@ -1,0 +1,12 @@
+- id: q-trig-series-uniqueness
+  question: When is a trigonometric-series representation unique?
+  period: {from: 1870, to: null}
+  fields: [analysis]
+- id: q-exceptional-set-uniqueness
+  question: Which exceptional point sets can be tolerated without destroying uniqueness of trigonometric representation?
+  period: {from: 1871, to: null}
+  fields: [analysis]
+- id: q-derived-set-structure
+  question: How can an infinite point set be analyzed by repeatedly passing to its limit points?
+  period: {from: 1872, to: null}
+  fields: [analysis]

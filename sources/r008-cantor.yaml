@@ -1,0 +1,46 @@
+- id: source-r008-heine-1870
+  title: Ueber trigonometrische Reihen
+  author: Eduard Heine
+  year: 1870
+  kind: primary
+  url: http://eudml.org/doc/148121
+- id: source-r008-cantor-1870
+  title: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt
+  author: Georg Cantor
+  year: 1870
+  kind: primary
+  url: https://doi.org/10.1515/crll.1870.72.139
+- id: source-r008-cantor-1871
+  title: "Notiz zu dem Aufsatze: Beweis, dass eine für jeden reellen Werth von x durch eine trigonometrische Reihe gegebene Function f(x) sich nur auf eine einzige Weise in dieser Form darstellen lässt"
+  author: Georg Cantor
+  year: 1871
+  kind: primary
+  url: https://doi.org/10.1515/crll.1871.73.294
+- id: source-r008-cantor-1872
+  title: Ueber die Ausdehnung eines Satzes aus der Theorie der trigonometrischen Reihen
+  author: Georg Cantor
+  year: 1872
+  kind: primary
+  url: https://eudml.org/doc/156562
+- id: source-r008-dauben-1979
+  title: "Georg Cantor: His Mathematics and Philosophy of the Infinite"
+  author: Joseph Warren Dauben
+  year: 1979
+  kind: secondary_specialist
+  url: https://doi.org/10.2307/j.ctv10crfh1
+- id: source-r008-scoville-2012
+  title: Georg Cantor at the Dawn of Point-Set Topology — Background
+  author: Nicholas Scoville
+  year: 2012
+  kind: secondary_history
+  url: https://old.maa.org/press/periodicals/convergence/georg-cantor-at-the-dawn-of-point-set-topology-background
+- id: source-r008-halle-heine
+  title: Heines Untersuchungen zur Theorie trigonometrischer Reihen — Cantors erste Arbeit zur Mengentheorie
+  author: Martin-Luther-Universität Halle-Wittenberg, Fachbereich Mathematik/Informatik
+  kind: institutional_history
+  url: https://disk.mathematik.uni-halle.de/history/heine/index.html
+- id: source-r008-eom-uniqueness-set
+  title: Uniqueness set
+  author: Encyclopedia of Mathematics
+  kind: reference
+  url: https://encyclopediaofmath.org/wiki/Uniqueness_set

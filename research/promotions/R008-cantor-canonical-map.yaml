@@ -1,0 +1,83 @@
+research_unit_id: R008
+packet: research/packets/R008-cantor-uniqueness-point-sets.yaml
+canonical_entities:
+  - canonical_id: person-cantor
+    packet_refs: [{section: entities, id: person-cantor}]
+  - canonical_id: person-heine
+    reused_from: data/entities/r005-epsilon-delta.yaml
+    packet_refs: [{section: entities, id: person-heine}]
+  - canonical_id: person-riemann
+    reused_from: data/entities/core.yaml
+    packet_refs: [{section: entities, id: person-riemann}]
+  - canonical_id: concept-trig-series-uniqueness
+    packet_refs: [{section: entities, id: concept-trig-series-uniqueness}]
+  - canonical_id: concept-exceptional-point-set
+    packet_refs: [{section: entities, id: concept-exceptional-point-set}]
+  - canonical_id: concept-derived-set
+    packet_refs: [{section: entities, id: concept-derived-set}]
+  - canonical_id: work-heine-trig-1870
+    packet_refs: [{section: entities, id: work-heine-trig-1870}]
+  - canonical_id: work-cantor-uniqueness-1870
+    packet_refs: [{section: entities, id: work-cantor-uniqueness-1870}]
+  - canonical_id: work-cantor-uniqueness-note-1871
+    packet_refs: [{section: entities, id: work-cantor-uniqueness-note-1871}]
+  - canonical_id: work-cantor-extension-1872
+    packet_refs: [{section: entities, id: work-cantor-extension-1872}]
+canonical_questions:
+  - canonical_id: q-trig-series-uniqueness
+    packet_refs: [{section: canonical_question_candidates, id: q-trig-series-uniqueness}]
+  - canonical_id: q-exceptional-set-uniqueness
+    packet_refs: [{section: canonical_question_candidates, id: q-exceptional-set-uniqueness}]
+  - canonical_id: q-derived-set-structure
+    packet_refs: [{section: canonical_question_candidates, id: q-derived-set-structure}]
+canonical_assertions:
+  - canonical_id: assertion-r008-heine-uniqueness
+    packet_refs: [{section: assertions, id: r008-a001}]
+  - canonical_id: assertion-r008-cantor-1870-uniqueness
+    packet_refs: [{section: assertions, id: r008-a002}]
+  - canonical_id: assertion-r008-cantor-1871-finite-exceptions
+    packet_refs: [{section: assertions, id: r008-a003}]
+  - canonical_id: assertion-r008-cantor-1872-exceptional-sets
+    packet_refs: [{section: assertions, id: r008-a004}]
+  - canonical_id: assertion-r008-cantor-derived-set-definition
+    packet_refs: [{section: assertions, id: r008-a005}]
+  - canonical_id: assertion-r008-exceptional-to-derived
+    packet_refs: [{section: assertions, id: r008-a006}]
+  - canonical_id: assertion-r008-1872-uniqueness-theorem
+    packet_refs: [{section: assertions, id: r008-a007}]
+  - canonical_id: assertion-r008-heine-cantor-context
+    packet_refs: [{section: assertions, id: r008-a008}]
+  - canonical_id: assertion-r008-analytic-origin-reading
+    packet_refs: [{section: assertions, id: r008-a010}]
+  - canonical_id: assertion-r008-modern-uniqueness-language
+    packet_refs: [{section: assertions, id: r008-a012}]
+  - canonical_id: assertion-r008-convergence-to-uniqueness-question
+    packet_refs: [{section: question_transitions, id: r008-qt002}]
+  - canonical_id: assertion-r008-uniqueness-to-exceptional-question
+    packet_refs: [{section: question_transitions, id: r008-qt003}]
+  - canonical_id: assertion-r008-exceptional-to-derived-question
+    packet_refs: [{section: question_transitions, id: r008-qt004}]
+research_gaps:
+  - packet_assertion: r008-a009
+    status: not_promoted
+    reason: Accepted critic finding hr-r008-riemann-intermediary; proof-level Riemann/Schwarz locator remains missing.
+  - packet_question: q-later-infinite-set-structure
+    status: not_promoted
+    reason: Downstream 1873–1874 handoff is outside R008 and transition r008-qt005 was rejected.
+stories:
+  - story_id: story-r008-uniqueness
+    steps:
+      - step_id: uniqueness-1
+        canonical_assertion_refs: [assertion-r008-convergence-to-uniqueness-question]
+      - step_id: uniqueness-2
+        canonical_assertion_refs: [assertion-r008-heine-uniqueness, assertion-r008-heine-cantor-context]
+      - step_id: uniqueness-3
+        canonical_assertion_refs: [assertion-r008-cantor-1870-uniqueness]
+      - step_id: uniqueness-4
+        canonical_assertion_refs: [assertion-r008-cantor-1871-finite-exceptions, assertion-r008-uniqueness-to-exceptional-question]
+      - step_id: uniqueness-5
+        canonical_assertion_refs: [assertion-r008-cantor-1872-exceptional-sets, assertion-r008-1872-uniqueness-theorem]
+      - step_id: uniqueness-6
+        canonical_assertion_refs: [assertion-r008-cantor-derived-set-definition, assertion-r008-exceptional-to-derived, assertion-r008-exceptional-to-derived-question]
+      - step_id: uniqueness-7
+        canonical_assertion_refs: [assertion-r008-analytic-origin-reading, assertion-r008-modern-uniqueness-language]

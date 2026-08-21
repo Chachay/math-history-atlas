@@ -1,0 +1,346 @@
+review:
+  research_unit_id: R008
+  packet: R008-cantor-uniqueness-point-sets.yaml
+  critic_version: historical-critic-v1
+  review_date: '2026-08-20'
+  summary:
+    pass: 13
+    revise: 2
+    weak_evidence: 2
+    reject: 1
+  overall_assessment: >
+    The packet is historically disciplined on its central mathematical sequence. Cantor's 1870,
+    1871, and 1872 results are separated; the 1872 theorem is stated in Cantor's finite derived-set
+    language rather than by retrojecting U-set or Cantor–Bendixson-rank terminology; and the packet
+    does not equate the 1872 paper with finished transfinite set theory. Five material issues remain
+    before canonical promotion. The broad Riemann intermediary claim lacks a precise proof-level
+    locator. The R003 intersection is presently a modern editorial similarity rather than an evidenced
+    historical encounter. Most importantly, assertion r008-a011 uses the causal predicate
+    `contributed_to` between the 1872 and 1874 works while its own prose denies that causal strength,
+    and transition r008-qt005 reaches beyond the researched unit into a later set-theoretic question
+    that the packet explicitly marks as unresearched. Finally, the Heine publication-year discrepancy
+    should remain bibliographically explicit rather than silently normalized.
+
+findings:
+  - id: hr-r008-heine-chronology
+    reviewed_item:
+      section: chronology
+      match: {date: '1870', event_prefix: 'Heine published'}
+    classification: PASS
+    reason: >
+      The entry correctly makes uniqueness an explicit Heine problem and preserves the finite-exception
+      meaning of "im allgemeinen". It also records the 1869/1870 metadata discrepancy instead of using
+      it to manufacture a precise publication date.
+    evidence:
+      - source_id: src-heine-1870
+        locator: 'J. reine angew. Math. 71, pp. 353–365; especially p. 355'
+        supports: Heine_uniqueness_hypotheses
+      - source_id: src-halle-heine
+        locator: 'section 3'
+        supports: bibliographic_year_and_im_allgemeinen
+
+  - id: hr-r008-cantor-1870
+    reviewed_item:
+      section: chronology
+      match: {date: '1870', event_prefix: 'Cantor proved'}
+    classification: PASS
+    reason: >
+      The statement matches the title and mathematical scope of Cantor's 1870 uniqueness paper and
+      does not add uniform convergence, exceptional sets, or later U-set language.
+    evidence:
+      - source_id: src-cantor-1870-uniqueness
+        locator: 'pp. 139–142'
+        supports: everywhere_uniqueness
+
+  - id: hr-r008-cantor-1871
+    reviewed_item:
+      section: chronology
+      match: {date: '1871'}
+    classification: PASS
+    reason: >
+      The finite-exception extension is supported both by the 1871 note and Cantor's own retrospective
+      opening paragraph in 1872. This is stronger than a later reconstruction.
+    evidence:
+      - source_id: src-cantor-1871-note
+        locator: 'pp. 294–296'
+        supports: finite_exception_extension
+      - source_id: src-cantor-1872-extension
+        locator: 'opening paragraph'
+        supports: Cantor_retrospective_summary_of_1871_result
+
+  - id: hr-r008-cantor-1872-derived-set
+    reviewed_item:
+      section: chronology
+      match: {date: '1872', event_prefix: 'Cantor extended'}
+    classification: PASS
+    reason: >
+      The packet closely follows Cantor's §2–§3 formulation: P prime is the set of limit points, the
+      operation is finitely iterated, and the theorem assumes that a finite iterate consists of finitely
+      many points and thus has no further derived set. The modern finite-rank gloss is correctly excluded
+      from the historical wording.
+    evidence:
+      - source_id: src-cantor-1872-extension
+        locator: '§2 and §3'
+        supports: derived_set_definition_and_uniqueness_theorem
+
+  - id: hr-r008-real-number-preparation
+    reviewed_item:
+      section: chronology
+      match: {date: '1872', event_prefix: 'The same paper develops'}
+    classification: PASS
+    reason: >
+      Cantor's opening states that preparatory definitions are needed for the intended extension, and
+      §1 supplies the number construction. The packet does not claim that the construction arose as a
+      general foundations project independent of the paper's immediate purpose.
+    evidence:
+      - source_id: src-cantor-1872-extension
+        locator: 'opening paragraph and §1'
+        supports: immediate_role_of_real_number_construction
+
+  - id: hr-r008-heine-cantor-direction
+    reviewed_item: {section: assertions, id: r008-a008}
+    classification: PASS
+    reason: >
+      The assertion is deliberately weaker than the familiar one-way story. Specialist historiography
+      supports Heine's influence on Cantor's shift into the uniqueness problem, while other accounts of
+      the detailed exchange assign particular generalizing suggestions to Cantor. The packet therefore
+      correctly leaves the micro-direction open.
+    evidence:
+      - source_id: src-dauben-1979
+        locator: 'chapter 2'
+        supports: Heine_Cantor_Halle_context
+      - source_id: src-bottazzini-2018
+        locator: 'pp. 179–191, abstract and discussion of 1870–1872 papers'
+        supports: Heine_influence_and_Riemann_background
+    sources_added: [src-bottazzini-2018]
+
+  - id: hr-r008-a001
+    reviewed_item: {section: assertions, id: r008-a001}
+    classification: PASS
+    reason: >
+      Heine is given an intermediary role rather than sole priority for uniqueness, and the hypotheses
+      are stated at the historical level of his paper.
+    evidence:
+      - source_id: src-heine-1870
+        locator: 'p. 355 and surrounding discussion'
+        supports: Heine_uniqueness_result
+
+  - id: hr-r008-a002
+    reviewed_item: {section: assertions, id: r008-a002}
+    classification: PASS
+    reason: >
+      The assertion is bounded to Cantor's 1870 improvement in uniqueness and does not claim invention
+      of the whole uniqueness problem.
+    evidence:
+      - source_id: src-cantor-1870-uniqueness
+        locator: 'pp. 139–142'
+        supports: removal_of_uniform_convergence_requirement
+
+  - id: hr-r008-a003-a007-sequence
+    reviewed_item:
+      section: assertions
+      ids: [r008-a003, r008-a004, r008-a005, r008-a006, r008-a007]
+    classification: PASS
+    reason: >
+      These assertions are mutually consistent with Cantor's own 1872 opening and §§2–3: finite
+      exceptional values precede the extension to certain infinite point sets, and derived sets are
+      introduced as the structure needed to state and prove that extension. No later topological
+      terminology is attributed to Cantor.
+    evidence:
+      - source_id: src-cantor-1872-extension
+        locator: 'opening paragraph and §§2–3'
+        supports: finite_to_infinite_exception_and_derived_sets
+
+  - id: hr-r008-riemann-intermediary
+    reviewed_item: {section: assertions, id: r008-a009}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      The broad statement is historically plausible and supported by institutional/specialist summaries,
+      but the packet itself acknowledges that it has not identified the exact Riemann proposition or
+      Schwarz step used in Cantor's 1870 proof. A canonical `contributed_to` edge from Riemann to the
+      uniqueness concept would be stronger than the current locator supports.
+    needed_evidence: >
+      A specialist or primary locator tying Riemann's formal second-integral machinery and, where relevant,
+      Schwarz's lemma directly to Cantor's proof.
+    target:
+      section: assertions
+      id: r008-a009
+    proposed_change:
+      action: manual_review
+      reason: >
+        Keep Riemann as researched background/intermediary, but do not promote this assertion as a
+        canonical `contributed_to` edge until the proof-level locator is supplied.
+    evidence:
+      - source_id: src-halle-heine
+        locator: 'section 3'
+        supports: Riemann_as_background_to_Heine
+      - source_id: src-scoville-2012
+        locator: 'background section'
+        supports: Riemannian_method_in_Heine_Cantor_setting
+
+  - id: hr-r008-a010
+    reviewed_item: {section: assertions, id: r008-a010}
+    classification: PASS
+    reason: >
+      The assertion is explicitly later interpretation and stops at a sustained investigation of point
+      sets. Dauben's warning prevents it from being inflated into the claim that transfinite set theory
+      was already present in 1872.
+    evidence:
+      - source_id: src-dauben-1979
+        locator: 'chapter 2 and opening of chapter 3'
+        supports: analytic_origin_but_not_immediate_transfinite_theory
+
+  - id: hr-r008-a011-predicate
+    reviewed_item: {section: assertions, id: r008-a011}
+    classification: REVISE
+    severity: high
+    reason: >
+      The object-level prose says only that the 1872 and 1874 works belong to a developing trajectory and
+      expressly denies a direct causal inference, but the machine predicate is `contributed_to`. That
+      predicate would encode precisely the stronger causal/historical edge the prose is trying to avoid.
+    target:
+      section: assertions
+      id: r008-a011
+    proposed_change:
+      action: remove
+    evidence:
+      - source_id: src-dauben-1979
+        locator: 'opening of chapter 3'
+        supports: transfinite_set_theory_did_not_follow_immediately_from_1872
+    needed_evidence: >
+      A later bounded unit on Cantor's 1873 correspondence and 1874 paper could support a more precise
+      historical transition. R008 should retain the distinction as chronology/uncertainty rather than a
+      canonical causal predicate.
+
+  - id: hr-r008-modern-terminology
+    reviewed_item: {section: assertions, id: r008-a012}
+    classification: PASS
+    reason: >
+      The assertion is explicitly modern_abstraction and is used to prohibit, not encourage, retrojection.
+      It correctly separates modern U-set/Cantor–Bendixson language from Cantor's 1872 terms.
+    evidence:
+      - source_id: src-eom-uniqueness-set
+        locator: 'definition and historical note'
+        supports: modern_U_set_terminology
+      - source_id: src-cantor-1872-extension
+        locator: '§2'
+        supports: historical_derived_set_vocabulary
+
+  - id: hr-r008-qt001-qt004
+    reviewed_item:
+      section: question_transitions
+      ids: [r008-qt001, r008-qt002, r008-qt003, r008-qt004]
+    classification: PASS
+    reason: >
+      The first two transitions are correctly marked later_interpretation because they organize distinct
+      representation/convergence/uniqueness questions editorially. The 1870→1871→1872 move from uniqueness
+      to exceptional-set structure is directly documented by Cantor's own papers, so qt003 and qt004 can
+      remain historical.
+    evidence:
+      - source_id: src-cantor-1870-uniqueness
+        locator: 'pp. 139–142'
+        supports: uniqueness_problem
+      - source_id: src-cantor-1871-note
+        locator: 'pp. 294–296'
+        supports: finite_exception_problem
+      - source_id: src-cantor-1872-extension
+        locator: 'opening paragraph and §§2–3'
+        supports: infinite_exception_to_derived_set_transition
+
+  - id: hr-r008-qt005-scope
+    reviewed_item: {section: question_transitions, id: r008-qt005}
+    classification: REJECT
+    severity: high
+    reason: >
+      The transition terminates in q-later-infinite-set-structure, which the packet itself marks as a
+      downstream handoff not researched for canonical promotion. Dauben supports a warning against an
+      immediate 1872→transfinite-set-theory story, not a positive canonical question edge with the requested
+      historical specificity. Keeping the edge would turn a boundary note into an accepted transition.
+    target:
+      section: question_transitions
+      id: r008-qt005
+    proposed_change:
+      action: remove
+    evidence:
+      - source_id: src-dauben-1979
+        locator: 'opening of chapter 3'
+        supports: discontinuity_between_1872_and_later_transfinite_theory
+    needed_evidence: >
+      Research the 1873–1874 stage separately before adding a canonical transition beyond derived-set
+      structure.
+
+  - id: hr-r008-r003-intersection
+    reviewed_item: {section: intersection_candidates, id: r008-i002}
+    classification: WEAK_EVIDENCE
+    severity: medium
+    reason: >
+      The packet accurately calls the R003 connection conceptual, but an Atlas Story intersection should
+      not be treated as historical merely because both concern admissibility of functions/representations.
+      No source here demonstrates a specific Dirichlet-function-concept → Cantor-uniqueness transmission.
+    target:
+      section: intersection_candidates
+      id: r008-i002
+    proposed_change:
+      action: replace_fields
+      fields:
+        significance: >
+          R003 and R008 can intersect in the Network as two reviewed questions about the legitimacy and
+          determination of trigonometric representation, but no direct historical transition from the
+          Dirichlet admissibility question to Cantor's uniqueness work is asserted in R008.
+    evidence:
+      - source_id: src-heine-1870
+        locator: 'pp. 353–365'
+        supports: direct_Heine_trigonometric_series_context
+    needed_evidence: >
+      A specific source connecting Cantor's uniqueness agenda to Dirichlet's admissibility/function-concept
+      problem would be required for a stronger Story link.
+
+  - id: hr-r008-heine-year
+    reviewed_item:
+      section: sources
+      id: src-heine-1870
+    classification: REVISE
+    severity: low
+    reason: >
+      The source record chooses 1870 while EuDML metadata says 1869. The packet note correctly records this,
+      but persistent source data should make the date type explicit so future promotion does not look like a
+      silent correction of the repository metadata.
+    target:
+      section: sources
+      id: src-heine-1870
+    proposed_change:
+      action: replace_fields
+      fields:
+        year: 1870
+        notes: >
+          Journal issue/standard citation year 1870; EuDML metadata displays 1869. Preserve both facts and
+          do not infer a more precise appearance date without bibliographic evidence.
+    evidence:
+      - source_id: src-heine-1870
+        locator: 'EuDML bibliographic record'
+        supports: alternate_1869_metadata
+      - source_id: src-halle-heine
+        locator: 'publication list and section 3'
+        supports: standard_1870_citation
+
+research_gaps:
+  - id: gap-r008-heine-cantor-exchange
+    question: What primary evidence fixes the detailed direction of suggestions exchanged by Heine and Cantor around the uniqueness generalizations?
+    needed_evidence: Heine p. 355 in full, Cantor/Heine correspondence, or specialist quotation of the relevant letters.
+  - id: gap-r008-riemann-schwarz-proof-chain
+    question: Which precise Riemann result and Schwarz lemma enter Cantor's 1870 proof?
+    needed_evidence: Proof-level primary or specialist locators.
+  - id: gap-r008-post-1872-handoff
+    question: What evidence supports the transition from the 1872 finite derived-set analysis to Cantor's 1874 and later theory of infinite sets?
+    needed_evidence: Cantor's 1873 correspondence, 1874 paper, and specialist historiography in a later bounded unit.
+
+sources:
+  - id: src-bottazzini-2018
+    type: secondary_specialist
+    author: Umberto Bottazzini
+    title: All'origine della teoria degli insiemi di Cantor
+    publication: Matematica, Cultura e Società. Rivista dell'Unione Matematica Italiana 3(3), pp. 179–191
+    year: 2018
+    url: http://eudml.org/doc/294068
+    locator: 'pp. 179–191; abstract and discussion of the 1870–1872 uniqueness papers'

@@ -33,6 +33,14 @@ Purpose:
 
 This is the first intended route toward Foundations/Set-theoretic questions, but it is not yet a full unit on cardinality or transfinite arithmetic.
 
+R008 leaves three explicit follow-ups registered in `research/gaps/R008-cantor-followups.yaml`:
+
+- reconstruct the direction of the Heine–Cantor exchange without imposing a one-way influence claim;
+- identify the proof-level Riemann/Schwarz chain entering Cantor's 1870 uniqueness proof before promoting a direct historical edge;
+- research the 1872 → 1873–1874 handoff to countability, infinite totalities, and the real algebraic numbers as a possible future Cantor/cardinality unit.
+
+The first two are supplementary research gaps. The third is a candidate research spine, but **must not be assigned an R-number before the forest-level review after R010**.
+
 ### R009 — Dedekind / ideals and factorization
 
 Return to Algebra, but through arithmetic structure rather than solvability.
@@ -91,6 +99,7 @@ After R010, perform a forest-level review before assigning R011:
 - Is Geometry still too thin?
 - Does Algebra need abstraction/Noether next?
 - Is the Cantor branch ready for cardinality/foundations?
+- Specifically, is the registered R008 1872 → 1873–1874 handoff mature enough to become the next Cantor/cardinality research unit?
 - Should probability now enter through measure?
 - Is it time to backfill the early Kepler–Galileo–Newton / mechanics root?
 - Is a mathematical-physics/Heaviside branch now structurally useful?
