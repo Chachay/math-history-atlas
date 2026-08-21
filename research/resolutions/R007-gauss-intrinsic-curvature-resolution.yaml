@@ -1,0 +1,49 @@
+research_unit_id: R007
+packet: R007-gauss-intrinsic-curvature.yaml
+review: R007-gauss-intrinsic-curvature-review.yaml
+decisions:
+- review_key: finding:hc-r007-001
+  kind: chronology
+  item_id: hc-r007-001
+  critic_classification: REVISE
+  decision: accept_critic
+  note: >
+    Accepted. Correct Gauss's curvature-definition ratio to spherical-image area divided by
+    corresponding surface-element area, as stated in the 1827 memoir.
+- review_key: finding:hc-r007-009
+  kind: assertions
+  item_id: hc-r007-009
+  critic_classification: REVISE
+  decision: accept_critic
+  note: >
+    Accepted. Replace the evaluative "decisive step" wording with a precisely attributed
+    later-historiographical interpretation and retain the distinction from Gauss's own vocabulary.
+- review_key: finding:hc-r007-010
+  kind: assertions
+  item_id: hc-r007-010
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: >
+    Accepted with caution. Retain geodesy and surveying only as medium-certainty historical
+    context. Do not promote causal wording such as "geodesy motivated" or "surveying led to"
+    without stronger documentary evidence.
+- review_key: finding:hc-r007-015
+  kind: question_transitions
+  item_id: hc-r007-015
+  critic_classification: REVISE
+  decision: accept_critic
+  note: >
+    Accepted. Recast the transition non-causally: Gauss's applicability problem and metric
+    expression of curvature meet in the Theorema Egregium; do not imply that the curvature
+    formula historically generated the applicability question.
+- review_key: finding:hc-r007-017
+  kind: question_transitions
+  item_id: hc-r007-017
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: >
+    Accepted with the gap preserved. Retain Gauss-to-Riemann only as later interpretation/open
+    path. Do not create a direct historical influence or Story continues edge without additional
+    transmission evidence.
+resolution_date: '2026-08-21'
+resolution_status: human_approved_pending_integrity_binding
