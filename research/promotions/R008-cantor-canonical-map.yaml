@@ -4,6 +4,7 @@ canonical_entities:
   - canonical_id: person-cantor
     packet_refs: [{section: entities, id: person-cantor}]
   - canonical_id: person-heine
+    reused_from: data/entities/r005-epsilon-delta.yaml
     packet_refs: [{section: entities, id: person-heine}]
   - canonical_id: person-riemann
     reused_from: data/entities/core.yaml
