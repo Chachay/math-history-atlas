@@ -1,0 +1,571 @@
+research_unit:
+  id: R005
+  title: Weierstrass and quantified control of limits — continuity, convergence, and ε–δ language
+  period:
+    approximate_start: 1817
+    approximate_end: 1886
+    core_period: 1840–1880
+  scope_summary: >
+    Investigation of the nineteenth-century move from verbal and infinitesimal descriptions of
+    arbitrarily small change toward explicit quantified control by inequalities and variable bounds.
+    The packet treats Bolzano and Cauchy as antecedents, Weierstrass's lecture tradition as a central
+    but textually mediated development, and Heine as an important published formulation. It tests
+    rather than assumes a single-inventor account of epsilon-delta rigor. Lecture date, manuscript-note
+    date, publication date, and later edited-publication date are kept distinct. Real-number completeness
+    and twentieth-century formalism remain downstream questions rather than being absorbed into R005.
+  research_status: researched
+  editorial_status: not_accepted
+  generated_date: '2026-08-20'
+
+research_questions:
+  - id: q001
+    question: What mathematical work was explicit control by inequalities and variable bounds doing in Weierstrass's analysis?
+  - id: q002
+    question: What evidence survives for the chronology and wording of quantified continuity and convergence formulations in Weierstrass's lectures?
+  - id: q003
+    question: How should Bolzano's and Cauchy's earlier formulations be compared with later epsilon-delta language without rewriting them as modern definitions?
+  - id: q004
+    question: What role did Heine and other intermediaries play in moving quantified formulations into published function theory?
+  - id: q005
+    question: When did epsilon and delta become stable notation rather than isolated symbols or retrospective modernization?
+  - id: q006
+    question: How does quantified local control intersect historically with the stronger convergence control already represented in R002?
+  - id: q007
+    question: How much of the phrase arithmetization of analysis is contemporary program and how much is later historiography?
+  - id: q008
+    question: What foundational question remains once limit and continuity statements receive more explicit quantified control?
+
+entities:
+  - id: person-bolzano
+    type: Person
+    canonical_name: Bernard Bolzano
+    birth_year: 1781
+    death_year: 1848
+  - id: person-cauchy
+    type: Person
+    canonical_name: Augustin-Louis Cauchy
+    birth_year: 1789
+    death_year: 1857
+  - id: person-weierstrass
+    type: Person
+    canonical_name: Karl Weierstrass
+    birth_year: 1815
+    death_year: 1897
+  - id: person-heine
+    type: Person
+    canonical_name: Eduard Heine
+    birth_year: 1821
+    death_year: 1881
+  - id: concept-limit
+    type: Concept
+    canonical_name: Limit
+  - id: concept-continuity
+    type: Concept
+    canonical_name: Continuity
+  - id: concept-convergence
+    type: Concept
+    canonical_name: Convergence
+  - id: concept-uniform-convergence
+    type: Concept
+    canonical_name: Uniform convergence
+  - id: concept-infinitesimal
+    type: Concept
+    canonical_name: Infinitesimal quantity
+  - id: concept-quantified-control
+    type: Concept
+    canonical_name: Quantified control of variation
+  - id: work-bolzano-1817
+    type: Work
+    canonical_name: Rein analytischer Beweis des Lehrsatzes, dass zwischen je zwey Werthen, die ein entgegengesetztes Resultat gewähren, wenigstens eine reelle Wurzel der Gleichung liege
+    publication_year: 1817
+  - id: work-cauchy-cours
+    type: Work
+    canonical_name: Cours d'Analyse
+    publication_year: 1821
+  - id: work-cauchy-calcul-1823
+    type: Work
+    canonical_name: Résumé des leçons données à l'École royale polytechnique sur le calcul infinitésimal
+    publication_year: 1823
+  - id: work-weierstrass-schwarz-notes-1861
+    type: Work
+    canonical_name: H. A. Schwarz's notes from Weierstrass's 1861 Differentialrechnung lectures
+    lecture_year: 1861
+    note_date: 1861
+    publication_note: Student notes later reproduced and discussed by historians; not a Weierstrass-authored publication.
+  - id: work-heine-functionenlehre-1872
+    type: Work
+    canonical_name: Die Elemente der Functionenlehre
+    publication_year: 1872
+
+chronology:
+  - date: '1817'
+    date_type: publication
+    event: >
+      Bolzano publishes a definition of continuity using the requirement that the change
+      f(x+ω)-f(x) can be made smaller than any given quantity when ω is taken sufficiently small.
+    perspective: historical
+    certainty: high
+    sources: [src-bolzano-1817, src-rusnock-sebestik-2019]
+    uncertainty: >
+      The formulation is historically important quantified-smallness language, but it does not use
+      epsilon-delta notation and should not be silently rewritten in the modern nested-quantifier syntax.
+
+  - date: '1821'
+    date_type: publication
+    event: >
+      Cauchy's Cours d'Analyse defines limit, infinitesimal quantity, and continuity in the language
+      of variable quantities and infinitesimal increments.
+    perspective: historical
+    certainty: high
+    sources: [src-cauchy-1821, src-grabiner-1983]
+    uncertainty: >
+      Later epsilon-delta paraphrases of Cauchy's continuity definition are useful mathematically but
+      are not Cauchy's own 1821 wording.
+
+  - date: '1823'
+    date_type: publication
+    event: >
+      In his lessons on infinitesimal calculus Cauchy uses epsilon and delta in inequality-based error
+      control within a proof, furnishing evidence that such symbols and techniques predate Weierstrass.
+    perspective: historical
+    certainty: high
+    sources: [src-cauchy-1823, src-grabiner-1983, src-sinkevich-2016]
+    uncertainty: >
+      This is evidence for an inequality technique in a particular argument, not evidence that Cauchy
+      stated the modern epsilon-delta definition of limit or continuity as a general definition.
+
+  - date: '1861'
+    date_type: lecture_and_student_notes
+    event: >
+      H. A. Schwarz records Weierstrass's Differentialrechnung lectures at the Königliches
+      Gewerbeinstitut in Berlin. The surviving notes contain an explicit bound δ on the increment h
+      corresponding to an arbitrarily small ε in the discussion of continuity, and the same 1861
+      teaching also contains Weierstrass's earliest verifiable treatment of convergence at the same rate.
+    perspective: historical
+    certainty: medium
+    sources: [src-sinkevich-2016, src-viertel-2021]
+    uncertainty: >
+      The evidence is mediated by a student's private notes rather than a Weierstrass-authored or
+      Weierstrass-supervised publication. The date is therefore a lecture/note date, not a publication date.
+
+  - date: '1870-1871'
+    date_type: lecture_course
+    event: >
+      Surviving lecture-note evidence shows Weierstrass using gleichmäßig for the convergence concept
+      later organized as uniform convergence, replacing his earlier language of convergence at the same rate.
+    perspective: historical
+    certainty: high
+    sources: [src-viertel-2021]
+    uncertainty: >
+      Viertel stresses that different lecture-note formulations correspond variously to uniform convergence
+      and to a uniform Cauchy condition; later terminology should not flatten those distinctions.
+
+  - date: '1872'
+    date_type: publication
+    event: >
+      Heine publishes Die Elemente der Functionenlehre, including a pointwise continuity condition in
+      explicit small-error/small-increment form and a definition of uniform continuity in epsilon-delta terms.
+    perspective: historical
+    certainty: high
+    sources: [src-heine-1872, src-sinkevich-2016]
+    uncertainty: >
+      Heine himself states that Weierstrass's principles circulated through lectures, oral communication,
+      and manuscript copies without having been published under Weierstrass's supervision. This supports
+      circulation but does not by itself establish a unique line of conceptual priority for every definition.
+
+  - date: '1894'
+    date_type: later_edited_publication
+    event: >
+      Weierstrass's 1841 paper Zur Theorie der Potenzreihen appears in his collected works with language
+      associated with uniform convergence, but modern source criticism finds strong indications that its
+      terminology and notation were revised later.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-viertel-2021]
+    uncertainty: >
+      The 1841 signature date must not be treated automatically as the date of the wording printed in 1894.
+
+assertions:
+  - id: r005-a001
+    subject: work-bolzano-1817
+    predicate: contributed_to
+    object: concept-continuity
+    statement: >
+      Bolzano's 1817 continuity definition controls the change of a function by requiring it to become
+      smaller than any prescribed quantity when an increment ω is taken sufficiently small; this is an
+      antecedent of quantified control but is expressed in Bolzano's own variable-quantity language.
+    perspective: historical
+    certainty: high
+    sources: [src-bolzano-1817, src-rusnock-sebestik-2019]
+    uncertainty: >
+      Calling this simply the modern epsilon-delta definition would erase differences in notation,
+      quantifier presentation, and Bolzano's theory of quantities.
+
+  - id: r005-a002
+    subject: work-cauchy-cours
+    predicate: contributed_to
+    object: concept-continuity
+    statement: >
+      Cauchy's 1821 definition makes continuity depend on an infinitesimal increment of the independent
+      variable producing an infinitesimal change in the function, within his theory of variable quantities.
+    perspective: historical
+    certainty: high
+    sources: [src-cauchy-1821, src-grabiner-1983]
+    uncertainty: >
+      The assertion records Cauchy's language rather than treating infinitesimals as evidence that he
+      misunderstood limits or replacing his wording with a twentieth-century epsilon-delta formula.
+
+  - id: r005-a003
+    subject: work-cauchy-calcul-1823
+    predicate: contributed_to
+    object: concept-quantified-control
+    statement: >
+      Cauchy's 1823 calculus text contains an inequality argument using epsilon and delta to express
+      controllably small error, showing that epsilon/delta symbols and inequality-based proof techniques
+      were in use before Weierstrass's Berlin lectures.
+    perspective: historical
+    certainty: high
+    sources: [src-cauchy-1823, src-grabiner-1983, src-sinkevich-2016]
+    uncertainty: >
+      This does not establish that Cauchy gave a general modern epsilon-delta definition, nor that his δ
+      was systematically presented as depending on an arbitrarily prescribed ε.
+
+  - id: r005-a004
+    subject: work-weierstrass-schwarz-notes-1861
+    predicate: contributed_to
+    object: concept-quantified-control
+    statement: >
+      Schwarz's notes from Weierstrass's 1861 Differentialrechnung lectures record a continuity formulation
+      in which a bound δ is chosen for the increment h so that the corresponding change of the function is
+      smaller than an arbitrarily small ε.
+    perspective: historical
+    certainty: medium
+    sources: [src-sinkevich-2016]
+    uncertainty: >
+      The mathematical wording is reported through a later scholarly transcription of private student notes;
+      this packet therefore avoids the stronger claim that a Weierstrass-authored 1861 publication contains
+      the modern textbook definition.
+
+  - id: r005-a005
+    subject: person-weierstrass
+    predicate: contributed_to
+    object: concept-uniform-convergence
+    statement: >
+      In surviving 1861 lecture notes Weierstrass introduced convergence 'at the same rate' in the context
+      of controlling infinite series, continuity, and termwise differentiation, providing an early verifiable
+      branch of the development later organized as uniform convergence.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-viertel-2021]
+    uncertainty: >
+      Viertel distinguishes formulations that correspond to uniform convergence from formulations closer
+      to a uniform Cauchy condition; the modern concept label is therefore retrospective.
+
+  - id: r005-a006
+    subject: work-weierstrass-schwarz-notes-1861
+    predicate: contributed_to
+    object: concept-continuity
+    statement: >
+      The same 1861 lecture-note evidence places quantified local control of continuity and stronger
+      convergence control within Weierstrass's teaching environment, but it does not establish that one
+      of these developments historically caused the other.
+    perspective: later_interpretation
+    certainty: medium
+    sources: [src-sinkevich-2016, src-viertel-2021]
+    uncertainty: >
+      The conjunction is a documented intersection in one lecture tradition; causal language such as
+      'uniform convergence produced epsilon-delta analysis' is not supported.
+
+  - id: r005-a007
+    subject: work-heine-functionenlehre-1872
+    predicate: contributed_to
+    object: concept-quantified-control
+    statement: >
+      Heine's 1872 published function theory states pointwise continuity using an arbitrarily small positive
+      error and a corresponding positive bound on the increment, and also formulates uniform continuity
+      in epsilon-delta terms.
+    perspective: historical
+    certainty: high
+    sources: [src-heine-1872, src-sinkevich-2016]
+    uncertainty: >
+      This establishes a published formulation and circulation point, not a claim that Heine alone
+      standardized all later epsilon-delta notation.
+
+  - id: r005-a008
+    subject: person-weierstrass
+    predicate: contributed_to
+    object: concept-quantified-control
+    statement: >
+      The historically defensible role of Weierstrass is not a single published invention event but a
+      sustained lecture-based development of explicit control conditions whose surviving formulations
+      can be traced from 1861 and whose principles circulated among students and colleagues.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-sinkevich-2016, src-viertel-2021, src-heine-1872]
+    uncertainty: >
+      Priority depends on what is being dated: isolated symbols, inequality proof practice, a quantified
+      definition, a lecture formulation, or a published formulation.
+
+  - id: r005-a009
+    subject: person-weierstrass
+    predicate: contributed_to
+    object: concept-limit
+    statement: >
+      Later historiography associates Weierstrass's Berlin teaching with the systematic epsilon-delta
+      formulation of limit and continuity, but the evidence used for the 1861 date is lecture-note evidence
+      and should not be converted into a claim about a uniquely identifiable 1861 publication.
+    perspective: later_interpretation
+    certainty: medium
+    sources: [src-sinkevich-2016]
+    uncertainty: >
+      A stronger priority claim requires direct specialist treatment of the Schwarz manuscript/transcription
+      and competing earlier formulations, not merely a modern textbook genealogy.
+
+  - id: r005-a010
+    subject: work-weierstrass-schwarz-notes-1861
+    predicate: contributed_to
+    object: q-uniform-convergence-emergence
+    statement: >
+      Weierstrass's 1861 lecture tradition provides a genuine intersection with the R002 question about
+      stronger convergence control because the same-rate condition is introduced while treating infinite
+      series and operations on their sums.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-viertel-2021]
+    uncertainty: >
+      This intersection does not support a linear Cauchy-to-Weierstrass transmission: Viertel reports no
+      known explicit Weierstrass reference in this context to Cauchy's 1821/1853 theorem or to Seidel and Stokes.
+
+question_transitions:
+  - id: r005-qt001
+    from_question: q-cauchy-rigor
+    to_question: q-quantified-limit-control
+    relation: >
+      The Atlas can retrospectively distinguish Cauchy's variable-quantity/infinitesimal framework from the
+      later question of how smallness is to be controlled by explicit nested bounds.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-cauchy-1821, src-grabiner-1983, src-sinkevich-2016]
+    note: >
+      This is a historiographical comparison, not evidence that Cauchy himself posed a future Weierstrassian
+      epsilon-delta problem.
+
+  - id: r005-qt002
+    from_question: q-uniform-convergence-emergence
+    to_question: q-quantified-limit-control
+    relation: >
+      Weierstrass's 1861 teaching makes stronger convergence control and quantified local variation intersect
+      in the same lecture environment, while the evidence does not establish that the former caused the latter.
+    perspective: later_interpretation
+    certainty: medium
+    sources: [src-viertel-2021, src-sinkevich-2016]
+    note: >
+      This is deliberately weaker than a 'uniform convergence motivated epsilon-delta analysis' claim.
+
+  - id: r005-qt003
+    from_question: q-quantified-limit-control
+    to_question: q-epsilon-delta-circulation
+    relation: >
+      The historical problem shifts from identifying quantified formulations in lecture notes to tracing how
+      such formulations entered published function theory and became reproducible conventions.
+    perspective: later_interpretation
+    certainty: high
+    sources: [src-heine-1872, src-sinkevich-2016]
+    note: >
+      Heine's 1872 publication provides a concrete publication anchor, but 'standardization' remains a broader
+      process and is not assigned to one text.
+
+  - id: r005-qt004
+    from_question: q-epsilon-delta-circulation
+    to_question: q-real-number-completeness
+    relation: >
+      Explicit control of limits and continuity does not by itself settle what guarantees existence and
+      completeness of the underlying real-number system, leaving a separate foundational question.
+    perspective: modern_abstraction
+    certainty: high
+    sources: [src-rusnock-sebestik-2019, src-sinkevich-2016]
+    note: >
+      This is a bounded downstream handoff, not a claim that epsilon-delta notation historically caused
+      Dedekind's, Cantor's, or Weierstrass's constructions of the real numbers.
+
+intersection_candidates:
+  - id: r005-i001
+    with: R002
+    refs: [q-uniform-convergence-emergence, concept-uniform-convergence, person-weierstrass]
+    significance: >
+      Weierstrass's 1861 teaching is a source-supported intersection between stronger domain-wide convergence
+      control and local quantified control. It should be rendered as an intersection or branch, not as a
+      single causal handoff from uniform convergence to epsilon-delta analysis.
+
+  - id: r005-i002
+    with: R002
+    refs: [concept-continuity, concept-limit, concept-infinitesimal, person-cauchy]
+    significance: >
+      R005 revisits Cauchy's definitions only to compare historical languages of smallness; it should reuse
+      the existing Cauchy canonical nodes and preserve R002's rejection of the caricature that infinitesimal
+      language meant a failure to understand limits.
+
+concept_state_candidates:
+  - id: r005-cs-continuity-1817-1823
+    concept_id: concept-continuity
+    period: {from: 1817, to: 1823}
+    label: >
+      Continuity can be articulated through variable increments becoming arbitrarily small, with Bolzano and
+      Cauchy using historically distinct quantity/infinitesimal frameworks rather than a shared modern syntax.
+
+  - id: r005-cs-quantified-control-1861
+    concept_id: concept-quantified-control
+    period: {from: 1861, to: 1861}
+    label: >
+      Student notes from Weierstrass's teaching record an explicit bound on input variation corresponding to
+      an arbitrarily small allowed function variation.
+
+  - id: r005-cs-quantified-control-1872
+    concept_id: concept-quantified-control
+    period: {from: 1872, to: 1872}
+    label: >
+      Heine's published function theory gives explicit small-error/small-increment conditions for continuity
+      and uniform continuity, making quantified control visible in print beyond Weierstrass's lecture tradition.
+
+story_candidates:
+  - story_id: story-epsilon-delta-control
+    title: How precisely must “arbitrarily close” be controlled?
+    integration_plan: >
+      Begin from Cauchy's inherited limit/continuity framework without presenting it as defective; use Bolzano
+      and Cauchy's inequality practices as antecedents; move to the textually mediated 1861 Weierstrass lecture
+      evidence; intersect R002 at same-rate convergence without asserting causation; then use Heine 1872 as a
+      publication/circulation anchor. End with the unresolved foundation of the real-number continuum rather
+      than treating epsilon-delta notation as the completion of rigor.
+
+sources:
+  - id: src-bolzano-1817
+    type: primary
+    author: Bernard Bolzano
+    title: Rein analytischer Beweis des Lehrsatzes, dass zwischen je zwey Werthen, die ein entgegengesetztes Resultat gewähren, wenigstens eine reelle Wurzel der Gleichung liege
+    publication: Prag, Gottlieb Haase
+    year: 1817
+    url: https://eudml.org/doc/202403
+    locator: pp. 11–12 in the original work; continuity definition
+    notes: Primary publication anchor for Bolzano's increment-based continuity formulation.
+
+  - id: src-rusnock-sebestik-2019
+    type: secondary_scholarly
+    author: Paul Rusnock and Jan Šebestík
+    title: Bernard Bolzano — His Life and Work, chapter 9 Mathematics
+    publication: Oxford University Press
+    year: 2019
+    url: https://doi.org/10.1093/oso/9780198823681.003.0010
+    locator: pp. 502–543
+    notes: Specialist context for Bolzano's analysis and continuity work.
+
+  - id: src-cauchy-1821
+    type: primary
+    author: Augustin-Louis Cauchy
+    title: Cours d'Analyse de l'École Royale Polytechnique, première partie
+    publication: Paris, Debure
+    year: 1821
+    url: https://gallica.bnf.fr/ark:/12148/bpt6k29058v
+    locator: preliminary definitions and continuity discussion
+    notes: Primary source for Cauchy's own limit, infinitesimal, and continuity language.
+
+  - id: src-cauchy-1823
+    type: primary
+    author: Augustin-Louis Cauchy
+    title: Résumé des leçons données à l'École royale polytechnique sur le calcul infinitésimal
+    publication: Paris, Imprimerie Royale
+    year: 1823
+    url: https://gallica.bnf.fr/ark:/12148/bpt6k62404287
+    locator: derivative/error-control arguments discussed by Grabiner
+    notes: Primary text used for the pre-Weierstrass inequality technique.
+
+  - id: src-grabiner-1983
+    type: secondary_peer_reviewed
+    author: Judith V. Grabiner
+    title: Who Gave You the Epsilon? The Origins of Cauchy's Rigorous Calculus
+    publication: The American Mathematical Monthly 90(3), 185–194
+    year: 1983
+    url: https://scholarship.claremont.edu/pitzer_fac_pub/122/
+    locator: pp. 185–194, especially discussion of Cauchy's inequality proofs
+    notes: Specialist analysis of the algebra-of-inequalities tradition and Cauchy's role.
+
+  - id: src-sinkevich-2016
+    type: secondary_peer_reviewed
+    author: Galina Ivanovna Sinkevich
+    title: On History of Epsilontics
+    publication: Antiquitates Mathematicae 10
+    year: 2016
+    url: https://eudml.org/doc/293231
+    locator: pp. 15–17; discussion of 1861 Schwarz notes, Heine 1872, and retrospective modernization
+    notes: >
+      Useful specialist synthesis for epsilon-delta chronology. Its priority language is treated as a
+      historiographical claim to be checked rather than as self-validating evidence.
+
+  - id: src-viertel-2021
+    type: secondary_peer_reviewed
+    author: Klaus Viertel
+    title: The development of the concept of uniform convergence in Karl Weierstrass's lectures and publications between 1861 and 1886
+    publication: Archive for History of Exact Sciences 75, 455–490
+    year: 2021
+    url: https://doi.org/10.1007/s00407-020-00266-9
+    locator: sections 2–6; first verifiable 1861 trace, lecture-note provenance, terminology, and 1841/1894 dating problem
+    notes: Open-access specialist study of Weierstrass's lecture-note evidence and source criticism.
+
+  - id: src-heine-1872
+    type: primary
+    author: Eduard Heine
+    title: Die Elemente der Functionenlehre
+    publication: Journal für die reine und angewandte Mathematik 74, 172–188
+    year: 1872
+    url: https://doi.org/10.1515/crll.1872.74.172
+    locator: pp. 172, 182–184
+    notes: Primary publication anchor for Heine's function-theory definitions and his statement on the circulation of Weierstrass's principles.
+
+uncertainties:
+  - id: r005-u001
+    issue: Weierstrass 1861 priority and exact wording
+    status: open
+    detail: >
+      The central 1861 evidence survives through H. A. Schwarz's private student notes and later historical
+      reproduction. R005 can safely date a surviving lecture-note formulation to 1861, but a claim such as
+      'Weierstrass invented the epsilon-delta definition in 1861' compresses authorship, textual transmission,
+      and priority into one statement and should remain rejected unless stronger manuscript-level comparison
+      with earlier formulations is supplied.
+
+  - id: r005-u002
+    issue: Bolzano-to-later-analysis transmission
+    status: open
+    detail: >
+      Bolzano's 1817 formulation is an important antecedent, but this packet does not establish a direct
+      transmission from Bolzano to Weierstrass or Heine. Mathematical resemblance is not historical influence.
+
+  - id: r005-u003
+    issue: Uniform convergence as cause of epsilon-delta analysis
+    status: open
+    detail: >
+      Weierstrass's lecture tradition contains both stronger convergence control and quantified continuity
+      formulations. The available evidence supports an intersection, not the causal claim that uniform
+      convergence generated epsilon-delta analysis.
+
+  - id: r005-u004
+    issue: Arithmetization of analysis as a contemporary program label
+    status: open
+    detail: >
+      The phrase is common in later historiography, but this packet has not located a primary Weierstrass text
+      that licenses treating it as his own single named program with a unique start date. Any canonical use
+      should remain later_interpretation unless stronger primary evidence is added.
+
+  - id: r005-u005
+    issue: Stabilization of epsilon and delta as conventional notation
+    status: open
+    detail: >
+      Heine 1872 supplies a concrete printed formulation and later authors extend the language, but one text
+      is insufficient to establish when the notation became generally stable across analysis. R005 should
+      avoid a universal standardization date.
+
+  - id: r005-u006
+    issue: Downstream completeness question
+    status: bounded_handoff
+    detail: >
+      More explicit quantified definitions presuppose a number domain on which limits and bounds operate.
+      Construction/completeness of the real numbers is a natural subsequent research unit, but Dedekind,
+      Cantor, Méray, and Weierstrass's number concepts are not researched here in enough depth for promotion.
