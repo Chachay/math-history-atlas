@@ -1,554 +1,582 @@
 research_unit:
   id: R007
-  title: "Gauss — curvature, surfaces, and the emergence of intrinsic geometry"
+  title: Gauss — curvature, surfaces, and the emergence of intrinsic geometry
   period:
     approximate_start: 1760
     approximate_end: 1854
-    core_period: "1760–1828"
-  scope_summary: >
-    Investigation of the geometry of curved surfaces from Euler and Monge through Gauss's
-    Disquisitiones generales circa superficies curvas, with the Atlas spine focused on what
-    properties of a surface can be determined from measurements internal to the surface.
-    Geodesy and mapmaking are retained as historical context, but not promoted into the
-    mathematical Question layer. Later language of intrinsic geometry is distinguished from
-    Gauss's own language of development/applicability, infinitesimal line elements, and
-    measure of curvature.
+    core_period: 1760–1828
+  scope_summary: 'Investigation of the geometry of curved surfaces from Euler and Monge through Gauss''s
+    Disquisitiones generales circa superficies curvas, with the Atlas spine focused on what properties
+    of a surface can be determined from measurements internal to the surface. Geodesy and mapmaking are
+    retained as historical context, but not promoted into the mathematical Question layer. Later language
+    of intrinsic geometry is distinguished from Gauss''s own language of development/applicability, infinitesimal
+    line elements, and measure of curvature.
+
+    '
   origin_pattern: mixed
   research_status: researched
   editorial_status: not_accepted
-  generated_date: "2026-08-20"
-
+  generated_date: '2026-08-20'
 research_questions:
-  - id: q001
-    question: >
-      How were curvature and developable surfaces treated before Gauss, especially by Euler
-      and Monge?
-  - id: q002
-    question: >
-      How did Gauss define the measure of curvature of a surface, and how does that definition
-      relate to the later product-of-principal-curvatures formulation?
-  - id: q003
-    question: >
-      What exactly does the theorem later called the Theorema Egregium state in Gauss's 1827
-      memoir?
-  - id: q004
-    question: >
-      Which surface quantities did Gauss show to depend only on the metric coefficients of the
-      infinitesimal line element rather than on the particular embedding in Euclidean space?
-  - id: q005
-    question: >
-      To what extent is the modern intrinsic/extrinsic distinction present in Gauss's own
-      words, and to what extent is it a later conceptual organization?
-  - id: q006
-    question: >
-      What evidence supports connecting Gauss's geodetic work to his surface theory, and how
-      strong may that motivational claim responsibly be?
-  - id: q007
-    question: >
-      What later path from Gauss toward Riemannian geometry is historically supportable without
-      turning mathematical generalization into a simple direct genealogy?
+- id: q001
+  question: 'How were curvature and developable surfaces treated before Gauss, especially by Euler and
+    Monge?
 
+    '
+- id: q002
+  question: 'How did Gauss define the measure of curvature of a surface, and how does that definition
+    relate to the later product-of-principal-curvatures formulation?
+
+    '
+- id: q003
+  question: 'What exactly does the theorem later called the Theorema Egregium state in Gauss''s 1827 memoir?
+
+    '
+- id: q004
+  question: 'Which surface quantities did Gauss show to depend only on the metric coefficients of the
+    infinitesimal line element rather than on the particular embedding in Euclidean space?
+
+    '
+- id: q005
+  question: 'To what extent is the modern intrinsic/extrinsic distinction present in Gauss''s own words,
+    and to what extent is it a later conceptual organization?
+
+    '
+- id: q006
+  question: 'What evidence supports connecting Gauss''s geodetic work to his surface theory, and how strong
+    may that motivational claim responsibly be?
+
+    '
+- id: q007
+  question: 'What later path from Gauss toward Riemannian geometry is historically supportable without
+    turning mathematical generalization into a simple direct genealogy?
+
+    '
 entities:
-  - id: person-euler
-    type: Person
-    canonical_name: Leonhard Euler
-    birth_year: 1707
-    death_year: 1783
-  - id: person-monge
-    type: Person
-    canonical_name: Gaspard Monge
-    birth_year: 1746
-    death_year: 1818
-  - id: person-gauss
-    type: Person
-    canonical_name: Carl Friedrich Gauss
-    birth_year: 1777
-    death_year: 1855
-  - id: concept-surface-curvature
-    type: Concept
-    canonical_name: Curvature of a surface
-  - id: concept-surface-applicability
-    type: Concept
-    canonical_name: Applicability and isometric development of surfaces
-    terminology_note: >
-      "Isometry" is convenient modern terminology. Gauss's own 1827 discussion is phrased in
-      terms of one surface being developed upon another and equality of corresponding
-      infinitesimal elements.
-  - id: concept-intrinsic-surface-geometry
-    type: Concept
-    canonical_name: Geometry determined within a surface
-    terminology_note: >
-      Reader-facing concept label. Do not attribute the modern term "intrinsic geometry" to
-      Gauss without qualification.
-  - id: result-theorema-egregium
-    type: Result
-    canonical_name: Theorema Egregium
-  - id: work-gauss-disquisitiones-surfaces
-    type: Work
-    canonical_name: General Investigations of Curved Surfaces
-    original_title: Disquisitiones generales circa superficies curvas
-    presentation_date: "1827-10-08"
-    volume_year: 1828
+- id: person-euler
+  type: Person
+  canonical_name: Leonhard Euler
+  birth_year: 1707
+  death_year: 1783
+- id: person-monge
+  type: Person
+  canonical_name: Gaspard Monge
+  birth_year: 1746
+  death_year: 1818
+- id: person-gauss
+  type: Person
+  canonical_name: Carl Friedrich Gauss
+  birth_year: 1777
+  death_year: 1855
+- id: concept-surface-curvature
+  type: Concept
+  canonical_name: Curvature of a surface
+- id: concept-surface-applicability
+  type: Concept
+  canonical_name: Applicability and isometric development of surfaces
+  terminology_note: '"Isometry" is convenient modern terminology. Gauss''s own 1827 discussion is phrased
+    in terms of one surface being developed upon another and equality of corresponding infinitesimal elements.
 
+    '
+- id: concept-intrinsic-surface-geometry
+  type: Concept
+  canonical_name: Geometry determined within a surface
+  terminology_note: 'Reader-facing concept label. Do not attribute the modern term "intrinsic geometry"
+    to Gauss without qualification.
+
+    '
+- id: result-theorema-egregium
+  type: Result
+  canonical_name: Theorema Egregium
+- id: work-gauss-disquisitiones-surfaces
+  type: Work
+  canonical_name: General Investigations of Curved Surfaces
+  original_title: Disquisitiones generales circa superficies curvas
+  presentation_date: '1827-10-08'
+  volume_year: 1828
 chronology:
-  - date: "1760–1767"
-    date_type: publication_sequence
-    event: >
-      Euler developed a theory of normal curvature of surfaces and related the curvature of
-      normal sections to principal curvatures. This work belongs to the pre-Gaussian theory of
-      surface curvature and prevents treating the subject as beginning with Gauss.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-kline-1990
-      - src-euler-dsb
-    uncertainty: >
-      This packet uses specialist historical synthesis rather than a page-localized edition of
-      Euler's original surface-curvature memoirs.
-  - date: "1795"
-    date_type: publication
-    event: >
-      Monge's treatise organized substantial earlier work on surfaces and extended an analytic
-      tradition that Gauss inherited rather than replaced ex nihilo.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-kline-1990
-      - src-eom-differential-geometry
-  - date: "circa 1816"
-    date_type: manuscript_or_research_note
-    event: >
-      Dombrowski identifies unpublished Gauss material from around 1816 in which invariance of
-      the spherical-image area under bending without stretching already appears; he treats this
-      as an early precursor of the later pointwise invariance theorem.
-    perspective: later_interpretation
-    certainty: medium
-    sources:
-      - src-dombrowski-1979
-    uncertainty: >
-      The date and interpretation depend on Dombrowski's reconstruction from Gauss's Werke;
-      this should not be narrated as a public 1816 theorem.
-  - date: "1822–1825"
-    date_type: manuscript_development
-    event: >
-      According to Dombrowski's reconstruction, Gauss obtained formulas expressing curvature
-      from metric data in special coordinate systems before the 1827 published memoir,
-      including conformal coordinates in 1822 and geodesic polar coordinates in 1825.
-    perspective: later_interpretation
-    certainty: medium
-    sources:
-      - src-dombrowski-1979
-  - date: "1827-10-08"
-    date_type: presentation
-    event: >
-      Gauss presented the Disquisitiones generales circa superficies curvas to the Royal
-      Society of Göttingen. The published memoir defines a pointwise measure of curvature via
-      the ratio of infinitesimal area on the surface to area of its spherical image and derives
-      formulas in general surface coordinates.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-    primary_locator: "§§6–10; presentation date on title page"
-  - date: "1827"
-    date_type: theorem_in_presented_memoir
-    event: >
-      Gauss states the remarkable theorem that when a curved surface is developed upon another
-      surface, the measure of curvature at corresponding points remains unchanged. The proof
-      follows from his expression of curvature using the coefficients E, F, G of the
-      infinitesimal line element and their derivatives.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-      - src-dombrowski-1979
-    primary_locator: "§12, theorem following the formula for curvature"
-  - date: "1827"
-    date_type: contemporary_summary
-    event: >
-      In Gauss's own abstract of the work, he explicitly distinguishes relations that depend on
-      the surface's form in space from relations independent of the forms a flexible but
-      inextensible surface may assume, and assigns the measure of curvature and geodesic
-      constructions to the latter class.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-    primary_locator: "Abstract of the paper of 1827, concluding discussion"
-  - date: "1854"
-    date_type: lecture
-    event: >
-      Riemann's habilitation lecture generalized questions of metric and curvature beyond
-      two-dimensional surfaces. Modern historical accounts connect this program to Gauss's
-      surface theory, but this unit does not attempt to establish a complete Gauss-to-Riemann
-      transmission chain.
-    perspective: later_interpretation
-    certainty: medium
-    sources:
-      - src-darrigol-2021
-      - src-kline-1990
-    uncertainty: >
-      The mathematical generalization is clear; the detailed historical channels and
-      intermediaries are outside R007 and should not be compressed into a single causal edge.
+- date: 1760–1767
+  date_type: publication_sequence
+  event: 'Euler developed a theory of normal curvature of surfaces and related the curvature of normal
+    sections to principal curvatures. This work belongs to the pre-Gaussian theory of surface curvature
+    and prevents treating the subject as beginning with Gauss.
 
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-kline-1990
+  - src-euler-dsb
+  uncertainty: 'This packet uses specialist historical synthesis rather than a page-localized edition
+    of Euler''s original surface-curvature memoirs.
+
+    '
+- date: '1795'
+  date_type: publication
+  event: 'Monge''s treatise organized substantial earlier work on surfaces and extended an analytic tradition
+    that Gauss inherited rather than replaced ex nihilo.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-kline-1990
+  - src-eom-differential-geometry
+- date: circa 1816
+  date_type: manuscript_or_research_note
+  event: 'Dombrowski identifies unpublished Gauss material from around 1816 in which invariance of the
+    spherical-image area under bending without stretching already appears; he treats this as an early
+    precursor of the later pointwise invariance theorem.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-dombrowski-1979
+  uncertainty: 'The date and interpretation depend on Dombrowski''s reconstruction from Gauss''s Werke;
+    this should not be narrated as a public 1816 theorem.
+
+    '
+- date: 1822–1825
+  date_type: manuscript_development
+  event: 'According to Dombrowski''s reconstruction, Gauss obtained formulas expressing curvature from
+    metric data in special coordinate systems before the 1827 published memoir, including conformal coordinates
+    in 1822 and geodesic polar coordinates in 1825.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-dombrowski-1979
+- date: '1827-10-08'
+  date_type: presentation
+  event: 'Gauss presented the Disquisitiones generales circa superficies curvas to the Royal Society of
+    Göttingen. The published memoir defines a pointwise measure of curvature as the ratio of the infinitesimal
+    area of the spherical image to the corresponding infinitesimal area on the surface and derives formulas
+    in general surface coordinates.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  primary_locator: §§6–10; presentation date on title page
+- date: '1827'
+  date_type: theorem_in_presented_memoir
+  event: 'Gauss states the remarkable theorem that when a curved surface is developed upon another surface,
+    the measure of curvature at corresponding points remains unchanged. The proof follows from his expression
+    of curvature using the coefficients E, F, G of the infinitesimal line element and their derivatives.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  - src-dombrowski-1979
+  primary_locator: §12, theorem following the formula for curvature
+- date: '1827'
+  date_type: contemporary_summary
+  event: 'In Gauss''s own abstract of the work, he explicitly distinguishes relations that depend on the
+    surface''s form in space from relations independent of the forms a flexible but inextensible surface
+    may assume, and assigns the measure of curvature and geodesic constructions to the latter class.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  primary_locator: Abstract of the paper of 1827, concluding discussion
+- date: '1854'
+  date_type: lecture
+  event: 'Riemann''s habilitation lecture generalized questions of metric and curvature beyond two-dimensional
+    surfaces. Modern historical accounts connect this program to Gauss''s surface theory, but this unit
+    does not attempt to establish a complete Gauss-to-Riemann transmission chain.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-darrigol-2021
+  - src-kline-1990
+  uncertainty: 'The mathematical generalization is clear; the detailed historical channels and intermediaries
+    are outside R007 and should not be compressed into a single causal edge.
+
+    '
 assertions:
-  - id: r007-a001
-    subject: person-euler
-    predicate: contributed_to
-    object: concept-surface-curvature
-    statement: >
-      Euler made major pre-Gaussian advances in the curvature of surfaces, including the
-      relation between normal-section curvature and principal curvatures.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-kline-1990
-      - src-euler-dsb
-  - id: r007-a002
-    subject: person-monge
-    predicate: contributed_to
-    object: concept-surface-curvature
-    statement: >
-      Monge extended and systematized the analytic theory of surfaces before Gauss, so the
-      development of differential geometry of surfaces should not be narrated as a single-
-      inventor episode.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-kline-1990
-      - src-eom-differential-geometry
-  - id: r007-a003
-    subject: work-gauss-disquisitiones-surfaces
-    predicate: contributed_to
-    object: concept-surface-curvature
-    statement: >
-      In the 1827 memoir Gauss defines a pointwise measure of curvature through the spherical
-      image of the surface and develops formulas for it in general surface coordinates.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-    source_locator: "§§6–10"
-  - id: r007-a004
-    subject: work-gauss-disquisitiones-surfaces
-    predicate: contributed_to
-    object: concept-surface-applicability
-    statement: >
-      Gauss treats development of one surface upon another through preservation of the
-      infinitesimal line element, represented by equal coefficients E, F, and G for
-      corresponding elements.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-    source_locator: "§12"
-  - id: r007-a005
-    subject: result-theorema-egregium
-    predicate: contributed_to
-    object: concept-surface-applicability
-    statement: >
-      Gauss's theorem states that if one curved surface is developed upon another, the measure
-      of curvature at corresponding points remains unchanged.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-      - src-dombrowski-1979
-    source_locator: "Gauss §12; Dombrowski discussion of Theorema Egregium"
-  - id: r007-a006
-    subject: work-gauss-disquisitiones-surfaces
-    predicate: contributed_to
-    object: concept-intrinsic-surface-geometry
-    statement: >
-      Gauss's abstract distinguishes properties dependent on a surface's spatial form from
-      properties unchanged when the surface is flexed without extension; he includes curvature,
-      figures on the surface, angles, areas, and shortest lines among the latter.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-    source_locator: "Abstract of the paper of 1827, final paragraphs"
-    uncertainty: >
-      The assertion deliberately describes Gauss's distinction without claiming that he used
-      the later technical vocabulary "intrinsic" and "extrinsic".
-  - id: r007-a007
-    subject: result-theorema-egregium
-    predicate: contributed_to
-    object: concept-intrinsic-surface-geometry
-    statement: >
-      In modern mathematical language, the Theorema Egregium is read as showing that Gaussian
-      curvature is determined by the metric of the surface and is invariant under local
-      isometries.
-    perspective: modern_abstraction
-    certainty: high
-    sources:
-      - src-dombrowski-1979
-      - src-darrigol-2021
-  - id: r007-a008
-    subject: work-gauss-disquisitiones-surfaces
-    predicate: contributed_to
-    object: concept-intrinsic-surface-geometry
-    statement: >
-      It is historically reasonable to describe Gauss's 1827 work as a decisive step toward
-      intrinsic surface geometry, but saying that it introduced the fully modern intrinsic
-      viewpoint risks projecting later terminology and structure backward.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-dombrowski-1979
-      - src-kline-1990
-  - id: r007-a009
-    subject: person-gauss
-    predicate: contributed_to
-    object: concept-surface-applicability
-    statement: >
-      Gauss's geodetic and mapmaking work formed part of the practical and mathematical context
-      in which his investigations of surface mappings and surface geometry developed.
-    perspective: later_interpretation
-    certainty: medium
-    sources:
-      - src-kline-1990
-      - src-dombrowski-1979
-    uncertainty: >
-      The sources support contextual linkage more safely than a strong claim that surveying
-      directly caused the Theorema Egregium.
-  - id: r007-a010
-    subject: result-theorema-egregium
-    predicate: contributed_to
-    object: concept-intrinsic-surface-geometry
-    statement: >
-      The historical significance of the theorem is not that Gauss abandoned the embedding of
-      surfaces in Euclidean three-space; rather, a calculation formulated within an embedded
-      surface theory revealed quantities independent of the particular embedding under
-      metric-preserving development.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-      - src-dombrowski-1979
-  - id: r007-a011
-    subject: work-gauss-disquisitiones-surfaces
-    predicate: contributed_to
-    object: result-theorema-egregium
-    statement: >
-      The 1827 memoir supplies a general-coordinate derivation of the curvature formula from
-      E, F, G and their derivatives and immediately draws the invariance theorem for developed
-      surfaces.
-    perspective: historical
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-    source_locator: "§§11–12"
-  - id: r007-a012
-    subject: person-gauss
-    predicate: contributed_to
-    object: concept-intrinsic-surface-geometry
-    statement: >
-      Dombrowski's reconstruction places important unpublished precursors to Gauss's later
-      invariance result in work from roughly 1816 onward, showing that the 1827 theorem emerged
-      from a longer research development rather than a single isolated calculation.
-    perspective: later_interpretation
-    certainty: medium
-    sources:
-      - src-dombrowski-1979
-    uncertainty: >
-      This chronology is reconstructed from unpublished notes and should not be presented as a
-      sequence of publicly established results.
+- id: r007-a001
+  subject: person-euler
+  predicate: contributed_to
+  object: concept-surface-curvature
+  statement: 'Euler made major pre-Gaussian advances in the curvature of surfaces, including the relation
+    between normal-section curvature and principal curvatures.
 
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-kline-1990
+  - src-euler-dsb
+- id: r007-a002
+  subject: person-monge
+  predicate: contributed_to
+  object: concept-surface-curvature
+  statement: 'Monge extended and systematized the analytic theory of surfaces before Gauss, so the development
+    of differential geometry of surfaces should not be narrated as a single- inventor episode.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-kline-1990
+  - src-eom-differential-geometry
+- id: r007-a003
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-surface-curvature
+  statement: 'In the 1827 memoir Gauss defines a pointwise measure of curvature through the spherical
+    image of the surface and develops formulas for it in general surface coordinates.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  source_locator: §§6–10
+- id: r007-a004
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-surface-applicability
+  statement: 'Gauss treats development of one surface upon another through preservation of the infinitesimal
+    line element, represented by equal coefficients E, F, and G for corresponding elements.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  source_locator: §12
+- id: r007-a005
+  subject: result-theorema-egregium
+  predicate: contributed_to
+  object: concept-surface-applicability
+  statement: 'Gauss''s theorem states that if one curved surface is developed upon another, the measure
+    of curvature at corresponding points remains unchanged.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  - src-dombrowski-1979
+  source_locator: Gauss §12; Dombrowski discussion of Theorema Egregium
+- id: r007-a006
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  statement: 'Gauss''s abstract distinguishes properties dependent on a surface''s spatial form from properties
+    unchanged when the surface is flexed without extension; he includes curvature, figures on the surface,
+    angles, areas, and shortest lines among the latter.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  source_locator: Abstract of the paper of 1827, final paragraphs
+  uncertainty: 'The assertion deliberately describes Gauss''s distinction without claiming that he used
+    the later technical vocabulary "intrinsic" and "extrinsic".
+
+    '
+- id: r007-a007
+  subject: result-theorema-egregium
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  statement: 'In modern mathematical language, the Theorema Egregium is read as showing that Gaussian
+    curvature is determined by the metric of the surface and is invariant under local isometries.
+
+    '
+  perspective: modern_abstraction
+  certainty: high
+  sources:
+  - src-dombrowski-1979
+  - src-darrigol-2021
+- id: r007-a008
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  statement: 'Later histories of differential geometry interpret Gauss''s 1827 work as foundational for
+    intrinsic surface geometry, while Gauss''s own text formulates the distinction in terms of development,
+    infinitesimal metric relations, and properties independent of a surface''s changing spatial form rather
+    than the later technical vocabulary.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-dombrowski-1979
+  - src-kline-1990
+- id: r007-a009
+  subject: person-gauss
+  predicate: contributed_to
+  object: concept-surface-applicability
+  statement: 'Gauss''s geodetic and mapmaking work formed part of the practical and mathematical context
+    in which his investigations of surface mappings and surface geometry developed.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-kline-1990
+  - src-dombrowski-1979
+  uncertainty: 'The sources support contextual linkage more safely than a strong claim that surveying
+    directly caused the Theorema Egregium.
+
+    '
+- id: r007-a010
+  subject: result-theorema-egregium
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  statement: 'The historical significance of the theorem is not that Gauss abandoned the embedding of
+    surfaces in Euclidean three-space; rather, a calculation formulated within an embedded surface theory
+    revealed quantities independent of the particular embedding under metric-preserving development.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  - src-dombrowski-1979
+- id: r007-a011
+  subject: work-gauss-disquisitiones-surfaces
+  predicate: contributed_to
+  object: result-theorema-egregium
+  statement: 'The 1827 memoir supplies a general-coordinate derivation of the curvature formula from E,
+    F, G and their derivatives and immediately draws the invariance theorem for developed surfaces.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  source_locator: §§11–12
+- id: r007-a012
+  subject: person-gauss
+  predicate: contributed_to
+  object: concept-intrinsic-surface-geometry
+  statement: 'Dombrowski''s reconstruction places important unpublished precursors to Gauss''s later invariance
+    result in work from roughly 1816 onward, showing that the 1827 theorem emerged from a longer research
+    development rather than a single isolated calculation.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-dombrowski-1979
+  uncertainty: 'This chronology is reconstructed from unpublished notes and should not be presented as
+    a sequence of publicly established results.
+
+    '
 question_transitions:
-  - id: r007-qt001
-    from_question: q001
-    to_question: q002
-    relation: reframed
-    statement: >
-      Earlier theories of surface curvature supplied the mathematical background against which
-      Gauss reformulated curvature using the spherical image and general surface coordinates.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-kline-1990
-      - src-dombrowski-1979
-  - id: r007-qt002
-    from_question: q002
-    to_question: q003
-    relation: raised_question
-    statement: >
-      Once curvature is expressed through the infinitesimal metric coefficients, the
-      applicability problem asks what remains unchanged when one surface is developed upon
-      another without changing those coefficients.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-      - src-dombrowski-1979
-  - id: r007-qt003
-    from_question: q003
-    to_question: q005
-    relation: reframed
-    statement: >
-      Gauss's invariance theorem and his own distinction between spatial-form-dependent and
-      deformation-independent relations are the historical basis for the later language of an
-      intrinsic geometry of a surface.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-gauss-1827-1902
-      - src-dombrowski-1979
-  - id: r007-qt004
-    from_question: q005
-    to_question: q007
-    relation: later_connection
-    statement: >
-      Riemann's later generalization of metric and curvature to higher dimensions can be read
-      as extending the line of questions opened by Gauss's surface theory, but R007 does not
-      claim a complete direct causal genealogy.
-    perspective: later_interpretation
-    certainty: medium
-    sources:
-      - src-darrigol-2021
-      - src-kline-1990
+- id: r007-qt001
+  from_question: q001
+  to_question: q002
+  relation: reframed
+  statement: 'Earlier theories of surface curvature supplied the mathematical background against which
+    Gauss reformulated curvature using the spherical image and general surface coordinates.
 
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-kline-1990
+  - src-dombrowski-1979
+- id: r007-qt002
+  from_question: q002
+  to_question: q003
+  relation: raised_question
+  statement: 'Gauss''s applicability problem and his expression of curvature through the infinitesimal
+    metric meet in the Theorema Egregium: equal metric coefficients for corresponding surface elements
+    imply equal measure of curvature.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  - src-dombrowski-1979
+- id: r007-qt003
+  from_question: q003
+  to_question: q005
+  relation: reframed
+  statement: 'Gauss''s invariance theorem and his own distinction between spatial-form-dependent and deformation-independent
+    relations are the historical basis for the later language of an intrinsic geometry of a surface.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-gauss-1827-1902
+  - src-dombrowski-1979
+- id: r007-qt004
+  from_question: q005
+  to_question: q007
+  relation: later_connection
+  statement: 'Riemann''s later generalization of metric and curvature to higher dimensions can be read
+    as extending the line of questions opened by Gauss''s surface theory, but R007 does not claim a complete
+    direct causal genealogy.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-darrigol-2021
+  - src-kline-1990
 intersection_candidates:
-  - id: r007-ic001
-    candidate: >
-      A future Geometry Story may intersect a Riemann node already present elsewhere in the
-      Atlas only if it distinguishes Riemann's 1854 geometry from his 1854 integration work;
-      shared person identity is not itself a cross-field historical edge.
-    perspective: later_interpretation
-    certainty: high
-    sources:
-      - src-darrigol-2021
-  - id: r007-ic002
-    candidate: >
-      A later topology/manifold unit may reuse the question of geometry determined without
-      ambient embedding, but no topological claim should be retroactively inserted into Gauss's
-      1827 program.
-    perspective: modern_abstraction
-    certainty: high
-    sources:
-      - src-darrigol-2021
+- id: r007-ic001
+  candidate: 'A future Geometry Story may intersect a Riemann node already present elsewhere in the Atlas
+    only if it distinguishes Riemann''s 1854 geometry from his 1854 integration work; shared person identity
+    is not itself a cross-field historical edge.
 
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-darrigol-2021
+- id: r007-ic002
+  candidate: 'A later topology/manifold unit may reuse the question of geometry determined without ambient
+    embedding, but no topological claim should be retroactively inserted into Gauss''s 1827 program.
+
+    '
+  perspective: modern_abstraction
+  certainty: high
+  sources:
+  - src-darrigol-2021
 concept_state_candidates:
-  - id: r007-cs001
-    concept_id: concept-surface-curvature
-    period: "1760–1795"
-    label: "normal-section and analytic surface curvature before Gauss"
-  - id: r007-cs002
-    concept_id: concept-surface-curvature
-    period: "1827"
-    label: "Gauss's measure of curvature via spherical image and metric formulas"
-  - id: r007-cs003
-    concept_id: concept-intrinsic-surface-geometry
-    period: "1827"
-    label: "Gauss's deformation-independent relations on a surface"
-    perspective: historical
-  - id: r007-cs004
-    concept_id: concept-intrinsic-surface-geometry
-    period: "later nineteenth century and after"
-    label: "explicitly intrinsic metric geometry and higher-dimensional generalization"
-    perspective: later_interpretation
-
+- id: r007-cs001
+  concept_id: concept-surface-curvature
+  period: 1760–1795
+  label: normal-section and analytic surface curvature before Gauss
+- id: r007-cs002
+  concept_id: concept-surface-curvature
+  period: '1827'
+  label: Gauss's measure of curvature via spherical image and metric formulas
+- id: r007-cs003
+  concept_id: concept-intrinsic-surface-geometry
+  period: '1827'
+  label: Gauss's deformation-independent relations on a surface
+  perspective: historical
+- id: r007-cs004
+  concept_id: concept-intrinsic-surface-geometry
+  period: later nineteenth century and after
+  label: explicitly intrinsic metric geometry and higher-dimensional generalization
+  perspective: later_interpretation
 story_candidates:
-  - id: r007-story-candidate-001
-    title: "Can geometry be read from inside a surface?"
-    arc: >
-      earlier surface curvature → Gauss's measure of curvature → development of surfaces →
-      Theorema Egregium → deformation-independent surface geometry → open path toward later
-      higher-dimensional geometry
-    caution: >
-      Do not write the story as "surveying caused intrinsic geometry" or "Gauss invented
-      differential geometry." Do not use Riemann as a direct continuation unless a separately
-      supported transition is available.
+- id: r007-story-candidate-001
+  title: Can geometry be read from inside a surface?
+  arc: 'earlier surface curvature → Gauss''s measure of curvature → development of surfaces → Theorema
+    Egregium → deformation-independent surface geometry → open path toward later higher-dimensional geometry
 
+    '
+  caution: 'Do not write the story as "surveying caused intrinsic geometry" or "Gauss invented differential
+    geometry." Do not use Riemann as a direct continuation unless a separately supported transition is
+    available.
+
+    '
 sources:
-  - id: src-gauss-1827-1902
-    type: primary_translation
-    author: Carl Friedrich Gauss
-    translators: "James Caddall Morehead and Adam Miller Hiltebeitel"
-    title: General Investigations of Curved Surfaces of 1827 and 1825
-    original_work: Disquisitiones generales circa superficies curvas
-    original_presentation_year: 1827
-    translation_year: 1902
-    publisher: Princeton University Library
-    url: https://www.gutenberg.org/ebooks/36856
-    locators:
-      - "1827 paper §§6–12"
-      - "Abstract of the paper of 1827"
-    note: >
-      Public-domain English translation including the 1827 memoir, its contemporary abstract,
-      and the unpublished 1825 draft.
-  - id: src-dombrowski-1979
-    type: secondary_specialist
-    author: Peter Dombrowski
-    title: "150 years after Gauss' ‘Disquisitiones generales circa superficies curvas’"
-    publication: Astérisque 62
-    year: 1979
-    publisher: Société Mathématique de France
-    url: https://numdam.org/item/AST_1979__62__R1_0/
-    locators:
-      - "pp. 97–153"
-      - "especially pp. 105–115 and 129–130"
-  - id: src-kline-1990
-    type: secondary_history
-    author: Morris Kline
-    title: Mathematical Thought from Ancient to Modern Times, Vol. 3
-    chapter: "The Differential Geometry of Gauss and Riemann"
-    year: 1990
-    publisher: Oxford University Press
-    url: https://doi.org/10.1093/oso/9780195061376.003.0004
-    locator: "chapter 37, pp. 70–91 in the Oxford online edition"
-  - id: src-darrigol-2021
-    type: secondary_history
-    author: Olivier Darrigol
-    title: Relativity Principles and Theories from Galileo to Einstein
-    chapter: "From Riemann to Ricci"
-    year: 2021
-    publisher: Oxford University Press
-    url: https://doi.org/10.1093/oso/9780192849533.003.0008
-    locator: "pp. 236–268"
-  - id: src-euler-dsb
-    type: secondary_reference
-    author: "A. P. Yushkevich and others"
-    title: "Leonhard Euler"
-    publication: Dictionary of Scientific Biography / MacTutor-hosted PDF copy
-    year: 1970
-    url: https://mathshistory.st-andrews.ac.uk/DSB/Euler.pdf
-    locator: "section on geometry and surface curvature"
-  - id: src-eom-differential-geometry
-    type: reference
-    responsible_organization: Encyclopedia of Mathematics
-    title: Differential geometry
-    url: https://encyclopediaofmath.org/wiki/Differential_geometry
-    locator: "historical section"
+- id: src-gauss-1827-1902
+  type: primary_translation
+  author: Carl Friedrich Gauss
+  translators: James Caddall Morehead and Adam Miller Hiltebeitel
+  title: General Investigations of Curved Surfaces of 1827 and 1825
+  original_work: Disquisitiones generales circa superficies curvas
+  original_presentation_year: 1827
+  translation_year: 1902
+  publisher: Princeton University Library
+  url: https://www.gutenberg.org/ebooks/36856
+  locators:
+  - 1827 paper §§6–12
+  - Abstract of the paper of 1827
+  note: 'Public-domain English translation including the 1827 memoir, its contemporary abstract, and the
+    unpublished 1825 draft.
 
+    '
+- id: src-dombrowski-1979
+  type: secondary_specialist
+  author: Peter Dombrowski
+  title: 150 years after Gauss' ‘Disquisitiones generales circa superficies curvas’
+  publication: Astérisque 62
+  year: 1979
+  publisher: Société Mathématique de France
+  url: https://numdam.org/item/AST_1979__62__R1_0/
+  locators:
+  - pp. 97–153
+  - especially pp. 105–115 and 129–130
+- id: src-kline-1990
+  type: secondary_history
+  author: Morris Kline
+  title: Mathematical Thought from Ancient to Modern Times, Vol. 3
+  chapter: The Differential Geometry of Gauss and Riemann
+  year: 1990
+  publisher: Oxford University Press
+  url: https://doi.org/10.1093/oso/9780195061376.003.0004
+  locator: chapter 37, pp. 70–91 in the Oxford online edition
+- id: src-darrigol-2021
+  type: secondary_history
+  author: Olivier Darrigol
+  title: Relativity Principles and Theories from Galileo to Einstein
+  chapter: From Riemann to Ricci
+  year: 2021
+  publisher: Oxford University Press
+  url: https://doi.org/10.1093/oso/9780192849533.003.0008
+  locator: pp. 236–268
+- id: src-euler-dsb
+  type: secondary_reference
+  author: A. P. Yushkevich and others
+  title: Leonhard Euler
+  publication: Dictionary of Scientific Biography / MacTutor-hosted PDF copy
+  year: 1970
+  url: https://mathshistory.st-andrews.ac.uk/DSB/Euler.pdf
+  locator: section on geometry and surface curvature
+- id: src-eom-differential-geometry
+  type: reference
+  responsible_organization: Encyclopedia of Mathematics
+  title: Differential geometry
+  url: https://encyclopediaofmath.org/wiki/Differential_geometry
+  locator: historical section
 uncertainties:
-  - id: r007-u001
-    issue: >
-      The exact strength of the causal link from Gauss's Hanover geodesy to the Theorema
-      Egregium remains weaker than the mathematical and chronological connection.
-    impact: >
-      Story prose should say geodesy supplied practical context or was associated with the
-      development unless stronger documentary evidence is added.
-  - id: r007-u002
-    issue: >
-      "Intrinsic geometry" is later organizing vocabulary. Gauss's own abstract contains a
-      strikingly close conceptual distinction, but the modern technical label should remain
-      marked as later interpretation.
-    impact: >
-      Canonical historical assertions should quote or paraphrase Gauss's own deformation-based
-      distinction rather than attribute the word "intrinsic" to him.
-  - id: r007-u003
-    issue: >
-      Dombrowski reconstructs important unpublished developments around 1816, 1822, and 1825
-      from Gauss's papers and Werke. Those dates are not publication dates.
-    impact: >
-      Preserve date type and avoid presenting the public 1827 theorem as already published in
-      the earlier years.
-  - id: r007-u004
-    issue: >
-      A responsible Gauss-to-Riemann transition needs more than the fact that Riemann later
-      generalized metric and curvature. The detailed transmission/intermediary question is not
-      resolved in this bounded unit.
-    impact: >
-      Keep the Riemann connection as a later branch/open path rather than a direct causal Story
-      edge.
+- id: r007-u001
+  issue: 'The exact strength of the causal link from Gauss''s Hanover geodesy to the Theorema Egregium
+    remains weaker than the mathematical and chronological connection.
+
+    '
+  impact: 'Story prose should say geodesy supplied practical context or was associated with the development
+    unless stronger documentary evidence is added.
+
+    '
+- id: r007-u002
+  issue: '"Intrinsic geometry" is later organizing vocabulary. Gauss''s own abstract contains a strikingly
+    close conceptual distinction, but the modern technical label should remain marked as later interpretation.
+
+    '
+  impact: 'Canonical historical assertions should quote or paraphrase Gauss''s own deformation-based distinction
+    rather than attribute the word "intrinsic" to him.
+
+    '
+- id: r007-u003
+  issue: 'Dombrowski reconstructs important unpublished developments around 1816, 1822, and 1825 from
+    Gauss''s papers and Werke. Those dates are not publication dates.
+
+    '
+  impact: 'Preserve date type and avoid presenting the public 1827 theorem as already published in the
+    earlier years.
+
+    '
+- id: r007-u004
+  issue: 'A responsible Gauss-to-Riemann transition needs more than the fact that Riemann later generalized
+    metric and curvature. The detailed transmission/intermediary question is not resolved in this bounded
+    unit.
+
+    '
+  impact: 'Keep the Riemann connection as a later branch/open path rather than a direct causal Story edge.
+
+    '
