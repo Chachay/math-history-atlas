@@ -22,6 +22,9 @@ on:
           - promote-dry-run
           - promote-apply
           - canonical-plan
+          - story-evidence
+          - gap-plan
+          - gap-apply
 
 permissions:
   contents: write
@@ -76,6 +79,21 @@ jobs:
             canonical-plan)
               python -m scripts.plan_canonical_promotion "$UNIT_ID"
               ;;
+            story-evidence)
+              lower="${UNIT_ID,,}"
+              stories=(editorial/stories/${lower}-*.yaml)
+              if [[ ${#stories[@]} -ne 1 ]]; then
+                echo "Expected exactly one Story file for $UNIT_ID" >&2
+                exit 1
+              fi
+              python -m scripts.validate_story_evidence "${stories[0]}"
+              ;;
+            gap-plan)
+              python -m scripts.propose_research_gaps "$UNIT_ID"
+              ;;
+            gap-apply)
+              python -m scripts.propose_research_gaps "$UNIT_ID" --apply
+              ;;
             *)
               echo "Unknown operation: $OPERATION" >&2
               exit 2
@@ -83,7 +101,7 @@ jobs:
           esac
 
       - name: Commit repository mutations
-        if: inputs.operation == 'bind' || inputs.operation == 'promote-apply'
+        if: inputs.operation == 'bind' || inputs.operation == 'promote-apply' || inputs.operation == 'gap-apply'
         shell: bash
         env:
           UNIT_ID: ${{ inputs.unit_id }}
@@ -95,6 +113,7 @@ jobs:
           git add -- research/resolutions/${UNIT_ID}-*-resolution.yaml
           git add -- research/packets/${UNIT_ID}-*.yaml
           git add -- research/promotions/${UNIT_ID}-*-promotion.yaml
+          git add -- research/gaps/${UNIT_ID}-*.yaml
           if git diff --cached --quiet; then
             echo "No repository mutations to commit"
           else
