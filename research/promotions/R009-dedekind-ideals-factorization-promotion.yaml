@@ -1,0 +1,69 @@
+research_unit_id: R009
+packet: R009-dedekind-ideals-factorization.yaml
+review: R009-dedekind-ideals-factorization-review.yaml
+resolution: R009-dedekind-ideals-factorization-resolution.yaml
+summary:
+  proposed_changes: 3
+  skipped_items: 0
+changes:
+- finding_id: hr-r009-001
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: >
+    Accepted. Distinguish Kummer's 1846 public overview from the 1847 Crelle republication; use the
+    1846–1847 period and the critic's revised claim rather than presenting 1847 as the first public
+    introduction.
+  target:
+    section: assertions
+    id: r009-a001
+  proposed_change:
+    action: replace_fields
+    fields:
+      period: {from: 1846, to: 1847}
+      claim: >
+        Kummer publicly outlined his ideal-divisor theory in 1846 and republished the overview with
+        changes in Crelle's Journal in 1847; the theory introduced ideal divisors/ideal complex numbers
+        in cyclotomic arithmetic to recover prime-factor reasoning unavailable from ordinary factors.
+  status: proposed
+- finding_id: hr-r009-009
+  critic_classification: WEAK_EVIDENCE
+  human_decision: accept_critic
+  human_note: >
+    Accepted with caution. Retain Kronecker only as a medium-certainty distinct computational
+    alternative to Dedekind's route. Do not reconstruct technical details of Kronecker's theory from
+    the current secondary-only evidence base.
+  target:
+    section: assertions
+    id: r009-a009
+  proposed_change:
+    action: replace_fields
+    fields:
+      certainty: medium
+      claim: >
+        Specialist histories describe Kronecker as developing a distinct, explicitly computational
+        approach to the extension of ideal factorization. This is sufficient to prevent narrating
+        Dedekind's formulation as the only contemporary route, but not to reconstruct Kronecker's
+        technical theory here.
+  status: proposed
+- finding_id: hr-r009-012
+  critic_classification: REVISE
+  human_decision: accept_critic
+  human_note: >
+    Accepted. Treat Dedekind's explicit Galois reference as a cautious textual intersection around
+    fields and conjugacy under later_interpretation, not as evidence that Galois's solvability problem
+    motivated Dedekind's construction of ideals.
+  target:
+    section: assertions
+    id: r009-a012
+  proposed_change:
+    action: replace_fields
+    fields:
+      perspective: later_interpretation
+      certainty: medium
+      claim: >
+        Dedekind's 1871 discussion of conjugate finite fields explicitly remarks that pursuing those
+        questions leads to principles introduced by Galois. This supports a textual intersection around
+        fields and conjugacy, but not a claim that Galois's solvability problem motivated Dedekind's
+        construction of ideals.
+  status: proposed
+skipped: []
