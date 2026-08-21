@@ -80,7 +80,7 @@
         - assertion-r006-galois-reframing
         - assertion-r006-galois-substitution-structure
         - assertion-r006-galois-root-permutations
-      perspective: historical
+      perspective: later_interpretation
       temporal_anchor: {from: 1831, to: 1831}
     - id: solvability-6
       ref: q-r006-later-abstraction
@@ -99,5 +99,5 @@
     - {from: solvability-1, to: solvability-2, type: continues}
     - {from: solvability-2, to: solvability-3, type: branches}
     - {from: solvability-3, to: solvability-4, type: branches}
-    - {from: solvability-4, to: solvability-5, type: continues}
+    - {from: solvability-4, to: solvability-5, type: branches}
     - {from: solvability-5, to: solvability-6, type: branches}
