@@ -1,0 +1,62 @@
+- id: person-lagrange
+  type: Person
+  name: Joseph-Louis Lagrange
+  start_year: 1736
+  end_year: 1813
+  fields: [algebra]
+- id: person-ruffini
+  type: Person
+  name: Paolo Ruffini
+  start_year: 1765
+  end_year: 1822
+  fields: [algebra]
+- id: person-galois
+  type: Person
+  name: Évariste Galois
+  start_year: 1811
+  end_year: 1832
+  fields: [algebra]
+- id: concept-solution-by-radicals
+  type: Concept
+  name: Solvability of polynomial equations by radicals
+  start_year: 1770
+  fields: [algebra]
+- id: concept-resolvent
+  type: Concept
+  name: Resolvent equation or resolvent expression
+  start_year: 1770
+  fields: [algebra]
+- id: concept-root-permutation
+  type: Concept
+  name: Permutations of roots
+  start_year: 1770
+  fields: [algebra]
+- id: concept-substitution-group
+  type: Concept
+  name: Group of substitutions
+  start_year: 1831
+  fields: [algebra]
+- id: work-lagrange-reflexions
+  type: Work
+  name: Lagrange's Reflections on the algebraic solution of equations
+  original_title: Réflexions sur la résolution algébrique des équations
+  start_year: 1770
+  fields: [algebra]
+- id: work-abel-1824
+  type: Work
+  name: Abel's 1824 memoir on the impossibility of a general quintic formula
+  original_title: Mémoire sur les équations algébriques
+  start_year: 1824
+  fields: [algebra]
+- id: work-abel-1826
+  type: Work
+  name: Abel's 1826 expanded impossibility proof for equations above degree four
+  original_title: Beweis der Unmöglichkeit algebraische Gleichungen von höheren Graden als dem vierten allgemein aufzulösen
+  start_year: 1826
+  fields: [algebra]
+- id: work-galois-resolubilite
+  type: Work
+  name: Galois's memoir on conditions for solvability by radicals
+  original_title: Mémoire sur les conditions de résolubilité des équations par radicaux
+  start_year: 1831
+  fields: [algebra]

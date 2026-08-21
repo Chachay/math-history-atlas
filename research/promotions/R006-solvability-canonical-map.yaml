@@ -1,0 +1,81 @@
+research_unit_id: R006
+packet: research/packets/R006-solvability-permutations-galois.yaml
+canonical_entities:
+  - canonical_id: person-lagrange
+    packet_refs: [{section: entities, id: person-lagrange}]
+  - canonical_id: person-ruffini
+    packet_refs: [{section: entities, id: person-ruffini}]
+  - canonical_id: person-abel
+    reused_from: data/entities/r002-cauchy.yaml
+    packet_refs: [{section: entities, id: person-abel}]
+  - canonical_id: person-galois
+    packet_refs: [{section: entities, id: person-galois}]
+  - canonical_id: concept-solution-by-radicals
+    packet_refs: [{section: entities, id: concept-solution-by-radicals}]
+  - canonical_id: concept-resolvent
+    packet_refs: [{section: entities, id: concept-resolvent}]
+  - canonical_id: concept-root-permutation
+    packet_refs: [{section: entities, id: concept-root-permutation}]
+  - canonical_id: concept-substitution-group
+    packet_refs: [{section: entities, id: concept-substitution-group}]
+  - canonical_id: work-lagrange-reflexions
+    packet_refs: [{section: entities, id: work-lagrange-reflexions}]
+  - canonical_id: work-abel-1824
+    packet_refs: [{section: entities, id: work-abel-1824}]
+  - canonical_id: work-abel-1826
+    packet_refs: [{section: entities, id: work-abel-1826}]
+  - canonical_id: work-galois-resolubilite
+    packet_refs: [{section: entities, id: work-galois-resolubilite}]
+canonical_questions:
+  - canonical_id: q-r006-general-radical-formula
+    packet_refs: [{section: canonical_question_candidates, id: q-r006-general-radical-formula}]
+  - canonical_id: q-r006-permutation-structure
+    packet_refs: [{section: canonical_question_candidates, id: q-r006-permutation-structure}]
+  - canonical_id: q-r006-general-impossibility
+    packet_refs: [{section: canonical_question_candidates, id: q-r006-general-impossibility}]
+  - canonical_id: q-r006-particular-solvability
+    packet_refs: [{section: canonical_question_candidates, id: q-r006-particular-solvability}]
+  - canonical_id: q-r006-later-abstraction
+    packet_refs: [{section: canonical_question_candidates, id: q-r006-later-abstraction}]
+canonical_assertions:
+  - canonical_id: assertion-r006-lagrange-resolvents
+    packet_refs: [{section: assertions, id: r006-a001}]
+  - canonical_id: assertion-r006-lagrange-permutations
+    packet_refs: [{section: assertions, id: r006-a002}]
+  - canonical_id: assertion-r006-abel-general-quintic
+    packet_refs: [{section: assertions, id: r006-a004}]
+  - canonical_id: assertion-r006-abel-higher-degree
+    packet_refs: [{section: assertions, id: r006-a005}]
+  - canonical_id: assertion-r006-galois-reframing
+    packet_refs: [{section: assertions, id: r006-a006}]
+  - canonical_id: assertion-r006-galois-substitution-structure
+    packet_refs: [{section: assertions, id: r006-a007}]
+  - canonical_id: assertion-r006-galois-root-permutations
+    packet_refs: [{section: assertions, id: r006-a008}]
+  - canonical_id: assertion-r006-galois-later-group-history
+    packet_refs: [{section: assertions, id: r006-a009}]
+  - canonical_id: assertion-r006-lagrange-formula-question
+    packet_refs: [{section: question_transitions, id: r006-qt001}]
+  - canonical_id: assertion-r006-permutation-question
+    packet_refs: [{section: question_transitions, id: r006-qt001}]
+  - canonical_id: assertion-r006-abel-impossibility-question
+    packet_refs: [{section: question_transitions, id: r006-qt002}]
+  - canonical_id: assertion-r006-particular-solvability-question
+    packet_refs: [{section: question_transitions, id: r006-qt003}]
+  - canonical_id: assertion-r006-later-abstraction-question
+    packet_refs: [{section: assertions, id: r006-a010}, {section: question_transitions, id: r006-qt004}]
+stories:
+  - story_id: story-r006-solvability
+    steps:
+      - step_id: solvability-1
+        canonical_assertion_refs: [assertion-r006-lagrange-formula-question, assertion-r006-lagrange-resolvents]
+      - step_id: solvability-2
+        canonical_assertion_refs: [assertion-r006-lagrange-resolvents, assertion-r006-lagrange-permutations, assertion-r006-permutation-question]
+      - step_id: solvability-3
+        canonical_assertion_refs: [assertion-r006-abel-general-quintic, assertion-r006-abel-higher-degree, assertion-r006-abel-impossibility-question]
+      - step_id: solvability-4
+        canonical_assertion_refs: [assertion-r006-abel-impossibility-question, assertion-r006-particular-solvability-question]
+      - step_id: solvability-5
+        canonical_assertion_refs: [assertion-r006-galois-reframing, assertion-r006-galois-substitution-structure, assertion-r006-galois-root-permutations]
+      - step_id: solvability-6
+        canonical_assertion_refs: [assertion-r006-galois-later-group-history, assertion-r006-later-abstraction-question]

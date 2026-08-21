@@ -1,0 +1,117 @@
+- id: assertion-r006-lagrange-resolvents
+  subject: work-lagrange-reflexions
+  predicate: contributed_to
+  object: concept-resolvent
+  period: {from: 1770, to: 1771}
+  perspective: historical
+  certainty: high
+  sources: [source-lagrange-1770-1771, source-gray-2018]
+  status: historically_reviewed
+- id: assertion-r006-lagrange-permutations
+  subject: work-lagrange-reflexions
+  predicate: contributed_to
+  object: concept-root-permutation
+  period: {from: 1770, to: 1771}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-lagrange-1770-1771, source-kiernan-1971, source-wussing-1984, source-gray-2018]
+  status: historically_reviewed
+- id: assertion-r006-abel-general-quintic
+  subject: work-abel-1824
+  predicate: contributed_to
+  object: concept-solution-by-radicals
+  period: {from: 1824, to: 1824}
+  perspective: historical
+  certainty: high
+  sources: [source-abel-1824, source-gray-2018, source-kiernan-1971]
+  status: historically_reviewed
+- id: assertion-r006-abel-higher-degree
+  subject: work-abel-1826
+  predicate: generalized
+  object: concept-solution-by-radicals
+  period: {from: 1826, to: 1826}
+  perspective: historical
+  certainty: high
+  sources: [source-abel-1826, source-gray-2018, source-kiernan-1971]
+  status: historically_reviewed
+- id: assertion-r006-galois-reframing
+  subject: work-galois-resolubilite
+  predicate: reframed
+  object: concept-solution-by-radicals
+  period: {from: 1831, to: 1831}
+  perspective: historical
+  certainty: high
+  sources: [source-galois-1846, source-ehrhardt-bibnum, source-gray-2018]
+  status: historically_reviewed
+- id: assertion-r006-galois-substitution-structure
+  subject: work-galois-resolubilite
+  predicate: contributed_to
+  object: concept-substitution-group
+  period: {from: 1831, to: 1846}
+  perspective: historical
+  certainty: high
+  sources: [source-galois-1846, source-ehrhardt-bibnum, source-kiernan-1971]
+  status: historically_reviewed
+- id: assertion-r006-galois-root-permutations
+  subject: work-galois-resolubilite
+  predicate: contributed_to
+  object: concept-root-permutation
+  period: {from: 1831, to: 1846}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-galois-1846, source-ehrhardt-bibnum, source-kiernan-1971, source-wussing-1984]
+  status: historically_reviewed
+- id: assertion-r006-galois-later-group-history
+  subject: person-galois
+  predicate: contributed_to
+  object: concept-substitution-group
+  period: {from: 1831, to: 1846}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-wussing-1984, source-kiernan-1971, source-gray-2018]
+  status: historically_reviewed
+- id: assertion-r006-lagrange-formula-question
+  subject: work-lagrange-reflexions
+  predicate: contributed_to
+  object: q-r006-general-radical-formula
+  period: {from: 1770, to: 1771}
+  perspective: historical
+  certainty: high
+  sources: [source-lagrange-1770-1771, source-gray-2018]
+  status: historically_reviewed
+- id: assertion-r006-permutation-question
+  subject: work-lagrange-reflexions
+  predicate: contributed_to
+  object: q-r006-permutation-structure
+  period: {from: 1770, to: 1771}
+  perspective: historical
+  certainty: high
+  sources: [source-lagrange-1770-1771, source-gray-2018]
+  status: historically_reviewed
+- id: assertion-r006-abel-impossibility-question
+  subject: work-abel-1824
+  predicate: contributed_to
+  object: q-r006-general-impossibility
+  period: {from: 1824, to: 1824}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-abel-1824, source-abel-1826, source-kiernan-1971, source-gray-2018]
+  status: historically_reviewed
+- id: assertion-r006-particular-solvability-question
+  subject: work-galois-resolubilite
+  predicate: contributed_to
+  object: q-r006-particular-solvability
+  period: {from: 1831, to: 1831}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-abel-1824, source-abel-1826, source-galois-1846, source-kiernan-1971]
+  status: historically_reviewed
+- id: assertion-r006-later-abstraction-question
+  subject: work-galois-resolubilite
+  predicate: contributed_to
+  object: q-r006-later-abstraction
+  period: {from: 1846, to: 1900}
+  perspective: later_interpretation
+  certainty: high
+  sources: [source-kiernan-1971, source-wussing-1984, source-gray-2018]
+  status: historically_reviewed

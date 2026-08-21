@@ -1,0 +1,59 @@
+research_unit_id: R006
+packet: R006-solvability-permutations-galois.yaml
+review: R006-solvability-permutations-galois-review.yaml
+decisions:
+- review_key: finding:hr-r006-chronology-ruffini
+  kind: chronology
+  item_id: hr-r006-chronology-ruffini
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: 'Accepted. Do not promote the Ruffini chronology item without a stable primary locator. Preserve
+    Ruffini as an historically important intermediary and keep the precise primary passage/proof-status
+    question as an explicit research gap.
+
+    '
+- review_key: finding:hr-r006-a003
+  kind: assertions
+  item_id: hr-r006-a003
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: 'Accepted. Do not promote the proposed Ruffini historical-route assertion. Secondary historiography
+    may justify retaining Ruffini as an intermediary entity/research context, but it is not sufficient
+    here for a canonical transition edge between Lagrange and Abel.
+
+    '
+- review_key: finding:hr-r006-a007
+  kind: assertions
+  item_id: hr-r006-a007
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Replace the assertion wording so that Galois''s groupe of permutations of roots, substitutions
+    acting on functions of roots, and the later abstract group concept remain explicitly distinct rather
+    than being collapsed into one modern object.
+
+    '
+- review_key: finding:hr-r006-intersection-cauchy
+  kind: intersection_candidates
+  item_id: hr-r006-intersection-cauchy
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: 'Accepted. Do not create a Cauchy cross-Story or Network intersection from the current evidence.
+    Preserve the possibility only as a research gap until a specific Cauchy algebraic work/result and
+    source-supported relation to the R006 solvability line are identified.
+
+    '
+- review_key: finding:hr-r006-concept-state-modern
+  kind: concept_state_candidates
+  item_id: hr-r006-concept-state-modern
+  critic_classification: REVISE
+  decision: accept_critic
+  note: 'Accepted. Remove the retrospective modern-group state from concept-substitution-group. The emergence
+    of the abstract group concept is a distinct distributed downstream topic and should be researched
+    in a later unit rather than back-projected into R006.
+
+    '
+resolution_date: '2026-08-20'
+resolution_status: human_approved_pending_integrity_binding
+integrity:
+  packet_sha256: sha256:1bd90e94b8bf82b9b45782461e8aa14d8534f1e4a1ebec88c2d6cfccca084e11
+  review_sha256: sha256:f92b632c49116ba8a3262fd596527720859af4ba1904151f20ab3bb5cff0260b

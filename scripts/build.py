@@ -35,7 +35,16 @@ def main():
     dump('graph.json', {'entities': entities, 'questions': questions, 'assertions': assertions})
     dump('intersections.json', build_intersections())
     dump('person-index.json', build_person_index())
-    dump('story-index.json', [{'id': s['id'], 'title': s['title'], 'steps': s['steps'], 'links': s['links']} for s in stories])
+    dump('story-index.json', [
+        {
+            'id': s['id'],
+            'title': s['title'],
+            'fields': s.get('fields', []),
+            'steps': s['steps'],
+            'links': s['links'],
+        }
+        for s in stories
+    ])
     dump('story-transitions.json', transitions)
     dump('atlas.json', build_atlas())
     sync_app_data()

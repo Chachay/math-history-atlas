@@ -3,7 +3,7 @@
   name: Niels Henrik Abel
   start_year: 1802
   end_year: 1829
-  fields: [analysis]
+  fields: [analysis, algebra]
 - id: person-seidel
   type: Person
   name: Philipp Ludwig von Seidel

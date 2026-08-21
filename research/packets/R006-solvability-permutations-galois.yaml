@@ -1,0 +1,757 @@
+research_unit:
+  id: R006
+  title: Why can some equations be solved by radicals and others cannot? — permutations, solvability,
+    and Galois
+  period:
+    approximate_start: 1770
+    approximate_end: 1846
+    core_period: 1770–1846
+  scope_summary: 'Investigation of the algebraic-equation problem from Lagrange''s comparison of known
+    solution methods through Abel''s impossibility theorem and Galois''s conditions for solvability by
+    radicals. The packet treats permutations, substitutions, resolvents, and groups in the terminology
+    and mathematical roles they had in the period rather than beginning from the modern abstract group
+    or field. It distinguishes composition, submission, referee, death, and posthumous-publication dates
+    for Galois and treats a clean Lagrange-to-Abel-to-Galois genealogy as a hypothesis to be tested rather
+    than a pre-established line of influence.
+
+    '
+  research_status: researched
+  editorial_status: not_accepted
+  generated_date: '2026-08-20'
+research_questions:
+- id: q001
+  question: 'What concrete problem did algebraists mean by solving a general polynomial equation algebraically
+    or by radicals in the late eighteenth and early nineteenth centuries?
+
+    '
+- id: q002
+  question: 'What did Lagrange learn by comparing known formulas and counting the values taken by functions
+    of roots under permutations?
+
+    '
+- id: q003
+  question: 'What exactly did Abel prove about the general quintic, and why does that not mean that every
+    particular quintic is unsolvable by radicals?
+
+    '
+- id: q004
+  question: 'What condition for solvability was Galois trying to formulate, and what role did permutations
+    and substitutions play in his argument?
+
+    '
+- id: q005
+  question: 'How close is Galois''s use of groupe, permutation, and substitution to later abstract group
+    theory, and where would modern terminology be anachronistic?
+
+    '
+- id: q006
+  question: 'What evidence supports direct intellectual transmission among Lagrange, Ruffini, Cauchy,
+    Abel, and Galois, and what part of the familiar genealogy is retrospective?
+
+    '
+- id: q007
+  question: 'Which dates belong to Galois''s surviving work: composition, Academy submission, referee
+    report, final annotations, death, and Liouville''s publication?
+
+    '
+- id: q008
+  question: 'When did permutation groups, groups, and fields become mathematical objects studied in their
+    own right rather than tools embedded in the solution of equations?
+
+    '
+entities:
+- id: person-lagrange
+  type: Person
+  canonical_name: Joseph-Louis Lagrange
+  birth_year: 1736
+  death_year: 1813
+- id: person-ruffini
+  type: Person
+  canonical_name: Paolo Ruffini
+  birth_year: 1765
+  death_year: 1822
+- id: person-cauchy
+  type: Person
+  canonical_name: Augustin-Louis Cauchy
+  birth_year: 1789
+  death_year: 1857
+  canonical_reuse_candidate: true
+- id: person-abel
+  type: Person
+  canonical_name: Niels Henrik Abel
+  birth_year: 1802
+  death_year: 1829
+- id: person-galois
+  type: Person
+  canonical_name: Évariste Galois
+  birth_year: 1811
+  death_year: 1832
+- id: concept-solution-by-radicals
+  type: Concept
+  canonical_name: Solvability of polynomial equations by radicals
+- id: concept-resolvent
+  type: Concept
+  canonical_name: Resolvent equation or resolvent expression
+- id: concept-root-permutation
+  type: Concept
+  canonical_name: Permutations of roots
+- id: concept-substitution-group
+  type: Concept
+  canonical_name: Group of substitutions
+  terminology_note: 'Historical label for the substitution structures occurring in Galois''s work; it
+    is not to be silently identified with the full later abstract-group framework.
+
+    '
+- id: work-lagrange-reflexions
+  type: Work
+  canonical_name: Réflexions sur la résolution algébrique des équations
+  publication_years: 1770–1771
+- id: work-abel-1824
+  type: Work
+  canonical_name: 'Mémoire sur les équations algébriques où on démontre l''impossibilité de la résolution
+    de l''équation générale du cinquième degré
+
+    '
+  publication_year: 1824
+- id: work-abel-1826
+  type: Work
+  canonical_name: 'Beweis der Unmöglichkeit algebraische Gleichungen von höheren Graden als dem vierten
+    allgemein aufzulösen
+
+    '
+  publication_year: 1826
+- id: work-galois-resolubilite
+  type: Work
+  canonical_name: Mémoire sur les conditions de résolubilité des équations par radicaux
+  manuscript_date: '1831-01-16'
+  academy_submission_date: '1831-01-17'
+  first_publication_year: 1846
+chronology:
+- date: 1770–1771
+  date_type: academy_volume_publication
+  event: 'Lagrange''s Réflexions compares the known solution procedures for lower-degree equations and
+    studies how functions of the roots take fewer distinct values than the full set of root permutations
+    would allow, using this to explain the degrees of auxiliary resolvent equations.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lagrange-1770-1771
+  - src-gray-2018
+  - src-kiernan-1971
+  primary_locator: Œuvres de Lagrange, t. III, pp. 205–421; especially the cubic/quartic and general permutation
+    discussions
+  uncertainty: 'Modern subgroup and orbit language can efficiently restate this mathematics, but it is
+    not Lagrange''s own conceptual vocabulary.
+
+    '
+- date: 1799–1813
+  date_type: publication_sequence
+  event: 'Ruffini published several attempts to prove the impossibility of a general radical solution
+    for equations of degree greater than four and used permutation arguments. Historians treat him as
+    an important intermediary, while also distinguishing his work from Abel''s later accepted proof.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-gray-2018
+  - src-kiernan-1971
+  uncertainty: 'This packet has not yet pinned individual Ruffini claims to a primary-edition page; it
+    therefore does not use Ruffini as the sole evidentiary basis for the impossibility theorem.
+
+    '
+- date: '1824'
+  date_type: publication
+  event: 'Abel published a short memoir whose stated theorem is the impossibility of solving the general
+    equation of fifth degree algebraically, meaning by the class of radical expressions under discussion.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-abel-1824
+  - src-gray-2018
+  - src-kiernan-1971
+  primary_locator: title and pp. 1–8 of the 1824 Christiania pamphlet
+  uncertainty: 'The theorem concerns the general quintic. It does not assert that every individual quintic
+    equation is unsolvable by radicals.
+
+    '
+- date: '1826'
+  date_type: publication
+  event: 'Abel published a substantially expanded proof in the first volume of Crelle''s Journal, formulated
+    for the impossibility of generally solving algebraic equations above the fourth degree by the permitted
+    algebraic operations and radicals.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-abel-1826
+  - src-gray-2018
+  - src-kiernan-1971
+  primary_locator: Journal für die reine und angewandte Mathematik 1 (1826), pp. 65–84
+- date: 1829–1830
+  date_type: submission_history
+  event: 'Galois presented early work on equations to the Paris Academy through Cauchy in 1829 and submitted
+    a revised competition memoir in 1830; the latter did not return through the normal prize process after
+    Fourier''s death. The surviving 1831 memoir should not be treated as textually identical to those
+    lost or unrecovered submissions.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-kiernan-1971
+  - src-ehrhardt-2010
+  - src-gray-2018
+  uncertainty: 'The exact content and textual continuity of the 1829 and 1830 submissions cannot be reconstructed
+    as if the surviving 1831 manuscript were simply the same document.
+
+    '
+- date: '1831-01-16'
+  date_type: manuscript_date
+  event: 'The surviving Mémoire sur les conditions de résolubilité des équations par radicaux is dated
+    16 January 1831. Its opening announces a general condition that every equation solvable by radicals
+    must satisfy and that conversely guarantees radical solvability; the application developed there is
+    explicitly restricted to equations of prime degree.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-galois-1846
+  - src-ehrhardt-bibnum
+  primary_locator: opening paragraph and concluding prime-degree theorem of the memoir
+- date: '1831-07-04'
+  date_type: referee_report
+  event: 'Lacroix and Poisson''s Academy report, dated 4 July 1831, judged the submitted memoir insufficiently
+    clear or developed for the Academy to recognize the claimed result and requested a more complete work.
+    The report is evidence about reception, not a proof that Galois''s mathematics was false.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-poisson-report-1831
+  - src-ehrhardt-2010
+  primary_locator: Poisson/Lacroix report, 4 July 1831
+- date: 1832-05-29 to 1832-05-31
+  date_type: final_annotations_and_death
+  event: 'Immediately before the duel that led to his death on 31 May 1832, Galois wrote his testamentary
+    letter and annotated mathematical manuscripts. These dates are distinct from both the 1831 Academy
+    submission and the later publication date.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-tannery-1908
+  - src-kiernan-1971
+  uncertainty: 'Later editions combine documents written at different moments; individual claims should
+    therefore be tied to the relevant manuscript or editorial note when possible.
+
+    '
+- date: '1846'
+  date_type: posthumous_publication
+  event: 'Joseph Liouville published Galois''s mathematical papers in volume 11 of the Journal de mathématiques
+    pures et appliquées; the solvability memoir appeared on pp. 417–433.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-galois-1846
+  - src-kiernan-1971
+  primary_locator: Journal de mathématiques pures et appliquées 11 (1846), pp. 417–433
+  uncertainty: 'Publication in 1846 must not be backdated to 1831 simply because the surviving memoir
+    itself carries a 1831 manuscript date.
+
+    '
+assertions:
+- id: r006-a001
+  subject: work-lagrange-reflexions
+  predicate: contributed_to
+  object: concept-resolvent
+  statement: 'Lagrange compared the established cubic and quartic solution methods by expressing auxiliary
+    quantities as functions of the roots and examining how many distinct values those functions assume
+    when the roots are permuted; this explained why resolvents of lower degree occur in the known formulas.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lagrange-1770-1771
+  - src-gray-2018
+  uncertainty: 'This is a claim about Lagrange''s equation-solving program, not about an abstract theory
+    of permutation groups.
+
+    '
+- id: r006-a002
+  subject: work-lagrange-reflexions
+  predicate: contributed_to
+  object: concept-root-permutation
+  statement: 'Lagrange made the behavior of expressions under permutations of roots a systematic object
+    of calculation in his theory of algebraic equations, but he did not formulate the later abstract group
+    concept or organize his argument around abstract group axioms.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-lagrange-1770-1771
+  - src-kiernan-1971
+  - src-wussing-1984
+  - src-gray-2018
+- id: r006-a003
+  subject: person-ruffini
+  predicate: contributed_to
+  object: concept-root-permutation
+  statement: 'Ruffini''s attempts at an impossibility proof extended the use of permutations in the theory
+    of equations and form part of the historical route between Lagrange''s resolvent analysis and Abel''s
+    proof, even though the status and reception of Ruffini''s proofs require separate treatment.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-kiernan-1971
+  - src-gray-2018
+  uncertainty: 'Direct primary-source localization is still missing in this packet; the assertion is therefore
+    not a priority claim and should not be used to say that Ruffini had already proved Abel''s theorem
+    in an accepted form.
+
+    '
+- id: r006-a004
+  subject: work-abel-1824
+  predicate: contributed_to
+  object: concept-solution-by-radicals
+  statement: 'Abel''s 1824 memoir establishes the impossibility of a general algebraic solution by radicals
+    for the general quintic; its scope is a generic formula problem, not the claim that no particular
+    polynomial of degree five can have radical solutions.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-abel-1824
+  - src-gray-2018
+  - src-kiernan-1971
+- id: r006-a005
+  subject: work-abel-1826
+  predicate: generalized
+  object: concept-solution-by-radicals
+  statement: 'Abel''s 1826 paper gives an expanded impossibility proof for the general algebraic solution
+    of equations of degree higher than four, while leaving open the classification of particular higher-degree
+    equations that are nevertheless solvable by radicals.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-abel-1826
+  - src-gray-2018
+  - src-kiernan-1971
+- id: r006-a006
+  subject: work-galois-resolubilite
+  predicate: reframed
+  object: concept-solution-by-radicals
+  statement: 'Galois''s surviving 1831 memoir asks for conditions characterizing when an equation is solvable
+    by radicals rather than seeking one universal formula for all equations of a fixed degree; its opening
+    explicitly presents the condition as necessary and sufficient, while its worked application in that
+    memoir is restricted to prime degree.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-galois-1846
+  - src-ehrhardt-bibnum
+  - src-gray-2018
+- id: r006-a007
+  subject: work-galois-resolubilite
+  predicate: contributed_to
+  object: concept-substitution-group
+  statement: 'Galois associates an equation with a groupe of permutations of its roots and studies substitutions
+    acting on functions of those roots in his solvability argument. These notions are structurally related
+    in his work, but his displayed permutation groups, substitutions, and the later abstract group concept
+    should remain terminologically distinct rather than being collapsed into one modern object.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-galois-1846
+  - src-ehrhardt-bibnum
+  - src-kiernan-1971
+  uncertainty: 'Ehrhardt cautions that Galois''s groupe de permutations and his substitutions should not
+    simply be collapsed into one modern group object; later normal-subgroup terminology is a reconstruction.
+
+    '
+- id: r006-a008
+  subject: work-galois-resolubilite
+  predicate: contributed_to
+  object: concept-root-permutation
+  statement: 'The mathematical relation between an equation and permitted permutations of its roots becomes
+    central in Galois''s solvability analysis, but translating this directly into the modern statement
+    ''an equation is solvable by radicals iff its Galois group is solvable'' is a later abstraction rather
+    than Galois''s own sentence or terminology.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-galois-1846
+  - src-ehrhardt-bibnum
+  - src-kiernan-1971
+  - src-wussing-1984
+- id: r006-a009
+  subject: person-galois
+  predicate: contributed_to
+  object: concept-substitution-group
+  statement: 'Galois is a major source for the later development of group-theoretic algebra, but the modern
+    abstract group concept emerged through subsequent work and multiple mathematical traditions; ''Galois
+    invented the modern group'' is therefore too concentrated a priority claim.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-wussing-1984
+  - src-kiernan-1971
+  - src-gray-2018
+- id: r006-a010
+  subject: work-galois-resolubilite
+  predicate: contributed_to
+  object: q-r006-later-abstraction
+  statement: 'The posthumous 1846 publication made Galois''s substitution-based treatment available in
+    print, but later nineteenth-century work was still needed before groups and fields acquired the independent,
+    abstract roles familiar from modern algebra.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-kiernan-1971
+  - src-wussing-1984
+  - src-gray-2018
+question_transitions:
+- id: r006-qt001
+  from_question: q-r006-general-radical-formula
+  to_question: q-r006-permutation-structure
+  relation: 'Lagrange''s retrospective comparison of successful cubic and quartic formulas made the number
+    of values taken by root expressions under permutations a concrete way to explain why lower-degree
+    resolvents appear.
+
+    '
+  perspective: historical
+  certainty: high
+  sources:
+  - src-lagrange-1770-1771
+  - src-gray-2018
+- id: r006-qt002
+  from_question: q-r006-permutation-structure
+  to_question: q-r006-general-impossibility
+  relation: 'Later historians can place Ruffini and Abel after Lagrange within a continuing problem about
+    general radical formulas and permutation behavior, but chronology alone does not establish a single
+    direct transmission chain from Lagrange through Ruffini to Abel.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-kiernan-1971
+  - src-gray-2018
+  uncertainty: 'The packet has not established a source-by-source reading history sufficient for a stronger
+    influenced or motivated relation.
+
+    '
+- id: r006-qt003
+  from_question: q-r006-general-impossibility
+  to_question: q-r006-particular-solvability
+  relation: 'Abel''s impossibility theorem rules out a universal radical formula for the general quintic
+    while leaving the historically distinct problem of determining which particular equations are solvable;
+    Galois''s surviving memoir addresses conditions for that broader solvability question.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-abel-1824
+  - src-abel-1826
+  - src-galois-1846
+  - src-kiernan-1971
+  uncertainty: 'This mathematical problem transition is not by itself evidence that Galois was directly
+    motivated by reading Abel at the beginning of his own work.
+
+    '
+- id: r006-qt004
+  from_question: q-r006-particular-solvability
+  to_question: q-r006-later-abstraction
+  relation: 'Galois''s use of substitution structures in the equation problem became one historical source
+    for later group theory, while the abstraction of groups and fields as independent objects belongs
+    to a later, multi-source development.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-kiernan-1971
+  - src-wussing-1984
+  - src-gray-2018
+canonical_question_candidates:
+- id: q-r006-general-radical-formula
+  question: Can a general polynomial equation be solved by a formula using radicals?
+  period:
+    from: 1770
+    to: null
+  fields:
+  - algebra
+- id: q-r006-permutation-structure
+  question: What do permutations of the roots reveal about possible solution formulas?
+  period:
+    from: 1770
+    to: null
+  fields:
+  - algebra
+- id: q-r006-general-impossibility
+  question: Why is there no general radical formula for polynomial equations above degree four?
+  period:
+    from: 1799
+    to: null
+  fields:
+  - algebra
+- id: q-r006-particular-solvability
+  question: Which polynomial equations are solvable by radicals, and how can that be decided?
+  period:
+    from: 1830
+    to: null
+  fields:
+  - algebra
+- id: q-r006-later-abstraction
+  question: When did groups and fields become algebraic objects studied in their own right?
+  period:
+    from: 1840
+    to: null
+  fields:
+  - algebra
+intersection_candidates:
+- id: r006-i001
+  entities:
+  - person-cauchy
+  - concept-root-permutation
+  relation: 'Cauchy''s work on substitutions/permutations belongs to the same algebraic milieu and is
+    relevant to Abel/Galois-era results, but R006 should not convert the existing analysis node person-cauchy
+    into a forced Story intersection until a specific source-backed algebraic transition is established.
+
+    '
+  perspective: later_interpretation
+  certainty: medium
+  sources:
+  - src-kiernan-1971
+  - src-gray-2018
+- id: r006-i002
+  entities:
+  - concept-substitution-group
+  - concept-solution-by-radicals
+  relation: 'This is the core historical intersection inside the new algebra branch: substitution structures
+    are used in the equation-solvability problem before groups become a fully independent abstract object.
+
+    '
+  perspective: later_interpretation
+  certainty: high
+  sources:
+  - src-galois-1846
+  - src-ehrhardt-bibnum
+  - src-wussing-1984
+concept_state_candidates:
+- id: state-root-permutation-lagrange-1770
+  concept_id: concept-root-permutation
+  period:
+    from: 1770
+    to: 1771
+  label: Functions of roots compared under all permutations in equation-solving calculations
+  perspective: historical
+  sources:
+  - src-lagrange-1770-1771
+- id: state-substitution-group-galois-1831
+  concept_id: concept-substitution-group
+  period:
+    from: 1831
+    to: 1846
+  label: Galois's groups of permutations/substitutions within the solvability problem
+  perspective: historical
+  sources:
+  - src-galois-1846
+  - src-ehrhardt-bibnum
+story_candidates:
+- id: story-r006-solvability
+  title: Why can some equations be solved by radicals and others cannot?
+  fields:
+  - algebra
+  shape: 'Problem of general radical formulas → Lagrange''s permutation/resolvent clue → Abel''s negative
+    result for the general quintic → Galois''s criterion-oriented substitution structures → remaining
+    question of later abstract groups and fields.
+
+    '
+  warning: 'The shape is an editorial candidate, not evidence for uninterrupted personal influence. No
+    link to the R001–R005 analysis Stories should be inserted merely for graph connectivity.
+
+    '
+sources:
+- id: src-lagrange-1770-1771
+  type: primary
+  author: Joseph-Louis Lagrange
+  title: Réflexions sur la résolution algébrique des équations
+  publication: 'Nouveaux Mémoires de l''Académie royale des sciences et belles-lettres de Berlin, volumes
+    for 1770 and 1771; reprinted in Œuvres de Lagrange, t. III
+
+    '
+  year: 1770–1771
+  url: https://fr.wikisource.org/wiki/M%C3%A9moires_extraits_des_recueils_de_l%E2%80%99Acad%C3%A9mie_royale_de_Berlin/R%C3%A9flexions_sur_la_r%C3%A9solution_alg%C3%A9brique_des_%C3%A9quations
+  locator: Œuvres, t. III, pp. 205–421; permutation/value-counting discussions throughout the cubic, quartic,
+    and general sections
+- id: src-abel-1824
+  type: primary
+  author: Niels Henrik Abel
+  title: 'Mémoire sur les équations algébriques où on démontre l''impossibilité de la résolution de l''équation
+    générale du cinquième degré
+
+    '
+  publication: Christiania pamphlet
+  year: 1824
+  url: http://urn.kb.se/resolve?urn=urn:nbn:se:alvin:portal:record-559740
+  locator: pp. 1–8; title states the scope as the general equation of fifth degree
+- id: src-abel-1826
+  type: primary
+  author: Niels Henrik Abel
+  title: 'Beweis der Unmöglichkeit algebraische Gleichungen von höheren Graden als dem vierten allgemein
+    aufzulösen
+
+    '
+  publication: Journal für die reine und angewandte Mathematik, vol. 1
+  year: 1826
+  url: https://sites.mathdoc.fr/cgi-bin/rbsm?idrevue=47
+  locator: pp. 65–84
+- id: src-galois-1846
+  type: primary_posthumous_publication
+  author: Évariste Galois
+  editor: Joseph Liouville
+  title: Mémoire sur les conditions de résolubilité des équations par radicaux
+  publication: Journal de mathématiques pures et appliquées, vol. 11
+  manuscript_date: '1831-01-16'
+  publication_year: 1846
+  url: https://fr.wikisource.org/wiki/%C5%92uvres_math%C3%A9matiques/7
+  locator: 1846 journal pp. 417–433; memoir opening, definitions of permutations/substitutions/groups,
+    and prime-degree application
+- id: src-poisson-report-1831
+  type: primary_document
+  author: Siméon-Denis Poisson and Sylvestre-François Lacroix
+  title: Rapport sur le mémoire de M. Galois
+  date: '1831-07-04'
+  publication: reproduced in Présence d'Évariste Galois, APMEP dossier
+  url: https://bibnum.publimath.fr/AAP/AAP82005.pdf
+  locator: document 7, report dated 4 July 1831
+- id: src-tannery-1908
+  type: primary_edition
+  author: Évariste Galois
+  editor: Jules Tannery
+  title: Manuscrits de Évariste Galois
+  year: 1908
+  url: https://fr.wikisource.org/wiki/Page:Galois_-_Manuscrits,_%C3%A9dition_Tannery,_1908.djvu/60
+  locator: surviving manuscript and editorial notes, including Academy-report annotation
+- id: src-kiernan-1971
+  type: secondary_specialist
+  author: B. Melvin Kiernan
+  title: The Development of Galois Theory from Lagrange to Artin
+  publication: Archive for History of Exact Sciences 8
+  year: 1971
+  pages: 40–154
+  url: https://doi.org/10.1007/BF00327219
+  locator: sections on Lagrange, Ruffini, Abel, Galois, and nineteenth-century reception
+- id: src-wussing-1984
+  type: secondary_specialist
+  author: Hans Wussing
+  title: The Genesis of the Abstract Group Concept
+  publication: MIT Press, English translation
+  year: 1984
+  url: https://openlibrary.org/books/OL3176348M/The_genesis_of_the_abstract_group_concept
+  locator: chapters on roots of abstract group concept in equation theory and other nineteenth-century
+    traditions
+- id: src-ehrhardt-bibnum
+  type: secondary_specialist
+  author: Caroline Ehrhardt
+  title: 'Évariste Galois, Mémoire sur les conditions de résolubilité des équations par radicaux: lecture
+    historique et mathématique
+
+    '
+  publication: BibNum
+  year: 2008
+  url: https://doi.org/10.4000/bibnum.616
+  locator: discussion of Galois terminology, permutations/substitutions, groups, and modern retrospective
+    readings
+- id: src-ehrhardt-2010
+  type: secondary_specialist
+  author: Caroline Ehrhardt
+  title: A Social History of the 'Galois Affair' at the Paris Academy of Sciences (1831)
+  publication: Science in Context 23
+  year: 2010
+  url: https://doi.org/10.1017/S0269889709990251
+  locator: Academy submission and referee context around the 1831 memoir
+- id: src-gray-2018
+  type: secondary_specialist
+  author: Jeremy Gray
+  title: A History of Abstract Algebra — From Algebraic Equations to Modern Algebra
+  publication: Springer
+  year: 2018
+  url: https://doi.org/10.1007/978-3-319-94773-0
+  locator: 'chapters 9–12: quintic, unsolvability, Galois theory, and after Galois'
+uncertainties:
+- id: r006-u001
+  issue: 'Ruffini''s precise contribution and the status of individual impossibility proofs have not been
+    checked against a stable primary edition at page level in this packet.
+
+    '
+  consequence: 'Ruffini should remain an intermediary with medium certainty rather than being credited
+    with an unqualified first complete proof.
+
+    '
+- id: r006-u002
+  issue: 'The exact contents of Galois''s 1829 and 1830 submissions cannot be identified with the surviving
+    1831 memoir simply from chronology.
+
+    '
+  consequence: 'Story prose should date the surviving text and the submission history separately and avoid
+    claims about what a lost manuscript already contained unless a specialist source establishes it.
+
+    '
+- id: r006-u003
+  issue: 'Direct reading/transmission evidence among Lagrange, Ruffini, Cauchy, Abel, and Galois is uneven.
+    Mathematical continuity of problems does not establish a single personal influence chain.
+
+    '
+  consequence: 'Use later_interpretation for the broad genealogy and reserve influenced/motivated for
+    separately sourced relations.
+
+    '
+- id: r006-u004
+  issue: 'Galois''s terminology for groupe, permutation, and substitution does not map one-to-one onto
+    modern group/field terminology.
+
+    '
+  consequence: 'Modern solvable-group, normal-subgroup, fixed-field, and Galois-correspondence language
+    may be used only as explicit modern abstraction or later historiography in this unit.
+
+    '
+- id: r006-u005
+  issue: 'Immediate reception after Galois''s death is not equivalent to later mathematical uptake; the
+    1846 Liouville publication is an important publication event but not a claim that the modern theory
+    was understood at once.
+
+    '
+  consequence: 'The later reconstruction and dissemination of Galois theory should remain a downstream
+    research question rather than being compressed into 1832 or 1846.
+
+    '

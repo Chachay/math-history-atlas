@@ -1,0 +1,20 @@
+- id: q-r006-general-radical-formula
+  question: Can a general polynomial equation be solved by a formula using radicals?
+  period: {from: 1770, to: null}
+  fields: [algebra]
+- id: q-r006-permutation-structure
+  question: What do permutations of the roots reveal about possible solution formulas?
+  period: {from: 1770, to: null}
+  fields: [algebra]
+- id: q-r006-general-impossibility
+  question: Why is there no general radical formula for polynomial equations above degree four?
+  period: {from: 1799, to: null}
+  fields: [algebra]
+- id: q-r006-particular-solvability
+  question: Which polynomial equations are solvable by radicals, and how can that be decided?
+  period: {from: 1830, to: null}
+  fields: [algebra]
+- id: q-r006-later-abstraction
+  question: When did groups and fields become algebraic objects studied in their own right?
+  period: {from: 1840, to: null}
+  fields: [algebra]

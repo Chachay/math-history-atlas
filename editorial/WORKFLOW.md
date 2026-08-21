@@ -62,6 +62,8 @@ This prevents an old human resolution from being applied to a newer research art
 ### Canonical layer
 Stores durable entities, questions, and source-backed assertions. Canonical assertions must carry perspective, certainty, sources, and status.
 
+Canonical entity `name` values are reader-facing UI labels. For a `Work` whose historical title is not English, use a concise English `name` and preserve the source-language title separately in `original_title`. Do not use a French, German, Latin, Italian, or other source-language article/paper title as the default Story-card heading merely because the primary source is in that language. Historically meaningful terms inside English prose (for example Galois's `groupe`) may remain in the source language when the terminology itself is under discussion.
+
 ### Canonical provenance map
 For each promoted research unit, retain a machine-readable map under `research/promotions/` connecting Research Packet objects to their canonical IDs and, where applicable, Story steps. The purpose is auditability, not runtime rendering.
 

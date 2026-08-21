@@ -1,3 +1,4 @@
+import json
 import subprocess
 import sys
 import yaml
@@ -110,3 +111,26 @@ def test_integrity_cli_modules_are_invokable_from_repo_root():
 
 def test_canonical_promotion_provenance_maps_are_valid():
     assert validate_provenance() == []
+
+
+def test_original_work_titles_are_separate_from_ui_names():
+    entities = load_yaml_files(ROOT / 'data/entities')
+    titled_works = [e for e in entities if e.get('type') == 'Work' and e.get('original_title')]
+    assert titled_works
+    for work in titled_works:
+        assert work['name'].strip() != work['original_title'].strip()
+
+
+def test_generated_story_index_preserves_field_metadata():
+    result = subprocess.run(
+        [sys.executable, 'scripts/build.py'],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    assert result.returncode == 0, result.stderr
+    stories = json.loads((ROOT / 'generated/story-index.json').read_text(encoding='utf-8'))
+    by_id = {story['id']: story for story in stories}
+    assert 'analysis' in by_id['story-fourier-heat-representation']['fields']
+    assert 'algebra' in by_id['story-r006-solvability']['fields']

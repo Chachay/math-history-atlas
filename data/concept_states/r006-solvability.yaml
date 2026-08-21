@@ -1,0 +1,8 @@
+- id: r006-cs-root-permutation-1770
+  concept_id: concept-root-permutation
+  period: {from: 1770, to: 1771}
+  label: Functions of roots are compared under permutations as part of solving and explaining algebraic equations.
+- id: r006-cs-substitution-group-1831
+  concept_id: concept-substitution-group
+  period: {from: 1831, to: 1846}
+  label: Galois uses groups of permutations and substitutions within the solvability problem; this is not yet the later abstract group concept in its mature form.

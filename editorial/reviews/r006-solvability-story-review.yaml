@@ -1,0 +1,104 @@
+review:
+  story_id: story-r006-solvability
+  research_unit_id: R006
+  status: human_resolved
+  summary:
+    pass: 11
+    revise: 2
+    weak_evidence: 0
+    reject: 0
+  human_resolution:
+    decision: accept_all_material_revisions
+    resolved_at: '2026-08-20'
+    resolved_findings:
+      - id: sr-r006-step-5-perspective
+        decision: accept_critic
+        applied: true
+        note: Use later_interpretation because the step explicitly compares Galois's historical terminology with later abstract-group and textbook formulations.
+      - id: sr-r006-link-4-5
+        decision: accept_critic
+        applied: true
+        note: Use branches rather than continues because the evidence supports a retrospective problem relation, not a direct Abel-to-Galois motivation or transmission chain.
+  overall_assessment: >
+    The Story successfully opens an independent algebra branch without manufacturing an intersection with
+    the analysis Stories. Abel's result is kept at the correct general-formula scope, Galois's 1831 work is
+    not rewritten as the modern solvable-group theorem, and the later abstraction of groups and fields remains
+    a downstream question. The two material critic revisions have been explicitly accepted and applied.
+findings:
+  - id: sr-r006-story-level
+    classification: PASS
+    target: {story_id: story-r006-solvability, field: description}
+    reason: The description identifies a curated path without claiming uninterrupted personal influence and preserves the deferred later abstraction question.
+    assertion_refs: []
+  - id: sr-r006-step-1
+    classification: PASS
+    target: {story_id: story-r006-solvability, step_id: solvability-1, field: narrative}
+    reason: The narrative is supported by Lagrange's equation-solving and resolvent assertions and does not project abstract group theory backward.
+    assertion_refs: [assertion-r006-lagrange-formula-question, assertion-r006-lagrange-resolvents]
+  - id: sr-r006-step-2
+    classification: PASS
+    target: {story_id: story-r006-solvability, step_id: solvability-2, field: narrative}
+    reason: The step correctly uses later_interpretation for the contrast between Lagrange's calculation and later subgroup language while retaining the historical permutation/resolvent content.
+    assertion_refs: [assertion-r006-lagrange-resolvents, assertion-r006-lagrange-permutations, assertion-r006-permutation-question]
+  - id: sr-r006-step-3
+    classification: PASS
+    target: {story_id: story-r006-solvability, step_id: solvability-3, field: narrative}
+    reason: Abel's theorem is accurately restricted to the general radical-formula problem, and the narrative explicitly blocks the false claim that every quintic is unsolvable by radicals.
+    assertion_refs: [assertion-r006-abel-general-quintic, assertion-r006-abel-higher-degree, assertion-r006-abel-impossibility-question]
+  - id: sr-r006-step-4
+    classification: PASS
+    target: {story_id: story-r006-solvability, step_id: solvability-4, field: narrative}
+    reason: The step is explicitly retrospective and states that the problem transition is not evidence of direct Abel-to-Galois motivation.
+    assertion_refs: [assertion-r006-abel-impossibility-question, assertion-r006-particular-solvability-question]
+  - id: sr-r006-step-5-perspective
+    classification: REVISE
+    target: {story_id: story-r006-solvability, step_id: solvability-5, field: perspective}
+    reason: The step mixes historical description with explicit later comparison, so later_interpretation is the appropriate perspective.
+    assertion_refs: [assertion-r006-galois-reframing, assertion-r006-galois-substitution-structure, assertion-r006-galois-root-permutations]
+    proposed_change: {action: replace_perspective, value: later_interpretation}
+    human_resolution: {decision: accept_critic, applied: true}
+  - id: sr-r006-step-6
+    classification: PASS
+    target: {story_id: story-r006-solvability, step_id: solvability-6, field: narrative}
+    reason: The step correctly treats Galois as one source among multiple later traditions and does not make 1846 publication equivalent to immediate formation or understanding of modern abstract algebra.
+    assertion_refs: [assertion-r006-galois-later-group-history, assertion-r006-later-abstraction-question]
+  - id: sr-r006-link-1-2
+    classification: PASS
+    target: {story_id: story-r006-solvability, link: {from: solvability-1, to: solvability-2}}
+    reason: Both steps belong to Lagrange's documented equation-solving investigation, so continues is justified.
+    assertion_refs: [assertion-r006-lagrange-formula-question, assertion-r006-lagrange-resolvents, assertion-r006-permutation-question]
+  - id: sr-r006-link-2-3
+    classification: PASS
+    target: {story_id: story-r006-solvability, link: {from: solvability-2, to: solvability-3}}
+    reason: branches avoids asserting a direct Lagrange-to-Abel influence chain while preserving the retrospective continuity of the equation-solvability problem.
+    assertion_refs: [assertion-r006-lagrange-permutations, assertion-r006-abel-impossibility-question]
+  - id: sr-r006-link-3-4
+    classification: PASS
+    target: {story_id: story-r006-solvability, link: {from: solvability-3, to: solvability-4}}
+    reason: branches is appropriately weak for the retrospective move from general impossibility to classification of particular solvable equations.
+    assertion_refs: [assertion-r006-abel-impossibility-question, assertion-r006-particular-solvability-question]
+  - id: sr-r006-link-4-5
+    classification: REVISE
+    target: {story_id: story-r006-solvability, link: {from: solvability-4, to: solvability-5}}
+    reason: continues would imply a stronger historical transition than the accepted research supports.
+    assertion_refs: [assertion-r006-particular-solvability-question, assertion-r006-galois-reframing]
+    proposed_change: {action: replace_link_type, value: branches}
+    human_resolution: {decision: accept_critic, applied: true}
+  - id: sr-r006-link-5-6
+    classification: PASS
+    target: {story_id: story-r006-solvability, link: {from: solvability-5, to: solvability-6}}
+    reason: branches correctly treats later abstract algebra as a downstream, distributed development rather than an immediate consequence already completed in Galois's memoir.
+    assertion_refs: [assertion-r006-galois-later-group-history, assertion-r006-later-abstraction-question]
+  - id: sr-r006-no-analysis-crosslink
+    classification: PASS
+    target: {story_id: story-r006-solvability, field: links}
+    reason: No unsupported Cauchy or analysis-Story intersection has been introduced, consistent with the accepted Historical Critic finding and the R006 brief.
+    assertion_refs: []
+research_gaps:
+  - id: gap-r006-story-ruffini
+    question: Where should Ruffini enter a future revision once his relevant permutation arguments and proof status are pinned to stable primary passages?
+    needed_evidence: Stable primary Ruffini edition with precise locators plus specialist assessment of proof status.
+  - id: gap-r006-story-cauchy
+    question: Is there a source-backed Cauchy algebra result that creates a genuine intersection without manufacturing connectivity?
+    needed_evidence: A specific primary Cauchy work/result and specialist evidence relating it to the Abel/Galois solvability line.
+sources: []
