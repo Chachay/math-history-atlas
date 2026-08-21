@@ -6,6 +6,11 @@ review:
   scope:
     through_unit: R010
     base_main: 874624fce3f98ba634d0640fe83634808b2edc6a
+    dimensions:
+      - semantic_graph
+      - editorial_architecture
+      - network_projection
+      - reader_facing_ui
 
 forest:
   major_spines:
@@ -28,13 +33,10 @@ forest:
         - story-integrability
         - story-lebesgue-integration
       assessment: >
-        This is the most developed cross-Story analysis spine. It begins from Fourier's historically documented
-        heat problem, branches into representation, convergence, and later function-concept questions, then hands
-        a Dirichlet admissibility boundary into Riemann's integration problem and finally reaches Lebesgue through
-        a historically reviewed post-Riemann limitation. The spine is not one uniform causal chain: the Fourier-to-
-        function relation is later interpretation, Riemann's downstream integration gap is later interpretation
-        with medium certainty, and R010 separately preserves the Jordan/Borel set-size line until the two lines
-        converge in Lebesgue's documented construction.
+        This is the most developed cross-Story analysis spine, but it is not one causal chain. Fourier's heat and
+        representation questions are historically grounded; the move into the function concept is later
+        interpretation; Riemann's post-integration boundary is a later-interpreted handoff; and R010 keeps the
+        Jordan/Borel set-size line separate until both lines meet in Lebesgue's documented construction.
 
     - id: spine-rigor-control
       questions:
@@ -50,11 +52,9 @@ forest:
         - story-cauchy-rigor-continuity
         - story-quantified-control
       assessment: >
-        These Stories form parallel paths around control of limiting processes rather than a single inventor
-        genealogy. Their strongest intersection is the later-interpreted Weierstrass teaching environment in which
-        quantified continuity and convergence-at-the-same-rate appear together. Existing research supports
-        synthesis and cross-navigation, but not a direct Cauchy-to-Weierstrass transmission claim or a claim that
-        uniform convergence caused epsilon-delta analysis.
+        These are parallel paths around control of limiting processes. Their strongest intersection lies around
+        stronger convergence control and Weierstrass's teaching environment. Existing evidence supports an
+        intersection and editorial cross-navigation, not a single Cauchy-to-Weierstrass transmission chain.
 
     - id: spine-uniqueness-point-sets
       questions:
@@ -62,14 +62,11 @@ forest:
         - q-trig-series-uniqueness
         - q-exceptional-set-uniqueness
         - q-derived-set-structure
-      stories:
-        - story-r008-uniqueness
+      stories: [story-r008-uniqueness]
       assessment: >
-        This is the strongest newly generated Question-evolution spine. The branch from convergence to uniqueness
-        is explicitly later interpretation, while Cantor's move from uniqueness to finite and structured infinite
-        exceptional sets and then to derived-set structure is historically reviewed at high certainty. The Story
-        therefore supports a real 1870-1872 trajectory without compressing later cardinality or transfinite set
-        theory backward into the uniqueness papers.
+        This is the clearest Question-evolution spine produced by the accumulated research. The branch from
+        convergence to uniqueness is later interpretation, while the move from uniqueness to finite exceptions,
+        structured infinite exceptional sets, and derived sets is historically reviewed at high certainty.
 
     - id: spine-algebra-solvability
       questions:
@@ -78,13 +75,10 @@ forest:
         - q-r006-general-impossibility
         - q-r006-particular-solvability
         - q-r006-later-abstraction
-      stories:
-        - story-r006-solvability
+      stories: [story-r006-solvability]
       assessment: >
-        R006 provides a coherent algebra spine from radical-formula problems to permutation structure,
-        impossibility, particular solvability, and a deliberately open later-abstraction boundary. It remains
-        separate from the Dedekind factorization Story; current evidence does not justify manufacturing a
-        Galois-to-Dedekind causal bridge.
+        R006 forms a coherent algebra trunk from radical-formula problems through permutation structure and
+        solvability criteria to an intentionally open later-abstraction boundary.
 
     - id: spine-algebra-factorization
       questions:
@@ -92,40 +86,27 @@ forest:
         - q-r009-ideal-structure
         - q-r009-changing-ideal-concept
         - q-r009-historical-vs-modern
-      stories:
-        - story-r009-factorization
+      stories: [story-r009-factorization]
       assessment: >
-        R009 supplies a second algebra trunk based on arithmetic factorization rather than solvability. Kummer,
-        Dedekind, the changing ideal formulation, and the modern-historiographic boundary are already well used in
-        one Story; Kronecker remains a deliberately limited alternative route pending primary-source work.
+        R009 forms a second algebra trunk based on arithmetic factorization rather than solvability. The local
+        Galois intersection is not sufficient to merge this trunk into a single abstract-algebra genealogy.
 
     - id: spine-intrinsic-geometry
       questions:
         - q-r007-surface-curvature
         - q-r007-surface-development
         - q-r007-intrinsic-geometry
-      stories:
-        - story-r007-intrinsic-geometry
+      stories: [story-r007-intrinsic-geometry]
       assessment: >
-        Geometry has a clean but thin independent trunk. The Gauss Story successfully reaches a later intrinsic
-        reading without manufacturing a Gauss-to-Riemann continuation. The next geometry expansion therefore
-        depends on historical work about the transmission into Riemann's higher-dimensional metric geometry rather
-        than on editorial connection alone.
+        Geometry is a clean but thin independent trunk. Its current endpoint is intentionally not connected directly
+        to Riemann without further transmission research.
 
   entry_issues:
     - story: story-function
       assessment: >
-        The title "What is a function?" promises a broad subject, while the detailed path begins with Fourier-era
-        trigonometric representation and immediately narrows to Fourier and Dirichlet. This remains the clearest
-        reader-facing entry defect in the forest. The appropriate repair is a bounded contextual lead, not an
-        exhaustive pre-Fourier reconstruction and not a new numbered Research Unit.
-
-    - story: story-lebesgue-integration
-      assessment: >
-        The broad title is adequately bounded by the current Riemann-to-Lebesgue entry and by the independent
-        Jordan/Borel line. The R010 Story Critic's two structural revisions have already been reflected in the
-        current Story: the two predecessor lines enter Lebesgue independently, and the limiting-process branch now
-        leaves the value-band construction rather than the 1902 thesis step. No new entry repair is blocking.
+        The title "What is a function?" is broader than its Fourier-era detailed entry. This remains a genuine
+        editorial issue, but its perceived severity must be rechecked after the Network stops presenting Stories as
+        dominant parallel lanes. The appropriate repair remains bounded context rather than exhaustive prehistory.
 
   handoffs:
     - story: story-fourier-heat-representation
@@ -133,308 +114,420 @@ forest:
       to_question: q-heat-prescribed-data
       disposition: answered_for_story
       assessment: >
-        The physical heat question can be treated as answered for this Story once the mathematical heat framework
-        is established; prescribed data then hands the narrative into trigonometric representation. This is a
-        Story-local disposition only and does not close the canonical heat Question globally.
+        The physical heat problem can be treated as answered for this Story once the working mathematical heat
+        framework is established; this does not close the canonical Question globally.
 
     - story: story-fourier-heat-representation
       from_question: q-heat-prescribed-data
       to_question: q-trig-representation-scope
       disposition: handoff
       assessment: >
-        The heat calculation exposes the representational question historically; the later move from representation
-        toward convergence and the concept of function must retain its later-interpretation qualification where the
-        canonical assertions use it.
+        The heat problem historically exposes a representational problem; later movement toward convergence and the
+        concept of function must preserve the perspective of each canonical assertion.
 
     - story: story-function
       from_question: q-fourier-series-convergence
       to_question: q-dirichlet-admissible-functions
       disposition: handoff
       assessment: >
-        Dirichlet's convergence and function-language material leads to a distinct analytic admissibility question.
-        That question is usefully left open in story-function and is already picked up by story-integrability.
+        The function Story leaves a distinct analytic admissibility problem that is already picked up by the
+        integrability Story.
 
     - story: story-integrability
       from_question: q-dirichlet-admissible-functions
       to_question: q-post-riemann-integration-gap
       disposition: handoff
       assessment: >
-        Riemann provides a historically grounded response to the admissibility/integration problem while explicitly
-        showing that integrability does not settle Fourier convergence. The downstream post-Riemann integration gap
-        is a later-interpreted handoff rather than an inevitability claim.
+        Riemann supplies a historically grounded integration response while showing that integrability does not
+        settle Fourier convergence. The downstream gap is a later-interpreted handoff rather than inevitability.
 
     - story: story-r008-uniqueness
       from_question: q-trig-series-uniqueness
       to_question: q-derived-set-structure
       disposition: handoff
       assessment: >
-        Cantor's historically documented 1870-1872 extensions make exceptional-set structure part of the uniqueness
-        problem. The Story stops correctly before cardinality and transfinite theory; the 1872-to-1874 transition is
-        a registered future research candidate rather than an editorial continuation.
-
-    - story: story-quantified-control
-      from_question: q-epsilon-delta-circulation
-      to_question: q-real-number-completeness
-      disposition: remains_open
-      assessment: >
-        The Story correctly leaves real-number completeness outside the completion of epsilon-delta rigor. The
-        canonical relation here is modern abstraction with medium certainty, so it is a research horizon rather
-        than a historically demonstrated next step.
+        Cantor's 1870-1872 work makes the structure of exceptional sets part of the uniqueness problem. The Story
+        correctly stops before cardinality and transfinite theory.
 
     - story: story-lebesgue-integration
       from_question: q-lebesgue-value-band-integration
       to_question: q-lebesgue-limit-processes
       disposition: remains_open
       assessment: >
-        R010 opens limiting-process questions from Lebesgue's 1901 construction, but the canonical handoff is later
-        interpretation with medium certainty. Later named convergence theorems remain a separate research problem.
+        The limiting-process frontier is later interpretation with medium certainty and must not be displayed as if
+        the later named convergence theorems already follow canonically from the 1901-1902 Story.
 
   overlaps:
     - stories: [story-function, story-fourier-heat-representation]
       relation: synthesis_candidate
       assessment: >
-        Both Stories independently narrate Fourier's broad trigonometric representation as the route into questions
-        about functions. Some repeated orientation is useful, but the current duplication is substantial enough that
-        the reader can encounter two near-independent explanations of the same hinge. The existing architecture
-        review already establishes this as an editorial synthesis problem, not a new historical research obligation.
+        Both Stories use the Fourier representation hinge. Some duplication is editorially real, but the current
+        Story-lane Network also amplifies the impression that they are competing parallel narratives. Reassess the
+        amount of Story editing after a Question-first Network projection is available.
 
     - stories: [story-cauchy-rigor-continuity, story-quantified-control]
       relation: historical_intersection
       assessment: >
-        The two paths meet around continuity, stronger convergence control, and Weierstrass's teaching tradition.
-        This intersection is historically and historiographically supported but does not establish a simple linear
-        transmission. A small synthesis/cross-navigation edit could make the relationship clearer without adding
-        new canonical claims.
+        The overlap is a real intersection with carefully limited historical claims. It is suitable for
+        cross-navigation rather than forced merger.
 
     - stories: [story-fourier-heat-representation, story-integrability, story-r008-uniqueness]
       relation: shared_path
       assessment: >
-        q-fourier-series-convergence is a productive shared junction: one Story reaches it from Fourier's
-        representation problem, one shows integrability does not settle it, and one branches from it to uniqueness.
-        This repeated orientation is useful because each Story asks a different downstream question; it should not
-        be collapsed into one reusable episode at this stage.
+        q-fourier-series-convergence is a useful shared junction. Repeated appearance is informative because each
+        Story leaves the junction in a different direction; it should not be collapsed into a reusable Episode yet.
 
     - stories: [story-integrability, story-lebesgue-integration]
       relation: historical_intersection
       assessment: >
-        The Riemann-to-Lebesgue handoff is stronger than mere chronology. R010 contains a historically reviewed,
-        high-certainty Question edge from the post-Riemann integration gap into limitations Lebesgue explicitly
-        sought to overcome. This is a mature cross-Story continuation and does not currently need additional
-        synthesis work.
+        The Riemann-to-Lebesgue handoff is stronger than chronology and is already mature enough to display as a
+        cross-Story continuation with its canonical perspective and certainty preserved.
 
     - stories: [story-r008-uniqueness, story-lebesgue-integration]
       relation: editorial_parallel
       assessment: >
-        Both Stories make point sets mathematically consequential, but in different historical settings: Cantor's
-        exceptional sets arise inside trigonometric-series uniqueness, while Jordan/Borel/Lebesgue develop set-size
-        machinery for integration. Current evidence does not support turning this mathematical parallel into a
-        direct Cantor-to-Borel-to-Lebesgue transmission chain.
+        Both make point sets mathematically consequential, but the current evidence does not support a direct
+        Cantor-to-Borel-to-Lebesgue transmission path. UI proximity must not imply that transmission.
 
     - stories: [story-r006-solvability, story-r009-factorization]
       relation: editorial_parallel
       assessment: >
-        These are complementary algebra trunks rather than a demonstrated lineage. R009 contains only a limited
-        local Galois intersection and preserves an explicit research gap against promoting a causal bridge. Their
-        present separation is an asset, not a defect requiring synthesis.
+        These are complementary algebra trunks, not a demonstrated lineage. Visual separation is acceptable and can
+        itself communicate the absence of a reviewed causal bridge.
 
   underused_material:
     - refs: [q-derived-set-structure, gap-r008-cantor-1872-1874-handoff]
       assessment: >
-        The 1872 derived-set endpoint is the clearest researched frontier with an explicitly registered next-spine
-        candidate. The material is intentionally underused because the transition into 1873-1874 cardinality work
-        has not yet been researched.
-
+        The strongest researched frontier with an explicitly registered next-spine candidate.
     - refs: [q-real-number-completeness]
       assessment: >
-        This Question appears only as the open boundary of quantified-control Story and has no developed Story path.
-        Because the existing canonical link is modern_abstraction with medium certainty, this is not yet an
-        automatic next Research Unit; it is a longer-range foundations candidate requiring a bounded historical
-        entry question.
-
-    - refs: [q-r006-later-abstraction, q-r009-historical-vs-modern]
-      assessment: >
-        Two algebra Stories independently stop at the boundary between nineteenth-century constructions and later
-        abstract algebra. The parallel is editorially useful, but there is not yet a sufficiently bounded common
-        historical Question to justify synthesizing them into one abstraction Story or allocating a Noether unit
-        solely from this forest review.
-
+        An open boundary supported only by a medium-certainty modern-abstraction relation, not an automatic next
+        historical step.
     - refs: [q-r007-intrinsic-geometry, gap-r007-story-riemann]
       assessment: >
-        Geometry ends at a strong Gauss endpoint but lacks the researched transmission into Riemann. The material is
-        not orphaned, but the trunk remains thin enough that a future geometry unit would materially improve forest
-        balance if the human chooses to deepen Geometry next.
-
+        A strong endpoint on a thin trunk; future geometry expansion requires research rather than a visual edge.
     - refs: [q-lebesgue-limit-processes, gap-r010-limit-theorem-handoff]
       assessment: >
-        R010 has opened a credible downstream analysis frontier, but later convergence theorems are intentionally
-        excluded from the current Story. This is a plausible future unit, not a repair to the R010 Story.
+        A credible future analysis frontier that is intentionally not resolved in the current Story.
+
+semantic_model_review:
+  finding: >
+    The accumulated data supports a heterogeneous historical graph rather than a single sequence of uniform nodes.
+    Question, Work, Concept, and Person are useful as distinct node types, while assertions carry much of the
+    historical meaning through predicate, perspective, certainty, period, and review status.
+
+  roles:
+    question:
+      role: reader_facing_problem_structure
+      assessment: >
+        Questions are the best default structural anchors because the Atlas is organized around how mathematical
+        problems are posed, reframed, generalized, branched, and left open. Question-to-Question relations can form
+        stable spines when those relations are canonical and their perspective is preserved.
+    work:
+      role: historical_intervention
+      assessment: >
+        Works should normally appear as dated interventions attached to a Question or Concept path rather than as
+        equal-width lanes. They answer who or what text changed the state of the problem at a historical moment.
+    concept:
+      role: mathematical_semantic_object
+      assessment: >
+        Concepts identify the mathematical object being introduced, reframed, generalized, or used. They can be
+        central at a local junction but should not be forced into the same narrative role as Questions.
+    person:
+      role: attribution_and_navigation
+      assessment: >
+        Persons are important attribution and navigation nodes but are usually not the primary topology of the
+        Network. Person proximity must not substitute for documentary transmission.
+    story:
+      role: editorial_path
+      assessment: >
+        A Story is not a canonical graph lane. It is a selected reading through existing graph material, with some
+        Story-local ordering and disposition. It should therefore be rendered as an overlay or highlighted path,
+        not used as the primary coordinate system.
+
+  edge_semantics:
+    principle: >
+      Nodes identify historical or mathematical objects; edges carry the claim about their relation. The visual
+      model should therefore assign stronger meaning to relation type and epistemic status than the current layout
+      does.
+    required_distinctions:
+      - predicate
+      - perspective
+      - certainty
+      - status
+    cautions:
+      - >
+        A solid visual continuation must not be inferred merely from chronology, spatial proximity, or shared Story
+        membership.
+      - >
+        later_interpretation and modern_abstraction edges must remain visibly distinguishable from historical edges.
+      - >
+        A missing edge is meaningful when the research intentionally preserves an unresolved transmission gap.
+
+network_projection_review:
+  current_model:
+    assessment: >
+      The current Network is Story-first. buildNetworkLayout assigns every Story an x-lane, places each displayed
+      item near the lane or the average of lanes for Stories that share it, and then draws each Story's links as a
+      colored overlay. This makes Story membership determine spatial position and causes shared Questions to move
+      horizontally for layout reasons rather than because the mathematical problem branched or converged.
+    consequences:
+      - >
+        Questions can appear to move right and left even when the underlying Question evolution is conceptually
+        continuous.
+      - >
+        Story paths become the strongest visible structure even though Stories are editorial readings of the graph.
+      - >
+        A shared item is visually pulled between Story lanes, making overlap look like topology.
+      - >
+        Story selection changes emphasis appropriately, but the unselected default already encodes Story structure
+        into node position.
+
+  target_model:
+    name: question_first_heterogeneous_graph
+    principles:
+      - >
+        Time remains the primary historical axis.
+      - >
+        Question topology supplies the default reader-facing spine and branch structure where canonical
+        Question-to-Question relations exist.
+      - >
+        Work and Concept nodes attach to that structure as historically meaningful interventions and semantic
+        objects; they need not occupy persistent lanes.
+      - >
+        Story membership must not determine node coordinates.
+      - >
+        Story selection highlights a route through the stable graph rather than rearranging the graph.
+      - >
+        Historical, later-interpretation, and modern-abstraction relations must be visually distinguishable.
+      - >
+        Unsupported intersections remain spatially or visually separate even when modern mathematics makes them
+        look related.
+
+  layout_semantics:
+    vertical_axis: time
+    horizontal_axis: topology_not_story
+    preferred_rules:
+      - relation: strong_continuation
+        display: preserve_horizontal_continuity_where_possible
+      - relation: branch
+        display: introduce_horizontal_divergence
+      - relation: convergence
+        display: allow_previously_separate_paths_to_meet
+      - relation: unresolved_or_absent
+        display: no_connecting_path
+      - relation: story_membership
+        display: no_position_effect
+
+  node_hierarchy:
+    default_primary: Question
+    contextual_secondary: [Work, Concept]
+    navigational_secondary: [Person]
+    overlay_only: Story
+    assessment: >
+      This is a display hierarchy, not a canonical-schema hierarchy. The canonical graph may remain heterogeneous
+      and rich while the default reader-facing projection uses progressive disclosure.
+
+  edge_hierarchy:
+    default_visible:
+      - historically_reviewed Question-to-Question relations
+      - selected high-value Work/Concept relations needed to understand the local Question path
+    expandable:
+      - broader assertion graph
+      - Person relations
+      - lower-certainty or historiographic context
+    visual_encoding_candidate:
+      historical: solid
+      later_interpretation: dashed
+      modern_abstraction: dotted_or_faint
+      certainty: opacity_or_weight_secondary_to_perspective
+      assessment: >
+        Exact encoding is an implementation choice, but perspective must not be hidden if the same visual edge
+        language would otherwise imply equal historical strength.
+
+ui_review:
+  information_architecture:
+    default_network: >
+      Show the Question forest first: stable historical time, visible branch points, and only enough Work/Concept
+      context to explain why Questions change.
+    story_selected: >
+      Keep the same node positions and graph topology. Highlight the Story route, dim unrelated material, and allow
+      the reader to open the Story narrative without converting the Network into Story lanes.
+    expanded_context: >
+      Reveal Work, Concept, Person, predicates, perspective, certainty, and evidence progressively rather than
+      placing all canonical material at equal visual weight from the start.
+    evidence_mode: >
+      Provide a higher-detail mode or sheet in which assertion predicate, perspective, certainty, status, and source
+      grounding are inspectable for an edge.
+
+  reader_model:
+    primary_question: What mathematical problem is changing here?
+    secondary_question: What historical work or concept changed the problem?
+    editorial_question: Which Story gives me a coherent way to read this path?
+    epistemic_question: How strong and historical is this connection?
+
+  assessment: >
+    This division aligns the UI with the research workflow: canonical research establishes heterogeneous nodes and
+    reviewed relations; editorial work selects Stories; the UI projects the graph without turning editorial Story
+    membership into historical topology.
 
 work_queue:
   - id: fw-001
     priority: P0
-    kind: editorial_synthesis
-    targets: [story-function, story-fourier-heat-representation]
-    research_burden: medium
+    kind: editorial_edit
+    targets: [network-view-layout, network-visual-semantics]
+    research_burden: none
     reason: >
-      Repair the broad entry of story-function and synthesize the duplicated Fourier hinge across the two Stories.
-      Preserve a short amount of repeated orientation, but decide which Story owns the fuller heat/representation
-      episode and where the reader should be handed into the function-concept path. This should happen before the
-      next numbered unit because it is the clearest current reader-facing structural defect.
+      Replace the Story-lane coordinate model with a Question-first heterogeneous graph projection. Story membership
+      must stop determining x-position; Stories should become overlays on a stable graph. This is a reader-facing
+      semantic defect, not cosmetic cleanup, because the current layout can make editorial membership look like
+      mathematical or historical topology.
     depends_on: []
 
   - id: fw-002
     priority: P1
     kind: editorial_synthesis
+    targets: [story-function, story-fourier-heat-representation]
+    research_burden: medium
+    reason: >
+      Reassess and then repair the broad function entry and duplicated Fourier hinge after the new Network
+      projection makes clear which duplication is genuinely narrative and which was amplified by Story-lane UI.
+    depends_on: [fw-001]
+
+  - id: fw-003
+    priority: P1
+    kind: editorial_synthesis
     targets: [story-cauchy-rigor-continuity, story-quantified-control]
     research_burden: none
     reason: >
-      Add explicit cross-navigation or a small synthesis at the uniform-convergence/Weierstrass intersection so the
-      two parallel rigor Stories read as intentionally related rather than accidentally overlapping. Existing
-      research is adequate; do not add a causal transmission claim.
-    depends_on: []
+      Add explicit cross-navigation at the uniform-convergence/Weierstrass intersection without adding a causal
+      transmission claim.
+    depends_on: [fw-001]
 
-  - id: fw-003
+  - id: fw-004
     priority: P1
     kind: supplementary_research
     targets: [gap-r008-heine-cantor-direction, gap-r008-riemann-schwarz-proof-chain]
     research_burden: medium
     reason: >
-      Tighten the immediate documentary and proof genealogy around Cantor's 1870 uniqueness entry. These gaps do
-      not block the existing R008 Story or the 1872-to-1874 candidate, but resolving them would strengthen the
-      historical boundary between the mature uniqueness spine and any future foundations continuation.
-    depends_on: []
-
-  - id: fw-004
-    priority: P1
-    kind: supplementary_research
-    targets: [gap-r010-cantor-borel-transmission]
-    research_burden: medium
-    reason: >
-      Test whether the visible R008/R010 point-set parallel has any direct documentary transmission. Until resolved,
-      preserve it as an editorial parallel and do not add Cantor-to-Borel or Cantor-to-Borel-to-Lebesgue causal
-      Story edges.
+      Tighten the documentary and proof genealogy around Cantor's uniqueness entry.
     depends_on: []
 
   - id: fw-005
     priority: P1
     kind: supplementary_research
-    targets: [gap-r007-story-riemann]
+    targets: [gap-r010-cantor-borel-transmission]
     research_burden: medium
     reason: >
-      Establish whether there is a documentable Gauss-to-Riemann transmission path and which intermediaries or
-      institutional channels matter. This is the smallest useful preparatory work if the human wants the next major
-      expansion to strengthen Geometry.
+      Test whether the visible R008/R010 point-set parallel has documentary transmission. Until resolved, the new
+      Network must preserve it as parallel structure rather than a direct historical edge.
     depends_on: []
 
   - id: fw-006
-    priority: P2
+    priority: P1
     kind: supplementary_research
-    targets: [gap-r009-kronecker-primary, gap-r009-edition-comparison]
+    targets: [gap-r007-story-riemann]
     research_burden: medium
     reason: >
-      Improve the less-developed alternative and revision strands inside the otherwise strong R009 Story. These are
-      valuable source-level refinements but do not currently affect forest structure enough to block new research.
+      Establish whether there is a documentable Gauss-to-Riemann transmission path before visually or editorially
+      connecting the geometry trunk downstream.
     depends_on: []
 
   - id: fw-007
     priority: P2
     kind: supplementary_research
-    targets: [gap-r003-lobachevsky-priority]
-    research_burden: light
+    targets: [gap-r009-kronecker-primary, gap-r009-edition-comparison]
+    research_burden: medium
     reason: >
-      Close the surviving priority-control gap around Dirichlet/Lobachevsky when convenient. The current Story
-      already avoids a first-modern-definition claim, so this is not a blocker for the function-entry repair.
+      Improve the less-developed alternative and revision strands inside R009.
     depends_on: []
 
   - id: fw-008
     priority: P2
-    kind: candidate_future_unit
-    targets: [cantor-cardinality-foundations]
-    research_burden: full_research
+    kind: supplementary_research
+    targets: [gap-r003-lobachevsky-priority]
+    research_burden: light
     reason: >
-      The R008 endpoint has the strongest explicitly registered next-spine candidate: research the historically
-      documented 1872-to-1873/1874 transition into countability, infinite totalities, and real algebraic numbers.
-      This candidate should compete at the human gate; no R-number is allocated here.
+      Close the surviving priority-control gap when convenient; current Stories already avoid the unsafe claim.
     depends_on: []
 
   - id: fw-009
     priority: P2
     kind: candidate_future_unit
+    targets: [cantor-cardinality-foundations]
+    research_burden: full_research
+    reason: >
+      Research the documented 1872-to-1873/1874 transition into countability and infinite totalities. This remains
+      the strongest prepared future-unit candidate but receives no R-number in this review.
+    depends_on: []
+
+  - id: fw-010
+    priority: P2
+    kind: candidate_future_unit
     targets: [gauss-riemann-metric-geometry]
     research_burden: full_research
     reason: >
-      A bounded Riemann-geometry unit would deepen the thinnest major trunk and test the transmission left open by
-      R007. It is structurally valuable but should not be selected merely to make the Network visually connected.
-    depends_on: [fw-005]
+      Deepen the thinnest major trunk if the transmission problem can be bounded historically.
+    depends_on: [fw-006]
 
-  - id: fw-010
+  - id: fw-011
     priority: P2
     kind: candidate_future_unit
     targets: [lebesgue-limit-theorems]
     research_burden: full_research
     reason: >
-      R010 opens a coherent downstream question about limit/interchange properties. A later unit could trace the
-      transition to named convergence theorems, but the candidate is newer and less urgent than the already
-      registered Cantor/cardinality handoff.
+      Trace the transition from Lebesgue's early limiting claims to later theorem forms without projecting named
+      convergence theorems backward.
     depends_on: []
 
 future_unit_candidates:
   - candidate_id: cantor-cardinality-foundations
     originating_gaps: [gap-r008-cantor-1872-1874-handoff]
     rationale: >
-      This candidate has the clearest current internal Question evolution: Cantor's 1872 derived-set work is
-      historically grounded, the next historical period is explicitly registered as an unresolved handoff, and the
-      roadmap reserved the candidate for decision at this checkpoint. It would extend the point-set/foundations
-      branch without pretending that Fourier series directly created set theory.
+      The strongest prepared internal Question continuation after R010, with a deliberately preserved historical
+      handoff rather than a Fourier-series-to-set-theory shortcut.
     readiness: strong_candidate
     blocked_by: []
 
   - candidate_id: gauss-riemann-metric-geometry
     originating_gaps: [gap-r007-story-riemann]
     rationale: >
-      Geometry is the thinnest major trunk after R010, and R007 deliberately leaves the Gauss-to-Riemann path open.
-      A future unit can be bounded around Riemann's higher-dimensional metric question while testing, rather than
-      assuming, the historical transmission from Gauss.
+      Structurally valuable for forest balance, but historical transmission must be tested rather than supplied by
+      visual proximity.
     readiness: plausible
     blocked_by: [gap-r007-story-riemann]
 
   - candidate_id: lebesgue-limit-theorems
     originating_gaps: [gap-r010-limit-theorem-handoff]
     rationale: >
-      R010 has opened the limit-process question with reviewed but medium-certainty later-interpreted support. The
-      later named convergence theorems therefore form a coherent research target, but the transition still needs
-      full historical reconstruction and is not an editorial correction to the current Lebesgue Story.
+      A coherent downstream analysis target opened by R010, but still requiring full historical reconstruction.
     readiness: plausible
     blocked_by: []
 
   - candidate_id: early-motion-mechanics-root
     originating_gaps: []
     rationale: >
-      The standing forest candidate themes identify Kepler/Galileo/Newton and mathematical dynamics as a useful
-      early root for calculus, differential equations, and mathematical physics. This would improve chronological
-      ancestry and external-context balance, but it does not currently arise from a persistent unresolved Story
-      handoff and therefore needs scope design before it is roadmap-ready.
+      Useful for chronological ancestry and external-context balance, but not yet defined by a persistent Story
+      handoff or bounded approved Question.
     readiness: not_ready
     blocked_by: []
 
   - candidate_id: later-abstract-algebra
     originating_gaps: []
     rationale: >
-      Both the solvability and ideal-factorization Stories stop before later abstract group/field/ring frameworks.
-      This makes abstract algebra an important long-range direction, but the present forest does not yet identify a
-      single bounded historical Question or actor sequence that would justify allocating the next unit directly to
-      Noether or another abstraction milestone.
+      Important long-range direction suggested by two algebra boundaries, but currently lacks a single bounded
+      historical Question sufficient for the next unit.
     readiness: not_ready
     blocked_by: []
 
 human_gate:
   required: true
   recommendation: >
-    Complete fw-001 before allocating the next Research Unit. The remaining P1 items can be selected according to
-    which future trunk the human wants to strengthen; none is required to preserve correctness of the current
-    Stories. Among numbered-unit candidates, cantor-cardinality-foundations is currently the strongest prepared
-    candidate, while gauss-riemann-metric-geometry is the strongest forest-balancing alternative.
+    Treat the Network projection repair as the only P0 action. Re-evaluate the Story-level synthesis queue against
+    the stable Question-first graph before editing Stories or allocating the next Research Unit. Keep R011
+    unassigned during this implementation and review pass.
   questions:
-    - Which editorial repairs should run before the next Research Unit?
-    - Which supplementary research items are worth doing now?
+    - Should the Question-first heterogeneous Network projection be implemented before any Story synthesis?
+    - After that projection, which Story overlaps remain genuine reader-facing duplication rather than UI amplification?
+    - Which supplementary research items are worth doing before extending a trunk?
     - Which candidate, if any, should receive the next roadmap-controlled R-number?
