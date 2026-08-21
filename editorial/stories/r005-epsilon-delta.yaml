@@ -22,6 +22,7 @@
         rather than a standard that earlier work either possessed or lacked.
       assertion_refs:
         - assertion-r005-bolzano-continuity
+        - assertion-r005-cauchy-continuity-language
         - assertion-r005-cauchy-handoff
       perspective: later_interpretation
       temporal_anchor: {from: 1817, to: 1821}
@@ -102,5 +103,5 @@
     - {from: quantified-3, to: quantified-4, type: branches}
     - {from: quantified-4, to: quantified-5, type: branches}
     - {from: quantified-4, to: quantified-6, type: branches}
-    - {from: quantified-5, to: quantified-6, type: converges}
+    - {from: quantified-5, to: quantified-6, type: branches}
     - {from: quantified-6, to: quantified-7, type: branches}
