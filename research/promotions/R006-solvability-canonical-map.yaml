@@ -7,6 +7,7 @@ canonical_entities:
     packet_refs: [{section: entities, id: person-ruffini}]
   - canonical_id: person-abel
     packet_refs: [{section: entities, id: person-abel}]
+    reused_from: data/entities/r002-cauchy.yaml
   - canonical_id: person-galois
     packet_refs: [{section: entities, id: person-galois}]
   - canonical_id: concept-solution-by-radicals
