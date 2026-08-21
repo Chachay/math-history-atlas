@@ -154,5 +154,27 @@
     "stories": [
       "story-r009-factorization"
     ]
+  },
+  {
+    "person": "person-lebesgue",
+    "name": "Henri Lebesgue",
+    "assertions": [],
+    "stories": []
+  },
+  {
+    "person": "person-jordan",
+    "name": "Camille Jordan",
+    "assertions": [
+      "assertion-r010-jordan-content"
+    ],
+    "stories": []
+  },
+  {
+    "person": "person-borel",
+    "name": "Émile Borel",
+    "assertions": [
+      "assertion-r010-borel-measure"
+    ],
+    "stories": []
   }
 ]

@@ -756,6 +756,121 @@
         "algebra",
         "number-theory"
       ]
+    },
+    {
+      "id": "person-lebesgue",
+      "type": "Person",
+      "name": "Henri Lebesgue",
+      "start_year": 1875,
+      "end_year": 1941,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-jordan",
+      "type": "Person",
+      "name": "Camille Jordan",
+      "start_year": 1838,
+      "end_year": 1922,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "person-borel",
+      "type": "Person",
+      "name": "Émile Borel",
+      "start_year": 1871,
+      "end_year": 1956,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-jordan-content",
+      "type": "Concept",
+      "name": "Jordan content for point sets",
+      "start_year": 1892,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-borel-measure",
+      "type": "Concept",
+      "name": "Borel measure of point sets",
+      "start_year": 1898,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-lebesgue-measure",
+      "type": "Concept",
+      "name": "Lebesgue measure",
+      "start_year": 1901,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-lebesgue-integral",
+      "type": "Concept",
+      "name": "Lebesgue integral",
+      "start_year": 1901,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "concept-measurable-set",
+      "type": "Concept",
+      "name": "Measurable set in early measure theory",
+      "start_year": 1898,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-jordan-integrals-1892",
+      "type": "Work",
+      "name": "Jordan on definite integrals",
+      "original_title": "Remarques sur les intégrales définies",
+      "start_year": 1892,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-borel-functions-1898",
+      "type": "Work",
+      "name": "Borel's lessons on the theory of functions",
+      "original_title": "Leçons sur la théorie des fonctions",
+      "start_year": 1898,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-lebesgue-generalization-1901",
+      "type": "Work",
+      "name": "Lebesgue's generalization of the definite integral",
+      "original_title": "Sur une généralisation de l'intégrale définie",
+      "start_year": 1901,
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "work-lebesgue-thesis-1902",
+      "type": "Work",
+      "name": "Lebesgue's thesis on integral, length, and area",
+      "original_title": "Intégrale, longueur, aire",
+      "start_year": 1902,
+      "fields": [
+        "analysis"
+      ]
     }
   ],
   "questions": [
@@ -1115,6 +1230,50 @@
       "fields": [
         "algebra",
         "number-theory"
+      ]
+    },
+    {
+      "id": "q-lebesgue-riemann-limitations",
+      "question": "Which limitations of Riemann integration did Lebesgue explicitly seek to overcome?",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-set-size-integration",
+      "question": "How can content or measure of point sets enter the construction of a broader integral?",
+      "period": {
+        "from": 1892,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-lebesgue-value-band-integration",
+      "question": "How can an integral be built by measuring sets of arguments associated with ranges of function values?",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "fields": [
+        "analysis"
+      ]
+    },
+    {
+      "id": "q-lebesgue-limit-processes",
+      "question": "What closure and limiting questions arise for the enlarged class of summable functions?",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "fields": [
+        "analysis"
       ]
     }
   ],
@@ -2948,6 +3107,240 @@
       "sources": [
         "source-r009-avigad-2004",
         "source-r009-sep-dedekind"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-riemann-limitation",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "raised_question",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-generalization-aim",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "generalized",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-jordan-content",
+      "subject": "person-jordan",
+      "predicate": "contributed_to",
+      "object": "concept-jordan-content",
+      "period": {
+        "from": 1892,
+        "to": 1892
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r010-jordan-1892",
+        "source-r010-hawkins-1979",
+        "source-r010-eom-jordan-measure"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-borel-measure",
+      "subject": "person-borel",
+      "predicate": "contributed_to",
+      "object": "concept-borel-measure",
+      "period": {
+        "from": 1898,
+        "to": 1898
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-borel-1898",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-lebesgue-measure",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "generalized",
+      "object": "concept-lebesgue-measure",
+      "period": {
+        "from": 1901,
+        "to": 1902
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-lebesgue-1902"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-value-band-integral",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "contributed_to",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-thesis-development",
+      "subject": "work-lebesgue-thesis-1902",
+      "predicate": "contributed_to",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1902,
+        "to": 1902
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1902",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-borel-context",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "contributed_to",
+      "object": "concept-measurable-set",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-borel-1898"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-modern-riemann-containment",
+      "subject": "concept-lebesgue-integral",
+      "predicate": "generalized",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-kahane-2001"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-limit-properties",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "contributed_to",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "medium",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-riemann-to-lebesgue-question",
+      "subject": "q-post-riemann-integration-gap",
+      "predicate": "contributed_to",
+      "object": "q-lebesgue-riemann-limitations",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-lines-converge",
+      "subject": "q-lebesgue-riemann-limitations",
+      "predicate": "contributed_to",
+      "object": "q-set-size-integration",
+      "period": {
+        "from": 1892,
+        "to": 1901
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r010-jordan-1892",
+        "source-r010-borel-1898",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-set-size-to-value-band",
+      "subject": "q-set-size-integration",
+      "predicate": "contributed_to",
+      "object": "q-lebesgue-value-band-integration",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed"
+    },
+    {
+      "id": "assertion-r010-value-band-to-limits",
+      "subject": "q-lebesgue-value-band-integration",
+      "predicate": "contributed_to",
+      "object": "q-lebesgue-limit-processes",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-hawkins-1979"
       ],
       "status": "historically_reviewed"
     }
