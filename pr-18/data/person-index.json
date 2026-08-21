@@ -84,5 +84,25 @@
     "name": "Eduard Heine",
     "assertions": [],
     "stories": []
+  },
+  {
+    "person": "person-lagrange",
+    "name": "Joseph-Louis Lagrange",
+    "assertions": [],
+    "stories": []
+  },
+  {
+    "person": "person-ruffini",
+    "name": "Paolo Ruffini",
+    "assertions": [],
+    "stories": []
+  },
+  {
+    "person": "person-galois",
+    "name": "Évariste Galois",
+    "assertions": [
+      "assertion-r006-galois-later-group-history"
+    ],
+    "stories": []
   }
 ]

@@ -688,5 +688,131 @@
         "type": "branches"
       }
     ]
+  },
+  {
+    "id": "story-r006-solvability",
+    "title": "Why can some equations be solved by radicals and others cannot?",
+    "steps": [
+      {
+        "id": "solvability-1",
+        "ref": "q-r006-general-radical-formula",
+        "role": "Problem",
+        "narrative": "By the late eighteenth century, the concrete algebraic problem was to understand general solution procedures for polynomial equations, especially why formulas known for lower degrees worked as they did. Lagrange approached this problem by comparing those formulas rather than by starting from an abstract theory of groups.\n",
+        "assertion_refs": [
+          "assertion-r006-lagrange-formula-question",
+          "assertion-r006-lagrange-resolvents"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1770,
+          "to": 1771
+        }
+      },
+      {
+        "id": "solvability-2",
+        "ref": "work-lagrange-reflexions",
+        "role": "Structural clue",
+        "narrative": "Lagrange examined functions of the roots under permutations and counted how many distinct values they could take. In his equation-solving program this helped explain the lower-degree resolvents appearing in successful cubic and quartic methods; describing the calculation with later subgroup language would be a retrospective modernization.\n",
+        "assertion_refs": [
+          "assertion-r006-lagrange-resolvents",
+          "assertion-r006-lagrange-permutations",
+          "assertion-r006-permutation-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1770,
+          "to": 1771
+        }
+      },
+      {
+        "id": "solvability-3",
+        "ref": "work-abel-1824",
+        "role": "Negative result",
+        "narrative": "Abel's 1824 memoir ruled out a general radical formula for the general quintic, and his 1826 paper expanded the impossibility result to general equations above degree four. This does not say that every individual quintic is unsolvable by radicals; the theorem concerns the general-formula problem.\n",
+        "assertion_refs": [
+          "assertion-r006-abel-general-quintic",
+          "assertion-r006-abel-higher-degree",
+          "assertion-r006-abel-impossibility-question"
+        ],
+        "perspective": "historical",
+        "temporal_anchor": {
+          "from": 1824,
+          "to": 1826
+        }
+      },
+      {
+        "id": "solvability-4",
+        "ref": "q-r006-particular-solvability",
+        "role": "Reframed question",
+        "narrative": "Once a universal radical formula is separated from the solvability of particular equations, a different question becomes visible: what conditions distinguish equations that are solvable by radicals from those that are not? The Atlas treats this as a retrospective problem transition, not as evidence that Abel directly motivated Galois's earliest work.\n",
+        "assertion_refs": [
+          "assertion-r006-abel-impossibility-question",
+          "assertion-r006-particular-solvability-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1824,
+          "to": 1831
+        }
+      },
+      {
+        "id": "solvability-5",
+        "ref": "work-galois-resolubilite",
+        "role": "Structural response",
+        "narrative": "Galois's surviving 1831 memoir sought conditions characterizing solvability by radicals and made permutations of roots central to the argument. It associates an equation with a groupe of permutations and studies substitutions acting on functions of the roots, but those historical notions should not be collapsed into the later abstract group concept or the modern textbook solvable-group theorem.\n",
+        "assertion_refs": [
+          "assertion-r006-galois-reframing",
+          "assertion-r006-galois-substitution-structure",
+          "assertion-r006-galois-root-permutations"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1831,
+          "to": 1831
+        }
+      },
+      {
+        "id": "solvability-6",
+        "ref": "q-r006-later-abstraction",
+        "role": "Remaining gap",
+        "narrative": "Galois's work became one important source for later group-theoretic algebra, but the abstract group concept and mature field framework emerged through later work and multiple mathematical traditions. The 1846 posthumous publication is therefore a publication milestone, not the moment at which modern abstract algebra was already fully formed or immediately understood.\n",
+        "assertion_refs": [
+          "assertion-r006-galois-later-group-history",
+          "assertion-r006-later-abstraction-question"
+        ],
+        "perspective": "later_interpretation",
+        "temporal_anchor": {
+          "from": 1846,
+          "to": 1900
+        }
+      }
+    ],
+    "links": [
+      {
+        "from": "solvability-1",
+        "to": "solvability-2",
+        "type": "continues"
+      },
+      {
+        "from": "solvability-2",
+        "to": "solvability-3",
+        "type": "branches"
+      },
+      {
+        "from": "solvability-3",
+        "to": "solvability-4",
+        "type": "branches"
+      },
+      {
+        "from": "solvability-4",
+        "to": "solvability-5",
+        "type": "branches"
+      },
+      {
+        "from": "solvability-5",
+        "to": "solvability-6",
+        "type": "branches"
+      }
+    ]
   }
 ]
