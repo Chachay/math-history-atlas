@@ -50,6 +50,7 @@ def collect_status(unit_id: str) -> tuple[list[str], bool]:
     resolution_file = _one(ROOT / "research/resolutions", f"{unit_id}-*-resolution.yaml")
     promotion_file = _one(ROOT / "research/promotions", f"{unit_id}-*-promotion.yaml")
     canonical_map = _one(ROOT / "research/promotions", f"{unit_id}-*-canonical-map.yaml")
+    post_promotion = promotion_file is not None
 
     packet = _load(packet_file)
     review = _load(review_file)
@@ -71,7 +72,11 @@ def collect_status(unit_id: str) -> tuple[list[str], bool]:
 
     review_valid = False
     if review is not None and packet is not None:
-        errors = validate_review(review, packet)
+        errors = validate_review(
+            review,
+            packet,
+            require_current_targets=not post_promotion,
+        )
         review_valid = not errors
         if errors:
             structurally_invalid = True
@@ -83,7 +88,11 @@ def collect_status(unit_id: str) -> tuple[list[str], bool]:
                 if isinstance(row, dict):
                     key = str(row.get("classification", "UNKNOWN"))
                     counts[key] = counts.get(key, 0) + 1
-            summary = " / ".join(f"{key} {counts[key]}" for key in ("PASS", "REVISE", "WEAK_EVIDENCE", "REJECT") if key in counts)
+            summary = " / ".join(
+                f"{key} {counts[key]}"
+                for key in ("PASS", "REVISE", "WEAK_EVIDENCE", "REJECT")
+                if key in counts
+            )
             lines.append(f"Critic      ✓ {summary or 'reviewed'}")
     elif review is not None:
         structurally_invalid = True
@@ -94,7 +103,12 @@ def collect_status(unit_id: str) -> tuple[list[str], bool]:
     resolution_valid = False
     integrity_bound = False
     if resolution is not None and packet is not None and review is not None:
-        errors = validate_resolution_semantics(packet, review, resolution)
+        errors = validate_resolution_semantics(
+            packet,
+            review,
+            resolution,
+            require_current_targets=not post_promotion,
+        )
         resolution_valid = not errors
         if errors:
             structurally_invalid = True
@@ -123,7 +137,7 @@ def collect_status(unit_id: str) -> tuple[list[str], bool]:
         lines.append("Resolution  —")
         lines.append("Integrity   —")
 
-    lines.append(f"Promotion   {_mark(promotion_file is not None and integrity_bound)}")
+    lines.append(f"Promotion   {_mark(promotion_file is not None)}")
     lines.append(f"Canonical   {_mark(canonical_map is not None)}")
 
     story_ids: list[str] = []
@@ -160,7 +174,7 @@ def collect_status(unit_id: str) -> tuple[list[str], bool]:
         lines.append("STOP: structurally invalid state")
     elif review_valid and resolution is None:
         lines.append("STOP: human resolution required")
-    elif resolution_valid and not integrity_bound:
+    elif resolution_valid and not integrity_bound and not post_promotion:
         lines.append("NEXT: bind resolution")
     elif integrity_bound and canonical_map is None:
         lines.append("NEXT: verified/canonical promotion")
