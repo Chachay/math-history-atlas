@@ -1,0 +1,12 @@
+- id: state-r007-surface-curvature-pre-gauss
+  concept_id: concept-surface-curvature
+  period: {from: 1760, to: 1795}
+  label: Normal-section and analytic surface curvature before Gauss
+- id: state-r007-surface-curvature-gauss
+  concept_id: concept-surface-curvature
+  period: {from: 1827, to: 1827}
+  label: Gauss's measure of curvature through the spherical image and metric formulas
+- id: state-r007-intrinsic-gauss
+  concept_id: concept-intrinsic-surface-geometry
+  period: {from: 1827, to: 1827}
+  label: Deformation-independent relations in Gauss's surface theory
