@@ -1,0 +1,41 @@
+research_unit_id: R008
+packet: R008-cantor-uniqueness-point-sets.yaml
+review: R008-cantor-uniqueness-point-sets-review.yaml
+decisions:
+- review_key: finding:hr-r008-riemann-intermediary
+  kind: assertions
+  item_id: r008-a009
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: >
+    Accepted with the gap preserved. Keep Riemann as researched background/intermediary, but do not promote a canonical contributed_to edge until a proof-level locator identifies the precise Riemann result and Schwarz step used in Cantor's 1870 proof.
+- review_key: finding:hr-r008-a011-predicate
+  kind: assertions
+  item_id: r008-a011
+  critic_classification: REVISE
+  decision: accept_critic
+  note: >
+    Accepted. Remove the contributed_to assertion between Cantor's 1872 and 1874 work; the researched evidence supports a developing trajectory but not that causal machine predicate.
+- review_key: finding:hr-r008-qt005-scope
+  kind: question_transitions
+  item_id: r008-qt005
+  critic_classification: REJECT
+  decision: accept_critic
+  note: >
+    Accepted. Remove the downstream transition to later infinite-set structure. Treat the 1873-1874 stage as a separate research handoff rather than a canonical R008 transition.
+- review_key: finding:hr-r008-r003-intersection
+  kind: intersection_candidates
+  item_id: r008-i002
+  critic_classification: WEAK_EVIDENCE
+  decision: accept_critic
+  note: >
+    Accepted. Retain only a Network-level conceptual intersection with R003 concerning trigonometric representation; assert no direct historical Dirichlet-function-concept to Cantor-uniqueness transmission.
+- review_key: finding:hr-r008-heine-year
+  kind: sources
+  item_id: src-heine-1870
+  critic_classification: REVISE
+  decision: accept_critic
+  note: >
+    Accepted. Use 1870 as the journal issue/standard citation year while explicitly preserving the EuDML 1869 metadata discrepancy; infer no more precise appearance date.
+resolution_date: '2026-08-21'
+resolution_status: human_approved_pending_integrity_binding
