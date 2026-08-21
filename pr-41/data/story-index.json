@@ -1360,8 +1360,8 @@
     "links": [
       {
         "from": "lebesgue-1",
-        "to": "lebesgue-2",
-        "type": "branches"
+        "to": "lebesgue-3",
+        "type": "converges"
       },
       {
         "from": "lebesgue-2",
@@ -1384,7 +1384,7 @@
         "type": "continues"
       },
       {
-        "from": "lebesgue-6",
+        "from": "lebesgue-5",
         "to": "lebesgue-7",
         "type": "branches"
       }
