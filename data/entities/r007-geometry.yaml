@@ -1,0 +1,38 @@
+- id: person-monge
+  type: Person
+  name: Gaspard Monge
+  start_year: 1746
+  end_year: 1818
+  fields: [geometry]
+- id: person-gauss
+  type: Person
+  name: Carl Friedrich Gauss
+  start_year: 1777
+  end_year: 1855
+  fields: [geometry]
+- id: concept-surface-curvature
+  type: Concept
+  name: Curvature of a surface
+  start_year: 1760
+  fields: [geometry]
+- id: concept-surface-applicability
+  type: Concept
+  name: Applicability and metric-preserving development of surfaces
+  start_year: 1827
+  fields: [geometry]
+- id: concept-intrinsic-surface-geometry
+  type: Concept
+  name: Geometry determined within a surface
+  start_year: 1827
+  fields: [geometry]
+- id: result-theorema-egregium
+  type: Result
+  name: Theorema Egregium
+  start_year: 1827
+  fields: [geometry]
+- id: work-gauss-disquisitiones-surfaces
+  type: Work
+  name: General Investigations of Curved Surfaces
+  original_title: Disquisitiones generales circa superficies curvas
+  start_year: 1827
+  fields: [geometry]
