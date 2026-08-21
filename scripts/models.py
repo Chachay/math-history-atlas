@@ -20,6 +20,9 @@ class Entity(BaseModel):
     id: str; type: EntityType; name: str
     start_year: int | None = None; end_year: int | None = None
     fields: list[str] = []
+    # `name` is the reader-facing English UI label. For historically important
+    # non-English work titles, preserve the source-language title separately.
+    original_title: str | None = None
 
 class Question(BaseModel):
     id: str; question: str; period: Period; fields: list[str] = []
