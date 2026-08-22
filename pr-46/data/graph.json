@@ -3343,6 +3343,246 @@
         "source-r010-hawkins-1979"
       ],
       "status": "historically_reviewed"
+    },
+    {
+      "id": "projection-q-fourier-series-convergence-to-q-dirichlet-admissible-functions",
+      "subject": "q-fourier-series-convergence",
+      "predicate": "story_path",
+      "object": "q-dirichlet-admissible-functions",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-function"
+      ]
+    },
+    {
+      "id": "projection-q-heat-propagation-to-q-trig-representation-scope",
+      "subject": "q-heat-propagation",
+      "predicate": "story_path",
+      "object": "q-trig-representation-scope",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-fourier-heat-representation"
+      ]
+    },
+    {
+      "id": "projection-q-trig-representation-scope-to-q-fourier-series-convergence",
+      "subject": "q-trig-representation-scope",
+      "predicate": "story_path",
+      "object": "q-fourier-series-convergence",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-fourier-heat-representation"
+      ]
+    },
+    {
+      "id": "projection-q-fourier-series-convergence-to-q-what-is-function",
+      "subject": "q-fourier-series-convergence",
+      "predicate": "story_path",
+      "object": "q-what-is-function",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-fourier-heat-representation"
+      ]
+    },
+    {
+      "id": "projection-q-cauchy-rigor-to-q-continuity-under-limits",
+      "subject": "q-cauchy-rigor",
+      "predicate": "story_path",
+      "object": "q-continuity-under-limits",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-cauchy-rigor-continuity"
+      ]
+    },
+    {
+      "id": "projection-q-continuity-under-limits-to-q-uniform-convergence-emergence",
+      "subject": "q-continuity-under-limits",
+      "predicate": "story_path",
+      "object": "q-uniform-convergence-emergence",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-cauchy-rigor-continuity"
+      ]
+    },
+    {
+      "id": "projection-q-dirichlet-admissible-functions-to-q-fourier-series-convergence",
+      "subject": "q-dirichlet-admissible-functions",
+      "predicate": "story_path",
+      "object": "q-fourier-series-convergence",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-integrability"
+      ]
+    },
+    {
+      "id": "projection-q-fourier-series-convergence-to-q-post-riemann-integration-gap",
+      "subject": "q-fourier-series-convergence",
+      "predicate": "story_path",
+      "object": "q-post-riemann-integration-gap",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-integrability"
+      ]
+    },
+    {
+      "id": "projection-q-quantified-limit-control-to-q-epsilon-delta-circulation",
+      "subject": "q-quantified-limit-control",
+      "predicate": "story_path",
+      "object": "q-epsilon-delta-circulation",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-quantified-control"
+      ]
+    },
+    {
+      "id": "projection-q-quantified-limit-control-to-q-uniform-convergence-emergence",
+      "subject": "q-quantified-limit-control",
+      "predicate": "story_path",
+      "object": "q-uniform-convergence-emergence",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-quantified-control"
+      ]
+    },
+    {
+      "id": "projection-q-uniform-convergence-emergence-to-q-epsilon-delta-circulation",
+      "subject": "q-uniform-convergence-emergence",
+      "predicate": "story_path",
+      "object": "q-epsilon-delta-circulation",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-quantified-control"
+      ]
+    },
+    {
+      "id": "projection-q-epsilon-delta-circulation-to-q-real-number-completeness",
+      "subject": "q-epsilon-delta-circulation",
+      "predicate": "story_path",
+      "object": "q-real-number-completeness",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-quantified-control"
+      ]
+    },
+    {
+      "id": "projection-q-r006-general-radical-formula-to-q-r006-particular-solvability",
+      "subject": "q-r006-general-radical-formula",
+      "predicate": "story_path",
+      "object": "q-r006-particular-solvability",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-r006-solvability"
+      ]
+    },
+    {
+      "id": "projection-q-r006-particular-solvability-to-q-r006-later-abstraction",
+      "subject": "q-r006-particular-solvability",
+      "predicate": "story_path",
+      "object": "q-r006-later-abstraction",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-r006-solvability"
+      ]
+    },
+    {
+      "id": "projection-q-r007-surface-curvature-to-q-r007-surface-development",
+      "subject": "q-r007-surface-curvature",
+      "predicate": "story_path",
+      "object": "q-r007-surface-development",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-r007-intrinsic-geometry"
+      ]
+    },
+    {
+      "id": "projection-q-r007-surface-development-to-q-r007-intrinsic-geometry",
+      "subject": "q-r007-surface-development",
+      "predicate": "story_path",
+      "object": "q-r007-intrinsic-geometry",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-r007-intrinsic-geometry"
+      ]
+    },
+    {
+      "id": "projection-q-fourier-series-convergence-to-q-exceptional-set-uniqueness",
+      "subject": "q-fourier-series-convergence",
+      "predicate": "story_path",
+      "object": "q-exceptional-set-uniqueness",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-r008-uniqueness"
+      ]
+    },
+    {
+      "id": "projection-q-r009-factorization-replacement-to-q-r009-changing-ideal-concept",
+      "subject": "q-r009-factorization-replacement",
+      "predicate": "story_path",
+      "object": "q-r009-changing-ideal-concept",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-r009-factorization"
+      ]
+    },
+    {
+      "id": "projection-q-r009-changing-ideal-concept-to-q-r009-historical-vs-modern",
+      "subject": "q-r009-changing-ideal-concept",
+      "predicate": "story_path",
+      "object": "q-r009-historical-vs-modern",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-r009-factorization"
+      ]
+    },
+    {
+      "id": "projection-q-post-riemann-integration-gap-to-q-lebesgue-value-band-integration",
+      "subject": "q-post-riemann-integration-gap",
+      "predicate": "story_path",
+      "object": "q-lebesgue-value-band-integration",
+      "perspective": "editorial_projection",
+      "certainty": "not_applicable",
+      "status": "editorial_projection",
+      "projection_stories": [
+        "story-lebesgue-integration"
+      ]
     }
   ]
 }
