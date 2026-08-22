@@ -1,0 +1,24 @@
+- id: state-r010-jordan-content-1892
+  concept_id: concept-jordan-content
+  period: {from: 1892, to: 1892}
+  label: Jordan assigns content to point sets in his 1892 treatment of definite integrals; later measure-zero boundary formulations are not part of this historical state.
+- id: state-r010-borel-measure-1898
+  concept_id: concept-borel-measure
+  period: {from: 1898, to: 1898}
+  label: Borel extends length from intervals to a wider family of point sets using countable set operations, without later abstract sigma-algebra terminology.
+- id: state-r010-measurable-set-1898-1901
+  concept_id: concept-measurable-set
+  period: {from: 1898, to: 1901}
+  label: Borel's measurable-set construction uses countable set operations, and Lebesgue's 1901 note explicitly invokes Borel measurable sets in its measure-and-integration construction.
+- id: state-r010-lebesgue-measure-1901
+  concept_id: concept-lebesgue-measure
+  period: {from: 1901, to: 1901}
+  label: Lebesgue defines measure of point sets through countable open coverings in the 1901 note, before later outer-measure and completion terminology.
+- id: state-r010-lebesgue-integral-1901
+  concept_id: concept-lebesgue-integral
+  period: {from: 1901, to: 1901}
+  label: Lebesgue subdivides the range of function values, measures the corresponding sets of arguments, and forms sums from those measures to define the generalized integral.
+- id: state-r010-lebesgue-integral-1902
+  concept_id: concept-lebesgue-integral
+  period: {from: 1902, to: 1902}
+  label: Lebesgue's thesis develops measure of sets before integration and gives a fuller systematic development of the generalized integral introduced in 1901.
