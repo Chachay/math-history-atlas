@@ -41,6 +41,11 @@
   name: Measurable set in early measure theory
   start_year: 1898
   fields: [analysis]
+- id: problem-r010-riemann-primitive-gap
+  type: Problem
+  name: Recovering primitives beyond the Riemann-integrable derivative class
+  start_year: 1901
+  fields: [analysis]
 - id: work-jordan-integrals-1892
   type: Work
   name: Jordan on definite integrals

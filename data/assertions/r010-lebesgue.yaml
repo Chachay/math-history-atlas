@@ -124,3 +124,151 @@
   certainty: medium
   sources: [source-r010-lebesgue-1901, source-r010-hawkins-1979]
   status: historically_reviewed
+
+# V2 precise semantic claims. Jordan remains a separate predecessor cluster;
+# the only direct Borel -> Lebesgue historical handoff encoded here is the
+# explicit citation/use supported by Lebesgue's 1901 note.
+- id: assertion-r010-v2-jordan-authored-1892
+  subject: person-jordan
+  predicate: authored
+  object: work-jordan-integrals-1892
+  period: {from: 1892, to: 1892}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-jordan-1892]
+  status: historically_reviewed
+- id: assertion-r010-v2-borel-authored-1898
+  subject: person-borel
+  predicate: authored
+  object: work-borel-functions-1898
+  period: {from: 1898, to: 1898}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-borel-1898]
+  status: historically_reviewed
+- id: assertion-r010-v2-lebesgue-authored-1901
+  subject: person-lebesgue
+  predicate: authored
+  object: work-lebesgue-generalization-1901
+  period: {from: 1901, to: 1901}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1901]
+  status: historically_reviewed
+- id: assertion-r010-v2-lebesgue-authored-1902
+  subject: person-lebesgue
+  predicate: authored
+  object: work-lebesgue-thesis-1902
+  period: {from: 1902, to: 1902}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1902]
+  status: historically_reviewed
+- id: assertion-r010-v2-jordan-uses-content-state
+  subject: work-jordan-integrals-1892
+  predicate: uses
+  object: state-r010-jordan-content-1892
+  period: {from: 1892, to: 1892}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-jordan-1892, source-r010-eom-jordan-measure]
+  status: historically_reviewed
+- id: assertion-r010-v2-borel-defines-measure-state
+  subject: work-borel-functions-1898
+  predicate: defines
+  object: state-r010-borel-measure-1898
+  period: {from: 1898, to: 1898}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-borel-1898, source-r010-hawkins-1979]
+  status: historically_reviewed
+- id: assertion-r010-v2-borel-defines-measurable-state
+  subject: work-borel-functions-1898
+  predicate: defines
+  object: state-r010-measurable-set-1898-1901
+  period: {from: 1898, to: 1898}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-borel-1898, source-r010-hawkins-1979]
+  status: historically_reviewed
+- id: assertion-r010-v2-lebesgue-addresses-riemann-gap
+  subject: work-lebesgue-generalization-1901
+  predicate: addresses
+  object: problem-r010-riemann-primitive-gap
+  period: {from: 1901, to: 1901}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1901]
+  status: historically_reviewed
+- id: assertion-r010-v2-riemann-gap-concerns-integral
+  subject: problem-r010-riemann-primitive-gap
+  predicate: concerns
+  object: r004-cs-riemann-integral-1854
+  period: {from: 1901, to: 1901}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1901]
+  status: historically_reviewed
+- id: assertion-r010-v2-lebesgue-cites-borel
+  subject: work-lebesgue-generalization-1901
+  predicate: cites
+  object: work-borel-functions-1898
+  period: {from: 1901, to: 1901}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1901, source-r010-borel-1898]
+  status: historically_reviewed
+- id: assertion-r010-v2-lebesgue-uses-measurable-state
+  subject: work-lebesgue-generalization-1901
+  predicate: uses
+  object: state-r010-measurable-set-1898-1901
+  period: {from: 1901, to: 1901}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1901, source-r010-borel-1898]
+  status: historically_reviewed
+- id: assertion-r010-v2-lebesgue-defines-measure-state
+  subject: work-lebesgue-generalization-1901
+  predicate: defines
+  object: state-r010-lebesgue-measure-1901
+  period: {from: 1901, to: 1901}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1901]
+  status: historically_reviewed
+- id: assertion-r010-v2-lebesgue-defines-integral-state
+  subject: work-lebesgue-generalization-1901
+  predicate: defines
+  object: state-r010-lebesgue-integral-1901
+  period: {from: 1901, to: 1901}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1901]
+  status: historically_reviewed
+- id: assertion-r010-v2-thesis-develops-1901
+  subject: work-lebesgue-thesis-1902
+  predicate: develops
+  object: work-lebesgue-generalization-1901
+  period: {from: 1902, to: 1902}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1902, source-r010-hawkins-1979]
+  status: historically_reviewed
+- id: assertion-r010-v2-thesis-defines-integral-state
+  subject: work-lebesgue-thesis-1902
+  predicate: defines
+  object: state-r010-lebesgue-integral-1902
+  period: {from: 1902, to: 1902}
+  perspective: historical
+  certainty: high
+  sources: [source-r010-lebesgue-1902, source-r010-hawkins-1979]
+  status: historically_reviewed
+- id: assertion-r010-v2-modern-lebesgue-generalizes-riemann
+  subject: concept-lebesgue-integral
+  predicate: generalizes
+  object: concept-riemann-integral
+  period: {from: 1901, to: null}
+  perspective: modern_abstraction
+  certainty: high
+  sources: [source-r010-lebesgue-1901, source-r010-kahane-2001]
+  status: historically_reviewed

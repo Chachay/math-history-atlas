@@ -19,6 +19,26 @@
   name: Derived set of a point set
   start_year: 1872
   fields: [analysis]
+- id: problem-r008-trig-series-uniqueness
+  type: Problem
+  name: Uniqueness under the 1870 hypotheses for convergent trigonometric representation
+  start_year: 1870
+  fields: [analysis]
+- id: result-r008-cantor-uniqueness-1870
+  type: Result
+  name: Cantor's 1870 uniqueness theorem for trigonometric series
+  start_year: 1870
+  fields: [analysis]
+- id: result-r008-cantor-finite-exception-1871
+  type: Result
+  name: Cantor's 1871 finite-exception uniqueness extension
+  start_year: 1871
+  fields: [analysis]
+- id: result-r008-cantor-derived-extension-1872
+  type: Result
+  name: Cantor's 1872 derived-set uniqueness extension
+  start_year: 1872
+  fields: [analysis]
 - id: work-heine-trig-1870
   type: Work
   name: Heine on trigonometric series
