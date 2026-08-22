@@ -1,0 +1,3836 @@
+{
+  "projection_version": 2,
+  "claims": [
+    {
+      "id": "assertion-fourier-authored-heat",
+      "subject": "person-fourier",
+      "predicate": "authored",
+      "object": "work-fourier-theorie",
+      "period": {
+        "from": 1822,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "published",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-cauchy-authored-cours",
+      "subject": "person-cauchy",
+      "predicate": "authored",
+      "object": "work-cauchy-cours",
+      "period": {
+        "from": 1821,
+        "to": 1821
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821"
+      ],
+      "status": "published",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-heat-to-convergence",
+      "subject": "q-heat-propagation",
+      "predicate": "spawned",
+      "object": "q-series-convergence",
+      "period": {
+        "from": 1807,
+        "to": 1830
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "candidate",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": false,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-fourier-series-function",
+      "subject": "concept-fourier-series",
+      "predicate": "reframed",
+      "object": "q-what-is-function",
+      "period": {
+        "from": 1807,
+        "to": 1850
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "candidate",
+      "subject_kind": "Concept",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": false,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r001-fourier-heat-problem",
+      "subject": "person-fourier",
+      "predicate": "contributed_to",
+      "object": "q-heat-propagation",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r001-heat-data-to-series",
+      "subject": "problem-heat-boundary-data",
+      "predicate": "motivated",
+      "object": "q-heat-prescribed-data",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Problem",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r001-series-representation-question",
+      "subject": "concept-fourier-series",
+      "predicate": "raised_question",
+      "object": "q-trig-representation-scope",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r001-arbitrary-function",
+      "subject": "concept-fourier-series",
+      "predicate": "contributed_to",
+      "object": "concept-arbitrary-function",
+      "period": {
+        "from": 1807,
+        "to": 1822
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r001-series-to-convergence",
+      "subject": "concept-fourier-series",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1822,
+        "to": 1829
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-fourier-1822",
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r001-dirichlet-convergence",
+      "subject": "person-dirichlet",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1829,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r001-function-concept",
+      "subject": "concept-fourier-series",
+      "predicate": "reframed",
+      "object": "q-what-is-function",
+      "period": {
+        "from": 1807,
+        "to": 1850
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-fourier-1822",
+        "source-kjeldsen-lutzen-2015"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-cauchy-rigor",
+      "subject": "work-cauchy-cours",
+      "predicate": "contributed_to",
+      "object": "q-cauchy-rigor",
+      "period": {
+        "from": 1821,
+        "to": 1821
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-bradley-sandifer-2009"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-cauchy-infinitesimal",
+      "subject": "person-cauchy",
+      "predicate": "contributed_to",
+      "object": "concept-infinitesimal",
+      "period": {
+        "from": 1821,
+        "to": 1823
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-cauchy-1823"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-cauchy-continuity",
+      "subject": "person-cauchy",
+      "predicate": "contributed_to",
+      "object": "concept-continuity",
+      "period": {
+        "from": 1821,
+        "to": 1823
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-bradley-sandifer-2009"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-cauchy-convergence",
+      "subject": "work-cauchy-cours",
+      "predicate": "contributed_to",
+      "object": "concept-convergence",
+      "period": {
+        "from": 1821,
+        "to": 1821
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-bradley-sandifer-2009"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-sum-continuity-problem",
+      "subject": "work-cauchy-cours",
+      "predicate": "contributed_to",
+      "object": "q-continuity-under-limits",
+      "period": {
+        "from": 1821,
+        "to": 1853
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-arsac-2013"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-periodic-fourier",
+      "subject": "work-cauchy-periodic-1827",
+      "predicate": "contributed_to",
+      "object": "concept-fourier-series",
+      "period": {
+        "from": 1826,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-periodic-series-1827"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-periodic-convergence",
+      "subject": "work-cauchy-periodic-1827",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1826,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-periodic-series-1827",
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-abel-continuity",
+      "subject": "work-abel-binomial-1826",
+      "predicate": "contributed_to",
+      "object": "q-continuity-under-limits",
+      "period": {
+        "from": 1826,
+        "to": 1826
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-arsac-2013"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-cauchy-1853-continuity",
+      "subject": "work-cauchy-series-1853",
+      "predicate": "contributed_to",
+      "object": "q-continuity-under-limits",
+      "period": {
+        "from": 1853,
+        "to": 1853
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1853",
+        "source-arsac-2013"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-cauchy-1853-uniform",
+      "subject": "work-cauchy-series-1853",
+      "predicate": "contributed_to",
+      "object": "concept-uniform-convergence",
+      "period": {
+        "from": 1853,
+        "to": 1853
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1853",
+        "source-arsac-2013"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-stokes-uniform",
+      "subject": "person-stokes",
+      "predicate": "contributed_to",
+      "object": "concept-uniform-convergence",
+      "period": {
+        "from": 1847,
+        "to": 1847
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-stokes-1847",
+        "source-arsac-2013"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-seidel-uniform",
+      "subject": "person-seidel",
+      "predicate": "contributed_to",
+      "object": "concept-uniform-convergence",
+      "period": {
+        "from": 1848,
+        "to": 1848
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-seidel-1848",
+        "source-arsac-2013"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r002-weierstrass-uniform",
+      "subject": "person-weierstrass",
+      "predicate": "contributed_to",
+      "object": "concept-uniform-convergence",
+      "period": {
+        "from": 1861,
+        "to": 1886
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-weierstrass-uniform-history"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-dirichlet-convergence",
+      "subject": "person-dirichlet",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1829,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-dirichlet-arbitrary-admissibility",
+      "subject": "work-dirichlet-1829",
+      "predicate": "reframed",
+      "object": "concept-arbitrary-function",
+      "period": {
+        "from": 1829,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-dirichlet-discontinuity",
+      "subject": "work-dirichlet-1829",
+      "predicate": "contributed_to",
+      "object": "concept-discontinuous-function",
+      "period": {
+        "from": 1829,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-dirichlet-integral-boundary",
+      "subject": "work-dirichlet-1829",
+      "predicate": "raised_question",
+      "object": "concept-integrability",
+      "period": {
+        "from": 1829,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-dirichlet-1837-function",
+      "subject": "work-dirichlet-1837",
+      "predicate": "contributed_to",
+      "object": "concept-function",
+      "period": {
+        "from": 1837,
+        "to": 1837
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1837"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-function-historiography",
+      "subject": "concept-fourier-series",
+      "predicate": "contributed_to",
+      "object": "q-what-is-function",
+      "period": {
+        "from": 1807,
+        "to": 1837
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829",
+        "source-youschkevitch-1976",
+        "source-kjeldsen-lutzen-2015"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-dirichlet-fourier-cauchy",
+      "subject": "work-dirichlet-1829",
+      "predicate": "contributed_to",
+      "object": "concept-fourier-series",
+      "period": {
+        "from": 1829,
+        "to": 1829
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-dirichlet-1829",
+        "source-cauchy-periodic-series-1827"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r003-downstream-admissibility",
+      "subject": "work-dirichlet-1837",
+      "predicate": "contributed_to",
+      "object": "q-dirichlet-admissible-functions",
+      "period": {
+        "from": 1837,
+        "to": 1837
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-dirichlet-1837",
+        "source-youschkevitch-1976"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-riemann-problem",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "concept-fourier-series",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-dirichlet-scope",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "q-fourier-series-convergence",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-integral-need",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "raised_question",
+      "object": "concept-integrability",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-integral-criterion",
+      "subject": "person-riemann",
+      "predicate": "contributed_to",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-integrability-relation",
+      "subject": "concept-riemann-integral",
+      "predicate": "contributed_to",
+      "object": "concept-integrability",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867",
+        "source-rowe-2026"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-discontinuous-example",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "concept-discontinuous-function",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-dirichlet-comparison",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "reframed",
+      "object": "concept-discontinuous-function",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867",
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-admissibility-handoff",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "q-dirichlet-admissible-functions",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867",
+        "source-dirichlet-1829"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-motivation-historiography",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "contributed_to",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-rowe-2026",
+        "source-mascre-2005"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-integrability-not-sufficient",
+      "subject": "work-riemann-trig-1854",
+      "predicate": "raised_question",
+      "object": "concept-fourier-series",
+      "period": {
+        "from": 1854,
+        "to": 1854
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-riemann-trig-1867"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r004-downstream-gap",
+      "subject": "concept-riemann-integral",
+      "predicate": "contributed_to",
+      "object": "q-post-riemann-integration-gap",
+      "period": {
+        "from": 1854,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-mascre-2005"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-bolzano-continuity",
+      "subject": "work-bolzano-1817",
+      "predicate": "contributed_to",
+      "object": "concept-continuity",
+      "period": {
+        "from": 1817,
+        "to": 1817
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-bolzano-1817",
+        "source-rusnock-sebestik-2019"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-cauchy-continuity-language",
+      "subject": "work-cauchy-cours",
+      "predicate": "contributed_to",
+      "object": "concept-continuity",
+      "period": {
+        "from": 1821,
+        "to": 1821
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-grabiner-1983"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-cauchy-inequality-control",
+      "subject": "work-cauchy-calcul-1823",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1823,
+        "to": 1823
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1823",
+        "source-grabiner-1983",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-weierstrass-1861-control",
+      "subject": "work-weierstrass-schwarz-notes-1861",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1861,
+        "to": 1861
+      },
+      "perspective": "historical",
+      "certainty": "medium",
+      "sources": [
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-weierstrass-uniformity",
+      "subject": "person-weierstrass",
+      "predicate": "contributed_to",
+      "object": "concept-uniform-convergence",
+      "period": {
+        "from": 1861,
+        "to": 1886
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-weierstrass-uniform-history"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-continuity-convergence-intersection",
+      "subject": "work-weierstrass-schwarz-notes-1861",
+      "predicate": "contributed_to",
+      "object": "concept-continuity",
+      "period": {
+        "from": 1861,
+        "to": 1861
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-sinkevich-2016",
+        "source-weierstrass-uniform-history"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-heine-published-control",
+      "subject": "work-heine-functionenlehre-1872",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-heine-1872",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-weierstrass-role",
+      "subject": "person-weierstrass",
+      "predicate": "contributed_to",
+      "object": "concept-quantified-control",
+      "period": {
+        "from": 1861,
+        "to": 1872
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-sinkevich-2016",
+        "source-weierstrass-uniform-history",
+        "source-heine-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-uniformity-intersection",
+      "subject": "work-weierstrass-schwarz-notes-1861",
+      "predicate": "contributed_to",
+      "object": "q-uniform-convergence-emergence",
+      "period": {
+        "from": 1861,
+        "to": 1861
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-weierstrass-uniform-history"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-cauchy-handoff",
+      "subject": "work-cauchy-cours",
+      "predicate": "contributed_to",
+      "object": "q-quantified-limit-control",
+      "period": {
+        "from": 1821,
+        "to": 1861
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-grabiner-1983",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-heine-circulation",
+      "subject": "work-heine-functionenlehre-1872",
+      "predicate": "contributed_to",
+      "object": "q-epsilon-delta-circulation",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-heine-1872",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r005-completeness-gap",
+      "subject": "concept-quantified-control",
+      "predicate": "contributed_to",
+      "object": "q-real-number-completeness",
+      "period": {
+        "from": 1872,
+        "to": 1880
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "medium",
+      "sources": [
+        "source-rusnock-sebestik-2019",
+        "source-sinkevich-2016"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "mathematical_retrospective",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-lagrange-resolvents",
+      "subject": "work-lagrange-reflexions",
+      "predicate": "contributed_to",
+      "object": "concept-resolvent",
+      "period": {
+        "from": 1770,
+        "to": 1771
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-lagrange-1770-1771",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-lagrange-permutations",
+      "subject": "work-lagrange-reflexions",
+      "predicate": "contributed_to",
+      "object": "concept-root-permutation",
+      "period": {
+        "from": 1770,
+        "to": 1771
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-lagrange-1770-1771",
+        "source-kiernan-1971",
+        "source-wussing-1984",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-abel-general-quintic",
+      "subject": "work-abel-1824",
+      "predicate": "contributed_to",
+      "object": "concept-solution-by-radicals",
+      "period": {
+        "from": 1824,
+        "to": 1824
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-abel-1824",
+        "source-gray-2018",
+        "source-kiernan-1971"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-abel-higher-degree",
+      "subject": "work-abel-1826",
+      "predicate": "generalized",
+      "object": "concept-solution-by-radicals",
+      "period": {
+        "from": 1826,
+        "to": 1826
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-abel-1826",
+        "source-gray-2018",
+        "source-kiernan-1971"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-galois-reframing",
+      "subject": "work-galois-resolubilite",
+      "predicate": "reframed",
+      "object": "concept-solution-by-radicals",
+      "period": {
+        "from": 1831,
+        "to": 1831
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-galois-1846",
+        "source-ehrhardt-bibnum",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-galois-substitution-structure",
+      "subject": "work-galois-resolubilite",
+      "predicate": "contributed_to",
+      "object": "concept-substitution-group",
+      "period": {
+        "from": 1831,
+        "to": 1846
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-galois-1846",
+        "source-ehrhardt-bibnum",
+        "source-kiernan-1971"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-galois-root-permutations",
+      "subject": "work-galois-resolubilite",
+      "predicate": "contributed_to",
+      "object": "concept-root-permutation",
+      "period": {
+        "from": 1831,
+        "to": 1846
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-galois-1846",
+        "source-ehrhardt-bibnum",
+        "source-kiernan-1971",
+        "source-wussing-1984"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-galois-later-group-history",
+      "subject": "person-galois",
+      "predicate": "contributed_to",
+      "object": "concept-substitution-group",
+      "period": {
+        "from": 1831,
+        "to": 1846
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-wussing-1984",
+        "source-kiernan-1971",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-lagrange-formula-question",
+      "subject": "work-lagrange-reflexions",
+      "predicate": "contributed_to",
+      "object": "q-r006-general-radical-formula",
+      "period": {
+        "from": 1770,
+        "to": 1771
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-lagrange-1770-1771",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-permutation-question",
+      "subject": "work-lagrange-reflexions",
+      "predicate": "contributed_to",
+      "object": "q-r006-permutation-structure",
+      "period": {
+        "from": 1770,
+        "to": 1771
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-lagrange-1770-1771",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-abel-impossibility-question",
+      "subject": "work-abel-1824",
+      "predicate": "contributed_to",
+      "object": "q-r006-general-impossibility",
+      "period": {
+        "from": 1824,
+        "to": 1824
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-abel-1824",
+        "source-abel-1826",
+        "source-kiernan-1971",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-particular-solvability-question",
+      "subject": "work-galois-resolubilite",
+      "predicate": "contributed_to",
+      "object": "q-r006-particular-solvability",
+      "period": {
+        "from": 1831,
+        "to": 1831
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-abel-1824",
+        "source-abel-1826",
+        "source-galois-1846",
+        "source-kiernan-1971"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r006-later-abstraction-question",
+      "subject": "work-galois-resolubilite",
+      "predicate": "contributed_to",
+      "object": "q-r006-later-abstraction",
+      "period": {
+        "from": 1846,
+        "to": 1900
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-kiernan-1971",
+        "source-wussing-1984",
+        "source-gray-2018"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-euler-surface-curvature",
+      "subject": "person-euler",
+      "predicate": "contributed_to",
+      "object": "concept-surface-curvature",
+      "period": {
+        "from": 1760,
+        "to": 1767
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-kline-1990",
+        "source-euler-dsb"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-monge-surface-theory",
+      "subject": "person-monge",
+      "predicate": "contributed_to",
+      "object": "concept-surface-curvature",
+      "period": {
+        "from": 1795,
+        "to": 1795
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-kline-1990",
+        "source-eom-differential-geometry"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-gauss-curvature-definition",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "concept-surface-curvature",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-gauss-curvature-ratio",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "concept-surface-curvature",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-gauss-development",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "concept-surface-applicability",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-gauss-metric-curvature-formula",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "result-theorema-egregium",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Result",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-egregium-invariance",
+      "subject": "result-theorema-egregium",
+      "predicate": "contributed_to",
+      "object": "concept-surface-applicability",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902",
+        "source-dombrowski-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Result",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-gauss-deformation-independent",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "concept-intrinsic-surface-geometry",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-egregium-modern-intrinsic",
+      "subject": "result-theorema-egregium",
+      "predicate": "contributed_to",
+      "object": "concept-intrinsic-surface-geometry",
+      "period": {
+        "from": 1827,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-dombrowski-1979",
+        "source-darrigol-2021"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Result",
+      "object_kind": "Concept",
+      "semantic_layer": "mathematical",
+      "claim_mode": "mathematical_retrospective",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-gauss-foundational-reading",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "concept-intrinsic-surface-geometry",
+      "period": {
+        "from": 1827,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-dombrowski-1979",
+        "source-kline-1990"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-geodesy-context",
+      "subject": "person-gauss",
+      "predicate": "contributed_to",
+      "object": "concept-surface-applicability",
+      "period": {
+        "from": 1818,
+        "to": 1827
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-kline-1990",
+        "source-dombrowski-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-curvature-question",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "q-r007-surface-curvature",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902",
+        "source-dombrowski-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-development-question",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "q-r007-surface-development",
+      "period": {
+        "from": 1827,
+        "to": 1827
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r007-intrinsic-question",
+      "subject": "work-gauss-disquisitiones-surfaces",
+      "predicate": "contributed_to",
+      "object": "q-r007-intrinsic-geometry",
+      "period": {
+        "from": 1827,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-gauss-1827-1902",
+        "source-dombrowski-1979",
+        "source-kline-1990"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-heine-uniqueness",
+      "subject": "work-heine-trig-1870",
+      "predicate": "raised_question",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-heine-1870",
+        "source-r008-halle-heine"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-cantor-1870-uniqueness",
+      "subject": "person-cantor",
+      "predicate": "contributed_to",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1870",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-cantor-1871-finite-exceptions",
+      "subject": "work-cantor-uniqueness-note-1871",
+      "predicate": "generalized",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1871",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-cantor-1872-exceptional-sets",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "generalized",
+      "object": "concept-exceptional-point-set",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-cantor-derived-set-definition",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "contributed_to",
+      "object": "concept-derived-set",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-exceptional-to-derived",
+      "subject": "concept-exceptional-point-set",
+      "predicate": "contributed_to",
+      "object": "concept-derived-set",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-1872-uniqueness-theorem",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "contributed_to",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-heine-cantor-context",
+      "subject": "person-heine",
+      "predicate": "contributed_to",
+      "object": "concept-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-r008-dauben-1979",
+        "source-r008-halle-heine",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-analytic-origin-reading",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "contributed_to",
+      "object": "concept-derived-set",
+      "period": {
+        "from": 1872,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r008-dauben-1979",
+        "source-r008-scoville-2012"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-modern-uniqueness-language",
+      "subject": "concept-derived-set",
+      "predicate": "contributed_to",
+      "object": "concept-exceptional-point-set",
+      "period": {
+        "from": 1872,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-r008-eom-uniqueness-set",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "mathematical",
+      "claim_mode": "mathematical_retrospective",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-convergence-to-uniqueness-question",
+      "subject": "q-fourier-series-convergence",
+      "predicate": "contributed_to",
+      "object": "q-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r008-heine-1870",
+        "source-r008-cantor-1870"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-uniqueness-to-exceptional-question",
+      "subject": "q-trig-series-uniqueness",
+      "predicate": "generalized",
+      "object": "q-exceptional-set-uniqueness",
+      "period": {
+        "from": 1871,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1871",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-exceptional-to-derived-question",
+      "subject": "q-exceptional-set-uniqueness",
+      "predicate": "contributed_to",
+      "object": "q-derived-set-structure",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r008-v2-heine-authored-1870",
+      "subject": "person-heine",
+      "predicate": "authored",
+      "object": "work-heine-trig-1870",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-heine-1870",
+        "source-r008-halle-heine"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-authored-1870",
+      "subject": "person-cantor",
+      "predicate": "authored",
+      "object": "work-cantor-uniqueness-1870",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1870"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-authored-1871",
+      "subject": "person-cantor",
+      "predicate": "authored",
+      "object": "work-cantor-uniqueness-note-1871",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1871"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-authored-1872",
+      "subject": "person-cantor",
+      "predicate": "authored",
+      "object": "work-cantor-extension-1872",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-heine-addresses-uniqueness",
+      "subject": "work-heine-trig-1870",
+      "predicate": "addresses",
+      "object": "problem-r008-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-heine-1870",
+        "source-r008-halle-heine"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Problem",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-uniqueness-problem-concerns-state",
+      "subject": "problem-r008-trig-series-uniqueness",
+      "predicate": "concerns",
+      "object": "state-r008-uniqueness-1870",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-heine-1870",
+        "source-r008-cantor-1870"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Problem",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1870-proves",
+      "subject": "work-cantor-uniqueness-1870",
+      "predicate": "proves",
+      "object": "result-r008-cantor-uniqueness-1870",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1870"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Result",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1870-resolves",
+      "subject": "result-r008-cantor-uniqueness-1870",
+      "predicate": "resolves",
+      "object": "problem-r008-trig-series-uniqueness",
+      "period": {
+        "from": 1870,
+        "to": 1870
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1870"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Result",
+      "object_kind": "Problem",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1871-proves",
+      "subject": "work-cantor-uniqueness-note-1871",
+      "predicate": "proves",
+      "object": "result-r008-cantor-finite-exception-1871",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1871",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Result",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1871-strengthens-1870",
+      "subject": "result-r008-cantor-finite-exception-1871",
+      "predicate": "strengthens",
+      "object": "result-r008-cantor-uniqueness-1870",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1871",
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Result",
+      "object_kind": "Result",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1872-defines-derived",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "defines",
+      "object": "state-r008-derived-1872",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1872-uses-exceptional-state",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "uses",
+      "object": "state-r008-exceptional-1872",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1872-proves",
+      "subject": "work-cantor-extension-1872",
+      "predicate": "proves",
+      "object": "result-r008-cantor-derived-extension-1872",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Result",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1872-strengthens-1871",
+      "subject": "result-r008-cantor-derived-extension-1872",
+      "predicate": "strengthens",
+      "object": "result-r008-cantor-finite-exception-1871",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Result",
+      "object_kind": "Result",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1872-depends-derived",
+      "subject": "result-r008-cantor-derived-extension-1872",
+      "predicate": "depends_on",
+      "object": "state-r008-derived-1872",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Result",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r008-v2-cantor-1872-depends-exceptional",
+      "subject": "result-r008-cantor-derived-extension-1872",
+      "predicate": "depends_on",
+      "object": "state-r008-exceptional-1872",
+      "period": {
+        "from": 1872,
+        "to": 1872
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r008-cantor-1872"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Result",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "result_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r009-kummer-ideal-divisors",
+      "subject": "work-kummer-1847-complex-numbers",
+      "predicate": "contributed_to",
+      "object": "concept-ideal-divisor",
+      "period": {
+        "from": 1846,
+        "to": 1847
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r009-kummer-1847",
+        "source-r009-avigad-2004",
+        "source-r009-chemla-2024"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-kummer-dedekind-context",
+      "subject": "concept-ideal-divisor",
+      "predicate": "contributed_to",
+      "object": "concept-dedekind-ideal",
+      "period": {
+        "from": 1847,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r009-avigad-2004",
+        "source-r009-edwards-1980"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-dedekind-field-framework",
+      "subject": "work-dedekind-1871-supplement",
+      "predicate": "contributed_to",
+      "object": "concept-algebraic-number-field",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r009-dedekind-1871"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-dedekind-ideal-system",
+      "subject": "work-dedekind-1871-supplement",
+      "predicate": "contributed_to",
+      "object": "concept-dedekind-ideal",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r009-dedekind-1871",
+        "source-r009-avigad-2004"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-dedekind-prime-ideal",
+      "subject": "work-dedekind-1871-supplement",
+      "predicate": "contributed_to",
+      "object": "concept-prime-ideal",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r009-dedekind-1871"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-dedekind-ideal-factorization",
+      "subject": "work-dedekind-1871-supplement",
+      "predicate": "contributed_to",
+      "object": "concept-ideal-factorization",
+      "period": {
+        "from": 1871,
+        "to": 1871
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r009-dedekind-1871"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-field-to-ideal",
+      "subject": "concept-algebraic-number-field",
+      "predicate": "contributed_to",
+      "object": "concept-dedekind-ideal",
+      "period": {
+        "from": 1871,
+        "to": 1894
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r009-dedekind-1871"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-1871-to-1879-revision",
+      "subject": "work-dedekind-1871-supplement",
+      "predicate": "reframed",
+      "object": "work-dedekind-1879-supplement",
+      "period": {
+        "from": 1871,
+        "to": 1879
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r009-avigad-2004"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-1879-to-1894-revision",
+      "subject": "work-dedekind-1879-supplement",
+      "predicate": "reframed",
+      "object": "work-dedekind-1894-supplement",
+      "period": {
+        "from": 1879,
+        "to": 1894
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r009-avigad-2004",
+        "source-r009-sep-dedekind"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-kronecker-alternative",
+      "subject": "person-kronecker",
+      "predicate": "contributed_to",
+      "object": "concept-ideal-factorization",
+      "period": {
+        "from": 1850,
+        "to": 1891
+      },
+      "perspective": "historical",
+      "certainty": "medium",
+      "sources": [
+        "source-r009-avigad-2004",
+        "source-r009-edwards-1980"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-modern-ideal-factorization",
+      "subject": "concept-dedekind-ideal",
+      "predicate": "contributed_to",
+      "object": "concept-ideal-factorization",
+      "period": {
+        "from": 1871,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-r009-dedekind-1871",
+        "source-r009-avigad-2004"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "mathematical",
+      "claim_mode": "mathematical_retrospective",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-factorization-to-ideal-question",
+      "subject": "q-r009-factorization-replacement",
+      "predicate": "contributed_to",
+      "object": "q-r009-ideal-structure",
+      "period": {
+        "from": 1846,
+        "to": 1871
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r009-kummer-1847",
+        "source-r009-avigad-2004",
+        "source-r009-dedekind-1871"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-ideal-to-revision-question",
+      "subject": "q-r009-ideal-structure",
+      "predicate": "contributed_to",
+      "object": "q-r009-changing-ideal-concept",
+      "period": {
+        "from": 1871,
+        "to": 1894
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r009-avigad-2004"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r009-ideal-to-modern-boundary",
+      "subject": "q-r009-ideal-structure",
+      "predicate": "contributed_to",
+      "object": "q-r009-historical-vs-modern",
+      "period": {
+        "from": 1871,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-r009-avigad-2004",
+        "source-r009-sep-dedekind"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "mathematical_retrospective",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-riemann-limitation",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "raised_question",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-generalization-aim",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "generalized",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-jordan-content",
+      "subject": "person-jordan",
+      "predicate": "contributed_to",
+      "object": "concept-jordan-content",
+      "period": {
+        "from": 1892,
+        "to": 1892
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r010-jordan-1892",
+        "source-r010-hawkins-1979",
+        "source-r010-eom-jordan-measure"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historiographic",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-borel-measure",
+      "subject": "person-borel",
+      "predicate": "contributed_to",
+      "object": "concept-borel-measure",
+      "period": {
+        "from": 1898,
+        "to": 1898
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-borel-1898",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-lebesgue-measure",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "generalized",
+      "object": "concept-lebesgue-measure",
+      "period": {
+        "from": 1901,
+        "to": 1902
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-lebesgue-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-value-band-integral",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "contributed_to",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-thesis-development",
+      "subject": "work-lebesgue-thesis-1902",
+      "predicate": "contributed_to",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1902,
+        "to": 1902
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1902",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-borel-context",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "contributed_to",
+      "object": "concept-measurable-set",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-borel-1898"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-modern-riemann-containment",
+      "subject": "concept-lebesgue-integral",
+      "predicate": "generalized",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-kahane-2001"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "mathematical",
+      "claim_mode": "mathematical_retrospective",
+      "relation_family": "development",
+      "relation_precision": "legacy",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-limit-properties",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "contributed_to",
+      "object": "concept-lebesgue-integral",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "medium",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Concept",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "broad_association",
+      "relation_precision": "broad",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-riemann-to-lebesgue-question",
+      "subject": "q-post-riemann-integration-gap",
+      "predicate": "contributed_to",
+      "object": "q-lebesgue-riemann-limitations",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-lines-converge",
+      "subject": "q-lebesgue-riemann-limitations",
+      "predicate": "contributed_to",
+      "object": "q-set-size-integration",
+      "period": {
+        "from": 1892,
+        "to": 1901
+      },
+      "perspective": "later_interpretation",
+      "certainty": "high",
+      "sources": [
+        "source-r010-jordan-1892",
+        "source-r010-borel-1898",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-set-size-to-value-band",
+      "subject": "q-set-size-integration",
+      "predicate": "contributed_to",
+      "object": "q-lebesgue-value-band-integration",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historical",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-value-band-to-limits",
+      "subject": "q-lebesgue-value-band-integration",
+      "predicate": "contributed_to",
+      "object": "q-lebesgue-limit-processes",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "perspective": "later_interpretation",
+      "certainty": "medium",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "QuestionFrame",
+      "object_kind": "QuestionFrame",
+      "semantic_layer": "inquiry",
+      "claim_mode": "historiographic",
+      "relation_family": "inquiry",
+      "relation_precision": "inquiry",
+      "publishable": true,
+      "default_network_visible": false
+    },
+    {
+      "id": "assertion-r010-v2-jordan-authored-1892",
+      "subject": "person-jordan",
+      "predicate": "authored",
+      "object": "work-jordan-integrals-1892",
+      "period": {
+        "from": 1892,
+        "to": 1892
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-jordan-1892"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-borel-authored-1898",
+      "subject": "person-borel",
+      "predicate": "authored",
+      "object": "work-borel-functions-1898",
+      "period": {
+        "from": 1898,
+        "to": 1898
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-borel-1898"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-lebesgue-authored-1901",
+      "subject": "person-lebesgue",
+      "predicate": "authored",
+      "object": "work-lebesgue-generalization-1901",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-lebesgue-authored-1902",
+      "subject": "person-lebesgue",
+      "predicate": "authored",
+      "object": "work-lebesgue-thesis-1902",
+      "period": {
+        "from": 1902,
+        "to": 1902
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1902"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-jordan-uses-content-state",
+      "subject": "work-jordan-integrals-1892",
+      "predicate": "uses",
+      "object": "state-r010-jordan-content-1892",
+      "period": {
+        "from": 1892,
+        "to": 1892
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-jordan-1892",
+        "source-r010-eom-jordan-measure"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-borel-defines-measure-state",
+      "subject": "work-borel-functions-1898",
+      "predicate": "defines",
+      "object": "state-r010-borel-measure-1898",
+      "period": {
+        "from": 1898,
+        "to": 1898
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-borel-1898",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-borel-defines-measurable-state",
+      "subject": "work-borel-functions-1898",
+      "predicate": "defines",
+      "object": "state-r010-measurable-set-1898-1901",
+      "period": {
+        "from": 1898,
+        "to": 1898
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-borel-1898",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-lebesgue-addresses-riemann-gap",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "addresses",
+      "object": "problem-r010-riemann-primitive-gap",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Problem",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-riemann-gap-concerns-integral",
+      "subject": "problem-r010-riemann-primitive-gap",
+      "predicate": "concerns",
+      "object": "r004-cs-riemann-integral-1854",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Problem",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "problem_relation",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-lebesgue-cites-borel",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "cites",
+      "object": "work-borel-functions-1898",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-borel-1898"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-lebesgue-uses-measurable-state",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "uses",
+      "object": "state-r010-measurable-set-1898-1901",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-borel-1898"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-lebesgue-defines-measure-state",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "defines",
+      "object": "state-r010-lebesgue-measure-1901",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-lebesgue-defines-integral-state",
+      "subject": "work-lebesgue-generalization-1901",
+      "predicate": "defines",
+      "object": "state-r010-lebesgue-integral-1901",
+      "period": {
+        "from": 1901,
+        "to": 1901
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-thesis-develops-1901",
+      "subject": "work-lebesgue-thesis-1902",
+      "predicate": "develops",
+      "object": "work-lebesgue-generalization-1901",
+      "period": {
+        "from": 1902,
+        "to": 1902
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1902",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "development",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-thesis-defines-integral-state",
+      "subject": "work-lebesgue-thesis-1902",
+      "predicate": "defines",
+      "object": "state-r010-lebesgue-integral-1902",
+      "period": {
+        "from": 1902,
+        "to": 1902
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1902",
+        "source-r010-hawkins-1979"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
+      "object_kind": "ConceptState",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "conceptual_content",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r010-v2-modern-lebesgue-generalizes-riemann",
+      "subject": "concept-lebesgue-integral",
+      "predicate": "generalizes",
+      "object": "concept-riemann-integral",
+      "period": {
+        "from": 1901,
+        "to": null
+      },
+      "perspective": "modern_abstraction",
+      "certainty": "high",
+      "sources": [
+        "source-r010-lebesgue-1901",
+        "source-r010-kahane-2001"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Concept",
+      "object_kind": "Concept",
+      "semantic_layer": "mathematical",
+      "claim_mode": "mathematical_retrospective",
+      "relation_family": "development",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    }
+  ]
+}
