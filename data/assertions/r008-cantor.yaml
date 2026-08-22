@@ -115,3 +115,150 @@
   certainty: high
   sources: [source-r008-cantor-1872]
   status: historically_reviewed
+
+# V2 precise semantic claims. These do not replace the legacy assertions above;
+# they decompose already-reviewed historical material into typed relations.
+- id: assertion-r008-v2-heine-authored-1870
+  subject: person-heine
+  predicate: authored
+  object: work-heine-trig-1870
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-heine-1870, source-r008-halle-heine]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-authored-1870
+  subject: person-cantor
+  predicate: authored
+  object: work-cantor-uniqueness-1870
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1870]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-authored-1871
+  subject: person-cantor
+  predicate: authored
+  object: work-cantor-uniqueness-note-1871
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1871]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-authored-1872
+  subject: person-cantor
+  predicate: authored
+  object: work-cantor-extension-1872
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-heine-addresses-uniqueness
+  subject: work-heine-trig-1870
+  predicate: addresses
+  object: problem-r008-trig-series-uniqueness
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-heine-1870, source-r008-halle-heine]
+  status: historically_reviewed
+- id: assertion-r008-v2-uniqueness-problem-concerns-state
+  subject: problem-r008-trig-series-uniqueness
+  predicate: concerns
+  object: state-r008-uniqueness-1870
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-heine-1870, source-r008-cantor-1870]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1870-proves
+  subject: work-cantor-uniqueness-1870
+  predicate: proves
+  object: result-r008-cantor-uniqueness-1870
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1870]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1870-resolves
+  subject: result-r008-cantor-uniqueness-1870
+  predicate: resolves
+  object: problem-r008-trig-series-uniqueness
+  period: {from: 1870, to: 1870}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1870]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1871-proves
+  subject: work-cantor-uniqueness-note-1871
+  predicate: proves
+  object: result-r008-cantor-finite-exception-1871
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1871, source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1871-strengthens-1870
+  subject: result-r008-cantor-finite-exception-1871
+  predicate: strengthens
+  object: result-r008-cantor-uniqueness-1870
+  period: {from: 1871, to: 1871}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1871, source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1872-defines-derived
+  subject: work-cantor-extension-1872
+  predicate: defines
+  object: state-r008-derived-1872
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1872-uses-exceptional-state
+  subject: work-cantor-extension-1872
+  predicate: uses
+  object: state-r008-exceptional-1872
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1872-proves
+  subject: work-cantor-extension-1872
+  predicate: proves
+  object: result-r008-cantor-derived-extension-1872
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1872-strengthens-1871
+  subject: result-r008-cantor-derived-extension-1872
+  predicate: strengthens
+  object: result-r008-cantor-finite-exception-1871
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1872-depends-derived
+  subject: result-r008-cantor-derived-extension-1872
+  predicate: depends_on
+  object: state-r008-derived-1872
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
+- id: assertion-r008-v2-cantor-1872-depends-exceptional
+  subject: result-r008-cantor-derived-extension-1872
+  predicate: depends_on
+  object: state-r008-exceptional-1872
+  period: {from: 1872, to: 1872}
+  perspective: historical
+  certainty: high
+  sources: [source-r008-cantor-1872]
+  status: historically_reviewed
