@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from collections import Counter
-from typing import Iterable
 
 PUBLISHABLE_STATUSES = {'historically_reviewed', 'accepted', 'published'}
 
@@ -22,6 +21,17 @@ PREDICATE_FAMILY = {
     'merged_with': 'development',
     'influenced': 'transmission',
     'contributed_to': 'broad_association',
+}
+
+TEMPORAL_SEMANTICS = {
+    'Person': 'life_span',
+    'Work': 'work_date',
+    'Event': 'event_interval',
+    'Problem': 'problem_period',
+    'Result': 'result_date',
+    'Concept': 'diachronic_identity',
+    'ConceptState': 'attested_state',
+    'QuestionFrame': 'editorial_anchor',
 }
 
 # V2 does not pretend that every legacy predicate has the same semantic precision.
@@ -94,7 +104,14 @@ def normalize_assertions(
 
 
 def semantic_nodes(entities: list[dict], concept_states: list[dict]) -> list[dict]:
-    nodes = [{**row, 'node_kind': row['type']} for row in entities]
+    nodes = [
+        {
+            **row,
+            'node_kind': row['type'],
+            'temporal_semantics': TEMPORAL_SEMANTICS.get(row['type'], 'unspecified'),
+        }
+        for row in entities
+    ]
     for state in concept_states:
         nodes.append({
             'id': state['id'],
@@ -103,6 +120,7 @@ def semantic_nodes(entities: list[dict], concept_states: list[dict]) -> list[dic
             'name': state['label'],
             'concept_id': state['concept_id'],
             'period': state['period'],
+            'temporal_semantics': TEMPORAL_SEMANTICS['ConceptState'],
         })
     return nodes
 
@@ -132,6 +150,7 @@ def build_semantic_network(
     claims = normalize_assertions(entities, questions, concept_states, assertions)
     published = [c for c in claims if c['publishable'] and c['semantic_layer'] != 'inquiry']
     return {
+        'projection_version': 2,
         'nodes': semantic_nodes(entities, concept_states),
         'claims': published,
         'structural_edges': structural_state_edges(concept_states),
@@ -147,11 +166,13 @@ def build_inquiry_graph(
 ) -> dict:
     claims = normalize_assertions(entities, questions, concept_states, assertions)
     return {
+        'projection_version': 2,
         'question_frames': [
             {
                 **q,
                 'node_kind': 'QuestionFrame',
                 'editorial': True,
+                'temporal_semantics': TEMPORAL_SEMANTICS['QuestionFrame'],
             }
             for q in questions
         ],
@@ -166,6 +187,7 @@ def build_research_claims(
     assertions: list[dict],
 ) -> dict:
     return {
+        'projection_version': 2,
         'claims': normalize_assertions(entities, questions, concept_states, assertions),
     }
 
@@ -201,6 +223,7 @@ def semantic_audit(
     ]
 
     return {
+        'projection_version': 2,
         'counts': counts,
         'review_queues': {
             'broad_publishable_relations': broad,
