@@ -1,0 +1,53 @@
+[
+  {
+    "entity": "concept-discontinuous-function",
+    "story_count": 2,
+    "stories": [
+      "story-function",
+      "story-integrability"
+    ]
+  },
+  {
+    "entity": "concept-fourier-series",
+    "story_count": 3,
+    "stories": [
+      "story-cauchy-rigor-continuity",
+      "story-fourier-heat-representation",
+      "story-function"
+    ]
+  },
+  {
+    "entity": "q-dirichlet-admissible-functions",
+    "story_count": 2,
+    "stories": [
+      "story-function",
+      "story-integrability"
+    ]
+  },
+  {
+    "entity": "q-fourier-series-convergence",
+    "story_count": 4,
+    "stories": [
+      "story-fourier-heat-representation",
+      "story-function",
+      "story-integrability",
+      "story-r008-uniqueness"
+    ]
+  },
+  {
+    "entity": "q-post-riemann-integration-gap",
+    "story_count": 2,
+    "stories": [
+      "story-integrability",
+      "story-lebesgue-integration"
+    ]
+  },
+  {
+    "entity": "q-uniform-convergence-emergence",
+    "story_count": 2,
+    "stories": [
+      "story-cauchy-rigor-continuity",
+      "story-quantified-control"
+    ]
+  }
+]
