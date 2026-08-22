@@ -7,7 +7,22 @@ from scripts.common import ROOT, load_yaml_files
 from scripts.models import Entity, Question, Assertion, FieldModel, ConceptState, Story
 from scripts.semantic_network import normalize_assertion, node_kind_map
 
-ALLOWED_PREDICATES={'authored','raised_question','spawned','reframed','generalized','split_into','merged_with','influenced','motivated','contributed_to'}
+ALLOWED_PREDICATES={
+    'authored','addresses','defines','uses','proves','revises','responds_to','cites',
+    'raised_question','spawned','reframed','generalized','split_into','merged_with',
+    'influenced','motivated','contributed_to'
+}
+
+RELATION_DOMAIN_RANGE={
+    'authored': ({'Person'}, {'Work'}),
+    'addresses': ({'Work'}, {'Problem'}),
+    'defines': ({'Work'}, {'ConceptState'}),
+    'uses': ({'Work'}, {'Concept','ConceptState'}),
+    'proves': ({'Work'}, {'Result'}),
+    'revises': ({'Work'}, {'Work'}),
+    'responds_to': ({'Work'}, {'Work'}),
+    'cites': ({'Work'}, {'Work'}),
+}
 
 def validate_all():
     errors=[]
@@ -65,9 +80,16 @@ def validate_all():
                 errors.append(f'inconsistent semantic_layer on {a.id}')
             if a.relation_family and a.relation_family != normalized['relation_family']:
                 errors.append(f'inconsistent relation_family on {a.id}')
-            if a.predicate=='authored':
-                if raw_kind_map.get(a.subject)!='Person' or raw_kind_map.get(a.object)!='Work':
-                    errors.append(f'authored must be Person -> Work on {a.id}')
+
+            if a.predicate in RELATION_DOMAIN_RANGE:
+                allowed_subjects, allowed_objects=RELATION_DOMAIN_RANGE[a.predicate]
+                subject_kind=raw_kind_map.get(a.subject)
+                object_kind=raw_kind_map.get(a.object)
+                if subject_kind not in allowed_subjects or object_kind not in allowed_objects:
+                    errors.append(
+                        f'{a.predicate} has invalid domain/range on {a.id}: '
+                        f'{subject_kind} -> {object_kind}'
+                    )
 
     for story in stories:
         step_ids={x.id for x in story.steps}
