@@ -6,6 +6,10 @@
   concept_id: concept-exceptional-point-set
   period: {from: 1871, to: 1871}
   label: A finite number of exceptional arguments may be omitted from convergence or equality without destroying the uniqueness conclusion.
+- id: state-r008-exceptional-1872
+  concept_id: concept-exceptional-point-set
+  period: {from: 1872, to: 1872}
+  label: Certain infinite exceptional point sets are admitted when finite iteration of the derived-set operation eventually leaves only finitely many points.
 - id: state-r008-derived-1872
   concept_id: concept-derived-set
   period: {from: 1872, to: 1872}
