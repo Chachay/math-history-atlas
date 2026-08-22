@@ -66,6 +66,8 @@ Typical relations:
 
 QuestionFrame evolution belongs to Story/inquiry semantics, not to the default semantic Network topology.
 
+A claim with a QuestionFrame endpoint is always Inquiry. Migration metadata may not override that ontology boundary.
+
 ## Claim mode is orthogonal to semantic layer
 
 The existing `perspective` distinction remains valuable, but it answers a different question from semantic layer.
@@ -77,6 +79,8 @@ The existing `perspective` distinction remains valuable, but it answers a differ
 | modern_abstraction | mathematical_retrospective | modern mathematical structural relation |
 
 A historiographic claim may still concern the Historical layer. For example, a later historian may connect two historical works without that connection becoming a modern mathematical relation.
+
+`modern_abstraction` is projected to the Mathematical layer and cannot be reclassified as Historical by migration metadata.
 
 ## Core ontological distinction: Problem vs QuestionFrame
 
@@ -121,13 +125,15 @@ The current assertion store is retained during migration, but V2 normalizes it i
 
 ## Relation families
 
-Initial migration families:
+V2 families:
 
-- `documentary`: authorship and document-level facts
-- `problem_relation`: raised/motivated/spawned problem relations
+- `documentary`: authorship and document-to-document facts
+- `problem_relation`: relations to historical Problems and legacy problem language
+- `conceptual_content`: Work-to-Concept/ConceptState content relations
+- `result_relation`: Work-to-Result relations
 - `development`: reframed/generalized/split/merged
-- `transmission`: influenced
-- `broad_association`: contributed_to
+- `transmission`: historically claimed influence/transmission
+- `broad_association`: `contributed_to`
 - `inquiry`: any claim whose endpoint is a QuestionFrame
 - `identity`: structural ConceptState -> Concept relation
 
@@ -135,18 +141,24 @@ Initial migration families:
 
 The migration must prefer an absent edge over inventing a stronger relation.
 
-## Domain/range rules
+## Precise V2 predicate vocabulary
 
-V2 begins enforcing relation typing incrementally.
+The following predicates are admitted for new/reviewed migrations only when evidence supports the stronger semantics:
 
-Currently enforced:
+| Predicate | Domain -> range | Family |
+| --- | --- | --- |
+| `authored` | Person -> Work | documentary |
+| `addresses` | Work -> Problem | problem_relation |
+| `defines` | Work -> ConceptState | conceptual_content |
+| `uses` | Work -> Concept or ConceptState | conceptual_content |
+| `proves` | Work -> Result | result_relation |
+| `revises` | Work -> Work | documentary |
+| `responds_to` | Work -> Work | documentary |
+| `cites` | Work -> Work | documentary |
 
-- `authored`: Person -> Work
-- `ConceptState.state_of`: ConceptState -> Concept
+These domain/range contracts are validated by `scripts/validate.py`.
 
-Future predicates should declare domain/range before being admitted to the canonical Network vocabulary.
-
-Legacy predicates that cannot yet meet a precise contract remain available to evidence/research tools but need not be reader-facing edges.
+Legacy predicates remain accepted during migration. A legacy `contributed_to` claim must **not** be mechanically translated to one of the precise predicates.
 
 ## Publishability boundary
 
@@ -171,7 +183,7 @@ During migration the build produces four graph artifacts.
 
 ### `graph.json`
 
-Legacy compatibility aggregate. Kept temporarily so existing UI/research tooling does not silently change behavior.
+Legacy compatibility aggregate. Kept temporarily so existing UI/research tooling does not silently change behavior. New Network UI work must not use it as the semantic contract.
 
 ### `semantic-network.json`
 
@@ -180,6 +192,7 @@ Reader-facing Historical + Mathematical semantic graph.
 Contains:
 - Entity nodes
 - ConceptState nodes
+- node-specific `temporal_semantics`
 - publishable non-inquiry claims
 - structural ConceptState -> Concept edges
 - `default_edge_ids` for sufficiently typed primary relations
@@ -191,7 +204,7 @@ QuestionFrames are absent.
 Reader-facing editorial inquiry graph.
 
 Contains:
-- QuestionFrames
+- QuestionFrames with editorial temporal semantics
 - publishable claims touching QuestionFrames
 
 Story remains responsible for narrative sequence.
@@ -212,16 +225,16 @@ Migration queues derived from current canonical data:
 
 ## Temporal semantics
 
-There is no universal node `start_year` semantics.
+There is no universal node `start_year` semantics. V2 projections emit a node-specific `temporal_semantics` value.
 
-- Person: birth/death
-- Work: composition/presentation/publication depending on record
-- Event: event interval
-- Problem: period of active formulation/attention
-- Result: proof/presentation/publication depending on record
-- ConceptState: attested historical interval
-- Concept: diachronic identity; a single birth year should not determine Network coordinates
-- QuestionFrame: editorial temporal anchoring, not necessarily a historical event date
+- Person: `life_span`
+- Work: `work_date`
+- Event: `event_interval`
+- Problem: `problem_period`
+- Result: `result_date`
+- ConceptState: `attested_state`
+- Concept: `diachronic_identity`; a single birth year should not determine Network coordinates
+- QuestionFrame: `editorial_anchor`, not necessarily a historical event date
 
 Therefore the V2 Network must not use one strict chronological axis across all node types.
 
@@ -246,7 +259,8 @@ These should remain distinct. A future migration should add an explicit witness/
 5. Move QuestionFrame evolution out of default Network topology.
 6. Prefer ConceptState endpoints for historical content only after evidence review.
 7. Replace or retire `contributed_to` incrementally when a more specific relation is justified.
-8. Only after semantic migration stabilizes should Network UI layout be redesigned.
+8. Require domain/range contracts for new precise relation predicates.
+9. Only after semantic migration stabilizes should Network UI layout be redesigned.
 
 ## Acceptance gate for V2 model
 
@@ -257,6 +271,8 @@ Before Network UI work resumes:
 - ConceptStates are first-class semantic nodes;
 - broad relations are not primary default edges;
 - relation family and claim mode are independently inspectable;
+- heterogeneous node temporal semantics are explicit;
 - Story adjacency cannot manufacture Network edges;
+- precise new predicates have validated domain/range;
 - R008 and R010 remain representable without inventing undocumented causal bridges;
 - the migration audit identifies remaining legacy ambiguities rather than hiding them.
