@@ -5,6 +5,17 @@ EntityType = Literal['Person','Concept','Result','Work','Event','Problem']
 Perspective = Literal['historical','later_interpretation','modern_abstraction']
 Status = Literal['candidate','source_checked','historically_reviewed','accepted','published']
 Certainty = Literal['high','medium','low']
+SemanticLayer = Literal['historical','mathematical','inquiry']
+RelationFamily = Literal[
+    'documentary',
+    'problem_relation',
+    'development',
+    'transmission',
+    'broad_association',
+    'inquiry',
+    'identity',
+    'unclassified',
+]
 
 class Period(BaseModel):
     from_: int | None = Field(None, alias='from')
@@ -24,17 +35,26 @@ class Entity(BaseModel):
     # non-English work titles, preserve the source-language title separately.
     original_title: str | None = None
 
-class Question(BaseModel):
+class QuestionFrame(BaseModel):
+    """Editorial inquiry frame grounded in evidence, not a historical object by default."""
     id: str; question: str; period: Period; fields: list[str] = []
+
+# Compatibility alias while canonical files remain under data/questions/.
+Question = QuestionFrame
 
 class Assertion(BaseModel):
     id: str; subject: str; predicate: str; object: str; period: Period
     perspective: Perspective; certainty: Certainty; sources: list[str]; status: Status
+    # V2 keeps these optional during migration. The semantic projection derives
+    # them deterministically when legacy assertions do not yet declare them.
+    semantic_layer: SemanticLayer | None = None
+    relation_family: RelationFamily | None = None
 
 class FieldModel(BaseModel):
     id: str; name: str; parents: list[str] = []
 
 class ConceptState(BaseModel):
+    """Historically situated state/meaning of a diachronic Concept identity."""
     id: str; concept_id: str; period: Period; label: str
 
 class StoryStep(BaseModel):
