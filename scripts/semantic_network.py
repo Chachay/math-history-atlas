@@ -11,7 +11,16 @@ PERSPECTIVE_TO_MODE = {
 }
 
 PREDICATE_FAMILY = {
+    # Precise V2 vocabulary.
     'authored': 'documentary',
+    'addresses': 'problem_relation',
+    'defines': 'conceptual_content',
+    'uses': 'conceptual_content',
+    'proves': 'result_relation',
+    'revises': 'documentary',
+    'responds_to': 'documentary',
+    'cites': 'documentary',
+    # Legacy vocabulary retained during migration.
     'raised_question': 'problem_relation',
     'spawned': 'problem_relation',
     'motivated': 'problem_relation',
