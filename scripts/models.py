@@ -9,6 +9,8 @@ SemanticLayer = Literal['historical','mathematical','inquiry']
 RelationFamily = Literal[
     'documentary',
     'problem_relation',
+    'conceptual_content',
+    'result_relation',
     'development',
     'transmission',
     'broad_association',
