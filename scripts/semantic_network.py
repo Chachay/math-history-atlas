@@ -47,15 +47,18 @@ def node_kind_map(entities: list[dict], questions: list[dict], concept_states: l
 
 
 def semantic_layer(assertion: dict, kinds: dict[str, str]) -> str:
-    explicit = assertion.get('semantic_layer')
-    if explicit:
-        return explicit
     subject_kind = kinds.get(assertion['subject'])
     object_kind = kinds.get(assertion['object'])
+    # These are ontology boundaries, not presentation hints. Explicit migration
+    # metadata must not turn a QuestionFrame into a historical Network edge or a
+    # modern abstraction into a historical claim.
     if 'QuestionFrame' in {subject_kind, object_kind}:
         return 'inquiry'
     if assertion.get('perspective') == 'modern_abstraction':
         return 'mathematical'
+    explicit = assertion.get('semantic_layer')
+    if explicit:
+        return explicit
     return 'historical'
 
 
