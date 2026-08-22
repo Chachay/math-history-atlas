@@ -11,10 +11,11 @@ Canonical identity and relation semantics are shared across views. Coordinates, 
 - Story membership must not be interpreted as canonical topology.
 - Historical, later-interpretive, and modern-abstraction relations must not collapse into one visual relation.
 - Missing reviewed edges are meaningful and must not be replaced by proximity or layout continuity.
+- A view must state what question it answers for the reader; node and edge prominence follow that contract.
 
-## Atlas View
+## Atlas View — What developed?
 
-Primary structure: field-scale branching and recombination.
+Primary structure: field-scale mathematical development, branching, and recombination.
 
 Temporal treatment: long chronology.
 
@@ -22,42 +23,41 @@ Axis priority: chronology first, discipline/field structure second.
 
 Node/edge emphasis: field paths and major branch points are primary; individual historical objects are secondary.
 
+Reader question: what mathematical areas, objects, and practices developed, where in the mathematical landscape, and when?
+
 Story treatment: entry points into researched material, not layout lanes.
 
-## Network View
+## Network View — What connects?
 
-Primary structure: reviewed relation topology, with Question-to-Question evolution as the default reader-facing spine.
+Primary structure: reviewed relation topology across the canonical heterogeneous graph.
 
-Temporal treatment: chronology remains the strong axis.
+Reader question: what is connected to what, and in what reviewed sense?
 
-Axis priority: time first; branch/continuation/convergence topology second.
+Temporal treatment: chronology remains available and visually important, but it must not suppress relation topology.
 
-Primary nodes: Question.
+Axis priority: relation topology first; chronology constrains and orients the layout rather than defining a single narrative path.
 
-Contextual nodes: Work and Concept.
+Peer node classes: Question, Work, Concept, and Person. Their visual forms differ by role, but no one class is the universal backbone of Network.
 
-Navigational nodes: Person.
+Primary edges: reviewed canonical relations among those heterogeneous nodes. Predicate, perspective, certainty, and status carry meaning. A Work or Concept becoming a hub is a valid Network finding rather than layout noise.
 
-Primary edges: reviewed canonical relations needed to understand Question evolution.
+Story treatment: optional overlay/path through a stable relation graph. Story selection must not move canonical nodes and must not manufacture canonical relations.
 
-Story treatment: overlay/path through a stable graph. Story selection must not move canonical nodes.
+Editorial projection edges may be used only as explicitly secondary aids where a Story records a path not yet represented by a canonical assertion. They must never become the default topology or be visually confusable with reviewed relations.
 
-Progressive disclosure:
+Progressive disclosure should reduce density without changing ontology: filters may hide node or relation classes, but the default Network should communicate heterogeneous connectivity rather than a Question-only forest.
 
-1. default Question spine + strongest reviewed relations;
-2. expand Work / Concept / Person context;
-3. select Story to highlight an editorial route;
-4. inspect predicate / perspective / certainty / source grounding when needed.
+## Story View — Why did the question change?
 
-## Story View
+Primary structure: editorial Question evolution and explanatory sequence.
 
-Primary structure: editorial sequence.
+Reader question: why did a mathematical question change, branch, become sharper, or hand off to another question?
 
 Temporal treatment: chronology is metadata and an ordering constraint, but narrative order is primary.
 
 Axis priority: narrative sequence first.
 
-Node/edge emphasis: Story steps are primary; links explain editorial transitions.
+Node/edge emphasis: Story steps are primary; links explain editorial transitions. Work, Concept, and Person provide the historical mechanism and context for Question evolution.
 
 Story treatment: first-class narrative object.
 
@@ -87,8 +87,16 @@ Coordinates are optimized for inspection rather than historical narrative.
 
 Primary structure: a focal mathematical Concept and its historical uses, reformulations, generalizations, and Question relations.
 
-Concept may become the primary node in this projection even though Question is primary in the default Network.
+Concept becomes the primary node because the projection asks a Concept-centered question, not because Concept is globally primary in the canonical graph.
 
 ## Implementation gate
 
 A UI change conforms to these contracts only if its visual hierarchy preserves the distinction between canonical graph structure, editorial Story structure, and layout-only decisions.
+
+For the current redesign, the acceptance shorthand is:
+
+- Atlas = What developed?
+- Network = What connects?
+- Story = Why did the question change?
+
+A Network implementation that defaults to Question-only topology fails this contract even if Story lanes have been removed.
