@@ -1,22 +1,28 @@
 # View Projection Contracts
 
-The Atlas uses one canonical heterogeneous graph and multiple view-specific projections.
+The Atlas uses one shared evidence-backed knowledge base with multiple semantic layers and multiple view-specific projections.
 
-Canonical identity and relation semantics are shared across views. Coordinates, axis priority, node/edge prominence, and disclosure policy are view concerns, not canonical facts.
+Shared IDs, sources, claims, and mathematical objects persist across views. Coordinates, axis priority, node/edge prominence, disclosure policy, and even which semantic layer is primary are view concerns, not canonical facts.
+
+See `editorial/SEMANTIC-NETWORK-V2.md` for the underlying ontology.
 
 ## Global rules
 
 - Do not force shared coordinates across views.
-- Preserve shared IDs and reviewed relation semantics across views.
-- Story membership must not be interpreted as canonical topology.
-- Historical, later-interpretive, and modern-abstraction relations must not collapse into one visual relation.
+- Preserve shared IDs and reviewed claim semantics across views.
+- Do not flatten Historical, Mathematical, and Inquiry layers into one undifferentiated graph.
+- Story membership and Story adjacency must not be interpreted as canonical Network topology.
+- Historical, historiographic, and mathematical-retrospective claim modes must not collapse into one visual relation.
 - Missing reviewed edges are meaningful and must not be replaced by proximity or layout continuity.
+- Candidate and source-checked claims are research state, not reader-facing graph state.
 
 ## Atlas View
 
-Primary structure: field-scale branching and recombination.
+Primary question: **What developed?**
 
-Temporal treatment: long chronology.
+Primary structure: field-scale branching, recombination, and long-run development.
+
+Temporal treatment: long chronology is strong.
 
 Axis priority: chronology first, discipline/field structure second.
 
@@ -26,69 +32,93 @@ Story treatment: entry points into researched material, not layout lanes.
 
 ## Network View
 
-Primary structure: reviewed relation topology, with Question-to-Question evolution as the default reader-facing spine.
+Primary question: **What connects?**
 
-Temporal treatment: chronology remains the strong axis.
+Primary structure: evidence-backed Historical + Mathematical relation topology.
 
-Axis priority: time first; branch/continuation/convergence topology second.
+Default nodes:
+- Person
+- Work
+- Problem
+- Result
+- ConceptState
+- Concept identities where useful
 
-Primary nodes: Question.
+QuestionFrames are not default Network nodes; they belong to the Inquiry layer.
 
-Contextual nodes: Work and Concept.
+Temporal treatment: time is node/claim metadata and a possible soft layout constraint. There is no universal strict chronological axis because Person birth years, Work publication dates, ConceptState periods, and Concept identities do not have equivalent temporal semantics.
 
-Navigational nodes: Person.
+Axis priority: relation topology first. Time and field are secondary constraints/filters.
 
-Primary edges: reviewed canonical relations needed to understand Question evolution.
+Primary edges: publishable, sufficiently typed claims. Broad `contributed_to` associations remain inspectable but do not define default topology.
 
-Story treatment: overlay/path through a stable graph. Story selection must not move canonical nodes.
+Story treatment: selecting a Story may highlight canonical nodes and reviewed claims used by that Story. It must not add a Story-only edge, move canonical nodes, or imply transmission/causation from narrative adjacency.
 
 Progressive disclosure:
 
-1. default Question spine + strongest reviewed relations;
-2. expand Work / Concept / Person context;
-3. select Story to highlight an editorial route;
-4. inspect predicate / perspective / certainty / source grounding when needed.
+1. default typed Historical + Mathematical relations;
+2. reveal broader/interpretive relations;
+3. select Story to highlight grounded material already present in the graph;
+4. inspect predicate / claim mode / certainty / status / source grounding when needed.
 
 ## Story View
 
-Primary structure: editorial sequence.
+Primary question: **Why did the question change?**
 
-Temporal treatment: chronology is metadata and an ordering constraint, but narrative order is primary.
+Primary structure: editorial QuestionFrame sequence grounded in reviewed historical/mathematical claims.
+
+Temporal treatment: chronology is evidence and an ordering constraint, but narrative/inquiry order is primary.
 
 Axis priority: narrative sequence first.
 
-Node/edge emphasis: Story steps are primary; links explain editorial transitions.
+Node/edge emphasis: QuestionFrames and Story steps are primary; Story links express editorial transitions.
 
 Story treatment: first-class narrative object.
 
-A Story may locally treat a canonical Question as opening, continuing, branching, answered-for-story, handed off, or remaining open without changing the global canonical Question.
+A Story may locally treat a QuestionFrame as opening, continuing, branching, answered-for-story, handed off, or remaining open without manufacturing a canonical historical relation.
 
 ## Person View
 
-Primary structure: attribution and participation around a focal Person.
+Primary structure: attribution and participation around a focal Person within the Historical layer.
 
 Temporal treatment: chronology is useful but subordinate to relevance around the Person.
 
-Node/edge emphasis: Person is primary; related Works, Concepts, Questions, and accepted assertions provide context.
+Node/edge emphasis: Person is focal; authored Works and their reviewed Problems, Results, ConceptStates, and claims provide context.
 
-Story treatment: navigation to curated readings that include the Person.
+Story treatment: navigation to curated readings that use claims connected to the Person.
 
 Person proximity must never substitute for documentary transmission.
 
 ## Future Evidence View
 
-Primary structure: assertion semantics and evidence grounding.
+Primary structure: Claim as a first-class inspection object.
 
-Primary edges: predicate, perspective, certainty, status, period, and source support.
+A relation rendered as an edge in Network may be reified as a node here:
+
+```text
+subject -> Claim <- Source
+           |
+           v
+         object
+```
+
+Primary metadata: predicate, semantic layer, claim mode, certainty, status, period, and source support.
 
 Coordinates are optimized for inspection rather than historical narrative.
 
 ## Future Concept View
 
-Primary structure: a focal mathematical Concept and its historical uses, reformulations, generalizations, and Question relations.
+Primary structure: a focal Concept identity and its historically situated ConceptStates, Works, Results, and retrospective mathematical relations.
 
-Concept may become the primary node in this projection even though Question is primary in the default Network.
+Concept may become the focal node in this projection even though Concept identity is not necessarily a strong positional object in Network.
 
 ## Implementation gate
 
-A UI change conforms to these contracts only if its visual hierarchy preserves the distinction between canonical graph structure, editorial Story structure, and layout-only decisions.
+A UI change conforms to these contracts only if its visual hierarchy preserves the distinctions between:
+
+- shared knowledge base vs view projection;
+- Historical / Mathematical / Inquiry semantic layers;
+- evidence-backed Claim vs Story transition;
+- Concept identity vs ConceptState;
+- historical time vs editorial temporal anchoring;
+- reader-facing reviewed claims vs research-state claims.
