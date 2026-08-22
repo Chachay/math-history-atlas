@@ -6,6 +6,7 @@ from scripts.semantic_network import (
     normalize_assertions,
     semantic_audit,
 )
+from scripts.validate import relation_signature_error
 
 
 def canonical_rows():
@@ -85,6 +86,21 @@ def test_perspective_and_semantic_layer_are_orthogonal():
     ]
     assert historiographic_historical
     assert all(c['perspective'] == 'later_interpretation' for c in historiographic_historical)
+
+
+def test_precise_relation_signatures_are_typed():
+    assert relation_signature_error('authored', 'Person', 'Work') is None
+    assert relation_signature_error('addresses', 'Work', 'Problem') is None
+    assert relation_signature_error('defines', 'Work', 'ConceptState') is None
+    assert relation_signature_error('uses', 'Work', 'Concept') is None
+    assert relation_signature_error('uses', 'Work', 'ConceptState') is None
+    assert relation_signature_error('proves', 'Work', 'Result') is None
+    assert relation_signature_error('revises', 'Work', 'Work') is None
+
+    assert relation_signature_error('defines', 'Person', 'ConceptState')
+    assert relation_signature_error('addresses', 'Person', 'Problem')
+    assert relation_signature_error('proves', 'Work', 'Concept')
+    assert relation_signature_error('cites', 'Person', 'Work')
 
 
 def test_semantic_audit_exposes_migration_queues():
