@@ -1,11 +1,11 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from pathlib import Path
-import sys, networkx as nx
+import networkx as nx
 from pydantic import ValidationError
 from scripts.common import ROOT, load_yaml_files
 from scripts.models import Entity, Question, Assertion, FieldModel, ConceptState, Story
+from scripts.semantic_network import normalize_assertion, node_kind_map
 
 ALLOWED_PREDICATES={'authored','raised_question','spawned','reframed','generalized','split_into','merged_with','influenced','motivated','contributed_to'}
 
@@ -28,8 +28,12 @@ def validate_all():
     ids=[r.get('id') for r in all_rows if isinstance(r,dict) and r.get('id')]
     dup={x for x in ids if ids.count(x)>1}
     if dup: errors.append(f'duplicate IDs: {sorted(dup)}')
-    entity_ids={e.id for e in entities}; question_ids={q.id for q in questions}; ref_ids=entity_ids|question_ids
+
+    entity_ids={e.id for e in entities}; question_ids={q.id for q in questions}; state_ids={s.id for s in states}
+    ref_ids=entity_ids|question_ids|state_ids
     assertion_ids={a.id for a in assertions}; source_ids={s['id'] for s in sources}; field_ids={f.id for f in fields}
+    raw_kind_map=node_kind_map(raw_entities, raw_questions, raw_states)
+
     for e in entities:
         if e.start_year and e.end_year and e.start_year>e.end_year: errors.append(f'invalid years: {e.id}')
         for f in e.fields:
@@ -37,6 +41,15 @@ def validate_all():
     for f in fields:
         for p in f.parents:
             if p not in field_ids: errors.append(f'unknown field parent {p} on {f.id}')
+
+    for state in states:
+        if state.concept_id not in entity_ids:
+            errors.append(f'dangling concept state {state.id}')
+        else:
+            target=next((e for e in entities if e.id==state.concept_id), None)
+            if target and target.type!='Concept':
+                errors.append(f'concept state {state.id} must target Concept, got {target.type}')
+
     for a in assertions:
         if a.subject not in ref_ids: errors.append(f'dangling assertion subject {a.subject}')
         if a.object not in ref_ids: errors.append(f'dangling assertion object {a.object}')
@@ -44,8 +57,18 @@ def validate_all():
         if not a.sources: errors.append(f'missing sources on {a.id}')
         for s in a.sources:
             if s not in source_ids: errors.append(f'missing source reference {s} on {a.id}')
-    for s in states:
-        if s.concept_id not in entity_ids: errors.append(f'dangling concept state {s.id}')
+
+        if a.subject in ref_ids and a.object in ref_ids:
+            raw=a.model_dump(by_alias=True)
+            normalized=normalize_assertion(raw, raw_kind_map)
+            if a.semantic_layer and a.semantic_layer != normalized['semantic_layer']:
+                errors.append(f'inconsistent semantic_layer on {a.id}')
+            if a.relation_family and a.relation_family != normalized['relation_family']:
+                errors.append(f'inconsistent relation_family on {a.id}')
+            if a.predicate=='authored':
+                if raw_kind_map.get(a.subject)!='Person' or raw_kind_map.get(a.object)!='Work':
+                    errors.append(f'authored must be Person -> Work on {a.id}')
+
     for story in stories:
         step_ids={x.id for x in story.steps}
         for step in story.steps:
