@@ -63,11 +63,13 @@ def semantic_layer(assertion: dict, kinds: dict[str, str]) -> str:
 
 
 def relation_family(assertion: dict, layer: str) -> str:
+    # Inquiry is an ontology boundary: a migration annotation cannot make Story
+    # question evolution masquerade as a documentary or mathematical relation.
+    if layer == 'inquiry':
+        return 'inquiry'
     explicit = assertion.get('relation_family')
     if explicit:
         return explicit
-    if layer == 'inquiry':
-        return 'inquiry'
     return PREDICATE_FAMILY.get(assertion.get('predicate', ''), 'unclassified')
 
 
