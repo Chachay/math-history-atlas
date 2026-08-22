@@ -6,11 +6,22 @@ Draft an editorial Story from accepted canonical data only. The Story is a revis
 
 Use only:
 
-- accepted or historically reviewed canonical entities, questions, assertions, and sources;
+- accepted or historically reviewed canonical entities, QuestionFrames (`data/questions/` during migration), assertions, and sources;
 - an optional Research Packet only for provenance lookup, never to bypass canonical acceptance;
-- existing Story DAGs when checking intersections or avoiding duplicate stories.
+- existing Story DAGs when checking intersections or avoiding duplicate stories;
+- `editorial/SEMANTIC-NETWORK-V2.md` for the boundary between Historical/Mathematical relations and Inquiry semantics.
 
 Do not invent causal links. Do not convert chronology into motivation. Do not project modern terminology backward without qualification. If a compelling transition lacks adequate canonical support, emit a `RESEARCH_GAP` instead of writing the transition as fact.
+
+## Story / Network boundary
+
+A Story is the primary projection of the **Inquiry layer**.
+
+Current canonical `Question` records should be understood as editorial **QuestionFrames**: reader-facing formulations grounded by reviewed evidence. They are not assumed to be verbatim questions posed by historical actors.
+
+Story adjacency is editorial structure. A Story link must never be treated as a new historical/transmission edge merely because two steps are adjacent. Network may later highlight canonical claims used by a Story, but the Story itself does not manufacture Network topology.
+
+When a historical Problem and a QuestionFrame coexist, use the Problem to state the historically evidenced task/situation and use the QuestionFrame to organize the reader's inquiry. Do not silently collapse them.
 
 ## Story structure
 
@@ -41,13 +52,17 @@ Each Story step must contain:
 - `later_interpretation` — the step is a retrospective historical synthesis;
 - `modern_abstraction` — the step deliberately uses later mathematical structure to explain a relation.
 
+Perspective does not determine semantic layer. A historically grounded QuestionFrame step still belongs to the Inquiry layer because it is an editorial framing object.
+
 Every substantive sentence in `narrative` must be supported by at least one referenced canonical assertion. Prefer 2–4 sentences per step. Do not use a source title as the reader-facing label when a concise English display label exists in canonical data.
 
 ## Transitions
 
-Review every edge separately. `continues` should mean the next step follows as part of the same historical/editorial line. Use `branches` where a later topic is one downstream reading rather than a single necessary consequence. Use `converges` and `alternative` only when the canonical graph supports them.
+Review every Story edge separately. `continues` should mean the next step follows as part of the same historical/editorial line. Use `branches` where a later topic is one downstream reading rather than a single necessary consequence. Use `converges` and `alternative` only when the evidence base supports that editorial reading.
 
-Avoid deterministic language such as `inevitably`, `unavoidably`, `led directly to`, or `spawned` unless a canonical assertion supports that strength. Prefer `raised`, `contributed to`, `became a downstream question`, or an explicitly retrospective formulation when appropriate.
+Avoid deterministic language such as `inevitably`, `unavoidably`, `led directly to`, or `spawned` unless a reviewed canonical claim supports that strength. Prefer `raised`, `contributed to`, `became a downstream question`, or an explicitly retrospective formulation when appropriate.
+
+A Story transition may be valid editorially even when there is deliberately **no** corresponding Network edge. This is especially important when the transition is historiographic, retrospective, or compresses several historical intermediaries.
 
 ## Research gaps
 
