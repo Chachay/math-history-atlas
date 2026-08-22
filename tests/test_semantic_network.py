@@ -32,6 +32,7 @@ def test_inquiry_layer_contains_question_grounding_claims_only():
     assert graph['claims']
     assert all(c['subject'] in question_ids or c['object'] in question_ids for c in graph['claims'])
     assert all(c['semantic_layer'] == 'inquiry' for c in graph['claims'])
+    assert all(q['temporal_semantics'] == 'editorial_anchor' for q in graph['question_frames'])
 
 
 def test_unreviewed_claims_never_enter_reader_projections():
@@ -60,6 +61,19 @@ def test_concept_states_are_explicit_nodes_with_structural_identity_edges():
     assert state_ids <= node_ids
     state_edges = {e['subject']: e['object'] for e in network['structural_edges']}
     assert all(state_edges[s['id']] == s['concept_id'] for s in states)
+    state_nodes = [n for n in network['nodes'] if n['node_kind'] == 'ConceptState']
+    assert state_nodes and all(n['temporal_semantics'] == 'attested_state' for n in state_nodes)
+
+
+def test_temporal_semantics_are_node_type_specific():
+    entities, questions, states, assertions = canonical_rows()
+    network = build_semantic_network(entities, questions, states, assertions)
+    person = next(n for n in network['nodes'] if n['node_kind'] == 'Person')
+    work = next(n for n in network['nodes'] if n['node_kind'] == 'Work')
+    concept = next(n for n in network['nodes'] if n['node_kind'] == 'Concept')
+    assert person['temporal_semantics'] == 'life_span'
+    assert work['temporal_semantics'] == 'work_date'
+    assert concept['temporal_semantics'] == 'diachronic_identity'
 
 
 def test_perspective_and_semantic_layer_are_orthogonal():
