@@ -3,12 +3,29 @@ Review a candidate research packet. Attempt to falsify it rather than improve it
 
 Classify each item as `PASS`, `REVISE`, `WEAK_EVIDENCE`, or `REJECT`, with a reason and needed evidence.
 
+## Semantic Network V2 checks
+
+Read `editorial/SEMANTIC-NETWORK-V2.md` and criticise semantic typing as part of historical criticism.
+
+For every relevant packet object ask:
+
+- Is this a historical **Problem**, or an editorial **QuestionFrame** written for the reader? Do not pass an editorial paraphrase as though a historical actor posed that exact question.
+- Is a timeless **Concept** being used where a period-specific **ConceptState** is needed to prevent anachronism?
+- Does a Person -> Concept attribution conceal a historically important Work or intermediary?
+- Does the evidence support the proposed relation itself, or only that both objects occur in the same historical episode?
+- Is `contributed_to` being used deliberately as a broad association because the evidence does not justify a more precise relation? If so, that may be historically responsible, but it should not be treated as a strong causal/transmission edge.
+- Conversely, has a broad association been strengthened to `defined`, `proved`, `motivated`, `influenced`, `spawned`, or a direct development relation without source support?
+- Does a QuestionFrame transition belong to the Inquiry layer rather than the historical/mathematical Network layer?
+- Does a modern mathematical relation have documentary evidence of historical recognition, or should it remain `modern_abstraction` / retrospective mathematics?
+
+Do not reject a claim merely because it is broad. Reject or revise it when the wording overstates what the evidence supports. An absent Network edge is preferable to an invented stronger relation.
+
 ## Persistent evidence output
 
 Do not output ChatGPT citation markup, internal search-result IDs,
 or session-specific references such as:
 
-``
+```
 
 Every source newly introduced during criticism must be normalized
 into a persistent source record with a stable `source_id`.
