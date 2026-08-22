@@ -24,6 +24,17 @@ RELATION_DOMAIN_RANGE={
     'cites': ({'Work'}, {'Work'}),
 }
 
+
+def relation_signature_error(predicate: str, subject_kind: str | None, object_kind: str | None) -> str | None:
+    signature=RELATION_DOMAIN_RANGE.get(predicate)
+    if not signature:
+        return None
+    allowed_subjects, allowed_objects=signature
+    if subject_kind in allowed_subjects and object_kind in allowed_objects:
+        return None
+    return f'{predicate} requires {sorted(allowed_subjects)} -> {sorted(allowed_objects)}, got {subject_kind} -> {object_kind}'
+
+
 def validate_all():
     errors=[]
     raw_entities=load_yaml_files(ROOT/'data/entities'); raw_questions=load_yaml_files(ROOT/'data/questions')
@@ -81,15 +92,13 @@ def validate_all():
             if a.relation_family and a.relation_family != normalized['relation_family']:
                 errors.append(f'inconsistent relation_family on {a.id}')
 
-            if a.predicate in RELATION_DOMAIN_RANGE:
-                allowed_subjects, allowed_objects=RELATION_DOMAIN_RANGE[a.predicate]
-                subject_kind=raw_kind_map.get(a.subject)
-                object_kind=raw_kind_map.get(a.object)
-                if subject_kind not in allowed_subjects or object_kind not in allowed_objects:
-                    errors.append(
-                        f'{a.predicate} has invalid domain/range on {a.id}: '
-                        f'{subject_kind} -> {object_kind}'
-                    )
+            signature_error=relation_signature_error(
+                a.predicate,
+                raw_kind_map.get(a.subject),
+                raw_kind_map.get(a.object),
+            )
+            if signature_error:
+                errors.append(f'{signature_error} on {a.id}')
 
     for story in stories:
         step_ids={x.id for x in story.steps}
