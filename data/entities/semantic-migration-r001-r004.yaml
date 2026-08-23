@@ -8,11 +8,6 @@
   name: Continuity of the sum of a series of continuous functions
   start_year: 1821
   fields: [analysis]
-- id: result-r002-cauchy-1821-continuity-claim
-  type: Result
-  name: Cauchy's 1821 continuity-of-the-sum theorem
-  start_year: 1821
-  fields: [analysis]
 - id: result-r002-cauchy-1853-strengthened-continuity
   type: Result
   name: Cauchy's 1853 strengthened continuity condition
