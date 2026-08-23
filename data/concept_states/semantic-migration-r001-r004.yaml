@@ -1,0 +1,20 @@
+- id: state-r001-fourier-series-1822
+  concept_id: concept-fourier-series
+  period: {from: 1822, to: 1822}
+  label: Fourier's heat theory uses trigonometric series to match prescribed temperature data by combining sinusoidal spatial terms.
+- id: state-r001-arbitrary-function-1822
+  concept_id: concept-arbitrary-function
+  period: {from: 1822, to: 1822}
+  label: Fourier treats functions given arbitrarily on a finite interval, including functions not governed by one common analytic expression, without the unrestricted modern set-theoretic meaning of arbitrary function.
+- id: state-r001-fourier-coefficients-1822
+  concept_id: concept-fourier-coefficients
+  period: {from: 1822, to: 1822}
+  label: Fourier gives definite-integral formulas for the coefficients associated with sine and cosine expansions.
+- id: state-r002-uniform-condition-1853
+  concept_id: concept-uniform-convergence
+  period: {from: 1853, to: 1853}
+  label: Cauchy's 1853 strengthened remainder condition requires control across the variable range; identifying this condition with the later concept of uniform convergence is retrospective.
+- id: state-r004-riemann-integral-1854
+  concept_id: concept-riemann-integral
+  period: {from: 1854, to: 1854}
+  label: Riemann formulates definite integrability through subdivision sums and a criterion controlling oscillation on subintervals.
