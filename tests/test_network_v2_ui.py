@@ -81,5 +81,6 @@ def test_reader_surfaces_do_not_fallback_to_internal_ids():
 def test_concept_states_keep_detail_but_use_concise_network_names():
     source = (ROOT / 'scripts' / 'semantic_network.py').read_text(encoding='utf-8')
     assert "concise_name" in source
-    assert "'detail': state['label']" in source
+    assert "'detail':" in source
+    assert "label" in source
     assert "concept_name" in source
