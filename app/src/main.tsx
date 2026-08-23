@@ -157,88 +157,125 @@ function semanticYear(node: SemanticNode, claims: SemanticClaim[], nodes: Map<st
   return node.start_year || node.period?.from || 1850;
 }
 
+function wrapLabel(text: string, max = 28) {
+  const words = text.split(/\s+/).filter(Boolean);
+  if (!words.length) return [''];
+  const lines: string[] = [];
+  let line = words[0];
+  for (const word of words.slice(1)) {
+    if (`${line} ${word}`.length <= max) line += ` ${word}`;
+    else { lines.push(line); line = word; }
+  }
+  lines.push(line);
+  return lines;
+}
+
 function buildSemanticLayout(nodes: SemanticNode[], claims: SemanticClaim[]): SemanticLayout {
   const nodeMap = new Map(nodes.map(n => [n.id, n]));
-  const kindX: Record<string, number> = { Person: 72, Work: 165, Problem: 265, Result: 360, ConceptState: 455, Concept: 535, Event: 265 };
+  const kindX: Record<string, number> = { Person: 80, Work: 235, Problem: 395, Result: 555, ConceptState: 715, Concept: 860, Event: 395 };
   const enriched = nodes.map(node => ({ node, year: semanticYear(node, claims, nodeMap) }));
   const byYear = new Map<number, typeof enriched>();
   enriched.forEach(row => { const bucket = byYear.get(row.year) || []; bucket.push(row); byYear.set(row.year, bucket); });
   const years = [...byYear.keys()].sort((a,b)=>a-b);
   const positions: Record<string, SemanticPoint> = {};
   const yearRows: {year:number;y:number}[] = [];
-  let cursor = 58;
+  let cursor = 72;
   years.forEach((year, yearIndex) => {
-    const rows = (byYear.get(year) || []).sort((a,b) => (kindX[a.node.node_kind] || 300) - (kindX[b.node.node_kind] || 300) || a.node.id.localeCompare(b.node.id));
+    const rows = (byYear.get(year) || []).sort((a,b) => (kindX[a.node.node_kind] || 395) - (kindX[b.node.node_kind] || 395) || a.node.id.localeCompare(b.node.id));
     yearRows.push({ year, y: cursor });
     const usedByKind = new Map<string, number>();
     rows.forEach(row => {
       const used = usedByKind.get(row.node.node_kind) || 0;
-      const y = cursor + used * 42;
+      const y = cursor + used * 72;
       usedByKind.set(row.node.node_kind, used + 1);
-      positions[row.node.id] = { x: kindX[row.node.node_kind] || 300, y, year, node: row.node };
+      positions[row.node.id] = { x: kindX[row.node.node_kind] || 395, y, year, node: row.node };
     });
     const maxStack = Math.max(1, ...usedByKind.values());
     const nextYear = years[yearIndex + 1];
-    const temporalGap = nextYear === undefined ? 34 : Math.max(26, Math.min(100, (nextYear - year) * 3));
-    cursor += maxStack * 42 + temporalGap;
+    const temporalGap = nextYear === undefined ? 48 : Math.max(38, Math.min(130, (nextYear - year) * 4));
+    cursor += maxStack * 72 + temporalGap;
   });
-  return { positions, yearRows, minYear: years[0] || 1750, maxYear: years[years.length-1] || 1900, height: Math.max(700, cursor + 30), width: 610 };
+  return { positions, yearRows, minYear: years[0] || 1750, maxYear: years[years.length-1] || 1900, height: Math.max(760, cursor + 40), width: 980 };
 }
 
 function NetworkView({ data, selectedStory, selectedField, setSelectedStory, setSelectedField, onOpenStory, onOpenPerson, onSheet }: { data: Dataset; selectedStory: string; selectedField?: string; setSelectedStory:(x:string)=>void; setSelectedField:(x?:string)=>void; onOpenStory:(x:string)=>void; onOpenPerson:(x:string)=>void; onSheet:(n:React.ReactNode)=>void }) {
+  const [focusId, setFocusId] = useState<string | undefined>();
+  const [showConcepts, setShowConcepts] = useState(false);
   const defaultIds = useMemo(() => new Set(data.semantic.default_edge_ids), [data.semantic.default_edge_ids]);
   const claims = useMemo(() => data.semantic.claims.filter(c => defaultIds.has(c.id)), [data.semantic.claims, defaultIds]);
   const endpointIds = useMemo(() => new Set(claims.flatMap(c => [c.subject, c.object])), [claims]);
   const structural = useMemo(() => data.semantic.structural_edges.filter(e => endpointIds.has(e.subject) || endpointIds.has(e.object)), [data.semantic.structural_edges, endpointIds]);
   const allVisibleIds = useMemo(() => new Set([...endpointIds, ...structural.flatMap(e => [e.subject, e.object])]), [endpointIds, structural]);
-  const nodes = useMemo(() => data.semantic.nodes.filter(n => allVisibleIds.has(n.id)), [data.semantic.nodes, allVisibleIds]);
+  const nodes = useMemo(() => data.semantic.nodes.filter(n => allVisibleIds.has(n.id) && (showConcepts || n.node_kind !== 'Concept')), [data.semantic.nodes, allVisibleIds, showConcepts]);
+  const nodeIds = useMemo(() => new Set(nodes.map(n => n.id)), [nodes]);
+  const visibleStructural = useMemo(() => structural.filter(e => nodeIds.has(e.subject) && nodeIds.has(e.object)), [structural, nodeIds]);
   const layout = useMemo(() => buildSemanticLayout(nodes, claims), [nodes, claims]);
   const nodeMap = useMemo(() => new Map(nodes.map(n => [n.id, n])), [nodes]);
   const selected = selectedStory === 'all' ? undefined : data.stories.find(s => s.id === selectedStory);
   const selectedAssertionIds = useMemo(() => new Set(selected?.steps.flatMap(s => s.assertion_refs || []) || []), [selected]);
   const selectedRefs = useMemo(() => new Set(selected?.steps.map(s => s.ref) || []), [selected]);
-  const isHighlighted = (edge: SemanticClaim | SemanticEdge) => !selected || selectedAssertionIds.has(edge.id) || selectedRefs.has(edge.subject) || selectedRefs.has(edge.object);
+  const focusRefs = useMemo(() => {
+    if (!focusId) return undefined;
+    const refs = new Set<string>([focusId]);
+    [...claims, ...visibleStructural].forEach(edge => {
+      if (edge.subject === focusId) refs.add(edge.object);
+      if (edge.object === focusId) refs.add(edge.subject);
+    });
+    return refs;
+  }, [focusId, claims, visibleStructural]);
+  const storyEdgeActive = (edge: SemanticClaim | SemanticEdge) => !selected || selectedAssertionIds.has(edge.id) || selectedRefs.has(edge.subject) || selectedRefs.has(edge.object);
+  const focusEdgeActive = (edge: SemanticClaim | SemanticEdge) => !focusId || edge.subject === focusId || edge.object === focusId;
+  const isHighlighted = (edge: SemanticClaim | SemanticEdge) => storyEdgeActive(edge) && focusEdgeActive(edge);
   const fieldStories = selectedField ? data.stories.filter(s => s.fields?.includes(selectedField)) : data.stories;
   const storyIds = ['all', ...fieldStories.map(s=>s.id)];
   const storyMap = new Map(data.stories.map(s=>[s.id,s]));
   const people = peopleForStories(data, selected ? [selected] : fieldStories);
   const rootFields = data.atlas.fields.filter(f=>f.parents.includes('mathematics'));
   const fieldName = selectedField ? data.atlas.fields.find(f=>f.id===selectedField)?.name || selectedField : 'All fields';
+  const showRelationLabels = Boolean(selected || focusId);
   const pathFor = (edge: SemanticClaim | SemanticEdge) => {
     const a = layout.positions[edge.subject], b = layout.positions[edge.object];
     if (!a || !b) return '';
-    const dx = Math.abs(b.x-a.x), bend = Math.max(20, dx*0.45);
+    const dx = Math.abs(b.x-a.x), bend = Math.max(28, dx*0.42);
     return `M${a.x} ${a.y} C${a.x + (b.x>=a.x?bend:-bend)} ${a.y}, ${b.x - (b.x>=a.x?bend:-bend)} ${b.y}, ${b.x} ${b.y}`;
   };
 
-  return <><section className="hero-card"><span className="eyebrow">SEMANTIC NETWORK V2</span><h2>Network — {layout.minYear}–{layout.maxYear} · {fieldName}</h2><p>Works, Problems, Results, and historically situated ConceptStates form the topology. Story selection only highlights this graph; QuestionFrames stay in the Inquiry/Story layer.</p></section>
+  return <><section className="hero-card"><span className="eyebrow">SEMANTIC NETWORK V2</span><h2>Network — {layout.minYear}–{layout.maxYear} · {fieldName}</h2><p>Overview preserves the full topology. Tap a node to focus on its one-hop neighborhood; relation labels then appear only in that local context. QuestionFrames remain in the Inquiry/Story layer.</p></section>
     <section className="panel network-panel">
       <div className="story-filter"><button className={!selectedField?'active':''} onClick={()=>setSelectedField(undefined)}>All fields</button>{rootFields.map(f=><button key={f.id} className={selectedField===f.id?'active':''} onClick={()=>setSelectedField(f.id)}>{f.name}</button>)}</div>
-      <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory===id?'active':''} onClick={()=>setSelectedStory(id)}>{id!=='all' && <i className="story-dot" style={{background:storyColor(id)}} />}{id==='all'?'No Story overlay':storyMap.get(id)?.title}</button>)}</div>
+      <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory===id?'active':''} onClick={()=>{setFocusId(undefined);setSelectedStory(id);}}>{id!=='all' && <i className="story-dot" style={{background:storyColor(id)}} />}{id==='all'?'No Story overlay':storyMap.get(id)?.title}</button>)}</div>
+      <div className="network-controls"><button className={!focusId?'active':''} onClick={()=>setFocusId(undefined)}>Overview</button><button className={showConcepts?'active':''} onClick={()=>setShowConcepts(v=>!v)}>{showConcepts?'Hide concept identities':'Show concept identities'}</button>{focusId&&<span>Focused: {nodeMap.get(focusId)?.name || focusId}</span>}</div>
       <div className="story-filter">{people.map(p => <button key={p.id} onClick={()=>onOpenPerson(p.id)}>● {p.name}</button>)}</div>
-      <div style={{display:'flex',gap:10,flexWrap:'wrap',fontSize:12,opacity:.72,margin:'8px 4px 2px'}}><span>□ Work</span><span>▭ Problem</span><span>● Result</span><span>◇ ConceptState</span><span>○ Person</span><span>Story = highlight, not lane</span></div>
-      <svg className="network-svg" viewBox={`0 0 ${layout.width} ${layout.height}`}>
+      <div className="entity-legend"><span>□ Work</span><span>▭ Problem</span><span>● Result</span><span>◇ ConceptState</span><span>○ Person</span><span>drag horizontally to inspect columns</span></div>
+      <div className="network-scroll"><svg className="network-svg" viewBox={`0 0 ${layout.width} ${layout.height}`}>
         <defs><marker id="semantic-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" /></marker></defs>
-        <line x1="38" y1="30" x2="38" y2={layout.height-20} className="time-axis" />
-        {layout.yearRows.map(r => <g key={r.year}><text x="5" y={r.y} className="year-label">{r.year}</text><line x1="34" y1={r.y-4} x2="42" y2={r.y-4} className="year-tick" /></g>)}
-        {structural.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; return <path key={edge.id} d={pathFor(edge)} fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="3 5" opacity={isHighlighted(edge)?0.22:0.07} />; })}
-        {claims.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; const active=isHighlighted(edge), mx=(a.x+b.x)/2, my=(a.y+b.y)/2; return <g key={edge.id} opacity={active?0.86:0.1}><path d={pathFor(edge)} fill="none" stroke="currentColor" strokeWidth={active?2.2:1.2} markerEnd="url(#semantic-arrow)"/><rect x={mx-29} y={my-10} width="58" height="16" rx="8" fill="var(--panel, white)" opacity="0.94"/><text x={mx} y={my+1} textAnchor="middle" style={{fontSize:9,fontWeight:700}}>{humanize(edge.predicate)}</text></g>; })}
-        {Object.values(layout.positions).map(p => <SemanticNetworkNode key={p.node.id} point={p} highlighted={!selected || selectedRefs.has(p.node.id) || claims.some(c=>isHighlighted(c)&&(c.subject===p.node.id||c.object===p.node.id))} onClick={()=>{ if(p.node.node_kind==='Person') onOpenPerson(p.node.id); else onSheet(<SemanticNodeSheet node={p.node} claims={claims} structural={structural} nodeMap={nodeMap}/>); }} />)}
-      </svg>
+        <line x1="42" y1="30" x2="42" y2={layout.height-20} className="time-axis" />
+        {layout.yearRows.map(r => <g key={r.year}><text x="5" y={r.y} className="year-label">{r.year}</text><line x1="38" y1={r.y-4} x2="46" y2={r.y-4} className="year-tick" /></g>)}
+        {visibleStructural.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; return <path key={edge.id} d={pathFor(edge)} fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="3 5" opacity={isHighlighted(edge)?0.2:0.035} />; })}
+        {claims.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; const active=isHighlighted(edge), mx=(a.x+b.x)/2, my=(a.y+b.y)/2; return <g key={edge.id} opacity={active?0.82:0.055}><path d={pathFor(edge)} fill="none" stroke="currentColor" strokeWidth={active?2.4:1.1} markerEnd="url(#semantic-arrow)"/>{showRelationLabels&&active&&<><rect x={mx-38} y={my-12} width="76" height="19" rx="9" className="relation-label-bg"/><text x={mx} y={my+1} textAnchor="middle" className="relation-label">{humanize(edge.predicate)}</text></>}</g>; })}
+        {Object.values(layout.positions).map(p => {
+          const storyActive=!selected || selectedRefs.has(p.node.id) || claims.some(c=>storyEdgeActive(c)&&(c.subject===p.node.id||c.object===p.node.id));
+          const focusActive=!focusRefs || focusRefs.has(p.node.id);
+          return <SemanticNetworkNode key={p.node.id} point={p} highlighted={storyActive&&focusActive} focused={focusId===p.node.id} onClick={()=>{setFocusId(p.node.id); if(p.node.node_kind==='Person') onOpenPerson(p.node.id); else onSheet(<SemanticNodeSheet node={p.node} claims={claims} structural={visibleStructural} nodeMap={nodeMap}/>); }} />;
+        })}
+      </svg></div>
     </section></>;
 }
 
-function SemanticNetworkNode({ point, highlighted, onClick }: { point:SemanticPoint; highlighted:boolean; onClick:()=>void }) {
-  const {node,x,y}=point, type=node.node_kind, opacity=highlighted?1:0.18;
-  return <g className="network-node" onClick={onClick} opacity={opacity}>
-    {type==='Person'&&<circle cx={x} cy={y} r="8" className="node-person"/>}
-    {type==='Work'&&<rect x={x-11} y={y-10} width="22" height="20" rx="3" className="node-work"/>}
-    {type==='Problem'&&<rect x={x-13} y={y-9} width="26" height="18" rx="8" className="node-other"/>}
-    {type==='Result'&&<circle cx={x} cy={y} r="9" className="node-other"/>}
-    {type==='ConceptState'&&<polygon points={`${x},${y-11} ${x+11},${y} ${x},${y+11} ${x-11},${y}`} className="node-concept"/>}
-    {type==='Concept'&&<polygon points={`${x},${y-9} ${x+9},${y} ${x},${y+9} ${x-9},${y}`} className="node-concept" opacity="0.5"/>}
-    {!['Person','Work','Problem','Result','ConceptState','Concept'].includes(type)&&<circle cx={x} cy={y} r="8" className="node-other"/>}
-    <text x={x+15} y={y-3} className="node-label">{short(node.name,30)}</text><text x={x+15} y={y+10} className="node-sub">{type}</text>
+function SemanticNetworkNode({ point, highlighted, focused, onClick }: { point:SemanticPoint; highlighted:boolean; focused:boolean; onClick:()=>void }) {
+  const {node,x,y}=point, type=node.node_kind, opacity=highlighted?1:0.12;
+  const lines=wrapLabel(node.name,28), labelY=y-((lines.length-1)*7);
+  return <g className={`network-node ${focused?'focused':''}`} onClick={onClick} opacity={opacity}>
+    {focused&&<circle cx={x} cy={y} r="19" className="focus-ring"/>}
+    {type==='Person'&&<circle cx={x} cy={y} r="9" className="node-person"/>}
+    {type==='Work'&&<rect x={x-13} y={y-12} width="26" height="24" rx="4" className="node-work"/>}
+    {type==='Problem'&&<rect x={x-15} y={y-10} width="30" height="20" rx="9" className="node-other"/>}
+    {type==='Result'&&<circle cx={x} cy={y} r="10" className="node-other"/>}
+    {type==='ConceptState'&&<polygon points={`${x},${y-13} ${x+13},${y} ${x},${y+13} ${x-13},${y}`} className="node-concept"/>}
+    {type==='Concept'&&<polygon points={`${x},${y-10} ${x+10},${y} ${x},${y+10} ${x-10},${y}`} className="node-concept" opacity="0.5"/>}
+    {!['Person','Work','Problem','Result','ConceptState','Concept'].includes(type)&&<circle cx={x} cy={y} r="9" className="node-other"/>}
+    <text x={x+19} y={labelY} className="node-label">{lines.map((line,i)=><tspan key={`${node.id}:${i}`} x={x+19} dy={i===0?0:14}>{line}</tspan>)}</text>
+    <text x={x+19} y={y+17+(lines.length-1)*14} className="node-sub">{type}</text>
   </g>;
 }
 
