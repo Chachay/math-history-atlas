@@ -1,0 +1,34 @@
+# Additional ConceptStates needed by the remaining migration batch.
+# Existing reviewed states in the per-unit files are reused rather than duplicated.
+
+# R005
+- id: state-r005-quantified-control-1817
+  concept_id: concept-quantified-control
+  period: {from: 1817, to: 1817}
+  label: Bolzano formulates continuity using quantitatively controlled changes in the function value when the variable changes sufficiently little.
+- id: state-r005-quantified-control-1823
+  concept_id: concept-quantified-control
+  period: {from: 1823, to: 1823}
+  label: Cauchy's infinitesimal-calculus lessons use explicit inequalities and variable-dependent bounds in arguments about continuity and limits.
+
+# R006
+- id: state-r006-resolvent-1770
+  concept_id: concept-resolvent
+  period: {from: 1770, to: 1771}
+  label: Lagrange studies auxiliary resolvent expressions and how their values change under permutations of polynomial roots.
+
+# R007
+- id: state-r007-surface-applicability-1827
+  concept_id: concept-surface-applicability
+  period: {from: 1827, to: 1827}
+  label: Gauss treats applicability of surfaces through preservation of metric quantities under bending without stretching.
+
+# R009
+- id: state-r009-prime-ideal-1871
+  concept_id: concept-prime-ideal
+  period: {from: 1871, to: 1871}
+  label: Dedekind's 1871 theory distinguishes prime ideals as the basic factors in ideal decomposition.
+- id: state-r009-ideal-factorization-1871
+  concept_id: concept-ideal-factorization
+  period: {from: 1871, to: 1871}
+  label: Dedekind's 1871 ideal theory establishes decomposition of ideals into prime ideals as the replacement for failed element factorization.
