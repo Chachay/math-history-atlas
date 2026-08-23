@@ -89,7 +89,7 @@ stories:
       - step_id: lebesgue-3
         canonical_assertion_refs: [assertion-r010-generalization-aim, assertion-r010-borel-context]
       - step_id: lebesgue-4
-        canonical_assertion_refs: [assertion-r010-lebesgue-measure]
+        canonical_assertion_refs: [assertion-r010-lebesgue-measure, assertion-r010-value-band-integral]
       - step_id: lebesgue-5
         canonical_assertion_refs: [assertion-r010-value-band-integral, assertion-r010-set-size-to-value-band]
       - step_id: lebesgue-6
