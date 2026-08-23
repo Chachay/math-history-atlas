@@ -1,46 +1,59 @@
 - id: story-integrability
-  title: When is a function integrable enough for trigonometric representation?
-  description: From Dirichlet's admissibility boundary to Riemann's definite-integral criterion, discontinuous test cases, and the remaining gap between integrability and Fourier representation.
+  title: When does a definite integral exist?
+  description: >
+    A mathematical path from the need to integrate broader classes of functions to Riemann's sum-based criterion,
+    pathological discontinuity tests, and the realization that integrability is a distinct property from
+    trigonometric representability.
   question_phases: [q-dirichlet-admissible-functions, q-riemann-integrability, q-infinitely-discontinuous-functions, q-fourier-series-convergence, q-post-riemann-integration-gap]
   fields: [analysis]
   steps:
     - id: integrability-1
       ref: q-dirichlet-admissible-functions
-      role: Question
+      role: Handoff
       narrative: >
-        By 1854 Riemann explicitly treated cases he said Dirichlet had left unresolved and made the definite integral itself part of the investigation. Read through the Atlas, this gives R003's retrospective admissibility question a historically grounded handoff into a more explicit integration problem.
+        Broader notions of function do not by themselves determine whether a function can enter the analytic
+        operations used in Fourier coefficients. By 1854 Riemann explicitly treated cases left outside Dirichlet's
+        assumptions and made the definite integral itself part of the mathematical problem.
       assertion_refs: [assertion-r004-admissibility-handoff, assertion-r004-integral-need]
       perspective: later_interpretation
       temporal_anchor: {from: 1854, to: 1854}
     - id: integrability-2
-      ref: work-riemann-trig-1854
-      role: Problem
+      ref: q-riemann-integrability
+      role: Existence problem
       narrative: >
-        Riemann characterized Dirichlet's result as deciding representability only when the function was integrable throughout and did not have infinitely many maxima and minima. He then said that uncertainty in fundamental points of definite integration required clarifying the concept and its range of validity.
-      assertion_refs: [assertion-r004-dirichlet-scope, assertion-r004-integral-need]
+        The central question is no longer merely whether a Fourier representation works, but what it means for a
+        definite integral to exist for a broad class of functions. Riemann's memoir identifies uncertainty in the
+        foundations and range of validity of definite integration as something that must be clarified in its own right.
+      assertion_refs: [assertion-r004-integral-need, assertion-r004-dirichlet-scope]
       perspective: historical
       temporal_anchor: {from: 1854, to: 1854}
     - id: integrability-3
       ref: concept-riemann-integral
-      role: Response
+      role: Criterion
       narrative: >
-        In sections 4–5 Riemann defined the definite integral through limiting sums over subdivisions with freely chosen sample locations. He derived an oscillation condition that is necessary and sufficient for convergence of those sums for an everywhere finite function.
+        Riemann defined the definite integral through limiting sums over subdivisions with freely chosen sample
+        locations. He then derived an oscillation condition that is necessary and sufficient for those sums to
+        converge for an everywhere finite function, turning integrability into a property that can be characterized.
       assertion_refs: [assertion-r004-integral-criterion]
       perspective: historical
       temporal_anchor: {from: 1854, to: 1854}
     - id: integrability-4
       ref: concept-discontinuous-function
-      role: Test case
+      role: Stress test
       narrative: >
-        Riemann then investigated functions discontinuous infinitely often in every interval. His example is discontinuous at rational arguments whose reduced denominator is even, yet it still satisfies his criterion for definite integration.
+        The criterion can then be tested against functions with highly irregular discontinuity. Riemann studied an
+        example discontinuous infinitely often in every interval that nevertheless satisfies his condition for
+        definite integration, showing that continuity is not the boundary of integrability.
       assertion_refs: [assertion-r004-discontinuous-example]
       perspective: historical
       temporal_anchor: {from: 1854, to: 1854}
     - id: integrability-5
       ref: q-fourier-series-convergence
-      role: Remaining gap
+      role: Separation of problems
       narrative: >
-        Integrability did not settle the original representation problem. Riemann explicitly observed that a function can admit integration throughout while its Fourier series still fails to converge.
+        Characterizing integrability still does not solve trigonometric representation. Riemann explicitly observed
+        that a function may be integrable throughout while its Fourier series fails to converge. Integrability and
+        representation therefore become distinct mathematical properties rather than two names for the same boundary.
       assertion_refs: [assertion-r004-integrability-not-sufficient]
       perspective: historical
       temporal_anchor: {from: 1854, to: 1854}
@@ -48,12 +61,14 @@
       ref: q-post-riemann-integration-gap
       role: Next question
       narrative: >
-        Later interpretation therefore leaves a separate downstream question: what additional ideas are needed to handle integration and exceptional-set phenomena beyond the boundary reached here? R004 records that question without treating later developments as an inevitable consequence of Riemann's memoir.
+        Once integrability has become an independent object of study, a downstream question remains: how far can the
+        notion of integration itself be enlarged, and what new mathematical structure is required to do so? R004 leaves
+        that boundary open rather than treating later measure theory as an inevitable consequence of Riemann's memoir.
       assertion_refs: [assertion-r004-downstream-gap]
       perspective: later_interpretation
       temporal_anchor: {from: 1854, to: 1867}
   links:
-    - {from: integrability-1, to: integrability-2, type: branches}
+    - {from: integrability-1, to: integrability-2, type: continues}
     - {from: integrability-2, to: integrability-3, type: continues}
     - {from: integrability-3, to: integrability-4, type: continues}
     - {from: integrability-4, to: integrability-5, type: branches}
