@@ -4002,31 +4002,6 @@
       "default_network_visible": true
     },
     {
-      "id": "assertion-r002-v2-cours-proves-continuity-claim",
-      "subject": "work-cauchy-cours",
-      "predicate": "proves",
-      "object": "result-r002-cauchy-1821-continuity-claim",
-      "period": {
-        "from": 1821,
-        "to": 1821
-      },
-      "perspective": "historical",
-      "certainty": "high",
-      "sources": [
-        "source-cauchy-1821",
-        "source-arsac-2013"
-      ],
-      "status": "historically_reviewed",
-      "subject_kind": "Work",
-      "object_kind": "Result",
-      "semantic_layer": "historical",
-      "claim_mode": "historical",
-      "relation_family": "result_relation",
-      "relation_precision": "typed",
-      "publishable": true,
-      "default_network_visible": true
-    },
-    {
       "id": "assertion-r002-v2-cauchy-authored-1853",
       "subject": "person-cauchy",
       "predicate": "authored",
@@ -4042,6 +4017,32 @@
       ],
       "status": "historically_reviewed",
       "subject_kind": "Person",
+      "object_kind": "Work",
+      "semantic_layer": "historical",
+      "claim_mode": "historical",
+      "relation_family": "documentary",
+      "relation_precision": "typed",
+      "publishable": true,
+      "default_network_visible": true
+    },
+    {
+      "id": "assertion-r002-v2-cauchy-1853-revises-cours",
+      "subject": "work-cauchy-series-1853",
+      "predicate": "revises",
+      "object": "work-cauchy-cours",
+      "period": {
+        "from": 1853,
+        "to": 1853
+      },
+      "perspective": "historical",
+      "certainty": "high",
+      "sources": [
+        "source-cauchy-1821",
+        "source-cauchy-1853",
+        "source-arsac-2013"
+      ],
+      "status": "historically_reviewed",
+      "subject_kind": "Work",
       "object_kind": "Work",
       "semantic_layer": "historical",
       "claim_mode": "historical",
@@ -4095,32 +4096,6 @@
       "object_kind": "Result",
       "semantic_layer": "historical",
       "claim_mode": "historical",
-      "relation_family": "result_relation",
-      "relation_precision": "typed",
-      "publishable": true,
-      "default_network_visible": true
-    },
-    {
-      "id": "assertion-r002-v2-1853-strengthens-1821",
-      "subject": "result-r002-cauchy-1853-strengthened-continuity",
-      "predicate": "strengthens",
-      "object": "result-r002-cauchy-1821-continuity-claim",
-      "period": {
-        "from": 1853,
-        "to": 1853
-      },
-      "perspective": "later_interpretation",
-      "certainty": "high",
-      "sources": [
-        "source-cauchy-1821",
-        "source-cauchy-1853",
-        "source-arsac-2013"
-      ],
-      "status": "historically_reviewed",
-      "subject_kind": "Result",
-      "object_kind": "Result",
-      "semantic_layer": "historical",
-      "claim_mode": "historiographic",
       "relation_family": "result_relation",
       "relation_precision": "typed",
       "publishable": true,

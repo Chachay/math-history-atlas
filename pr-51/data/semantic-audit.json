@@ -1,32 +1,32 @@
 {
   "projection_version": 2,
   "counts": {
-    "claims": 174,
-    "publishable_claims": 172,
-    "default_network_edges": 53,
+    "claims": 173,
+    "publishable_claims": 171,
+    "default_network_edges": 52,
     "layers": {
-      "historical": 128,
+      "historical": 127,
       "inquiry": 41,
       "mathematical": 5
     },
     "relation_families": {
-      "documentary": 15,
+      "documentary": 16,
       "inquiry": 41,
       "broad_association": 64,
       "development": 13,
       "problem_relation": 13,
-      "result_relation": 14,
+      "result_relation": 12,
       "conceptual_content": 14
     },
     "relation_precision": {
-      "typed": 53,
+      "typed": 52,
       "inquiry": 41,
       "broad": 64,
       "legacy": 16
     },
     "claim_modes": {
       "historical": 121,
-      "historiographic": 46,
+      "historiographic": 45,
       "mathematical_retrospective": 7
     }
   },
