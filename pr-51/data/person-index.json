@@ -43,7 +43,9 @@
     "name": "Peter Gustav Lejeune Dirichlet",
     "assertions": [
       "assertion-r001-dirichlet-convergence",
-      "assertion-r003-dirichlet-convergence"
+      "assertion-r003-dirichlet-convergence",
+      "assertion-r003-v2-dirichlet-authored-1829",
+      "assertion-r003-v2-dirichlet-authored-1837"
     ],
     "stories": []
   },
@@ -126,7 +128,8 @@
     "person": "person-gauss",
     "name": "Carl Friedrich Gauss",
     "assertions": [
-      "assertion-r007-geodesy-context"
+      "assertion-r007-geodesy-context",
+      "assertion-r007-v2-gauss-authored-1827"
     ],
     "stories": []
   },

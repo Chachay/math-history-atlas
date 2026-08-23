@@ -1,32 +1,32 @@
 {
   "projection_version": 2,
   "counts": {
-    "claims": 173,
-    "publishable_claims": 171,
-    "default_network_edges": 52,
+    "claims": 207,
+    "publishable_claims": 205,
+    "default_network_edges": 86,
     "layers": {
-      "historical": 127,
+      "historical": 161,
       "inquiry": 41,
       "mathematical": 5
     },
     "relation_families": {
-      "documentary": 16,
+      "documentary": 21,
       "inquiry": 41,
       "broad_association": 64,
-      "development": 13,
-      "problem_relation": 13,
-      "result_relation": 12,
-      "conceptual_content": 14
+      "development": 14,
+      "problem_relation": 18,
+      "result_relation": 20,
+      "conceptual_content": 29
     },
     "relation_precision": {
-      "typed": 52,
+      "typed": 86,
       "inquiry": 41,
       "broad": 64,
       "legacy": 16
     },
     "claim_modes": {
-      "historical": 121,
-      "historiographic": 45,
+      "historical": 153,
+      "historiographic": 47,
       "mathematical_retrospective": 7
     }
   },
@@ -190,6 +190,7 @@
       "assertion-r005-continuity-convergence-intersection",
       "assertion-r005-heine-published-control",
       "assertion-r005-weierstrass-role",
+      "assertion-r006-lagrange-resolvents",
       "assertion-r006-lagrange-permutations",
       "assertion-r006-galois-substitution-structure",
       "assertion-r006-galois-root-permutations",
@@ -198,8 +199,11 @@
       "assertion-r007-monge-surface-theory",
       "assertion-r007-gauss-curvature-definition",
       "assertion-r007-gauss-curvature-ratio",
+      "assertion-r007-gauss-development",
+      "assertion-r007-egregium-invariance",
       "assertion-r007-gauss-deformation-independent",
       "assertion-r007-gauss-foundational-reading",
+      "assertion-r007-geodesy-context",
       "assertion-r008-heine-uniqueness",
       "assertion-r008-cantor-1870-uniqueness",
       "assertion-r008-cantor-1871-finite-exceptions",
@@ -210,6 +214,9 @@
       "assertion-r008-analytic-origin-reading",
       "assertion-r009-kummer-ideal-divisors",
       "assertion-r009-dedekind-ideal-system",
+      "assertion-r009-dedekind-prime-ideal",
+      "assertion-r009-dedekind-ideal-factorization",
+      "assertion-r009-kronecker-alternative",
       "assertion-r010-riemann-limitation",
       "assertion-r010-generalization-aim",
       "assertion-r010-jordan-content",
@@ -219,7 +226,8 @@
       "assertion-r010-thesis-development",
       "assertion-r010-borel-context",
       "assertion-r010-limit-properties",
-      "assertion-r004-v2-riemann-uses-fourier-series"
+      "assertion-r004-v2-riemann-uses-fourier-series",
+      "assertion-r003-v2-dirichlet-1829-uses-fourier-series"
     ]
   },
   "notes": [
