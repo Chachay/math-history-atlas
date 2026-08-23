@@ -63,4 +63,7 @@ def test_reader_surfaces_do_not_fallback_to_internal_ids():
     source = (ROOT / 'app' / 'src' / 'main.tsx').read_text(encoding='utf-8')
     assert "label=item?" not in source
     assert "other?.name ||" not in source
-    assert "a.subject===person.id?a.object:a.subject" not in source
+    assert "<p>{a.subject" not in source
+    assert "<p>{a.object" not in source
+    assert "if(!item) return null" in source
+    assert "if(!other)return null" in source
