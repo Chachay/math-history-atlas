@@ -1,54 +1,68 @@
 - id: story-lebesgue-integration
-  title: How much bad behavior can integration tolerate?
-  description: From Riemann's remaining integration boundary through Jordan and Borel's set-size machinery to Lebesgue's 1901–1902 measure-based integral and the new limiting questions it exposed.
+  title: How can measuring sets change what can be integrated?
+  description: >
+    A mathematical path in which two problems meet: the limits of Riemann integration and the assignment of size
+    to increasingly general point sets. Lebesgue's construction reorganizes integration around measurable sets
+    associated with ranges of function values, enlarging the class of functions that can be treated.
   question_phases: [q-post-riemann-integration-gap, q-set-size-integration, q-lebesgue-riemann-limitations, q-lebesgue-value-band-integration, q-lebesgue-limit-processes]
   fields: [analysis]
   steps:
     - id: lebesgue-1
       ref: q-post-riemann-integration-gap
-      role: Question
+      role: Integration boundary
       narrative: >
-        Riemann's criterion did not exhaust the later integration problem. Lebesgue's 1901 note gives a historically explicit way to reopen that boundary: he states that not every derivative is integrable in Riemann's sense and treats recovery of primitive functions as a reason to seek a broader integral.
+        Riemann's criterion leaves a later integration problem open. Lebesgue's 1901 note states a concrete failure:
+        not every derivative is integrable in Riemann's sense, so recovering primitive functions requires a broader
+        notion of integration.
       assertion_refs: [assertion-r010-riemann-to-lebesgue-question, assertion-r010-riemann-limitation]
       perspective: historical
       temporal_anchor: {from: 1854, to: 1901}
     - id: lebesgue-2
       ref: q-set-size-integration
-      role: Converging line
+      role: Independent mathematical line
       narrative: >
-        A separate late-nineteenth-century line developed ways to assign size to point sets. Jordan's 1892 work connected definite integration with set content, while Borel's 1898 construction extended length to a broader family of sets; retrospectively, these developments supplied machinery that could meet the integration problem without being a simple consequence of it.
+        Separately, late-nineteenth-century mathematics developed ways to assign size to point sets. Jordan's content
+        and Borel's measurable-set work are not consequences of the Riemann problem; they form another line of
+        mathematical structure that can later be brought into the construction of an integral.
       assertion_refs: [assertion-r010-jordan-content, assertion-r010-borel-measure, assertion-r010-lines-converge]
       perspective: later_interpretation
       temporal_anchor: {from: 1892, to: 1898}
     - id: lebesgue-3
       ref: work-lebesgue-generalization-1901
-      role: Problem
+      role: Convergence of problems
       narrative: >
-        In 1901 Lebesgue asks for an integral that contains Riemann's as a special case while handling cases excluded by the older theory. In the same note he explicitly refers to Borel's measurable sets, making the set-measure context part of the documented construction rather than a later analogy.
+        Lebesgue's 1901 note joins these lines. He asks for an integral containing Riemann's as a special case and
+        explicitly invokes Borel's measurable sets, so set-size machinery becomes part of the documented construction
+        rather than a later analogy imposed on it.
       assertion_refs: [assertion-r010-generalization-aim, assertion-r010-borel-context]
       perspective: historical
       temporal_anchor: {from: 1901, to: 1901}
     - id: lebesgue-4
       ref: concept-lebesgue-measure
-      role: Response
+      role: New structure
       narrative: >
-        Lebesgue defines measure for point sets through countable open coverings and uses measurable sets as the material from which the generalized integral is built. The historical formulation is kept in its one-dimensional 1901–1902 setting rather than being rewritten as later abstract measure-space theory.
-      assertion_refs: [assertion-r010-lebesgue-measure]
+        Lebesgue defines measure for point sets through countable open coverings and works with measurable sets.
+        The key mathematical move is that integration can now depend on the sizes of sets associated with a function,
+        not only on subdivision of the original argument interval.
+      assertion_refs: [assertion-r010-lebesgue-measure, assertion-r010-value-band-integral]
       perspective: historical
       temporal_anchor: {from: 1901, to: 1902}
     - id: lebesgue-5
       ref: q-lebesgue-value-band-integration
-      role: Response
+      role: Reorganized integral
       narrative: >
-        Instead of only subdividing the argument interval, Lebesgue groups ranges of function values and measures the corresponding sets of arguments. The integral is then formed from sums weighted by those measures, which is the concrete historical content behind the later pedagogical contrast between Riemann and Lebesgue integration.
+        Lebesgue groups ranges of function values and measures the corresponding sets of arguments. The integral is
+        formed from sums weighted by those measures. This is the concrete mathematical transformation behind the
+        later pedagogical contrast between subdividing the domain and organizing integration by value bands.
       assertion_refs: [assertion-r010-value-band-integral, assertion-r010-set-size-to-value-band]
       perspective: historical
       temporal_anchor: {from: 1901, to: 1901}
     - id: lebesgue-6
       ref: work-lebesgue-thesis-1902
-      role: Development
+      role: Systematic development
       narrative: >
-        Lebesgue's 1902 thesis gives the construction a fuller systematic form, treating measure of sets before integration and enlarging the class of functions that can be handled beyond the older Riemann boundary.
+        Lebesgue's 1902 thesis develops the construction more fully, treating measure of sets before integration and
+        enlarging the class of functions that can be handled beyond the older Riemann boundary.
       assertion_refs: [assertion-r010-thesis-development]
       perspective: historical
       temporal_anchor: {from: 1902, to: 1902}
@@ -56,7 +70,9 @@
       ref: q-lebesgue-limit-processes
       role: Next question
       narrative: >
-        The 1901 note had already announced closure and limiting properties for the enlarged class of summable functions and applied the integral to bounded derivatives. Read after the fuller 1902 development, this opens a downstream Atlas question about limiting processes, without identifying Lebesgue's compressed 1901 claims with the later named convergence theorems.
+        Enlarging the integral creates a new problem about limiting operations on functions. Lebesgue's 1901 note
+        already states limited closure and limiting properties, but the Atlas leaves the later named convergence
+        theorems outside this Story rather than reading them back into the short note.
       assertion_refs: [assertion-r010-limit-properties, assertion-r010-value-band-to-limits]
       perspective: later_interpretation
       temporal_anchor: {from: 1902, to: null}

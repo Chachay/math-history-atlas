@@ -1,0 +1,93 @@
+review:
+  type: cross_story_editorial_refactor
+  review_date: '2026-08-22'
+  status: reviewed_candidate
+  principle: >
+    A Story should normally make a mathematical problem, obstruction, transformation, or preserved property its
+    protagonist. Historical actors and Works remain essential interventions and evidence anchors, but should not
+    become the organizing subject when the researched material supports a clearer mathematical spine.
+  scope:
+    changed:
+      - story-fourier-heat-representation
+      - story-function
+      - story-cauchy-rigor-continuity
+      - story-integrability
+      - story-lebesgue-integration
+    retained_as_benchmarks:
+      - story-r006-solvability
+      - story-r008-uniqueness
+      - story-r009-factorization
+    inspected_without_change:
+      - story-quantified-control
+      - story-r007-intrinsic-geometry
+findings:
+  - id: smr-001
+    classification: PASS
+    story: story-fourier-heat-representation
+    assessment: >
+      The Story now treats heat as the historical origin and the mathematical construction of general solutions
+      from trigonometric special solutions as the protagonist. The differential-equation, prescribed-data, and
+      separated-trigonometric-solution statements are already supported by R001 packet assertions r001-a002 and
+      r001-a004, both PASS in Historical Critic, and are represented canonically through
+      assertion-r001-heat-data-to-series. The Story stops at representation as a branch point instead of replaying
+      downstream convergence and function Stories.
+    preserved_boundary: >
+      Modern initial/boundary-value and separated-solution language is explicitly explanatory; eigenfunction,
+      spectral, completeness, and Sturm-Liouville claims are not attributed to Fourier or added as canonical history.
+  - id: smr-002
+    classification: PASS
+    story: story-function
+    assessment: >
+      The protagonist is narrowed from an exhaustive 'history of the function concept' to the mathematical boundary
+      between one analytic expression, broader numerical dependence, and admissibility for analytic operations.
+      Fourier's heat episode is now a handoff rather than a duplicate opening narrative.
+  - id: smr-003
+    classification: PASS
+    story: story-cauchy-rigor-continuity
+    assessment: >
+      The Story is reorganized around preservation of continuity under infinite limiting processes. Cauchy's general
+      rigor program is context; the mathematical obstruction is that convergence alone need not preserve continuity,
+      and the downstream question is what stronger cross-variable control is required.
+  - id: smr-004
+    classification: PASS
+    story: story-integrability
+    assessment: >
+      The Story now makes existence and characterization of the definite integral its central mathematical problem.
+      Fourier representation provides the historical handoff, while Riemann's criterion and discontinuous test cases
+      establish integrability as an independent property before the Story separates it again from Fourier convergence.
+  - id: smr-005
+    classification: PASS
+    story: story-lebesgue-integration
+    assessment: >
+      The Story now emphasizes the mathematical recombination of two lines: limits of Riemann integration and methods
+      for assigning size to point sets. Lebesgue's explicit use of Borel measurable sets remains the documented handoff;
+      no Cantor-to-Borel or Jordan-to-Lebesgue causal edge is added.
+  - id: smr-006
+    classification: PASS
+    stories: [story-r006-solvability, story-r008-uniqueness, story-r009-factorization]
+    assessment: >
+      These Stories already use strong mathematical protagonists: radical solvability, uniqueness of representation,
+      and replacement of failed unique factorization. Rewriting them for uniformity would reduce rather than improve
+      their question structure.
+  - id: smr-007
+    classification: PASS
+    stories: [story-quantified-control, story-r007-intrinsic-geometry]
+    assessment: >
+      Both already formulate their main questions mathematically. Their prose could receive later local polish, but
+      no protagonist-level restructuring is warranted in this refactor.
+research_gaps:
+  - id: gap-story-fourier-pde-downstream
+    status: future
+    question: >
+      How did the special-solution / expansion problem in mathematical physics develop into more general boundary-value,
+      Sturm-Liouville, completeness, eigenfunction-expansion, and spectral questions?
+    disposition: >
+      Do not extend the current Fourier Story into this later PDE spine without a bounded Research Unit. The current
+      Story may expose the branch point but must leave the downstream historical chain unasserted.
+acceptance_checks:
+  - No changed Story introduces a new historical transmission edge.
+  - Modern explanatory vocabulary is marked as such where it could otherwise be projected backward.
+  - R001/Function duplicate Fourier exposition is reduced.
+  - R002 and R004 are organized by mathematical failure/criterion rather than a person's general program.
+  - R010 preserves independent predecessor lines until the documented Lebesgue/Borel meeting.
+  - R006/R008/R009 remain unchanged as benchmark Stories.

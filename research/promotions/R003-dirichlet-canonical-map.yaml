@@ -29,9 +29,9 @@ stories:
   - story_id: story-function
     steps:
       - step_id: function-1
-        canonical_assertion_refs: [assertion-r001-function-concept, assertion-r003-function-historiography]
+        canonical_assertion_refs: [assertion-r001-arbitrary-function, assertion-r001-function-concept]
       - step_id: function-2
-        canonical_assertion_refs: [assertion-r003-dirichlet-convergence, assertion-r003-dirichlet-fourier-cauchy]
+        canonical_assertion_refs: [assertion-r001-arbitrary-function]
       - step_id: function-3
         canonical_assertion_refs: [assertion-r003-dirichlet-arbitrary-admissibility, assertion-r003-dirichlet-discontinuity, assertion-r003-dirichlet-integral-boundary]
       - step_id: function-4

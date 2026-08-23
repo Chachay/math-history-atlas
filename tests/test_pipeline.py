@@ -14,10 +14,14 @@ def test_sample_data_valid():
     assert validate_all() == []
 
 
-def test_fourier_is_intersection():
+def test_fourier_is_shared_without_function_story_duplication():
     rows = build_intersections()
     hit = [x for x in rows if x['entity'] == 'concept-fourier-series']
-    assert hit and hit[0]['story_count'] == 3
+    assert hit and hit[0]['story_count'] == 2
+    assert set(hit[0]['stories']) == {
+        'story-cauchy-rigor-continuity',
+        'story-fourier-heat-representation',
+    }
 
 
 def test_r001_story_has_reviewable_narrative_provenance():
