@@ -1112,7 +1112,8 @@
       "id": "state-function-expression",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Analytic-expression viewpoint",
+      "name": "Function · 1748",
+      "detail": "Analytic-expression viewpoint",
       "concept_id": "concept-function",
       "period": {
         "from": 1748,
@@ -1124,7 +1125,8 @@
       "id": "state-function-correspondence",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Broader correspondence viewpoint",
+      "name": "Function · 1837",
+      "detail": "Broader correspondence viewpoint",
       "concept_id": "concept-function",
       "period": {
         "from": 1837,
@@ -1136,7 +1138,8 @@
       "id": "state-r003-function-1837",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Numerical function language need not be tied to one analytic law, while remaining within nineteenth-century real-variable practice.",
+      "name": "Function · 1837",
+      "detail": "Numerical function language need not be tied to one analytic law, while remaining within nineteenth-century real-variable practice.",
       "concept_id": "concept-function",
       "period": {
         "from": 1837,
@@ -1148,7 +1151,8 @@
       "id": "state-r003-discontinuity-1829",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Discontinuous and highly irregular numerical assignments appear explicitly, but admissibility still depends on the integration framework.",
+      "name": "Discontinuous function · 1829",
+      "detail": "Discontinuous and highly irregular numerical assignments appear explicitly, but admissibility still depends on the integration framework.",
       "concept_id": "concept-discontinuous-function",
       "period": {
         "from": 1829,
@@ -1160,7 +1164,8 @@
       "id": "r004-cs-integrability-1854",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Definite integrability is tested through convergence of subdivision sums and control of oscillation.",
+      "name": "Analytic admissibility for definite integration · 1854",
+      "detail": "Definite integrability is tested through convergence of subdivision sums and control of oscillation.",
       "concept_id": "concept-integrability",
       "period": {
         "from": 1854,
@@ -1172,7 +1177,8 @@
       "id": "r004-cs-riemann-integral-1854",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Riemann formulates a sum-based criterion for definite integration within the trigonometric-series investigation.",
+      "name": "Riemann's criterion for definite integrability · 1854",
+      "detail": "Riemann formulates a sum-based criterion for definite integration within the trigonometric-series investigation.",
       "concept_id": "concept-riemann-integral",
       "period": {
         "from": 1854,
@@ -1184,7 +1190,8 @@
       "id": "r004-cs-discontinuity-1854",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Functions discontinuous infinitely often in every interval become explicit test cases rather than automatic exclusions from integration.",
+      "name": "Discontinuous function · 1854",
+      "detail": "Functions discontinuous infinitely often in every interval become explicit test cases rather than automatic exclusions from integration.",
       "concept_id": "concept-discontinuous-function",
       "period": {
         "from": 1854,
@@ -1196,7 +1203,8 @@
       "id": "r005-cs-continuity-1817-1823",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Continuity is expressed through historically distinct variable-increment and infinitesimal frameworks rather than one shared modern epsilon-delta syntax.",
+      "name": "Continuity · 1817",
+      "detail": "Continuity is expressed through historically distinct variable-increment and infinitesimal frameworks rather than one shared modern epsilon-delta syntax.",
       "concept_id": "concept-continuity",
       "period": {
         "from": 1817,
@@ -1208,7 +1216,8 @@
       "id": "r005-cs-quantified-control-1861",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Student notes from Weierstrass's teaching record an explicit bound on input variation corresponding to an arbitrarily small allowed function variation.",
+      "name": "Quantified control of variation · 1861",
+      "detail": "Student notes from Weierstrass's teaching record an explicit bound on input variation corresponding to an arbitrarily small allowed function variation.",
       "concept_id": "concept-quantified-control",
       "period": {
         "from": 1861,
@@ -1220,7 +1229,8 @@
       "id": "r005-cs-quantified-control-1872",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Heine's published function theory gives explicit small-error and small-increment conditions for continuity and uniform continuity.",
+      "name": "Quantified control of variation · 1872",
+      "detail": "Heine's published function theory gives explicit small-error and small-increment conditions for continuity and uniform continuity.",
       "concept_id": "concept-quantified-control",
       "period": {
         "from": 1872,
@@ -1232,7 +1242,8 @@
       "id": "r006-cs-root-permutation-1770",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Functions of roots are compared under permutations as part of solving and explaining algebraic equations.",
+      "name": "Permutations of roots · 1770",
+      "detail": "Functions of roots are compared under permutations as part of solving and explaining algebraic equations.",
       "concept_id": "concept-root-permutation",
       "period": {
         "from": 1770,
@@ -1244,7 +1255,8 @@
       "id": "r006-cs-substitution-group-1831",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Galois uses groups of permutations and substitutions within the solvability problem; this is not yet the later abstract group concept in its mature form.",
+      "name": "Group of substitutions · 1831",
+      "detail": "Galois uses groups of permutations and substitutions within the solvability problem; this is not yet the later abstract group concept in its mature form.",
       "concept_id": "concept-substitution-group",
       "period": {
         "from": 1831,
@@ -1256,7 +1268,8 @@
       "id": "state-r007-surface-curvature-pre-gauss",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Normal-section and analytic surface curvature before Gauss",
+      "name": "Curvature of a surface · 1760",
+      "detail": "Normal-section and analytic surface curvature before Gauss",
       "concept_id": "concept-surface-curvature",
       "period": {
         "from": 1760,
@@ -1268,7 +1281,8 @@
       "id": "state-r007-surface-curvature-gauss",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Gauss's measure of curvature through the spherical image and metric formulas",
+      "name": "Curvature of a surface · 1827",
+      "detail": "Gauss's measure of curvature through the spherical image and metric formulas",
       "concept_id": "concept-surface-curvature",
       "period": {
         "from": 1827,
@@ -1280,7 +1294,8 @@
       "id": "state-r007-intrinsic-gauss",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Deformation-independent relations in Gauss's surface theory",
+      "name": "Geometry determined within a surface · 1827",
+      "detail": "Deformation-independent relations in Gauss's surface theory",
       "concept_id": "concept-intrinsic-surface-geometry",
       "period": {
         "from": 1827,
@@ -1292,7 +1307,8 @@
       "id": "state-r008-uniqueness-1870",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Uniqueness is formulated by requiring every coefficient to vanish when a convergent trigonometric series has zero sum for every real argument, without assuming uniform convergence.",
+      "name": "Uniqueness of trigonometric-series representation · 1870",
+      "detail": "Uniqueness is formulated by requiring every coefficient to vanish when a convergent trigonometric series has zero sum for every real argument, without assuming uniform convergence.",
       "concept_id": "concept-trig-series-uniqueness",
       "period": {
         "from": 1870,
@@ -1304,7 +1320,8 @@
       "id": "state-r008-exceptional-1871",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "A finite number of exceptional arguments may be omitted from convergence or equality without destroying the uniqueness conclusion.",
+      "name": "Exceptional point set in a uniqueness theorem · 1871",
+      "detail": "A finite number of exceptional arguments may be omitted from convergence or equality without destroying the uniqueness conclusion.",
       "concept_id": "concept-exceptional-point-set",
       "period": {
         "from": 1871,
@@ -1316,7 +1333,8 @@
       "id": "state-r008-exceptional-1872",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Certain infinite exceptional point sets are admitted when finite iteration of the derived-set operation eventually leaves only finitely many points.",
+      "name": "Exceptional point set in a uniqueness theorem · 1872",
+      "detail": "Certain infinite exceptional point sets are admitted when finite iteration of the derived-set operation eventually leaves only finitely many points.",
       "concept_id": "concept-exceptional-point-set",
       "period": {
         "from": 1872,
@@ -1328,7 +1346,8 @@
       "id": "state-r008-derived-1872",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "For a linear point set P, P' is the set of limit points of P; finite iteration of this operation is used to distinguish point sets in the uniqueness theorem.",
+      "name": "Derived set of a point set · 1872",
+      "detail": "For a linear point set P, P' is the set of limit points of P; finite iteration of this operation is used to distinguish point sets in the uniqueness theorem.",
       "concept_id": "concept-derived-set",
       "period": {
         "from": 1872,
@@ -1340,7 +1359,8 @@
       "id": "state-r009-kummer-ideal-divisor",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Kummer's ideal divisors were characterized through divisibility behavior in cyclotomic arithmetic, not as Dedekind's later systems of integers.",
+      "name": "Ideal divisor in Kummer's factorization theory · 1846",
+      "detail": "Kummer's ideal divisors were characterized through divisibility behavior in cyclotomic arithmetic, not as Dedekind's later systems of integers.",
       "concept_id": "concept-ideal-divisor",
       "period": {
         "from": 1846,
@@ -1352,7 +1372,8 @@
       "id": "state-r009-dedekind-ideal-1871",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Dedekind's first ideal theory used systems of algebraic integers and still depended substantially on simple ideals represented by congruences.",
+      "name": "Ideal as a system of algebraic integers · 1871",
+      "detail": "Dedekind's first ideal theory used systems of algebraic integers and still depended substantially on simple ideals represented by congruences.",
       "concept_id": "concept-dedekind-ideal",
       "period": {
         "from": 1871,
@@ -1364,7 +1385,8 @@
       "id": "state-r009-dedekind-ideal-later",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Dedekind's later presentations increasingly foregrounded operations and properties of ideals rather than particular congruence representations.",
+      "name": "Ideal as a system of algebraic integers · 1877",
+      "detail": "Dedekind's later presentations increasingly foregrounded operations and properties of ideals rather than particular congruence representations.",
       "concept_id": "concept-dedekind-ideal",
       "period": {
         "from": 1877,
@@ -1376,7 +1398,8 @@
       "id": "state-r010-jordan-content-1892",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Jordan assigns content to point sets in his 1892 treatment of definite integrals; later measure-zero boundary formulations are not part of this historical state.",
+      "name": "Jordan content for point sets · 1892",
+      "detail": "Jordan assigns content to point sets in his 1892 treatment of definite integrals; later measure-zero boundary formulations are not part of this historical state.",
       "concept_id": "concept-jordan-content",
       "period": {
         "from": 1892,
@@ -1388,7 +1411,8 @@
       "id": "state-r010-borel-measure-1898",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Borel extends length from intervals to a wider family of point sets using countable set operations, without later abstract sigma-algebra terminology.",
+      "name": "Borel measure of point sets · 1898",
+      "detail": "Borel extends length from intervals to a wider family of point sets using countable set operations, without later abstract sigma-algebra terminology.",
       "concept_id": "concept-borel-measure",
       "period": {
         "from": 1898,
@@ -1400,7 +1424,8 @@
       "id": "state-r010-measurable-set-1898-1901",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Borel's measurable-set construction uses countable set operations, and Lebesgue's 1901 note explicitly invokes Borel measurable sets in its measure-and-integration construction.",
+      "name": "Measurable set in early measure theory · 1898",
+      "detail": "Borel's measurable-set construction uses countable set operations, and Lebesgue's 1901 note explicitly invokes Borel measurable sets in its measure-and-integration construction.",
       "concept_id": "concept-measurable-set",
       "period": {
         "from": 1898,
@@ -1412,7 +1437,8 @@
       "id": "state-r010-lebesgue-measure-1901",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Lebesgue defines measure of point sets through countable open coverings in the 1901 note, before later outer-measure and completion terminology.",
+      "name": "Lebesgue measure · 1901",
+      "detail": "Lebesgue defines measure of point sets through countable open coverings in the 1901 note, before later outer-measure and completion terminology.",
       "concept_id": "concept-lebesgue-measure",
       "period": {
         "from": 1901,
@@ -1424,7 +1450,8 @@
       "id": "state-r010-lebesgue-integral-1901",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Lebesgue subdivides the range of function values, measures the corresponding sets of arguments, and forms sums from those measures to define the generalized integral.",
+      "name": "Lebesgue integral · 1901",
+      "detail": "Lebesgue subdivides the range of function values, measures the corresponding sets of arguments, and forms sums from those measures to define the generalized integral.",
       "concept_id": "concept-lebesgue-integral",
       "period": {
         "from": 1901,
@@ -1436,7 +1463,8 @@
       "id": "state-r010-lebesgue-integral-1902",
       "node_kind": "ConceptState",
       "type": "ConceptState",
-      "name": "Lebesgue's thesis develops measure of sets before integration and gives a fuller systematic development of the generalized integral introduced in 1901.",
+      "name": "Lebesgue integral · 1902",
+      "detail": "Lebesgue's thesis develops measure of sets before integration and gives a fuller systematic development of the generalized integral introduced in 1901.",
       "concept_id": "concept-lebesgue-integral",
       "period": {
         "from": 1902,
