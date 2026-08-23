@@ -1,0 +1,30 @@
+- id: concept-fourier-coefficients
+  type: Concept
+  name: Fourier coefficients
+  start_year: 1822
+  fields: [analysis, mathematical-physics]
+- id: problem-continuity-under-function-series
+  type: Problem
+  name: Continuity of the sum of a series of continuous functions
+  start_year: 1821
+  fields: [analysis]
+- id: result-r002-cauchy-1821-continuity-claim
+  type: Result
+  name: Cauchy's 1821 continuity-of-the-sum theorem
+  start_year: 1821
+  fields: [analysis]
+- id: result-r002-cauchy-1853-strengthened-continuity
+  type: Result
+  name: Cauchy's 1853 strengthened continuity condition
+  start_year: 1853
+  fields: [analysis]
+- id: problem-definite-integrability
+  type: Problem
+  name: Existence of the definite integral for broad classes of functions
+  start_year: 1854
+  fields: [analysis]
+- id: result-r004-riemann-integrability-criterion
+  type: Result
+  name: Riemann's criterion for definite integrability
+  start_year: 1854
+  fields: [analysis]
