@@ -289,7 +289,7 @@
         "id": "r002-story-4",
         "ref": "work-cauchy-series-1853",
         "role": "Stronger control",
-        "narrative": "In 1853 Cauchy returned to the continuity-of-the-sum problem, acknowledged exceptions to the earlier general claim, and imposed stronger control on the remainder across the specified range of the variable. The historical text supplies the strengthened condition; identifying it with the later concept of uniform convergence is a retrospective mathematical reading.\n",
+        "narrative": "In 1853 Cauchy returned to the continuity-of-the-sum problem, acknowledged exceptions to the earlier general claim, and required stronger control of the remainder across the range of the variable. This strengthened form became part of the later development of what is now called uniform convergence.\n",
         "assertion_refs": [
           "assertion-r002-cauchy-1853-continuity",
           "assertion-r002-cauchy-1853-uniform"
