@@ -32,7 +32,7 @@
 - id: assertion-r003-v2-dirichlet-1829-uses-discontinuous-state
   subject: work-dirichlet-1829
   predicate: uses
-  object: state-r003-discontinuous-admissibility-1829
+  object: state-r003-discontinuity-1829
   period: {from: 1829, to: 1829}
   perspective: historical
   certainty: high
@@ -79,7 +79,7 @@
 - id: assertion-r005-v2-weierstrass-1861-uses-control-state
   subject: work-weierstrass-schwarz-notes-1861
   predicate: uses
-  object: state-r005-quantified-control-1861
+  object: r005-cs-quantified-control-1861
   period: {from: 1861, to: 1861}
   perspective: historical
   certainty: medium
@@ -88,7 +88,7 @@
 - id: assertion-r005-v2-heine-1872-uses-control-state
   subject: work-heine-functionenlehre-1872
   predicate: uses
-  object: state-r005-quantified-control-1872
+  object: r005-cs-quantified-control-1872
   period: {from: 1872, to: 1872}
   perspective: historical
   certainty: high
@@ -153,7 +153,7 @@
 - id: assertion-r006-v2-galois-uses-substitution-state
   subject: work-galois-resolubilite
   predicate: uses
-  object: state-r006-substitution-group-1831
+  object: r006-cs-substitution-group-1831
   period: {from: 1831, to: 1831}
   perspective: historical
   certainty: high
@@ -171,7 +171,7 @@
 - id: assertion-r006-v2-galois-criterion-depends-substitutions
   subject: result-r006-galois-solvability-criterion
   predicate: depends_on
-  object: state-r006-substitution-group-1831
+  object: r006-cs-substitution-group-1831
   period: {from: 1831, to: 1831}
   perspective: historical
   certainty: high
@@ -191,7 +191,7 @@
 - id: assertion-r007-v2-gauss-defines-curvature-state
   subject: work-gauss-disquisitiones-surfaces
   predicate: defines
-  object: state-r007-surface-curvature-1827
+  object: state-r007-surface-curvature-gauss
   period: {from: 1827, to: 1827}
   perspective: historical
   certainty: high
@@ -218,7 +218,7 @@
 - id: assertion-r007-v2-egregium-depends-curvature-state
   subject: result-theorema-egregium
   predicate: depends_on
-  object: state-r007-surface-curvature-1827
+  object: state-r007-surface-curvature-gauss
   period: {from: 1827, to: 1827}
   perspective: historical
   certainty: high
@@ -238,7 +238,7 @@
 - id: assertion-r009-v2-kummer-uses-ideal-divisor-state
   subject: work-kummer-1847-complex-numbers
   predicate: uses
-  object: state-r009-ideal-divisor-1847
+  object: state-r009-kummer-ideal-divisor
   period: {from: 1847, to: 1847}
   perspective: historical
   certainty: high
