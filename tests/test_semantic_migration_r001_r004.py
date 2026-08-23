@@ -24,20 +24,21 @@ def test_r001_exposes_heat_to_representation_structure():
     assert expected <= default
 
 
-def test_r002_exposes_1821_to_1853_continuity_structure():
+def test_r002_exposes_1821_to_1853_continuity_structure_without_reifying_the_false_generality():
     graph = network()
     claims = {c['id']: c for c in graph['claims']}
     default = set(graph['default_edge_ids'])
     expected = {
         'assertion-r002-v2-cours-addresses-continuity-sum',
-        'assertion-r002-v2-cours-proves-continuity-claim',
+        'assertion-r002-v2-cauchy-1853-revises-cours',
         'assertion-r002-v2-cauchy-1853-addresses-continuity-sum',
         'assertion-r002-v2-cauchy-1853-proves-strengthened',
-        'assertion-r002-v2-1853-strengthens-1821',
         'assertion-r002-v2-1853-depends-uniform-condition',
     }
     assert expected <= default
-    assert claims['assertion-r002-v2-1853-strengthens-1821']['perspective'] == 'later_interpretation'
+    assert claims['assertion-r002-v2-cauchy-1853-revises-cours']['predicate'] == 'revises'
+    assert claims['assertion-r002-v2-1853-depends-uniform-condition']['perspective'] == 'later_interpretation'
+    assert 'assertion-r002-v2-cours-proves-continuity-claim' not in claims
 
 
 def test_r004_exposes_integrability_as_problem_result_and_state():
