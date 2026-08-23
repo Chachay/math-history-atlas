@@ -159,12 +159,21 @@ def semantic_nodes(entities: list[dict], concept_states: list[dict]) -> list[dic
         }
         for row in entities
     ]
+    concept_names = {
+        row['id']: row.get('name', row['id'])
+        for row in entities
+        if row.get('type') == 'Concept'
+    }
     for state in concept_states:
+        start = state.get('period', {}).get('from')
+        concept_name = concept_names.get(state['concept_id'], 'Concept')
+        concise_name = f"{concept_name} · {start}" if start is not None else concept_name
         nodes.append({
             'id': state['id'],
             'node_kind': 'ConceptState',
             'type': 'ConceptState',
-            'name': state['label'],
+            'name': concise_name,
+            'detail': state['label'],
             'concept_id': state['concept_id'],
             'period': state['period'],
             'temporal_semantics': TEMPORAL_SEMANTICS['ConceptState'],
