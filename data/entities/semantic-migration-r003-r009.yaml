@@ -1,0 +1,37 @@
+# Semantic Network V2 entities for the remaining R003/R005/R006/R007/R009 migration batch.
+
+# R003 — Dirichlet: convergence conditions and function admissibility
+- id: result-r003-dirichlet-1829-convergence
+  type: Result
+  name: Dirichlet's 1829 convergence theorem for trigonometric series
+  start_year: 1829
+  fields: [analysis]
+
+# R006 — solvability by radicals
+- id: problem-r006-radical-solvability
+  type: Problem
+  name: Solvability of polynomial equations by radicals
+  start_year: 1770
+  fields: [algebra]
+- id: result-r006-abel-quintic-impossibility
+  type: Result
+  name: Abel's impossibility result for a general quintic formula by radicals
+  start_year: 1824
+  fields: [algebra]
+- id: result-r006-galois-solvability-criterion
+  type: Result
+  name: Galois's criterion for solvability by radicals
+  start_year: 1831
+  fields: [algebra]
+
+# R009 — ideal factorization
+- id: problem-r009-factorization-failure
+  type: Problem
+  name: Failure of ordinary unique factorization in algebraic number systems
+  start_year: 1846
+  fields: [algebra, number-theory]
+- id: result-r009-dedekind-prime-ideal-factorization
+  type: Result
+  name: Factorization of ideals into prime ideals in Dedekind's 1871 theory
+  start_year: 1871
+  fields: [algebra, number-theory]
