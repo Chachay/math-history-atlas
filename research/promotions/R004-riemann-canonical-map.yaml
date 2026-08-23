@@ -41,7 +41,7 @@ stories:
       - step_id: integrability-1
         canonical_assertion_refs: [assertion-r004-admissibility-handoff, assertion-r004-integral-need]
       - step_id: integrability-2
-        canonical_assertion_refs: [assertion-r004-dirichlet-scope, assertion-r004-integral-need]
+        canonical_assertion_refs: [assertion-r004-integral-need, assertion-r004-dirichlet-scope]
       - step_id: integrability-3
         canonical_assertion_refs: [assertion-r004-integral-criterion]
       - step_id: integrability-4
