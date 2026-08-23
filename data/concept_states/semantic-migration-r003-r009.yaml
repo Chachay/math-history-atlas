@@ -1,12 +1,5 @@
-# R003
-- id: state-r003-function-1837
-  concept_id: concept-function
-  period: {from: 1837, to: 1837}
-  label: Dirichlet's 1837 treatment allows a function to be specified by determinate values rather than by one common analytic expression.
-- id: state-r003-discontinuous-admissibility-1829
-  concept_id: concept-discontinuous-function
-  period: {from: 1829, to: 1829}
-  label: Dirichlet's 1829 convergence theorem explicitly accommodates functions with finitely many discontinuities and extrema on the interval.
+# Additional ConceptStates needed by the remaining migration batch.
+# Existing reviewed states in the per-unit files are reused rather than duplicated.
 
 # R005
 - id: state-r005-quantified-control-1817
@@ -17,44 +10,20 @@
   concept_id: concept-quantified-control
   period: {from: 1823, to: 1823}
   label: Cauchy's infinitesimal-calculus lessons use explicit inequalities and variable-dependent bounds in arguments about continuity and limits.
-- id: state-r005-quantified-control-1861
-  concept_id: concept-quantified-control
-  period: {from: 1861, to: 1861}
-  label: Weierstrass's 1861 lectures, preserved in Schwarz's notes, organize continuity with explicit epsilon-style quantitative control.
-- id: state-r005-quantified-control-1872
-  concept_id: concept-quantified-control
-  period: {from: 1872, to: 1872}
-  label: Heine's 1872 published treatment presents explicit epsilon-delta style control for continuity.
 
 # R006
 - id: state-r006-resolvent-1770
   concept_id: concept-resolvent
   period: {from: 1770, to: 1771}
   label: Lagrange studies auxiliary resolvent expressions and how their values change under permutations of polynomial roots.
-- id: state-r006-substitution-group-1831
-  concept_id: concept-substitution-group
-  period: {from: 1831, to: 1831}
-  label: Galois organizes substitutions of roots into a structured system used to state conditions for solvability by radicals.
 
 # R007
-- id: state-r007-surface-curvature-1827
-  concept_id: concept-surface-curvature
-  period: {from: 1827, to: 1827}
-  label: Gauss defines surface curvature through the product of principal curvatures and relates it to the spherical image.
 - id: state-r007-surface-applicability-1827
   concept_id: concept-surface-applicability
   period: {from: 1827, to: 1827}
   label: Gauss treats applicability of surfaces through preservation of metric quantities under bending without stretching.
 
 # R009
-- id: state-r009-ideal-divisor-1847
-  concept_id: concept-ideal-divisor
-  period: {from: 1847, to: 1847}
-  label: Kummer's ideal divisors restore factorization behavior in selected algebraic number systems without yet being ideals as subsets closed under ring operations.
-- id: state-r009-dedekind-ideal-1871
-  concept_id: concept-dedekind-ideal
-  period: {from: 1871, to: 1871}
-  label: Dedekind's 1871 theory treats an ideal as a system of algebraic integers satisfying his closure and divisibility conditions.
 - id: state-r009-prime-ideal-1871
   concept_id: concept-prime-ideal
   period: {from: 1871, to: 1871}
