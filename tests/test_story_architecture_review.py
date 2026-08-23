@@ -18,15 +18,15 @@ def _overlap(context: dict, left: str, right: str) -> dict:
     return next(row for row in context["overlaps"] if row["stories"] == pair)
 
 
-def test_function_story_context_exposes_bounded_entry_and_fourier_overlap():
+def test_function_story_context_uses_representation_handoff_without_duplicate_fourier_step():
     context = build_architecture_context(["story-function"])
     story = _story(context, "story-function")
     assert story["entry"]["from"] == 1807
-    assert story["entry"]["ref"] == "concept-fourier-series"
+    assert story["entry"]["ref"] == "q-trig-representation-scope"
 
     overlap = _overlap(context, "story-function", "story-fourier-heat-representation")
-    assert "q-what-is-function" in overlap["shared_question_phases"]
-    assert "concept-fourier-series" in overlap["shared_step_refs"]
+    assert "q-trig-representation-scope" in overlap["shared_question_phases"]
+    assert "concept-fourier-series" not in overlap["shared_step_refs"]
 
 
 def test_fourier_heat_context_keeps_heat_question_in_story_path():
