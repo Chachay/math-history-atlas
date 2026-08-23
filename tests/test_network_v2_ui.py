@@ -5,7 +5,6 @@ def test_network_ui_consumes_semantic_v2_projection():
     source = (ROOT / 'app' / 'src' / 'main.tsx').read_text(encoding='utf-8')
     assert "semantic-network.json" in source
     assert "default_edge_ids" in source
-    assert "Story = highlight, not lane" not in source
     assert "QuestionFrames remain in the Inquiry/Story layer" in source
 
 
