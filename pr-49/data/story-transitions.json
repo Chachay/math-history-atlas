@@ -5,13 +5,13 @@
     "from_step": "r001-story-6",
     "to_story": "story-function",
     "to_step": "function-1",
-    "type": "thematic_handoff",
+    "type": "retrospective",
     "perspective": "later_interpretation",
     "assertion_refs": [
       "assertion-r001-function-concept",
       "assertion-r001-arbitrary-function"
     ],
-    "rationale": "The Fourier Story stops at trigonometric representation as a branch point. The function Story picks up one downstream mathematical question: what kinds of objects can be represented once one common analytic expression is no longer required? This is an editorial handoff, not a claim of a single causal genealogy.\n"
+    "rationale": "The Fourier Story stops at trigonometric representation as a branch point. The function Story then re-enters the Fourier-era material from a different mathematical angle: what kinds of objects can be represented once one common analytic expression is no longer required? The backward temporal move is deliberate editorial re-entry, not a historical claim that a later event caused the earlier material.\n"
   },
   {
     "id": "transition-r003-r004-admissibility",

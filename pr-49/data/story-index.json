@@ -163,7 +163,7 @@
         "id": "r001-story-4",
         "ref": "q-trig-representation-scope",
         "role": "Representation problem",
-        "narrative": "Once special trigonometric solutions are combined, a new mathematical question becomes unavoidable for the method itself: which prescribed spatial distributions can actually be represented by such a trigonometric expansion? Fourier's heat theory thus turns the construction of a solution into a problem about the scope of representation.\n",
+        "narrative": "Once special trigonometric solutions are combined, the method requires answering a further mathematical question: which prescribed spatial distributions can actually be represented by such a trigonometric expansion? Fourier's heat theory thus turns the construction of a solution into a problem about the scope of representation.\n",
         "assertion_refs": [
           "assertion-r001-series-representation-question",
           "assertion-r001-heat-data-to-series"
