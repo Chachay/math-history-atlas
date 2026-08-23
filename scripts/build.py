@@ -9,6 +9,7 @@ from scripts.validate import validate_all
 from scripts.build_intersections import build_intersections
 from scripts.build_person_index import build_person_index
 from scripts.build_atlas import build_atlas
+from scripts.build_concept_evolution import build_concept_evolution
 from scripts.semantic_network import (
     build_inquiry_graph,
     build_research_claims,
@@ -40,12 +41,12 @@ def main():
     transition_file = ROOT/'editorial/story-transitions.yaml'
     transitions = yaml.safe_load(transition_file.read_text(encoding='utf-8')) or []
 
-    # Legacy aggregate kept temporarily so the current UI and research tooling do not
-    # silently change semantics during the V2 migration. New UI work should consume
-    # semantic-network.json / inquiry-graph.json instead.
+    # Legacy aggregate kept temporarily so current research tooling does not
+    # silently change semantics. Reader UI should consume generated projections.
     dump('graph.json', {'entities': entities, 'questions': questions, 'assertions': assertions})
 
     dump('semantic-network.json', build_semantic_network(entities, questions, concept_states, assertions))
+    dump('concept-evolution.json', build_concept_evolution())
     dump('inquiry-graph.json', build_inquiry_graph(entities, questions, concept_states, assertions))
     dump('research-claims.json', build_research_claims(entities, questions, concept_states, assertions))
     dump('semantic-audit.json', semantic_audit(entities, questions, concept_states, assertions))
@@ -66,7 +67,7 @@ def main():
     dump('story-transitions.json', transitions)
     dump('atlas.json', build_atlas())
     sync_app_data()
-    print('Build completed. Semantic V2 projections and legacy JSON synced to app/public/data.')
+    print('Build completed. Semantic V3 exploration projections and legacy JSON synced to app/public/data.')
 
 if __name__ == '__main__':
     main()
