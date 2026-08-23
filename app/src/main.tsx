@@ -28,6 +28,7 @@ type Dataset = {
 type RouteState = { view: View; storyId?: string; personId?: string; networkStory?: string; networkField?: string };
 type SemanticPoint = { x: number; y: number; year: number; node: SemanticNode };
 type SemanticLayout = { positions: Record<string, SemanticPoint>; yearRows: { year: number; y: number }[]; minYear: number; maxYear: number; height: number; width: number };
+type RoutedPath = { d: string; labelX: number; labelY: number };
 
 const views: View[] = ['Atlas', 'Network', 'Story', 'Person'];
 
@@ -198,6 +199,34 @@ function buildSemanticLayout(nodes: SemanticNode[], claims: SemanticClaim[]): Se
   return { positions, yearRows, minYear: years[0] || 1750, maxYear: years[years.length-1] || 1900, height: Math.max(760, cursor + 40), width: 980 };
 }
 
+function nodeHalfSize(node: SemanticNode) {
+  if (node.node_kind === 'Work') return { x: 13, y: 12 };
+  if (node.node_kind === 'Problem') return { x: 15, y: 10 };
+  if (node.node_kind === 'ConceptState') return { x: 13, y: 13 };
+  if (node.node_kind === 'Concept') return { x: 10, y: 10 };
+  if (node.node_kind === 'Result') return { x: 10, y: 10 };
+  return { x: 9, y: 9 };
+}
+
+function routeSemanticEdge(a: SemanticPoint, b: SemanticPoint): RoutedPath {
+  const ah = nodeHalfSize(a.node), bh = nodeHalfSize(b.node);
+  const dx = b.x - a.x, dy = b.y - a.y;
+  if (Math.abs(dx) < 4) {
+    const down = dy >= 0;
+    const sx = a.x, sy = a.y + (down ? ah.y : -ah.y);
+    const tx = b.x, ty = b.y + (down ? -bh.y : bh.y);
+    return { d: `M${sx} ${sy} L${tx} ${ty}`, labelX: sx + 10, labelY: (sy + ty) / 2 };
+  }
+  const right = dx > 0;
+  const sx = a.x + (right ? ah.x : -ah.x), sy = a.y;
+  const tx = b.x + (right ? -bh.x : bh.x), ty = b.y;
+  const span = Math.abs(tx - sx);
+  const bend = Math.max(32, Math.min(90, span * 0.42));
+  const c1x = sx + (right ? bend : -bend);
+  const c2x = tx - (right ? bend : -bend);
+  return { d: `M${sx} ${sy} C${c1x} ${sy}, ${c2x} ${ty}, ${tx} ${ty}`, labelX: (sx + tx) / 2, labelY: (sy + ty) / 2 };
+}
+
 function NetworkView({ data, selectedStory, selectedField, setSelectedStory, setSelectedField, onOpenStory, onOpenPerson, onSheet }: { data: Dataset; selectedStory: string; selectedField?: string; setSelectedStory:(x:string)=>void; setSelectedField:(x?:string)=>void; onOpenStory:(x:string)=>void; onOpenPerson:(x:string)=>void; onSheet:(n:React.ReactNode)=>void }) {
   const [focusId, setFocusId] = useState<string | undefined>();
   const [showConcepts, setShowConcepts] = useState(false);
@@ -214,6 +243,15 @@ function NetworkView({ data, selectedStory, selectedField, setSelectedStory, set
   const selected = selectedStory === 'all' ? undefined : data.stories.find(s => s.id === selectedStory);
   const selectedAssertionIds = useMemo(() => new Set(selected?.steps.flatMap(s => s.assertion_refs || []) || []), [selected]);
   const selectedRefs = useMemo(() => new Set(selected?.steps.map(s => s.ref) || []), [selected]);
+  const storyNodeIds = useMemo(() => {
+    if (!selected) return undefined;
+    const ids = new Set<string>();
+    selectedRefs.forEach(id => { if (allVisibleIds.has(id)) ids.add(id); });
+    data.semantic.claims.forEach(c => {
+      if (selectedAssertionIds.has(c.id)) { ids.add(c.subject); ids.add(c.object); }
+    });
+    return ids;
+  }, [selected, selectedRefs, selectedAssertionIds, data.semantic.claims, allVisibleIds]);
   const focusRefs = useMemo(() => {
     if (!focusId) return undefined;
     const refs = new Set<string>([focusId]);
@@ -223,7 +261,7 @@ function NetworkView({ data, selectedStory, selectedField, setSelectedStory, set
     });
     return refs;
   }, [focusId, claims, visibleStructural]);
-  const storyEdgeActive = (edge: SemanticClaim | SemanticEdge) => !selected || selectedAssertionIds.has(edge.id) || selectedRefs.has(edge.subject) || selectedRefs.has(edge.object);
+  const storyEdgeActive = (edge: SemanticClaim | SemanticEdge) => !selected || selectedAssertionIds.has(edge.id) || Boolean(storyNodeIds?.has(edge.subject) || storyNodeIds?.has(edge.object));
   const focusEdgeActive = (edge: SemanticClaim | SemanticEdge) => !focusId || edge.subject === focusId || edge.object === focusId;
   const isHighlighted = (edge: SemanticClaim | SemanticEdge) => storyEdgeActive(edge) && focusEdgeActive(edge);
   const fieldStories = selectedField ? data.stories.filter(s => s.fields?.includes(selectedField)) : data.stories;
@@ -232,31 +270,25 @@ function NetworkView({ data, selectedStory, selectedField, setSelectedStory, set
   const people = peopleForStories(data, selected ? [selected] : fieldStories);
   const rootFields = data.atlas.fields.filter(f=>f.parents.includes('mathematics'));
   const fieldName = selectedField ? data.atlas.fields.find(f=>f.id===selectedField)?.name || selectedField : 'All fields';
-  const showRelationLabels = Boolean(selected || focusId);
-  const pathFor = (edge: SemanticClaim | SemanticEdge) => {
-    const a = layout.positions[edge.subject], b = layout.positions[edge.object];
-    if (!a || !b) return '';
-    const dx = Math.abs(b.x-a.x), bend = Math.max(28, dx*0.42);
-    return `M${a.x} ${a.y} C${a.x + (b.x>=a.x?bend:-bend)} ${a.y}, ${b.x - (b.x>=a.x?bend:-bend)} ${b.y}, ${b.x} ${b.y}`;
-  };
+  const focusedNode = focusId ? nodeMap.get(focusId) : undefined;
 
-  return <><section className="hero-card"><span className="eyebrow">SEMANTIC NETWORK V2</span><h2>Network — {layout.minYear}–{layout.maxYear} · {fieldName}</h2><p>Overview preserves the full topology. Tap a node to focus on its one-hop neighborhood; relation labels then appear only in that local context. QuestionFrames remain in the Inquiry/Story layer.</p></section>
+  return <><section className="hero-card"><span className="eyebrow">SEMANTIC NETWORK V2</span><h2>Network — {layout.minYear}–{layout.maxYear} · {fieldName}</h2><p>Overview preserves the topology. Tap a node to focus on its immediate neighborhood. Story selection highlights the historical path without importing Story questions into the graph.</p></section>
     <section className="panel network-panel">
       <div className="story-filter"><button className={!selectedField?'active':''} onClick={()=>setSelectedField(undefined)}>All fields</button>{rootFields.map(f=><button key={f.id} className={selectedField===f.id?'active':''} onClick={()=>setSelectedField(f.id)}>{f.name}</button>)}</div>
       <div className="story-filter">{storyIds.map(id => <button key={id} className={selectedStory===id?'active':''} onClick={()=>{setFocusId(undefined);setSelectedStory(id);}}>{id!=='all' && <i className="story-dot" style={{background:storyColor(id)}} />}{id==='all'?'No Story overlay':storyMap.get(id)?.title}</button>)}</div>
-      <div className="network-controls"><button className={!focusId?'active':''} onClick={()=>setFocusId(undefined)}>Overview</button><button className={showConcepts?'active':''} onClick={()=>setShowConcepts(v=>!v)}>{showConcepts?'Hide concept identities':'Show concept identities'}</button>{focusId&&<span>Focused: {nodeMap.get(focusId)?.name || focusId}</span>}</div>
+      <div className="network-controls"><button className={!focusId?'active':''} onClick={()=>setFocusId(undefined)}>Overview</button><button className={showConcepts?'active':''} onClick={()=>setShowConcepts(v=>!v)}>{showConcepts?'Hide concept identities':'Show concept identities'}</button>{focusedNode&&<button onClick={()=>onSheet(<SemanticNodeSheet node={focusedNode} claims={claims} structural={visibleStructural} nodeMap={nodeMap}/>)}>Details</button>}{focusedNode?.node_kind==='Person'&&<button onClick={()=>onOpenPerson(focusedNode.id)}>Open person</button>}{focusId&&<span>{focusedNode?.name || ''}</span>}</div>
       <div className="story-filter">{people.map(p => <button key={p.id} onClick={()=>onOpenPerson(p.id)}>● {p.name}</button>)}</div>
       <div className="entity-legend"><span>□ Work</span><span>▭ Problem</span><span>● Result</span><span>◇ ConceptState</span><span>○ Person</span><span>drag horizontally to inspect columns</span></div>
       <div className="network-scroll"><svg className="network-svg" viewBox={`0 0 ${layout.width} ${layout.height}`}>
         <defs><marker id="semantic-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" /></marker></defs>
         <line x1="42" y1="30" x2="42" y2={layout.height-20} className="time-axis" />
         {layout.yearRows.map(r => <g key={r.year}><text x="5" y={r.y} className="year-label">{r.year}</text><line x1="38" y1={r.y-4} x2="46" y2={r.y-4} className="year-tick" /></g>)}
-        {visibleStructural.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; return <path key={edge.id} d={pathFor(edge)} fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="3 5" opacity={isHighlighted(edge)?0.2:0.035} />; })}
-        {claims.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; const active=isHighlighted(edge), mx=(a.x+b.x)/2, my=(a.y+b.y)/2; return <g key={edge.id} opacity={active?0.82:0.055}><path d={pathFor(edge)} fill="none" stroke="currentColor" strokeWidth={active?2.4:1.1} markerEnd="url(#semantic-arrow)"/>{showRelationLabels&&active&&<><rect x={mx-38} y={my-12} width="76" height="19" rx="9" className="relation-label-bg"/><text x={mx} y={my+1} textAnchor="middle" className="relation-label">{humanize(edge.predicate)}</text></>}</g>; })}
+        {visibleStructural.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; const route=routeSemanticEdge(a,b); return <path key={edge.id} d={route.d} fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="3 5" opacity={isHighlighted(edge)?0.2:0.035} />; })}
+        {claims.map(edge => { const a=layout.positions[edge.subject], b=layout.positions[edge.object]; if(!a||!b) return null; const active=isHighlighted(edge), route=routeSemanticEdge(a,b); return <g key={edge.id} opacity={active?0.82:0.055}><path d={route.d} fill="none" stroke="currentColor" strokeWidth={active?2.4:1.1} markerEnd="url(#semantic-arrow)"/></g>; })}
         {Object.values(layout.positions).map(p => {
-          const storyActive=!selected || selectedRefs.has(p.node.id) || claims.some(c=>storyEdgeActive(c)&&(c.subject===p.node.id||c.object===p.node.id));
+          const storyActive=!selected || Boolean(storyNodeIds?.has(p.node.id)) || claims.some(c=>storyEdgeActive(c)&&(c.subject===p.node.id||c.object===p.node.id));
           const focusActive=!focusRefs || focusRefs.has(p.node.id);
-          return <SemanticNetworkNode key={p.node.id} point={p} highlighted={storyActive&&focusActive} focused={focusId===p.node.id} onClick={()=>{setFocusId(p.node.id); if(p.node.node_kind==='Person') onOpenPerson(p.node.id); else onSheet(<SemanticNodeSheet node={p.node} claims={claims} structural={visibleStructural} nodeMap={nodeMap}/>); }} />;
+          return <SemanticNetworkNode key={p.node.id} point={p} highlighted={storyActive&&focusActive} focused={focusId===p.node.id} onClick={()=>setFocusId(p.node.id)} />;
         })}
       </svg></div>
     </section></>;
@@ -275,33 +307,35 @@ function SemanticNetworkNode({ point, highlighted, focused, onClick }: { point:S
     {type==='Concept'&&<polygon points={`${x},${y-10} ${x+10},${y} ${x},${y+10} ${x-10},${y}`} className="node-concept" opacity="0.5"/>}
     {!['Person','Work','Problem','Result','ConceptState','Concept'].includes(type)&&<circle cx={x} cy={y} r="9" className="node-other"/>}
     <text x={x+19} y={labelY} className="node-label">{lines.map((line,i)=><tspan key={`${node.id}:${i}`} x={x+19} dy={i===0?0:14}>{line}</tspan>)}</text>
-    <text x={x+19} y={y+17+(lines.length-1)*14} className="node-sub">{type}</text>
+    <text x={x+19} y={y+17+(lines.length-1)*14} className="node-sub">{readerNodeKind(type)}</text>
   </g>;
 }
 
 function SemanticNodeSheet({ node, claims, structural, nodeMap }: { node:SemanticNode; claims:SemanticClaim[]; structural:SemanticEdge[]; nodeMap:Map<string,SemanticNode> }) {
   const incident=[...claims,...structural].filter(e=>e.subject===node.id||e.object===node.id);
-  return <><span className="sheet-badge">{node.node_kind.toUpperCase()} · SEMANTIC NETWORK</span><h3>{node.name}</h3><p>{node.temporal_semantics ? `Temporal semantics: ${humanize(node.temporal_semantics)}.` : ''} Network relations shown here are typed or structural; Inquiry QuestionFrames are excluded.</p><div className="contribution-list">{incident.map(e=>{ const outbound=e.subject===node.id, other=nodeMap.get(outbound?e.object:e.subject); return <div key={e.id}><span>{outbound?'OUT':'IN'}</span><b>{humanize(e.predicate)}</b><p>{other?.name || (outbound?e.object:e.subject)}</p></div>; })}</div></>;
+  return <><span className="sheet-badge">{readerNodeKind(node.node_kind).toUpperCase()}</span><h3>{node.name}</h3><p>This item is connected to the following nearby works, problems, results, or concepts in the researched historical network.</p><div className="contribution-list">{incident.map(e=>{ const outbound=e.subject===node.id, other=nodeMap.get(outbound?e.object:e.subject); if(!other) return null; return <div key={e.id}><span>{outbound?'TO':'FROM'}</span><b>{readerRelation(e.predicate)}</b><p>{other.name}</p></div>; })}</div></>;
 }
 
 function IntersectionSheet({ intersection, data, onOpen }: { intersection:Intersection; data:Dataset; onOpen:(x:string)=>void }) {
   const item = data.graph.entities.find(e=>e.id===intersection.entity) || data.graph.questions.find(q=>q.id===intersection.entity);
-  const name = item ? ('type' in item ? item.name : item.question) : intersection.entity;
-  return <><span className="sheet-badge">INTERSECTION · {intersection.story_count} STORIES</span><h3>{name}</h3><p>The same canonical item appears in several curated readings.</p><div className="sheet-story-list">{intersection.stories.map(id=><button key={id} onClick={()=>onOpen(id)}><i style={{background:storyColor(id)}}/>{data.stories.find(s=>s.id===id)?.title||id}</button>)}</div></>;
+  if (!item) return null;
+  const name = 'type' in item ? item.name : item.question;
+  return <><span className="sheet-badge">INTERSECTION · {intersection.story_count} STORIES</span><h3>{name}</h3><p>The same historical or mathematical item appears in several curated readings.</p><div className="sheet-story-list">{intersection.stories.map(id=>{const story=data.stories.find(s=>s.id===id);return story?<button key={id} onClick={()=>onOpen(id)}><i style={{background:storyColor(id)}}/>{story.title}</button>:null;})}</div></>;
 }
 
 function StoryView({ data, storyId, onNetwork, onOpenPerson, onSheet }: { data:Dataset; storyId:string; onNetwork:()=>void; onOpenPerson:(id:string)=>void; onSheet:(n:React.ReactNode)=>void }) {
   const story=data.stories.find(s=>s.id===storyId)||data.stories[0], lookup=buildLookup(data), intersections=new Map(data.intersections.map(i=>[i.entity,i]));
   return <><section className="hero-card"><span className="eyebrow">CURRENT STORY</span><h2>{story.title}</h2><p>{story.description || 'Follow the mathematical question through the historical steps that changed it.'}</p></section>
-    <div className="story-layout"><div>{[...story.steps].sort((a,b)=>(a.temporal_anchor?.from??9999)-(b.temporal_anchor?.from??9999)||story.steps.indexOf(a)-story.steps.indexOf(b)).map((step,idx)=>{ const item=lookup[step.ref], inter=intersections.get(step.ref), label=item?('type' in item?item.name:item.question):step.ref, people=peopleForStep(data,step); return <article key={step.id} className={`story-card panel ${/problem|gap/i.test(step.role)?'problem':''} ${inter?'crossing':''}`}><div className="story-index">{idx+1}</div><div className="story-meta"><span>{step.role.toUpperCase()}</span><span>{step.temporal_anchor?.from||yearFor(item)}</span></div><h3>{label}</h3>{step.narrative&&<p>{step.narrative}</p>}<div className="story-actions">{inter&&<button onClick={onNetwork}>See crossing in Network</button>}{people.map(p=><button key={p.id} onClick={()=>onOpenPerson(p.id)}>Open {short(p.name,18)}</button>)}{inter&&<button onClick={()=>onSheet(<IntersectionSheet intersection={inter} data={data} onOpen={()=>{}}/>)}>Other Stories</button>}</div></article>; })}</div><aside className="parallel-rail"><div className="rail-line">{data.stories.slice(0,4).map((s,i)=><span key={s.id} style={{top:`${15+i*22}%`,background:storyColor(s.id)}} title={s.title}/>)}</div></aside></div></>;
+    <div className="story-layout"><div>{[...story.steps].sort((a,b)=>(a.temporal_anchor?.from??9999)-(b.temporal_anchor?.from??9999)||story.steps.indexOf(a)-story.steps.indexOf(b)).map((step,idx)=>{ const item=lookup[step.ref]; if(!item) return null; const inter=intersections.get(step.ref), label='type' in item?item.name:item.question, people=peopleForStep(data,step); return <article key={step.id} className={`story-card panel ${/problem|gap/i.test(step.role)?'problem':''} ${inter?'crossing':''}`}><div className="story-index">{idx+1}</div><div className="story-meta"><span>{step.role.toUpperCase()}</span><span>{step.temporal_anchor?.from||yearFor(item)}</span></div><h3>{label}</h3>{step.narrative&&<p>{step.narrative}</p>}<div className="story-actions">{inter&&<button onClick={onNetwork}>See crossing in Network</button>}{people.map(p=><button key={p.id} onClick={()=>onOpenPerson(p.id)}>Open {short(p.name,18)}</button>)}{inter&&<button onClick={()=>onSheet(<IntersectionSheet intersection={inter} data={data} onOpen={()=>{}}/>)}>Other Stories</button>}</div></article>; })}</div><aside className="parallel-rail"><div className="rail-line">{data.stories.slice(0,4).map((s,i)=><span key={s.id} style={{top:`${15+i*22}%`,background:storyColor(s.id)}} title={s.title}/>)}</div></aside></div></>;
 }
 
 function PersonView({ data, personId, onStory }: { data:Dataset; personId:string; onStory:(id:string)=>void }) {
   const person=data.graph.entities.find(e=>e.id===personId&&e.type==='Person')||data.graph.entities.find(e=>e.type==='Person')!;
   const assertions=data.graph.assertions.filter(a=>a.subject===person.id||a.object===person.id);
   const relevantStories=data.stories.filter(s=>storyMentionsPerson(data,s,person.id));
+  const lookup=buildLookup(data);
   const initials=person.name.split(' ').map(x=>x[0]).slice(0,2).join('');
-  return <section className="panel person-card"><div className="person-head"><div className="avatar">{initials}</div><div><h2>{person.name}</h2><p>{person.start_year}–{person.end_year||''} · {(person.fields||[]).join(' · ')}</p></div></div><div className="metrics"><div><b>{relevantStories.length}</b><span>Story appearances</span></div><div><b>{assertions.length}</b><span>accepted links</span></div><div><b>{person.fields?.length||0}</b><span>fields</span></div></div><h3 className="section-title">Contribution history</h3><div className="contribution-list">{assertions.map(a=><div key={a.id}><span>{a.perspective||'historical'}</span><b>{humanize(a.predicate)}</b><p>{a.subject===person.id?a.object:a.subject}</p></div>)}</div><h3 className="section-title">Stories</h3><div className="story-chips">{relevantStories.length?relevantStories.map(s=><button key={s.id} onClick={()=>onStory(s.id)}>{s.title}</button>):<span className="muted">No reviewed Story currently connects to this person.</span>}</div></section>;
+  return <section className="panel person-card"><div className="person-head"><div className="avatar">{initials}</div><div><h2>{person.name}</h2><p>{person.start_year}–{person.end_year||''} · {(person.fields||[]).join(' · ')}</p></div></div><div className="metrics"><div><b>{relevantStories.length}</b><span>Story appearances</span></div><div><b>{assertions.length}</b><span>accepted links</span></div><div><b>{person.fields?.length||0}</b><span>fields</span></div></div><h3 className="section-title">Contribution history</h3><div className="contribution-list">{assertions.map(a=>{const other=lookup[a.subject===person.id?a.object:a.subject];if(!other)return null;return <div key={a.id}><span>{a.perspective||'historical'}</span><b>{readerRelation(a.predicate)}</b><p>{'type' in other?other.name:other.question}</p></div>;})}</div><h3 className="section-title">Stories</h3><div className="story-chips">{relevantStories.length?relevantStories.map(s=><button key={s.id} onClick={()=>onStory(s.id)}>{s.title}</button>):<span className="muted">No reviewed Story currently connects to this person.</span>}</div></section>;
 }
 
 function assertionPeople(data:Dataset, refs:string[] = []) {
@@ -316,6 +350,8 @@ function buildLookup(data:Dataset):Record<string,Entity|Question> { return Objec
 function short(s:string,n:number){return s.length>n?s.slice(0,n-1)+'…':s;}
 function yearFor(item?:Entity|Question){if(!item)return'';return'type'in item?String(item.start_year||''):String(item.period?.from||'');}
 function humanize(s:string){return s.replaceAll('_',' ');}
+function readerNodeKind(s:string){return s==='ConceptState'?'Concept state':s;}
+function readerRelation(s:string){return ({authored:'wrote',addresses:'worked on',concerns:'concerns',defines:'defined',introduces:'introduced',uses:'used',proves:'established',resolves:'resolved',strengthens:'strengthened',depends_on:'depends on',generalizes:'extends',develops:'developed',revises:'revised',responds_to:'responded to',cites:'cited',state_of:'historical form of'} as Record<string,string>)[s]||humanize(s);}
 function letter(v:View){return({Atlas:'A',Network:'B',Story:'C',Person:'D'} as const)[v];}
 function icon(v:View){return({Atlas:'⌘',Network:'⋈',Story:'↧',Person:'●'} as const)[v];}
 
