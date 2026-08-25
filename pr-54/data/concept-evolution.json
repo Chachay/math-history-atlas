@@ -1,0 +1,824 @@
+{
+  "projection_version": 3,
+  "concepts": [
+    {
+      "concept_id": "concept-infinite-series",
+      "name": "Infinite series",
+      "fields": [
+        "analysis"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-fourier-series",
+      "name": "Fourier series",
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ],
+      "states": [
+        {
+          "id": "state-r001-fourier-series-1822",
+          "year": 1822,
+          "period": {
+            "from": 1822,
+            "to": 1822
+          },
+          "label": "Fourier's heat theory uses trigonometric series to match prescribed temperature data by combining sinusoidal spatial terms.",
+          "claim_ids": [
+            "assertion-r001-v2-fourier-uses-series-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-convergence",
+      "name": "Convergence",
+      "fields": [
+        "analysis"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-continuity",
+      "name": "Continuity",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "r005-cs-continuity-1817-1823",
+          "year": 1817,
+          "period": {
+            "from": 1817,
+            "to": 1823
+          },
+          "label": "Continuity is expressed through historically distinct variable-increment and infinitesimal frameworks rather than one shared modern epsilon-delta syntax.",
+          "claim_ids": []
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-function",
+      "name": "Function",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-function-expression",
+          "year": 1748,
+          "period": {
+            "from": 1748,
+            "to": 1837
+          },
+          "label": "Analytic-expression viewpoint",
+          "claim_ids": []
+        },
+        {
+          "id": "state-function-correspondence",
+          "year": 1837,
+          "period": {
+            "from": 1837,
+            "to": null
+          },
+          "label": "Broader correspondence viewpoint",
+          "claim_ids": []
+        },
+        {
+          "id": "state-r003-function-1837",
+          "year": 1837,
+          "period": {
+            "from": 1837,
+            "to": 1837
+          },
+          "label": "Numerical function language need not be tied to one analytic law, while remaining within nineteenth-century real-variable practice.",
+          "claim_ids": [
+            "assertion-r003-v2-dirichlet-1837-uses-function-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-uniform-convergence",
+      "name": "Uniform convergence",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r002-uniform-condition-1853",
+          "year": 1853,
+          "period": {
+            "from": 1853,
+            "to": 1853
+          },
+          "label": "Cauchy's 1853 strengthened remainder condition requires control across the variable range; identifying this condition with the later concept of uniform convergence is retrospective.",
+          "claim_ids": [
+            "assertion-r002-v2-1853-depends-uniform-condition"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-arbitrary-function",
+      "name": "Arbitrary function",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r001-arbitrary-function-1822",
+          "year": 1822,
+          "period": {
+            "from": 1822,
+            "to": 1822
+          },
+          "label": "Fourier treats functions given arbitrarily on a finite interval, including functions not governed by one common analytic expression, without the unrestricted modern set-theoretic meaning of arbitrary function.",
+          "claim_ids": [
+            "assertion-r001-v2-fourier-uses-arbitrary-function-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-discontinuous-function",
+      "name": "Discontinuous function",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r003-discontinuity-1829",
+          "year": 1829,
+          "period": {
+            "from": 1829,
+            "to": 1829
+          },
+          "label": "Discontinuous and highly irregular numerical assignments appear explicitly, but admissibility still depends on the integration framework.",
+          "claim_ids": [
+            "assertion-r003-v2-dirichlet-1829-uses-discontinuous-state"
+          ]
+        },
+        {
+          "id": "r004-cs-discontinuity-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Functions discontinuous infinitely often in every interval become explicit test cases rather than automatic exclusions from integration.",
+          "claim_ids": []
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-limit",
+      "name": "Limit",
+      "fields": [
+        "analysis"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-infinitesimal",
+      "name": "Infinitesimal quantity",
+      "fields": [
+        "analysis"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-series-of-functions",
+      "name": "Series of functions",
+      "fields": [
+        "analysis"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-integrability",
+      "name": "Analytic admissibility for definite integration",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "r004-cs-integrability-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Definite integrability is tested through convergence of subdivision sums and control of oscillation.",
+          "claim_ids": []
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-riemann-integral",
+      "name": "Riemann's criterion for definite integrability",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "r004-cs-riemann-integral-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Riemann formulates a sum-based criterion for definite integration within the trigonometric-series investigation.",
+          "claim_ids": [
+            "assertion-r010-v2-riemann-gap-concerns-integral"
+          ]
+        },
+        {
+          "id": "state-r004-riemann-integral-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Riemann formulates definite integrability through subdivision sums and a criterion controlling oscillation on subintervals.",
+          "claim_ids": [
+            "assertion-r004-v2-riemann-defines-integral-state",
+            "assertion-r004-v2-riemann-criterion-depends-integral-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-quantified-control",
+      "name": "Quantified control of variation",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r005-quantified-control-1817",
+          "year": 1817,
+          "period": {
+            "from": 1817,
+            "to": 1817
+          },
+          "label": "Bolzano formulates continuity using quantitatively controlled changes in the function value when the variable changes sufficiently little.",
+          "claim_ids": [
+            "assertion-r005-v2-bolzano-uses-control-state"
+          ]
+        },
+        {
+          "id": "state-r005-quantified-control-1823",
+          "year": 1823,
+          "period": {
+            "from": 1823,
+            "to": 1823
+          },
+          "label": "Cauchy's infinitesimal-calculus lessons use explicit inequalities and variable-dependent bounds in arguments about continuity and limits.",
+          "claim_ids": [
+            "assertion-r005-v2-cauchy-1823-uses-control-state"
+          ]
+        },
+        {
+          "id": "r005-cs-quantified-control-1861",
+          "year": 1861,
+          "period": {
+            "from": 1861,
+            "to": 1861
+          },
+          "label": "Student notes from Weierstrass's teaching record an explicit bound on input variation corresponding to an arbitrarily small allowed function variation.",
+          "claim_ids": [
+            "assertion-r005-v2-weierstrass-1861-uses-control-state"
+          ]
+        },
+        {
+          "id": "r005-cs-quantified-control-1872",
+          "year": 1872,
+          "period": {
+            "from": 1872,
+            "to": 1872
+          },
+          "label": "Heine's published function theory gives explicit small-error and small-increment conditions for continuity and uniform continuity.",
+          "claim_ids": [
+            "assertion-r005-v2-heine-1872-uses-control-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-solution-by-radicals",
+      "name": "Solvability of polynomial equations by radicals",
+      "fields": [
+        "algebra"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-resolvent",
+      "name": "Resolvent equation or resolvent expression",
+      "fields": [
+        "algebra"
+      ],
+      "states": [
+        {
+          "id": "state-r006-resolvent-1770",
+          "year": 1770,
+          "period": {
+            "from": 1770,
+            "to": 1771
+          },
+          "label": "Lagrange studies auxiliary resolvent expressions and how their values change under permutations of polynomial roots.",
+          "claim_ids": [
+            "assertion-r006-v2-lagrange-uses-resolvent-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-root-permutation",
+      "name": "Permutations of roots",
+      "fields": [
+        "algebra"
+      ],
+      "states": [
+        {
+          "id": "r006-cs-root-permutation-1770",
+          "year": 1770,
+          "period": {
+            "from": 1770,
+            "to": 1771
+          },
+          "label": "Functions of roots are compared under permutations as part of solving and explaining algebraic equations.",
+          "claim_ids": []
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-substitution-group",
+      "name": "Group of substitutions",
+      "fields": [
+        "algebra"
+      ],
+      "states": [
+        {
+          "id": "r006-cs-substitution-group-1831",
+          "year": 1831,
+          "period": {
+            "from": 1831,
+            "to": 1846
+          },
+          "label": "Galois uses groups of permutations and substitutions within the solvability problem; this is not yet the later abstract group concept in its mature form.",
+          "claim_ids": [
+            "assertion-r006-v2-galois-uses-substitution-state",
+            "assertion-r006-v2-galois-criterion-depends-substitutions"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-surface-curvature",
+      "name": "Curvature of a surface",
+      "fields": [
+        "geometry"
+      ],
+      "states": [
+        {
+          "id": "state-r007-surface-curvature-pre-gauss",
+          "year": 1760,
+          "period": {
+            "from": 1760,
+            "to": 1795
+          },
+          "label": "Normal-section and analytic surface curvature before Gauss",
+          "claim_ids": []
+        },
+        {
+          "id": "state-r007-surface-curvature-gauss",
+          "year": 1827,
+          "period": {
+            "from": 1827,
+            "to": 1827
+          },
+          "label": "Gauss's measure of curvature through the spherical image and metric formulas",
+          "claim_ids": [
+            "assertion-r007-v2-gauss-defines-curvature-state",
+            "assertion-r007-v2-egregium-depends-curvature-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-surface-applicability",
+      "name": "Applicability and metric-preserving development of surfaces",
+      "fields": [
+        "geometry"
+      ],
+      "states": [
+        {
+          "id": "state-r007-surface-applicability-1827",
+          "year": 1827,
+          "period": {
+            "from": 1827,
+            "to": 1827
+          },
+          "label": "Gauss treats applicability of surfaces through preservation of metric quantities under bending without stretching.",
+          "claim_ids": [
+            "assertion-r007-v2-gauss-uses-applicability-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-intrinsic-surface-geometry",
+      "name": "Geometry determined within a surface",
+      "fields": [
+        "geometry"
+      ],
+      "states": [
+        {
+          "id": "state-r007-intrinsic-gauss",
+          "year": 1827,
+          "period": {
+            "from": 1827,
+            "to": 1827
+          },
+          "label": "Deformation-independent relations in Gauss's surface theory",
+          "claim_ids": []
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-trig-series-uniqueness",
+      "name": "Uniqueness of trigonometric-series representation",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r008-uniqueness-1870",
+          "year": 1870,
+          "period": {
+            "from": 1870,
+            "to": 1870
+          },
+          "label": "Uniqueness is formulated by requiring every coefficient to vanish when a convergent trigonometric series has zero sum for every real argument, without assuming uniform convergence.",
+          "claim_ids": [
+            "assertion-r008-v2-uniqueness-problem-concerns-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-exceptional-point-set",
+      "name": "Exceptional point set in a uniqueness theorem",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r008-exceptional-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1871
+          },
+          "label": "A finite number of exceptional arguments may be omitted from convergence or equality without destroying the uniqueness conclusion.",
+          "claim_ids": []
+        },
+        {
+          "id": "state-r008-exceptional-1872",
+          "year": 1872,
+          "period": {
+            "from": 1872,
+            "to": 1872
+          },
+          "label": "Certain infinite exceptional point sets are admitted when finite iteration of the derived-set operation eventually leaves only finitely many points.",
+          "claim_ids": [
+            "assertion-r008-v2-cantor-1872-uses-exceptional-state",
+            "assertion-r008-v2-cantor-1872-depends-exceptional"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-derived-set",
+      "name": "Derived set of a point set",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r008-derived-1872",
+          "year": 1872,
+          "period": {
+            "from": 1872,
+            "to": 1872
+          },
+          "label": "For a linear point set P, P' is the set of limit points of P; finite iteration of this operation is used to distinguish point sets in the uniqueness theorem.",
+          "claim_ids": [
+            "assertion-r008-v2-cantor-1872-defines-derived",
+            "assertion-r008-v2-cantor-1872-depends-derived"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-algebraic-number-field",
+      "name": "Algebraic number field",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-algebraic-integer",
+      "name": "Algebraic integer",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "states": [],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-ideal-divisor",
+      "name": "Ideal divisor in Kummer's factorization theory",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "states": [
+        {
+          "id": "state-r009-kummer-ideal-divisor",
+          "year": 1846,
+          "period": {
+            "from": 1846,
+            "to": 1870
+          },
+          "label": "Kummer's ideal divisors were characterized through divisibility behavior in cyclotomic arithmetic, not as Dedekind's later systems of integers.",
+          "claim_ids": [
+            "assertion-r009-v2-kummer-uses-ideal-divisor-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-dedekind-ideal",
+      "name": "Ideal as a system of algebraic integers",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "states": [
+        {
+          "id": "state-r009-dedekind-ideal-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1876
+          },
+          "label": "Dedekind's first ideal theory used systems of algebraic integers and still depended substantially on simple ideals represented by congruences.",
+          "claim_ids": [
+            "assertion-r009-v2-dedekind-defines-ideal-state",
+            "assertion-r009-v2-factorization-result-depends-ideal-state"
+          ]
+        },
+        {
+          "id": "state-r009-dedekind-ideal-later",
+          "year": 1877,
+          "period": {
+            "from": 1877,
+            "to": 1894
+          },
+          "label": "Dedekind's later presentations increasingly foregrounded operations and properties of ideals rather than particular congruence representations.",
+          "claim_ids": []
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-prime-ideal",
+      "name": "Prime ideal",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "states": [
+        {
+          "id": "state-r009-prime-ideal-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1871
+          },
+          "label": "Dedekind's 1871 theory distinguishes prime ideals as the basic factors in ideal decomposition.",
+          "claim_ids": [
+            "assertion-r009-v2-dedekind-defines-prime-ideal-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-ideal-factorization",
+      "name": "Factorization of ideals into prime ideals",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "states": [
+        {
+          "id": "state-r009-ideal-factorization-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1871
+          },
+          "label": "Dedekind's 1871 ideal theory establishes decomposition of ideals into prime ideals as the replacement for failed element factorization.",
+          "claim_ids": [
+            "assertion-r009-v2-dedekind-defines-factorization-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-jordan-content",
+      "name": "Jordan content for point sets",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r010-jordan-content-1892",
+          "year": 1892,
+          "period": {
+            "from": 1892,
+            "to": 1892
+          },
+          "label": "Jordan assigns content to point sets in his 1892 treatment of definite integrals; later measure-zero boundary formulations are not part of this historical state.",
+          "claim_ids": [
+            "assertion-r010-v2-jordan-uses-content-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-borel-measure",
+      "name": "Borel measure of point sets",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r010-borel-measure-1898",
+          "year": 1898,
+          "period": {
+            "from": 1898,
+            "to": 1898
+          },
+          "label": "Borel extends length from intervals to a wider family of point sets using countable set operations, without later abstract sigma-algebra terminology.",
+          "claim_ids": [
+            "assertion-r010-v2-borel-defines-measure-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-lebesgue-measure",
+      "name": "Lebesgue measure",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r010-lebesgue-measure-1901",
+          "year": 1901,
+          "period": {
+            "from": 1901,
+            "to": 1901
+          },
+          "label": "Lebesgue defines measure of point sets through countable open coverings in the 1901 note, before later outer-measure and completion terminology.",
+          "claim_ids": [
+            "assertion-r010-v2-lebesgue-defines-measure-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-lebesgue-integral",
+      "name": "Lebesgue integral",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r010-lebesgue-integral-1901",
+          "year": 1901,
+          "period": {
+            "from": 1901,
+            "to": 1901
+          },
+          "label": "Lebesgue subdivides the range of function values, measures the corresponding sets of arguments, and forms sums from those measures to define the generalized integral.",
+          "claim_ids": [
+            "assertion-r010-v2-lebesgue-defines-integral-state"
+          ]
+        },
+        {
+          "id": "state-r010-lebesgue-integral-1902",
+          "year": 1902,
+          "period": {
+            "from": 1902,
+            "to": 1902
+          },
+          "label": "Lebesgue's thesis develops measure of sets before integration and gives a fuller systematic development of the generalized integral introduced in 1901.",
+          "claim_ids": [
+            "assertion-r010-v2-thesis-defines-integral-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-measurable-set",
+      "name": "Measurable set in early measure theory",
+      "fields": [
+        "analysis"
+      ],
+      "states": [
+        {
+          "id": "state-r010-measurable-set-1898-1901",
+          "year": 1898,
+          "period": {
+            "from": 1898,
+            "to": 1901
+          },
+          "label": "Borel's measurable-set construction uses countable set operations, and Lebesgue's 1901 note explicitly invokes Borel measurable sets in its measure-and-integration construction.",
+          "claim_ids": [
+            "assertion-r010-v2-borel-defines-measurable-state",
+            "assertion-r010-v2-lebesgue-uses-measurable-state"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    },
+    {
+      "concept_id": "concept-fourier-coefficients",
+      "name": "Fourier coefficients",
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ],
+      "states": [
+        {
+          "id": "state-r001-fourier-coefficients-1822",
+          "year": 1822,
+          "period": {
+            "from": 1822,
+            "to": 1822
+          },
+          "label": "Fourier gives definite-integral formulas for the coefficients associated with sine and cosine expansions.",
+          "claim_ids": [
+            "assertion-r001-v2-fourier-defines-coefficients"
+          ]
+        }
+      ],
+      "timeline_semantics": "attested_states_grouped_by_diachronic_identity"
+    }
+  ],
+  "notes": [
+    "State order is chronological grouping, not a historical-causation claim.",
+    "ConceptState detail remains evidence-bearing canonical data; this projection only groups it for exploration."
+  ]
+}

@@ -1,0 +1,1357 @@
+{
+  "projection_version": 3,
+  "fields": [
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "parents": [],
+      "concept_ids": [],
+      "concept_count": 0,
+      "concept_state_ids": [],
+      "concept_state_count": 0,
+      "related_node_ids": []
+    },
+    {
+      "id": "analysis",
+      "name": "Analysis",
+      "parents": [
+        "mathematics"
+      ],
+      "concept_ids": [
+        "concept-function",
+        "concept-continuity",
+        "concept-quantified-control",
+        "concept-arbitrary-function",
+        "concept-fourier-coefficients",
+        "concept-fourier-series",
+        "concept-discontinuous-function",
+        "concept-uniform-convergence",
+        "concept-integrability",
+        "concept-riemann-integral",
+        "concept-trig-series-uniqueness",
+        "concept-exceptional-point-set",
+        "concept-derived-set",
+        "concept-jordan-content",
+        "concept-borel-measure",
+        "concept-measurable-set",
+        "concept-lebesgue-integral",
+        "concept-lebesgue-measure",
+        "concept-convergence",
+        "concept-infinite-series",
+        "concept-infinitesimal",
+        "concept-limit",
+        "concept-series-of-functions"
+      ],
+      "concept_count": 23,
+      "concept_state_ids": [
+        "state-function-expression",
+        "state-function-correspondence",
+        "state-r003-function-1837",
+        "r005-cs-continuity-1817-1823",
+        "state-r005-quantified-control-1817",
+        "state-r005-quantified-control-1823",
+        "r005-cs-quantified-control-1861",
+        "r005-cs-quantified-control-1872",
+        "state-r001-arbitrary-function-1822",
+        "state-r001-fourier-coefficients-1822",
+        "state-r001-fourier-series-1822",
+        "state-r003-discontinuity-1829",
+        "r004-cs-discontinuity-1854",
+        "state-r002-uniform-condition-1853",
+        "r004-cs-integrability-1854",
+        "r004-cs-riemann-integral-1854",
+        "state-r004-riemann-integral-1854",
+        "state-r008-uniqueness-1870",
+        "state-r008-exceptional-1871",
+        "state-r008-exceptional-1872",
+        "state-r008-derived-1872",
+        "state-r010-jordan-content-1892",
+        "state-r010-borel-measure-1898",
+        "state-r010-measurable-set-1898-1901",
+        "state-r010-lebesgue-integral-1901",
+        "state-r010-lebesgue-integral-1902",
+        "state-r010-lebesgue-measure-1901"
+      ],
+      "concept_state_count": 27,
+      "related_node_ids": [
+        "problem-r008-trig-series-uniqueness",
+        "problem-r010-riemann-primitive-gap",
+        "result-r002-cauchy-1853-strengthened-continuity",
+        "result-r004-riemann-integrability-criterion",
+        "result-r008-cantor-derived-extension-1872",
+        "work-bolzano-1817",
+        "work-borel-functions-1898",
+        "work-cantor-extension-1872",
+        "work-cauchy-calcul-1823",
+        "work-dirichlet-1829",
+        "work-dirichlet-1837",
+        "work-fourier-theorie",
+        "work-heine-functionenlehre-1872",
+        "work-jordan-integrals-1892",
+        "work-lebesgue-generalization-1901",
+        "work-lebesgue-thesis-1902",
+        "work-riemann-trig-1854",
+        "work-weierstrass-schwarz-notes-1861"
+      ]
+    },
+    {
+      "id": "mathematical-physics",
+      "name": "Mathematical Physics",
+      "parents": [
+        "mathematics"
+      ],
+      "concept_ids": [
+        "concept-fourier-coefficients",
+        "concept-fourier-series"
+      ],
+      "concept_count": 2,
+      "concept_state_ids": [
+        "state-r001-fourier-coefficients-1822",
+        "state-r001-fourier-series-1822"
+      ],
+      "concept_state_count": 2,
+      "related_node_ids": [
+        "work-fourier-theorie"
+      ]
+    },
+    {
+      "id": "topology",
+      "name": "Topology",
+      "parents": [
+        "mathematics"
+      ],
+      "concept_ids": [],
+      "concept_count": 0,
+      "concept_state_ids": [],
+      "concept_state_count": 0,
+      "related_node_ids": []
+    },
+    {
+      "id": "algebra",
+      "name": "Algebra",
+      "parents": [
+        "mathematics"
+      ],
+      "concept_ids": [
+        "concept-root-permutation",
+        "concept-resolvent",
+        "concept-substitution-group",
+        "concept-ideal-divisor",
+        "concept-ideal-factorization",
+        "concept-dedekind-ideal",
+        "concept-prime-ideal",
+        "concept-algebraic-integer",
+        "concept-algebraic-number-field",
+        "concept-solution-by-radicals"
+      ],
+      "concept_count": 10,
+      "concept_state_ids": [
+        "r006-cs-root-permutation-1770",
+        "state-r006-resolvent-1770",
+        "r006-cs-substitution-group-1831",
+        "state-r009-kummer-ideal-divisor",
+        "state-r009-ideal-factorization-1871",
+        "state-r009-dedekind-ideal-1871",
+        "state-r009-dedekind-ideal-later",
+        "state-r009-prime-ideal-1871"
+      ],
+      "concept_state_count": 8,
+      "related_node_ids": [
+        "result-r006-galois-solvability-criterion",
+        "result-r009-dedekind-prime-ideal-factorization",
+        "work-dedekind-1871-supplement",
+        "work-galois-resolubilite",
+        "work-kummer-1847-complex-numbers",
+        "work-lagrange-reflexions"
+      ]
+    },
+    {
+      "id": "number-theory",
+      "name": "Number Theory",
+      "parents": [
+        "mathematics"
+      ],
+      "concept_ids": [
+        "concept-ideal-divisor",
+        "concept-ideal-factorization",
+        "concept-dedekind-ideal",
+        "concept-prime-ideal",
+        "concept-algebraic-integer",
+        "concept-algebraic-number-field"
+      ],
+      "concept_count": 6,
+      "concept_state_ids": [
+        "state-r009-kummer-ideal-divisor",
+        "state-r009-ideal-factorization-1871",
+        "state-r009-dedekind-ideal-1871",
+        "state-r009-dedekind-ideal-later",
+        "state-r009-prime-ideal-1871"
+      ],
+      "concept_state_count": 5,
+      "related_node_ids": [
+        "result-r009-dedekind-prime-ideal-factorization",
+        "work-dedekind-1871-supplement",
+        "work-kummer-1847-complex-numbers"
+      ]
+    },
+    {
+      "id": "algebraic-geometry",
+      "name": "Algebraic Geometry",
+      "parents": [
+        "algebra"
+      ],
+      "concept_ids": [],
+      "concept_count": 0,
+      "concept_state_ids": [],
+      "concept_state_count": 0,
+      "related_node_ids": []
+    },
+    {
+      "id": "arithmetic-geometry",
+      "name": "Arithmetic Geometry",
+      "parents": [
+        "number-theory",
+        "algebraic-geometry"
+      ],
+      "concept_ids": [],
+      "concept_count": 0,
+      "concept_state_ids": [],
+      "concept_state_count": 0,
+      "related_node_ids": []
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "parents": [
+        "mathematics"
+      ],
+      "concept_ids": [
+        "concept-surface-curvature",
+        "concept-surface-applicability",
+        "concept-intrinsic-surface-geometry"
+      ],
+      "concept_count": 3,
+      "concept_state_ids": [
+        "state-r007-surface-curvature-pre-gauss",
+        "state-r007-surface-curvature-gauss",
+        "state-r007-surface-applicability-1827",
+        "state-r007-intrinsic-gauss"
+      ],
+      "concept_state_count": 4,
+      "related_node_ids": [
+        "result-theorema-egregium",
+        "work-gauss-disquisitiones-surfaces"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "concept-infinite-series",
+      "name": "Infinite series",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-fourier-series",
+      "name": "Fourier series",
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1822,
+      "last_attested_state_year": 1822,
+      "states": [
+        {
+          "id": "state-r001-fourier-series-1822",
+          "year": 1822,
+          "period": {
+            "from": 1822,
+            "to": 1822
+          },
+          "label": "Fourier's heat theory uses trigonometric series to match prescribed temperature data by combining sinusoidal spatial terms.",
+          "related_node_ids": [
+            "work-fourier-theorie"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-fourier-theorie"
+        ]
+      }
+    },
+    {
+      "id": "concept-convergence",
+      "name": "Convergence",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-continuity",
+      "name": "Continuity",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1817,
+      "last_attested_state_year": 1817,
+      "states": [
+        {
+          "id": "r005-cs-continuity-1817-1823",
+          "year": 1817,
+          "period": {
+            "from": 1817,
+            "to": 1823
+          },
+          "label": "Continuity is expressed through historically distinct variable-increment and infinitesimal frameworks rather than one shared modern epsilon-delta syntax.",
+          "related_node_ids": []
+        }
+      ],
+      "related": {}
+    },
+    {
+      "id": "concept-function",
+      "name": "Function",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 3,
+      "first_attested_state_year": 1748,
+      "last_attested_state_year": 1837,
+      "states": [
+        {
+          "id": "state-function-expression",
+          "year": 1748,
+          "period": {
+            "from": 1748,
+            "to": 1837
+          },
+          "label": "Analytic-expression viewpoint",
+          "related_node_ids": []
+        },
+        {
+          "id": "state-function-correspondence",
+          "year": 1837,
+          "period": {
+            "from": 1837,
+            "to": null
+          },
+          "label": "Broader correspondence viewpoint",
+          "related_node_ids": []
+        },
+        {
+          "id": "state-r003-function-1837",
+          "year": 1837,
+          "period": {
+            "from": 1837,
+            "to": 1837
+          },
+          "label": "Numerical function language need not be tied to one analytic law, while remaining within nineteenth-century real-variable practice.",
+          "related_node_ids": [
+            "work-dirichlet-1837"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-dirichlet-1837"
+        ]
+      }
+    },
+    {
+      "id": "concept-uniform-convergence",
+      "name": "Uniform convergence",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1853,
+      "last_attested_state_year": 1853,
+      "states": [
+        {
+          "id": "state-r002-uniform-condition-1853",
+          "year": 1853,
+          "period": {
+            "from": 1853,
+            "to": 1853
+          },
+          "label": "Cauchy's 1853 strengthened remainder condition requires control across the variable range; identifying this condition with the later concept of uniform convergence is retrospective.",
+          "related_node_ids": [
+            "result-r002-cauchy-1853-strengthened-continuity"
+          ]
+        }
+      ],
+      "related": {
+        "Result": [
+          "result-r002-cauchy-1853-strengthened-continuity"
+        ]
+      }
+    },
+    {
+      "id": "concept-arbitrary-function",
+      "name": "Arbitrary function",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1822,
+      "last_attested_state_year": 1822,
+      "states": [
+        {
+          "id": "state-r001-arbitrary-function-1822",
+          "year": 1822,
+          "period": {
+            "from": 1822,
+            "to": 1822
+          },
+          "label": "Fourier treats functions given arbitrarily on a finite interval, including functions not governed by one common analytic expression, without the unrestricted modern set-theoretic meaning of arbitrary function.",
+          "related_node_ids": [
+            "work-fourier-theorie"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-fourier-theorie"
+        ]
+      }
+    },
+    {
+      "id": "concept-discontinuous-function",
+      "name": "Discontinuous function",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 2,
+      "first_attested_state_year": 1829,
+      "last_attested_state_year": 1854,
+      "states": [
+        {
+          "id": "state-r003-discontinuity-1829",
+          "year": 1829,
+          "period": {
+            "from": 1829,
+            "to": 1829
+          },
+          "label": "Discontinuous and highly irregular numerical assignments appear explicitly, but admissibility still depends on the integration framework.",
+          "related_node_ids": [
+            "work-dirichlet-1829"
+          ]
+        },
+        {
+          "id": "r004-cs-discontinuity-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Functions discontinuous infinitely often in every interval become explicit test cases rather than automatic exclusions from integration.",
+          "related_node_ids": []
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-dirichlet-1829"
+        ]
+      }
+    },
+    {
+      "id": "concept-limit",
+      "name": "Limit",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-infinitesimal",
+      "name": "Infinitesimal quantity",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-series-of-functions",
+      "name": "Series of functions",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-integrability",
+      "name": "Analytic admissibility for definite integration",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1854,
+      "last_attested_state_year": 1854,
+      "states": [
+        {
+          "id": "r004-cs-integrability-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Definite integrability is tested through convergence of subdivision sums and control of oscillation.",
+          "related_node_ids": []
+        }
+      ],
+      "related": {}
+    },
+    {
+      "id": "concept-riemann-integral",
+      "name": "Riemann's criterion for definite integrability",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 2,
+      "first_attested_state_year": 1854,
+      "last_attested_state_year": 1854,
+      "states": [
+        {
+          "id": "r004-cs-riemann-integral-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Riemann formulates a sum-based criterion for definite integration within the trigonometric-series investigation.",
+          "related_node_ids": [
+            "problem-r010-riemann-primitive-gap"
+          ]
+        },
+        {
+          "id": "state-r004-riemann-integral-1854",
+          "year": 1854,
+          "period": {
+            "from": 1854,
+            "to": 1854
+          },
+          "label": "Riemann formulates definite integrability through subdivision sums and a criterion controlling oscillation on subintervals.",
+          "related_node_ids": [
+            "result-r004-riemann-integrability-criterion",
+            "work-riemann-trig-1854"
+          ]
+        }
+      ],
+      "related": {
+        "Problem": [
+          "problem-r010-riemann-primitive-gap"
+        ],
+        "Result": [
+          "result-r004-riemann-integrability-criterion"
+        ],
+        "Work": [
+          "work-riemann-trig-1854"
+        ]
+      }
+    },
+    {
+      "id": "concept-quantified-control",
+      "name": "Quantified control of variation",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 4,
+      "first_attested_state_year": 1817,
+      "last_attested_state_year": 1872,
+      "states": [
+        {
+          "id": "state-r005-quantified-control-1817",
+          "year": 1817,
+          "period": {
+            "from": 1817,
+            "to": 1817
+          },
+          "label": "Bolzano formulates continuity using quantitatively controlled changes in the function value when the variable changes sufficiently little.",
+          "related_node_ids": [
+            "work-bolzano-1817"
+          ]
+        },
+        {
+          "id": "state-r005-quantified-control-1823",
+          "year": 1823,
+          "period": {
+            "from": 1823,
+            "to": 1823
+          },
+          "label": "Cauchy's infinitesimal-calculus lessons use explicit inequalities and variable-dependent bounds in arguments about continuity and limits.",
+          "related_node_ids": [
+            "work-cauchy-calcul-1823"
+          ]
+        },
+        {
+          "id": "r005-cs-quantified-control-1861",
+          "year": 1861,
+          "period": {
+            "from": 1861,
+            "to": 1861
+          },
+          "label": "Student notes from Weierstrass's teaching record an explicit bound on input variation corresponding to an arbitrarily small allowed function variation.",
+          "related_node_ids": [
+            "work-weierstrass-schwarz-notes-1861"
+          ]
+        },
+        {
+          "id": "r005-cs-quantified-control-1872",
+          "year": 1872,
+          "period": {
+            "from": 1872,
+            "to": 1872
+          },
+          "label": "Heine's published function theory gives explicit small-error and small-increment conditions for continuity and uniform continuity.",
+          "related_node_ids": [
+            "work-heine-functionenlehre-1872"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-bolzano-1817",
+          "work-cauchy-calcul-1823",
+          "work-heine-functionenlehre-1872",
+          "work-weierstrass-schwarz-notes-1861"
+        ]
+      }
+    },
+    {
+      "id": "concept-solution-by-radicals",
+      "name": "Solvability of polynomial equations by radicals",
+      "fields": [
+        "algebra"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-resolvent",
+      "name": "Resolvent equation or resolvent expression",
+      "fields": [
+        "algebra"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1770,
+      "last_attested_state_year": 1770,
+      "states": [
+        {
+          "id": "state-r006-resolvent-1770",
+          "year": 1770,
+          "period": {
+            "from": 1770,
+            "to": 1771
+          },
+          "label": "Lagrange studies auxiliary resolvent expressions and how their values change under permutations of polynomial roots.",
+          "related_node_ids": [
+            "work-lagrange-reflexions"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-lagrange-reflexions"
+        ]
+      }
+    },
+    {
+      "id": "concept-root-permutation",
+      "name": "Permutations of roots",
+      "fields": [
+        "algebra"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1770,
+      "last_attested_state_year": 1770,
+      "states": [
+        {
+          "id": "r006-cs-root-permutation-1770",
+          "year": 1770,
+          "period": {
+            "from": 1770,
+            "to": 1771
+          },
+          "label": "Functions of roots are compared under permutations as part of solving and explaining algebraic equations.",
+          "related_node_ids": []
+        }
+      ],
+      "related": {}
+    },
+    {
+      "id": "concept-substitution-group",
+      "name": "Group of substitutions",
+      "fields": [
+        "algebra"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1831,
+      "last_attested_state_year": 1831,
+      "states": [
+        {
+          "id": "r006-cs-substitution-group-1831",
+          "year": 1831,
+          "period": {
+            "from": 1831,
+            "to": 1846
+          },
+          "label": "Galois uses groups of permutations and substitutions within the solvability problem; this is not yet the later abstract group concept in its mature form.",
+          "related_node_ids": [
+            "result-r006-galois-solvability-criterion",
+            "work-galois-resolubilite"
+          ]
+        }
+      ],
+      "related": {
+        "Result": [
+          "result-r006-galois-solvability-criterion"
+        ],
+        "Work": [
+          "work-galois-resolubilite"
+        ]
+      }
+    },
+    {
+      "id": "concept-surface-curvature",
+      "name": "Curvature of a surface",
+      "fields": [
+        "geometry"
+      ],
+      "state_count": 2,
+      "first_attested_state_year": 1760,
+      "last_attested_state_year": 1827,
+      "states": [
+        {
+          "id": "state-r007-surface-curvature-pre-gauss",
+          "year": 1760,
+          "period": {
+            "from": 1760,
+            "to": 1795
+          },
+          "label": "Normal-section and analytic surface curvature before Gauss",
+          "related_node_ids": []
+        },
+        {
+          "id": "state-r007-surface-curvature-gauss",
+          "year": 1827,
+          "period": {
+            "from": 1827,
+            "to": 1827
+          },
+          "label": "Gauss's measure of curvature through the spherical image and metric formulas",
+          "related_node_ids": [
+            "result-theorema-egregium",
+            "work-gauss-disquisitiones-surfaces"
+          ]
+        }
+      ],
+      "related": {
+        "Result": [
+          "result-theorema-egregium"
+        ],
+        "Work": [
+          "work-gauss-disquisitiones-surfaces"
+        ]
+      }
+    },
+    {
+      "id": "concept-surface-applicability",
+      "name": "Applicability and metric-preserving development of surfaces",
+      "fields": [
+        "geometry"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1827,
+      "last_attested_state_year": 1827,
+      "states": [
+        {
+          "id": "state-r007-surface-applicability-1827",
+          "year": 1827,
+          "period": {
+            "from": 1827,
+            "to": 1827
+          },
+          "label": "Gauss treats applicability of surfaces through preservation of metric quantities under bending without stretching.",
+          "related_node_ids": [
+            "work-gauss-disquisitiones-surfaces"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-gauss-disquisitiones-surfaces"
+        ]
+      }
+    },
+    {
+      "id": "concept-intrinsic-surface-geometry",
+      "name": "Geometry determined within a surface",
+      "fields": [
+        "geometry"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1827,
+      "last_attested_state_year": 1827,
+      "states": [
+        {
+          "id": "state-r007-intrinsic-gauss",
+          "year": 1827,
+          "period": {
+            "from": 1827,
+            "to": 1827
+          },
+          "label": "Deformation-independent relations in Gauss's surface theory",
+          "related_node_ids": []
+        }
+      ],
+      "related": {}
+    },
+    {
+      "id": "concept-trig-series-uniqueness",
+      "name": "Uniqueness of trigonometric-series representation",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1870,
+      "last_attested_state_year": 1870,
+      "states": [
+        {
+          "id": "state-r008-uniqueness-1870",
+          "year": 1870,
+          "period": {
+            "from": 1870,
+            "to": 1870
+          },
+          "label": "Uniqueness is formulated by requiring every coefficient to vanish when a convergent trigonometric series has zero sum for every real argument, without assuming uniform convergence.",
+          "related_node_ids": [
+            "problem-r008-trig-series-uniqueness"
+          ]
+        }
+      ],
+      "related": {
+        "Problem": [
+          "problem-r008-trig-series-uniqueness"
+        ]
+      }
+    },
+    {
+      "id": "concept-exceptional-point-set",
+      "name": "Exceptional point set in a uniqueness theorem",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 2,
+      "first_attested_state_year": 1871,
+      "last_attested_state_year": 1872,
+      "states": [
+        {
+          "id": "state-r008-exceptional-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1871
+          },
+          "label": "A finite number of exceptional arguments may be omitted from convergence or equality without destroying the uniqueness conclusion.",
+          "related_node_ids": []
+        },
+        {
+          "id": "state-r008-exceptional-1872",
+          "year": 1872,
+          "period": {
+            "from": 1872,
+            "to": 1872
+          },
+          "label": "Certain infinite exceptional point sets are admitted when finite iteration of the derived-set operation eventually leaves only finitely many points.",
+          "related_node_ids": [
+            "result-r008-cantor-derived-extension-1872",
+            "work-cantor-extension-1872"
+          ]
+        }
+      ],
+      "related": {
+        "Result": [
+          "result-r008-cantor-derived-extension-1872"
+        ],
+        "Work": [
+          "work-cantor-extension-1872"
+        ]
+      }
+    },
+    {
+      "id": "concept-derived-set",
+      "name": "Derived set of a point set",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1872,
+      "last_attested_state_year": 1872,
+      "states": [
+        {
+          "id": "state-r008-derived-1872",
+          "year": 1872,
+          "period": {
+            "from": 1872,
+            "to": 1872
+          },
+          "label": "For a linear point set P, P' is the set of limit points of P; finite iteration of this operation is used to distinguish point sets in the uniqueness theorem.",
+          "related_node_ids": [
+            "result-r008-cantor-derived-extension-1872",
+            "work-cantor-extension-1872"
+          ]
+        }
+      ],
+      "related": {
+        "Result": [
+          "result-r008-cantor-derived-extension-1872"
+        ],
+        "Work": [
+          "work-cantor-extension-1872"
+        ]
+      }
+    },
+    {
+      "id": "concept-algebraic-number-field",
+      "name": "Algebraic number field",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-algebraic-integer",
+      "name": "Algebraic integer",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "state_count": 0,
+      "first_attested_state_year": null,
+      "last_attested_state_year": null,
+      "states": [],
+      "related": {}
+    },
+    {
+      "id": "concept-ideal-divisor",
+      "name": "Ideal divisor in Kummer's factorization theory",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1846,
+      "last_attested_state_year": 1846,
+      "states": [
+        {
+          "id": "state-r009-kummer-ideal-divisor",
+          "year": 1846,
+          "period": {
+            "from": 1846,
+            "to": 1870
+          },
+          "label": "Kummer's ideal divisors were characterized through divisibility behavior in cyclotomic arithmetic, not as Dedekind's later systems of integers.",
+          "related_node_ids": [
+            "work-kummer-1847-complex-numbers"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-kummer-1847-complex-numbers"
+        ]
+      }
+    },
+    {
+      "id": "concept-dedekind-ideal",
+      "name": "Ideal as a system of algebraic integers",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "state_count": 2,
+      "first_attested_state_year": 1871,
+      "last_attested_state_year": 1877,
+      "states": [
+        {
+          "id": "state-r009-dedekind-ideal-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1876
+          },
+          "label": "Dedekind's first ideal theory used systems of algebraic integers and still depended substantially on simple ideals represented by congruences.",
+          "related_node_ids": [
+            "result-r009-dedekind-prime-ideal-factorization",
+            "work-dedekind-1871-supplement"
+          ]
+        },
+        {
+          "id": "state-r009-dedekind-ideal-later",
+          "year": 1877,
+          "period": {
+            "from": 1877,
+            "to": 1894
+          },
+          "label": "Dedekind's later presentations increasingly foregrounded operations and properties of ideals rather than particular congruence representations.",
+          "related_node_ids": []
+        }
+      ],
+      "related": {
+        "Result": [
+          "result-r009-dedekind-prime-ideal-factorization"
+        ],
+        "Work": [
+          "work-dedekind-1871-supplement"
+        ]
+      }
+    },
+    {
+      "id": "concept-prime-ideal",
+      "name": "Prime ideal",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1871,
+      "last_attested_state_year": 1871,
+      "states": [
+        {
+          "id": "state-r009-prime-ideal-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1871
+          },
+          "label": "Dedekind's 1871 theory distinguishes prime ideals as the basic factors in ideal decomposition.",
+          "related_node_ids": [
+            "work-dedekind-1871-supplement"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-dedekind-1871-supplement"
+        ]
+      }
+    },
+    {
+      "id": "concept-ideal-factorization",
+      "name": "Factorization of ideals into prime ideals",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1871,
+      "last_attested_state_year": 1871,
+      "states": [
+        {
+          "id": "state-r009-ideal-factorization-1871",
+          "year": 1871,
+          "period": {
+            "from": 1871,
+            "to": 1871
+          },
+          "label": "Dedekind's 1871 ideal theory establishes decomposition of ideals into prime ideals as the replacement for failed element factorization.",
+          "related_node_ids": [
+            "work-dedekind-1871-supplement"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-dedekind-1871-supplement"
+        ]
+      }
+    },
+    {
+      "id": "concept-jordan-content",
+      "name": "Jordan content for point sets",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1892,
+      "last_attested_state_year": 1892,
+      "states": [
+        {
+          "id": "state-r010-jordan-content-1892",
+          "year": 1892,
+          "period": {
+            "from": 1892,
+            "to": 1892
+          },
+          "label": "Jordan assigns content to point sets in his 1892 treatment of definite integrals; later measure-zero boundary formulations are not part of this historical state.",
+          "related_node_ids": [
+            "work-jordan-integrals-1892"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-jordan-integrals-1892"
+        ]
+      }
+    },
+    {
+      "id": "concept-borel-measure",
+      "name": "Borel measure of point sets",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1898,
+      "last_attested_state_year": 1898,
+      "states": [
+        {
+          "id": "state-r010-borel-measure-1898",
+          "year": 1898,
+          "period": {
+            "from": 1898,
+            "to": 1898
+          },
+          "label": "Borel extends length from intervals to a wider family of point sets using countable set operations, without later abstract sigma-algebra terminology.",
+          "related_node_ids": [
+            "work-borel-functions-1898"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-borel-functions-1898"
+        ]
+      }
+    },
+    {
+      "id": "concept-lebesgue-measure",
+      "name": "Lebesgue measure",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1901,
+      "last_attested_state_year": 1901,
+      "states": [
+        {
+          "id": "state-r010-lebesgue-measure-1901",
+          "year": 1901,
+          "period": {
+            "from": 1901,
+            "to": 1901
+          },
+          "label": "Lebesgue defines measure of point sets through countable open coverings in the 1901 note, before later outer-measure and completion terminology.",
+          "related_node_ids": [
+            "work-lebesgue-generalization-1901"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-lebesgue-generalization-1901"
+        ]
+      }
+    },
+    {
+      "id": "concept-lebesgue-integral",
+      "name": "Lebesgue integral",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 2,
+      "first_attested_state_year": 1901,
+      "last_attested_state_year": 1902,
+      "states": [
+        {
+          "id": "state-r010-lebesgue-integral-1901",
+          "year": 1901,
+          "period": {
+            "from": 1901,
+            "to": 1901
+          },
+          "label": "Lebesgue subdivides the range of function values, measures the corresponding sets of arguments, and forms sums from those measures to define the generalized integral.",
+          "related_node_ids": [
+            "work-lebesgue-generalization-1901"
+          ]
+        },
+        {
+          "id": "state-r010-lebesgue-integral-1902",
+          "year": 1902,
+          "period": {
+            "from": 1902,
+            "to": 1902
+          },
+          "label": "Lebesgue's thesis develops measure of sets before integration and gives a fuller systematic development of the generalized integral introduced in 1901.",
+          "related_node_ids": [
+            "work-lebesgue-thesis-1902"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-lebesgue-generalization-1901",
+          "work-lebesgue-thesis-1902"
+        ]
+      }
+    },
+    {
+      "id": "concept-measurable-set",
+      "name": "Measurable set in early measure theory",
+      "fields": [
+        "analysis"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1898,
+      "last_attested_state_year": 1898,
+      "states": [
+        {
+          "id": "state-r010-measurable-set-1898-1901",
+          "year": 1898,
+          "period": {
+            "from": 1898,
+            "to": 1901
+          },
+          "label": "Borel's measurable-set construction uses countable set operations, and Lebesgue's 1901 note explicitly invokes Borel measurable sets in its measure-and-integration construction.",
+          "related_node_ids": [
+            "work-borel-functions-1898",
+            "work-lebesgue-generalization-1901"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-borel-functions-1898",
+          "work-lebesgue-generalization-1901"
+        ]
+      }
+    },
+    {
+      "id": "concept-fourier-coefficients",
+      "name": "Fourier coefficients",
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ],
+      "state_count": 1,
+      "first_attested_state_year": 1822,
+      "last_attested_state_year": 1822,
+      "states": [
+        {
+          "id": "state-r001-fourier-coefficients-1822",
+          "year": 1822,
+          "period": {
+            "from": 1822,
+            "to": 1822
+          },
+          "label": "Fourier gives definite-integral formulas for the coefficients associated with sine and cosine expansions.",
+          "related_node_ids": [
+            "work-fourier-theorie"
+          ]
+        }
+      ],
+      "related": {
+        "Work": [
+          "work-fourier-theorie"
+        ]
+      }
+    }
+  ],
+  "cross_field_concepts": [
+    {
+      "concept_id": "concept-fourier-series",
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    },
+    {
+      "concept_id": "concept-algebraic-number-field",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ]
+    },
+    {
+      "concept_id": "concept-algebraic-integer",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ]
+    },
+    {
+      "concept_id": "concept-ideal-divisor",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ]
+    },
+    {
+      "concept_id": "concept-dedekind-ideal",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ]
+    },
+    {
+      "concept_id": "concept-prime-ideal",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ]
+    },
+    {
+      "concept_id": "concept-ideal-factorization",
+      "fields": [
+        "algebra",
+        "number-theory"
+      ]
+    },
+    {
+      "concept_id": "concept-fourier-coefficients",
+      "fields": [
+        "analysis",
+        "mathematical-physics"
+      ]
+    }
+  ],
+  "notes": [
+    "Atlas aggregation groups semantic data; it does not create new historical claims.",
+    "ConceptState chronology is descriptive unless an evidence-bearing development relation exists elsewhere.",
+    "Concept identities bridge field-scale Atlas views and historically situated Network states."
+  ]
+}
