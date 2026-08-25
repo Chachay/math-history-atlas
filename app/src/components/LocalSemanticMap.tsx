@@ -18,7 +18,6 @@ type Props = {
 const KIND_LABEL:Record<string,string>={Work:'Work',Problem:'Problem',Result:'Result',Concept:'Concept',ConceptState:'Concept state',Person:'Person',Event:'Event'};
 
 function year(node:GraphNode){ return node.period?.from ?? node.start_year; }
-function edgeKey(edge:GraphEdge){ return `${edge.subject}:${edge.predicate}:${edge.object}`; }
 
 function storySeeds(graph:SemanticGraph, story:StoryLike|undefined, legacyAssertions:LegacyAssertion[]){
   const ids=new Set<string>();
@@ -66,7 +65,11 @@ function nodeOrder(a:GraphNode,b:GraphNode){
 }
 
 export function LocalSemanticMap({graph,story,legacyAssertions=[],initialFocusId,mode='story',onFocusChange}:Props){
-  const baseSeeds=useMemo(()=>storySeeds(graph,story,legacyAssertions),[graph,story,legacyAssertions]);
+  const baseSeeds=useMemo(()=>{
+    const ids=storySeeds(graph,story,legacyAssertions);
+    if(initialFocusId&&getNode(graph,initialFocusId)) ids.add(initialFocusId);
+    return ids;
+  },[graph,story,legacyAssertions,initialFocusId]);
   const seeds=useMemo(()=>expandConceptWindows(graph,baseSeeds),[graph,baseSeeds]);
   const edges=useMemo(()=>incidentEdges(graph,seeds),[graph,seeds]);
   const localIds=useMemo(()=>{ const ids=new Set(seeds); edges.forEach(e=>{ids.add(e.subject);ids.add(e.object)}); return ids; },[seeds,edges]);
@@ -81,7 +84,7 @@ export function LocalSemanticMap({graph,story,legacyAssertions=[],initialFocusId
   const direct=focus?edges.filter(e=>e.subject===focus.id||e.object===focus.id):[];
   const branchNodes=direct.flatMap(e=>{const id=e.subject===focus?.id?e.object:e.subject;const n=getNode(graph,id);return n?[n]:[]}).filter((n,i,arr)=>arr.findIndex(x=>x.id===n.id)===i);
 
-  if(!localNodes.length)return <section className="local-map empty"><p>No reviewed semantic material is projected for this Story yet.</p></section>;
+  if(!localNodes.length)return <section className="local-map empty"><p>No reviewed semantic material is projected here yet.</p></section>;
 
   return <section className={`local-map mode-${mode}`} aria-label={mode==='story'?'Story semantic map':'Local semantic map'}>
     <header className="local-map-head"><div><span className="eyebrow">{mode==='story'?'STORY MAP':'LOCAL MAP'}</span><h3>{mode==='story'?'The researched path and its nearby branches':'Semantic neighborhood'}</h3></div><p>{mode==='story'?'Strong nodes belong to the Story evidence spine. Nearby branches remain available without becoming Story transitions.':'Select an object to expand its local researched context.'}</p></header>
@@ -103,6 +106,6 @@ export function LocalSemanticMap({graph,story,legacyAssertions=[],initialFocusId
       {branchNodes.length>0&&<div className="branch-window"><b>{mode==='story'?'Nearby branches':'Connections'}</b><div>{branchNodes.slice(0,8).map(node=><button key={node.id} className={seeds.has(node.id)?'spine-branch':''} onClick={()=>focusNode(node.id)}><span>{KIND_LABEL[node.node_kind]||node.node_kind}</span><strong>{node.name}</strong></button>)}</div></div>}
     </div>}
 
-    <footer className="local-map-legend"><span><i className="legend-spine"/>Story evidence</span><span><i/>Semantic context</span><span>{edges.length} researched connections</span></footer>
+    <footer className="local-map-legend"><span><i className="legend-spine"/>{mode==='story'?'Story evidence':'Current focus'}</span><span><i/>Semantic context</span><span>{edges.length} researched connections</span></footer>
   </section>;
 }
