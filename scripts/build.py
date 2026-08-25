@@ -10,6 +10,7 @@ from scripts.build_intersections import build_intersections
 from scripts.build_person_index import build_person_index
 from scripts.build_atlas import build_atlas
 from scripts.build_concept_evolution import build_concept_evolution
+from scripts.atlas_projection import build_atlas_projection
 from scripts.semantic_network import (
     build_inquiry_graph,
     build_research_claims,
@@ -47,6 +48,7 @@ def main():
 
     dump('semantic-network.json', build_semantic_network(entities, questions, concept_states, assertions))
     dump('concept-evolution.json', build_concept_evolution())
+    dump('atlas-projection.json', build_atlas_projection(entities, questions, concept_states, assertions))
     dump('inquiry-graph.json', build_inquiry_graph(entities, questions, concept_states, assertions))
     dump('research-claims.json', build_research_claims(entities, questions, concept_states, assertions))
     dump('semantic-audit.json', semantic_audit(entities, questions, concept_states, assertions))
